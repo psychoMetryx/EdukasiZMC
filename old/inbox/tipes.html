@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi Tipes - Zihan Medical Center</title>
+    <style>
+        /* --- 1. CSS Variables (Thema ZMC) --- */
+        :root {
+            /* Warna Logo ZMC */
+            --zmc-red: #D60000;    /* Merah Bulan Sabit */
+            --zmc-black: #111111;  /* Hitam Teks ZMC */
+            --zmc-gray: #f4f4f4;
+            
+            /* Warna Pendukung */
+            --text: #333;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #fff;
+            overflow-x: hidden;
+            padding-bottom: 60px; /* Space for mobile nav if needed */
+        }
+
+        /* --- 2. Navigation --- */
+        nav {
+            background: var(--white);
+            padding: 0.8rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 50px; /* Ukuran Logo */
+            width: auto;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--zmc-black);
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--zmc-red);
+        }
+
+        .btn-nav-contact {
+            background-color: var(--zmc-red);
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        /* --- 3. Hero Section --- */
+        header {
+            min-height: 100vh;
+            /* Gradient Merah ZMC ke Hitam */
+            background: linear-gradient(135deg, var(--zmc-red) 0%, #800000 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px 20px 20px;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/medical-icons.png');
+            opacity: 0.1;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease;
+            z-index: 1;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background: white;
+            color: var(--zmc-red);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 2s ease;
+            z-index: 1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: var(--zmc-black);
+            color: white;
+        }
+
+        /* --- 4. Content Sections --- */
+        section {
+            padding: 80px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--zmc-black);
+            margin-bottom: 50px;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 5px;
+            background: var(--zmc-red);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Cards Style */
+        .info-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s, border 0.3s;
+            border-top: 5px solid transparent;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            border-top: 5px solid var(--zmc-red);
+        }
+
+        .icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            /* Filter untuk efek warna jika perlu, atau gunakan text color */
+        }
+
+        /* Interactive Symptoms */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .symptom-item {
+            background: var(--zmc-gray);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .symptom-item h3 {
+            color: var(--zmc-black);
+        }
+
+        .symptom-item:hover {
+            background: var(--zmc-red);
+            color: white;
+        }
+
+        .symptom-item:hover h3 {
+            color: white;
+        }
+        
+        .symptom-item p {
+            font-size: 0.95rem;
+            margin-top: 15px;
+            display: none; 
+            line-height: 1.4;
+        }
+
+        .symptom-item:hover p {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        /* Myth Fact */
+        .myth-fact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mf-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .mf-question {
+            padding: 20px;
+            background: var(--zmc-black);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .mf-question:hover {
+            background: #333;
+        }
+
+        .mf-answer {
+            padding: 25px;
+            display: none;
+            background: #fff;
+            border-left: 5px solid var(--zmc-red);
+        }
+
+        /* Checklist */
+        .prevention-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .prevention-list li {
+            background: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--zmc-red);
+        }
+
+        .check-icon {
+            color: var(--zmc-red);
+            margin-right: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* --- 5. KLINIK ZMC SECTION (New) --- */
+        #klinik-info {
+            background-color: var(--zmc-black);
+            color: white;
+            padding: 60px 5%;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        #klinik-info h2 {
+            color: white;
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        #klinik-info h2::after {
+            left: 0;
+            transform: none;
+        }
+
+        .zmc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .zmc-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--zmc-red);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .fasilitas-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .fasilitas-list li {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .fasilitas-list li::before {
+            content: '🏥';
+            margin-right: 10px;
+        }
+
+        .zmc-contact h4 {
+            color: var(--zmc-red);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: start;
+        }
+
+        .info-item span {
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .btn-map {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid var(--zmc-red);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-map:hover {
+            background: var(--zmc-red);
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        /* --- 6. Footer & Floating Button --- */
+        footer {
+            background: #000;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        /* Floating WhatsApp */
+        .float-wa {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .float-wa:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- 7. Animations --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* --- 8. Mobile Response (Android) --- */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            section { padding: 50px 5%; }
+            
+            .nav-links { 
+                display: none; /* Menu sederhana untuk demo ini */
+            } 
+            
+            nav {
+                justify-content: center;
+            }
+
+            .zmc-grid {
+                grid-template-columns: 1fr; /* Stacked layout */
+                gap: 30px;
+            }
+
+            .fasilitas-list {
+                grid-template-columns: 1fr; /* 1 column list */
+            }
+
+            .float-wa {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi dengan Logo ZMC -->
+    <nav>
+        <div class="logo-container">
+            <!-- Menggunakan Logo dari Link Attachment -->
+            <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo Zihan Medical Center" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="#home">Beranda</a>
+            <a href="#penyebab">Penyebab</a>
+            <a href="#gejala">Gejala</a>
+            <a href="#klinik-info" class="btn-nav-contact">Kontak Kami</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="home">
+        <h1>Waspada Tipes (Demam Tifoid)</h1>
+        <p>Kenali penyebab, gejala, dan cara pencegahannya. Penyakit ini serius, namun bisa dicegah dan disembuhkan dengan penanganan yang tepat.</p>
+        <a href="#penyebab" class="btn">Pelajari Selengkapnya</a>
+    </header>
+
+    <!-- Section Penyebab -->
+    <section id="penyebab">
+        <h2>Apa Itu Tipes?</h2>
+        <div class="info-container">
+            <div class="info-card">
+                <div class="icon">🦠</div>
+                <h3>Penyebab Utama</h3>
+                <p>Disebabkan oleh bakteri <strong>Salmonella typhi</strong>. Bakteri ini tidak hanya menyerang usus, namun dapat menyebar ke aliran darah dan organ tubuh lain jika tidak segera ditangani.</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🍽️</div>
+                <h3>Jalur Penularan</h3>
+                <p>Menular melalui metode <em>Fecal-Oral</em>. Artinya, bakteri dari kotoran penderita mencemari air atau makanan yang kemudian dikonsumsi oleh orang sehat.</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">⚠️</div>
+                <h3>Faktor Risiko</h3>
+                <p>Lingkungan dengan sanitasi buruk, tidak mencuci tangan dengan sabun sebelum makan, serta kebiasaan jajan di tempat yang kurang higienis meningkatkan risiko tertular.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Gejala (Interaktif Hover) -->
+    <section id="gejala" style="background-color: #fcfcfc;">
+        <h2>Gejala Klinis</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: #666;">Sentuh/Arahkan kursor pada kotak untuk detail gejala:</p>
+        <div class="symptoms-grid">
+            <div class="symptom-item">
+                <h3>🤒 Demam Bertingkat</h3>
+                <p>Demam naik perlahan menyerupai anak tangga (step-ladder). Suhu tubuh bisa mencapai 39-40°C, biasanya lebih tinggi di sore atau malam hari.</p>
+            </div>
+            <div class="symptom-item">
+                <h3>🤢 Gangguan Perut</h3>
+                <p>Keluhan bervariasi. Anak-anak sering mengalami diare, sementara orang dewasa mungkin mengalami sembelit (konstipasi). Sering disertai mual muntah.</p>
+            </div>
+            <div class="symptom-item">
+                <h3>🤕 Nyeri & Lemas</h3>
+                <p>Sakit kepala hebat (frontal) yang terasa berat, disertai nyeri otot (myalgia), dan badan terasa sangat lemas (malaise).</p>
+            </div>
+            <div class="symptom-item">
+                <h3>👅 Lidah Tifoid</h3>
+                <p>Ciri khas medis: Bagian tengah lidah tampak kotor (berselaput putih), sementara bagian tepinya berwarna merah terang (hiperemis).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Mitos vs Fakta -->
+    <section id="mitos">
+        <h2>Mitos vs Fakta</h2>
+        <div class="myth-fact-container">
+            <div class="mf-item">
+                <div class="mf-question" onclick="toggleAnswer(this)">
+                    <span>"Tipes disebabkan karena kerja terlalu capek?"</span>
+                    <span>+</span>
+                </div>
+                <div class="mf-answer">
+                    <strong>MITOS.</strong> Tipes murni disebabkan oleh infeksi BAKTERI. Kelelahan memang menurunkan sistem imun sehingga tubuh gagal melawan bakteri yang masuk, tapi "capek" itu sendiri bukan penyebab utamanya.
+                </div>
+            </div>
+
+            <div class="mf-item">
+                <div class="mf-question" onclick="toggleAnswer(this)">
+                    <span>"Sudah pernah kena tipes, berarti kebal?"</span>
+                    <span>+</span>
+                </div>
+                <div class="mf-answer">
+                    <strong>MITOS.</strong> Tipes bisa kambuh (relaps) atau terjadi re-infeksi jika Anda kembali mengonsumsi makanan yang terkontaminasi. Imunitas tifoid tidak berlaku seumur hidup tanpa vaksinasi.
+                </div>
+            </div>
+
+            <div class="mf-item">
+                <div class="mf-question" onclick="toggleAnswer(this)">
+                    <span>"Makan cacing tanah adalah obat terbaik?"</span>
+                    <span>+</span>
+                </div>
+                <div class="mf-answer">
+                    <strong>BELUM JELAS.</strong> Meski ekstrak cacing tanah memiliki enzim tertentu, pengobatan standar emas (Gold Standard) medis adalah <strong>Antibiotik</strong> untuk membunuh bakteri. Jangan tunda ke dokter hanya demi obat herbal.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Pencegahan -->
+    <section id="pencegahan" style="background-color: #f9f9f9;">
+        <h2>Pencegahan</h2>
+        <ul class="prevention-list">
+            <li>
+                <span class="check-icon">✔</span> 
+                <div>
+                    <strong>Cuci Tangan Pakai Sabun</strong><br>
+                    Wajib dilakukan sebelum makan, mengolah makanan, dan setelah dari toilet.
+                </div>
+            </li>
+            <li>
+                <span class="check-icon">✔</span> 
+                <div>
+                    <strong>Pilih Makanan Matang & Panas</strong><br>
+                    Hindari lalapan mentah yang tidak dicuci bersih atau es batu dari air mentah.
+                </div>
+            </li>
+            <li>
+                <span class="check-icon">✔</span> 
+                <div>
+                    <strong>Vaksinasi Tifoid</strong><br>
+                    Sangat disarankan untuk anak-anak dan dewasa, diulang setiap 3 tahun sekali.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- === INFO KLINIK ZMC (Bottom Section) === -->
+    <section id="klinik-info">
+        <div class="zmc-grid">
+            <!-- Kolom Kiri: Branding -->
+            <div class="zmc-brand">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                    <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" style="height: 60px; background: white; border-radius: 50%;">
+                    <h2 style="margin:0; font-size: 1.8rem; border:none; text-align: left;">ZIHAN MEDICAL CENTER</h2>
+                </div>
+                <p class="tagline">#ZMCGakNyuekinKamu</p>
+                <p style="margin-bottom: 20px;">Kami siap melayani kebutuhan kesehatan Anda dengan fasilitas lengkap dan pelayanan sepenuh hati.</p>
+                
+                <h4 style="color:var(--zmc-red); margin-bottom:10px;">Fasilitas Kami:</h4>
+                <ul class="fasilitas-list">
+                    <li>Poli Umum</li>
+                    <li>Rawat Inap</li>
+                    <li>Laboratorium</li>
+                    <li>Farmasi</li>
+                </ul>
+            </div>
+
+            <!-- Kolom Kanan: Kontak & Lokasi -->
+            <div class="zmc-contact">
+                <h4>Lokasi & Kontak</h4>
+                
+                <div class="info-item">
+                    <span>📍</span>
+                    <div>
+                        <strong>Alamat:</strong><br>
+                        Jl. Kudang, Wanajaya, Wanaraja,<br>
+                        Kabupaten Garut, Jawa Barat 44183
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span>🕒</span>
+                    <div>
+                        <strong>Jam Operasional:</strong><br>
+                        BUKA 24 JAM (Senin - Minggu)
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span>📞</span>
+                    <div>
+                        <strong>Telepon / WhatsApp:</strong><br>
+                        +62 822-1718-0432
+                    </div>
+                </div>
+
+                <!-- Tombol Navigasi Peta -->
+                <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="btn-map">
+                    🗺️ Buka di Google Maps
+                </a>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank">📷 Instagram</a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Copyright -->
+    <footer>
+        <p>&copy; 2025 Klinik Pratama Zihan Medical Center. All Rights Reserved.</p>
+        <p><small>Informasi kesehatan ini hanya untuk edukasi. Segera konsultasi ke ZMC jika mengalami gejala.</small></p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" class="float-wa" target="_blank" title="Chat WhatsApp">
+        <!-- Menggunakan SVG icon WA agar ringan -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <script>
+        // Fungsi untuk Accordion Mitos vs Fakta
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span:last-child');
+            
+            // Toggle display
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.textContent = "+";
+                element.style.background = "var(--zmc-black)";
+            } else {
+                answer.style.display = "block";
+                icon.textContent = "-";
+                element.style.background = "#333";
+            }
+        }
+
+        // Scroll Reveal Animation
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.info-card, .symptom-item, .mf-item, .zmc-brand, .zmc-contact');
+
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].style.opacity = '1';
+                    reveals[i].style.transform = 'translateY(0)';
+                    reveals[i].style.animation = 'fadeInUp 0.8s ease forwards';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

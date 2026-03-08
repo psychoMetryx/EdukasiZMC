@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan P3K & Profil Klinik Pratama Zihan Medical Center</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body { font-family: 'Poppins', sans-serif; }
+        .fade-in { animation: fadeIn 0.6s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-white text-slate-800 flex flex-col min-h-screen">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0" x-data="{ mobileMenuOpen: false }">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-12 w-12 rounded-full object-cover shadow-sm">
+                <div class="leading-tight">
+                    <h1 class="font-bold text-lg md:text-xl text-slate-900 tracking-tight">Zihan Medical Center</h1>
+                    <span class="text-xs text-red-600 font-semibold">Klinik Pratama 24 Jam</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <a href="#edukasi-top" class="text-red-600 font-bold transition">Panduan P3K</a>
+                <a href="#profil-zmc" class="hover:text-red-600 transition">Tentang Klinik</a>
+                <a href="#fasilitas" class="hover:text-red-600 transition">Fasilitas</a>
+                <a href="#kontak" class="hover:text-red-600 transition">Lokasi</a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Darurat
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-slate-800 text-2xl focus:outline-none">
+                <i :class="mobileMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 fade-in">
+            <div class="flex flex-col p-4 space-y-4 font-medium text-slate-700">
+                <a href="#edukasi-top" @click="mobileMenuOpen = false" class="text-red-600 font-bold">Panduan P3K</a>
+                <a href="#profil-zmc" @click="mobileMenuOpen = false" class="hover:text-red-600">Tentang Klinik</a>
+                <a href="#fasilitas" @click="mobileMenuOpen = false" class="hover:text-red-600">Fasilitas</a>
+                <a href="#kontak" @click="mobileMenuOpen = false" class="hover:text-red-600">Lokasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- BAGIAN 1: KONTEN EDUKASI (POSISI ATAS) -->
+    <!-- ========================================= -->
+
+    <!-- Header Edukasi -->
+    <section id="edukasi-top" class="pt-28 pb-10 bg-slate-50">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-red-100 text-red-600 py-1 px-3 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">
+                Pusat Edukasi Kesehatan
+            </span>
+            <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+                Panduan Pertolongan Pertama <br> <span class="text-red-600">Luka Ringan</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Langkah medis yang tepat sebelum menemui dokter. Ikuti panduan di bawah ini agar luka tidak infeksi.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive Guide (Step by Step) -->
+    <section class="pb-16 bg-slate-50" x-data="{ step: 1 }">
+        <div class="container mx-auto px-4">
+            <!-- Card Utama -->
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[450px] border border-slate-200">
+                <!-- Sidebar Menu Steps -->
+                <div class="bg-slate-900 text-white md:w-1/3 p-6 flex flex-col gap-3">
+                    <p class="text-slate-400 text-sm mb-2 font-semibold uppercase tracking-wider">Langkah Penanganan:</p>
+                    
+                    <button @click="step = 1" :class="{'bg-red-600 border-red-600': step === 1, 'bg-slate-800 border-slate-700 hover:bg-slate-700': step !== 1}" class="p-4 rounded-lg text-left font-semibold transition flex items-center gap-3 border">
+                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">1</div>
+                        Cuci Tangan
+                    </button>
+                    
+                    <button @click="step = 2" :class="{'bg-red-600 border-red-600': step === 2, 'bg-slate-800 border-slate-700 hover:bg-slate-700': step !== 2}" class="p-4 rounded-lg text-left font-semibold transition flex items-center gap-3 border">
+                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">2</div>
+                        Stop Pendarahan
+                    </button>
+                    
+                    <button @click="step = 3" :class="{'bg-red-600 border-red-600': step === 3, 'bg-slate-800 border-slate-700 hover:bg-slate-700': step !== 3}" class="p-4 rounded-lg text-left font-semibold transition flex items-center gap-3 border">
+                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">3</div>
+                        Bersihkan Luka
+                    </button>
+                    
+                    <button @click="step = 4" :class="{'bg-red-600 border-red-600': step === 4, 'bg-slate-800 border-slate-700 hover:bg-slate-700': step !== 4}" class="p-4 rounded-lg text-left font-semibold transition flex items-center gap-3 border">
+                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm">4</div>
+                        Tutup Luka
+                    </button>
+                </div>
+
+                <!-- Content Area -->
+                <div class="p-8 md:w-2/3 flex items-center bg-white relative">
+                    <!-- Step 1 -->
+                    <div x-show="step === 1" class="fade-in w-full">
+                        <div class="text-blue-500 text-5xl mb-4"><i class="fa-solid fa-hands-bubbles"></i></div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">1. Cuci Tangan Terlebih Dahulu</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">Sebelum menyentuh luka, pastikan tangan steril untuk mencegah bakteri.</p>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Gunakan sabun & air mengalir (20 detik).</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Pakai hand sanitizer jika darurat.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div x-show="step === 2" class="fade-in w-full" style="display: none;">
+                        <div class="text-red-600 text-5xl mb-4"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">2. Hentikan Pendarahan</h3>
+                        <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500 mb-4">
+                            <p class="text-red-800 font-medium">Tekan luka dengan kain bersih/kasa steril.</p>
+                        </div>
+                        <ul class="space-y-2 text-slate-700 list-disc pl-5">
+                            <li>Pertahankan tekanan beberapa menit.</li>
+                            <li>Jangan sering dibuka untuk mengecek.</li>
+                            <li>Jika darah tembus, tambah kain di atasnya (jangan dibuka).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div x-show="step === 3" class="fade-in w-full" style="display: none;">
+                        <div class="text-teal-500 text-5xl mb-4"><i class="fa-solid fa-pump-medical"></i></div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">3. Bersihkan & Antiseptik</h3>
+                        <div class="space-y-4">
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                <strong class="text-blue-900">Cara Membersihkan:</strong>
+                                <p class="text-sm text-blue-800 mt-1">Bilas air mengalir atau NaCl 0.9%. Bersihkan pasir/kotoran perlahan.</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                                <strong class="text-orange-900">Antiseptik (Obat Merah):</strong>
+                                <p class="text-sm text-orange-800 mt-1">Oleskan di <strong>pinggiran luka</strong>, bukan diguyur ke dalam luka dalam.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div x-show="step === 4" class="fade-in w-full" style="display: none;">
+                        <div class="text-yellow-500 text-5xl mb-4"><i class="fa-solid fa-bandage"></i></div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">4. Tutup Luka</h3>
+                        <p class="text-slate-600 mb-4">Luka tertutup sembuh lebih cepat dan terlindung dari kotoran.</p>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-slate-400 mt-1"></i> Gunakan plester atau kasa steril + plester.</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-slate-400 mt-1"></i> Ganti perban minimal sekali sehari.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tanda Infeksi (Tetap Bagian dari Edukasi) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Waspada Tanda Infeksi</h2>
+                <p class="text-slate-500 mt-2">Perhatikan jika luka tidak membaik dan muncul gejala ini.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow border-t-4 border-red-600 text-center">
+                    <div class="bg-red-50 w-14 h-14 rounded-full flex items-center justify-center text-red-600 text-2xl mb-4 mx-auto"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                    <h3 class="font-bold text-lg">Bengkak & Merah</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow border-t-4 border-yellow-500 text-center">
+                    <div class="bg-yellow-50 w-14 h-14 rounded-full flex items-center justify-center text-yellow-600 text-2xl mb-4 mx-auto"><i class="fa-solid fa-droplet"></i></div>
+                    <h3 class="font-bold text-lg">Keluar Nanah</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow border-t-4 border-orange-500 text-center">
+                    <div class="bg-orange-50 w-14 h-14 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4 mx-auto"><i class="fa-solid fa-face-grimace"></i></div>
+                    <h3 class="font-bold text-lg">Nyeri Hebat</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow border-t-4 border-purple-500 text-center">
+                    <div class="bg-purple-50 w-14 h-14 rounded-full flex items-center justify-center text-purple-600 text-2xl mb-4 mx-auto"><i class="fa-solid fa-bed-pulse"></i></div>
+                    <h3 class="font-bold text-lg">Demam</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kuis (Penutup Edukasi) -->
+    <section class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center text-slate-900 mb-8">Cek Pemahaman: Mitos atau Fakta?</h2>
+            <div x-data="{ 
+                questions: [
+                    { q: 'Luka bakar harus diolesi odol?', a: false, expl: 'Pasta gigi memperparah iritasi & mengurung panas.' },
+                    { q: 'Luka terbuka harus dibiarkan kering?', a: false, expl: 'Luka sembuh lebih cepat dalam kondisi lembap tertutup.' },
+                    { q: 'Alkohol 70% perih tapi bagus?', a: false, expl: 'Alkohol merusak jaringan kulit sehat. Gunakan air/NaCl.' }
+                ],
+                answer(isFact, index) {
+                    let correct = (isFact === this.questions[index].a);
+                    let el = document.getElementById('feedback-' + index);
+                    el.innerHTML = correct ? '<span class=\'text-green-600 font-bold\'>✅ Benar!</span> ' + this.questions[index].expl : '<span class=\'text-red-600 font-bold\'>❌ Kurang Tepat.</span> ' + this.questions[index].expl;
+                    el.classList.remove('hidden');
+                }
+            }" class="max-w-2xl mx-auto space-y-4">
+                <template x-for="(question, index) in questions" :key="index">
+                    <div class="bg-white p-5 rounded-lg shadow-sm border border-slate-200">
+                        <p class="font-semibold mb-3" x-text="(index + 1) + '. ' + question.q"></p>
+                        <div class="flex gap-3">
+                            <button @click="answer(false, index)" class="flex-1 py-2 border border-red-500 text-red-600 rounded hover:bg-red-50 text-sm font-bold">MITOS</button>
+                            <button @click="answer(true, index)" class="flex-1 py-2 border border-green-500 text-green-600 rounded hover:bg-green-50 text-sm font-bold">FAKTA</button>
+                        </div>
+                        <div :id="'feedback-' + index" class="hidden mt-3 text-sm bg-slate-50 p-2 rounded"></div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- BAGIAN 2: PROFIL KLINIK ZMC (POSISI BAWAH) -->
+    <!-- ========================================= -->
+
+    <!-- Hero / Branding Section -->
+    <section id="profil-zmc" class="py-20 md:py-24 bg-gradient-to-br from-red-50 to-white relative overflow-hidden text-center">
+        <div class="container mx-auto px-4 relative z-10">
+            <p class="text-slate-500 mb-4 font-medium">Luka tak kunjung sembuh atau butuh bantuan medis?</p>
+            <div class="inline-block bg-white border border-red-200 shadow-sm rounded-full px-5 py-2 mb-6">
+                <span class="text-red-600 font-bold tracking-wide">#ZMCGakNyuekinKamu ❤️</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+                Layanan Kesehatan <span class="text-red-600">Terpercaya</span> <br>di Wanaraja
+            </h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                Klinik Pratama Zihan Medical Center siap melayani Anda 24 Jam dengan fasilitas lengkap dan tenaga medis profesional.
+            </p>
+            <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" class="inline-flex bg-red-600 hover:bg-red-700 text-white py-4 px-10 rounded-full font-bold shadow-lg transition transform hover:-translate-y-1 items-center gap-2 text-lg">
+                <i class="fa-solid fa-phone-volume"></i> Hubungi Kami Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Fasilitas Section -->
+    <section id="fasilitas" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-slate-900 mb-2">Fasilitas & Layanan</h3>
+                <div class="h-1 w-20 bg-red-600 mx-auto rounded"></div>
+                <p class="mt-4 text-slate-500">Solusi medis komprehensif untuk keluarga Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Items Fasilitas -->
+                <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-lg transition border border-slate-100 group">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800">Poli Umum</h3>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-lg transition border border-slate-100 group">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-bed-pulse"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800">Rawat Inap</h3>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-lg transition border border-slate-100 group">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800">Laboratorium</h3>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-lg transition border border-slate-100 group">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800">Farmasi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- BAGIAN 3: LOKASI & KONTAK (PALING BAWAH) -->
+    <!-- ========================================= -->
+
+    <section id="kontak" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <!-- Info Kontak -->
+                <div class="md:w-1/3 space-y-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">Lokasi Klinik</h2>
+                        <p class="text-slate-600">Datang langsung ke alamat kami.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot text-red-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Alamat</h4>
+                                <p class="text-sm text-slate-600">Jl. Kudang, Wanajaya, Wanaraja, Kab. Garut, Jawa Barat 44183</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-brands fa-whatsapp text-red-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Kontak 24 Jam</h4>
+                                <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" class="text-sm text-slate-600 hover:text-red-600 underline font-semibold">
+                                    +62 822-1718-0432
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                             <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" class="inline-flex items-center gap-2 text-pink-600 font-bold hover:underline">
+                                <i class="fa-brands fa-instagram text-xl"></i> @zihanmedicalcenter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Peta -->
+                <div class="md:w-2/3 w-full h-[350px] bg-slate-200 rounded-xl overflow-hidden shadow-lg">
+                    <iframe src="https://maps.google.com/maps?q=Klinik+Pratama+Zihan+Medical+Center+Wanaraja+Garut&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-sm text-center">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                 <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-8 w-8 rounded-full">
+                 <span class="font-bold text-white">Zihan Medical Center</span>
+            </div>
+            <p>&copy; 2025 Klinik Pratama ZMC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl z-50 transition transform hover:scale-110 animate-bounce">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Batuk Pilek - Klinik Pratama ZMC Wanaraja</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* ZMC BRAND COLORS */
+            --zmc-red: #D32F2F;        /* Merah Identitas */
+            --zmc-red-dark: #B71C1C;   /* Merah Gelap */
+            --zmc-black: #212121;      /* Hitam Teks */
+            --zmc-grey: #616161;       /* Abu-abu Teks */
+            --bg-light: #FAFAFA;       /* Background Bersih */
+            --white: #ffffff;
+            
+            /* FUNCTIONAL COLORS */
+            --whatsapp: #25D366;
+            --instagram: #E1306C;
+            --maps: #4285F4;
+            --card-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--zmc-black);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            padding-bottom: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: var(--white);
+            padding: 20px 20px 30px;
+            text-align: center;
+            border-bottom: 5px solid var(--zmc-red);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 20;
+        }
+
+        .logo-container img {
+            width: 110px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        header h1 { 
+            margin: 5px 0 0; 
+            font-size: 1.5rem; 
+            color: var(--zmc-black); 
+            font-weight: 800; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+        
+        .clinic-sub {
+            color: var(--zmc-red);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .materi-badge {
+            display: inline-block;
+            background: var(--zmc-red);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        /* --- CONTAINER --- */
+        .container {
+            max-width: 800px;
+            margin: -20px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 30;
+        }
+
+        /* --- EMERGENCY BANNER --- */
+        .emergency-banner {
+            background-color: var(--white);
+            border-left: 6px solid var(--zmc-red);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+        
+        @media (min-width: 600px) {
+            .emergency-banner {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+            }
+        }
+
+        .emergency-text { color: var(--zmc-red-dark); font-weight: bold; font-size: 1.05rem; }
+        
+        .btn-triage {
+            background-color: var(--zmc-red);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- NAV TABS --- */
+        .nav-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
+            margin-bottom: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(5px);
+            scrollbar-width: none;
+        }
+        .nav-scroll::-webkit-scrollbar { display: none; }
+
+        .main-nav-btn {
+            padding: 10px 20px;
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            color: var(--zmc-grey);
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+
+        .main-nav-btn.active {
+            background: var(--zmc-red);
+            color: white;
+            border-color: var(--zmc-red);
+            box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
+        }
+
+        /* --- CARDS & SECTIONS --- */
+        .section-content { display: none; animation: fadeIn 0.4s ease; }
+        .section-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 20px;
+            border-top: 3px solid var(--zmc-red);
+        }
+
+        .card h2 { 
+            color: var(--zmc-black); 
+            margin-top: 0; 
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 15px; 
+            font-size: 1.3rem; 
+        }
+        
+        .card h3 { 
+            color: var(--zmc-red-dark); 
+            margin-top: 20px; 
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- LIST STYLES --- */
+        .icon-list { list-style: none; padding: 0; }
+        .icon-list li {
+            background: #fcfcfc;
+            border: 1px solid #eee;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .icon-list li::before {
+            content: attr(data-icon);
+            font-size: 1.2rem;
+            min-width: 25px;
+        }
+
+        /* --- DIAGNOSIS TABS --- */
+        .diagnosis-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .diag-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .diag-btn.active {
+            background: var(--zmc-black);
+            color: white;
+            border-color: var(--zmc-black);
+            font-weight: bold;
+        }
+
+        .diag-content { display: none; }
+        .diag-content.active { display: block; }
+
+        /* --- TIPS GRID --- */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .tip-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+        .tip-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .tip-icon { font-size: 2rem; }
+        .tip-title { font-weight: 800; color: var(--zmc-red-dark); }
+        .tip-item p { margin: 0; font-size: 0.95rem; color: #555; }
+
+        /* --- TABLE --- */
+        .table-container { overflow-x: auto; border-radius: 10px; border: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        th { background: var(--zmc-black); color: white; padding: 12px; text-align: left; }
+        td { padding: 12px; border-bottom: 1px solid #eee; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+
+        /* --- CONTACT SECTION --- */
+        .contact-section { margin-top: 40px; text-align: center; }
+        
+        .btn-maps, .btn-ig {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            margin-bottom: 15px;
+            transition: 0.3s;
+            box-sizing: border-box;
+            background: white;
+        }
+        
+        .btn-maps { color: var(--maps); border: 2px solid var(--maps); }
+        .btn-maps:hover { background: var(--maps); color: white; }
+
+        .btn-ig { color: var(--instagram); border: 2px solid var(--instagram); }
+        .btn-ig:hover { background: var(--instagram); color: white; }
+
+        .address-text {
+            color: var(--zmc-grey);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* --- FLOATING WA --- */
+        .float-wa {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        /* --- MODAL --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: #aaa; }
+        .btn-group { display: flex; gap: 15px; justify-content: center; margin-top: 25px; }
+        .btn-yes { background: var(--zmc-red); color: white; padding: 12px 30px; border-radius: 50px; border:none; font-weight: bold; cursor: pointer; }
+        .btn-no { background: var(--zmc-black); color: white; padding: 12px 30px; border-radius: 50px; border:none; font-weight: bold; cursor: pointer; }
+
+        .footer { text-align: center; padding: 20px; color: #aaa; font-size: 0.8rem; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo-container">
+        <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo Klinik Pratama ZMC">
+    </div>
+    <h1>KLINIK PRATAMA<br>ZIHAN MEDICAL CENTER</h1>
+    <span class="clinic-sub">WANARAJA</span>
+    <div class="materi-badge">Panduan Batuk Pilek Anak</div>
+</header>
+
+<div class="container">
+
+    <!-- TRIAGE BANNER -->
+    <div class="emergency-banner">
+        <div>
+            <div class="emergency-text">⚠️ CEK TANDA BAHAYA (TRIAGE)</div>
+            <span style="font-size: 0.9rem; color: #555;">Apakah anak bernapas sangat cepat atau dada cekung ke dalam?</span>
+        </div>
+        <button class="btn-triage" onclick="openModal()">🚑 Cek Napas Sekarang</button>
+    </div>
+
+    <!-- MAIN NAV -->
+    <div class="nav-scroll">
+        <button class="main-nav-btn active" onclick="switchSection('diagnosa', this)">🔍 Gejala</button>
+        <button class="main-nav-btn" onclick="switchSection('perawatan', this)">💊 Perawatan</button>
+        <button class="main-nav-btn" onclick="switchSection('darurat', this)">🚨 Bahaya</button>
+        <button class="main-nav-btn" onclick="switchSection('pencegahan', this)">🛡️ Cegah</button>
+    </div>
+
+    <!-- SECTION 1: DIAGNOSA -->
+    <div id="diagnosa" class="section-content active">
+        <div class="card">
+            <h2>Bedakan Jenis Batuk Pilek</h2>
+            <p style="margin-bottom: 20px; color: #666;">Pilih tab untuk melihat detail gejala:</p>
+            
+            <div class="diagnosis-tabs">
+                <button class="diag-btn active" onclick="switchDiag('selesma', this)">Selesma</button>
+                <button class="diag-btn" onclick="switchDiag('pneumonia', this)">Pneumonia</button>
+                <button class="diag-btn" onclick="switchDiag('tbc', this)">TBC/Flek</button>
+                <button class="diag-btn" onclick="switchDiag('asma', this)">Asma</button>
+                <button class="diag-btn" onclick="switchDiag('alergi', this)">Alergi</button>
+            </div>
+
+            <!-- SELESMA -->
+            <div id="selesma" class="diag-content active">
+                <h3>🤧 Selesma (Common Cold)</h3>
+                <p>Infeksi virus ringan. Paling umum terjadi dan sembuh sendiri (self-limiting disease).</p>
+                <ul class="icon-list">
+                    <li data-icon="💧"><strong>Hidung Meler:</strong> Awalnya ingus bening, lama-lama bisa menjadi kental atau kehijauan (ini normal dalam proses penyembuhan).</li>
+                    <li data-icon="🤒"><strong>Demam Ringan:</strong> Biasanya hanya berlangsung kurang dari 3 hari.</li>
+                    <li data-icon="🧸"><strong>Kondisi Anak:</strong> Anak tetap aktif bermain, mau makan/minum saat suhu turun.</li>
+                    <li data-icon="⏳"><strong>Durasi:</strong> Batuk bisa berlangsung hingga 2 minggu sebelum sembuh total.</li>
+                </ul>
+            </div>
+
+            <!-- PNEUMONIA -->
+            <div id="pneumonia" class="diag-content">
+                <h3 style="color: var(--zmc-red);">🫁 Pneumonia (Radang Paru)</h3>
+                <p><strong>SERIUS.</strong> Infeksi pada kantung udara paru-paru yang butuh antibiotik dokter.</p>
+                <ul class="icon-list">
+                    <li data-icon="🐆"><strong>Napas Cepat:</strong> Ini adalah tanda utama. (Gunakan fitur "Cek Napas" di atas).</li>
+                    <li data-icon="🫁"><strong>Retraksi:</strong> Tarikan dinding dada bagian bawah ke dalam (cekung) saat anak menarik napas.</li>
+                    <li data-icon="🥵"><strong>Demam Tinggi:</strong> Anak tampak sangat lemas, tidak nafsu makan, atau merintih.</li>
+                    <li data-icon="👄"><strong>Sianosis:</strong> Bibir atau kuku tampak kebiruan (tanda kekurangan oksigen).</li>
+                </ul>
+            </div>
+
+            <!-- TBC -->
+            <div id="tbc" class="diag-content">
+                <h3>🦠 Tuberkulosis (TBC)</h3>
+                <p>Infeksi bakteri kronis (jangka panjang). Sering tertular dari orang dewasa serumah.</p>
+                <ul class="icon-list">
+                    <li data-icon="🗓️"><strong>Batuk Lama:</strong> Batuk lebih dari 2 minggu yang tidak sembuh dengan pengobatan biasa.</li>
+                    <li data-icon="📉"><strong>Berat Badan:</strong> Turun drastis atau tidak naik-naik (Gagal Tumbuh) meskipun makan banyak.</li>
+                    <li data-icon="🌡️"><strong>Demam:</strong> Demam "sumer-sumer" (tidak terlalu tinggi) tapi berlangsung lama (lebih dari 2 minggu).</li>
+                    <li data-icon="💤"><strong>Lesu:</strong> Anak tidak aktif dan berkeringat malam hari tanpa pendingin ruangan.</li>
+                </ul>
+            </div>
+
+            <!-- ASMA -->
+            <div id="asma" class="diag-content">
+                <h3>🌬️ Asma</h3>
+                <p>Penyempitan saluran napas karena bakat alergi/genetik.</p>
+                <ul class="icon-list">
+                    <li data-icon="🔊"><strong>Mengi:</strong> Terdengar bunyi "ngik-ngik" saat anak membuang napas.</li>
+                    <li data-icon="🌙"><strong>Waktu:</strong> Batuk memberat di malam hari atau dini hari (menjelang subuh).</li>
+                    <li data-icon="🏃"><strong>Pemicu:</strong> Batuk muncul setelah aktivitas fisik (lari, tertawa terbahak-bahak, atau menangis).</li>
+                    <li data-icon="🌡️"><strong>Tanpa Demam:</strong> Biasanya tidak disertai demam, kecuali ada infeksi penyerta.</li>
+                </ul>
+            </div>
+
+            <!-- ALERGI -->
+            <div id="alergi" class="diag-content">
+                <h3>🌸 Rhinitis Alergi</h3>
+                <p>Reaksi tubuh terhadap debu, dingin, atau bulu hewan. Bukan karena virus/bakteri.</p>
+                <ul class="icon-list">
+                    <li data-icon="🤧"><strong>Bersin:</strong> Sering bersin berulang-ulang, terutama di pagi hari atau terkena debu.</li>
+                    <li data-icon="👃"><strong>Gatal:</strong> Hidung gatal sering digosok-gosok (allergic salute), mata berair atau merah.</li>
+                    <li data-icon="💧"><strong>Ingus:</strong> Cairan hidung selalu bening dan encer seperti air.</li>
+                    <li data-icon="❌"><strong>Tanpa Demam:</strong> Anak tidak merasa meriang atau demam sama sekali.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📊 Tabel Perbandingan Cepat</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kondisi</th>
+                            <th>Demam</th>
+                            <th>Ciri Khas Utama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Selesma</strong></td><td>Ringan</td><td>Pilek, anak tetap ceria</td></tr>
+                        <tr><td><strong>Pneumonia</strong></td><td>Tinggi</td><td><strong>Napas Cepat & Sesak</strong></td></tr>
+                        <tr><td><strong>TBC</strong></td><td>Lama</td><td>BB turun, Batuk >2 mg</td></tr>
+                        <tr><td><strong>Asma</strong></td><td>Tidak</td><td>Bunyi mengi, kambuhan</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: PERAWATAN -->
+    <div id="perawatan" class="section-content">
+        <div class="card">
+            <h2>💊 Tips Perawatan di Rumah</h2>
+            <p>Jika anak sakit ringan (Selesma), lakukan perawatan suportif ini:</p>
+            
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-header">
+                        <span class="tip-icon">🍼</span>
+                        <span class="tip-title">Cairan & ASI</span>
+                    </div>
+                    <p>Cairan sangat penting agar lendir encer dan mencegah dehidrasi. Untuk bayi < 6 bulan, gempur ASI sesering mungkin. Anak besar boleh air putih hangat atau kuah sup.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <div class="tip-header">
+                        <span class="tip-icon">♨️</span>
+                        <span class="tip-title">Uap Hangat</span>
+                    </div>
+                    <p>Tempatkan baskom air hangat di kamar (hati-hati jangan tersenggol) atau gunakan <em>humidifier</em>. Uap lembap membantu melegakan hidung tersumbat.</p>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-header">
+                        <span class="tip-icon">🛏️</span>
+                        <span class="tip-title">Posisi Tidur</span>
+                    </div>
+                    <p>Tinggikan sedikit kepala anak saat tidur agar napas lebih lega. Gunakan bantal tambahan di bawah kasur (bukan langsung di kepala untuk bayi kecil).</p>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-header">
+                        <span class="tip-icon">🧣</span>
+                        <span class="tip-title">Tepuk Dada (Clapping)</span>
+                    </div>
+                    <p>Oleskan balsam hangat khusus bayi di dada/punggung. Lakukan tepukan lembut dengan tangan melengkung di punggung untuk membantu meluruhkan dahak.</p>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-header">
+                        <span class="tip-icon">👃</span>
+                        <span class="tip-title">Bersihkan Hidung</span>
+                    </div>
+                    <p>Gunakan cairan saline (air garam steril) tetes atau semprot yang dijual di apotek untuk mencuci hidung yang mampet agar anak bisa menyusu dengan baik.</p>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-header">
+                        <span class="tip-icon">🍯</span>
+                        <span class="tip-title">Madu (Anak > 1 Thn)</span>
+                    </div>
+                    <p>Penelitian membuktikan madu efektif meredakan batuk malam hari. Berikan 1/2 - 1 sendok teh. <strong>Dilarang keras untuk bayi di bawah 1 tahun.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: DARURAT -->
+    <div id="darurat" class="section-content">
+        <div class="card" style="border-top: 5px solid var(--zmc-red); background: #fffdfd;">
+            <h2 style="color: var(--zmc-red);">🚨 Segera Bawa ke IGD ZMC Jika:</h2>
+            <p>Jangan tunda jika bayi/anak mengalami gejala berikut:</p>
+            <ul class="icon-list">
+                <li data-icon="1️⃣" style="border-color: #ffcdd2;"><strong>Demam Tinggi > 3 Hari:</strong> Terutama jika bayi berusia < 3 bulan (langsung bawa tanpa menunggu).</li>
+                <li data-icon="2️⃣" style="border-color: #ffcdd2;"><strong>Napas Cepat / Tersengal:</strong> Dada tampak cekung ke dalam, napas bunyi "gronjok", hidung kembang kempis.</li>
+                <li data-icon="3️⃣" style="border-color: #ffcdd2;"><strong>Anak Sangat Lemas:</strong> Tidur terus, susah dibangunkan, atau tidak aktif saat suhu turun.</li>
+                <li data-icon="4️⃣" style="border-color: #ffcdd2;"><strong>Dehidrasi:</strong> Mulut kering, menangis tanpa air mata, pipis jarang/sedikit (popok kering > 6 jam).</li>
+                <li data-icon="5️⃣" style="border-color: #ffcdd2;"><strong>Muntah Hebat / Kejang:</strong> Muntah setiap kali makan/minum, atau mata mendelik/badan kaku.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 4: PENCEGAHAN -->
+    <div id="pencegahan" class="section-content">
+        <div class="card">
+            <h2>🛡️ Tips Pencegahan</h2>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-header"><span class="tip-icon">🧼</span><span class="tip-title">Cuci Tangan</span></div>
+                    <p>Wajib cuci tangan pakai sabun sebelum memegang bayi. Virus paling sering menempel di tangan orang dewasa.</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header"><span class="tip-icon">😷</span><span class="tip-title">Jauhkan Orang Sakit</span></div>
+                    <p>Jika ada saudara/tamu batuk pilek, larang mencium atau mendekati bayi. Wajib gunakan masker.</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header"><span class="tip-icon">🧸</span><span class="tip-title">Bersihkan Mainan</span></div>
+                    <p>Rutin lap mainan, gagang pintu, dan permukaan sekitar bayi dengan desinfektan atau air sabun karena virus bisa bertahan di permukaan benda.</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header"><span class="tip-icon">🤱</span><span class="tip-title">ASI Eksklusif</span></div>
+                    <p>ASI mengandung antibodi alami yang tidak ada di susu formula, memberikan tameng imun terbaik untuk bayi.</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header"><span class="tip-icon">🚬</span><span class="tip-title">Hindari Asap Rokok</span></div>
+                    <p><strong>Sangat Penting!</strong> Asap rokok merusak saluran napas bayi, membuatnya sangat rentan infeksi parah (Pneumonia) dan asma.</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-header"><span class="tip-icon">💉</span><span class="tip-title">Imunisasi Lengkap</span></div>
+                    <p>Pastikan imunisasi dasar lengkap sesuai jadwal (DPT, Hib, PCV, Influenza) untuk mencegah komplikasi radang paru berat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT LINKS FOOTER -->
+    <div class="contact-section">
+        <h3 style="color: var(--zmc-black);">Hubungi & Kunjungi Kami</h3>
+        
+        <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" class="btn-maps" target="_blank">
+            📍 Petunjuk Arah ke Klinik Pratama ZMC
+        </a>
+        
+        <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" class="btn-ig" target="_blank">
+            📸 Follow Instagram @zihanmedicalcenter
+        </a>
+
+        <div class="address-text">
+            <strong>Klinik Pratama Zihan Medical Center</strong><br>
+            Wanaraja, Kabupaten Garut, Jawa Barat
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Klinik Pratama Zihan Medical Center.<br>Materi edukasi ini tidak menggantikan saran medis dokter.</p>
+    </div>
+
+</div>
+
+<!-- FLOATING WA BUTTON -->
+<a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" class="float-wa" target="_blank">
+    <svg width="35" height="35" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382C17.112 14.382 16.752 14.382 16.392 14.382C16.326 14.382 16.274 14.398 16.225 14.445C15.82 14.832 15.414 15.218 15.003 15.598C14.957 15.641 14.903 15.658 14.843 15.632C14.195 15.348 13.582 14.996 13.023 14.568C12.358 14.058 11.782 13.468 11.293 12.798C10.985 12.378 10.722 11.928 10.528 11.446C10.505 11.388 10.522 11.332 10.565 11.288C10.941 10.898 11.312 10.504 11.688 10.116C11.748 10.054 11.764 9.988 11.748 9.908C11.603 9.176 11.46 8.442 11.312 7.712C11.258 7.442 11.202 7.174 11.148 6.904C11.128 6.806 11.066 6.754 10.966 6.752C10.598 6.746 10.23 6.744 9.862 6.752C9.728 6.756 9.624 6.804 9.536 6.902C9.112 7.376 8.814 7.926 8.686 8.548C8.528 9.31 8.572 10.068 8.784 10.814C9.18 12.216 10.02 13.388 11.066 14.382C12.562 15.802 14.322 16.828 16.326 17.332C17.026 17.508 17.728 17.546 18.44 17.412C18.574 17.386 18.666 17.308 18.72 17.182C18.996 16.536 19.27 15.888 19.544 15.242C19.596 15.12 19.544 15.026 19.458 14.942C19.168 14.654 18.874 14.372 18.584 14.086C18.366 13.868 18.148 13.652 17.932 13.432C17.818 13.318 17.658 13.328 17.472 14.382Z"/>
+    </svg>
+</a>
+
+<!-- MODAL TRIAGE -->
+<div id="triageModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h3 style="color: var(--zmc-red); margin-top:0;">🚑 Cek Napas (1 Menit)</h3>
+        <p style="text-align: left; font-size: 0.95rem; background: #fafafa; padding: 15px; border-radius: 10px; border: 1px solid #eee;">
+            Hitung napas saat anak tenang/tidur.<br><br>
+            <strong>BATAS AMAN (Maksimal):</strong><br>
+            👶 <b>< 2 bln:</b> 60x/menit<br>
+            👶 <b>2-12 bln:</b> 50x/menit<br>
+            🧒 <b>1-5 thn:</b> 40x/menit
+        </p>
+        <p style="font-weight: bold; margin-top: 20px;">Apakah napas LEBIH CEPAT dari angka di atas ATAU dada cekung ke dalam?</p>
+        <div class="btn-group">
+            <button class="btn-yes" onclick="alert('BAHAYA: Curiga PNEUMONIA. Segera bawa ke IGD ZMC!'); closeModal(); switchSection('diagnosa', document.querySelector('.main-nav-btn')); switchDiag('pneumonia', document.querySelectorAll('.diag-btn')[1]);">YA, BAHAYA</button>
+            <button class="btn-no" onclick="alert('Bagus. Pantau terus. Lakukan perawatan rumah.'); closeModal();">TIDAK</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchSection(sectionId, btnElement) {
+        document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+        document.querySelectorAll('.main-nav-btn').forEach(el => el.classList.remove('active'));
+        btnElement.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchDiag(diagId, btnElement) {
+        document.querySelectorAll('.diag-content').forEach(el => el.classList.remove('active'));
+        document.getElementById(diagId).classList.add('active');
+        document.querySelectorAll('.diag-btn').forEach(el => el.classList.remove('active'));
+        btnElement.classList.add('active');
+    }
+
+    function openModal() { document.getElementById('triageModal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('triageModal').style.display = 'none'; }
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('triageModal')) closeModal();
+    }
+</script>
+
+</body>
+</html>

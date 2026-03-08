@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Pratama Zihan Medical Center - #ZMCGakNyuekinKamu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        
+        /* ZMC Colors */
+        .bg-zmc-red { background-color: #dc2626; }
+        .text-zmc-red { color: #dc2626; }
+        .border-zmc-red { border-color: #dc2626; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Animation */
+        .fade-in-up { animation: fadeInUp 0.5s ease-out; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Print Styles */
+        @media print {
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            body { background-color: white; color: black; }
+            #eduzmc-content { margin: 0; padding: 0; width: 100%; }
+        }
+
+        .tab-active { background-color: #dc2626; color: white; border-color: #dc2626; }
+        .tab-inactive { background-color: #fee2e2; color: #991b1b; border-color: #fecaca; }
+        
+        /* Table Styles for Mobile */
+        .food-table th { white-space: nowrap; }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- FLOATING WA BUTTON -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" class="no-print fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center gap-2 group">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap font-bold">Chat Kami</span>
+    </a>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img class="h-12 w-auto rounded-full shadow-sm" src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC">
+                    <div class="flex flex-col">
+                        <span class="font-bold text-xl leading-none text-gray-900 tracking-tight">ZIHAN MEDICAL CENTER</span>
+                        <span class="text-xs text-red-600 font-bold tracking-wide">KLINIK PRATAMA 24 JAM</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-red-600 font-medium transition">Beranda</a>
+                    <a href="#eduzmc" class="px-4 py-2 rounded-full bg-red-50 text-red-700 font-bold hover:bg-red-100 transition">EduZMC: Diet Sehat</a>
+                    <a href="#fasilitas" class="text-gray-600 hover:text-red-600 font-medium transition">Fasilitas</a>
+                    <a href="#kontak" class="text-gray-600 hover:text-red-600 font-medium transition">Lokasi</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-red-600 focus:outline-none p-2">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#beranda" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-700">Beranda</a>
+                <a href="#eduzmc" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-lg text-base font-bold bg-red-600 text-white">📖 EduZMC: Panduan Diet</a>
+                <a href="#fasilitas" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-700">Fasilitas</a>
+                <a href="#kontak" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-lg text-base font-medium text-gray-700 hover:bg-red-50 hover:text-red-700">Kontak & Lokasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="pt-28 pb-10 md:pt-36 md:pb-16 bg-gradient-to-br from-red-50 to-white no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-red-100 text-red-700 text-sm font-bold mb-4 tracking-wide">#ZMCGakNyuekinKamu</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
+                Layanan Kesehatan Prima<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800">Di Jantung Wanaraja</span>
+            </h1>
+            <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+                Kami siap melayani Anda dengan hati 24 Jam setiap hari. Fasilitas lengkap, dokter ramah, dan penanganan cepat.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" class="px-8 py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 transition shadow-lg shadow-red-200 flex items-center justify-center gap-2">
+                    <span>Konsultasi via WA</span>
+                </a>
+                <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="px-8 py-4 bg-white text-gray-900 border-2 border-gray-200 rounded-xl font-bold text-lg hover:border-red-600 hover:text-red-600 transition flex items-center justify-center gap-2">
+                    <span>📍 Petunjuk Arah</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUZMC SECTION (DIET CONTENT) -->
+    <section id="eduzmc" class="py-12 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Edu Header -->
+            <div class="bg-slate-50 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 mb-10 relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">EduZMC</span>
+                        <span class="text-gray-400 text-xs">Artikel Kesehatan</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Diet Hipertensi Urang Sunda</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl">
+                        Panduan praktis mengontrol darah tinggi dengan kearifan lokal. Tetap enak, tetap sehat, tetap nyunda.
+                    </p>
+                    <button onclick="window.print()" class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-red-600 transition no-print">
+                        🖨️ Cetak Panduan Ini
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                
+                <!-- SIDEBAR NAV (Sticky on Desktop, Scroll on Mobile) -->
+                <aside class="lg:w-64 flex-shrink-0 no-print">
+                    <div class="sticky top-24 bg-white rounded-2xl shadow-sm p-4 border border-gray-200">
+                        <h4 class="font-bold text-gray-900 mb-4 px-2">Daftar Isi</h4>
+                        <nav class="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-2 lg:pb-0 scrollbar-hide">
+                            <a href="#diet-prinsip" class="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-50 hover:text-red-700 transition text-gray-600">🥗 Prinsip Makan</a>
+                            <a href="#diet-tabel" class="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium bg-red-600 text-white shadow-md transition">📋 Tabel Makanan</a>
+                            <a href="#diet-menu" class="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-50 hover:text-red-700 transition text-gray-600">📅 Menu 3 Hari</a>
+                            <a href="#diet-checklist" class="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-50 hover:text-red-700 transition text-gray-600">📝 Checklist</a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- CONTENT AREA -->
+                <div class="flex-1 space-y-12" id="eduzmc-content">
+
+                    <!-- Target Garam -->
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl flex items-start gap-4">
+                        <div class="text-3xl">🧂</div>
+                        <div>
+                            <h3 class="font-bold text-yellow-900 text-lg">Target Garam Harian</h3>
+                            <p class="text-yellow-800 mt-1">
+                                Maksimal <strong>1 Sendok Teh Perata</strong> (2.000 mg Natrium) untuk seharian.<br>
+                                <span class="text-sm opacity-80">*Jika sudah ada darah tinggi berat, target lebih ketat (¾ sdt).</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PRINSIP -->
+                    <section id="diet-prinsip" class="scroll-mt-24">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                            <span class="bg-red-600 w-2 h-8 rounded-full"></span> Prinsip Tambah vs Kurangi
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Tambah -->
+                            <div class="bg-white rounded-2xl shadow-sm border border-emerald-100 overflow-hidden">
+                                <div class="bg-emerald-600 py-3 px-6 text-white font-bold flex items-center gap-2">
+                                    <span>✅</span> TAMBAHKAN
+                                </div>
+                                <div class="p-6 space-y-4">
+                                    <div>
+                                        <strong class="text-emerald-800 block">🥦 Sayur & Buah (Kalium Tinggi)</strong>
+                                        <p class="text-sm text-gray-600">Lalapan, sayur asem (tanpa MSG), pisang, pepaya, jeruk.</p>
+                                    </div>
+                                    <div>
+                                        <strong class="text-emerald-800 block">🐟 Protein Rendah Lemak</strong>
+                                        <p class="text-sm text-gray-600">Pepes ikan, ayam panggang (tanpa kulit), tahu kukus.</p>
+                                    </div>
+                                    <div>
+                                        <strong class="text-emerald-800 block">🌿 Bumbu Rempah Segar</strong>
+                                        <p class="text-sm text-gray-600">Kencur, lengkuas, jahe, serai, daun jeruk, asam jawa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Kurangi -->
+                            <div class="bg-white rounded-2xl shadow-sm border border-red-100 overflow-hidden">
+                                <div class="bg-red-600 py-3 px-6 text-white font-bold flex items-center gap-2">
+                                    <span>⛔</span> KURANGI / HINDARI
+                                </div>
+                                <div class="p-6 space-y-4">
+                                    <div>
+                                        <strong class="text-red-800 block">🐟 Ikan Asin & Terasi</strong>
+                                        <p class="text-sm text-gray-600">Sumber natrium tertinggi. Ganti dengan ikan bumbu kuning.</p>
+                                    </div>
+                                    <div>
+                                        <strong class="text-red-800 block">💊 Kaldu Bubuk & Saus</strong>
+                                        <p class="text-sm text-gray-600">Royco/Masako/Micin berlebih, saus sambal botolan.</p>
+                                    </div>
+                                    <div>
+                                        <strong class="text-red-800 block">🍜 Makanan Olahan</strong>
+                                        <p class="text-sm text-gray-600">Mie instan, sosis, bakso kemasan, kerupuk.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- TABEL MAKANAN SUNDA (STATIC) -->
+                    <section id="diet-tabel" class="scroll-mt-24">
+                        <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                            <div class="p-6 bg-gray-800 text-white">
+                                <h3 class="text-2xl font-bold mb-2">📋 Tabel Makanan Khas Sunda</h3>
+                                <p class="text-gray-300 text-sm">Daftar cek cepat keamanan makanan untuk penderita hipertensi.</p>
+                            </div>
+                            
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse food-table">
+                                    <thead class="bg-gray-100 text-gray-600 uppercase text-xs font-bold tracking-wider">
+                                        <tr>
+                                            <th class="p-4 border-b">Nama Makanan</th>
+                                            <th class="p-4 border-b">Status</th>
+                                            <th class="p-4 border-b">Keterangan / Tips</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-sm">
+                                        <!-- GROUP: AMAN (Hijau) -->
+                                        <tr class="bg-emerald-50 border-l-4 border-emerald-500">
+                                            <td class="p-4 font-bold text-gray-800">Lalapan (Timun/Kemangi)</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-emerald-200 text-emerald-800 font-bold text-xs">AMAN</span></td>
+                                            <td class="p-4 text-gray-600">Makan sepuasnya tanpa cocolan asin berlebih.</td>
+                                        </tr>
+                                        <tr class="bg-emerald-50 border-l-4 border-emerald-500">
+                                            <td class="p-4 font-bold text-gray-800">Sayur Asem</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-emerald-200 text-emerald-800 font-bold text-xs">AMAN (SYARAT)</span></td>
+                                            <td class="p-4 text-gray-600">Jangan pakai kaldu instan. Gurihkan dengan daun salam & asam.</td>
+                                        </tr>
+                                        <tr class="bg-emerald-50 border-l-4 border-emerald-500">
+                                            <td class="p-4 font-bold text-gray-800">Pepes Ikan / Tahu</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-emerald-200 text-emerald-800 font-bold text-xs">SANGAT BAIK</span></td>
+                                            <td class="p-4 text-gray-600">Kaya rempah alami, rendah lemak, dikukus.</td>
+                                        </tr>
+                                        <tr class="bg-emerald-50 border-l-4 border-emerald-500">
+                                            <td class="p-4 font-bold text-gray-800">Pecel Leunca</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-emerald-200 text-emerald-800 font-bold text-xs">AMAN (MODIF)</span></td>
+                                            <td class="p-4 text-gray-600">Kurangi garam/terasi, perbanyak kencur & jeruk limau.</td>
+                                        </tr>
+
+                                        <!-- GROUP: BATASI (Kuning) -->
+                                        <tr class="bg-yellow-50 border-l-4 border-yellow-400">
+                                            <td class="p-4 font-bold text-gray-800">Sambal Terasi</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-yellow-200 text-yellow-800 font-bold text-xs">BATASI</span></td>
+                                            <td class="p-4 text-gray-600">Terasi mengandung garam tinggi. Ganti sambal tomat segar.</td>
+                                        </tr>
+                                        <tr class="bg-yellow-50 border-l-4 border-yellow-400">
+                                            <td class="p-4 font-bold text-gray-800">Lotek / Karedok</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-yellow-200 text-yellow-800 font-bold text-xs">HATI-HATI</span></td>
+                                            <td class="p-4 text-gray-600">Saus kacang sering asin. Minta bumbu dipisah/dikurangi.</td>
+                                        </tr>
+                                        <tr class="bg-yellow-50 border-l-4 border-yellow-400">
+                                            <td class="p-4 font-bold text-gray-800">Tahu/Tempe Goreng</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-yellow-200 text-yellow-800 font-bold text-xs">BATASI</span></td>
+                                            <td class="p-4 text-gray-600">Rendaman bumbu biasanya sangat asin. Lebih baik bacem/kukus.</td>
+                                        </tr>
+                                        <tr class="bg-yellow-50 border-l-4 border-yellow-400">
+                                            <td class="p-4 font-bold text-gray-800">Nasi Timbel Komplit</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-yellow-200 text-yellow-800 font-bold text-xs">PILIH LAUK</span></td>
+                                            <td class="p-4 text-gray-600">Fokus ke lalapan & pepes. Hindari ikan asin & empal goreng.</td>
+                                        </tr>
+
+                                        <!-- GROUP: HINDARI (Merah) -->
+                                        <tr class="bg-red-50 border-l-4 border-red-500">
+                                            <td class="p-4 font-bold text-gray-800">Ikan Asin / Peda</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-red-200 text-red-800 font-bold text-xs">HINDARI</span></td>
+                                            <td class="p-4 text-gray-600">Kandungan natrium ekstrem. Pemicu utama tensi naik.</td>
+                                        </tr>
+                                        <tr class="bg-red-50 border-l-4 border-red-500">
+                                            <td class="p-4 font-bold text-gray-800">Batagor / Siomay</td>
+                                            <td class="p-4"><span class="px-2 py-1 rounded bg-red-200 text-red-800 font-bold text-xs">BATASI KETAT</span></td>
+                                            <td class="p-4 text-gray-600">Adonan tepung & saus bumbu kacang/kecap tinggi garam.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-4 bg-gray-50 text-xs text-gray-500 text-center border-t border-gray-200">
+                                *Geser tabel ke samping jika melihat di HP.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- MENU 3 HARI -->
+                    <section id="diet-menu" class="scroll-mt-24">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                            <span class="bg-red-600 w-2 h-8 rounded-full"></span> Contoh Menu 3 Hari
+                        </h3>
+                        
+                        <div class="flex space-x-2 mb-4 overflow-x-auto pb-2 no-scrollbar">
+                            <button onclick="showMenu(1)" id="btn-day1" class="flex-1 min-w-[100px] py-2 rounded-full font-bold transition tab-active shadow-sm">Hari 1</button>
+                            <button onclick="showMenu(2)" id="btn-day2" class="flex-1 min-w-[100px] py-2 rounded-full font-bold transition tab-inactive hover:bg-red-100">Hari 2</button>
+                            <button onclick="showMenu(3)" id="btn-day3" class="flex-1 min-w-[100px] py-2 rounded-full font-bold transition tab-inactive hover:bg-red-100">Hari 3</button>
+                        </div>
+
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[200px]">
+                            <!-- Day 1 -->
+                            <div id="menu-day1" class="animate-fade-in">
+                                <ul class="space-y-4">
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">PAGI</span>
+                                        <span class="text-sm text-gray-700">Oat + Pisang + Susu Low-fat.</span>
+                                    </li>
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">SIANG</span>
+                                        <span class="text-sm text-gray-700"><strong>(Warung)</strong> Nasi merah ½ porsi, pepes tahu/jamur, sayur asem, lalapan, sambal tomat 1 sdm.</span>
+                                    </li>
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">MALAM</span>
+                                        <span class="text-sm text-gray-700">Sup bening ayam kampung (tanpa masako/royco), wortel, labu siam, jagung rebus.</span>
+                                    </li>
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-gray-100 text-gray-600 font-bold px-2 py-1 rounded text-xs mt-0.5">CEMILAN</span>
+                                        <span class="text-sm text-gray-700">Pepaya/Jeruk, Kacang tanah sangrai (tanpa garam).</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Day 2 -->
+                            <div id="menu-day2" class="hidden animate-fade-in">
+                                <ul class="space-y-4">
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">PAGI</span>
+                                        <span class="text-sm text-gray-700">Ubi rebus + Yoghurt plain + Irisan pepaya.</span>
+                                    </li>
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">SIANG</span>
+                                        <span class="text-sm text-gray-700">Nasi merah, tumis kangkung bawang putih (minyak dikit, no saus tiram), tempe panggang.</span>
+                                    </li>
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">MALAM</span>
+                                        <span class="text-sm text-gray-700">Pepes ikan mas/nila bumbu lengkap (serai, kemangi, tomat), lalapan segar.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Day 3 -->
+                            <div id="menu-day3" class="hidden animate-fade-in">
+                                <ul class="space-y-4">
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">PAGI</span>
+                                        <span class="text-sm text-gray-700">Roti gandum 2 lembar + Telur rebus + Tomat.</span>
+                                    </li>
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">SIANG</span>
+                                        <span class="text-sm text-gray-700"><strong>(Warung)</strong> Nasi putih ½ porsi, sayur asem, tahu kukus/pepes, karedok (minta saus tipis).</span>
+                                    </li>
+                                    <li class="flex gap-3 items-start">
+                                        <span class="bg-red-100 text-red-800 font-bold px-2 py-1 rounded text-xs mt-0.5">MALAM</span>
+                                        <span class="text-sm text-gray-700">Capcay rumahan (garam minimal, main di lada/bawang), dada ayam panggang.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CHECKLIST -->
+                    <section id="diet-checklist" class="scroll-mt-24">
+                        <div class="grid grid-cols-1 gap-6">
+                            <!-- Tips -->
+                            <div class="bg-red-50 p-6 rounded-2xl border border-red-100">
+                                <h3 class="font-bold text-red-900 mb-4">💡 Tips Hajatan / Makan Luar</h3>
+                                <ul class="space-y-3 text-sm text-red-800">
+                                    <li class="flex items-start gap-2">🗣️ Ucapkan: "Tanpa kaldu instan/micin ya, garamnya dikit aja."</li>
+                                    <li class="flex items-start gap-2">🍽️ Minta sambal/bumbu dipisah (jangan disiram).</li>
+                                    <li class="flex items-start gap-2">🍲 Kuah bakso/soto/sop jangan dihabiskan.</li>
+                                    <li class="flex items-start gap-2">🥦 Penuhi setengah piring dengan lalapan dulu.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Checklist -->
+                            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm print-only">
+                                <h3 class="font-bold text-gray-800 mb-4">📝 Checklist Harian</h3>
+                                <div class="space-y-3">
+                                    <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-gray-50 rounded">
+                                        <input type="checkbox" class="w-5 h-5 text-red-600 rounded focus:ring-red-500">
+                                        <span class="text-sm text-gray-700">Garam total hari ini < 1 sdt?</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-gray-50 rounded">
+                                        <input type="checkbox" class="w-5 h-5 text-red-600 rounded focus:ring-red-500">
+                                        <span class="text-sm text-gray-700">Makan 4-5 porsi sayur & buah?</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3 cursor-pointer p-2 hover:bg-gray-50 rounded">
+                                        <input type="checkbox" class="w-5 h-5 text-red-600 rounded focus:ring-red-500">
+                                        <span class="text-sm text-gray-700">Pilih pepes/kukus (bukan gorengan)?</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASILITAS SECTION (MOVED DOWN) -->
+    <section id="fasilitas" class="py-16 bg-gradient-to-t from-gray-100 to-white border-t border-gray-100 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Fasilitas Lengkap</h2>
+                <div class="inline-block bg-gray-900 text-white px-4 py-1 rounded font-bold text-sm">BUKA 24 JAM SETIAP HARI</div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-red-200 hover:shadow-lg transition text-center group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🩺</div>
+                    <h3 class="font-bold text-lg text-gray-800">Poli Umum</h3>
+                    <p class="text-sm text-gray-500 mt-2">Pemeriksaan dokter umum profesional.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-red-200 hover:shadow-lg transition text-center group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🛏️</div>
+                    <h3 class="font-bold text-lg text-gray-800">Rawat Inap</h3>
+                    <p class="text-sm text-gray-500 mt-2">Kamar nyaman & perawatan intensif.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-red-200 hover:shadow-lg transition text-center group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🔬</div>
+                    <h3 class="font-bold text-lg text-gray-800">Laboratorium</h3>
+                    <p class="text-sm text-gray-500 mt-2">Cek darah & pemeriksaan medis lengkap.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 hover:border-red-200 hover:shadow-lg transition text-center group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">💊</div>
+                    <h3 class="font-bold text-lg text-gray-800">Farmasi</h3>
+                    <p class="text-sm text-gray-500 mt-2">Obat lengkap & resep dokter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-gray-900 text-white pt-16 pb-8 no-print mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                <!-- Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img class="h-10 w-auto rounded-full bg-white p-0.5" src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo">
+                        <span class="font-bold text-xl">Zihan Medical Center</span>
+                    </div>
+                    <div class="space-y-4 text-gray-400">
+                        <p class="flex items-start gap-3">
+                            <span class="text-red-500 mt-1">📍</span>
+                            <span>Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <span class="text-red-500">📞</span>
+                            <a href="tel:+6282217180432" class="hover:text-white transition">+62 822-1718-0432</a>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <span class="text-red-500">⏰</span>
+                            <span>Senin - Minggu: 24 Jam</span>
+                        </p>
+                    </div>
+                    <div class="mt-8 flex gap-4">
+                        <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" class="p-2 bg-gray-800 rounded-full hover:bg-red-600 transition">
+                            <!-- Instagram Icon -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" class="p-2 bg-gray-800 rounded-full hover:bg-red-600 transition">
+                             <!-- WA Icon -->
+                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="h-64 rounded-xl overflow-hidden shadow-lg border border-gray-800">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3958.556736279934!2d107.9715783!3d-7.1770669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b13936997631%3A0xe54911d87e074e0d!2sZihan%20Medical%20Center!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2024 Zihan Medical Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Tab Logic for Menu 3 Hari
+        function showMenu(day) {
+            // Hide all
+            document.getElementById('menu-day1').classList.add('hidden');
+            document.getElementById('menu-day2').classList.add('hidden');
+            document.getElementById('menu-day3').classList.add('hidden');
+            
+            // Reset Buttons
+            for(let i=1; i<=3; i++) {
+                const btn = document.getElementById(`btn-day${i}`);
+                btn.classList.remove('tab-active');
+                btn.classList.add('tab-inactive');
+            }
+
+            // Show selected
+            document.getElementById(`menu-day${day}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`btn-day${day}`);
+            activeBtn.classList.remove('tab-inactive');
+            activeBtn.classList.add('tab-active');
+        }
+    </script>
+</body>
+</html>

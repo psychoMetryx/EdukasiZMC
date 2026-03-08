@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Nyeri Lansia - Zihan Medical Center</title>
+    <style>
+        /* === TEMA ZIHAN MEDICAL CENTER === */
+        :root {
+            /* Warna Identitas ZMC: Merah, Hitam, Putih */
+            --primary: #D32F2F;   /* Merah ZMC */
+            --primary-dark: #b71c1c;
+            --accent: #FFEBEE;    /* Merah Muda Sangat Pudar (Background) */
+            --text: #212121;      /* Hitam Pekat agar mudah dibaca */
+            --text-light: #555555;
+            --bg: #FAFAFA;
+            --white: #ffffff;
+            --wa-green: #25D366;  /* Warna tombol WA */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            font-size: 18px; /* Ramah Lansia */
+        }
+
+        /* === HEADER === */
+        header {
+            background-color: var(--white);
+            border-bottom: 5px solid var(--primary);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        header p.subtitle {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* Navigasi Sederhana */
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            background: var(--primary);
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--primary-dark);
+        }
+
+        /* === CONTAINER UTAMA === */
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 0 20px;
+            padding-bottom: 40px; /* Spasi sebelum footer */
+        }
+
+        /* Cards & Sections */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        /* === BAGIAN: TANDA BAHAYA === */
+        .alert-box {
+            background-color: #fff5f5; /* Merah sangat muda */
+            border: 2px solid var(--primary);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .alert-box h3 {
+            color: var(--primary);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alert-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .alert-box li {
+            margin-bottom: 8px;
+        }
+
+        /* === ACCORDION (Buka Tutup) === */
+        .accordion {
+            background-color: #fff;
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 19px;
+            font-weight: bold;
+            color: var(--text);
+            transition: 0.4s;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .active, .accordion:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .accordion:after {
+            content: '\002B'; /* Plus sign */
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 24px;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212"; /* Minus sign */
+        }
+
+        .panel {
+            padding: 0 20px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+        }
+
+        /* === LATIHAN FISIK === */
+        .exercise-item {
+            background: #fdfdfd;
+            border-left: 4px solid var(--text-light);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        /* === JURNAL NYERI === */
+        .diary-input {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .diary-input {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button.btn-save {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(211, 47, 47, 0.3);
+            transition: transform 0.1s;
+        }
+
+        button.btn-save:active {
+            transform: scale(0.98);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        /* === RINGKASAN & CTA WHATSAPP === */
+        .summary-box {
+            background-color: #fffbe6;
+            border: 2px dashed #d4b106;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(to right, #ffebee, #ffffff);
+            border-radius: 15px;
+            border: 1px solid #ffcdd2;
+        }
+
+        .btn-wa {
+            display: inline-block;
+            background-color: var(--wa-green);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-wa:hover {
+            background-color: #1ebc57;
+        }
+
+        /* === FOOTER KLINIK (MODERN & RESPONSIF) === */
+        footer {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            padding: 40px 20px 20px 20px;
+            font-size: 0.95rem;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-section h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .footer-section p, .footer-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li::before {
+            content: "✔";
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .btn-maps {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: 1px solid #555;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-maps:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .social-links a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* Responsif untuk Mobile */
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr; /* Tumpuk ke bawah */
+                text-align: center;
+            }
+            
+            .footer-section h4 {
+                border-bottom: none; /* Hilangkan garis di mobile agar rapi */
+                display: block;
+            }
+            
+            .exercise-item {
+                border-left: none;
+                border-top: 4px solid var(--text-light);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header dengan Branding Zihan Medical Center -->
+<header>
+    <div class="header-content">
+        <!-- Logo dari link yang diberikan -->
+        <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo Zihan Medical Center" class="logo-img">
+        <div>
+            <h1>Edukasi Nyeri Lansia</h1>
+            <p class="subtitle">Dipersembahkan oleh Zihan Medical Center</p>
+        </div>
+    </div>
+    <nav>
+        <a href="#bahaya">Tanda Bahaya</a>
+        <a href="#tips">Perawatan</a>
+        <a href="#latihan">Latihan</a>
+        <a href="#jurnal">Buku Nyeri</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Section 1: Intro -->
+    <div class="card">
+        <h2 style="margin-top:0;">Pendahuluan</h2>
+        <p><strong>Tujuan:</strong> Panduan ini disusun khusus untuk membantu Bapak/Ibu lanjut usia mengurangi rasa nyeri, menjaga kemandirian dalam beraktivitas, serta mencegah risiko jatuh yang sering terjadi.</p>
+        <p><em>Kenapa nyeri sering terjadi pada usia lanjut?</em> Hal ini bisa disebabkan oleh berbagai faktor, mulai dari penipisan bantalan tulang rawan (osteoarthritis), melemahnya kekuatan otot, perubahan postur tubuh, hingga gangguan pada saraf. Fokus utama dari panduan Zihan Medical Center ini adalah prinsip: <strong>Tetap Aman, Tetap Aktif, dan Lakukan Secara Bertahap.</strong></p>
+    </div>
+
+    <!-- Section 2: Tanda Bahaya -->
+    <section id="bahaya" class="alert-box">
+        <h3>⚠️ TANDA BAHAYA (Segera ke Klinik/IGD)</h3>
+        <p>Jika Bapak/Ibu merasakan gejala berikut, jangan ditunda. Segera cari pertolongan medis:</p>
+        <ul>
+            <li>Nyeri yang muncul sangat hebat secara mendadak atau tidak membaik meskipun sudah minum obat.</li>
+            <li>Tiba-tiba kaki terasa lemah atau mati rasa hingga sulit berdiri.</li>
+            <li>Gangguan Buang Air Kecil (sulit pipis/mengompol) atau Buang Air Besar mendadak yang disertai nyeri punggung.</li>
+            <li>Disertai demam tinggi atau penurunan berat badan drastis tanpa sebab.</li>
+            <li>Nyeri yang terus menerus terasa bahkan saat istirahat di malam hari.</li>
+            <li>Betis bengkak, kemerahan, teraba hangat, atau sebaliknya kaki menjadi pucat dan dingin.</li>
+        </ul>
+    </section>
+
+    <!-- Section 3: Tips Perawatan Mandiri (Accordion) -->
+    <section id="tips">
+        <h2>Tips Perawatan Mandiri di Rumah</h2>
+        <p>Klik pada judul di bawah ini untuk melihat penjelasan lengkap:</p>
+
+        <button class="accordion">🏃 Tetap Bergerak & Terapi Kompres</button>
+        <div class="panel">
+            <ul>
+                <li><strong>Jangan tiduran terus-menerus:</strong> Hindari tirah baring total lebih dari 1-2 hari karena justru akan membuat otot semakin kaku dan lemah.</li>
+                <li><strong>Jalan Kaki Ringan:</strong> Lakukan jalan kaki santai selama 5-10 menit di dalam rumah atau pekarangan, ulangi 2-3 kali sehari sesuai kemampuan.</li>
+                <li><strong>Kompres Dingin (Es):</strong> Gunakan jika ada bengkak atau cedera yang baru terjadi (kurang dari 3 hari). Bungkus es dengan lap, tempelkan 10-15 menit.</li>
+                <li><strong>Kompres Hangat:</strong> Gunakan untuk otot yang terasa kaku, tegang, atau nyeri lama (kronis). Tempelkan handuk hangat atau botol air hangat selama 10-15 menit.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">🪑 Posisi Tubuh & Ergonomi Aman</button>
+        <div class="panel">
+            <ul>
+                <li><strong>Posisi Duduk:</strong> Usahakan tidak duduk diam lebih dari 30-40 menit. Berdirilah sejenak, regangkan badan, lalu duduk kembali.</li>
+                <li><strong>Cara Mengangkat Benda:</strong> Jangan membungkuk dari pinggang. Dekatkan benda ke tubuh, tekuk lutut, dan biarkan kaki yang bekerja mengangkat beban, punggung tetap tegak.</li>
+                <li><strong>Tidur Miring:</strong> Letakkan bantal guling di antara kedua lutut untuk menjaga keselarasan panggul.</li>
+                <li><strong>Tidur Telentang:</strong> Letakkan bantal kecil di bawah lutut untuk mengurangi ketegangan pada punggung bawah.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">💊 Panduan Penggunaan Obat Nyeri</button>
+        <div class="panel">
+            <p><em>Prinsip utama: Gunakan dosis serendah mungkin yang efektif. Selalu konsultasikan dengan dokter Zihan Medical Center jika Anda memiliki riwayat sakit lambung, ginjal, atau jantung.</em></p>
+            <ul>
+                <li><strong>Parasetamol:</strong> Obat pereda nyeri paling aman. Dosis 500mg, bisa diminum 3-4 kali sehari bila nyeri (Maksimal 3.000mg per hari).</li>
+                <li><strong>Obat Oles (Topikal):</strong> Gunakan krim/gel pereda nyeri (misal yang mengandung menthol atau diclofenac) langsung pada area yang sakit. Risiko efek samping tubuh lebih kecil.</li>
+                <li><strong>Obat Minum Anti-Nyeri (NSAID):</strong> Seperti Asam Mefenamat atau Natrium Diklofenak. Hanya diminum <strong>sesudah makan</strong> dan hanya bila perlu saja. Jangan diminum jangka panjang tanpa resep.</li>
+                <li><strong>Peringatan Gout (Asam Urat):</strong> Jangan memulai minum Allopurinol saat sedang serangan nyeri akut/bengkak, karena bisa memperparah nyeri. Tunggu hingga nyeri reda.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">🏠 Tips Mencegah Jatuh di Rumah</button>
+        <div class="panel">
+            <ul>
+                <li>Pastikan penerangan rumah cukup terang, terutama akses ke kamar mandi di malam hari.</li>
+                <li>Pasang pegangan (grab bar) di dinding kamar mandi dan toilet.</li>
+                <li>Gunakan alas kaki yang tidak licin dan pas di kaki (hindari sandal jepit yang longgar).</li>
+                <li>Hati-hati saat bangun tidur. Jangan langsung berdiri. Duduk dulu di tepi kasur selama 1-2 menit untuk mencegah pusing (hipotensi ortostatik).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 4: Latihan -->
+    <section id="latihan">
+        <h2>Latihan Fisik Ringan (10-15 Menit)</h2>
+        <p><small>Lakukan rutin 3-5 hari per minggu. <strong>Stop</strong> jika timbul nyeri tajam atau sesak napas.</small></p>
+
+        <button class="accordion">🏋️ Latihan Punggung Bawah</button>
+        <div class="panel">
+            <div class="exercise-item">
+                <strong>Pelvic Tilt:</strong> Tidur telentang di kasur, lutut ditekuk. Kencangkan otot perut dan tekan punggung bawah hingga rata menempel ke kasur. Tahan 5 detik, lalu rileks. Ulangi 10 kali.
+            </div>
+            <div class="exercise-item">
+                <strong>Knee-to-Chest:</strong> Tidur telentang, tarik satu lutut ke arah dada dengan kedua tangan hingga terasa regangan nyaman di pantat. Tahan 10-20 detik. Ganti kaki. Ulangi 10 kali.
+            </div>
+            <div class="exercise-item">
+                <strong>Bridge:</strong> Tidur telentang lutut ditekuk. Angkat panggul ke atas sampai tubuh lurus dari bahu ke lutut. Tahan 3-5 detik, turunkan pelan-pelan. Ulangi 8-10 kali.
+            </div>
+        </div>
+
+        <button class="accordion">🦵 Latihan Penguatan Lutut</button>
+        <div class="panel">
+            <div class="exercise-item">
+                <strong>Quad Sets:</strong> Duduk selonjor di lantai/kasur. Kencangkan otot paha depan (seperti menekan lutut ke bawah). Tahan 5 detik, rileks. Ulangi 10 kali per kaki.
+            </div>
+            <div class="exercise-item">
+                <strong>Straight Leg Raise:</strong> Tidur telentang, satu kaki ditekuk, satu kaki lurus. Angkat kaki yang lurus setinggi lutut kaki yang ditekuk. Tahan 3 detik, turunkan perlahan. Ulangi 10 kali.
+            </div>
+            <div class="exercise-item">
+                <strong>Sit-to-Stand:</strong> Duduk di kursi kokoh. Cobalah berdiri tanpa bantuan tangan (tangan silang di dada) jika mampu. Lalu duduk kembali perlahan. Ini melatih kekuatan paha. Ulangi 8-10 kali.
+            </div>
+        </div>
+
+        <button class="accordion">🦶 Latihan Betis & Kaki</button>
+        <div class="panel">
+            <div class="exercise-item">
+                <strong>Calf Stretch (Regangan Betis):</strong> Berdiri menghadap tembok, satu kaki maju, satu kaki mundur. Dorong tembok dengan tangan, pastikan tumit kaki belakang tetap menempel lantai hingga betis terasa tertarik. Tahan 20-30 detik.
+            </div>
+            <div class="exercise-item">
+                <strong>Ankle Alphabet:</strong> Saat duduk atau tiduran, gerakkan pergelangan kaki seolah-olah sedang menulis huruf A sampai Z di udara. Ini melancarkan peredaran darah.
+            </div>
+            <div class="exercise-item">
+                <strong>Heel Raise (Jinjit):</strong> Berdiri sambil berpegangan pada kursi/meja. Angkat tumit (jinjit) setinggi mungkin. Tahan 3 detik, turunkan. Ulangi 10 kali.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Interactive Diary -->
+    <section id="jurnal" class="card" style="border-left: 5px solid var(--primary);">
+        <h2>📝 Pantau Mandiri: Buku Nyeri</h2>
+        <p>Catat kondisi nyeri Anda setiap hari untuk evaluasi saat kontrol ke dokter.</p>
+        
+        <div class="diary-input">
+            <div>
+                <label>Tanggal:</label>
+                <input type="date" id="dateInput">
+            </div>
+            <div>
+                <label>Skala Nyeri (0-10):</label>
+                <select id="painScale">
+                    <option value="0">0 - Tidak Nyeri</option>
+                    <option value="2">2 - Ringan</option>
+                    <option value="4">4 - Sedang</option>
+                    <option value="6">6 - Mengganggu</option>
+                    <option value="8">8 - Sangat Sakit</option>
+                    <option value="10">10 - Tak Tertahankan</option>
+                </select>
+            </div>
+            <div>
+                <label>Lokasi Sakit:</label>
+                <input type="text" id="locationInput" placeholder="Misal: Lutut Kanan">
+            </div>
+            <div>
+                <label>Aktivitas/Obat:</label>
+                <input type="text" id="activityInput" placeholder="Misal: Jalan 10 mnt / Minum obat">
+            </div>
+        </div>
+        <button class="btn-save" onclick="addEntry()">Simpan Catatan</button>
+
+        <table id="diaryTable">
+            <thead>
+                <tr>
+                    <th>Tgl</th>
+                    <th>Nyeri</th>
+                    <th>Lokasi</th>
+                    <th>Catatan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data akan muncul di sini -->
+            </tbody>
+        </table>
+    </section>
+
+    <div class="summary-box">
+        <h3>Ringkasan (Do & Don't)</h3>
+        <p>✅ <strong>DO (Lakukan):</strong> Tetap aktif bergerak semampu nyeri, pakai sepatu yang stabil, kompres area nyeri, lakukan latihan penguatan rutin.</p>
+        <p>❌ <strong>DON'T (Hindari):</strong> Tiduran terus menerus di kasur, membungkuk saat mengangkat beban, menggunakan alas kaki licin, memijat area yang bengkak/meradang, minum obat keras tanpa resep dokter.</p>
+        <p>⏰ <strong>Kapan harus kontrol?</strong> Jika nyeri menetap lebih dari 2-4 minggu atau sudah mengganggu kualitas tidur Anda.</p>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h3>Masih Bingung atau Nyeri Tidak Kunjung Hilang?</h3>
+        <p>Jangan biarkan nyeri menghambat hari tua yang bahagia. Konsultasikan langsung dengan tim medis kami.</p>
+        <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" class="btn-wa" target="_blank">
+            Chat Dokter ZMC Sekarang (WA)
+        </a>
+    </div>
+
+</div>
+
+<!-- FOOTER ZIHAN MEDICAL CENTER -->
+<footer>
+    <div class="footer-content">
+        
+        <!-- Kolom 1: Branding & Fasilitas -->
+        <div class="footer-section">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo Kecil" style="width: 40px; height: 40px; border-radius: 50%;">
+                <h4 style="margin:0; border:none; color: white;">Zihan Medical Center</h4>
+            </div>
+            <span class="tagline">#ZMCGakNyuekinKamu</span>
+            <p>Fasilitas Lengkap:</p>
+            <ul>
+                <li>Poli Umum</li>
+                <li>Rawat Inap</li>
+                <li>Laboratorium</li>
+                <li>Farmasi</li>
+            </ul>
+        </div>
+
+        <!-- Kolom 2: Lokasi -->
+        <div class="footer-section">
+            <h4>Lokasi Kami</h4>
+            <p>Jl. Kudang, Wanajaya, Wanaraja,<br>Kabupaten Garut,<br>Jawa Barat 44183</p>
+            <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="btn-maps">
+                📍 Buka di Google Maps
+            </a>
+        </div>
+
+        <!-- Kolom 3: Kontak & Jam -->
+        <div class="footer-section">
+            <h4>Hubungi Kami</h4>
+            <p>📞 +62 822-1718-0432</p>
+            <div class="social-links">
+                <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank">Instagram</a>
+            </div>
+            
+            <h4 style="margin-top: 20px;">Jam Operasional</h4>
+            <p style="font-weight: bold; color: var(--primary);">Buka 24 JAM</p>
+            <p>Senin - Minggu</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        &copy; 2025 Klinik Pratama Zihan Medical Center. All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+    // Script untuk Accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+    }
+
+    // Script untuk Jurnal Nyeri
+    function addEntry() {
+        var date = document.getElementById("dateInput").value;
+        var pain = document.getElementById("painScale").value;
+        var loc = document.getElementById("locationInput").value;
+        var act = document.getElementById("activityInput").value;
+
+        if(!date) {
+            alert("Mohon isi tanggal terlebih dahulu.");
+            return;
+        }
+
+        var table = document.getElementById("diaryTable").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(0); // Insert at top
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+
+        cell1.innerHTML = date;
+        cell2.innerHTML = "<span style='font-weight:bold; color:" + getPainColor(pain) + "'>" + pain + "</span>";
+        cell3.innerHTML = loc;
+        cell4.innerHTML = act;
+
+        // Reset form input text only (keep date/scale for ease)
+        document.getElementById("locationInput").value = "";
+        document.getElementById("activityInput").value = "";
+    }
+
+    function getPainColor(val) {
+        if(val <= 3) return "#2e7d32"; // Green
+        if(val <= 6) return "#f57f17"; // Orange
+        return "#c62828"; // Red
+    }
+    
+    // Set default date to today
+    document.getElementById('dateInput').valueAsDate = new Date();
+</script>
+
+</body>
+</html>

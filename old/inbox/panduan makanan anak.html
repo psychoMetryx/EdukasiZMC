@@ -1,0 +1,1782 @@
+﻿<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark">
+  <title>Panduan Makan Anak: MPASI dan Tumbuh Kembang - Zihan Medical Center</title>
+  <meta name="description" content="Panduan MPASI, feeding rules, GTM, resep lokal, dan tumbuh kembang anak untuk orang tua di Garut." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+
+    /* =========================
+       ZMC Edu — single-file HTML
+       - Mobile-first, offline-friendly
+       - No external libraries/fonts
+       ========================= */
+
+    :root{
+      --bg: #160f13;
+      --bg2:#24151d;
+      --card:#2a1821;
+      --card2:#311b25;
+      --text:#f9f0f3;
+      --muted:#dec9d1;
+      --muted2:#b996a4;
+      --line: rgba(255,255,255,.11);
+      --line2: rgba(255,255,255,.16);
+      --good:#34d399;
+      --warn:#f59e0b;
+      --bad:#fb7185;
+
+      --brand:#b3132d;
+      --brand2:#7f1023;
+      --accent:#ffd166;
+      --focus:#f9a8d4;
+
+      --shadow: 0 20px 50px rgba(0,0,0,.45);
+      --shadow2: 0 14px 35px rgba(0,0,0,.35);
+
+      --radius: 18px;
+      --radius2: 26px;
+
+      --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+      --font-display: ui-serif, Georgia, "Times New Roman", serif;
+    }
+
+    [data-theme="light"]{
+      --bg:#faf4f6;
+      --bg2:#f4ebef;
+      --card:#ffffff;
+      --card2:#fff7fa;
+      --text:#2b1721;
+      --muted:#6e4a59;
+      --muted2:#845c6d;
+      --line: rgba(52,15,31,.10);
+      --line2: rgba(52,15,31,.16);
+
+      --shadow: 0 18px 40px rgba(52,15,31,.12);
+      --shadow2: 0 10px 22px rgba(52,15,31,.10);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: var(--font-body);
+      color: var(--text);
+      background:
+        radial-gradient(1100px 500px at 12% -10%, rgba(179,19,45,.34), transparent 55%),
+        radial-gradient(860px 420px at 92% 8%, rgba(127,16,35,.32), transparent 56%),
+        radial-gradient(700px 440px at 50% 112%, rgba(255,209,102,.10), transparent 56%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      overflow-x:hidden;
+    }
+
+    /* subtle non-repeating texture (no tiled wallpaper) */
+body::before{
+  content:"";
+  position:fixed; inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 18% 6%, rgba(255,255,255,.06), transparent 60%),
+    radial-gradient(760px 520px at 82% 10%, rgba(255,255,255,.05), transparent 62%),
+    radial-gradient(900px 620px at 55% 110%, rgba(255,255,255,.035), transparent 70%);
+  opacity:.65;
+  mix-blend-mode: overlay;
+  transform: translateZ(0);
+}
+[data-theme="light"] body::before{ opacity:.40; mix-blend-mode:multiply; }
+a{color:inherit}
+    .skip{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip:focus{
+      left:12px; top:12px; width:auto; height:auto; padding:10px 12px;
+      background: var(--card); border:1px solid var(--line2); border-radius: 12px;
+      outline:3px solid var(--focus);
+      z-index:9999;
+    }
+
+    .wrap{
+      width:min(1120px, 92vw);
+      margin: 0 auto;
+      padding: 22px 0 60px;
+      position:relative;
+    }
+
+    /* top bar */
+    .topbar{
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+      padding: 14px 16px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 72%, transparent);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow2);
+      position:sticky; top:12px; z-index:50;
+    }
+
+    .brand{
+      display:flex; gap:12px; align-items:center; min-width:0;
+    }
+    .logo{
+      width:44px; height:44px; border-radius: 14px;
+      border:1px solid var(--line2);
+      background: linear-gradient(180deg, rgba(179,19,45,.24), rgba(127,16,35,.10));
+      box-shadow: 0 12px 24px rgba(0,0,0,.22);
+      overflow:hidden;
+      flex: 0 0 auto;
+      position:relative;
+    }
+    .logo img{ width:100%; height:100%; object-fit: cover; display:block; }
+    .brand h1{
+      margin:0;
+      font-family: var(--font-display);
+      font-size: 16px;
+      letter-spacing: .3px;
+      line-height:1.1;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .brand p{
+      margin:2px 0 0;
+      font-size: 12px;
+      color: var(--muted2);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .actions{
+      display:flex; gap:10px; align-items:center;
+      flex: 0 0 auto;
+    }
+    .btn{
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 75%, transparent);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 12px;
+      cursor:pointer;
+      font-weight: 650;
+      font-size: 12.5px;
+      letter-spacing:.2px;
+      display:flex; gap:8px; align-items:center;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      user-select:none;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: var(--line2); }
+    .btn:active{ transform: translateY(0px) scale(.98); }
+    .btn:focus-visible{ outline: 3px solid var(--focus); outline-offset: 2px; }
+    .icon-pair{ width:18px; height:18px; display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; }
+    .icon-cdn,.icon-local{ width:18px; height:18px; display:block; }
+    .icon-local{ display:none; }
+    html.icons-fallback .icon-cdn{ display:none; }
+    html.icons-fallback .icon-local{ display:block; }
+
+    .pill{
+      padding: 8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(179,19,45,.16);
+      color: color-mix(in srgb, var(--text) 92%, var(--brand) 8%);
+      font-weight:700;
+      font-size: 12px;
+      display:none;
+    }
+
+    @media (max-width: 700px){
+      .topbar{
+        flex-wrap:wrap;
+        gap:8px;
+        padding: 10px 12px;
+      }
+      .brand{
+        width:100%;
+      }
+      .brand h1{
+        font-size: 15px;
+        white-space: normal;
+        line-height:1.2;
+      }
+      .brand p{
+        white-space: normal;
+        line-height:1.3;
+      }
+      .actions{
+        width:100%;
+        justify-content:flex-end;
+      }
+      .actions .btn{
+        min-height:44px;
+        padding: 9px 14px;
+      }
+      .pill{
+        display:none !important;
+      }
+    }
+
+    /* hero */
+    .hero{
+      margin-top:18px;
+      padding: 18px 16px;
+      border-radius: var(--radius2);
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(920px 360px at 10% 24%, rgba(179,19,45,.30), transparent 58%),
+        radial-gradient(760px 360px at 86% 38%, rgba(127,16,35,.26), transparent 58%),
+        linear-gradient(180deg, color-mix(in srgb, var(--card) 70%, transparent), color-mix(in srgb, var(--card2) 85%, transparent));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:-40px -80px auto auto;
+      width: 280px; height: 280px;
+      background: conic-gradient(from 210deg, rgba(179,19,45,.0), rgba(179,19,45,.34), rgba(127,16,35,.24), rgba(255,209,102,.16), rgba(179,19,45,.0));
+      filter: blur(10px);
+      opacity:.55;
+      transform: rotate(12deg);
+      pointer-events:none;
+    }
+    .hero .kicker{
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(179,19,45,.18);
+      font-weight:700;
+      color: color-mix(in srgb, var(--text) 88%, var(--accent) 12%);
+    }
+    .badge i{ width:10px; height:10px; border-radius:999px; background: var(--accent); display:inline-block; box-shadow: 0 0 0 4px rgba(245,158,11,.18); }
+
+    .hero h2{
+      margin: 8px 0 10px;
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 36px);
+      letter-spacing: .25px;
+      line-height:1.1;
+    }
+    .hero p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14.8px;
+      line-height:1.55;
+      max-width: 72ch;
+    }
+
+    .quick{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 12px;
+    }
+    .chip{
+      padding: 10px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 68%, transparent);
+      box-shadow: 0 10px 22px rgba(0,0,0,.20);
+      text-decoration:none;
+      font-weight:700;
+      color: var(--text);
+      display:inline-flex; align-items:center; gap:10px;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .chip:hover{ transform: translateY(-1px); border-color: var(--line2); }
+    .chip svg{ opacity:.95 }
+    .chip small{ display:block; font-weight:650; color: var(--muted2); margin-top:1px; }
+
+    /* layout sections */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 920px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    section.card{
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 75%, transparent);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+    }
+    .card .hd{
+      padding: 16px 16px 10px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), transparent 70%);
+    }
+    .card .hd h3{
+      margin:0;
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing:.2px;
+      display:flex; gap:10px; align-items:center;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: var(--brand);
+      box-shadow: 0 0 0 4px rgba(179,19,45,.22);
+      flex:0 0 auto;
+    }
+    .card .bd{
+      padding: 14px 16px 16px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .list{
+      margin: 10px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .li{
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card2) 85%, transparent);
+      border-radius: 16px;
+      padding: 12px 12px;
+      display:flex; gap:10px;
+      align-items:flex-start;
+    }
+    .li strong{ color: var(--text); }
+    .icon{
+      width: 32px; height: 32px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      background: rgba(179,19,45,.12);
+      flex:0 0 auto;
+      margin-top:2px;
+    }
+    .icon svg{ opacity:.95; }
+
+    .callout{
+      margin-top: 12px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid var(--line);
+      background: rgba(34,197,94,.08);
+      color: var(--muted);
+    }
+    .callout b{ color: color-mix(in srgb, var(--text) 88%, var(--brand2) 12%); }
+
+    .warning{
+      background: rgba(251,113,133,.10);
+      border-color: color-mix(in srgb, var(--bad) 50%, var(--line) 50%);
+    }
+    .warning b{ color: color-mix(in srgb, var(--text) 88%, var(--bad) 12%); }
+
+    .accordion details{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--card2) 88%, transparent);
+      overflow:hidden;
+    }
+    .accordion details + details{ margin-top: 10px; }
+    .accordion summary{
+      cursor:pointer;
+      padding: 12px 12px;
+      list-style:none;
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      color: var(--text);
+      font-weight: 800;
+    }
+    .accordion summary::-webkit-details-marker{ display:none; }
+.accordion summary .chev{
+  width: 34px; height: 34px;
+  display:grid; place-items:center;
+  border-radius: 12px;
+  border:1px solid var(--line);
+  background: color-mix(in srgb, var(--card) 65%, transparent);
+  box-shadow: 0 12px 25px rgba(0,0,0,.18);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  flex: 0 0 auto;
+  color: color-mix(in srgb, var(--text) 85%, var(--brand) 15%);
+}
+.accordion details[open] summary{
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--brand) 12%, transparent),
+    color-mix(in srgb, var(--accent) 8%, transparent)
+  );
+  border-bottom: 1px solid var(--line);
+}
+.accordion details[open] summary .chev{
+  transform: rotate(45deg);
+  border-color: var(--line2);
+  background: color-mix(in srgb, var(--card) 55%, transparent);
+}
+    .accordion summary .meta{
+      font-weight: 700;
+      color: var(--muted2);
+      font-size: 12.5px;
+      margin-top:2px;
+    }
+    .accordion .content{
+      padding: 0 12px 12px;
+      color: var(--muted);
+      line-height:1.6;
+      font-size: 14px;
+    }
+
+    /* Age tabs */
+    .tabs{
+      display:flex; gap:8px; flex-wrap:wrap;
+      padding: 12px 16px 0;
+      border-bottom:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(179,19,45,.10), transparent 70%);
+    }
+    .tab{
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card2) 85%, transparent);
+      padding: 10px 12px;
+      border-radius: 999px;
+      cursor:pointer;
+      font-weight:800;
+      font-size: 12.5px;
+      color: var(--text);
+      display:flex; align-items:center; gap:8px;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+    .tab:hover{ transform: translateY(-1px); border-color: var(--line2); }
+    .tab[aria-selected="true"]{
+      background: rgba(179,19,45,.22);
+      border-color: rgba(179,19,45,.42);
+      box-shadow: 0 14px 30px rgba(179,19,45,.14);
+    }
+
+    .agepanel{ padding: 14px 16px 16px; display:none; }
+    .agepanel.active{ display:block; }
+
+    .agehead{
+      display:flex; gap:12px; align-items:flex-start; justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .agehead h4{
+      margin: 4px 0 0;
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing:.2px;
+      color: var(--text);
+    }
+    .agehead p{
+      margin: 6px 0 0;
+      color: var(--muted2);
+      font-size: 13px;
+      max-width: 70ch;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:10px;
+      margin-top: 12px;
+    }
+    @media (max-width: 620px){
+      .stats{ grid-template-columns: 1fr; }
+    }
+    .stat{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 12px;
+      background: color-mix(in srgb, var(--card2) 88%, transparent);
+      position:relative;
+      overflow:hidden;
+    }
+    .stat::after{
+      content:"";
+      position:absolute; inset:auto -40px -40px auto;
+      width:140px; height:140px;
+      background: radial-gradient(circle, rgba(245,158,11,.18), transparent 60%);
+      transform: rotate(12deg);
+      pointer-events:none;
+    }
+    .stat b{ color: var(--text); }
+    .k{ font-size: 12px; color: var(--muted2); font-weight:800; letter-spacing:.2px; }
+    .v{ margin-top:6px; font-weight:850; color: var(--text); }
+
+    .ratio{
+      margin-top: 12px;
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 12px;
+      background: color-mix(in srgb, var(--card2) 88%, transparent);
+      display:grid; gap:10px;
+    }
+    .ringrow{
+      display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+    }
+    .ring{
+      width:68px; height:68px; border-radius:999px;
+      background: conic-gradient(var(--brand) 0deg, var(--brand) var(--deg), rgba(255,255,255,.10) var(--deg), rgba(255,255,255,.10) 360deg);
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      box-shadow: 0 12px 25px rgba(0,0,0,.20);
+      flex:0 0 auto;
+    }
+    [data-theme="light"] .ring{
+      background: conic-gradient(var(--brand) 0deg, var(--brand) var(--deg), rgba(2,6,23,.10) var(--deg), rgba(2,6,23,.10) 360deg);
+    }
+    .ring span{
+      width:52px; height:52px; border-radius:999px;
+      background: color-mix(in srgb, var(--card) 86%, transparent);
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      font-weight:900; font-size: 12px;
+      color: var(--text);
+      text-align:center;
+      line-height:1.1;
+      padding:6px;
+    }
+
+    .mini{
+      display:grid; gap:10px; margin-top:12px;
+    }
+    .mini .box{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 12px;
+      background: color-mix(in srgb, var(--card2) 88%, transparent);
+    }
+    .mini .box h5{
+      margin:0 0 6px;
+      font-size: 13px;
+      color: var(--text);
+      letter-spacing:.2px;
+    }
+    .mini .box ul{ margin:0; padding-left: 18px; }
+    .mini .box li{ margin:4px 0; }
+
+    .tri{ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    @media (max-width: 920px){ .tri{ grid-template-columns: 1fr; } }
+    .rrow{ display:flex; gap:10px; align-items:flex-start; }
+    .rrow h5{ margin:0 0 6px; }
+
+    /* checklist */
+    .check{
+      display:grid; gap:10px;
+      margin-top: 10px;
+    }
+    label.ck{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 12px 12px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card2) 88%, transparent);
+      border-radius: 16px;
+      cursor:pointer;
+    }
+    .ck input{
+      margin-top: 2px;
+      width:18px; height:18px;
+      accent-color: var(--brand);
+      flex:0 0 auto;
+    }
+    .ck b{ color: var(--text); }
+
+    /* footer clinic */
+    footer{
+      margin-top: 18px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 78%, transparent);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+    }
+    footer .ft{
+      padding: 16px 16px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+      align-items:start;
+    }
+    @media (max-width: 920px){
+      footer .ft{ grid-template-columns: 1fr; }
+    }
+    .ft h3{
+      margin:0;
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing:.2px;
+    }
+    .ft p{ margin: 8px 0 0; color: var(--muted); line-height:1.6; }
+    .ft .links{
+      display:grid; gap:10px;
+    }
+    .linkrow{
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .linkbtn{
+      text-decoration:none;
+      display:inline-flex; gap:10px; align-items:center;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card2) 86%, transparent);
+      font-weight:800;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .linkbtn:hover{ transform: translateY(-1px); border-color: var(--line2); }
+    .linkbtn svg{ opacity:.95; }
+
+    .subft{
+      padding: 12px 16px;
+      border-top:1px solid var(--line);
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height:1.5;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent);
+    }
+    .subft code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card2) 85%, transparent);
+      color: var(--text);
+    }
+
+    /* reveal */
+    .reveal{ opacity: 0; transform: translateY(10px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.visible{ opacity: 1; transform: translateY(0px); }
+
+    /* reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .reveal{ opacity:1; transform:none; transition:none; }
+      .btn, .tab, .chip, .linkbtn{ transition:none; }
+      .btn:hover, .tab:hover, .chip:hover, .linkbtn:hover{ transform:none; }
+    }
+
+    /* print */
+    @media print{
+      .topbar, .quick, .actions, .tabs, #printPage{ display:none !important; }
+      body{ background:#fff; color:#000; }
+      body::before{ display:none; }
+      section.card, footer{ box-shadow:none; }
+      a{ text-decoration:underline; }
+      .wrap{ width: 100%; margin:0; padding:0; }
+    }
+
+  </style>
+</head>
+<body>
+<a class="skip" href="#konten">Lewati ke konten</a>
+
+<div class="wrap">
+
+  <div class="topbar" role="navigation" aria-label="Navigasi atas">
+    <div class="brand" title="Klinik Pratama Zihan Medical Center — Wanaraja, Garut">
+      <div class="logo" aria-hidden="true">
+        <!-- Offline-friendly: taruh file logo bernama zmc-logo.jpeg di folder yang sama dengan HTML ini.
+             Kalau tidak ada, akan pakai link online (butuh internet). -->
+              <img src="zmc-logo.jpeg" alt="Logo Zihan Medical Center"
+                   onerror="if(this.dataset.fallbackTried!=='1'){this.dataset.fallbackTried='1';this.src='https://i.imgur.com/jzuguQE.jpeg';}else{this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Crect width=%2780%27 height=%2780%27 rx=%2740%27 fill=%27%23ffffff%27/%3E%3Ccircle cx=%2740%27 cy=%2740%27 r=%2733%27 fill=%27%23b50f25%27/%3E%3Ctext x=%2740%27 y=%2747%27 text-anchor=%27middle%27 font-size=%2719%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27%23ffffff%27%3EZMC%3C/text%3E%3C/svg%3E';}">
+      </div>
+      <div style="min-width:0">
+        <h1>Zihan Medical Center</h1>
+        <p>#ZMCGakNyuekinKamu • Edukasi MP-ASI & Tumbuh Kembang</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <span class="pill" id="pillState">Offline-ready</span>
+      <button class="btn" id="themeToggle" type="button" aria-label="Ganti tema">
+        <span class="icon-pair" aria-hidden="true">
+          <i class="bi bi-moon-stars-fill icon-cdn"></i>
+          <svg class="icon-local" viewBox="0 0 24 24" fill="none">
+            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span id="themeLabel">Tema Malam</span>
+      </button></div>
+  </div>
+
+  <header class="hero reveal" id="konten">
+    <div class="kicker">
+      <span class="badge"><i></i>Untuk orang tua/pengasuh anak (SMA) • Garut</span>
+      <span style="color:var(--muted2)">Target: bayi 6 bulan–anak 5 tahun</span>
+    </div>
+    <h2>Panduan MP-ASI, Gizi Seimbang, & Tumbuh Kembang</h2>
+    <p>
+      Ini ringkasan yang <b>praktis</b> untuk orang tua: kapan mulai MP-ASI, “aturan makan” biar tidak jadi perang makan,
+      komposisi <i>Isi Piringku</i> per usia, kebersihan, cara menghadapi GTM (Gerakan Tutup Mulut), dan cara mengenalkan makanan baru.
+      <br><br>
+      <b>Catatan:</b> edukasi ini tidak menggantikan pemeriksaan dokter. Kalau ada tanda bahaya (lihat bagian “Kapan harus periksa cepat”), segera konsultasi.
+    </p>
+
+        <div class="quick" aria-label="Akses cepat">
+      <a class="chip" href="#redflags">Red Flags</a>
+      <a class="chip" href="#pesan-emas">7 Pesan Emas</a>
+      <a class="chip" href="#usia">Tab Usia</a>
+      <a class="chip" href="#aturan">Feeding Rules</a>
+      <a class="chip" href="#pengenalan">Makanan Baru</a>
+      <a class="chip" href="#gtm">GTM</a>
+      <a class="chip" href="#pantau-pertumbuhan">Growth</a>
+      <a class="chip" href="#pantau-perkembangan">Development</a>
+      <a class="chip" href="#resep">Resep Lokal</a>
+      <a class="chip" href="#rujukan">Rujukan</a>
+    </div>
+  </header>
+
+
+
+  <section class="card reveal" id="redflags" aria-label="Red flags kapan harus ke dokter atau IGD">
+    <div class="hd">
+      <h3><span class="dot"></span>Kapan harus ke dokter/IGD (red flags)</h3>
+      <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+        Jangan tunggu terlalu lama. Jika muncul tanda berikut, lebih aman evaluasi medis segera.
+      </div>
+    </div>
+    <div class="bd" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+      <div class="box" style="border-left:4px solid var(--bad)">
+        <h4 style="margin-top:0">Perlu evaluasi cepat</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.65">
+          <li>Berat badan turun atau tidak naik 2 bulan berturut-turut.</li>
+          <li>Anak sangat lemas, muntah terus, diare berkepanjangan, atau sulit minum.</li>
+          <li>Demam tinggi menetap, napas cepat/sesak, kejang, atau tampak dehidrasi.</li>
+          <li>Muncul muntah hijau, muntah darah, BAB hitam, atau penurunan kesadaran.</li>
+        </ul>
+      </div>
+      <div class="box" style="border-left:4px solid var(--warn)">
+        <h4 style="margin-top:0">Pantau di rumah sambil atur jadwal kontrol</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.65">
+          <li>Timbang rutin bulanan dan catat grafik di Buku KIA/KMS.</li>
+          <li>Catat pola makan: jam makan, porsi habis/tidak, dan gejala setelah makan.</li>
+          <li>Jika ada prematur, penyakit kronis, atau alergi berat, jadwal kontrol jangan ditunda.</li>
+          <li>Kalau orang tua ragu, konsultasi lebih cepat lebih aman daripada menunggu.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 7 Pesan Emas -->
+  <section class="card reveal" id="pesan-emas" aria-label="7 Pesan Emas PMBA">
+    <div class="hd">
+      <h3><span class="dot"></span>7 Pesan Emas (ringkas)</h3>
+      <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+        Ini versi <b>mudah diingat</b> untuk orang tua. Kalau ada kondisi khusus (prematur, penyakit kronis, alergi berat), konsultasi dulu ya.
+      </div>
+    </div>
+    <div class="bd">
+      <ul class="list">
+        <li><span class="icon" aria-hidden="true">①</span><div><strong>ASI eksklusif 0–6 bulan</strong> (kalau memungkinkan). Setelah 6 bulan, ASI tetap lanjut sampai 2 tahun atau lebih.</div></li>
+        <li><span class="icon" aria-hidden="true">②</span><div><strong>Mulai MP-ASI tepat 6 bulan</strong>. Jangan terlalu cepat, jangan terlalu lama (nutrisi butuh “naik level”).</div></li>
+        <li><span class="icon" aria-hidden="true">③</span><div><strong>Padat gizi & beragam</strong>: utamakan <b>protein hewani</b> (telur/ayam/ikan/daging) + karbo + sayur/buah + lemak (minyak/mentega) setiap hari.</div></li>
+        <li><span class="icon" aria-hidden="true">④</span><div><strong>Tekstur naik bertahap</strong>: dari lumat → cincang → makanan keluarga. Terlalu lama halus bisa bikin anak “macet tekstur”.</div></li>
+        <li><span class="icon" aria-hidden="true">⑤</span><div><strong>Frekuensi & porsi sesuai usia</strong> (lihat tab “Isi Piringku per usia”). Anak besar perlu jadwal makin teratur.</div></li>
+        <li><span class="icon" aria-hidden="true">⑥</span><div><strong>Makan responsif</strong>: sabar, tanpa paksaan, minim distraksi. Orang tua atur menu & jadwal; anak atur seberapa banyak.</div></li>
+        <li><span class="icon" aria-hidden="true">⑦</span><div><strong>Higiene + pantau tumbuh-kembang</strong>: cuci tangan & alat makan, masak matang; timbang/ukur rutin, dan waspadai tanda bahaya.</div></li>
+      </ul>
+
+      <div class="callout" style="margin-top:12px">
+        <b>Tujuan besar:</b> anak makan cukup, aman, nyaman — dan orang tua tidak stres.
+      </div>
+    </div>
+  </section>
+
+
+  <div class="grid">
+
+    <!-- LEFT COLUMN: Age tabs -->
+    <section class="card reveal" id="usia" aria-label="Isi Piringku per usia">
+      <div class="hd">
+        <h3><span class="dot"></span>Isi Piringku per usia (praktis)</h3>
+        <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+          Pilih usia → lihat frekuensi makan, tekstur, fokus isi piring, dan contoh langkah kecil yang realistis.
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Tab usia">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p-68" id="t-68" data-tab="p-68">6–8 bln</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-911" id="t-911" data-tab="p-911">9–11 bln</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-1223" id="t-1223" data-tab="p-1223">12–23 bln</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-25" id="t-25" data-tab="p-25">2–5 th</button>
+      </div>
+
+      <!-- 6–8 -->
+      <div class="agepanel active" id="p-68" role="tabpanel" aria-labelledby="t-68">
+        <div class="agehead">
+          <div>
+            <h4>Usia 6–8 bulan</h4>
+            <p>Mulai MP-ASI: fokus <b>belajar makan</b> + tetap ASI. Mulai dari porsi kecil, tapi <b>padat gizi</b>.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="k">Frekuensi makan</div>
+            <div class="v">2–3×/hari</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Boleh tambah kalau bayi masih lapar.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Tekstur</div>
+            <div class="v">Halus → kental</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Jangan encer terus; biasakan kental.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Porsi awal</div>
+            <div class="v">2–3 sdm → naik</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Naikkan pelan sesuai penerimaan.</div>
+          </div>
+        </div>
+
+        <div class="ratio">
+          <div style="font-weight:900;color:var(--text)">Proporsi (gambaran kasar)</div>
+          <div class="ringrow">
+            <div class="ring" style="--deg:252deg" title="ASI dominan">
+              <span>ASI<br>~70%</span>
+            </div>
+            <div class="ring" style="--deg:108deg" title="MP-ASI pelan-pelan naik">
+              <span>MP-ASI<br>~30%</span>
+            </div>
+            <div style="color:var(--muted);font-size:13px;line-height:1.5">
+              MP-ASI masih “latihan makan”, tapi <b>protein hewani</b> tetap penting (telur/ikan/daging/hati sesuai kesiapan & keamanan).
+            </div>
+          </div>
+        </div>
+
+        <div class="mini">
+          <div class="box">
+            <h5>Fokus isi piring (kerangka sederhana)</h5>
+            <ul>
+              <li><b>Karbo</b> (nasi/ubi/kentang) + <b>protein hewani</b> (telur/ikan/daging) + <b>sayur/buah</b> + <b>lemak</b> (minyak/santan secukupnya).</li>
+              <li>Target: “<b>padat gizi</b> dulu”, bukan sekadar kenyang bubur.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h5>Langkah kecil yang realistis</h5>
+            <ul>
+              <li>Mulai 1 menu sederhana (misal bubur kental + telur) → ulang beberapa hari.</li>
+              <li>Naikkan tekstur: halus → lumat (biar belajar kunyah).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9–11 -->
+      <div class="agepanel" id="p-911" role="tabpanel" aria-labelledby="t-911">
+        <div class="agehead">
+          <div>
+            <h4>Usia 9–11 bulan</h4>
+            <p>Mulai aktif eksplorasi. Tekstur naik, variasi naik, dan <b>rutinitas makan</b> mulai dibentuk.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="k">Frekuensi makan</div>
+            <div class="v">3–4×/hari</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">+ 1–2 snack bergizi bila perlu.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Tekstur</div>
+            <div class="v">Lumat/cincang</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Mulai finger foods lembut.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Fokus nutrisi</div>
+            <div class="v">Protein hewani harian</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Utamakan zat besi & zinc.</div>
+          </div>
+        </div>
+
+        <div class="ratio">
+          <div style="font-weight:900;color:var(--text)">Proporsi (gambaran kasar)</div>
+          <div class="ringrow">
+            <div class="ring" style="--deg:180deg"><span>ASI<br>~50%</span></div>
+            <div class="ring" style="--deg:180deg"><span>MP-ASI<br>~50%</span></div>
+            <div style="color:var(--muted);font-size:13px;line-height:1.5">
+              Ini fase “setengah-setengah”: MP-ASI makin penting. Naikkan <b>variasi</b> dan <b>tekstur</b> supaya anak tidak “bubur halus terus”.
+            </div>
+          </div>
+        </div>
+
+        <div class="mini">
+          <div class="box">
+            <h5>Fokus isi piring</h5>
+            <ul>
+              <li>Kerangka 4 komponen tetap: <b>karbo + hewani + sayur/buah + lemak</b>.</li>
+              <li>Jika hewani terbatas: tambah <b>kacang/polong</b> (tapi hewani tetap diupayakan).</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h5>Tips anti “perang makan”</h5>
+            <ul>
+              <li>Mulai jadwal: makan di kursi/meja, durasi wajar, tanpa layar.</li>
+              <li>Anak boleh tidak habis—yang penting <b>konsisten</b> paparan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12–23 -->
+      <div class="agepanel" id="p-1223" role="tabpanel" aria-labelledby="t-1223">
+        <div class="agehead">
+          <div>
+            <h4>Usia 12–23 bulan</h4>
+            <p>Masuk makanan keluarga: porsi naik, snack bergizi penting, dan risiko “picky eating” mulai muncul—tenang, itu normal.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="k">Frekuensi makan</div>
+            <div class="v">3–4×/hari</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">+ 1–2 snack bergizi.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Tekstur</div>
+            <div class="v">Makanan keluarga</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Dip otong kecil; latih kunyah.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Pantau</div>
+            <div class="v">Kurva BB/TB</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Kalau grafik melambat/flat → konsultasi.</div>
+          </div>
+        </div>
+
+        <div class="ratio">
+          <div style="font-weight:900;color:var(--text)">Proporsi (gambaran kasar)</div>
+          <div class="ringrow">
+            <div class="ring" style="--deg:108deg"><span>ASI<br>~30%</span></div>
+            <div class="ring" style="--deg:252deg"><span>MP-ASI<br>~70%</span></div>
+            <div style="color:var(--muted);font-size:13px;line-height:1.5">
+              MP-ASI jadi sumber utama. Tetap prioritaskan <b>protein hewani</b>, sayur/buah, dan batasi makanan/minuman manis.
+            </div>
+          </div>
+        </div>
+
+        <div class="mini">
+          <div class="box">
+            <h5>Fokus isi piring</h5>
+            <ul>
+              <li>Makanan keluarga padat gizi: lauk hewani (telur/ikan/daging), sayur, buah, karbo secukupnya.</li>
+              <li>Snack = bukan biskuit manis. Pilih: buah, roti isi telur, yogurt plain (sesuai toleransi), kacang yang dihaluskan, dll.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h5>Risiko tersedak (ingat!)</h5>
+            <ul>
+              <li>Hindari kacang utuh, anggur utuh, potongan besar keras. Potong kecil & awasi.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2–5 -->
+      <div class="agepanel" id="p-25" role="tabpanel" aria-labelledby="t-25">
+        <div class="agehead">
+          <div>
+            <h4>Usia 2–5 tahun</h4>
+            <p>Masuk “piring keluarga”: kita bentuk kebiasaan. Kuncinya: <b>variasi</b>, <b>rutinitas</b>, dan <b>tanpa tekanan</b>.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="k">Struktur makan</div>
+            <div class="v">Makan + snack terjadwal</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Bantu anak peka lapar/kenyang.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Isi piring</div>
+            <div class="v">½ sayur+buah</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">½ sisanya karbo + lauk.</div>
+          </div>
+          <div class="stat">
+            <div class="k">Tujuan</div>
+            <div class="v">Kebiasaan, bukan “habis”</div>
+            <div style="margin-top:6px;color:var(--muted2);font-size:12.5px">Fokus jangka panjang.</div>
+          </div>
+        </div>
+
+        <div class="mini">
+          <div class="box">
+            <h5>Kerangka Isi Piringku (mudah diingat)</h5>
+            <ul>
+              <li><b>½ piring</b>: sayur + buah</li>
+              <li><b>¼ piring</b>: makanan pokok (nasi/ubi/kentang/roti)</li>
+              <li><b>¼ piring</b>: lauk berprotein (ikan/telur/daging/tempe/tahu)</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h5>Kalau anak picky</h5>
+            <ul>
+              <li>Normal. Butuh paparan berkali-kali. Jangan jadi perang.</li>
+              <li>Pasangkan makanan baru dengan 1–2 “safe food”.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Kalimat kunci:</b> orang tua atur <b>apa & kapan</b>. Anak atur <b>mau berapa banyak</b>.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RIGHT COLUMN: Rules + checklist -->
+    <section class="card reveal" id="aturan" aria-label="Aturan makan dan checklist">
+      <div class="hd">
+        <h3><span class="dot"></span>Feeding Rules (anti drama)</h3>
+        <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+          Versi singkat “UFReJuTekVaRes + kebersihan” biar gampang dipraktikkan di rumah.
+        </div>
+      </div>
+      <div class="bd">
+
+
+        <div class="mini tri" aria-label="Aturan makan praktis (jadwal, lingkungan, prosedur)">
+          <div class="box">
+            <div class="rrow">
+              <span class="icon" aria-hidden="true">ðŸ•’</span>
+              <div style="min-width:0">
+                <h5>Jadwal teratur</h5>
+                <ul>
+                  <li><b>Makan utama + selingan</b> mengikuti usia (lihat tab). Umumnya makin besar → makin teratur.</li>
+                  <li><b>Selingan sehat</b> di antara jam makan (buah, puding homemade, yogurt plain, dll secukupnya).</li>
+                  <li><b>Susu/ASI</b> tetap penting. Bila anak jadi cepat kenyang karena minum susu tepat sebelum makan, geser susu <b>setelah makan</b> atau <b>jam terpisah</b>.</li>
+                  <li><b>Durasi makan</b> maksimal <b>20–30 menit</b>. Habis/tidak habis → <b>angkat piring</b>, lanjut lagi di jadwal berikutnya.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="rrow">
+              <span class="icon" aria-hidden="true" style="background: rgba(244,63,94,.10)">ðŸ“µ</span>
+              <div style="min-width:0">
+                <h5>Lingkungan menyenangkan</h5>
+                <ul>
+                  <li><b>Tanpa paksaan:</b> jangan marah, jangan ancam, jangan “suap maksa”.</li>
+                  <li><b>Singkirkan distraksi:</b> matikan TV, simpan HP, jauhkan mainan saat makan.</li>
+                  <li><b>Role model:</b> biasakan makan bareng keluarga di meja makan (kalau memungkinkan).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="rrow">
+              <span class="icon" aria-hidden="true" style="background: rgba(234,179,8,.12)">ðŸ½ï¸</span>
+              <div style="min-width:0">
+                <h5>Prosedur makan</h5>
+                <ul>
+                  <li><b>Porsi kecil dulu</b>. Kalau kurang, <b>boleh tambah</b>.</li>
+                  <li><b>Dorong anak makan sendiri</b> (walau berantakan — itu bagian belajar).</li>
+                  <li><b>Bersihkan mulut</b> setelah selesai makan, jangan dilap setiap suapan (sering mengganggu kenyamanan).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <ul class="list">
+          <li class="li">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>U — Usia:</strong> MP-ASI mulai sekitar 6 bulan, ASI lanjut sampai ≥2 tahun (kalau memungkinkan).
+            </div>
+          </li>
+          <li class="li">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 8v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Fre — Frekuensi:</strong> 6–8 bln 2–3× makan + 1–2× selingan; 9–11 bln 3–4× + 1–2× selingan; 12–23 bln 3–4× + 1–2× selingan; 2–5 th pola keluarga (makan + selingan terjadwal).</div>
+          </li>
+          <li class="li">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 4h3M17 4h3M4 20h3M17 20h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Ju + Tek — Jumlah & Tekstur:</strong> porsi mulai kecil lalu naik; tekstur naik bertahap (jangan bubur halus terus).
+            </div>
+          </li>
+          <li class="li">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 12c2-6 14-6 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M5 15c3 5 11 5 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Va — Variasi:</strong> setiap hari upayakan ada <b>protein hewani</b> + sayur/buah + lemak secukupnya.
+            </div>
+          </li>
+          <li class="li">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s7-4.5 7-10a4 4 0 0 0-7-2 4 4 0 0 0-7 2c0 5.5 7 10 7 10Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Res — Responsive feeding:</strong> orang tua atur <b>apa & kapan</b>. Anak atur <b>mau berapa banyak</b>. Jangan paksa.
+            </div>
+          </li>
+        </ul>
+
+        <div class="callout" style="margin-top:14px">
+          <b>Gold rule:</b> “Tutup mulut = sinyal. Tugas kita bukan menang, tapi membaca.”
+        </div>
+
+        <div class="accordion" style="margin-top:14px">
+          <details>
+            <summary><div>
+                Checklist kebersihan (wajib)
+                <div class="meta">Sebelum • Saat menyiapkan • Sesudah</div>
+              </div>
+              <span class="chev" aria-hidden="true">+</span></summary>
+            <div class="content">
+              <div class="check" role="group" aria-label="Checklist kebersihan">
+                <label class="ck"><input type="checkbox" data-store="h1"><span><b>Cuci tangan pakai sabun</b> sebelum menyiapkan & menyuapi.</span></label>
+                <label class="ck"><input type="checkbox" data-store="h2"><span>Alat makan <b>bersih</b>, kering, dan disimpan tertutup.</span></label>
+                <label class="ck"><input type="checkbox" data-store="h3"><span>Masak hingga matang, pisahkan mentah vs matang.</span></label>
+                <label class="ck"><input type="checkbox" data-store="h4"><span>Jangan biarkan makanan matang lama di suhu ruang; simpan aman & panaskan ulang bila perlu.</span></label>
+                <label class="ck"><input type="checkbox" data-store="h5"><span>Hindari kebiasaan “makan sambil keliling/layar” (sering memperparah susah makan).</span></label>
+              </div>
+              <div style="margin-top:10px;color:var(--muted2);font-size:12.5px">
+                Tips: kalau sering diare/bolak-balik sakit → cek juga higienitas air, botol, dot, dan cara penyimpanan.
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary><div>
+                Kapan mulai MP-ASI?
+                <div class="meta">Tanda kesiapan bayi (ringkas)</div>
+              </div>
+              <span class="chev" aria-hidden="true">+</span></summary>
+            <div class="content">
+              <ul>
+                <li>Usia sekitar <b>6 bulan</b>.</li>
+                <li>Kepala & leher stabil, bisa duduk dengan bantuan.</li>
+                <li>Mau membuka mulut saat ditawari makanan, bisa menelan (tidak selalu mendorong keluar).</li>
+              </ul>
+              <div class="callout" style="margin-top:10px">
+                <b>Reminder:</b> MP-ASI bukan lomba. Yang penting konsisten, tekstur naik, dan padat gizi.
+              </div>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- New foods + GTM + red flags -->
+  <div class="grid" style="margin-top:16px">
+
+    <section class="card reveal" id="pengenalan" aria-label="Cara mengenalkan makanan baru">
+      <div class="hd">
+        <h3><span class="dot"></span>Cara mengenalkan makanan baru</h3>
+        <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+          Dua mode: <b>bayi awal MP-ASI</b> vs <b>balita picky</b>. Goal-nya: aman, pelan, tapi konsisten.
+        </div>
+      </div>
+      <div class="bd">
+
+        <div class="accordion">
+          <details open>
+            <summary><div>
+                A) Bayi (awal MP-ASI)
+                <div class="meta">“Satu dulu” biar aman</div>
+              </div>
+              <span class="chev" aria-hidden="true">+</span></summary>
+            <div class="content">
+              <ol>
+                <li><b>Mulai dari 1 bahan</b> (single ingredient). Contoh: bubur kental + telur / puree labu.</li>
+                <li><b>Tunggu 3–5 hari</b> sebelum tambah makanan baru (lebih penting bila ada riwayat alergi/eksema).</li>
+                <li>Mulai dari <b>cicip kecil</b> → naik pelan. Ulang beberapa hari supaya bayi “kenal” rasa.</li>
+                <li>Waspada tanda alergi berat: bengkak bibir/kelopak, sesak, muntah hebat, lemas—<b>segera ke faskes</b>.</li>
+              </ol>
+              <div class="callout">
+                <b>Prinsip:</b> konsisten > sempurna. Tidak harus gonta-ganti menu tiap hari.
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary><div>
+                B) Balita (2–5 tahun, picky itu normal)
+                <div class="meta">Tanpa perang, pakai strategi</div>
+              </div>
+              <span class="chev" aria-hidden="true">+</span></summary>
+            <div class="content">
+              <ul>
+                <li><b>Repeated exposure:</b> anak bisa butuh belasan kali paparan sampai mau.</li>
+                <li><b>Pairing:</b> makanan baru disajikan bareng 1–2 “safe food”.</li>
+                <li><b>Tanpa tekanan:</b> hindari suap (“kalau habis dapat…”) atau ancaman. Itu sering bikin makin menolak.</li>
+                <li><b>Libatkan anak:</b> pilih sayur, bantu plating (anak lebih mau coba kalau merasa “punya andil”).</li>
+                <li>Boleh “coba dulu” tanpa harus habis. Tujuannya: <b>kenal</b>, bukan menang.</li>
+              </ul>
+              <div class="callout" style="margin-top:10px">
+                <b>Kalimat aman:</b> “Coba 1 gigitan juga sudah bagus.” (stop di situ kalau anak sudah menolak).
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary><div>
+                Ide praktis (menu “anti ribet”)
+                <div class="meta">Biar bisa konsisten di rumah</div>
+              </div>
+              <span class="chev" aria-hidden="true">+</span></summary>
+            <div class="content">
+              <ul>
+                <li>Telur orak-arik + nasi lembek + sayur bening.</li>
+                <li>Ikan suwir + bubur kental + minyak sedikit.</li>
+                <li>Tempe/tahu + telur (kombinasi) + buah potong kecil.</li>
+              </ul>
+              <div style="margin-top:8px;color:var(--muted2);font-size:12.5px">
+                Sesuaikan tekstur dengan usia (6–8 halus; 9–11 lumat; 12–23 makanan keluarga dipotong kecil).
+              </div>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card reveal" id="gtm" aria-label="GTM dan tanda bahaya">
+      <div class="hd">
+        <h3><span class="dot"></span>GTM (Gerakan Tutup Mulut) & tanda bahaya</h3>
+        <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+          GTM sering bikin panik. Kita bikin versi “kalem tapi tegas”: baca sinyal, rapikan aturan makan, dan cek sakit dulu.
+        </div>
+      </div>
+      <div class="bd">
+
+        <ul class="list">
+          <li class="li">
+            <div class="icon" aria-hidden="true" style="background: rgba(245,158,11,.10)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Apa itu GTM?</strong> Anak menolak makan: menutup mulut rapat, memalingkan wajah, melepeh, atau rewel saat disuapi.
+            </div>
+          </li>
+
+          <li class="li">
+            <div class="icon" aria-hidden="true" style="background: rgba(34,197,94,.10)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 20v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 20v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Respon yang benar (3 langkah):</strong>
+              <div style="margin-top:6px">
+                1) <b>Stop</b> dulu (jangan dipaksa).<br>
+                2) Cek penyebab: sakit? sariawan? demam? batuk? sembelit? gigi tumbuh?<br>
+                3) Balik ke <b>struktur makan</b>: jadwal, duduk, tanpa layar, durasi wajar. Coba lagi di waktu berikutnya.
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="callout warning" style="margin-top:14px">
+          <b>Kapan harus periksa cepat?</b>
+          <ul style="margin:8px 0 0; padding-left:18px">
+            <li>Anak tampak sangat lemas, dehidrasi (mulut kering, jarang pipis), atau sesak.</li>
+            <li>Muntah/diare berulang, demam tinggi, atau tidak mau minum sama sekali.</li>
+            <li>BB turun atau grafik pertumbuhan “mandek” berulang (konsultasi untuk evaluasi).</li>
+            <li>Perkembangan “mundur” (regresi) atau tidak ada kemajuan sesuai usia secara nyata.</li>
+          </ul>
+        </div>
+
+        <div class="accordion" style="margin-top:14px">
+          <details>
+            <summary><div>
+                “Tutup mulut” itu apa sih?
+                <div class="meta">Sinyal kenyang/istirahat</div>
+              </div>
+              <span class="chev" aria-hidden="true">+</span></summary>
+            <div class="content">
+              <p style="margin-top:0">
+                Gerakan menutup mulut, menoleh, atau mendorong sendok sering adalah <b>isyarat</b>.
+                Boleh berarti: sudah kenyang, capek, bosan, atau tidak nyaman.
+              </p>
+              <ul>
+                <li>Kalau muncul → <b>berhenti</b> dulu, tenangkan, lalu coba pelan.</li>
+                <li>Kalau tetap menolak → <b>akhiri sesi</b> dengan netral. Nanti coba lagi sesuai jadwal.</li>
+                <li>Hindari “ngejar makan” keliling rumah: efeknya sering memperkuat penolakan.</li>
+              </ul>
+              <div class="callout" style="margin-top:10px">
+                <b>Target:</b> hubungan makan yang aman. Anak belajar peka lapar/kenyang.
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary><div>
+                Red flags perkembangan (super singkat)
+                <div class="meta">Kalau ragu, konsultasi</div>
+              </div>
+              <span class="chev" aria-hidden="true">+</span></summary>
+            <div class="content">
+              <ul>
+                <li>Tidak ada babbling di sekitar 9 bulan.</li>
+                <li>Tidak ada gestur menunjuk di sekitar 12 bulan.</li>
+                <li>Tidak ada kata bermakna di sekitar 16 bulan.</li>
+                <li>Tidak bisa gabung 2 kata spontan di sekitar 24 bulan.</li>
+                <li>Regresi: kemampuan yang sudah ada tiba-tiba hilang.</li>
+              </ul>
+              <div style="margin-top:8px;color:var(--muted2);font-size:12.5px">
+                Ini bukan untuk “mendiagnosis”, tapi untuk membantu orang tua tidak menunda.
+              </div>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- Pemantauan pertumbuhan & perkembangan -->
+  <div class="grid" id="pantau" style="margin-top:16px">
+
+    <section class="card reveal" id="pantau-pertumbuhan" aria-label="Pemantauan pertumbuhan dan red flags">
+      <div class="hd">
+        <h3><span class="dot"></span>Pemantauan pertumbuhan (growth)</h3>
+        <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+          Cara paling gampang: <b>lihat tren</b>, bukan angka sekali ukur.
+        </div>
+      </div>
+      <div class="bd">
+        <ul class="list">
+          <li><span class="icon" aria-hidden="true">ðŸ“ˆ</span><div><strong>Timbang & ukur rutin</strong>: BB tiap bulan (posyandu/klinik), TB/PB berkala, catat di <b>Buku KIA/KMS</b>.</div></li>
+          <li><span class="icon" aria-hidden="true">ðŸ§­</span><div><strong>Fokus ke grafik</strong>: kalau garisnya <b>stabil naik</b> itu bagus. Yang berbahaya biasanya <b>turun</b> atau <b>mendatar lama</b>.</div></li>
+        </ul>
+
+        <details class="acc" style="margin-top:10px">
+          <summary>
+            <span class="s"><b>Red flags pertumbuhan</b> (segera konsultasi)</span>
+            <span class="chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="p">
+            <ul style="margin:0; padding-left:18px; line-height:1.65">
+              <li><b>BB turun</b> dibanding bulan sebelumnya.</li>
+              <li><b>BB tidak naik 2 bulan berturut-turut</b> (meski makan sudah diupayakan).</li>
+              <li>Anak tampak <b>sangat lemas</b>, sulit makan/minum, atau sering muntah/diare berkepanjangan.</li>
+              <li>Garis grafik BB/TB “jatuh” cepat (melintasi beberapa garis) atau terlihat <b>sangat kurus</b>.</li>
+              <li>Ada bengkak (edema), pucat berat, atau tanda sakit yang jelas.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="card reveal" id="pantau-perkembangan" aria-label="Pemantauan perkembangan dan red flags">
+      <div class="hd">
+        <h3><span class="dot"></span>Pemantauan perkembangan (development)</h3>
+        <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+          Perkembangan itu 4 ranah: <b>motorik kasar</b>, <b>motorik halus</b>, <b>bahasa</b>, dan <b>sosial</b>.
+        </div>
+      </div>
+      <div class="bd">
+        <ul class="list">
+          <li><span class="icon" aria-hidden="true">ðŸ§©</span><div><strong>Stimulasi harian</strong>: ngobrol, baca buku, main sederhana, ajak anak meniru, beri kesempatan eksplorasi.</div></li>
+          <li><span class="icon" aria-hidden="true">ðŸ“</span><div><strong>Cek berkala</strong>: pakai checklist di Buku KIA/SDIDTK; kalau ragu, tanya dokter/bidan.</div></li>
+        </ul>
+
+        <details class="acc" style="margin-top:10px">
+          <summary>
+            <span class="s"><b>Red flags perkembangan</b> (segera konsultasi)</span>
+            <span class="chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="p">
+            <ul style="margin:0; padding-left:18px; line-height:1.65">
+              <li><b>6 bulan:</b> jarang senyum / ekspresi senang.</li>
+              <li><b>9 bulan:</b> kurang bersuara & kurang menunjukkan ekspresi wajah.</li>
+              <li><b>12 bulan:</b> tidak merespon saat dipanggil namanya.</li>
+              <li><b>15 bulan:</b> belum ada kata bermakna.</li>
+              <li><b>18 bulan:</b> tidak bisa bermain pura-pura (pretend play).</li>
+              <li><b>24 bulan:</b> belum ada gabungan 2 kata yang berarti.</li>
+              <li><b>Semua usia:</b> tidak babbling/bicara/interaksi atau <b>kehilangan kemampuan</b> yang sebelumnya sudah bisa.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </div>
+
+
+
+  <section class="card reveal" id="resep" aria-label="Resep lokal dan makanan dibatasi" style="margin-top:16px">
+    <div class="hd">
+      <h3><span class="dot"></span>Resep lokal + makanan yang dibatasi</h3>
+      <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+        Prinsipnya sederhana: menu lokal boleh dipakai selama komposisinya seimbang, tekstur sesuai usia, dan bumbu tidak berlebihan.
+      </div>
+    </div>
+    <div class="bd" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+      <div class="box" style="border-left:4px solid var(--good)">
+        <h4 style="margin-top:0">Contoh menu lokal yang lebih aman</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.65">
+          <li>Nasi tim + pepes ikan/tahu tanpa pedas + sayur bening.</li>
+          <li>Sop ayam bening + kentang + wortel, minim minyak.</li>
+          <li>Nasi + telur orak-arik lembut + tumis oyong/bayam tipis.</li>
+          <li>Tempe kukus/panggang tipis bumbu sebagai pendamping protein hewani.</li>
+        </ul>
+      </div>
+      <div class="box" style="border-left:4px solid var(--warn)">
+        <h4 style="margin-top:0">Makanan/minuman yang perlu dibatasi</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.65">
+          <li>Bala-bala, gehu, dan gorengan tepung terlalu sering saat anak lagi susah makan.</li>
+          <li>Seblak sangat pedas/asam, sambal berlebihan, dan kuah tinggi penyedap.</li>
+          <li>Minuman manis kemasan, teh manis pekat, kopi tubruk, dan soda.</li>
+          <li>Porsi besar larut malam karena bisa mengganggu pola makan besoknya.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card reveal" id="kesehatan" aria-label="Anemia dan sanitasi" style="margin-top:16px">
+    <div class="hd">
+      <h3><span class="dot"></span>Anemia dan sanitasi: faktor yang sering menghambat naik berat badan</h3>
+    </div>
+    <div class="bd" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+      <div class="box" style="border-left:4px solid var(--warn)">
+        <h4 style="margin-top:0">Cegah anemia (kurang zat besi)</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.65">
+          <li>Tanda umum: pucat, lemas, cepat capek, dan nafsu makan turun.</li>
+          <li>Sumber zat besi utama: hati ayam, daging, ikan, dan telur.</li>
+          <li>Padukan dengan sayur/buah yang mengandung vitamin C agar penyerapan lebih baik.</li>
+          <li>Hindari teh/kopi di dekat waktu makan anak karena menghambat penyerapan.</li>
+        </ul>
+      </div>
+      <div class="box" style="border-left:4px solid var(--good)">
+        <h4 style="margin-top:0">Sanitasi harian</h4>
+        <ul style="margin:0;padding-left:18px;line-height:1.65">
+          <li>Cuci tangan pakai sabun sebelum siapkan/menyuapi makanan.</li>
+          <li>Air minum dimasak matang; alat makan dibersihkan sampai kering.</li>
+          <li>Hindari makanan disimpan terlalu lama pada suhu ruang.</li>
+          <li>Jika anak sering diare/cacingan, evaluasi sanitasi rumah dan konsultasi.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card reveal" id="mitos" aria-label="Mitos versus fakta" style="margin-top:16px">
+    <div class="hd">
+      <h3><span class="dot"></span>Mitos vs fakta di masyarakat</h3>
+    </div>
+    <div class="bd" style="overflow:auto">
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:10px;border:1px solid var(--line)">Mitos</th>
+            <th style="text-align:left;padding:10px;border:1px solid var(--line)">Fakta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:10px;border:1px solid var(--line)">"Anak gemuk pasti sehat."</td><td style="padding:10px;border:1px solid var(--line)">Belum tentu. Nilai utama adalah kualitas makan dan tren grafik tumbuh.</td></tr>
+          <tr><td style="padding:10px;border:1px solid var(--line)">"Kuah sayur saja sudah cukup."</td><td style="padding:10px;border:1px solid var(--line)">Anak butuh isi piring lengkap: karbo, protein, sayur/buah, dan lemak sehat.</td></tr>
+          <tr><td style="padding:10px;border:1px solid var(--line)">"Kalau GTM harus dipaksa biar habis."</td><td style="padding:10px;border:1px solid var(--line)">Paksaan sering memperburuk perilaku makan. Fokus ke feeding rules yang konsisten.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card reveal" id="faq" aria-label="FAQ MPASI" style="margin-top:16px">
+    <div class="hd">
+      <h3><span class="dot"></span>Pertanyaan yang sering ditanyakan (FAQ)</h3>
+    </div>
+    <div class="bd accordion">
+      <details>
+        <summary><span class="s"><b>Anak alergi telur, gantinya apa?</b></span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="content">Bisa diganti ikan, ayam, daging, tahu, atau tempe sesuai usia dan toleransi anak.</div>
+      </details>
+      <details>
+        <summary><span class="s"><b>Apakah perlu vitamin penambah nafsu makan?</b></span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="content">Prioritas utama tetap perbaiki feeding rules, jadwal makan, dan evaluasi penyebab GTM. Suplemen sesuai anjuran dokter.</div>
+      </details>
+      <details>
+        <summary><span class="s"><b>Bolehkah MPASI pakai gula/garam?</b></span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="content">Boleh sangat sedikit sesuai usia, tetapi hindari penggunaan berlebihan dan makanan instan tinggi natrium.</div>
+      </details>
+    </div>
+  </section>
+  <!-- References -->
+  <section class="card reveal" id="rujukan" aria-label="Referensi singkat" style="margin-top:16px">
+    <div class="hd">
+      <h3><span class="dot"></span>Referensi singkat (bacaan lanjutan)</h3>
+      <div style="margin-top:6px;color:var(--muted2);font-size:13px;line-height:1.5">
+        Kalau kamu ingin baca versi lengkap, ini sumber rujukan yang umum dipakai (tautan butuh internet).
+      </div>
+    </div>
+    <div class="bd">
+      
+      <ul style="margin:0; padding-left:18px">
+        <li>Kemenkes — MP-ASI: jadwal, durasi makan (≤30 menit), dan lingkungan tanpa distraksi: <a href="https://keslan.kemkes.go.id/view_artikel/3121/pemberian-makanan-pendamping-asi-yang-tepat-untuk-pencegahan-stunting" target="_blank" rel="noopener">keslan.kemkes.go.id</a></li>
+        <li>Kemenkes — Buku PMBA (Pemberian Makan Bayi & Anak) PDF: <a href="https://ayosehat.kemkes.go.id/pub/files/files11293Buku%20PMBA-rev.pdf" target="_blank" rel="noopener">ayosehat.kemkes.go.id</a></li>
+        <li>WHO — Complementary feeding (MP-ASI): <a href="https://www.who.int/health-topics/complementary-feeding" target="_blank" rel="noopener">who.int</a></li>
+        <li>UNICEF Baby Friendly — responsive feeding (ringkas): <a href="https://www.unicef.org.uk/babyfriendly/baby-friendly-resources/relationship-building-resources/responsive-feeding-infosheet/" target="_blank" rel="noopener">unicef.org.uk</a></li>
+        <li>CDC — kapan & bagaimana mengenalkan makanan padat: <a href="https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html" target="_blank" rel="noopener">cdc.gov</a></li>
+        <li>IDAI — red flags perkembangan (keterlambatan perkembangan umum): <a href="https://www.idai.or.id/artikel/seputar-kesehatan-anak/mengenal-keterlambatan-perkembangan-umum-pada-anak" target="_blank" rel="noopener">idai.or.id</a></li>
+        <li>PMK tentang pemantauan tumbuh kembang: <a href="https://dinkes.jatimprov.go.id/userfile/dokumen/PMK%20No.%2066%20ttg%20Pemantauan%20Tumbuh%20Kembang%20Anak.pdf" target="_blank" rel="noopener">dinkes.jatimprov.go.id</a></li>
+        <li>HelloSehat — contoh aturan makan praktis (durasi 30 menit & kebersihan mulut): <a href="https://hellosehat.com/parenting/anak-1-sampai-5-tahun/gizi-balita/jadwal-makan-balita/" target="_blank" rel="noopener">hellosehat.com</a></li>
+      </ul>
+
+      <div class="callout" style="margin-top:12px">
+        <b>Catatan:</b> isi di halaman ini disusun agar mudah dipahami pasien. Untuk kasus khusus (prematur, penyakit kronis, alergi berat), perlu penyesuaian oleh dokter.
+      </div>
+      <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+        <button class="btn" id="printPage" type="button" aria-label="Print atau simpan PDF">
+          <span class="icon-pair" aria-hidden="true">
+            <i class="bi bi-printer-fill icon-cdn"></i>
+            <svg class="icon-local" viewBox="0 0 24 24" fill="none">
+              <path d="M6 9V3h12v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 14h12v7H6v-7Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER: clinic info -->
+  <footer class="reveal" aria-label="Informasi Klinik Pratama Zihan Medical Center">
+    <div class="ft">
+      <div>
+        <h3>Zihan Medical Center</h3>
+        <p><b>#ZMCGakNyuekinKamu.</b> Fasilitas lengkap: Poli Umum, Rawat Inap, Laboratorium, dan Farmasi.</p>
+        <p style="margin-top:10px">
+          <b>Alamat:</b><br>
+          Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183
+        </p>
+        <p style="margin-top:10px">
+          <b>Telepon/WA:</b> +62 822-1718-0432<br>
+          <b>Jam Operasional:</b> Senin–Minggu: 24 Jam
+        </p>
+      </div>
+
+      <div class="links">
+        <div style="font-weight:900;color:var(--text)">Kontak & Lokasi</div>
+        <div class="linkrow">
+          <a class="linkbtn" href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 11.5a8.5 8.5 0 1 1-16 4.6L3 21l5-1.2A8.47 8.47 0 0 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M9.5 9.5c.4 2.3 2.6 4.5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a class="linkbtn" href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" rel="noopener" aria-label="Buka Google Maps">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s7-4.5 7-10a7 7 0 1 0-14 0c0 5.5 7 10 7 10Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Google Maps
+          </a>
+          <a class="linkbtn" href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" rel="noopener" aria-label="Buka Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            Instagram
+          </a>
+        </div>
+
+        <div class="callout" style="margin-top:6px">
+          <b>Butuh konsultasi cepat?</b> Klik WhatsApp, jelaskan keluhan, usia anak, dan sudah makan/minum apa.
+        </div>
+      </div>
+    </div>
+
+    <div class="subft">
+      <div>© <span id="year"></span> Zihan Medical Center • Wanaraja, Garut</div>
+      <div>Tip offline: simpan logo sebagai <code>zmc-logo.jpeg</code> di folder yang sama.</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const ZMC = {
+    name: "Zihan Medical Center",
+    tagline: "#ZMCGakNyuekinKamu",
+    logoLocal: "zmc-logo.jpeg",
+    logoFallback: "https://i.imgur.com/jzuguQE.jpeg",
+    maps: "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+    whatsapp: "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+    instagram: "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+    address: "Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183",
+    phone: "+62 822-1718-0432",
+    hours: "Senin - Minggu: 24 Jam"
+  };
+
+  (function(){
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Icon CDN fallback
+    const root = document.documentElement;
+    const forcedFallback = new URLSearchParams(location.search).get('icons') === 'fallback';
+    if (forcedFallback) {
+      root.classList.add('icons-fallback');
+    } else {
+      const probe = document.createElement('span');
+      probe.className = 'bi bi-check-circle-fill';
+      probe.style.position = 'absolute';
+      probe.style.opacity = '0';
+      document.body.appendChild(probe);
+      const pseudo = getComputedStyle(probe, '::before');
+      const loaded = pseudo && pseudo.content && pseudo.content !== 'none' && String(pseudo.fontFamily || '').toLowerCase().includes('bootstrap-icons');
+      if (!loaded) root.classList.add('icons-fallback');
+      probe.remove();
+    }
+
+    // Logo and clinic links from config
+    const logo = document.querySelector('.logo img');
+    const logoInlineFallback = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='33' fill='%23b50f25'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='19' font-family='Arial' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
+    logo.src = ZMC.logoLocal;
+    logo.onerror = function(){
+      if (this.dataset.fallbackTried !== '1'){
+        this.dataset.fallbackTried = '1';
+        this.src = ZMC.logoFallback;
+        return;
+      }
+      this.onerror = null;
+      this.src = logoInlineFallback;
+    };
+    const linkBtns = document.querySelectorAll('.linkbtn');
+    if (linkBtns.length >= 3){
+      linkBtns[0].href = ZMC.whatsapp;
+      linkBtns[1].href = ZMC.maps;
+      linkBtns[2].href = ZMC.instagram;
+    }
+
+    // Theme toggle (persist)
+    const themeBtn = document.getElementById('themeToggle');
+    const themeLabel = document.getElementById('themeLabel');
+    const forcedTheme = new URLSearchParams(location.search).get('theme');
+    const saved = localStorage.getItem('zmc_theme');
+    const initial = (forcedTheme === 'light' || forcedTheme === 'dark')
+      ? forcedTheme
+      : (saved === 'light' ? 'light' : 'dark');
+    root.setAttribute('data-theme', initial);
+    themeLabel.textContent = initial === 'light' ? 'Tema Malam' : 'Tema Terang';
+
+    function toggleTheme(){
+      const cur = root.getAttribute('data-theme') || 'dark';
+      const next = (cur === 'light') ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('zmc_theme', next);
+      themeLabel.textContent = next === 'light' ? 'Tema Malam' : 'Tema Terang';
+    }
+    themeBtn.addEventListener('click', toggleTheme);
+
+    // Print
+    const printBtn = document.getElementById('printPage');
+    if (printBtn) printBtn.addEventListener('click', () => window.print());
+
+    // Tabs
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const panels = Array.from(document.querySelectorAll('.agepanel'));
+    function activate(tab){
+      tabs.forEach(t => t.setAttribute('aria-selected', String(t === tab)));
+      tabs.forEach(t => t.tabIndex = (t === tab ? 0 : -1));
+      panels.forEach(p => p.classList.toggle('active', p.id === tab.dataset.tab));
+    }
+    tabs.forEach((t, idx) => {
+      t.tabIndex = idx === 0 ? 0 : -1;
+      t.addEventListener('click', () => activate(t));
+      t.addEventListener('keydown', (ev) => {
+        const i = tabs.indexOf(t);
+        let next = null;
+        if (ev.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+        if (ev.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (ev.key === 'Home') next = tabs[0];
+        if (ev.key === 'End') next = tabs[tabs.length - 1];
+        if (next){
+          ev.preventDefault();
+          next.focus();
+          activate(next);
+        }
+      });
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Checklist persistence
+    const checks = document.querySelectorAll('input[type="checkbox"][data-store]');
+    checks.forEach(cb=>{
+      const k = 'zmc_'+cb.getAttribute('data-store');
+      cb.checked = localStorage.getItem(k) === '1';
+      cb.addEventListener('change', ()=>{
+        localStorage.setItem(k, cb.checked ? '1' : '0');
+      });
+    });
+
+    // Online/offline status hint
+    const pill = document.getElementById('pillState');
+    function updatePill(){
+      pill.textContent = navigator.onLine ? 'Online (tautan aktif)' : 'Offline (tetap bisa dibaca)';
+    }
+    window.addEventListener('online', updatePill);
+    window.addEventListener('offline', updatePill);
+    updatePill();
+  })();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

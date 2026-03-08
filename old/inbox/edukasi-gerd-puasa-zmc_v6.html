@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <title>Edukasi GERD saat Puasa — Zihan Medical Center</title>
+  <style>
+    :root{
+      --bg0:#050913;
+      --bg1:#070d1b;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.10);
+      --stroke2: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --dim: rgba(255,255,255,.58);
+      --brand: #ff2d55;
+      --radius: 22px;
+      --shadow: 0 18px 40px rgba(0,0,0,.45);
+      --shadow2: 0 10px 26px rgba(0,0,0,.35);
+      --max: 1180px;
+    }
+    *{box-sizing:border-box}
+    html,body{min-height:100%}
+    html{background: radial-gradient(900px 500px at 18% -10%, rgba(255,45,85,.22), transparent 60%),
+                  radial-gradient(820px 520px at 85% 15%, rgba(125,92,255,.18), transparent 62%),
+                  radial-gradient(900px 520px at 40% 105%, rgba(0,184,255,.12), transparent 60%),
+                  linear-gradient(180deg, var(--bg0), var(--bg1) 60%, #060a15);
+      background-color: var(--bg0);
+}
+    body{
+      min-height:100%;
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: transparent;
+      overflow-x:hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    .glow{
+      position:fixed; inset:-20vh -20vw;
+      pointer-events:none;
+      background:
+        radial-gradient(520px 340px at 20% 25%, rgba(255,45,85,.16), transparent 60%),
+        radial-gradient(520px 340px at 80% 25%, rgba(120,95,255,.14), transparent 60%),
+        radial-gradient(620px 420px at 50% 85%, rgba(0,184,255,.10), transparent 60%);
+      filter: blur(22px);
+      opacity:.9;
+      transform: translateZ(0);
+      animation: floaty 18s ease-in-out infinite;
+    }
+    @keyframes floaty{
+      0%,100%{transform: translate3d(0,0,0) scale(1)}
+      50%{transform: translate3d(0,-18px,0) scale(1.02)}
+    }
+    a{color:inherit}
+    .wrap{max-width: var(--max); margin:0 auto; padding: 18px 16px 36px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      margin: 0 auto 14px;
+      max-width: var(--max);
+      padding: 12px 16px;
+    }
+    .topbar-inner{
+      display:flex; align-items:center; gap:12px;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(8,12,26,.90), rgba(8,12,26,.70));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 26px;
+      padding: 10px 12px;
+      box-shadow: var(--shadow2);
+    }
+    .burger{
+      width:46px; height:46px; border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: radial-gradient(120% 120% at 20% 10%, rgba(255,45,85,.20), rgba(255,255,255,.05));
+      display:grid; place-items:center;
+      cursor:pointer;
+    }
+    .burger:active{transform: scale(.98)}
+    .brandline{
+      flex:1; min-width:0;
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .title{
+      font-size: 20px; font-weight: 800;
+      letter-spacing: 0;
+      line-height:1.15;
+      margin:0;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .subtitle{
+      margin:0;
+      color: rgba(255,255,255,.58);
+      font-size: 13px;
+      line-height:1.25;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .pill{
+      display:flex; align-items:center; gap:10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(90deg, rgba(255,45,85,.16), rgba(255,255,255,.05));
+      max-width: 420px;
+    }
+    .pill b{
+      padding: 6px 10px; border-radius: 999px;
+      background: rgba(0,0,0,.30);
+      border:1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.92);
+      font-weight: 700;
+    }
+    .pill span{color: rgba(255,255,255,.85); font-weight: 600}
+
+    .side-overlay{
+      position:fixed; inset:0; z-index:80;
+      background: rgba(0,0,0,.55);
+      opacity:0; pointer-events:none;
+      transition: opacity .2s ease;
+    }
+    .side{
+      position:fixed; left:0; top:0; bottom:0; z-index:90;
+      width:min(320px, 86vw);
+      transform: translateX(-104%);
+      transition: transform .22s ease;
+      background: linear-gradient(180deg, rgba(10,14,30,.96), rgba(8,10,18,.92));
+      border-right: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      padding: 16px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .side.open{transform: translateX(0)}
+    .side-overlay.open{opacity:1; pointer-events:auto}
+    .side h2{margin:6px 0 6px; font-size:16px; letter-spacing:0}
+    .side p{margin:0 0 14px; color: rgba(255,255,255,.58); font-size:13px}
+    .nav a{
+      display:flex; align-items:center; gap:10px;
+      padding: 11px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      text-decoration:none;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 10px;
+    }
+    .nav .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: rgba(255,45,85,.9);
+      box-shadow: 0 0 0 4px rgba(255,45,85,.14);
+      flex:none;
+    }
+    .close-row{display:flex; justify-content:space-between; align-items:center; margin:0 0 10px}
+    .xbtn{
+      width:40px; height:40px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      cursor:pointer;
+      display:grid; place-items:center;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+    }
+    .section{padding:16px; margin:14px 0}
+    .section .kicker{
+      display:flex; align-items:center; gap:10px;
+      margin-bottom: 8px;
+      color: rgba(255,255,255,.90);
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    .icon{
+      width:30px; height:30px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: radial-gradient(120% 120% at 20% 10%, rgba(255,45,85,.30), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.10);
+      flex:none;
+    }
+    .small{color: rgba(255,255,255,.58); font-size:13px; margin:0}
+    ul{margin:10px 0 0; padding-left:18px}
+    li{margin:6px 0; color: rgba(255,255,255,.86); line-height:1.5}
+    .note{
+      margin-top: 10px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.20);
+      color: rgba(255,255,255,.78);
+      line-height:1.5;
+    }
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.82);
+      font-size: 12.5px;
+      white-space:nowrap;
+    }
+    .chip .mini{
+      width:18px; height:18px; border-radius: 7px;
+      background: rgba(255,45,85,.18);
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.10);
+      font-size: 11px;
+      line-height:1;
+    }
+
+    .cols{display:block; margin-top:10px}
+    .col{display:flex; flex-direction:column; gap:14px}
+    @media (min-width: 760px){
+      .cols{display:grid; grid-template-columns: 1.25fr .85fr; gap:18px; align-items:start}
+      .wrap{padding: 18px 18px 46px}
+      .topbar{padding: 14px 18px}
+      .title{font-size:24px}
+      .subtitle{font-size:14px}
+    }
+
+    .steps{display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px}
+    @media (min-width: 760px){ .steps{grid-template-columns: repeat(3, 1fr)} }
+    .step{
+      padding: 14px;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: 0 10px 22px rgba(0,0,0,.28);
+      min-height: 92px;
+    }
+    .step h4{
+      margin:0 0 6px;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0;
+      display:flex; align-items:center; gap:10px;
+    }
+    .badge{
+      width:26px; height:26px; border-radius: 11px;
+      display:grid; place-items:center;
+      background: rgba(255,45,85,.18);
+      border:1px solid rgba(255,255,255,.12);
+      flex:none;
+      font-weight: 900;
+    }
+    .step p{margin:0; color: rgba(255,255,255,.58); line-height:1.45; font-size: 13px}
+
+    .split{display:grid; grid-template-columns:1fr; gap:10px; margin-top:10px}
+    @media (min-width: 760px){ .split{grid-template-columns: 1fr 1fr} }
+
+    .footer{
+      margin-top: 18px;
+      padding: 18px 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .footer::before{
+      content:"";
+      position:absolute; inset:-40%;
+      background:
+        radial-gradient(420px 240px at 15% 20%, rgba(255,45,85,.22), transparent 60%),
+        radial-gradient(520px 320px at 85% 0%, rgba(120,95,255,.18), transparent 60%);
+      filter: blur(18px);
+      opacity:.85;
+      pointer-events:none;
+    }
+    .footer > *{position:relative}
+    .fhead{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+    .logo{
+      width:46px; height:46px; border-radius: 18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.20);
+      overflow:hidden;
+      flex:none;
+    }
+    .logo img{width:100%; height:100%; object-fit:cover}
+    .ftitle{font-weight: 900; font-size: 18px; margin:0}
+    .tagline{margin:6px 0 0; color: rgba(255,255,255,.78); line-height:1.45}
+    .tagline b{color: var(--brand); font-weight: 900}
+    .fgrid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:14px}
+    @media (min-width: 760px){ .fgrid{grid-template-columns: 1.2fr .8fr} }
+    .addr{color: rgba(255,255,255,.78); line-height:1.5}
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      text-decoration:none;
+      font-weight: 800;
+      color: rgba(255,255,255,.90);
+    }
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(255,45,85,.75), rgba(255,120,60,.55));
+      border-color: rgba(255,255,255,.08);
+    }
+    .fineprint{margin:10px 0 0; color: rgba(255,255,255,.64); font-size:12.5px; line-height:1.45}
+
+    .anchor{scroll-margin-top: 92px}
+    @media (prefers-reduced-motion: reduce){
+      .glow{animation:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+
+  <div class="side-overlay" id="overlay" aria-hidden="true"></div>
+  <aside class="side" id="side" aria-label="Menu">
+    <div class="close-row">
+      <div>
+        <h2>Menu</h2>
+        <p>Lompat cepat ke bagian yang kamu butuh.</p>
+      </div>
+      <button class="xbtn" id="closeBtn" aria-label="Tutup menu">✕</button>
+    </div>
+
+    <nav class="nav">
+      <a href="#alur"><span class="dot"></span> Alur aman (buka→makan→tidur)</a>
+      <a href="#ringkas"><span class="dot"></span> Ringkas: 4 yang paling penting</a>
+      <a href="#buka"><span class="dot"></span> Buka puasa (cara aman)</a>
+      <a href="#makan"><span class="dot"></span> Makan utama & ngemil</a>
+      <a href="#sahur"><span class="dot"></span> Sahur (biar nggak kambuh)</a>
+      <a href="#pemicu"><span class="dot"></span> Pemicu yang sering bikin kambuh</a>
+      <a href="#kebiasaan"><span class="dot"></span> Kebiasaan kecil yang membantu</a>
+      <a href="#obat"><span class="dot"></span> Catatan obat</a>
+      <a href="#bahaya"><span class="dot"></span> Kapan harus periksa</a>
+      <a href="#menucontoh"><span class="dot"></span> Contoh menu sederhana</a>
+      <a href="#zmc"><span class="dot"></span> Kontak ZMC</a>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="burger" id="openBtn" aria-label="Buka menu">☰</button>
+      <div class="brandline">
+        <h1 class="title">Edukasi GERD saat Puasa</h1>
+        <p class="subtitle">Biar puasa tetap nyaman, asam lambung nggak “naik-naik”.</p>
+      </div>
+      <div class="pill" title="Tujuan edukasi">
+        <b>Tujuan</b>
+        <span>puasa lancar + asam lambung terkendali</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="top">
+    <div class="cols">
+      <section class="col">
+        <div class="card section anchor" id="alur">
+          <div class="kicker"><div class="icon">🧭</div>Ilustrasi: “buka → makan → tidur” yang aman untuk GERD</div>
+          <p class="small">Intinya: <b>porsi kecil</b>, <b>beri jeda waktu</b>, dan <b>posisi tubuh tegak</b> setelah makan.</p>
+
+          <div class="steps">
+            <div class="step">
+              <h4><span class="badge">1</span> Buka ringan dulu</h4>
+              <p>Air hangat + 1–2 kurma (kalau cocok) / sup bening kecil.</p>
+            </div>
+            <div class="step">
+              <h4><span class="badge">2</span> Jeda 15–30 menit</h4>
+              <p>Baru makan utama (porsi sedang). Jangan “gaspol” dari awal.</p>
+            </div>
+            <div class="step">
+              <h4><span class="badge">3</span> Jangan rebahan 2–3 jam</h4>
+              <p>Duduk/bersandar dulu. Kalau tidur: kepala lebih tinggi.</p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip"><span class="mini">✓</span> porsi kecil dulu</span>
+            <span class="chip"><span class="mini">⏱</span> kasih jeda waktu</span>
+            <span class="chip"><span class="mini">⬆</span> posisi tegak dulu</span>
+          </div>
+        </div>
+
+        <div class="card section anchor" id="ringkas">
+          <div class="kicker"><div class="icon">⭐</div>Ringkas (yang paling penting)</div>
+          <ul>
+            <li><b>Jangan “balas dendam” saat buka.</b> Mulai dari porsi kecil dulu, makan utama belakangan.</li>
+            <li><b>Hindari rebahan setelah makan.</b> Tunggu <b>2–3 jam</b> sebelum tiduran.</li>
+            <li><b>Sahur jangan mepet imsak.</b> Usahakan selesai sahur <b>45–60 menit</b> sebelum imsak.</li>
+            <li><b>Porsi sedang, lebih sering.</b> Di jam boleh makan, porsi kecil–sedang lebih aman.</li>
+          </ul>
+          <div class="note">
+            Kalau kamu sering nyeri ulu hati, panas di dada, mual, atau rasa asam naik ke tenggorokan saat puasa —
+            biasanya pemicunya <b>porsi besar</b>, <b>pedas/berminyak</b>, dan <b>langsung rebahan</b>.
+            <div class="chips">
+              <span class="chip"><span class="mini">🍽</span> Porsi kecil</span>
+              <span class="chip"><span class="mini">🐢</span> Makan pelan</span>
+              <span class="chip"><span class="mini">🪑</span> Jangan rebahan</span>
+              <span class="chip"><span class="mini">🫗</span> Kurangi gorengan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section anchor" id="buka">
+          <div class="kicker"><div class="icon">🌙</div>Buka puasa (cara aman)</div>
+          <p class="small"><b>Tujuan:</b> “bangunin” lambung pelan-pelan, jangan langsung makan berat.</p>
+          <ul>
+            <li>Mulai dengan <b>air putih hangat/suhu ruang</b>.</li>
+            <li>Boleh <b>1–2 kurma</b> (kalau cocok), jangan kebanyakan kalau gampang kembung.</li>
+            <li><b>Tunggu 15–30 menit</b>, baru lanjut makan utama.</li>
+            <li>Kalau perih banget saat buka: coba buka dengan <b>½ porsi</b> dulu, istirahat, baru lanjut.</li>
+          </ul>
+          <div class="note">
+            Hindari di 30 menit pertama (kalau kamu sensitif): <b>gorengan</b>, <b>pedas</b>, <b>kopi/teh kental</b>, <b>soda</b>, dan <b>asam kuat</b> (mis. jeruk/cuka).
+          </div>
+        </div>
+
+        <div class="card section anchor" id="makan">
+          <div class="kicker"><div class="icon">🍽️</div>Makan utama & ngemil</div>
+          <div class="split">
+            <div>
+              <p class="small"><b>Makan utama (setelah 15–30 menit)</b></p>
+              <ul>
+                <li><b>Porsi sedang</b> (jangan piring gunung).</li>
+                <li>Pilih masakan <b>tidak digoreng</b> (rebus/kukus/panggang).</li>
+                <li>Lemak berlebihan bikin lambung lebih lama kosong → reflux lebih mudah naik.</li>
+              </ul>
+            </div>
+            <div>
+              <p class="small"><b>Ngemil malam (kalau lapar)</b></p>
+              <ul>
+                <li>Snack ringan: pisang matang, roti tawar, oatmeal kecil, biskuit plain, sup hangat.</li>
+                <li>Hindari makan berat mendekati tidur.</li>
+                <li>Minum air <b>dicicil</b>, jangan langsung banyak setelah makan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section anchor" id="sahur">
+          <div class="kicker"><div class="icon">⏰</div>Sahur (biar nggak kambuh)</div>
+          <ul>
+            <li>Sahur selesai <b>45–60 menit</b> sebelum imsak (jangan mepet).</li>
+            <li>Pilih makanan <b>hangat</b>, tidak pedas, tidak berminyak.</li>
+            <li>Minum cukup tapi <b>dicicil</b> (hindari “banjir minum” sekaligus).</li>
+          </ul>
+          <div class="note">
+            Kalau kamu terbiasa kopi, coba kurangi dulu saat GERD sedang aktif.
+            Banyak orang kambuh karena <b>kopi + sahur mepet</b>.
+          </div>
+        </div>
+
+        <div class="card section anchor" id="menucontoh">
+          <div class="kicker"><div class="icon">📋</div>Contoh menu sederhana (ramah GERD)</div>
+          <ul>
+            <li><b>Buka ringan:</b> air hangat + 1–2 kurma / sup bening kecil</li>
+            <li><b>Makan utama:</b> nasi + telur rebus + sayur matang, atau oatmeal + pisang</li>
+            <li><b>Minum:</b> air putih dicicil</li>
+          </ul>
+          <p class="small" style="margin-top:10px">
+            Catatan: tiap orang bisa berbeda. Kalau ada makanan tertentu yang selalu bikin kambuh, itu boleh dihindari dulu.
+          </p>
+        </div>
+      </section>
+
+      <aside class="col">
+        <div class="card section anchor" id="pemicu">
+          <div class="kicker"><div class="icon">🔥</div>Pemicu yang sering bikin kambuh</div>
+          <p class="small">Tidak semua orang sensitif sama hal yang sama. Pilih yang paling terasa memicu pada kamu.</p>
+          <ul>
+            <li>Gorengan, makanan berminyak, santan kental.</li>
+            <li>Makanan pedas (sambal, cabai banyak).</li>
+            <li>Kopi, teh kental, cokelat.</li>
+            <li>Soda/minuman berkarbonasi.</li>
+            <li>Makanan sangat asam (jeruk, cuka; sebagian orang sensitif tomat).</li>
+            <li>Makan cepat + porsi besar (sering jadi pemicu utama).</li>
+          </ul>
+        </div>
+
+        <div class="card section anchor" id="kebiasaan">
+          <div class="kicker"><div class="icon">🧩</div>Kebiasaan kecil yang membantu</div>
+          <ul>
+            <li><b>Jangan rebahan</b> setelah makan (minimal <b>2–3 jam</b>).</li>
+            <li>Kalau perlu tidur: <b>posisi kepala lebih tinggi</b> (bantal lebih tinggi / ganjal kasur bagian kepala).</li>
+            <li>Hindari baju/ikat pinggang terlalu ketat setelah makan.</li>
+            <li>Kurangi rokok (nikotin bisa memperparah reflux).</li>
+          </ul>
+        </div>
+
+        <div class="card section anchor" id="obat">
+          <div class="kicker"><div class="icon">💊</div>Catatan obat (kalau diresepkan dokter)</div>
+          <ul>
+            <li>Kalau kamu dapat obat asam lambung (mis. PPI/H2 blocker), minum sesuai instruksi dokter.</li>
+            <li>Obat paling efektif kalau diminum di waktu yang tepat (tiap obat beda).</li>
+            <li>Jangan berhenti/naikkan dosis sendiri tanpa arahan.</li>
+          </ul>
+          <div class="note">
+            Edukasi ini bersifat umum. Jadwal obat saat puasa sebaiknya disesuaikan kondisi dan resep.
+          </div>
+        </div>
+
+        <div class="card section anchor" id="bahaya">
+          <div class="kicker"><div class="icon">🚨</div>Kapan harus periksa (tanda bahaya)</div>
+          <ul>
+            <li>Nyeri dada berat, sesak, keringat dingin (jangan dianggap “maag” dulu).</li>
+            <li>Muntah darah / BAB hitam seperti aspal.</li>
+            <li>Sulit menelan, berat badan turun tanpa sebab, anemia/lememas berat.</li>
+            <li>Keluhan sering kambuh meski sudah jaga makan dan minum obat.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer anchor" id="zmc">
+      <div class="fhead">
+        <div class="logo" aria-hidden="true"><img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC"></div>
+        <div>
+          <p class="ftitle">Zihan Medical Center</p>
+          <p class="tagline"><b>#ZMCGakNyuekinKamu</b>. Fasilitas lengkap: Poli Umum, Rawat Inap, Laboratorium, dan Farmasi.</p>
+        </div>
+      </div>
+
+      <div class="fgrid">
+        <div>
+          <p style="margin:0; font-weight:900; font-size:16px">Kontak & Lokasi</p>
+          <p class="addr" style="margin:8px 0 0"><strong>Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183</strong></p>
+          <div class="btnrow">
+            <a class="btn primary" href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn" href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" rel="noopener">Google Maps</a>
+            <a class="btn" href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" rel="noopener">Instagram</a>
+          </div>
+          <p class="addr" style="margin:10px 0 0"><strong>Telepon/WA:</strong> +62 822-1718-0432</p>
+        </div>
+        <div>
+          <p style="margin:0; font-weight:900; font-size:16px">Jam Operasional</p>
+          <p class="addr" style="margin:8px 0 0"><strong>Senin - Minggu: 24 Jam</strong></p>
+          <p class="fineprint">
+            Edukasi ini bersifat umum. Jika keluhan berat/sering kambuh, silakan konsultasi agar terapi dan jadwal obat bisa disesuaikan.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      const side = document.getElementById('side');
+      const overlay = document.getElementById('overlay');
+      const openBtn = document.getElementById('openBtn');
+      const closeBtn = document.getElementById('closeBtn');
+
+      function openSide(){
+        side.classList.add('open');
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeSide(){
+        side.classList.remove('open');
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden','true');
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openSide);
+      closeBtn.addEventListener('click', closeSide);
+      overlay.addEventListener('click', closeSide);
+
+      side.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', ()=>{ closeSide(); });
+      });
+
+      window.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape') closeSide();
+      });
+    })();
+  </script>
+</body>
+</html>

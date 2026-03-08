@@ -1,0 +1,1594 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>ZMC — Edukasi DBD (Demam Berdarah Dengue)</title>
+  <meta name="description" content="Edukasi DBD untuk pasien awam: gejala, fase kritis saat demam turun, tanda bahaya, perawatan rumahan yang aman, obat yang harus dihindari, dan pencegahan PSN 3M Plus. Klinik Pratama Zihan Medical Center Wanaraja." />
+  <meta name="theme-color" content="#e11d2e" />
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    :root{
+      --bg0:#07080c; --bg1:#0a0c13; --fg:#eef0ff;
+      --muted: rgba(238,240,255,.72); --faint: rgba(238,240,255,.52);
+      --card: rgba(255,255,255,.055); --card2: rgba(255,255,255,.038);
+      --stroke: rgba(255,255,255,.11); --stroke2: rgba(255,255,255,.07);
+
+      --zmc:#e11d2e; --zmc2:#ff5563; --sky:#38bdf8;
+      --good:#22c55e; --warn:#f59e0b; --bad:#ef4444;
+
+      --shadow: 0 28px 90px rgba(0,0,0,.60);
+      --shadow2: 0 16px 44px rgba(0,0,0,.42);
+
+      --r1: 16px; --r2: 22px; --r3: 30px;
+      --max: 1120px;
+
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+    }
+
+    [data-theme="light"]{
+      --bg0:#f7f8ff; --bg1:#ffffff; --fg:#0b1020;
+      --muted: rgba(11,16,32,.74); --faint: rgba(11,16,32,.54);
+      --card: rgba(15,23,42,.06); --card2: rgba(15,23,42,.04);
+      --stroke: rgba(15,23,42,.14); --stroke2: rgba(15,23,42,.09);
+      --shadow: 0 24px 76px rgba(2,6,23,.15);
+      --shadow2: 0 14px 36px rgba(2,6,23,.12);
+    }
+
+    *{ box-sizing:border-box }
+    html, body{ height:100% }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--fg);
+      background:
+        radial-gradient(1200px 760px at 12% -10%, rgba(225,29,46,.20), transparent 55%),
+        radial-gradient(900px 620px at 92% 0%, rgba(56,189,248,.12), transparent 60%),
+        radial-gradient(900px 760px at 60% 110%, rgba(255,85,99,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    /* multi-scale blueprint grid, masked to reduce "repeat" feeling */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      opacity:.42;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 84px 84px, 84px 84px, 168px 168px, 168px 168px;
+      mask-image: radial-gradient(1000px 760px at 32% 22%, black 48%, transparent 80%);
+      mix-blend-mode: overlay;
+    }
+    [data-theme="light"] body::before{
+      opacity:.18;
+      background-image:
+        linear-gradient(to right, rgba(15,23,42,.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15,23,42,.12) 1px, transparent 1px),
+        linear-gradient(to right, rgba(15,23,42,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15,23,42,.06) 1px, transparent 1px);
+      mix-blend-mode: multiply;
+    }
+
+    a{ color:inherit }
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 16px 132px;
+    }
+    @media (min-width: 860px){
+      .wrap{ padding: 36px 22px 140px; }
+    }
+
+    .topbar{
+      position: fixed; top:0; left:0; right:0;
+      height: 3px; z-index: 80;
+    }
+    .topbar>span{
+      display:block; height:100%; width:0%;
+      background: linear-gradient(90deg, var(--zmc), var(--zmc2));
+      box-shadow: 0 0 16px rgba(225,29,46,.45);
+    }
+
+    .util{
+      display:flex; gap: 10px;
+      align-items:center; justify-content:space-between;
+      margin-bottom: 12px;
+    }
+    .utilLeft{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      color: var(--muted); font-size: 13px; letter-spacing: .02em;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 7px 11px; border-radius: 999px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid var(--stroke2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--zmc);
+      box-shadow: 0 0 0 3px rgba(225,29,46,.18);
+    }
+    .utilRight{ display:flex; gap:10px; align-items:center; }
+
+    .iconBtn{
+      display:inline-flex; align-items:center; justify-content:center;
+      width: 44px; height: 44px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+      box-shadow: var(--shadow2);
+      cursor:pointer;
+      transition: transform .16s ease, border-color .16s ease, background .16s ease;
+    }
+    .iconBtn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22); }
+    .iconBtn:active{ transform: translateY(0px) scale(.99); }
+    .iconBtn svg{ opacity:.95 }
+
+    .hero{
+      position: relative;
+      padding: 20px 18px;
+      border-radius: var(--r3);
+      background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.04));
+      border: 1px solid var(--stroke2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(560px 200px at 25% 15%, rgba(225,29,46,.26), transparent 62%),
+        radial-gradient(420px 180px at 86% 12%, rgba(56,189,248,.17), transparent 72%),
+        radial-gradient(580px 240px at 66% 120%, rgba(255,85,99,.16), transparent 72%);
+      opacity:.95;
+      pointer-events:none;
+    }
+    .hero>*{ position:relative; z-index:2 }
+
+    .watermark{
+      position:absolute;
+      right: -42px; top: -30px;
+      width: 320px;
+      opacity: .18;
+      transform: rotate(8deg);
+      pointer-events:none;
+      filter: drop-shadow(0 22px 40px rgba(0,0,0,.35));
+    }
+    [data-theme="light"] .watermark{ opacity:.12; }
+
+    .heroTop{ display:flex; gap: 14px; align-items:center; flex-wrap:wrap; }
+
+    .logo{
+      width: 66px; height: 66px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke2);
+      overflow:hidden;
+      display:grid; place-items:center;
+      box-shadow: 0 12px 34px rgba(0,0,0,.35);
+      flex:0 0 auto;
+    }
+    .logo img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .logoFallback{
+      display:none;
+      width:100%; height:100%;
+      place-items:center;
+      font-family: var(--mono);
+      font-weight: 900;
+      letter-spacing: .06em;
+      background:
+        radial-gradient(44px 44px at 30% 30%, rgba(225,29,46,.38), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+    }
+
+    h1{
+      margin: 10px 0 8px;
+      font-size: clamp(26px, 3.3vw, 42px);
+      line-height: 1.03;
+      letter-spacing: -0.02em;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      font-size: clamp(14px, 1.75vw, 18px);
+      line-height: 1.48;
+      max-width: 80ch;
+    }
+
+    .heroMeta{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .metaItem{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 9px 12px;
+      border-radius: 18px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+    }
+    .metaItem b{ color: var(--fg); }
+    .metaItem .ic{
+      width: 32px; height: 32px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+      color: var(--zmc2);
+      font-weight: 900;
+    }
+
+    .callout{
+      margin-top: 16px;
+      padding: 14px 14px;
+      border-radius: 18px;
+      background:
+        radial-gradient(220px 130px at 10% 12%, rgba(225,29,46,.22), transparent 70%),
+        rgba(255,255,255,.05);
+      border: 1px solid rgba(225,29,46,.28);
+      display:flex; gap: 12px; align-items:flex-start;
+    }
+    .callout .badge{
+      width: 40px; height: 40px;
+      border-radius: 16px;
+      display:grid; place-items:center;
+      background: rgba(225,29,46,.14);
+      border: 1px solid rgba(225,29,46,.34);
+      color: var(--zmc2);
+      font-weight: 950;
+    }
+    .callout strong{ display:block; margin-bottom: 4px; }
+    .mini{ font-size: 12.5px; color: var(--faint); line-height: 1.6; }
+
+    .btnRow{ margin-top: 16px; display:flex; flex-wrap:wrap; gap: 10px; }
+    .btn{
+      display:inline-flex; align-items:center; gap: 10px;
+      padding: 11px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke2);
+      text-decoration:none;
+      color: var(--fg);
+      box-shadow: var(--shadow2);
+      transition: transform .16s ease, border-color .16s ease, background .16s ease;
+      user-select:none;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22); }
+    .btn:active{ transform: translateY(0px) scale(.99); }
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(225,29,46,.96), rgba(255,85,99,.90));
+      border-color: rgba(255,85,99,.46);
+      color:#fff;
+      box-shadow: 0 18px 56px rgba(225,29,46,.23);
+    }
+    .btn.ghost{ background: rgba(255,255,255,.04); }
+    .btn small{ font-weight: 900; opacity:.95; }
+    .btn svg{ opacity: .95 }
+
+    .navChips{
+      position: sticky;
+      top: 10px;
+      z-index: 40;
+      margin-top: 16px;
+      padding: 10px 10px;
+      border-radius: 20px;
+      background: rgba(10,12,19,.56);
+      border: 1px solid var(--stroke2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      overflow:auto;
+      scrollbar-width:none;
+    }
+    [data-theme="light"] .navChips{ background: rgba(255,255,255,.70); }
+    .navChips::-webkit-scrollbar{ display:none; }
+    .navChipsInner{
+      display:flex;
+      gap: 10px;
+      min-width: max-content;
+      padding-right: 10px;
+      align-items:center;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+      text-decoration:none;
+      color: var(--muted);
+      font-size: 13px;
+      white-space:nowrap;
+      transition: border-color .16s ease, background .16s ease, color .16s ease, transform .16s ease;
+    }
+    .chip:hover{ border-color: rgba(255,255,255,.24); color: var(--fg); transform: translateY(-1px); }
+    .chip.active{
+      color: #fff;
+      background: rgba(225,29,46,.16);
+      border-color: rgba(225,29,46,.36);
+      box-shadow: 0 10px 32px rgba(225,29,46,.12);
+    }
+    [data-theme="light"] .chip.active{
+      color: var(--fg);
+      background: rgba(225,29,46,.12);
+    }
+    .chip .b{
+      width: 18px; height: 18px;
+      border-radius: 9px;
+      display:grid; place-items:center;
+      font-size: 12px;
+      font-weight: 950;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke2);
+      color: var(--zmc2);
+    }
+
+    .grid{ margin-top: 16px; display:grid; gap: 14px; }
+    @media (min-width: 940px){
+      .grid{ grid-template-columns: 1.28fr .72fr; align-items:start; }
+    }
+
+    .card{
+      padding: 16px 16px;
+      border-radius: var(--r2);
+      background: var(--card);
+      border: 1px solid var(--stroke2);
+      box-shadow: var(--shadow2);
+    }
+    .card.soft{
+      background: var(--card2);
+      border-color: var(--stroke2);
+      box-shadow: none;
+    }
+
+    h2{ margin: 0 0 10px; font-size: 18px; letter-spacing: -0.01em; }
+    h3{ margin: 0 0 10px; font-size: 15px; color: var(--fg); }
+    p{ margin: 0 0 10px; color: var(--muted); line-height: 1.68; }
+    ul.list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    ul.list li{ margin: 6px 0; }
+    .divider{ height: 1px; background: var(--stroke2); margin: 12px 0; }
+
+    .split{ display:grid; gap: 12px; }
+    @media (min-width: 700px){ .split{ grid-template-columns: 1fr 1fr; } }
+
+    .tagRow{ display:flex; flex-wrap:wrap; gap: 8px; margin-top: 10px; }
+    .tag{
+      display:inline-flex; align-items:center; gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--stroke2);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .tag b{ color: var(--fg); }
+    .tag .ic{
+      width: 18px; height: 18px;
+      border-radius: 8px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke2);
+      color: var(--fg);
+      font-size: 12px;
+      font-weight: 950;
+    }
+    .tag.good{ border-color: rgba(34,197,94,.26); background: rgba(34,197,94,.10); }
+    .tag.warn{ border-color: rgba(245,158,11,.28); background: rgba(245,158,11,.12); }
+    .tag.bad { border-color: rgba(239,68,68,.30); background: rgba(239,68,68,.12); }
+
+    .timeline{ display:grid; gap: 10px; margin-top: 10px; }
+    .step{
+      display:flex;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid var(--stroke2);
+    }
+    .step .n{
+      width: 36px; height: 36px;
+      border-radius: 16px;
+      display:grid; place-items:center;
+      font-weight: 950;
+      background: rgba(56,189,248,.10);
+      border: 1px solid rgba(56,189,248,.26);
+      color: var(--sky);
+      flex:0 0 auto;
+    }
+    .step.warn .n{ background: rgba(245,158,11,.11); border-color: rgba(245,158,11,.30); color: var(--warn); }
+    .step.bad .n { background: rgba(239,68,68,.11); border-color: rgba(239,68,68,.30); color: var(--bad); }
+    .step b{ color: var(--fg); }
+
+    .checklist{ margin-top: 10px; display:grid; gap: 10px; }
+    .check{
+      display:flex; gap: 12px;
+      align-items:flex-start;
+      padding: 12px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid var(--stroke2);
+    }
+    .check input{
+      margin-top: 2px;
+      width: 18px; height: 18px;
+      accent-color: var(--zmc);
+      flex:0 0 auto;
+    }
+    .check label{ cursor:pointer; }
+    .check .title{ font-weight: 950; color: var(--fg); }
+    .check .desc{
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.58;
+    }
+
+    .flow{ display:grid; gap: 10px; margin-top: 10px; }
+    .flowRow{ display:grid; gap: 10px; }
+    @media (min-width: 700px){ .flowRow{ grid-template-columns: 1fr 1fr 1fr; } }
+    .flowBox{
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.035);
+    }
+    .flowBox h3{
+      margin:0 0 6px;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-size: 14px;
+    }
+    .flowBox h3 .sig{
+      width: 30px; height: 30px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      font-weight: 950;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+    }
+    .flowBox.good{ border-color: rgba(34,197,94,.24); background: rgba(34,197,94,.08); }
+    .flowBox.good .sig{ color: var(--good); border-color: rgba(34,197,94,.28); background: rgba(34,197,94,.12); }
+    .flowBox.warn{ border-color: rgba(245,158,11,.28); background: rgba(245,158,11,.10); }
+    .flowBox.warn .sig{ color: var(--warn); border-color: rgba(245,158,11,.30); background: rgba(245,158,11,.12); }
+    .flowBox.bad{ border-color: rgba(239,68,68,.30); background: rgba(239,68,68,.10); }
+    .flowBox.bad .sig{ color: var(--bad); border-color: rgba(239,68,68,.32); background: rgba(239,68,68,.12); }
+
+    details{
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.035);
+      border-radius: 18px;
+      padding: 12px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 950;
+      color: var(--fg);
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    summary .chev{ opacity:.7; transition: transform .2s ease; }
+    details[open] summary .chev{ transform: rotate(180deg); }
+
+    .tracker{ display:grid; gap: 10px; margin-top: 10px; }
+    .trackerTop{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .fieldRow{ display:grid; gap: 10px; }
+    @media (min-width: 700px){
+      .fieldRow{ grid-template-columns: 1.1fr .9fr .9fr 1.2fr auto; align-items:end; }
+    }
+    label.field{
+      display:grid; gap: 6px;
+      font-size: 12px; color: var(--faint);
+    }
+    input[type="text"], input[type="number"], select, textarea{
+      width:100%;
+      padding: 11px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+      color: var(--fg);
+      font-family: var(--sans);
+      outline: none;
+    }
+    textarea{ min-height: 44px; resize: vertical; }
+    input::placeholder, textarea::placeholder{ color: rgba(238,240,255,.40); }
+    [data-theme="light"] input::placeholder, [data-theme="light"] textarea::placeholder{ color: rgba(11,16,32,.40); }
+
+    .smallBtn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+      color: var(--fg);
+      font-weight: 950;
+      cursor:pointer;
+      transition: transform .16s ease, border-color .16s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .smallBtn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.20); }
+    .smallBtn:active{ transform: translateY(0px) scale(.99); }
+    .smallBtn.primary{
+      background: linear-gradient(90deg, rgba(225,29,46,.96), rgba(255,85,99,.90));
+      border-color: rgba(255,85,99,.46);
+      color:#fff;
+    }
+    .smallBtn.danger{
+      background: rgba(239,68,68,.12);
+      border-color: rgba(239,68,68,.32);
+      color: var(--fg);
+    }
+
+    table{
+      width:100%;
+      border-collapse: collapse;
+      overflow:hidden;
+      border-radius: 18px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.03);
+    }
+    th, td{
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--stroke2);
+      vertical-align: top;
+      text-align:left;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    th{
+      font-size: 12px;
+      letter-spacing: .02em;
+      color: var(--faint);
+      font-family: var(--mono);
+      background: rgba(255,255,255,.03);
+    }
+    tr:last-child td{ border-bottom:none; }
+    td b{ color: var(--fg); }
+
+    .bottombar{
+      position: fixed; left:0; right:0; bottom:0;
+      padding: 12px 12px;
+      z-index: 90;
+      background: rgba(10,12,19,.62);
+      border-top: 1px solid var(--stroke2);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    [data-theme="light"] .bottombar{ background: rgba(255,255,255,.80); }
+    .barInner{
+      max-width: var(--max);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+    .barLeft{ display:flex; gap: 10px; align-items:center; min-width:0; }
+    .avatar{
+      width: 40px; height: 40px;
+      border-radius: 16px;
+      display:grid; place-items:center;
+      font-weight: 950;
+      background: rgba(225,29,46,.16);
+      border: 1px solid rgba(225,29,46,.35);
+      color:#fff;
+      flex:0 0 auto;
+    }
+    .barText{ min-width:0; display:flex; flex-direction:column; line-height: 1.15; }
+    .barText b{
+      font-size: 13px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .barText span{
+      font-size: 12px;
+      color: var(--faint);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .barBtns{ display:flex; gap: 10px; align-items:center; }
+    .barBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 14px;
+      border-radius: 18px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+      color: var(--fg);
+      text-decoration:none;
+      font-weight: 950;
+      white-space:nowrap;
+      transition: transform .16s ease, border-color .16s ease;
+    }
+    .barBtn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.20); }
+    .barBtn.primary{
+      background: linear-gradient(90deg, rgba(225,29,46,.96), rgba(255,85,99,.90));
+      border-color: rgba(255,85,99,.46);
+      color:#fff;
+    }
+
+    footer{
+      margin-top: 18px;
+      padding: 18px 16px;
+      border-radius: var(--r2);
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--stroke2);
+    }
+    .links{ display:flex; gap: 10px; flex-wrap:wrap; margin-top: 10px; }
+    .link{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+      text-decoration:none;
+      color: var(--fg);
+    }
+    .link .bubble{
+      width: 34px; height: 34px;
+      border-radius: 16px;
+      display:grid; place-items:center;
+      font-weight: 950;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+      color: var(--zmc2);
+    }
+
+    .ref{
+      margin-top: 10px;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 13px;
+    }
+    .ref a{
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,.25);
+    }
+    [data-theme="light"] .ref a{ text-decoration-color: rgba(11,16,32,.22); }
+
+    :focus-visible{
+      outline: 3px solid rgba(56,189,248,.45);
+      outline-offset: 3px;
+      border-radius: 14px;
+    }
+
+    html.js .reveal{ opacity: 0; transform: translateY(10px); filter: blur(2px); }
+    html.js .reveal.inview{
+      opacity: 1; transform: none; filter:none;
+      transition: opacity .55s ease, transform .55s ease, filter .55s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html.js .reveal, html.js .reveal.inview{
+        transition: none !important;
+        transform: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+      }
+      .btn, .chip, .barBtn, .iconBtn, .smallBtn{ transition:none !important; }
+      html{ scroll-behavior: auto !important; }
+    }
+
+    @media print{
+      body{ background: #fff !important; color: #000 !important; }
+      body::before, .topbar, .bottombar, .navChips, .utilRight, .btnRow, .links{ display:none !important; }
+      .wrap{ padding: 0 !important; }
+      .hero, .card, footer{
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+      }
+      a{ text-decoration: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar" aria-hidden="true"><span id="progress"></span></div>
+
+  <main class="wrap">
+    <div class="util reveal" aria-label="Pengaturan dan status">
+      <div class="utilLeft">
+        <span class="pill"><span class="dot"></span> Edukasi Pasien • Garut</span>
+        <span class="pill">DBD / Dengue</span>
+        <span class="pill">Update: <b>19 Feb 2026</b></span>
+        <span class="pill" id="netPill" style="display:none">Offline mode</span>
+      </div>
+      <div class="utilRight">
+        <button class="iconBtn" id="themeBtn" type="button" aria-label="Ganti tema gelap/terang" title="Tema">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.5 4.5l1.4 1.4M18.1 18.1l1.4 1.4M19.5 4.5l-1.4 1.4M5.9 18.1l-1.4 1.4"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <button class="iconBtn" id="printBtn" type="button" aria-label="Cetak ringkasan (print)" title="Print">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 9V4h12v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 14h12v6H6v-6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <section class="hero reveal" id="top" aria-label="Judul dan ringkasan">
+      <svg class="watermark" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M252 140c18 0 36 12 36 30 0 18-18 34-36 34s-36-16-36-34c0-18 18-30 36-30Z" stroke="white" stroke-width="2"/>
+        <path d="M252 204c-8 40-26 70-56 96" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M252 204c8 40 26 70 56 96" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M252 140c0-36 16-68 40-92" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M252 140c0-36-16-68-40-92" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M216 156c-54-12-102-6-146 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M216 174c-54 14-102 40-144 78" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M288 156c54-12 102-6 146 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M288 174c54 14 102 40 144 78" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M252 172v88" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M240 252h24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="244" cy="158" r="4" fill="white"/>
+        <circle cx="260" cy="158" r="4" fill="white"/>
+      </svg>
+
+      <div class="heroTop">
+        <div class="logo" aria-label="Logo ZMC">
+          <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC"
+               onerror="this.style.display='none'; this.parentElement.querySelector('.logoFallback').style.display='grid';">
+          <div class="logoFallback" aria-hidden="true">ZMC</div>
+        </div>
+
+        <div>
+          <h1>Edukasi DBD (Demam Berdarah Dengue)</h1>
+          <p class="sub">
+            Bacaan awam untuk keluarga: <b>kenali gejala</b>, pahami <b>fase kritis saat demam turun</b>,
+            tahu <b>tanda bahaya</b>, rawat di rumah dengan aman, dan lakukan <b>PSN 3M Plus</b>.
+          </p>
+
+          <div class="heroMeta" aria-label="Ringkasan cepat">
+            <div class="metaItem"><span class="ic">⏱</span> Waspada kuat di <b>hari 3–5</b></div>
+            <div class="metaItem"><span class="ic">!</span> Warning signs sering <b>24–48 jam</b> setelah demam turun</div>
+            <div class="metaItem"><span class="ic">🧪</span> Diagnosis pasti: <b>tes darah</b> (sesuai dokter)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout" role="note" aria-label="Poin paling penting">
+        <div class="badge">!</div>
+        <div>
+          <strong>Ini yang paling sering bikin “kecolongan”:</strong>
+          <p class="mini">
+            <b>DBD bisa memburuk justru saat demam mulai turun.</b>
+            Jadi kalau suhu turun tapi pasien tampak makin lemah, nyeri perut, muntah, atau perdarahan:
+            anggap itu <b>darurat</b> dan segera periksa.
+          </p>
+        </div>
+      </div>
+
+      <div class="btnRow" role="navigation" aria-label="Aksi cepat">
+        <a class="btn primary" href="#tanda-bahaya" aria-label="Lihat tanda bahaya">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <small>Tanda Bahaya</small>
+        </a>
+        <a class="btn" href="#flow" aria-label="Lihat alur keputusan">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 4h10v4H7V4Zm0 12h10v4H7v-4ZM12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <small>Alur Keputusan</small>
+        </a>
+        <a class="btn ghost" href="#psn" aria-label="Checklist pencegahan 3M Plus">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 11l3 3L22 4M2 20h20M4 4h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <small>Checklist 3M Plus</small>
+        </a>
+        <a class="btn ghost" href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 11.5a8.5 8.5 0 0 1-12.87 7.33L4 20l1.27-3.13A8.5 8.5 0 1 1 20 11.5Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <small>Chat WhatsApp</small>
+        </a>
+      </div>
+
+      <p class="mini" style="margin-top:10px">
+        Catatan: Ini edukasi umum, <b>bukan</b> pengganti pemeriksaan dokter. Jika ragu atau ada tanda bahaya, segera periksa.
+      </p>
+    </section>
+
+    <nav class="navChips reveal" aria-label="Daftar isi cepat">
+      <div class="navChipsInner" id="chips">
+        <a class="chip" href="#kenali"><span class="b">1</span> Kenali DBD</a>
+        <a class="chip" href="#fase"><span class="b">2</span> Fase Hari 1–7</a>
+        <a class="chip" href="#tanda-bahaya"><span class="b">3</span> Tanda Bahaya</a>
+        <a class="chip" href="#flow"><span class="b">4</span> Alur Keputusan</a>
+        <a class="chip" href="#rawat"><span class="b">5</span> Rawat di Rumah</a>
+        <a class="chip" href="#obat"><span class="b">6</span> Obat</a>
+        <a class="chip" href="#tracker"><span class="b">7</span> Tracker</a>
+        <a class="chip" href="#psn"><span class="b">8</span> PSN 3M Plus</a>
+        <a class="chip" href="#faq"><span class="b">9</span> FAQ</a>
+        <a class="chip" href="#referensi"><span class="b">10</span> Referensi</a>
+      </div>
+    </nav>
+
+    <section class="grid">
+      <div>
+        <section class="card reveal" id="kenali">
+          <h2>1) Kenali DBD itu apa</h2>
+          <p>
+            <b>DBD (dengue)</b> adalah infeksi virus dengue yang ditularkan nyamuk <b>Aedes</b>.
+            Kebanyakan membaik dalam 1–2 minggu, tapi sebagian bisa menjadi <b>dengue berat</b> (syok, perdarahan hebat, gangguan organ).
+            Yang penting bukan hanya “demamnya”, tapi <b>fase penyakit</b> dan <b>tanda bahaya</b>.
+          </p>
+
+          <div class="split">
+            <div class="card soft">
+              <h3>Gejala yang sering (awal sakit)</h3>
+              <ul class="list">
+                <li>Demam tinggi mendadak (sering 2–7 hari)</li>
+                <li>Nyeri kepala, nyeri belakang mata</li>
+                <li>Nyeri otot/sendi, lemas</li>
+                <li>Mual, muntah, ruam</li>
+              </ul>
+              <div class="tagRow">
+                <span class="tag"><span class="ic">i</span> <b>Catat hari sakit</b> (hari ke-1, ke-2, dst)</span>
+                <span class="tag warn"><span class="ic">!</span> <b>Waspada</b> saat demam mulai turun</span>
+              </div>
+            </div>
+
+            <div class="card soft">
+              <h3>Kenapa bisa jadi berbahaya?</h3>
+              <p class="mini">
+                Pada fase tertentu, bisa terjadi <b>kebocoran plasma</b> (cairan keluar dari pembuluh darah),
+                yang dapat menyebabkan <b>dehidrasi berat, syok, sesak</b>, dan perdarahan.
+                Ini sering terjadi saat demam menurun.
+              </p>
+              <div class="divider"></div>
+              <p class="mini">
+                <b>Tip keluarga:</b> kalau demam turun tapi pasien tampak makin lemah, nyeri perut, muntah terus, atau perdarahan —
+                itu bukan “enakan”, itu <b>alarm</b>.
+              </p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="card soft">
+            <h3>Siapa yang sebaiknya periksa lebih awal?</h3>
+            <div class="tagRow">
+              <span class="tag"><span class="ic">👶</span> Anak kecil</span>
+              <span class="tag"><span class="ic">🤰</span> Ibu hamil</span>
+              <span class="tag"><span class="ic">🧓</span> Lansia</span>
+              <span class="tag"><span class="ic">🩺</span> Penyakit kronis (DM, ginjal, jantung)</span>
+            </div>
+            <p class="mini" style="margin-top:10px">
+              Pada kelompok ini, gejala bisa memburuk lebih cepat atau sulit dinilai. Lebih aman periksa lebih awal.
+            </p>
+          </div>
+        </section>
+
+        <section class="card reveal" id="fase" style="margin-top:14px">
+          <h2>2) Fase penyakit DBD (hari 1–7) — bagian paling penting</h2>
+          <p>
+            Dengue biasanya punya pola: <b>fase demam</b> → <b>fase kritis</b> (sering saat demam turun) → <b>fase pemulihan</b>.
+            Yang sering menipu adalah fase kritis.
+          </p>
+
+          <div class="timeline" aria-label="Timeline fase DBD">
+            <div class="step">
+              <div class="n">1</div>
+              <div>
+                <b>Fase demam (umumnya hari 1–3)</b>
+                <p class="mini">Demam tinggi, pegal, sakit kepala. Fokus: istirahat, cairan, pantau tanda bahaya.</p>
+              </div>
+            </div>
+
+            <div class="step warn">
+              <div class="n">2</div>
+              <div>
+                <b>Fase kritis (sering hari 3–5; 24–48 jam setelah demam turun)</b>
+                <p class="mini">
+                  Demam bisa turun dan pasien tampak “lebih enak” — <b>tapi</b> justru di sini risiko syok/perdarahan meningkat.
+                  Jika ada tanda bahaya: <b>jangan tunggu</b>.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="n">3</div>
+              <div>
+                <b>Fase pemulihan (hari 5–7)</b>
+                <p class="mini">Nafsu makan perlahan membaik, kondisi stabil. Tetap minum cukup & ikuti kontrol bila dokter minta.</p>
+              </div>
+            </div>
+
+            <div class="step bad">
+              <div class="n">!</div>
+              <div>
+                <b>Yang perlu diingat</b>
+                <p class="mini">Demam turun ≠ aman. Pantau ekstra ketat 1–2 hari setelah demam reda.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card reveal" id="tanda-bahaya" style="margin-top:14px">
+          <h2>3) Tanda bahaya — segera periksa / IGD</h2>
+          <p>
+            <b>Tanda bahaya sering mulai 24–48 jam setelah demam reda.</b>
+            Jika ada salah satu di bawah ini, segera periksa (IGD bila berat).
+          </p>
+
+          <div class="checklist" aria-label="Checklist tanda bahaya">
+            <div class="check">
+              <input type="checkbox" id="d1">
+              <label for="d1">
+                <div class="title">Nyeri perut hebat / perut sangat sakit</div>
+                <div class="desc">Bisa tanda kebocoran plasma atau komplikasi. Jangan tunggu “besok”.</div>
+              </label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="d2">
+              <label for="d2">
+                <div class="title">Muntah terus-menerus</div>
+                <div class="desc">Misal muntah ≥3 kali/24 jam, tidak bisa minum, atau muntah setiap masuk cairan.</div>
+              </label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="d3">
+              <label for="d3">
+                <div class="title">Perdarahan</div>
+                <div class="desc">Mimisan/gusi berdarah, muntah darah, BAB hitam, atau darah pada urine.</div>
+              </label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="d4">
+              <label for="d4">
+                <div class="title">Lemas berat / sangat mengantuk / gelisah</div>
+                <div class="desc">Tampak “drop”, sulit dibangunkan, atau sangat resah/iritabel.</div>
+              </label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="d5">
+              <label for="d5">
+                <div class="title">Sesak napas / napas cepat</div>
+                <div class="desc">Bisa karena penumpukan cairan atau syok. Ini darurat.</div>
+              </label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="d6">
+              <label for="d6">
+                <div class="title">Tanda syok/dehidrasi berat</div>
+                <div class="desc">Sangat haus, kulit dingin-pucat, pusing berat, kencing sangat sedikit, tangan kaki dingin.</div>
+              </label>
+            </div>
+          </div>
+
+          <div class="tagRow">
+            <span class="tag bad"><span class="ic">!</span> Ada ≥1 tanda bahaya → <b>segera periksa</b></span>
+            <span class="tag warn"><span class="ic">⏱</span> Pantau ketat di <b>hari 3–5</b></span>
+          </div>
+
+          <div class="btnRow">
+            <a class="btn primary" href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" rel="noopener">Chat WhatsApp ZMC</a>
+            <a class="btn" href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" rel="noopener">Buka Google Maps</a>
+          </div>
+
+          <p class="mini" style="margin-top:10px">
+            <b>Jangan menunggu trombosit turun dulu</b> untuk bertindak. Keputusan rawat/rujuk terutama berdasarkan kondisi klinis & tanda bahaya.
+          </p>
+        </section>
+
+        <section class="card reveal" id="flow" style="margin-top:14px">
+          <h2>4) Alur keputusan cepat (buat keluarga)</h2>
+          <p class="mini">Tujuan: bantu kamu memutuskan “rawat rumah” vs “kontak klinik” vs “IGD”. Ini bukan pengganti dokter, tapi membantu langkah awal.</p>
+
+          <div class="flow">
+            <div class="flowRow">
+              <div class="flowBox good">
+                <h3><span class="sig">✓</span> Boleh rawat di rumah</h3>
+                <ul class="list">
+                  <li>Demam/nyeri masih bisa ditangani</li>
+                  <li>Minum masuk, kencing cukup</li>
+                  <li>Tidak ada tanda bahaya</li>
+                </ul>
+                <p class="mini"><b>Action:</b> cairan, istirahat, parasetamol bila perlu, pantau 1–2x/hari.</p>
+              </div>
+
+              <div class="flowBox warn">
+                <h3><span class="sig">!</span> Kontak klinik hari ini</h3>
+                <ul class="list">
+                  <li>Hari sakit masuk <b>3–5</b></li>
+                  <li>Muntah mulai sering / minum berkurang</li>
+                  <li>Nyeri perut ringan tapi menetap</li>
+                </ul>
+                <p class="mini"><b>Action:</b> chat/kunjungi ZMC untuk evaluasi & saran pemeriksaan.</p>
+              </div>
+
+              <div class="flowBox bad">
+                <h3><span class="sig">⛔</span> IGD / segera periksa</h3>
+                <ul class="list">
+                  <li>≥1 <b>tanda bahaya</b></li>
+                  <li>Tampak sangat lemah / sesak</li>
+                  <li>Perdarahan</li>
+                </ul>
+                <p class="mini"><b>Action:</b> jangan menunda. Dengue berat bisa memburuk dalam jam.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card reveal" id="rawat" style="margin-top:14px">
+          <h2>5) Rawat di rumah (kalau gejala ringan & tanpa tanda bahaya)</h2>
+          <p>
+            Jika dokter menilai pasien bisa rawat jalan, fokus: <b>cairan cukup</b>, <b>istirahat</b>,
+            <b>turunkan demam dengan aman</b>, dan pantau tanda bahaya terutama saat demam turun.
+          </p>
+
+          <div class="split">
+            <div class="card soft">
+              <h3>Yang dianjurkan ✅</h3>
+              <ul class="list">
+                <li>Minum sering (air + elektrolit bila perlu)</li>
+                <li>Istirahat cukup</li>
+                <li>Catat suhu & keluhan (nyeri perut, muntah, perdarahan)</li>
+                <li>Pantau <b>kencing</b>: frekuensi & warna</li>
+                <li>Kontrol ulang sesuai anjuran dokter</li>
+              </ul>
+            </div>
+
+            <div class="card soft">
+              <h3>Yang harus dihindari ❌</h3>
+              <ul class="list">
+                <li><b>Aspirin</b> / <b>ibuprofen</b> / NSAID lain</li>
+                <li>Obat campur-campur tanpa jelas kandungannya</li>
+                <li>Antibiotik tanpa indikasi (virus ≠ bakteri)</li>
+                <li>Aktivitas berat saat masih lemah</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="card soft">
+            <h3>Patokan cairan yang gampang</h3>
+            <ul class="list">
+              <li><b>Minum sedikit tapi sering</b> (jangan tunggu haus parah).</li>
+              <li>Urine ideal: <b>kuning muda</b>. Jika makin pekat & jarang → tambah cairan & pertimbangkan periksa.</li>
+              <li>Kalau mual: coba oralit/elektrolit, sup hangat, atau minum dingin sedikit-sedikit.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card reveal" id="obat" style="margin-top:14px">
+          <h2>6) Obat saat DBD — aman vs berbahaya</h2>
+          <p>
+            Dengue <b>tidak ada obat khusus</b> untuk membunuh virusnya. Perawatan fokus pada cairan dan pemantauan.
+            Untuk demam/nyeri, pilihan yang umumnya paling aman adalah <b>parasetamol</b> (sesuai dosis).
+          </p>
+
+          <div class="split">
+            <div class="card soft">
+              <h3>Boleh (umumnya) ✅</h3>
+              <ul class="list">
+                <li><b>Parasetamol</b> untuk demam/nyeri (ikuti dosis)</li>
+                <li>Kompres hangat suam-suam kuku</li>
+                <li>Elektrolit/oralit bila asupan cairan kurang</li>
+              </ul>
+              <p class="mini"><b>Tip:</b> hati-hati obat “flu” kombinasi — bisa bikin dosis parasetamol berlebihan.</p>
+            </div>
+
+            <div class="card soft">
+              <h3>Jangan ❌</h3>
+              <ul class="list">
+                <li><b>Aspirin</b></li>
+                <li><b>Ibuprofen</b> / NSAID lain</li>
+                <li>Obat pengencer darah tanpa pengawasan</li>
+              </ul>
+              <p class="mini">Obat-obat ini dapat meningkatkan risiko perdarahan pada dengue.</p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="card soft">
+            <h3>Mitos yang sering beredar</h3>
+            <ul class="list">
+              <li><b>“Jus jambu = obat utama.”</b> → boleh sebagai asupan, tapi jangan menunda periksa.</li>
+              <li><b>“Trombosit normal = aman.”</b> → belum tentu. Fokus pada <b>tanda bahaya</b> dan kondisi pasien.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card reveal" id="tracker" style="margin-top:14px">
+          <h2>7) Tracker pemantauan di rumah (auto-save)</h2>
+          <p class="mini">
+            Ini untuk keluarga agar rapi saat memantau: hari sakit, suhu, muntah, kencing, dan catatan.
+            Data tersimpan di perangkat ini (browser) dan bisa kamu hapus kapan saja.
+          </p>
+
+          <div class="tracker">
+            <div class="trackerTop">
+              <p class="mini"><b>Tip:</b> isi 1–2 kali/hari, terutama saat hari 3–5 atau saat demam turun.</p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap">
+                <button class="smallBtn" id="exportBtn" type="button">Export teks</button>
+                <button class="smallBtn danger" id="clearBtn" type="button">Hapus data</button>
+              </div>
+            </div>
+
+            <div class="fieldRow" aria-label="Form tracker">
+              <label class="field">Hari sakit
+                <input id="fDay" type="number" min="1" max="14" placeholder="mis. 3">
+              </label>
+
+              <label class="field">Suhu (°C)
+                <input id="fTemp" type="number" step="0.1" placeholder="mis. 38.5">
+              </label>
+
+              <label class="field">Muntah (24 jam)
+                <select id="fVomit">
+                  <option value="">Pilih</option>
+                  <option value="0">0</option>
+                  <option value="1-2">1–2</option>
+                  <option value=">=3">≥3</option>
+                </select>
+              </label>
+
+              <label class="field">Kencing
+                <select id="fUrine">
+                  <option value="">Pilih</option>
+                  <option value="cukup">Cukup</option>
+                  <option value="berkurang">Berkurang</option>
+                  <option value="sangat sedikit">Sangat sedikit</option>
+                </select>
+              </label>
+
+              <button class="smallBtn primary" id="addBtn" type="button">Tambah</button>
+            </div>
+
+            <label class="field" style="margin-top:6px">Catatan (opsional)
+              <textarea id="fNote" placeholder="mis. nyeri perut ringan, nafsu makan turun, mimisan, dll"></textarea>
+            </label>
+
+            <div class="divider"></div>
+
+            <table aria-label="Tabel pemantauan">
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>Hari</th>
+                  <th>Suhu</th>
+                  <th>Muntah</th>
+                  <th>Kencing</th>
+                  <th>Catatan</th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+
+            <p class="mini" id="exportOut" style="display:none; margin-top:10px"></p>
+          </div>
+        </section>
+
+        <section class="card reveal" id="psn" style="margin-top:14px">
+          <h2>8) Pencegahan — PSN 3M Plus (Checklist)</h2>
+          <p>
+            Nyamuk Aedes berkembang biak di air bersih yang tergenang (bak, ember, talang).
+            Pencegahan paling efektif: <b>PSN 3M Plus</b> dilakukan rutin.
+          </p>
+
+          <div class="split">
+            <div class="card soft">
+              <h3>3M (inti)</h3>
+              <p class="mini">Centang yang sudah dilakukan. Checklist tersimpan otomatis di HP kamu.</p>
+
+              <div class="checklist" id="psnChecklist">
+                <div class="check">
+                  <input type="checkbox" id="m1" data-store="psn_m1">
+                  <label for="m1">
+                    <div class="title">Menguras</div>
+                    <div class="desc">Bersihkan bak mandi/penampungan air min. 1× seminggu. Sikat dindingnya.</div>
+                  </label>
+                </div>
+
+                <div class="check">
+                  <input type="checkbox" id="m2" data-store="psn_m2">
+                  <label for="m2">
+                    <div class="title">Menutup</div>
+                    <div class="desc">Tutup rapat drum/toren/ember air. Pastikan tidak ada celah.</div>
+                  </label>
+                </div>
+
+                <div class="check">
+                  <input type="checkbox" id="m3" data-store="psn_m3">
+                  <label for="m3">
+                    <div class="title">Mendaur ulang</div>
+                    <div class="desc">Buang/daur ulang barang bekas yang bisa menampung air hujan.</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card soft">
+              <h3>Plus (tambahan)</h3>
+              <ul class="list">
+                <li>Pakai anti-nyamuk terutama <b>pagi–sore</b>.</li>
+                <li>Pasang kawat kasa/kelambu bila perlu.</li>
+                <li>Cek talang air & saluran mampet.</li>
+                <li>Hindari menggantung baju menumpuk.</li>
+                <li>Larvasida untuk tempat yang susah dikuras (sesuai petugas).</li>
+                <li>Gerakan serentak 1 rumah 1 jumantik.</li>
+              </ul>
+
+              <div class="tagRow">
+                <span class="tag good"><span class="ic">✓</span> Rutin > fogging sesekali</span>
+                <span class="tag"><span class="ic">🏡</span> Banyak sarang ada di rumah sendiri</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card reveal" id="faq" style="margin-top:14px">
+          <h2>9) FAQ singkat</h2>
+          <div style="display:grid; gap:10px">
+            <details>
+              <summary>DBD menular dari orang ke orang? <span class="chev">⌄</span></summary>
+              <p class="mini">Tidak langsung. Virus berpindah lewat nyamuk. Saat sakit, tetap cegah gigitan nyamuk agar tidak menularkan ke orang lain via nyamuk.</p>
+            </details>
+
+            <details>
+              <summary>Demam turun berarti aman? <span class="chev">⌄</span></summary>
+              <p class="mini"><b>Belum tentu.</b> Warning signs sering muncul 24–48 jam setelah demam turun. Pantau nyeri perut, muntah, perdarahan, lemas berat, gelisah, sesak, dan kencing berkurang.</p>
+            </details>
+
+            <details>
+              <summary>Apakah trombosit menentukan rawat inap? <span class="chev">⌄</span></summary>
+              <p class="mini">Tidak sendirian. Dokter menilai kondisi klinis, tanda bahaya, hidrasi, tekanan darah, dan parameter lain. Jika ada tanda bahaya, jangan menunggu angka trombosit.</p>
+            </details>
+
+            <details>
+              <summary>Boleh ibuprofen untuk pegal? <span class="chev">⌄</span></summary>
+              <p class="mini">Pada dugaan dengue, umumnya <b>tidak dianjurkan</b>. Pilihan yang biasa dianggap lebih aman adalah <b>parasetamol</b> (sesuai dosis).</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="card reveal" id="referensi" style="margin-top:14px">
+          <h2>10) Referensi</h2>
+          <p class="mini">Tautan akan terbuka jika perangkat tersambung internet.</p>
+          <ol class="ref">
+            <li><a href="https://www.who.int/en/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" rel="noopener">WHO — Dengue and severe dengue (fact sheet)</a></li>
+            <li><a href="https://www.cdc.gov/dengue/treatment/index.html" target="_blank" rel="noopener">CDC — Manage dengue (home care, avoid aspirin/ibuprofen, warning signs)</a></li>
+            <li><a href="https://www.cdc.gov/dengue/signs-symptoms/index.html" target="_blank" rel="noopener">CDC — Symptoms & warning signs</a></li>
+            <li><a href="https://www.mayoclinic.org/diseases-conditions/dengue-fever/symptoms-causes/syc-20353078" target="_blank" rel="noopener">Mayo Clinic — Severe dengue warning signs</a></li>
+            <li><a href="https://kemkes.go.id/eng/rilis-kesehatan/kendalikan-dbd-dengan-psn-3m-plus" target="_blank" rel="noopener">Kemenkes RI — PSN 3M Plus</a></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="card reveal" aria-label="Ringkasan cepat">
+        <h2>Ringkasan cepat 🧾</h2>
+        <p class="mini">Kalau cuma punya 30 detik: baca ini.</p>
+
+        <div class="divider"></div>
+        <div class="tagRow">
+          <span class="tag warn"><span class="ic">⏱</span> Waspada: <b>hari 3–5</b></span>
+          <span class="tag bad"><span class="ic">!</span> Bahaya: <b>saat demam turun</b></span>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3>Checklist mental</h3>
+        <ul class="list">
+          <li>Catat <b>hari sakit</b>.</li>
+          <li>Minum sedikit tapi sering.</li>
+          <li>Parasetamol bila perlu.</li>
+          <li>Hindari aspirin/ibuprofen.</li>
+          <li>Kalau ragu → kontak ZMC.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h3>Butuh cepat?</h3>
+        <div class="btnRow">
+          <a class="btn primary" href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" rel="noopener">WhatsApp ZMC</a>
+          <a class="btn" href="#tanda-bahaya">Tanda Bahaya</a>
+        </div>
+
+        <p class="mini" style="margin-top:10px">Jika pasien anak/hamil/lansia/komorbid: lebih baik periksa lebih awal.</p>
+      </aside>
+    </section>
+
+    <footer class="reveal" aria-label="Informasi Klinik ZMC">
+      <h3>Zihan Medical Center</h3>
+      <p><b>#ZMCGakNyuekinKamu.</b> Fasilitas lengkap: Poli Umum, Rawat Inap, Laboratorium, dan Farmasi.</p>
+
+      <div class="divider"></div>
+
+      <p><b>Kontak & Lokasi</b><br>
+        Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183<br>
+        +62 822-1718-0432
+      </p>
+
+      <p><b>Jam Operasional</b><br>
+        Senin - Minggu: 24 Jam
+      </p>
+
+      <div class="links" aria-label="Tautan cepat ZMC">
+        <a class="link" href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" rel="noopener">
+          <span class="bubble">WA</span> WhatsApp ZMC
+        </a>
+        <a class="link" href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" rel="noopener">
+          <span class="bubble">Map</span> Google Maps
+        </a>
+        <a class="link" href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" rel="noopener">
+          <span class="bubble">IG</span> Instagram ZMC
+        </a>
+      </div>
+
+      <p class="mini" style="margin-top:12px">
+        © <span id="year"></span> Klinik Pratama Zihan Medical Center Wanaraja • Edukasi pasien (offline HTML).
+      </p>
+    </footer>
+  </main>
+
+  <div class="bottombar" role="navigation" aria-label="Aksi cepat bawah">
+    <div class="barInner">
+      <div class="barLeft">
+        <div class="avatar" aria-hidden="true">Z</div>
+        <div class="barText">
+          <b>Butuh bantuan cepat?</b>
+          <span>ZMC 24 jam • klik “Tanda Bahaya” atau WhatsApp</span>
+        </div>
+      </div>
+      <div class="barBtns">
+        <a class="barBtn" href="#tanda-bahaya">Tanda Bahaya</a>
+        <a class="barBtn primary" href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme toggle (persist)
+    const THEME_KEY = 'zmc_theme_pref';
+    const root = document.documentElement;
+    function applyTheme(t){
+      if (t === 'light') root.setAttribute('data-theme','light');
+      else root.removeAttribute('data-theme');
+    }
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (savedTheme) applyTheme(savedTheme);
+
+    document.getElementById('themeBtn').addEventListener('click', ()=>{
+      const isLight = root.getAttribute('data-theme') === 'light';
+      const next = isLight ? 'dark' : 'light';
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+    });
+
+    // Print
+    document.getElementById('printBtn').addEventListener('click', ()=> window.print());
+
+    // Online/offline pill
+    const netPill = document.getElementById('netPill');
+    function updateNet(){
+      const online = navigator.onLine;
+      if (!online){
+        netPill.style.display = 'inline-flex';
+        netPill.textContent = 'Offline mode';
+      } else {
+        netPill.style.display = 'none';
+      }
+    }
+    window.addEventListener('online', updateNet);
+    window.addEventListener('offline', updateNet);
+    updateNet();
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll unless reduced motion
+    (function(){
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduced) document.documentElement.style.scrollBehavior = 'smooth';
+    })();
+
+    // Progress bar
+    const progressEl = document.getElementById('progress');
+    function setProgress(){
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+      const p = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progressEl.style.width = Math.max(0, Math.min(100, p)) + '%';
+    }
+    window.addEventListener('scroll', setProgress, {passive:true});
+    setProgress();
+
+    // Reveal on scroll (safe fallback)
+    const revealEls = Array.from(document.querySelectorAll('.reveal'));
+    if (!('IntersectionObserver' in window)){
+      revealEls.forEach(el => el.classList.add('inview'));
+    } else {
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if (e.isIntersecting) e.target.classList.add('inview'); });
+      }, {threshold: 0.12});
+      revealEls.forEach(el => io.observe(el));
+    }
+
+    // Scrollspy for chips
+    const chips = Array.from(document.querySelectorAll('#chips .chip'));
+    const sections = chips.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    function setActiveChip(id){
+      chips.forEach(c => c.classList.toggle('active', c.getAttribute('href') === '#'+id));
+    }
+    if ('IntersectionObserver' in window){
+      const spy = new IntersectionObserver((entries)=>{
+        const visible = entries.filter(e=>e.isIntersecting)
+          .sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+        if (visible && visible.target && visible.target.id) setActiveChip(visible.target.id);
+      }, {rootMargin: "-25% 0px -65% 0px", threshold:[0.12,0.25,0.5]});
+      sections.forEach(s => spy.observe(s));
+    }
+
+    // Persist checklist states (PSN)
+    const storePrefix = 'zmc_dbd2_';
+    const psnInputs = Array.from(document.querySelectorAll('#psnChecklist input[type="checkbox"][data-store]'));
+    psnInputs.forEach(inp => {
+      const key = storePrefix + inp.dataset.store;
+      const v = localStorage.getItem(key);
+      if (v === '1') inp.checked = true;
+      inp.addEventListener('change', ()=> localStorage.setItem(key, inp.checked ? '1' : '0'));
+    });
+
+    // Tracker (localStorage)
+    const ROW_KEY = 'zmc_dbd_tracker_rows_v1';
+    const tbody = document.getElementById('rows');
+    const out = document.getElementById('exportOut');
+
+    const fDay = document.getElementById('fDay');
+    const fTemp = document.getElementById('fTemp');
+    const fVomit = document.getElementById('fVomit');
+    const fUrine = document.getElementById('fUrine');
+    const fNote = document.getElementById('fNote');
+
+    function loadRows(){
+      try { return JSON.parse(localStorage.getItem(ROW_KEY) || '[]'); }
+      catch(e){ return []; }
+    }
+    function saveRows(rows){ localStorage.setItem(ROW_KEY, JSON.stringify(rows)); }
+
+    function render(){
+      const rows = loadRows();
+      tbody.innerHTML = '';
+      rows.forEach((r)=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><b>${r.time}</b></td>
+          <td>${r.day || '-'}</td>
+          <td>${r.temp || '-'}</td>
+          <td>${r.vomit || '-'}</td>
+          <td>${r.urine || '-'}</td>
+          <td>${(r.note || '').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function addRow(){
+      const day = (fDay.value || '').trim();
+      const temp = (fTemp.value || '').trim();
+      const vomit = fVomit.value || '';
+      const urine = fUrine.value || '';
+      const note = (fNote.value || '').trim();
+
+      const time = new Date();
+      const hh = String(time.getHours()).padStart(2,'0');
+      const mm = String(time.getMinutes()).padStart(2,'0');
+      const dd = String(time.getDate()).padStart(2,'0');
+      const mo = String(time.getMonth()+1).padStart(2,'0');
+      const yy = time.getFullYear();
+      const stamp = `${dd}/${mo}/${yy} ${hh}:${mm}`;
+
+      const rows = loadRows();
+      rows.unshift({ time: stamp, day, temp, vomit, urine, note });
+      saveRows(rows);
+      render();
+
+      fTemp.value = '';
+      fVomit.value = '';
+      fUrine.value = '';
+      fNote.value = '';
+      out.style.display = 'none';
+      out.textContent = '';
+    }
+
+    document.getElementById('addBtn').addEventListener('click', addRow);
+
+    document.getElementById('clearBtn').addEventListener('click', ()=>{
+      if (confirm('Hapus semua data tracker di perangkat ini?')){
+        localStorage.removeItem(ROW_KEY);
+        render();
+        out.style.display = 'none';
+        out.textContent = '';
+      }
+    });
+
+    document.getElementById('exportBtn').addEventListener('click', ()=>{
+      const rows = loadRows();
+      if (!rows.length){
+        out.style.display = 'block';
+        out.textContent = 'Belum ada data untuk diexport.';
+        return;
+      }
+      const lines = rows.slice().reverse().map(r => {
+        const parts = [
+          `• ${r.time}`,
+          `Hari: ${r.day || '-'}`,
+          `Suhu: ${r.temp || '-'}`,
+          `Muntah: ${r.vomit || '-'}`,
+          `Kencing: ${r.urine || '-'}`,
+          r.note ? `Catatan: ${r.note}` : null
+        ].filter(Boolean);
+        return parts.join(' | ');
+      });
+      const text = 'ZMC DBD Tracker (ringkas)\n' + lines.join('\n');
+      out.style.display = 'block';
+      out.textContent = text;
+
+      try{
+        navigator.clipboard.writeText(text);
+        out.textContent += '\n\n(Disalin ke clipboard ✅)';
+      }catch(e){
+        out.textContent += '\n\n(Catatan: clipboard tidak tersedia di browser ini.)';
+      }
+      out.scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+
+    render();
+  </script>
+</body>
+</html>

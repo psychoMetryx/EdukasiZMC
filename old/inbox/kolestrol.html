@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Pasien: Kolesterol - Zihan Medical Center</title>
+    <style>
+        :root {
+            /* Warna Brand ZMC */
+            --zmc-red: #d50000;    /* Merah Logo */
+            --zmc-black: #1a1a1a;  /* Hitam Pekat */
+            --zmc-gray: #f4f4f4;   /* Background */
+            --white: #ffffff;
+            
+            /* Warna Indikator Medis */
+            --danger: #b71c1c;     /* Merah Gelap untuk Peringatan/Larangan */
+            --success: #2e7d32;    /* Hijau untuk Anjuran */
+            --warning-bg: #fff8e1; /* Kuning background mitos */
+            
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7; /* Line height lega untuk kemudahan membaca */
+            color: #333;
+            background-color: var(--zmc-gray);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- HEADER BRANDING ZMC --- */
+        .top-bar {
+            background-color: var(--white);
+            padding: 15px 20px;
+            border-bottom: 4px solid var(--zmc-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--zmc-black);
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-text h1 {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--zmc-black);
+            line-height: 1.2;
+        }
+        
+        .brand-text span {
+            font-size: 0.9rem;
+            color: var(--zmc-red);
+            font-weight: 600;
+        }
+
+        /* --- HERO SECTION (JUDUL ARTIKEL) --- */
+        .hero {
+            background: linear-gradient(135deg, var(--zmc-red), #9b0000);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* --- LAYOUT UTAMA --- */
+        .container {
+            max-width: 900px;
+            margin: -30px auto 40px; /* Overlap ke atas sedikit */
+            padding: 0 15px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--zmc-black); /* Aksen Hitam ZMC */
+        }
+
+        /* Typography Konten */
+        .card h3 {
+            color: var(--zmc-red);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .sub-heading {
+            color: var(--zmc-black);
+            margin-top: 25px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* --- GRID KOLESTEROL (Jahat vs Baik) --- */
+        .cholesterol-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .chol-box {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .ldl {
+            background-color: #ffebee;
+            border: 2px solid #ffcdd2;
+        }
+        .ldl strong { color: var(--danger); }
+
+        .hdl {
+            background-color: #e8f5e9;
+            border: 2px solid #c8e6c9;
+        }
+        .hdl strong { color: var(--success); }
+
+        .emoji-icon { font-size: 3rem; display: block; margin-bottom: 10px; }
+
+        /* --- LIST MAKANAN --- */
+        .food-list {
+            list-style: none;
+            padding: 0;
+        }
+        .food-list li {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .food-list li::before {
+            margin-right: 12px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .food-list.good li::before { content: '✅'; }
+        .food-list.bad li::before { content: '❌'; }
+
+        /* --- MITOS vs FAKTA --- */
+        .myth-box {
+            background-color: var(--warning-bg);
+            border-left: 5px solid #ff9800;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .myth-label {
+            color: #e65100;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .fact-label {
+            color: var(--success);
+            font-weight: 800;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* --- BOX PERINGATAN & TIPS --- */
+        .warning-box {
+            background: #ffebee;
+            color: var(--danger);
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            border: 1px dashed var(--danger);
+            margin-top: 20px;
+        }
+
+        .tips-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2196f3;
+            margin-top: 15px;
+        }
+
+        /* --- FOOTER ZMC --- */
+        footer {
+            background-color: var(--zmc-black);
+            color: #ccc;
+            padding: 50px 20px 30px;
+            margin-top: 50px;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            border-bottom: 2px solid var(--zmc-red);
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p, .footer-col li { margin-bottom: 10px; }
+        .footer-col ul { list-style: none; padding: 0; }
+        
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--zmc-red);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .contact-btn:hover { background-color: #b71c1c; }
+
+        .social-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .tagline {
+            color: var(--zmc-red);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* --- RESPONSIVE DESKTOP --- */
+        @media (min-width: 768px) {
+            .cholesterol-grid, .two-col-grid, .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+            .footer-grid {
+                grid-template-columns: 1.5fr 1fr 1fr;
+            }
+            .brand-text h1 { font-size: 1.5rem; }
+            .logo-img { height: 70px; }
+        }
+
+        /* --- FLOATING WA BUTTON --- */
+        .float-wa {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .float-wa:hover { transform: scale(1.1); }
+
+        /* --- PRINT MODE --- */
+        @media print {
+            .top-bar, footer, .float-wa, .btn-print-hide { display: none; }
+            body { background: white; }
+            .container { margin: 0; padding: 0; max-width: 100%; }
+            .card { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+            .hero { background: white; color: black; padding: 10px 0; border-bottom: 2px solid black; }
+            .hero h2 { font-size: 18pt; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="top-bar">
+        <a href="#" class="brand-container">
+            <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="logo-img">
+            <div class="brand-text">
+                <h1>Zihan Medical Center</h1>
+                <span>Klinik Pratama & Layanan 24 Jam</span>
+            </div>
+        </a>
+    </header>
+
+    <!-- HERO / JUDUL -->
+    <div class="hero">
+        <h2>Kendalikan Kolesterol Anda</h2>
+        <p>Panduan lengkap menuju jantung sehat bersama Zihan Medical Center</p>
+        <button onclick="window.print()" class="contact-btn btn-print-hide" style="background: var(--white); color: var(--zmc-red); border: none;">🖨️ Cetak Artikel Ini</button>
+    </div>
+
+    <!-- KONTEN UTAMA -->
+    <div class="container">
+
+        <!-- BAGIAN 1: PENGERTIAN -->
+        <div class="card">
+            <h3>🤔 Apa itu Kolesterol?</h3>
+            <p>Bayangkan kolesterol seperti <strong>lilin</strong> atau lemak yang ada di dalam darah kita. Tubuh kita sebenarnya membutuhkannya untuk membangun sel, tetapi jika jumlahnya <strong>terlalu banyak</strong>, ia akan menumpuk.</p>
+            
+            <div class="cholesterol-grid">
+                <div class="chol-box ldl">
+                    <span class="emoji-icon">😈</span>
+                    <strong>LDL (Kolesterol Jahat)</strong>
+                    <p>Menempel di dinding pembuluh darah, membuat pipa darah menyempit dan keras (seperti kerak kapur di pipa air).</p>
+                </div>
+                <div class="chol-box hdl">
+                    <span class="emoji-icon">😇</span>
+                    <strong>HDL (Kolesterol Baik)</strong>
+                    <p>Bekerja seperti "tukang sapu". Ia mengangkut kolesterol jahat kembali ke hati untuk dibuang.</p>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                ⚠️ Bahaya Utama: Jika pembuluh darah tersumbat total, bisa menyebabkan Serangan Jantung atau Stroke.
+            </div>
+        </div>
+
+        <!-- BAGIAN 2: MITOS -->
+        <div class="card">
+            <h3>❌ Mitos vs ✅ Fakta</h3>
+            <p>Banyak informasi keliru yang beredar di masyarakat. Berikut fakta medisnya:</p>
+            
+            <div class="two-col-grid">
+                <div class="myth-box">
+                    <span class="myth-label">Mitos:</span>
+                    "Leher saya tidak pegal, berarti kolesterol saya normal."<br>
+                    <span class="fact-label">Fakta:</span> <strong>Kolesterol tinggi biasanya TIDAK BERGEJALA.</strong> Leher pegal lebih sering karena otot tegang atau darah tinggi. Satu-satunya cara tahu adalah cek darah di laboratorium klinik.
+                </div>
+                <div class="myth-box">
+                    <span class="myth-label">Mitos:</span>
+                    "Saya kurus, tidak mungkin kolesterol tinggi."<br>
+                    <span class="fact-label">Fakta:</span> Orang kurus pun bisa memiliki kolesterol tinggi karena faktor genetik (keturunan) atau pola makan yang salah.
+                </div>
+                <div class="myth-box">
+                    <span class="myth-label">Mitos:</span>
+                    "Obat kolesterol merusak ginjal."<br>
+                    <span class="fact-label">Fakta:</span> Justru <strong>penyakit jantung dan diabetes</strong> yang tidak terkontrol yang merusak ginjal. Obat statin aman digunakan jangka panjang di bawah pengawasan dokter ZMC.
+                </div>
+                <div class="myth-box">
+                    <span class="myth-label">Mitos:</span>
+                    "Sudah minum obat, boleh makan sembarangan."<br>
+                    <span class="fact-label">Fakta:</span> Obat membantu, tapi makanan berminyak akan terus menambah tumpukan lemak baru. Keduanya harus jalan bersama.
+                </div>
+            </div>
+        </div>
+
+        <!-- BAGIAN 3: MAKANAN -->
+        <div class="card">
+            <h3>🍽️ Panduan Makan (Lampu Lalu Lintas)</h3>
+            <p>Mengatur pola makan adalah langkah pertama penyembuhan. Di ZMC, kami menyarankan pola berikut:</p>
+
+            <div class="two-col-grid">
+                <div>
+                    <div class="sub-heading" style="color: var(--danger)">🔴 HINDARI / KURANGI (Lemak Jenuh)</div>
+                    <ul class="food-list bad">
+                        <li>Gorengan & makanan bersantan kental.</li>
+                        <li>Jeroan (usus, hati, babat, otak).</li>
+                        <li>Daging merah berlemak (sapi/kambing), kulit ayam.</li>
+                        <li>Kuning telur (batasi 2-3 butir/minggu).</li>
+                        <li>Mentega, keju, dan kue-kue manis (pastry).</li>
+                        <li>Makanan cepat saji (fast food).</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="sub-heading" style="color: var(--success)">🟢 PERBANYAK (Serat & Lemak Baik)</div>
+                    <ul class="food-list good">
+                        <li>Ikan (mengandung Omega-3).</li>
+                        <li>Tahu, Tempe, dan kacang-kacangan.</li>
+                        <li>Sayuran hijau dan buah-buahan (Apel, Alpukat).</li>
+                        <li>Beras merah atau Oat.</li>
+                        <li>Masak dengan cara: Rebus, Kukus, Pepes, Panggang.</li>
+                        <li>Minyak zaitun atau minyak jagung (jangan dipanaskan berulang).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAGIAN 4: PENGOBATAN -->
+        <div class="card">
+            <h3>💊 Pengobatan & Target</h3>
+            <p>Jika Dokter meresepkan obat (seperti <em>Simvastatin, Atorvastatin</em>), tujuannya bukan hanya menurunkan angka di kertas hasil lab, tapi <strong>mencegah penyumbatan pembuluh darah</strong>.</p>
+            
+            <div class="tips-box">
+                <strong>Tips Minum Obat:</strong>
+                <ul>
+                    <li>Minumlah obat secara teratur, jangan hanya saat merasa "tidak enak badan".</li>
+                    <li>Sebagian besar obat kolesterol (Statin) bekerja paling baik diminum <strong>malam hari</strong> saat tubuh memproduksi kolesterol.</li>
+                    <li>Jangan hentikan obat tanpa ijin dokter, meskipun hasil lab sudah normal.</li>
+                </ul>
+            </div>
+
+            <div class="sub-heading">Kapan harus kembali kontrol ke ZMC?</div>
+            <ul>
+                <li>Biasanya <strong>4-8 minggu</strong> setelah mulai minum obat untuk cek ulang darah.</li>
+                <li>Jika ada keluhan nyeri otot yang hebat atau urin berwarna gelap.</li>
+            </ul>
+            <p>Layanan <strong>Laboratorium & Apotek</strong> kami tersedia untuk memantau kondisi Anda.</p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <!-- Kolom 1: Profil -->
+            <div class="footer-col">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                    <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC Footer" style="height: 40px; border-radius: 4px;">
+                    <h3 style="color:white; margin:0; border:none; font-size: 1.1rem;">Zihan Medical Center</h3>
+                </div>
+                <p class="tagline">#ZMCGakNyuekinKamu</p>
+                <p>Klinik Pratama dengan pelayanan sepenuh hati. Kami siap melayani kebutuhan kesehatan Anda dan keluarga.</p>
+                
+                <strong>Fasilitas Lengkap:</strong>
+                <ul>
+                    <li>✅ Poli Umum</li>
+                    <li>✅ Rawat Inap</li>
+                    <li>✅ Laboratorium</li>
+                    <li>✅ Farmasi</li>
+                </ul>
+            </div>
+
+            <!-- Kolom 2: Lokasi -->
+            <div class="footer-col">
+                <h4>Lokasi Kami</h4>
+                <p>
+                    Jl. Kudang, Wanajaya, Wanaraja,<br>
+                    Kabupaten Garut, Jawa Barat 44183
+                </p>
+                <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="contact-btn">
+                    📍 Buka di Google Maps
+                </a>
+            </div>
+
+            <!-- Kolom 3: Kontak & Jam -->
+            <div class="footer-col">
+                <h4>Hubungi Kami</h4>
+                <p>📞 +62 822-1718-0432</p>
+                
+                <p><strong>Jam Operasional:</strong><br>
+                Senin - Minggu: 24 Jam</p>
+                
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank">Chat WhatsApp</a> | 
+                    <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem;">
+            &copy; 2024 Zihan Medical Center. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" class="float-wa" target="_blank" title="Konsultasi via WhatsApp">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="#fff"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.001.572 2.135.805 3.195.805 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.768-5.766-5.768zm0-2c4.287 0 7.767 3.48 7.767 7.768 0 4.287-3.48 7.766-7.767 7.766-1.515 0-2.813-.448-4.043-1.127l-5.602 1.469 1.472-5.467c-.771-1.325-1.176-2.679-1.176-4.04 0-4.287 3.48-7.769 7.767-7.769zm3.502 9.489c-.156-.078-.921-.454-1.063-.506-.141-.052-.244-.078-.347.078-.103.156-.401.506-.49.611-.09.104-.18.117-.336.039-.156-.078-.658-.242-1.253-.773-.464-.413-.777-.923-.868-1.079-.091-.156-.01-.24.068-.318.071-.07.156-.182.234-.273.078-.091.104-.156.156-.26.052-.104.026-.195-.013-.273-.039-.078-.347-.837-.475-1.146-.125-.302-.252-.26-.347-.265l-.297-.005c-.103 0-.27.039-.411.195-.141.156-.541.528-.541 1.288 0 .759.552 1.493.629 1.597.078.104 1.087 1.66 2.633 2.327.368.158.655.253.878.324.37.118.706.101.972.062.296-.044.921-.376 1.051-.74.13-.364.13-.676.091-.74-.039-.065-.143-.104-.299-.182z"/></svg>
+    </a>
+
+</body>
+</html>

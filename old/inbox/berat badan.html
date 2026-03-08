@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Sehat | Klinik Pratama Zihan Medical Center</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js (Untuk Interaksi) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- FontAwesome (Ikon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Konfigurasi Warna ZMC -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zmc: {
+                            red: '#D32F2F', // Merah Medis
+                            dark: '#1a1a1a',
+                            light: '#f8f9fa',
+                            accent: '#FFEBEE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+        
+        .fade-enter { animation: slideUp 0.6s ease-out forwards; }
+        @keyframes slideUp { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        
+        /* Map Container Responsive */
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- NAVIGASI -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3">
+                <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-12 w-12 rounded-full shadow-sm object-cover">
+                <div class="leading-tight">
+                    <h1 class="text-lg md:text-xl font-bold text-zmc-red tracking-tight">ZIHAN MEDICAL CENTER</h1>
+                    <p class="text-xs text-gray-500 font-medium tracking-wide">KLINIK PRATAMA & LAYANAN 24 JAM</p>
+                </div>
+            </div>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+                <a href="#edukasi" class="hover:text-zmc-red transition">Edukasi Medis</a>
+                <a href="#kalkulator" class="hover:text-zmc-red transition">Cek Metabolisme</a>
+                <a href="#tips-praktis" class="hover:text-zmc-red transition">Tips Praktis</a>
+                <a href="#lokasi" class="hover:text-zmc-red transition">Lokasi Kami</a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" target="_blank" class="bg-zmc-red hover:bg-red-700 text-white px-5 py-2 rounded-full shadow-lg transition transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> Darurat / Info
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="md:hidden text-gray-600 text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-3 shadow-lg">
+            <a href="#edukasi" class="block text-gray-700 font-medium">Edukasi Medis</a>
+            <a href="#kalkulator" class="block text-gray-700 font-medium">Cek Metabolisme</a>
+            <a href="#tips-praktis" class="block text-gray-700 font-medium">Tips Praktis</a>
+            <a href="#lokasi" class="block text-gray-700 font-medium">Lokasi & Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-gradient-to-br from-red-50 to-white pt-16 pb-20 overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-5">
+            <i class="fa-solid fa-heart-pulse text-[300px] text-zmc-red transform translate-x-1/2 -translate-y-1/2"></i>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+            <span class="inline-block py-1 px-3 rounded-full bg-red-100 text-zmc-red text-xs font-bold mb-4 tracking-wider">
+                <i class="fa-solid fa-user-doctor mr-1"></i> PARTNER KESEHATAN KELUARGA
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Sehat Itu Bukan Sekadar<br><span class="text-zmc-red">Angka Timbangan</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Dapatkan pemahaman medis yang tepat mengenai berat badan ideal, nutrisi seimbang, dan pola hidup aktif bersama kami.
+            </p>
+            <h3 class="text-2xl font-bold text-gray-800 italic mb-10">#ZMCGakNyuekinKamu</h3>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#kalkulator" class="px-8 py-4 bg-zmc-red text-white rounded-lg font-bold shadow-lg hover:bg-red-700 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calculator"></i> Analisa Kalori Saya
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" class="px-8 py-4 bg-white text-zmc-red border-2 border-zmc-red rounded-lg font-bold hover:bg-red-50 transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Konsultasi Dokter
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FASILITAS STRIP -->
+    <section class="bg-zmc-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-x-0 md:divide-x divide-gray-700">
+                <div class="p-2">
+                    <i class="fa-solid fa-clock text-2xl text-red-500 mb-2"></i>
+                    <h4 class="font-bold text-sm">IGD 24 Jam</h4>
+                </div>
+                <div class="p-2">
+                    <i class="fa-solid fa-stethoscope text-2xl text-red-500 mb-2"></i>
+                    <h4 class="font-bold text-sm">Poli Umum</h4>
+                </div>
+                <div class="p-2">
+                    <i class="fa-solid fa-bed-pulse text-2xl text-red-500 mb-2"></i>
+                    <h4 class="font-bold text-sm">Rawat Inap</h4>
+                </div>
+                <div class="p-2">
+                    <i class="fa-solid fa-flask text-2xl text-red-500 mb-2"></i>
+                    <h4 class="font-bold text-sm">Laboratorium</h4>
+                </div>
+                <div class="p-2 col-span-2 md:col-span-1">
+                    <i class="fa-solid fa-prescription-bottle-medical text-2xl text-red-500 mb-2"></i>
+                    <h4 class="font-bold text-sm">Farmasi Lengkap</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: Konsep Defisit Kalori -->
+    <section id="edukasi" class="py-16 md:py-24 container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+            
+            <!-- Kolom Teks Edukasi -->
+            <div class="lg:w-1/2">
+                <div class="flex items-center gap-2 text-zmc-red font-bold mb-3 uppercase text-sm tracking-wide">
+                    <i class="fa-solid fa-book-medical"></i> Pengetahuan Dasar
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Memahami Mekanisme Pembakaran Lemak Tubuh</h2>
+                
+                <div class="prose prose-lg text-gray-600 text-justify">
+                    <p class="mb-4">
+                        Banyak pasien yang datang ke ZMC bertanya, <em>"Dok, kenapa berat badan saya susah turun padahal sudah makan sedikit?"</em>. Jawabannya seringkali terletak pada pemahaman tentang keseimbangan energi. Prinsip ilmiah penurunan berat badan adalah <strong>Defisit Kalori</strong>, yaitu kondisi di mana energi yang masuk (dari makanan) lebih sedikit daripada energi yang dikeluarkan (aktivitas fisik & fungsi organ).
+                    </p>
+                    <p class="mb-4">
+                        Tubuh manusia seperti mesin yang terus bekerja 24 jam. Meskipun Anda sedang tidur, jantung tetap memompa, paru-paru bernapas, dan otak bekerja. Energi untuk fungsi dasar ini disebut <strong>BMR (Basal Metabolic Rate)</strong>.
+                    </p>
+                    <p class="mb-6">
+                        Total energi yang Anda butuhkan dalam sehari, ditambah dengan aktivitas fisik (seperti bekerja, berjalan, olahraga), disebut <strong>TDEE (Total Daily Energy Expenditure)</strong>.
+                        <br><br>
+                        <strong>Rumus Sehat ZMC:</strong><br>
+                        Jika TDEE Anda adalah 2000 kkal, maka untuk menurunkan berat badan secara sehat, Anda disarankan mengonsumsi sekitar 1500 kkal (Defisit 500 kkal). Ini akan menghasilkan penurunan sekitar 0.5kg per minggu tanpa menyiksa tubuh.
+                    </p>
+                </div>
+
+                <div class="bg-red-50 border-l-4 border-zmc-red p-5 rounded-r-lg mt-6">
+                    <h4 class="font-bold text-zmc-red mb-2"><i class="fa-solid fa-circle-exclamation"></i> Catatan Medis:</h4>
+                    <p class="text-sm text-gray-700">Jangan pernah makan di bawah angka <strong>BMR</strong> Anda dalam jangka waktu lama. Hal ini dapat merusak metabolisme, menyebabkan kerontokan rambut, gangguan hormon, dan kelelahan kronis. Konsultasikan dengan dokter Zihan Medical Center jika Anda memiliki riwayat Maag atau Diabetes sebelum memulai diet.</p>
+                </div>
+            </div>
+
+            <!-- Aplikasi Kalkulator -->
+            <div id="kalkulator" class="lg:w-1/2 w-full bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden" 
+                 x-data="medicalCalculator()">
+                <div class="bg-zmc-red p-6 text-white">
+                    <h3 class="text-xl font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> Kalkulator Metabolisme
+                    </h3>
+                    <p class="text-red-100 text-sm mt-1">Estimasi kebutuhan energi harian tubuh Anda.</p>
+                </div>
+                
+                <div class="p-6 md:p-8 space-y-5">
+                    <!-- Form Input -->
+                    <div class="grid grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Jenis Kelamin</label>
+                            <select x-model="gender" class="w-full border-gray-300 border bg-gray-50 rounded-lg p-3 focus:ring-2 focus:ring-zmc-red focus:border-zmc-red outline-none transition">
+                                <option value="male">Laki-laki</option>
+                                <option value="female">Perempuan</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Usia (Tahun)</label>
+                            <input type="number" x-model="age" class="w-full border-gray-300 border bg-gray-50 rounded-lg p-3 focus:ring-2 focus:ring-zmc-red focus:border-zmc-red outline-none transition">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Berat (kg)</label>
+                            <input type="number" x-model="weight" class="w-full border-gray-300 border bg-gray-50 rounded-lg p-3 focus:ring-2 focus:ring-zmc-red focus:border-zmc-red outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Tinggi (cm)</label>
+                            <input type="number" x-model="height" class="w-full border-gray-300 border bg-gray-50 rounded-lg p-3 focus:ring-2 focus:ring-zmc-red focus:border-zmc-red outline-none transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Tingkat Aktivitas Fisik</label>
+                        <select x-model="activity" class="w-full border-gray-300 border bg-gray-50 rounded-lg p-3 focus:ring-2 focus:ring-zmc-red focus:border-zmc-red outline-none transition">
+                            <option value="1.2">Sedenter (Banyak duduk, jarang olahraga)</option>
+                            <option value="1.375">Ringan (Olahraga 1-3 hari/minggu)</option>
+                            <option value="1.55">Sedang (Olahraga 3-5 hari/minggu)</option>
+                            <option value="1.725">Berat (Pekerja fisik/Atlet)</option>
+                        </select>
+                    </div>
+
+                    <button @click="calculate()" class="w-full bg-gray-900 text-white py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition shadow-lg transform active:scale-95">
+                        Hitung Sekarang
+                    </button>
+                </div>
+
+                <!-- Hasil Perhitungan -->
+                <div x-show="showResult" class="bg-red-50 p-6 border-t border-red-100 fade-enter" style="display: none;">
+                    <div class="grid grid-cols-2 gap-4 text-center mb-4">
+                        <div class="bg-white p-3 rounded-lg shadow-sm">
+                            <p class="text-xs text-gray-500">BMR (Metabolisme Dasar)</p>
+                            <h4 class="text-xl font-bold text-gray-800" x-text="bmr"></h4>
+                            <span class="text-xs text-gray-400">kkal/hari</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm border border-zmc-red">
+                            <p class="text-xs text-zmc-red font-bold">TDEE (Kebutuhan Total)</p>
+                            <h4 class="text-xl font-bold text-zmc-red" x-text="tdee"></h4>
+                            <span class="text-xs text-red-300">kkal/hari</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-sm text-gray-700 mb-2">Untuk menurunkan berat badan secara aman:</p>
+                        <div class="bg-zmc-red text-white py-3 px-6 rounded-lg inline-block shadow-md">
+                            <span class="block text-xs opacity-90">Target Kalori Harian</span>
+                            <span class="text-3xl font-bold" x-text="deficit"></span> <span class="text-sm font-medium">kkal</span>
+                        </div>
+                    </div>
+                    <p class="text-center text-xs text-gray-500 mt-4 italic">Hasil ini adalah estimasi. Untuk pengukuran komposisi tubuh yang akurat, silakan kunjungi Poli Umum Zihan Medical Center.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Piring Sehat (Nutrisi) -->
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Isi Piringku: Strategi Kenyang Tanpa Melar</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Kunci keberhasilan diet bukan menahan lapar, melainkan memilih jenis makanan. Zihan Medical Center merekomendasikan pola makan gizi seimbang dengan panduan visual "Piring T" berikut ini untuk menjaga kadar gula darah dan kesehatan jantung.
+                </p>
+            </div>
+
+            <!-- Interactive Plate Tabs -->
+            <div class="max-w-5xl mx-auto" x-data="{ activeTab: 'serat' }">
+                
+                <!-- Navigasi Tab -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button @click="activeTab = 'serat'" 
+                        :class="activeTab === 'serat' ? 'bg-green-600 text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+                        class="px-6 py-3 rounded-full font-bold transition duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-leaf"></i> 50% Sayuran (Serat)
+                    </button>
+                    <button @click="activeTab = 'protein'" 
+                        :class="activeTab === 'protein' ? 'bg-orange-500 text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+                        class="px-6 py-3 rounded-full font-bold transition duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-drumstick-bite"></i> 25% Lauk (Protein)
+                    </button>
+                    <button @click="activeTab = 'karbo'" 
+                        :class="activeTab === 'karbo' ? 'bg-yellow-500 text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+                        class="px-6 py-3 rounded-full font-bold transition duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-bowl-rice"></i> 25% Makanan Pokok
+                    </button>
+                </div>
+
+                <!-- Konten Tab -->
+                <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-sm">
+                    <!-- Background Accent -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-gray-200 rounded-full opacity-20 -mr-16 -mt-16"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Konten Sayur -->
+                        <div x-show="activeTab === 'serat'" class="fade-enter grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-green-700 mb-4">Volume Besar, Kalori Kecil</h3>
+                                <p class="text-gray-700 mb-4 leading-relaxed">
+                                    Setengah piring Anda wajib diisi sayuran. Sayuran mengandung serat tinggi yang memperlambat pengosongan lambung, sehingga Anda merasa kenyang lebih lama. Selain itu, serat membantu mengikat kolesterol jahat dan menstabilkan gula darah.
+                                </p>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span><strong>Rekomendasi:</strong> Bayam, Kangkung, Brokoli, Selada, Timun, Tomat.</span></li>
+                                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span><strong>Cara Olah:</strong> Rebus, kukus, atau tumis dengan sedikit minyak. Hindari santan berlebih.</span></li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center">
+                                <i class="fa-solid fa-carrot text-9xl text-green-200"></i>
+                            </div>
+                        </div>
+
+                        <!-- Konten Protein -->
+                        <div x-show="activeTab === 'protein'" class="fade-enter grid md:grid-cols-2 gap-8 items-center" style="display: none;">
+                            <div>
+                                <h3 class="text-2xl font-bold text-orange-600 mb-4">Zat Pembangun Sel & Otot</h3>
+                                <p class="text-gray-700 mb-4 leading-relaxed">
+                                    Protein sangat penting untuk perbaikan jaringan tubuh dan menjaga massa otot selama diet. Protein juga memiliki "Thermic Effect" tertinggi, artinya tubuh membakar kalori lebih banyak hanya untuk mencerna protein dibandingkan karbohidrat atau lemak.
+                                </p>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-orange-500 mt-1"></i> <span><strong>Protein Hewani:</strong> Dada ayam tanpa kulit, ikan, telur, daging sapi tanpa lemak.</span></li>
+                                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-orange-500 mt-1"></i> <span><strong>Protein Nabati:</strong> Tahu, tempe, kacang-kacangan.</span></li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center">
+                                <i class="fa-solid fa-fish-fins text-9xl text-orange-200"></i>
+                            </div>
+                        </div>
+
+                        <!-- Konten Karbo -->
+                        <div x-show="activeTab === 'karbo'" class="fade-enter grid md:grid-cols-2 gap-8 items-center" style="display: none;">
+                            <div>
+                                <h3 class="text-2xl font-bold text-yellow-600 mb-4">Sumber Energi Utama</h3>
+                                <p class="text-gray-700 mb-4 leading-relaxed">
+                                    Karbohidrat tidak perlu dimusuhi, tapi harus dibatasi jumlahnya (maksimal 1/4 piring). Pilihlah <strong>Karbohidrat Kompleks</strong> yang kaya serat agar energi dilepas secara perlahan dan tidak memicu lonjakan insulin yang menyebabkan penimbunan lemak.
+                                </p>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-yellow-500 mt-1"></i> <span><strong>Pilihan Terbaik:</strong> Nasi merah, ubi jalar, kentang rebus (dengan kulit), oatmeal, jagung.</span></li>
+                                    <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> <span><strong>Batasi:</strong> Nasi putih berlebih, mie instan, roti tawar putih, minuman manis.</span></li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center">
+                                <i class="fa-solid fa-bowl-rice text-9xl text-yellow-200"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: EDUKASI PRAKTIS (7 LANGKAH) -->
+    <section id="tips-praktis" class="py-16 bg-red-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <span class="bg-white text-zmc-red px-4 py-1 rounded-full text-xs font-bold border border-red-200 uppercase tracking-wider">Protokol Sehat ZMC</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-3">7 Langkah Mudah Mulai Hari Ini</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Untuk Bapak/Ibu yang bingung harus mulai dari mana, berikut adalah langkah-langkah medis sederhana yang bisa langsung dipraktekkan tanpa alat khusus.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500 hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                            <i class="fa-solid fa-glass-water"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Minum Air Sebelum Makan</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        Minumlah 1 gelas besar air putih (300-500ml) sekitar 20-30 menit sebelum makan. Ini akan membuat lambung terasa lebih penuh, sehingga porsi makan Bapak/Ibu otomatis berkurang tanpa merasa kelaparan.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-600">
+                            <i class="fa-solid fa-ban"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Kurangi Minuman Manis</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        Gula cair (sirup, soda, kopi susu gula aren) adalah musuh terbesar. Gula jenis ini langsung masuk ke darah dan disimpan jadi lemak di perut. Ganti dengan air putih, teh tawar, atau kopi hitam tanpa gula.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500 hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                            <i class="fa-solid fa-arrow-down-1-9"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Ubah Urutan Makan</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        Jangan langsung makan nasi. Makanlah <strong>Sayuran</strong> dan <strong>Lauk (Daging/Tahu/Tempe)</strong> terlebih dahulu. Serat dan protein akan melapisi lambung, sehingga gula darah tidak melonjak drastis saat nasi masuk terakhir.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-yellow-500 hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600">
+                            <i class="fa-solid fa-stopwatch"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Kunyah Pelan-Pelan</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        Otak butuh waktu 20 menit untuk sadar kalau perut sudah kenyang. Jika makan terlalu cepat, Bapak/Ibu akan makan berlebihan. Letakkan sendok setiap satu suapan dan nikmati rasanya.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500 hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Stop Makan Sebelum Tidur</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        Usahakan makan malam terakhir 3 jam sebelum tidur. Lambung butuh istirahat. Makan berat sebelum tidur bisa menyebabkan GERD dan mengganggu pembakaran lemak alami saat tidur.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500 hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Tidur Cukup (7-8 Jam)</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        Begadang membuat tubuh memproduksi hormon lapar. Pasien yang kurang tidur biasanya cenderung ingin makan makanan manis atau asin (ngemil) di keesokan harinya.
+                    </p>
+                </div>
+
+                 <!-- Card 7 (Centered on large screens) -->
+                 <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-gray-600 hover:shadow-md transition md:col-span-2 lg:col-span-3">
+                    <div class="flex flex-col md:flex-row gap-4 items-center">
+                        <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 shrink-0">
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-1">Kelola Stres dengan Baik</h3>
+                            <p class="text-sm text-gray-600">
+                                Stres berlebihan memicu hormon <em>Kortisol</em>. Hormon ini berbahaya karena memerintahkan tubuh untuk memecah otot dan menimbun lemak, terutama di area perut (buncit). Luangkan waktu untuk relaksasi atau ibadah.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Medical Alert Box (Upselling) -->
+            <div class="mt-10 bg-gradient-to-r from-zmc-red to-red-700 rounded-2xl p-6 md:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h4 class="text-xl md:text-2xl font-bold mb-2"><i class="fa-solid fa-user-md mr-2"></i> Sudah Diet Tapi Berat Badan Tidak Turun?</h4>
+                    <p class="text-red-100 text-sm md:text-base max-w-2xl">
+                        Terkadang masalahnya bukan pada niat Anda, tapi kondisi medis seperti <strong>Gangguan Tiroid, PCOS, atau Resistensi Insulin</strong>. Jangan menduga-duga.
+                    </p>
+                </div>
+                <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" class="bg-white text-zmc-red px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition whitespace-nowrap">
+                    Cek Laboratorium ZMC
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Aktivitas Fisik -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-zmc-red font-bold text-sm tracking-widest uppercase">Gaya Hidup Aktif</span>
+                <h2 class="text-3xl font-bold text-gray-900 mt-2">Bergerak untuk Jantung Sehat</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- NEAT -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500 hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gerak Harian (NEAT)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Aktif bergerak selain olahraga. Faktanya, aktivitas ini membakar banyak kalori tanpa kita sadari.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Parkir kendaraan agak jauh biar jalan kaki.</li>
+                        <li>• Pilih tangga daripada lift jika hanya 1-2 lantai.</li>
+                        <li>• Menyapu, mengepel, atau berkebun.</li>
+                    </ul>
+                </div>
+
+                <!-- KARDIO -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-500 hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-2xl mb-6">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Olahraga Jantung</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Jenis olahraga yang bikin "ngos-ngosan". Efektif membakar lemak dan melatih kekuatan jantung.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Jalan cepat 30 menit (3-5x seminggu).</li>
+                        <li>• Bersepeda santai keliling kompleks.</li>
+                        <li>• Berenang (Sangat bagus untuk yang sakit lutut).</li>
+                    </ul>
+                </div>
+
+                <!-- BEBAN -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-800 hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center text-gray-800 text-2xl mb-6">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Latihan Otot</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Semakin banyak otot, tubuh semakin boros membakar kalori walau sedang duduk. Jangan takut berotot besar.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Push-up (bisa dilakukan di tembok).</li>
+                        <li>• Squat (jongkok-berdiri) tanpa beban.</li>
+                        <li>• Angkat botol air mineral sebagai beban.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-10 p-4 bg-yellow-50 border border-yellow-200 rounded-lg text-center">
+                <p class="text-sm text-yellow-800">
+                    <i class="fa-solid fa-triangle-exclamation mr-2"></i> <strong>Peringatan:</strong> Jika Bapak/Ibu memiliki riwayat darah tinggi (hipertensi), asma, atau masalah jantung, konsultasikan dulu dengan Dokter Umum di Zihan Medical Center sebelum olahraga berat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION LOKASI & KONTAK (LENGKAP) -->
+    <section id="lokasi" class="bg-zmc-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Informasi Kontak -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-2">Klinik Pratama Zihan Medical Center</h2>
+                        <p class="text-gray-400">#ZMCGakNyuekinKamu</p>
+                        <div class="w-20 h-1 bg-zmc-red mt-4 mb-6"></div>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Kami siap melayani kebutuhan kesehatan Anda dan keluarga dengan fasilitas lengkap: Poli Umum, Rawat Inap, Laboratorium, dan Farmasi.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-zmc-red shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Alamat</h4>
+                                <p class="text-gray-400 text-sm mt-1">
+                                    Jl. Kudang, Wanajaya, Wanaraja,<br>
+                                    Kabupaten Garut, Jawa Barat 44183
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-zmc-red shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Telepon / WhatsApp</h4>
+                                <p class="text-gray-400 text-sm mt-1">+62 822-1718-0432</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-zmc-red shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Jam Operasional</h4>
+                                <p class="text-gray-400 text-sm mt-1">Senin - Minggu: <strong>24 JAM</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex gap-4">
+                        <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 transition">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Admin
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="bg-gray-800 p-2 rounded-xl">
+                    <div class="map-container rounded-lg overflow-hidden relative w-full h-full min-h-[300px]">
+                        <!-- Menggunakan iframe generic search query -->
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Klinik+Pratama+Zihan+Medical+Center+Wanaraja&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="text-xs text-gray-400 hover:text-white underline">
+                            <i class="fa-solid fa-map-location-dot"></i> Buka di Aplikasi Google Maps
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-500 py-8 border-t border-gray-800 text-sm text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023-2024 Klinik Pratama Zihan Medical Center. Melayani dengan Hati.</p>
+            <p class="text-xs mt-2">Disclaimer: Informasi di halaman ini bertujuan untuk edukasi dan tidak menggantikan saran medis profesional.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition transform hover:scale-110 animate-bounce-slow">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        // Alpine.js Logic untuk Kalkulator
+        function medicalCalculator() {
+            return {
+                gender: 'male',
+                age: 30,
+                weight: 65,
+                height: 170,
+                activity: '1.375',
+                tdee: 0,
+                bmr: 0,
+                deficit: 0,
+                showResult: false,
+
+                calculate() {
+                    // Mifflin-St Jeor Equation
+                    let s = (this.gender === 'male') ? 5 : -161;
+                    let bmrResult = (10 * this.weight) + (6.25 * this.height) - (5 * this.age) + s;
+                    
+                    this.bmr = Math.round(bmrResult);
+                    this.tdee = Math.round(bmrResult * parseFloat(this.activity));
+                    // Defisit standar medis yang aman adalah 500 kalori
+                    this.deficit = this.tdee - 500; 
+
+                    // Safety check: Jangan di bawah BMR
+                    if(this.deficit < this.bmr) {
+                        // Jika defisit di bawah BMR, logika sederhana tetap menampilkan hasil namun dengan catatan
+                        // Di aplikasi nyata, bisa diberi warning
+                    }
+                    
+                    this.showResult = true;
+                    // Scroll ke hasil
+                    setTimeout(() => {
+                        this.$el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

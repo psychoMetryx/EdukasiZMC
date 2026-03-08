@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Lengkap Vertigo - Zihan Medical Center</title>
+    <meta name="description" content="Pusat Edukasi Pasien Zihan Medical Center: Panduan lengkap pencegahan, diet, dan terapi mandiri vertigo.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; 
+            color: #334155;
+            line-height: 1.7; /* Meningkatkan kenyamanan baca teks panjang */
+        }
+        
+        /* Warna Branding ZMC */
+        .bg-zmc-red { background-color: #dc2626; }
+        .text-zmc-red { color: #dc2626; }
+        .bg-zmc-black { background-color: #111827; }
+        
+        /* Scroll Padding & Smoothness */
+        html { scroll-padding-top: 100px; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
+
+        /* Card Hover Effect */
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="antialiased selection:bg-red-100 selection:text-red-900">
+
+    <!-- NAVIGATION BAR (Sticky) -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Nama Klinik -->
+                <div class="flex items-center gap-3">
+                    <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-12 w-12 rounded-full border border-gray-200 shadow-sm object-cover">
+                    <div class="hidden sm:block">
+                        <h1 class="font-extrabold text-gray-900 text-lg leading-none">ZIHAN MEDICAL CENTER</h1>
+                        <p class="text-xs text-red-600 font-bold tracking-widest mt-1">LAYANAN KESEHATAN 24 JAM</p>
+                    </div>
+                </div>
+                <!-- Menu Kanan -->
+                <div class="flex items-center space-x-3">
+                    <a href="#pencegahan" class="hidden md:block text-sm font-medium text-gray-600 hover:text-red-600 transition">Pencegahan</a>
+                    <a href="#darurat" class="flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full font-bold text-sm hover:bg-red-600 hover:text-white transition-all shadow-sm border border-red-100 hover:border-red-600">
+                        <span>⚠️</span> <span class="hidden md:inline">Tanda Bahaya</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-white pt-16 pb-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/medical-icons.png')] opacity-5"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block py-1 px-4 rounded-full bg-red-100 text-red-800 text-xs font-bold tracking-widest mb-6 uppercase border border-red-200">Edukasi Pasien</span>
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                Memahami & Mengatasi <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800">VERTIGO</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Panduan komprehensif dari Tim Medis Zihan Medical Center: Mulai dari memahami penyebab, pengaturan pola makan, hingga teknik terapi mandiri di rumah.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-24">
+
+        <!-- 1. DEFINISI & PEMAHAMAN (DEEP DIVE) -->
+        <section id="definisi" class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-8 border-red-600 pl-4">Mengapa Dunia Berputar?</h2>
+            
+            <div class="space-y-6 text-gray-700 text-lg">
+                <p>
+                    Banyak pasien datang ke Zihan Medical Center mengeluh "pusing". Namun, penting untuk memahami bahwa <strong>Vertigo bukan sekadar sakit kepala biasa</strong>.
+                </p>
+                <p>
+                    Bayangkan di dalam telinga Anda ada sebuah saluran berisi cairan dan butiran kristal halus (seperti pasir) yang berfungsi sebagai sensor keseimbangan. Pada kasus vertigo yang paling umum (BPPV), butiran kristal ini <strong>"lepas"</strong> dan menggelinding liar ke tempat yang tidak seharusnya.
+                </p>
+                <p>
+                    Akibatnya? Mata dan Otak Anda menerima sinyal "palsu" bahwa tubuh sedang bergerak atau berputar, padahal Anda sedang diam. Inilah yang memicu rasa mual hebat dan sensasi berputar.
+                </p>
+            </div>
+
+            <!-- Box Perbedaan -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-3xl">🌀</span>
+                        <h3 class="font-bold text-red-900 text-xl">VERTIGO</h3>
+                    </div>
+                    <ul class="list-disc ml-5 space-y-2 text-red-800 text-sm md:text-base">
+                        <li>Sensasi <strong>objek sekeliling berputar</strong> (seperti naik komedi putar).</li>
+                        <li>Sering dipicu perubahan posisi kepala (misal: bangun tidur).</li>
+                        <li>Disertai mual muntah hebat dan keringat dingin.</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-3xl">💫</span>
+                        <h3 class="font-bold text-yellow-900 text-xl">KLIYENGAN (Dizziness)</h3>
+                    </div>
+                    <ul class="list-disc ml-5 space-y-2 text-yellow-800 text-sm md:text-base">
+                        <li>Sensasi <strong>melayang</strong>, mau pingsan, atau gelap saat berdiri.</li>
+                        <li>Biasanya karena kurang darah (anemia), tekanan darah rendah, atau telat makan (hipoglikemia).</li>
+                        <li>Membaik setelah makan atau istirahat.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. RED FLAGS (Emergency) -->
+        <section id="darurat">
+            <div class="bg-gradient-to-br from-red-50 to-white rounded-3xl p-8 md:p-10 border border-red-200 shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <svg class="w-32 h-32 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="bg-red-600 text-white p-3 rounded-lg shadow-md">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </span>
+                        <h2 class="text-2xl font-bold text-red-800">Tanda Bahaya (Segera ke IGD)</h2>
+                    </div>
+                    
+                    <p class="text-gray-800 font-medium mb-6 text-lg">
+                        Vertigo umumnya tidak mematikan. Namun, waspada jika vertigo muncul <strong>MENDADAK</strong> disertai salah satu tanda berikut (indikasi STROKE):
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
+                            <strong class="block text-red-700 mb-1">WAJAH</strong>
+                            <p class="text-sm text-gray-600">Wajah perot, miring sebelah, atau senyum tidak simetris.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
+                            <strong class="block text-red-700 mb-1">GERAK</strong>
+                            <p class="text-sm text-gray-600">Lengan atau kaki terasa lemah/baal pada satu sisi tubuh.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
+                            <strong class="block text-red-700 mb-1">BICARA</strong>
+                            <p class="text-sm text-gray-600">Bicara pelo, tidak jelas, atau sulit mengerti ucapan orang.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-red-500 shadow-sm">
+                            <strong class="block text-red-700 mb-1">MATA</strong>
+                            <p class="text-sm text-gray-600">Pandangan ganda (berbayang) atau buta mendadak.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-red-700 text-sm italic font-semibold">
+                        *Jangan menunggu gejala hilang. Segera bawa ke IGD Zihan Medical Center untuk penanganan "Golden Period".
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PENCEGAHAN & GAYA HIDUP (DETAIL & LENGKAP) -->
+        <section id="pencegahan">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-red-600 font-bold tracking-widest text-sm uppercase bg-red-50 px-4 py-1 rounded-full">Kunci Kesembuhan Jangka Panjang</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-4">Modifikasi Gaya Hidup</h2>
+                <p class="text-gray-600 mt-4 text-lg">Obat dokter hanya meredakan gejala sesaat. Untuk mencegah vertigo datang kembali, 3 pilar gaya hidup ini wajib Anda terapkan.</p>
+            </div>
+
+            <!-- PILAR 1: NUTRISI -->
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-green-100 p-3 rounded-full text-3xl">🥗</div>
+                    <h3 class="text-2xl font-bold text-gray-900">1. Diet & Nutrisi (Pantangan)</h3>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-green-800 text-lg mb-3">Kurangi Garam (Natrium)</h4>
+                        <p class="text-gray-600 mb-4">Garam bersifat menahan air di dalam tubuh. Kelebihan garam menyebabkan penumpukan cairan di telinga dalam (Hidrops Endolimfatik), yang meningkatkan tekanan dan memicu pusing berputar.</p>
+                        <ul class="list-disc ml-5 space-y-2 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg">
+                            <li><strong>Hindari:</strong> Ikan asin, telur asin, keripik bumbu, mie instan (bumbunya), kecap asin, dan makanan kaleng (kornet/sarden).</li>
+                            <li><strong>Saran:</strong> Gunakan bumbu alami seperti bawang, kunyit, atau jahe sebagai pengganti rasa asin.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-green-800 text-lg mb-3">Pemicu Lainnya</h4>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3">
+                                <span class="text-xl">🥡</span>
+                                <div>
+                                    <strong class="text-gray-800">MSG (Penyedap Rasa)</strong>
+                                    <p class="text-sm text-gray-500">Pada orang sensitif, MSG memicu migrain vestibular (sakit kepala sebelah disertai vertigo).</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-xl">☕</span>
+                                <div>
+                                    <strong class="text-gray-800">Kafein & Rokok</strong>
+                                    <p class="text-sm text-gray-500">Kopi dan Nikotin menyempitkan pembuluh darah, menghambat suplai oksigen ke pusat keseimbangan di telinga dan otak.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PILAR 2: LINGKUNGAN -->
+            <div class="mb-16">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-blue-100 p-3 rounded-full text-3xl">🏠</div>
+                    <h3 class="text-2xl font-bold text-gray-900">2. Keamanan di Rumah</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-blue-100 card-hover">
+                        <strong class="text-blue-900 text-lg block mb-2">Pencahayaan Tidur</strong>
+                        <p class="text-gray-600 text-sm">Jangan tidur dalam kondisi <strong>gelap total</strong>. Gunakan lampu tidur redup. Jika Anda terbangun pusing di kegelapan, mata kehilangan titik fokus orientasi, yang akan memperparah sensasi berputar.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-blue-100 card-hover">
+                        <strong class="text-blue-900 text-lg block mb-2">Kamar Mandi</strong>
+                        <p class="text-gray-600 text-sm">Ini area paling berbahaya. Gunakan alas kaki anti-slip. Jika sedang sering kumat, sediakan <strong>kursi plastik (kursi bakso)</strong> untuk mandi sambil duduk. Jangan memaksakan berdiri sambil menutup mata (saat keramas).</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-blue-100 card-hover">
+                        <strong class="text-blue-900 text-lg block mb-2">Lantai & Hambatan</strong>
+                        <p class="text-gray-600 text-sm">Singkirkan karpet kecil (keset) yang licin atau kabel yang melintang di lantai. Penderita vertigo seringkali kehilangan keseimbangan mendadak, lingkungan yang bersih mengurangi risiko cedera kepala akibat jatuh.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PILAR 3: KEBIASAAN -->
+            <div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-orange-100 p-3 rounded-full text-3xl">🛌</div>
+                    <h3 class="text-2xl font-bold text-gray-900">3. Posisi & Kebiasaan Fisik</h3>
+                </div>
+                <div class="bg-orange-50 rounded-2xl p-8 border border-orange-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">Posisi Tidur 45 Derajat</h4>
+                            <p class="text-gray-700 mb-4">
+                                Tidurlah dengan posisi kepala dan bahu lebih tinggi dari dada. Gunakan tumpukan <strong>2-3 bantal</strong>. Posisi ini mencegah kristal telinga "tumpah" atau berpindah tempat saat Anda tidak sadar.
+                            </p>
+                            <p class="text-gray-700">
+                                Hindari tidur miring ke sisi telinga yang bermasalah (sisi yang memicu pusing).
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">Gerakan Kepala</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 font-bold">❌</span>
+                                    <p class="text-sm text-gray-700">Jangan mendongak tiba-tiba (misal: menjemur pakaian, mengambil barang di rak atas, atau melihat plafon).</p>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-500 font-bold">❌</span>
+                                    <p class="text-sm text-gray-700">Jangan menunduk terlalu lama (main HP). Saat ingin melihat ke samping, putar seluruh badan, jangan hanya leher.</p>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-600 font-bold">✅</span>
+                                    <p class="text-sm text-gray-700">Bangun tidur bertahap: Miring dulu -> Turunkan kaki -> Duduk diam 1 menit -> Baru berdiri.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. VIDEO TERAPI BRANDT-DAROFF -->
+        <section id="latihan" class="pt-10 border-t border-gray-200">
+            <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl">
+                <div class="p-8 md:p-12 text-center">
+                    <span class="bg-red-600 text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider mb-4 inline-block">Terapi Mandiri</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Latihan Brandt-Daroff</h2>
+                    <p class="text-gray-400 max-w-3xl mx-auto mb-8 text-base leading-relaxed">
+                        Latihan ini bertujuan untuk "membiasakan" otak terhadap sinyal pusing (habituasi) dan membantu mengembalikan kristal telinga ke posisinya. Lakukan rutin <strong>3 kali sehari (Pagi, Siang, Sore) selama 2 minggu berturut-turut</strong>.
+                    </p>
+
+                    <!-- THUMBNAIL VIDEO AREA (CLICKABLE) -->
+                    <div class="max-w-3xl mx-auto group cursor-pointer transform hover:scale-[1.01] transition duration-300">
+                        <a href="https://www.youtube.com/watch?v=3FRv_WQh6iM" target="_blank" class="block relative rounded-xl overflow-hidden border-2 border-gray-700 shadow-2xl">
+                            <!-- Thumbnail -->
+                            <img src="https://img.youtube.com/vi/3FRv_WQh6iM/maxresdefault.jpg" alt="Thumbnail Brandt Daroff" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition">
+                            <!-- Play Overlay -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition">
+                                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 ring-4 ring-white/20">
+                                    <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </div>
+                            <!-- Text Hint -->
+                            <div class="absolute bottom-4 left-0 right-0 text-center">
+                                <span class="bg-black/80 text-white text-xs px-4 py-2 rounded-full backdrop-blur-sm border border-white/20 font-semibold tracking-wide">
+                                    ▶ Klik Gambar untuk Menonton Video Panduan di YouTube
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="text-gray-500 text-xs mt-4">Video &copy; RS Dr. OEN SOLO BARU. Digunakan untuk tujuan edukasi.</p>
+                </div>
+
+                <!-- Text Guide -->
+                <div class="bg-gray-800 p-8 md:p-12 border-t border-gray-700">
+                    <h3 class="text-white font-bold text-xl mb-8 text-center">Panduan Langkah (Jika Tidak Bisa Menonton Video)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="bg-gray-700/40 p-5 rounded-xl border border-gray-600 hover:bg-gray-700 transition">
+                            <span class="text-red-400 font-bold text-4xl mb-2 block">01</span>
+                            <strong class="text-white text-lg block mb-2">Duduk Tegak</strong>
+                            <p class="text-gray-400 text-sm">Duduk di tepi kasur dengan kaki menggantung. Pastikan mata terbuka dan pandangan lurus ke depan. Diam sejenak.</p>
+                        </div>
+                        <div class="bg-gray-700/40 p-5 rounded-xl border border-gray-600 hover:bg-gray-700 transition">
+                            <span class="text-red-400 font-bold text-4xl mb-2 block">02</span>
+                            <strong class="text-white text-lg block mb-2">Jatuh ke Kiri</strong>
+                            <p class="text-gray-400 text-sm">Jatuhkan badan ke sisi kiri dengan cepat. Kepala mendongak serong ke atas (45 derajat). Tahan posisi ini selama <strong>30 detik</strong>.</p>
+                        </div>
+                        <div class="bg-gray-700/40 p-5 rounded-xl border border-gray-600 hover:bg-gray-700 transition">
+                            <span class="text-red-400 font-bold text-4xl mb-2 block">03</span>
+                            <strong class="text-white text-lg block mb-2">Duduk Kembali</strong>
+                            <p class="text-gray-400 text-sm">Kembali ke posisi duduk tegak awal. Tunggu sampai rasa pusing hilang total (biasanya 30 detik).</p>
+                        </div>
+                        <div class="bg-gray-700/40 p-5 rounded-xl border border-gray-600 hover:bg-gray-700 transition">
+                            <span class="text-red-400 font-bold text-4xl mb-2 block">04</span>
+                            <strong class="text-white text-lg block mb-2">Jatuh ke Kanan</strong>
+                            <p class="text-gray-400 text-sm">Ulangi gerakan jatuh ke sisi kanan dengan kepala mendongak. Tahan 30 detik, lalu duduk kembali.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-yellow-900/30 border border-yellow-700/50 p-4 rounded-lg text-center">
+                        <p class="text-yellow-200 text-sm">
+                            <strong>⚠️ PENTING:</strong> Saat pertama kali mencoba, pastikan ada orang lain yang mendampingi karena latihan ini bisa memicu pusing hebat sesaat. Hentikan jika muntah atau nyeri leher.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER ZIHAN MEDICAL CENTER -->
+    <footer class="bg-zmc-black text-white pt-20 pb-24 md:pb-10 mt-20 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-8">
+                
+                <!-- BRANDING -->
+                <div class="lg:col-span-4">
+                    <h2 class="text-2xl font-bold tracking-tight mb-2">Zihan Medical Center</h2>
+                    <p class="text-yellow-400 font-bold text-lg mb-4 italic">#ZMCGakNyuekinKamu</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 pr-4">
+                        Mitra kesehatan keluarga terpercaya di Garut. Kami menghadirkan pelayanan medis yang ramah, fasilitas lengkap, dan edukasi kesehatan berkelanjutan untuk Anda.
+                    </p>
+                    <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition shadow-lg">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <span>Instagram ZMC</span>
+                    </a>
+                </div>
+
+                <!-- INFO & HOURS -->
+                <div class="lg:col-span-3">
+                    <h3 class="text-white font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Layanan & Jam</h3>
+                    <ul class="text-gray-400 text-sm space-y-3 mb-6">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> Poli Umum</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> Rawat Inap</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> Laboratorium</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> Farmasi</li>
+                    </ul>
+                    <div class="bg-gray-800 p-3 rounded border border-gray-700 inline-block">
+                        <p class="text-xs text-gray-500 uppercase font-bold mb-1">Jam Operasional</p>
+                        <p class="text-white font-bold">24 JAM / 7 HARI</p>
+                    </div>
+                </div>
+
+                <!-- MAPS & CONTACT -->
+                <div class="lg:col-span-5">
+                    <h3 class="text-white font-bold mb-4 uppercase text-xs tracking-widest text-red-500">Lokasi Klinik</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183
+                    </p>
+                    
+                    <!-- PETA LOKASI FIX: MENGGUNAKAN QUERY SPECIFIC "Zihan Medical Center Wanaraja" AGAR PINPOINT -->
+                    <div class="w-full h-48 rounded-xl overflow-hidden shadow-lg border border-gray-700 bg-gray-800">
+                         <iframe width="100%" height="100%" frameborder="0" style="border:0" 
+                         src="https://maps.google.com/maps?q=Zihan+Medical+Center+Wanaraja&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                         allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="block mt-3 text-right text-xs text-red-400 hover:text-red-300 transition underline">Buka Rute di Google Maps App &rarr;</a>
+                </div>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="border-t border-gray-800 pt-8 mt-12 text-center md:text-left flex flex-col md:flex-row justify-between text-xs text-gray-500">
+                <p>&copy; 2024 Zihan Medical Center. Hak cipta dilindungi.</p>
+                <p class="mt-2 md:mt-0">Dibuat untuk Edukasi Pasien.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON (Fixed Bottom Right) -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" class="fixed bottom-6 right-6 z-50 group">
+        <div class="relative">
+            <!-- Tooltip -->
+            <div class="absolute bottom-2 right-16 bg-white text-gray-800 text-xs font-bold py-2 px-4 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0 pointer-events-none whitespace-nowrap">
+                Chat Admin ZMC 👋
+            </div>
+            <!-- Button -->
+            <div class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all transform hover:scale-110 hover:rotate-6 flex items-center justify-center ring-4 ring-green-100 ring-opacity-50">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+            </div>
+        </div>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Bebas Nyeri - Zihan Medical Center</title>
+    <!-- Import Font Modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Identitas Warna ZMC */
+            --zmc-red: #D60000;      /* Merah menyala sesuai logo */
+            --zmc-black: #1a1a1a;    /* Hitam elegan */
+            --zmc-gray: #f4f4f4;     /* Background abu muda */
+            --text-dark: #333333;
+            --white: #ffffff;
+            --alert-bg: #fff5f5;
+            --alert-text: #c53030;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--zmc-gray);
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        /* --- HEADER & LOGO --- */
+        header {
+            background-color: var(--white);
+            text-align: center;
+            padding: 15px 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--zmc-red);
+        }
+
+        .logo-container img {
+            max-height: 80px; /* Ukuran logo optimal */
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- STICKY NAVIGATION --- */
+        nav {
+            background-color: var(--zmc-black);
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.3s;
+            border: 1px solid transparent;
+        }
+
+        nav a:hover {
+            background-color: var(--zmc-red);
+            border-color: var(--white);
+        }
+
+        /* --- CONTAINER UTAMA --- */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* --- CARDS & TYPOGRAPHY --- */
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--zmc-red);
+        }
+
+        h1 {
+            color: var(--zmc-black);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--zmc-red);
+            font-size: 1.4rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--zmc-black);
+            margin-top: 20px;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+
+        /* --- ALERT SECTION --- */
+        .alert-box {
+            background-color: var(--alert-bg);
+            border: 1px solid #feb2b2;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .alert-box h3 {
+            color: var(--alert-text);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alert-box ul li {
+            color: #742a2a;
+            margin-bottom: 5px;
+        }
+
+        /* --- ACCORDION --- */
+        .accordion {
+            background-color: var(--white);
+            color: var(--zmc-black);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: 0.4s;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion:hover {
+            background-color: #fafafa;
+            color: var(--zmc-red);
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: var(--zmc-red);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* --- EXERCISES --- */
+        .exercise-item {
+            background: #fff9f9;
+            border-left: 3px solid var(--zmc-black);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        /* --- DIARY SECTION --- */
+        .diary-input {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .diary-input {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        button.btn-save {
+            background-color: var(--zmc-black);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button.btn-save:hover {
+            background-color: var(--zmc-red);
+        }
+        
+        button.btn-clear {
+            background-color: transparent;
+            color: #666;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--zmc-red);
+            color: white;
+        }
+        
+        tr:nth-child(even) {background-color: #f2f2f2;}
+
+        /* --- ZMC FOOTER --- */
+        .zmc-footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 40px 20px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            border-left: 3px solid var(--zmc-red);
+            padding-left: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-section p {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            color: var(--zmc-red) !important;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.1rem !important;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366; /* WA Green */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .contact-btn.ig {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+
+        .contact-btn.maps {
+            background: #4285F4;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header Logo -->
+<header>
+    <div class="logo-container">
+        <!-- Logo diambil dari attachment -->
+        <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo Zihan Medical Center">
+    </div>
+</header>
+
+<!-- Sticky Navigation -->
+<nav>
+    <a href="#bahaya">⚠️ Tanda Bahaya</a>
+    <a href="#tips">🛠️ Perawatan</a>
+    <a href="#latihan">💪 Latihan</a>
+    <a href="#jurnal">📝 Buku Nyeri</a>
+    <a href="#kontak">🏥 Kontak Klinik</a>
+</nav>
+
+<div class="container">
+
+    <!-- Section Intro -->
+    <div class="card">
+        <h1>Panduan Manajemen Nyeri Dewasa</h1>
+        <p><strong>Tujuan:</strong> Mengembalikan produktivitas, mengurangi nyeri akibat kerja/aktivitas, dan mencegah cedera berulang.</p>
+        <p>Nyeri pada usia dewasa sering disebabkan oleh <strong>postur kerja yang salah (ergonomi), stres otot, kurang gerak, atau cedera olahraga</strong>. Panduan dari Klinik Pratama ZMC ini akan membantu Anda pulih dengan metode yang aman.</p>
+    </div>
+
+    <!-- Section Tanda Bahaya -->
+    <section id="bahaya" class="alert-box">
+        <h3>⚠️ WASPADA (Red Flags)</h3>
+        <p>Segera kunjungi IGD atau Dokter Umum Zihan Medical Center jika mengalami:</p>
+        <ul>
+            <li>Nyeri dada menjalar ke lengan/rahang (curiga jantung).</li>
+            <li>Nyeri punggung hebat setelah jatuh/kecelakaan.</li>
+            <li>Kesemutan/mati rasa pada kedua kaki sekaligus.</li>
+            <li>Gangguan Buang Air Kecil/Besar secara mendadak.</li>
+            <li>Demam tinggi disertai nyeri sendi/otot.</li>
+            <li>Nyeri yang membangunkan Anda dari tidur malam hari.</li>
+        </ul>
+    </section>
+
+    <!-- Section Perawatan -->
+    <section id="tips">
+        <h2>Tips Perawatan & Ergonomi</h2>
+        <p>Manajemen nyeri modern tidak menyarankan "diam total". Ikuti panduan ini:</p>
+
+        <button class="accordion">💼 Ergonomi Kerja & Postur</button>
+        <div class="panel">
+            <ul>
+                <li><strong>Layar Monitor:</strong> Sejajar dengan mata. Jangan menunduk terlalu lama (mencegah <em>Text Neck</em>).</li>
+                <li><strong>Posisi Duduk:</strong> Kaki menapak lantai, punggung disangga sandaran kursi. Hindari duduk > 1 jam tanpa jeda.</li>
+                <li><strong>Mengangkat Beban:</strong> Jangan membungkuk! Jongkoklah, dekatkan beban ke dada, lalu berdiri dengan kekuatan kaki, bukan punggung.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">🧊 Kompres & Penanganan Awal</button>
+        <div class="panel">
+            <ul>
+                <li><strong>Metode R.I.C.E (Untuk cedera baru < 48 jam):</strong>
+                    <ul>
+                        <li><strong>Rest:</strong> Istirahatkan bagian yang sakit.</li>
+                        <li><strong>Ice:</strong> Kompres dingin 15-20 menit untuk kurangi bengkak.</li>
+                        <li><strong>Compression:</strong> Balut tekan jika bengkak.</li>
+                        <li><strong>Elevation:</strong> Angkat area sakit lebih tinggi dari jantung.</li>
+                    </ul>
+                </li>
+                <li><strong>Kompres Hangat:</strong> Untuk pegal linu, otot kaku, atau nyeri kronis (lama) guna melancarkan darah.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">💊 Penggunaan Obat Bijak</button>
+        <div class="panel">
+            <p>Obat hanya bersifat meredakan gejala, bukan menyembuhkan penyebab utama.</p>
+            <ul>
+                <li><strong>Parasetamol:</strong> Aman untuk nyeri ringan-sedang. Maksimal 3-4x sehari.</li>
+                <li><strong>NSAID (Asam Mefenamat/Natrium Diklofenak):</strong> Hati-hati bagi yang punya sakit maag/lambung. Harus diminum <strong>setelah makan</strong>.</li>
+                <li><strong>Krim/Gel Pereda Nyeri:</strong> Pilihan baik untuk menghindari efek samping lambung.</li>
+                <li><em>Konsultasikan ke Farmasi ZMC jika Anda memiliki alergi obat.</em></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Latihan -->
+    <section id="latihan">
+        <h2>Latihan & Stretching (10-15 Menit)</h2>
+        <p>Lakukan di sela-sela jam kerja atau saat bangun tidur untuk mengurangi kekakuan.</p>
+
+        <button class="accordion">👔 Peregangan Leher & Bahu (Office Worker)</button>
+        <div class="panel">
+            <div class="exercise-item">
+                <strong>Neck Tilt:</strong> Miringkan kepala ke arah bahu kanan perlahan, tahan 10 detik. Ganti kiri. Jangan diputar paksa.
+            </div>
+            <div class="exercise-item">
+                <strong>Shoulder Roll:</strong> Putar bahu ke belakang 10 kali, lalu ke depan 10 kali untuk melemaskan otot trapezius.
+            </div>
+            <div class="exercise-item">
+                <strong>Chest Opener:</strong> Tautkan jari di belakang punggung, busungkan dada, tarik tangan ke bawah. Tahan 15 detik (melawan posisi membungkuk).
+            </div>
+        </div>
+
+        <button class="accordion">🦵 Punggung Bawah & Kaki</button>
+        <div class="panel">
+            <div class="exercise-item">
+                <strong>Cat-Cow Stretch:</strong> Posisi merangkak. Lengkungkan punggung ke atas (seperti kucing marah), lalu ke bawah. Ulangi 10x.
+            </div>
+            <div class="exercise-item">
+                <strong>Pelvic Tilt:</strong> Tidur telentang, lutut ditekuk. Tekan punggung bawah rata ke lantai/kasur. Tahan 5 detik.
+            </div>
+            <div class="exercise-item">
+                <strong>Hamstring Stretch:</strong> Duduk lurus, coba raih ujung kaki perlahan tanpa menekuk lutut berlebihan. Rasakan tarikan di paha belakang.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Jurnal -->
+    <section id="jurnal" class="card" style="border-left-color: var(--zmc-black);">
+        <h2>📝 Jurnal Nyeri Digital</h2>
+        <p>Catat perkembangan nyeri Anda. Data tersimpan di HP Anda secara otomatis.</p>
+        
+        <div class="diary-input">
+            <div>
+                <label>Tanggal & Waktu:</label>
+                <input type="datetime-local" id="dateInput">
+            </div>
+            <div>
+                <label>Skala Nyeri (0-10):</label>
+                <select id="painScale">
+                    <option value="0">0 - Bebas Nyeri</option>
+                    <option value="2">2 - Nyeri Ringan</option>
+                    <option value="4">4 - Nyeri Sedang</option>
+                    <option value="6">6 - Mengganggu Aktivitas</option>
+                    <option value="8">8 - Sangat Sakit</option>
+                    <option value="10">10 - Tak Tertahankan</option>
+                </select>
+            </div>
+            <div>
+                <label>Lokasi Nyeri:</label>
+                <input type="text" id="locationInput" placeholder="Cth: Pinggang Kiri">
+            </div>
+            <div>
+                <label>Pemicu/Obat:</label>
+                <input type="text" id="activityInput" placeholder="Cth: Duduk lama / Minum obat">
+            </div>
+        </div>
+        <button class="btn-save" onclick="addEntry()">SIMPAN CATATAN</button>
+
+        <table id="diaryTable">
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Skala</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody id="diaryBody">
+                <!-- Data akan muncul di sini -->
+            </tbody>
+        </table>
+        
+        <button class="btn-clear" onclick="clearData()">Hapus Semua Riwayat</button>
+    </section>
+
+</div>
+
+<!-- ZMC FOOTER -->
+<footer id="kontak" class="zmc-footer">
+    <div class="footer-content">
+        <!-- Kolom 1: Info Klinik -->
+        <div class="footer-section">
+            <h3>Klinik Pratama<br>Zihan Medical Center</h3>
+            <p class="tagline">#ZMCGakNyuekinKamu</p>
+            <p>Melayani dengan hati, fasilitas lengkap untuk kesehatan keluarga Anda.</p>
+            <br>
+            <h4>Layanan Kami</h4>
+            <p>✅ Poli Umum</p>
+            <p>✅ Rawat Inap</p>
+            <p>✅ Laboratorium</p>
+            <p>✅ Farmasi</p>
+        </div>
+
+        <!-- Kolom 2: Kontak & Maps -->
+        <div class="footer-section">
+            <h4>Hubungi Kami</h4>
+            <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" class="contact-btn" target="_blank">
+                💬 Chat WhatsApp
+            </a>
+            <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" class="contact-btn ig" target="_blank">
+                📸 Instagram @zihanmedicalcenter
+            </a>
+            
+            <br>
+            <h4>Lokasi & Jam Buka</h4>
+            <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" class="contact-btn maps" target="_blank">
+                📍 Buka Google Maps
+            </a>
+            <p><strong>Alamat:</strong><br>Jl. Kudang, Wanajaya, Wanaraja,<br>Kabupaten Garut, Jawa Barat 44183</p>
+            <p><strong>Jam Operasional:</strong><br>Senin - Minggu: <span style="color: var(--zmc-red); font-weight:bold;">BUKA 24 JAM</span></p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2025 Klinik Pratama Zihan Medical Center. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // --- ACCORDION LOGIC ---
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+    }
+
+    // --- DIARY LOGIC WITH LOCAL STORAGE ---
+    const tableBody = document.getElementById("diaryBody");
+
+    // Load data saat halaman dibuka
+    document.addEventListener("DOMContentLoaded", loadData);
+
+    function addEntry() {
+        var date = document.getElementById("dateInput").value;
+        var pain = document.getElementById("painScale").value;
+        var loc = document.getElementById("locationInput").value;
+        var act = document.getElementById("activityInput").value;
+
+        if(!date) {
+            alert("Mohon isi tanggal dan waktu terlebih dahulu.");
+            return;
+        }
+
+        const entry = {
+            id: Date.now(),
+            date: formatDateTime(date),
+            pain: pain,
+            loc: loc,
+            act: act
+        };
+
+        // Simpan ke Local Storage
+        saveToLocalStorage(entry);
+
+        // Tampilkan di tabel
+        renderRow(entry);
+
+        // Reset form
+        document.getElementById("locationInput").value = "";
+        document.getElementById("activityInput").value = "";
+    }
+
+    function renderRow(entry) {
+        var newRow = tableBody.insertRow(0); // Insert at top
+        
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+
+        cell1.innerHTML = `<small>${entry.date}</small>`;
+        cell2.innerHTML = `<span style='font-weight:bold; color:${getPainColor(entry.pain)}'>${entry.pain}</span>`;
+        cell3.innerHTML = `<strong>${entry.loc}</strong><br><small>${entry.act}</small>`;
+    }
+
+    function getPainColor(val) {
+        if(val <= 3) return "green";
+        if(val <= 6) return "#d69e00"; // Dark yellow/orange
+        return "red";
+    }
+
+    function formatDateTime(dateString) {
+        const options = { day: 'numeric', month: 'short', hour: '2-digit', minute:'2-digit' };
+        return new Date(dateString).toLocaleDateString('id-ID', options);
+    }
+
+    // --- LOCAL STORAGE FUNCTIONS ---
+    function saveToLocalStorage(entry) {
+        let entries = JSON.parse(localStorage.getItem('zmcPainDiary')) || [];
+        entries.push(entry);
+        localStorage.setItem('zmcPainDiary', JSON.stringify(entries));
+    }
+
+    function loadData() {
+        let entries = JSON.parse(localStorage.getItem('zmcPainDiary')) || [];
+        // Sort by ID descending (newest first)
+        entries.sort((a, b) => b.id - a.id);
+        entries.forEach(entry => renderRow(entry));
+    }
+
+    function clearData() {
+        if(confirm("Apakah Anda yakin ingin menghapus semua riwayat catatan?")) {
+            localStorage.removeItem('zmcPainDiary');
+            tableBody.innerHTML = "";
+        }
+    }
+    
+    // Set default date to now
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.getElementById('dateInput').value = now.toISOString().slice(0,16);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakit Kepala & Pusing - Edukasi Zihan Medical Center</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zmc: {
+                            red: '#DC2626',      /* Merah ZMC */
+                            dark: '#1F2937',     /* Hitam/Abu Gelap */
+                            light: '#F9FAFB',    /* Background Terang */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; color: #1f2937; }
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="antialiased flex h-screen overflow-hidden bg-gray-50">
+
+    <!-- MOBILE HEADER (Z-INDEX 30 - Agar di bawah menu saat menu buka) -->
+    <div class="fixed top-0 left-0 right-0 h-16 bg-white shadow-md z-30 flex items-center justify-between px-4 md:hidden">
+        <div class="flex items-center gap-2">
+            <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-10 w-10 rounded-full border border-gray-100">
+            <div class="leading-tight">
+                <span class="block font-heading font-bold text-gray-800 text-sm">Zihan Medical Center</span>
+                <span class="text-[10px] text-red-600 font-semibold">Wanaraja - Garut</span>
+            </div>
+        </div>
+        <!-- Tombol Buka Menu -->
+        <button onclick="openMenu()" class="text-gray-600 hover:text-zmc-red focus:outline-none p-2">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+
+    <!-- SIDEBAR NAV (Z-INDEX 50 - Paling Atas) -->
+    <!-- Menggunakan translate-x untuk animasi slide -->
+    <aside id="mobile-menu" class="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-200 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:flex flex-col shadow-2xl md:shadow-none">
+        
+        <!-- Header Sidebar + Tombol Close -->
+        <div class="p-6 border-b border-gray-100 bg-white md:bg-gray-50 relative">
+            <!-- Tombol Close (Hanya muncul di Mobile) -->
+            <button onclick="closeMenu()" class="absolute top-4 right-4 md:hidden text-gray-400 hover:text-red-500 p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <div class="flex flex-col items-center text-center mt-2">
+                <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-20 w-20 rounded-full shadow-sm mb-3">
+                <h1 class="font-heading font-bold text-lg text-gray-900 leading-tight">Klinik Pratama<br><span class="text-zmc-red">Zihan Medical Center</span></h1>
+                <div class="mt-3 flex items-center gap-2 bg-green-100 px-3 py-1 rounded-full">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span class="text-xs font-bold text-green-700">BUKA 24 JAM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1">
+            <div class="px-3 mb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Topik Bahasan</div>
+            <!-- Note: Added onclick="closeMenu()" to all links for auto-close -->
+            <a href="#jenis" onclick="closeMenu()" class="flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-red-50 hover:text-zmc-red transition">
+                <span>🤔</span> Kenali Gejalanya
+            </a>
+            <a href="#mitos" onclick="closeMenu()" class="flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-red-50 hover:text-zmc-red transition">
+                <span>🩸</span> Darah Tinggi?
+            </a>
+            <a href="#pemicu" onclick="closeMenu()" class="flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-red-50 hover:text-zmc-red transition">
+                <span>🍜</span> Penyebab Umum
+            </a>
+            <a href="#redflag" onclick="closeMenu()" class="flex items-center gap-3 px-3 py-3 text-sm font-bold rounded-lg text-red-700 bg-red-50 hover:bg-red-100 transition border border-red-100">
+                <span>⚠️</span> TANDA BAHAYA
+            </a>
+            <a href="#solusi" onclick="closeMenu()" class="flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-red-50 hover:text-zmc-red transition">
+                <span>🍵</span> Cara Mengatasi
+            </a>
+            
+            <div class="mt-6 border-t border-gray-100 pt-4">
+                 <div class="px-3 mb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Layanan Kami</div>
+                 <a href="#kontak-bawah" onclick="closeMenu()" class="flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg text-gray-600 hover:bg-gray-100 transition">
+                    📍 Lokasi & Kontak
+                </a>
+            </div>
+        </nav>
+
+        <!-- Print Button -->
+        <div class="p-4 border-t border-gray-200 bg-gray-50 text-center">
+            <button onclick="window.print()" class="w-full py-2 px-4 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-100 transition flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                Simpan Artikel
+            </button>
+        </div>
+    </aside>
+    
+    <!-- Overlay for Mobile Menu (Z-INDEX 40) -->
+    <div id="menu-overlay" onclick="closeMenu()" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden transition-opacity duration-300"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 h-screen overflow-y-auto pt-20 md:pt-0 scroll-smooth relative bg-white md:bg-[#f3f4f6]">
+        <div class="max-w-4xl mx-auto md:my-8 bg-white md:rounded-2xl md:shadow-lg overflow-hidden min-h-screen">
+            
+            <div class="px-6 py-10 md:p-12 space-y-12">
+
+                <!-- HEADER CONTENT -->
+                <header class="text-center md:text-left border-b border-gray-200 pb-8">
+                    <span class="bg-red-100 text-zmc-red font-bold px-3 py-1 rounded-full text-xs uppercase mb-3 inline-block tracking-wider">Edukasi Warga Garut</span>
+                    <h1 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4 leading-tight">Kepala Sering Pusing & Nyut-nyutan?</h1>
+                    <p class="text-lg text-gray-600 max-w-2xl">
+                        Jangan asal minum obat warung. Kenali bedanya masuk angin, sakit kepala tegang, atau tanda penyakit serius.
+                    </p>
+                </header>
+
+                <!-- SECTION 1: JENIS SAKIT KEPALA -->
+                <section id="jenis" class="scroll-mt-24">
+                    <h3 class="text-2xl font-heading font-bold text-gray-800 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm font-bold">1</span>
+                        Apa yang Anda Rasakan?
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div class="bg-blue-50 rounded-xl p-6 border border-blue-100 relative overflow-hidden">
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Kepala Berat & Leher Kaku</h4>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Rasanya seperti kepala diikat kencang. Sering disertai rasa <strong>berat di pundak/leher</strong>.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg text-xs text-gray-600 border border-blue-100">
+                                <span class="font-bold text-blue-800">Penyebab Biasa:</span> Kecapekan kerja, stres pikiran, atau kelamaan nunduk main HP.
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-orange-50 rounded-xl p-6 border border-orange-100 relative overflow-hidden">
+                            <h4 class="font-bold text-xl text-orange-900 mb-2">Sakit Sebelah (Migrain)</h4>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Sakitnya <strong>berdenyut-denyut</strong>, biasanya cuma di kiri atau kanan saja. Kalau kena cahaya silau atau suara berisik, makin sakit.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg text-xs text-gray-600 border border-orange-100">
+                                <span class="font-bold text-orange-800">Saran:</span> Harus istirahat di kamar gelap dan tenang.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Alert Vertigo -->
+                    <div class="mt-4 bg-gray-100 p-4 rounded-lg border-l-4 border-gray-500 flex items-start gap-3">
+                        <span class="text-2xl">💫</span>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800">Dunia Terasa Berputar?</p>
+                            <p class="text-xs text-gray-600">Jika pusingnya muter sampai mau jatuh/muntah, itu namanya <strong>Vertigo</strong> (gangguan keseimbangan), bukan sakit kepala biasa. Obatnya beda, segera periksa ke ZMC.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: MITOS vs FAKTA -->
+                <section id="mitos" class="scroll-mt-24">
+                    <h3 class="text-2xl font-heading font-bold text-gray-800 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm font-bold">2</span>
+                        Pasti Karena Darah Tinggi?
+                    </h3>
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                        <p class="text-gray-700 mb-4 font-medium">"Dok, kepala saya pusing, pasti darah tinggi saya kumat."</p>
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-red-600 mb-2">❌ Belum Tentu</h4>
+                                <p class="text-sm text-gray-600">Sakit kepala hebat belum tentu karena tensi naik. Justru seringkali karena otot leher yang tegang atau kurang tidur.</p>
+                            </div>
+                            <div class="hidden md:block w-px bg-gray-200"></div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-green-600 mb-2">✅ Cek Dulu</h4>
+                                <p class="text-sm text-gray-600">Jangan nebak-nebak terus minum obat darah tinggi sembarangan. <strong>Wajib Tensi Dulu</strong> di klinik untuk memastikan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: PEMICU -->
+                <section id="pemicu" class="scroll-mt-24">
+                    <h3 class="text-2xl font-heading font-bold text-gray-800 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm font-bold">3</span>
+                        Pemicu Paling Sering
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-white hover:shadow transition border border-gray-100">
+                            <div class="text-3xl mb-2">⏰</div>
+                            <h4 class="font-bold text-sm text-gray-800">Telat Makan</h4>
+                            <p class="text-xs text-gray-500">Masuk angin/gula darah turun.</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-white hover:shadow transition border border-gray-100">
+                            <div class="text-3xl mb-2">☀️</div>
+                            <h4 class="font-bold text-sm text-gray-800">Cuaca Panas</h4>
+                            <p class="text-xs text-gray-500">Kepanasan di jalan/sawah.</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-white hover:shadow transition border border-gray-100">
+                            <div class="text-3xl mb-2">🍜</div>
+                            <h4 class="font-bold text-sm text-gray-800">Makanan</h4>
+                            <p class="text-xs text-gray-500">Kebanyakan micin, pedas, atau santan.</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-white hover:shadow transition border border-gray-100">
+                            <div class="text-3xl mb-2">💧</div>
+                            <h4 class="font-bold text-sm text-gray-800">Kurang Minum</h4>
+                            <p class="text-xs text-gray-500">Jarang minum air putih.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: RED FLAG -->
+                <section id="redflag" class="scroll-mt-24">
+                    <div class="bg-red-600 text-white rounded-t-xl px-6 py-4 flex items-center gap-2">
+                        <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <h3 class="font-bold text-lg">TANDA BAHAYA (Segera ke IGD ZMC)</h3>
+                    </div>
+                    <div class="bg-red-50 border-x border-b border-red-200 p-6 md:p-8 rounded-b-xl text-gray-800">
+                        <p class="font-bold mb-4">Jangan ditunda jika sakit kepala disertai:</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3">
+                                <span class="text-red-600 font-bold">1.</span>
+                                <span>Muncul <strong>mendadak & sangat hebat</strong> (seperti dipukul palu).</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-red-600 font-bold">2.</span>
+                                <span>Bicara jadi pelo, susah ngomong, atau mulut mencong.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-red-600 font-bold">3.</span>
+                                <span>Salah satu tangan/kaki terasa lemah atau kesemutan parah.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-red-600 font-bold">4.</span>
+                                <span>Pandangan mata tiba-tiba gelap/kabur.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-red-600 font-bold">5.</span>
+                                <span>Habis jatuh atau kepala terbentur.</span>
+                            </li>
+                        </ul>
+                        <div class="mt-6 pt-6 border-t border-red-200">
+                            <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="block w-full bg-red-600 text-white text-center font-bold py-3 rounded-lg shadow hover:bg-red-700 transition">
+                                🚑 Navigasi ke Klinik ZMC (Buka 24 Jam)
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 5: SOLUSI -->
+                <section id="solusi" class="scroll-mt-24">
+                    <h3 class="text-2xl font-heading font-bold text-gray-800 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-red-600 text-white rounded-lg flex items-center justify-center text-sm font-bold">4</span>
+                        Pertolongan Pertama di Rumah
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Step 1 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600 flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Minum Teh Manis Hangat</h4>
+                                <p class="text-sm text-gray-600 mt-1">Seringkali pusing karena perut kosong atau gula darah turun. Minum teh hangat, lalu makan sedikit.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600 flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Kompres atau Minyak Angin</h4>
+                                <p class="text-sm text-gray-600 mt-1">Oleskan balsem/minyak hangat di pelipis atau leher. <strong>Ingat:</strong> Pijat lembut saja, jangan diputer-puter lehernya terlalu keras (bahaya saraf).</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600 flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Hati-hati Obat Warung</h4>
+                                <p class="text-sm text-gray-600 mt-1">Boleh minum obat pereda nyeri (Parasetamol). Tapi jika sudah 3 hari tidak sembuh, <strong>jangan diteruskan</strong>. Segera ke dokter.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA LAYANAN -->
+                <section class="bg-gray-900 rounded-xl p-6 md:p-8 text-center text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-xl md:text-2xl font-bold font-heading mb-3">Masih Sering Pusing? Cek Laboratorium!</h3>
+                        <p class="text-gray-300 text-sm mb-6 max-w-lg mx-auto">Sakit kepala menahun bisa jadi tanda Kolesterol Tinggi, Asam Urat, atau gangguan mata. Di ZMC, fasilitas kami lengkap:</p>
+                        
+                        <div class="flex flex-wrap justify-center gap-3 mb-6">
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">✅ Cek Tensi</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">✅ Cek Kolesterol</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">✅ Cek Gula Darah</span>
+                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs">✅ Apotek Lengkap</span>
+                        </div>
+
+                        <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg">
+                            Chat Admin ZMC Sekarang
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- FOOTER ZMC -->
+            <footer id="kontak-bawah" class="bg-gray-50 border-t border-gray-200 pt-10 pb-24 md:pb-10 px-6 md:px-12">
+                <div class="flex flex-col md:flex-row gap-8 justify-between">
+                    <!-- Brand -->
+                    <div class="flex-1 space-y-3">
+                        <div class="flex items-center gap-3">
+                            <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-14 w-14 rounded-full border border-gray-200">
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Zihan Medical Center</h4>
+                                <p class="text-zmc-red text-xs font-bold">#ZMCGakNyuekinKamu</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 max-w-xs">
+                            Klinik Pratama dengan layanan Poli Umum, Rawat Inap, dan Persalinan. Melayani BPJS dan Umum.
+                        </p>
+                    </div>
+
+                    <!-- Address & Map -->
+                    <div class="flex-1 md:text-right space-y-4">
+                        <div class="text-sm text-gray-600">
+                            <p class="font-bold text-gray-900">Alamat:</p>
+                            <p>Jl. Kudang, Wanajaya, Wanaraja<br>Kabupaten Garut, Jawa Barat 44183</p>
+                        </div>
+                        <div class="text-sm">
+                            <p class="font-bold text-gray-900">Telepon / WA:</p>
+                            <a href="tel:+6282217180432" class="text-red-600 font-bold hover:underline">+62 822-1718-0432</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-200 text-center text-xs text-gray-400">
+                    &copy; 2025 Zihan Medical Center. Wanaraja, Garut.
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- FLOATING WHATSAPP BUTTON (Z-INDEX 30 - Agar tidak menutupi menu) -->
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" class="fixed bottom-6 right-6 z-30 bg-green-500 hover:bg-green-600 text-white rounded-full p-3 md:p-4 shadow-xl flex items-center gap-2 transition hover:scale-105 group border-2 border-white">
+        <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="font-bold hidden md:inline">Konsultasi</span>
+    </a>
+
+    <!-- JAVASCRIPT LOGIC (Updated for Auto Close) -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('menu-overlay');
+        const body = document.body;
+
+        function openMenu() {
+            // Remove -translate-x-full to show menu
+            mobileMenu.classList.remove('-translate-x-full');
+            // Show overlay
+            overlay.classList.remove('hidden');
+            // Lock background scroll
+            body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            // Add -translate-x-full to hide menu
+            mobileMenu.classList.add('-translate-x-full');
+            // Hide overlay
+            overlay.classList.add('hidden');
+            // Unlock background scroll
+            body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>
