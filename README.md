@@ -1,97 +1,102 @@
-﻿# ZMC Edukasi HTML
+# ZMC Edukasi HTML
 
-Project ini dipakai untuk membuat halaman edukasi klinis HTML untuk **Zihan Medical Center (Wanaraja)** yang ramah pasien, siap offline, dan siap print.
+Repo ini dipakai untuk membangun halaman edukasi klinis HTML untuk **Zihan Medical Center Wanaraja**. Targetnya bukan landing page generik, tetapi lembar edukasi pasien yang akurat, enak dibaca, aman di Android dan desktop, siap print ke PDF, dan tetap berguna saat offline.
 
 ## Tujuan
-- Konten medis akurat, tetap elaboratif, dan mudah dipahami masyarakat umum.
-- Tampilan khas brand ZMC, bukan template generik.
-- Aman dipakai di Android + desktop, termasuk mode offline.
-- Hasil print PDF rapi untuk kebutuhan edukasi pasien.
+- Konten medis akurat, jelas, dan mudah dipahami pasien.
+- UI khas ZMC, tetapi tetap terasa normal, tenang, dan fungsional.
+- Halaman single-file yang bisa dibuka lokal tanpa build step.
+- Hasil print rapi untuk kebutuhan edukasi pasien.
 
-## Target Audiens
-- Masyarakat umum lokal Garut (minimal literasi setara SMA).
-- Bahasa: Indonesia sederhana, kalimat pendek, tidak menggurui.
-- Nuansa lokal: boleh pakai istilah/konteks Sunda ringan agar terasa dekat.
+## Audiens
+- Pasien dan keluarga di Garut dengan target literasi setara SMA.
+- Bahasa Indonesia sederhana, kalimat pendek, tidak menggurui.
+- Konteks Sunda ringan boleh dipakai jika membantu pemahaman.
 
-## Brand Direction (Default)
-Nama gaya: **Poster Merah ZMC**
-- Dominan merah-putih ala poster IG ZMC.
-- Headline tebal, visual tegas, tetap nyaman untuk baca panjang.
-- Aksen hitam/navy tipis untuk menjaga kontras.
-- Detail dekoratif halus (dot/grid/shape), tidak berlebihan.
+## Workflow Standar
+1. Riset internet dulu dari sumber resmi terbaru.
+2. Susun konten medis pasien dengan section yang tidak repetitif.
+3. Bangun HTML single-file yang mobile-first, aksesibel, dan offline-ready.
+4. Tambahkan visual lokal atau inline yang tetap tampil saat `file://`.
+5. QA viewport, keyboard, print PDF, dan fallback offline/icon.
 
-## Konten Makanan Lokal
-- Untuk topik yang relevan (contoh: lambung), pakai contoh konkret makanan lokal.
-- Contoh wajib muncul sesuai konteks: `bala-bala`, `gehu`, `pepes`, `seblak`, `kopi tubruk`, dll.
-- Selalu bagi kategori jelas: **lebih aman** vs **perlu dibatasi**.
+## Sumber Prioritas
+- Kemenkes RI / Ayo Sehat
+- WHO
+- UNICEF
+- IDAI
+- CDC
 
-## Alur Kerja Standar
-1. Riset topik medis dari sumber kredibel terbaru (Kemenkes, WHO, IDAI, CDC bila relevan).
-2. Tulis konten edukasi pasien + bagian wajib red flags (`Kapan harus ke dokter/IGD`).
-3. Bangun halaman single-file HTML (vanilla, aksesibel keyboard, mobile-first).
-4. Tambahkan ilustrasi kontekstual dan fallback offline.
-5. QA dan bugfix: viewport, dark/light theme, print PDF, dan mode offline.
+Simpan tautan rujukan di bagian akhir halaman. Untuk topik anak, utamakan red flags, durasi evaluasi, dan catatan kondisi khusus.
 
-## Standar Kedalaman Konten
-- Untuk topik utama (mis. MPASI/tumbuh-kembang), konten wajib **padat-elaboratif**, tidak boleh terasa ringkasan tipis.
-- Larangan repetisi: satu pesan utama tidak boleh diulang lintas section dengan wording yang sama.
-- Setiap section wajib punya fungsi unik (contoh: red flags, feeding rules, GTM, growth, development).
-- Cara jaga agar tidak terlalu singkat:
-  - Tiap section minimal berisi: konteks singkat, langkah praktis, dan kapan perlu evaluasi medis.
-  - Sertakan contoh lokal yang relevan (menu, kebiasaan harian, hambatan umum orang tua).
-  - Tambahkan catatan kondisi khusus (prematur, kronis, alergi berat) pada bagian yang relevan.
+## Standar Konten
+- Setiap section minimal memuat konteks singkat, langkah praktis, dan kapan perlu evaluasi medis.
+- Wajib ada bagian `Kapan harus ke dokter/IGD`.
+- Jika ada kondisi khusus seperti prematur, penyakit kronis, atau alergi berat, tambahkan catatan konsultasi.
+- Topik besar seperti MPASI atau tumbuh kembang harus padat-elaboratif, bukan ringkasan tipis.
+- Gunakan contoh lokal jika relevan, termasuk pola makan atau kebiasaan harian.
 
-## Struktur Wajib MPASI/Tumbuh Kembang
-1. Ringkasan singkat
-2. Red flags (kapan ke dokter/IGD)
-3. 7 Pesan Emas
-4. Tab usia MPASI
-5. Feeding rules
-6. Pengenalan makanan baru
-7. GTM troubleshooting
-8. Pemantauan pertumbuhan
-9. Pemantauan perkembangan
-10. Resep lokal + makanan dibatasi
-11. Anemia + sanitasi
-12. Mitos vs fakta
-13. FAQ singkat
-14. Rujukan
+## Arah UI
+Gaya dasar repo ini tetap **Poster Merah ZMC**, tetapi eksekusinya harus lebih dekat ke **editorial klinis** daripada poster promosi.
 
-## Icon Strategy (Default)
-- Gunakan **Bootstrap Icons CDN** untuk percepatan UI.
-- Wajib siapkan **fallback ikon lokal** (inline SVG) untuk ikon kritikal.
-- Pattern implementasi yang disarankan:
-  - `<i class="bi bi-... icon-cdn" aria-hidden="true"></i>`
-  - `<svg class="icon-local" aria-hidden="true"><use href="#icon-id"></use></svg>`
-- Jika CDN gagal, aplikasi harus otomatis menampilkan ikon fallback lokal.
+Prioritas visual:
+- Merah-putih tetap dominan dan cocok dengan identitas ZMC.
+- Layout harus tenang, rapi, dan mudah dipindai.
+- Heading tegas lewat hirarki dan bobot teks, bukan font display campur-campur.
+- Surface flat dengan border jelas, radius kecil, dan shadow tipis.
+- CTA bawah tetap sekunder; fokus utama tetap pada isi edukasi.
 
-## Ilustrasi (Non-AI Workflow)
-- Gunakan ilustrasi lokal berbasis SVG/CSS handcrafted atau icon-led cards.
-- Simpan aset visual di `assets/topics/<slug>/` atau inline langsung di HTML.
-- Utamakan aset lokal agar halaman tetap berguna saat offline.
-- Hero default harus **compact**: mobile `150-180px`, desktop `220-260px`.
-- Hindari hero art besar yang mendorong konten utama terlalu ke bawah.
-- Hero boleh ringkas, tetapi isi edukasi utama di bawah hero harus tetap panjang dan lengkap.
+Guardrail anti-generik:
+- Jangan pakai hero SaaS atau panel “premium”.
+- Jangan pakai gradient dekoratif besar, glassmorphism, glow, atau floating card shell.
+- Jangan pakai pill berlebihan, eyebrow labels, atau status chip non-fungsional.
+- Jangan pakai hover transform, animasi bouncy, atau layout yang terasa seperti dashboard AI.
+- Jangan campur banyak keluarga font; pakai satu keluarga sans lokal/offline yang konsisten.
 
-## Larangan Pipeline Default
-- Jangan gunakan image generation API untuk alur kerja standar project ini.
-- Semua visual harus reproducible di mesin lokal tanpa API key.
+## Struktur Halaman
+1. Sticky header: logo, judul topik, tombol tema
+2. Ringkasan singkat
+3. Quick chips anchor
+4. Konten utama
+5. Red flags
+6. FAQ singkat bila perlu
+7. CTA bawah termasuk `Print / Save PDF`
+8. Footer klinik
+
+## Teknis Wajib
+- Vanilla HTML/CSS/JS.
+- Single file di `topics/`.
+- Konfigurasi klinik wajib memakai `const ZMC`.
+- Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG.
+- Ilustrasi harus reproducible tanpa API key.
+- `@media print` wajib menghindari card terpotong dan menjaga kontras.
 
 ## Struktur Repo
 ```text
-codex_edukasi/
+EdukasiZMC/
   README.md
   AGENTS.md
   topics/
-  assets/
+    <slug>.html
     zmc-logo.jpeg
+  assets/
+    qa/
     topics/
       <slug>/
 ```
 
-## Standar Output Halaman
-- Single file HTML (tanpa build tools).
-- Header sticky (logo + judul + tombol tema).
-- Quick chips, konten utama, red flags, FAQ (opsional), footer klinik.
-- Tombol `Print / Save PDF` sebagai fitur sekunder di bagian bawah.
-- `@media print` rapi, kontras cukup, dan tidak memotong bagian penting.
+## QA Minimum
+- Viewport `360x800`, `768x1024`, `1366x768`
+- Tidak ada horizontal scroll
+- Fokus keyboard terlihat
+- Accordion/tab bisa dioperasikan keyboard
+- Footer link WA, Maps, Instagram berfungsi
+- Ikon CDN dan fallback lokal sama-sama aman
+- Print A4 tidak memotong bagian penting
+- Artefak QA disimpan di `assets/qa/`
+
+## Artefak Akhir
+Untuk halaman yang selesai dikerjakan, minimal hasil akhirnya mencakup:
+- file HTML di `topics/`
+- screenshot mobile, tablet, desktop di `assets/qa/`
+- PDF hasil print check di `assets/qa/`
