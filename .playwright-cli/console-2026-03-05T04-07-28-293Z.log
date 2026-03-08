@@ -1,0 +1,4 @@
+[      50ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4173/topics/zmc-logo.jpeg:0
+[     316ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4173/topics/zmc-logo.jpeg:0
+[     668ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://i.imgur.com/jzuguQE.jpeg:0
+[     674ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:4173/favicon.ico:0

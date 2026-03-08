@@ -1,0 +1,439 @@
+- generic [active] [ref=e1]:
+  - link "Lewati ke isi utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Logo Zihan Medical Center" [ref=e7]
+        - generic [ref=e8]:
+          - paragraph [ref=e9]: Edukasi Klinis Anak
+          - 'heading "Panduan Makanan Anak: MPASI dan Tumbuh Kembang" [level=1] [ref=e10]'
+      - generic [ref=e11]:
+        - button " Tema Terang" [pressed] [ref=e12] [cursor=pointer]:
+          - generic [ref=e14]: 
+          - generic [ref=e15]: Tema Terang
+        - generic [ref=e16]: Online (link aktif)
+  - generic [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e23]: 
+          - text: 1000 Hari Pertama
+        - heading "Biar anak naek beuratna alus, tumbuhna optimal, jeung siap belajar." [level=2] [ref=e24]
+        - paragraph [ref=e25]: Panduan ini memakai konten inti lama, tetapi HTML-nya dibangun ulang total agar lebih rapi untuk mobile, desktop, print PDF, dan offline.
+        - generic [ref=e26]: "Fokus: MPASI sesuai usia, feeding rules, GTM, pemantauan growth-development, dan red flags."
+      - img [ref=e28]
+    - paragraph [ref=e35]:
+      - strong [ref=e36]: "Ringkasan singkat:"
+      - text: MPASI tepat waktu, protein hewani cukup, jadwal konsisten, dan pemantauan rutin menurunkan risiko stunting serta gangguan makan berkepanjangan.
+    - navigation "Quick chips" [ref=e37]:
+      - link "Red Flags" [ref=e38] [cursor=pointer]:
+        - /url: "#redflags"
+      - link "7 Pesan Emas" [ref=e39] [cursor=pointer]:
+        - /url: "#emas"
+      - link "Tab Usia" [ref=e40] [cursor=pointer]:
+        - /url: "#usia"
+      - link "Feeding Rules" [ref=e41] [cursor=pointer]:
+        - /url: "#aturan"
+      - link "GTM" [ref=e42] [cursor=pointer]:
+        - /url: "#gtm"
+      - link "Resep Lokal" [ref=e43] [cursor=pointer]:
+        - /url: "#resep"
+      - link "FAQ" [ref=e44] [cursor=pointer]:
+        - /url: "#faq"
+      - link "Rujukan" [ref=e45] [cursor=pointer]:
+        - /url: "#rujukan"
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - heading "1) Kapan harus ke dokter/IGD (red flags)" [level=2] [ref=e48]
+        - paragraph [ref=e49]: "Context: orang tua sering menunggu terlalu lama. Langkah: kenali tanda bahaya sejak awal. Evaluasi: cepat ke faskes bila ada red flags."
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - strong [ref=e52]: Segera ke IGD
+          - text: bila anak sangat lemas, tidak mau minum, muntah hijau/berdarah, sesak, kejang, demam tinggi menetap, atau dehidrasi berat.
+        - generic [ref=e53]:
+          - article [ref=e54]:
+            - heading "Growth warning" [level=3] [ref=e55]
+            - list [ref=e56]:
+              - listitem [ref=e57]: Berat tidak naik 1 bulan.
+              - listitem [ref=e58]: Grafik KMS/Buku KIA mendatar 2 bulan berturut.
+              - listitem [ref=e59]: Berat turun setelah sakit dan lama pulih.
+          - article [ref=e60]:
+            - heading "Feeding warning" [level=3] [ref=e61]
+            - list [ref=e62]:
+              - listitem [ref=e63]: GTM lebih dari 2 minggu walau aturan makan sudah konsisten.
+              - listitem [ref=e64]: Sering tersedak/muntah saat makan.
+              - listitem [ref=e65]: Hanya mau cairan manis/susu.
+          - article [ref=e66]:
+            - heading "Development warning" [level=3] [ref=e67]
+            - list [ref=e68]:
+              - listitem [ref=e69]: Milestone terlambat jelas.
+              - listitem [ref=e70]: Kemampuan yang sudah ada lalu hilang.
+              - listitem [ref=e71]: Kontak mata/interaksi sangat minim.
+        - img [ref=e72]:
+          - generic [ref=e74]: Pantau 24-48 jam
+          - generic [ref=e75]: jika gejala ringan
+          - generic [ref=e77]: IGD segera bila red flag
+          - generic [ref=e78]: jangan menunda observasi dokter
+        - generic [ref=e79]: "Nuansa lokal: sering terdengar \"engke ge gede sorangan\". Untuk pertumbuhan/perkembangan, jangan menunggu lama jika ragu."
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - heading "2) 7 Pesan Emas PMBA" [level=2] [ref=e82]
+        - paragraph [ref=e83]: "Context: prinsip dasar agar orang tua tidak bingung. Langkah: pegang tujuh poin inti ini tiap hari. Evaluasi: jika growth seret, cek lagi pelaksanaannya."
+      - generic [ref=e85]:
+        - article [ref=e86]:
+          - heading "Mulai MPASI 6 bulan" [level=3] [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]: Tidak terlalu cepat/telat.
+            - listitem [ref=e90]: ASI tetap dilanjutkan.
+        - article [ref=e91]:
+          - heading "Protein hewani utama" [level=3] [ref=e92]
+          - list [ref=e93]:
+            - listitem [ref=e94]: Telur, ikan, ayam, daging, hati.
+            - listitem [ref=e95]: Penting untuk tinggi badan dan otak.
+        - article [ref=e96]:
+          - heading "Tekstur bertahap" [level=3] [ref=e97]
+          - list [ref=e98]:
+            - listitem [ref=e99]: Lumat ke cincang ke menu keluarga.
+            - listitem [ref=e100]: Jangan lama di makanan cair.
+        - article [ref=e101]:
+          - heading "Frekuensi sesuai usia" [level=3] [ref=e102]
+          - list [ref=e103]:
+            - listitem [ref=e104]: "6-8 bln: 2-3x makan."
+            - listitem [ref=e105]: "9-23 bln: 3-4x + snack."
+        - article [ref=e106]:
+          - heading "Responsive feeding" [level=3] [ref=e107]
+          - list [ref=e108]:
+            - listitem [ref=e109]: Suasana tenang, tanpa paksa.
+            - listitem [ref=e110]: Ajak anak aktif saat makan.
+        - article [ref=e111]:
+          - heading "Higiene aman" [level=3] [ref=e112]
+          - list [ref=e113]:
+            - listitem [ref=e114]: Cuci tangan dan alat makan bersih.
+            - listitem [ref=e115]: Air minum aman.
+        - article [ref=e116]:
+          - heading "Pantau rutin" [level=3] [ref=e117]
+          - list [ref=e118]:
+            - listitem [ref=e119]: Timbang/ukur berkala.
+            - listitem [ref=e120]: Evaluasi cepat bila grafik seret.
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - heading "3) Tab usia MPASI" [level=2] [ref=e123]
+        - paragraph [ref=e124]: "Context: kebutuhan tiap umur berbeda. Langkah: ikuti tab usia dan tekstur. Evaluasi: bila ada alergi berat/sulit makan berat, konsultasi lebih dini."
+      - generic [ref=e125]:
+        - tablist "Tab usia MPASI" [ref=e126]:
+          - tab "6-8 bln" [selected] [ref=e127] [cursor=pointer]
+          - tab "9-11 bln" [ref=e128] [cursor=pointer]
+          - tab "12-23 bln" [ref=e129] [cursor=pointer]
+          - tab "2-5 th" [ref=e130] [cursor=pointer]
+        - tabpanel "6-8 bln" [ref=e131]:
+          - generic [ref=e132]:
+            - article [ref=e133]:
+              - heading "Konteks" [level=3] [ref=e134]
+              - list [ref=e135]:
+                - listitem [ref=e136]: Mulai belajar menelan selain ASI.
+            - article [ref=e137]:
+              - heading "Langkah praktis" [level=3] [ref=e138]
+              - list [ref=e139]:
+                - listitem [ref=e140]: 2-3x makan, tekstur lumat kental.
+                - listitem [ref=e141]: "Contoh: tim telur+tahu+wortel."
+            - article [ref=e142]:
+              - heading "Kapan evaluasi" [level=3] [ref=e143]
+              - list [ref=e144]:
+                - listitem [ref=e145]: Tersedak/muntah berulang.
+                - listitem [ref=e146]: Berat sulit naik 1-2 bulan.
+        - generic [ref=e147]: "Catatan kondisi khusus: prematur, penyakit kronis, atau alergi berat perlu rencana makan individual dari dokter."
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - heading "4) Feeding rules" [level=2] [ref=e150]
+        - paragraph [ref=e151]: "Context: banyak masalah makan karena rutinitas tidak stabil. Langkah: terapkan aturan harian. Evaluasi: bila konsisten 2 minggu tapi tetap sulit, cek penyebab medis/perilaku."
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - article [ref=e154]:
+            - heading "Jadwal" [level=3] [ref=e155]
+            - list [ref=e156]:
+              - listitem [ref=e157]: 3x makan utama + 2x snack.
+              - listitem [ref=e158]: Susu di jam terpisah.
+              - listitem [ref=e159]: Maksimal 30 menit per sesi.
+          - article [ref=e160]:
+            - heading "Lingkungan" [level=3] [ref=e161]
+            - list [ref=e162]:
+              - listitem [ref=e163]: Tanpa TV/HP/gadget.
+              - listitem [ref=e164]: Duduk di kursi makan.
+              - listitem [ref=e165]: Tidak dipaksa, tidak dimarahi.
+          - article [ref=e166]:
+            - heading "Teknik" [level=3] [ref=e167]
+            - list [ref=e168]:
+              - listitem [ref=e169]: Porsi kecil dulu, tambah bila habis.
+              - listitem [ref=e170]: Latih makan mandiri bertahap.
+              - listitem [ref=e171]: Puji usaha anak.
+        - generic [ref=e172]:
+          - generic [ref=e173]:
+            - checkbox "Jadwal makan hari ini konsisten." [ref=e174]
+            - generic [ref=e175]: Jadwal makan hari ini konsisten.
+          - generic [ref=e176]:
+            - checkbox "Makan tanpa distraksi layar." [ref=e177]
+            - generic [ref=e178]: Makan tanpa distraksi layar.
+          - generic [ref=e179]:
+            - checkbox "Protein hewani hadir minimal 2-3 kali." [ref=e180]
+            - generic [ref=e181]: Protein hewani hadir minimal 2-3 kali.
+          - generic [ref=e182]:
+            - checkbox "Catat nafsu makan/berat untuk evaluasi." [ref=e183]
+            - generic [ref=e184]: Catat nafsu makan/berat untuk evaluasi.
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - heading "5) Pengenalan makanan baru" [level=2] [ref=e187]
+        - paragraph [ref=e188]: "Context: mencegah reaksi tidak diinginkan. Langkah: kenalkan bertahap. Evaluasi: jika gejala alergi berat, segera ke fasilitas kesehatan."
+      - generic [ref=e189]:
+        - generic [ref=e190]: Kenalkan satu bahan baru tiap 3-5 hari, terutama telur, ikan, kacang, dan susu.
+        - group [ref=e191]:
+          - generic "Langkah 3-5 hari" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]: Langkah 3-5 hari
+            - generic [ref=e194]: +
+        - group [ref=e195]:
+          - generic "Bentuk makanan berisiko tersedak" [ref=e196] [cursor=pointer]:
+            - generic [ref=e197]: Bentuk makanan berisiko tersedak
+            - generic [ref=e198]: +
+        - group [ref=e199]:
+          - generic "Kapan perlu rencana personal" [ref=e200] [cursor=pointer]:
+            - generic [ref=e201]: Kapan perlu rencana personal
+            - generic [ref=e202]: +
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - heading "6) GTM troubleshooting" [level=2] [ref=e205]
+        - paragraph [ref=e206]: "Context: GTM sering bikin stres keluarga. Langkah: fokus rutinitas dulu 7-14 hari. Evaluasi: jika berat turun atau dehidrasi, jangan tunda konsultasi."
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - article [ref=e209]:
+            - heading "Penyebab sering" [level=3] [ref=e210]
+            - list [ref=e211]:
+              - listitem [ref=e212]: Jadwal tidak konsisten.
+              - listitem [ref=e213]: Kebanyakan ngemil manis.
+              - listitem [ref=e214]: Tekstur tidak sesuai tahap.
+          - article [ref=e215]:
+            - heading "Intervensi rumah" [level=3] [ref=e216]
+            - list [ref=e217]:
+              - listitem [ref=e218]: Konsisten jadwal 30 menit.
+              - listitem [ref=e219]: Kurangi minuman manis.
+              - listitem [ref=e220]: Rotasi menu sederhana.
+          - article [ref=e221]:
+            - heading "Tanda evaluasi" [level=3] [ref=e222]
+            - list [ref=e223]:
+              - listitem [ref=e224]: GTM lebih 2 minggu.
+              - listitem [ref=e225]: Berat badan turun/mendatar.
+              - listitem [ref=e226]: Muntah, nyeri menelan, demam lama.
+        - generic [ref=e227]: Jika GTM disertai lemas berat, dehidrasi, atau asupan hampir nol, segera ke dokter/IGD.
+    - generic [ref=e228]:
+      - generic [ref=e229]:
+        - heading "7) Pemantauan pertumbuhan" [level=2] [ref=e230]
+        - paragraph [ref=e231]: "Context: ukuran tubuh harus dibaca sebagai tren. Langkah: timbang/ukur berkala. Evaluasi: jika grafik menurun, lakukan asesmen penyebab."
+      - generic [ref=e233]:
+        - article [ref=e234]:
+          - heading "Konteks" [level=3] [ref=e235]
+          - list [ref=e236]:
+            - listitem [ref=e237]: Lihat tren, bukan angka tunggal.
+            - listitem [ref=e238]: Pakai Buku KIA/KMS.
+        - article [ref=e239]:
+          - heading "Langkah praktis" [level=3] [ref=e240]
+          - list [ref=e241]:
+            - listitem [ref=e242]: Timbang dan ukur rutin.
+            - listitem [ref=e243]: Catat periode sakit.
+        - article [ref=e244]:
+          - heading "Kapan evaluasi" [level=3] [ref=e245]
+          - list [ref=e246]:
+            - listitem [ref=e247]: Grafik mendatar/menurun.
+            - listitem [ref=e248]: Tinggi turun lintas kurva.
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - heading "8) Pemantauan perkembangan" [level=2] [ref=e251]
+        - paragraph [ref=e252]: "Context: gizi, tidur, stimulasi, dan kesehatan saling terkait. Langkah: stimulasi harian + skrining berkala. Evaluasi: bila milestone terlambat atau kemampuan hilang."
+      - generic [ref=e254]:
+        - article [ref=e255]:
+          - heading "Konteks" [level=3] [ref=e256]
+          - list [ref=e257]:
+            - listitem [ref=e258]: Tiap anak unik, tapi red flags tetap ada.
+        - article [ref=e259]:
+          - heading "Langkah praktis" [level=3] [ref=e260]
+          - list [ref=e261]:
+            - listitem [ref=e262]: Ajak interaksi dua arah tiap hari.
+            - listitem [ref=e263]: Batasi screen time pasif.
+        - article [ref=e264]:
+          - heading "Kapan evaluasi" [level=3] [ref=e265]
+          - list [ref=e266]:
+            - listitem [ref=e267]: Telat milestone jelas.
+            - listitem [ref=e268]: Kontak mata/interaksi minim.
+    - generic [ref=e269]:
+      - generic [ref=e270]:
+        - heading "9) Resep lokal + makanan dibatasi" [level=2] [ref=e271]
+        - paragraph [ref=e272]: "Context: menu sehat tidak harus mahal. Langkah: pakai bahan lokal. Evaluasi: bila berat tetap tidak naik 2-4 minggu, konsultasi."
+      - generic [ref=e274]:
+        - article [ref=e275]:
+          - heading "Menu lokal lebih aman" [level=3] [ref=e276]
+          - list [ref=e277]:
+            - listitem [ref=e278]: Tim nasi + pepes ikan tanpa pedas + sayur lembut.
+            - listitem [ref=e279]: Bubur kacang hijau kental + telur orak-arik.
+            - listitem [ref=e280]: Nasi lembek + semur ayam + tumis bayam lembut.
+        - article [ref=e281]:
+          - heading "Yang dibatasi" [level=3] [ref=e282]
+          - list [ref=e283]:
+            - listitem [ref=e284]: Snack/minuman tinggi gula garam.
+            - listitem [ref=e285]: Gorengan terlalu sering (bala-bala/gehu harian).
+            - listitem [ref=e286]: Makanan keras/utuh berisiko tersedak.
+        - article [ref=e287]:
+          - heading "Kapan evaluasi" [level=3] [ref=e288]
+          - list [ref=e289]:
+            - listitem [ref=e290]: Pilih makanan makin sempit.
+            - listitem [ref=e291]: Curiga alergi bahan tertentu.
+    - generic [ref=e292]:
+      - generic [ref=e293]:
+        - heading "10) Anemia + sanitasi" [level=2] [ref=e294]
+        - paragraph [ref=e295]: "Context: infeksi berulang dan kekurangan zat besi bisa menghambat naik berat badan. Langkah: perbaiki asupan dan kebersihan. Evaluasi: bila pucat/sering sakit, periksa langsung."
+      - generic [ref=e297]:
+        - article [ref=e298]:
+          - heading "Anemia" [level=3] [ref=e299]
+          - list [ref=e300]:
+            - listitem [ref=e301]: "Tanda: pucat, lelah, nafsu makan turun."
+            - listitem [ref=e302]: "Sumber zat besi: hati, daging, ikan, telur, kacang."
+        - article [ref=e303]:
+          - heading "Sanitasi" [level=3] [ref=e304]
+          - list [ref=e305]:
+            - listitem [ref=e306]: Cuci tangan sebelum menyiapkan/menyuapi.
+            - listitem [ref=e307]: Air minum aman, alat makan bersih.
+            - listitem [ref=e308]: Kurangi risiko diare berulang.
+    - generic [ref=e309]:
+      - generic [ref=e310]:
+        - heading "11) Mitos vs fakta" [level=2] [ref=e311]
+        - paragraph [ref=e312]: "Context: banyak pesan turun-temurun yang membingungkan. Langkah: pegang fakta sederhana. Evaluasi: bila bingung, bawa catatan makan saat konsultasi."
+      - generic [ref=e314]:
+        - article [ref=e315]:
+          - 'heading "Mitos: belum tumbuh gigi, belum boleh tekstur" [level=3] [ref=e316]'
+          - list [ref=e317]:
+            - listitem [ref=e318]:
+              - strong [ref=e319]: "Fakta:"
+              - text: tekstur dinaikkan bertahap sesuai kemampuan, bukan menunggu semua gigi.
+        - article [ref=e320]:
+          - 'heading "Mitos: GTM cukup ditutup susu" [level=3] [ref=e321]'
+          - list [ref=e322]:
+            - listitem [ref=e323]:
+              - strong [ref=e324]: "Fakta:"
+              - text: susu tidak menggantikan keragaman makanan padat bergizi.
+        - article [ref=e325]:
+          - 'heading "Mitos: MPASI harus mahal" [level=3] [ref=e326]'
+          - list [ref=e327]:
+            - listitem [ref=e328]:
+              - strong [ref=e329]: "Fakta:"
+              - text: bahan lokal (telur, ikan, tahu, tempe, sayur) bisa sangat padat gizi.
+    - generic [ref=e330]:
+      - generic [ref=e331]:
+        - heading "12) FAQ singkat" [level=2] [ref=e332]
+        - paragraph [ref=e333]: "Context: pertanyaan paling sering dari orang tua. Langkah: jadikan panduan awal. Evaluasi: untuk kasus khusus tetap perlu konsultasi personal."
+      - generic [ref=e334]:
+        - button "Anak alergi telur, gantinya apa?" [ref=e336] [cursor=pointer]:
+          - text: Anak alergi telur, gantinya apa?
+          - generic [ref=e337]: +
+        - button "Perlu vitamin penambah nafsu makan?" [ref=e339] [cursor=pointer]:
+          - text: Perlu vitamin penambah nafsu makan?
+          - generic [ref=e340]: +
+        - button "MPASI boleh gula/garam?" [ref=e342] [cursor=pointer]:
+          - text: MPASI boleh gula/garam?
+          - generic [ref=e343]: +
+    - generic [ref=e344]:
+      - generic [ref=e345]:
+        - heading "13) Rujukan" [level=2] [ref=e346]
+        - paragraph [ref=e347]: "Context: rujukan resmi untuk baca lanjut. Langkah: gunakan tautan ini saat online. Evaluasi: bila ada kondisi khusus, konsultasi langsung."
+      - generic [ref=e348]:
+        - list [ref=e349]:
+          - listitem [ref=e350]:
+            - text: "Kemenkes RI:"
+            - link "Pemberian MP-ASI untuk pencegahan stunting" [ref=e351] [cursor=pointer]:
+              - /url: https://keslan.kemkes.go.id/view_artikel/3121/pemberian-makanan-pendamping-asi-yang-tepat-untuk-pencegahan-stunting
+            - text: .
+          - listitem [ref=e352]:
+            - text: "Kemenkes RI:"
+            - link "Kumpulan link MPASI" [ref=e353] [cursor=pointer]:
+              - /url: https://ayosehat.kemkes.go.id/topik-non-penyakit/kesehatan-lainnya/kumpulan-link-mpasi
+            - text: .
+          - listitem [ref=e354]:
+            - text: "WHO:"
+            - link "Complementary feeding" [ref=e355] [cursor=pointer]:
+              - /url: https://www.who.int/health-topics/complementary-feeding
+            - text: .
+          - listitem [ref=e356]:
+            - text: "WHO Guideline 2023:"
+            - link "Complementary feeding of infants and young children 6-23 months" [ref=e357] [cursor=pointer]:
+              - /url: https://www.who.int/publications/i/item/9789240081864
+            - text: .
+          - listitem [ref=e358]:
+            - text: "UNICEF:"
+            - link "Community IYCF Counselling Package (updated 2024)" [ref=e359] [cursor=pointer]:
+              - /url: https://www.unicef.org/documents/community-iycf-package
+            - text: .
+          - listitem [ref=e360]:
+            - text: "UNICEF:"
+            - link "Complementary Feeding Guidance (2020)" [ref=e361] [cursor=pointer]:
+              - /url: https://www.unicef.org/media/93981/file/Complementary-Feeding-Guidance-2020.pdf
+            - text: .
+          - listitem [ref=e362]:
+            - text: "CDC:"
+            - link "When, What, and How to Introduce Solid Foods" [ref=e363] [cursor=pointer]:
+              - /url: https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html
+            - text: (updated 20 Maret 2025).
+          - listitem [ref=e364]:
+            - text: "IDAI:"
+            - link "Mengenal keterlambatan perkembangan umum pada anak" [ref=e365] [cursor=pointer]:
+              - /url: https://www.idai.or.id/artikel/seputar-kesehatan-anak/mengenal-keterlambatan-perkembangan-umum-pada-anak
+            - text: .
+        - generic [ref=e366]:
+          - strong [ref=e367]: "Catatan:"
+          - text: untuk prematur, penyakit kronis, atau alergi berat, perlu konsultasi dulu agar rencana makan disesuaikan.
+    - region "Aksi bawah" [ref=e368]:
+      - heading "14) Aksi cepat keluarga" [level=2] [ref=e369]
+      - paragraph [ref=e370]: Simpan halaman ini untuk offline, lalu gunakan tombol di bawah saat butuh konsultasi atau cetak PDF edukasi.
+      - generic [ref=e371]:
+        - link " WhatsApp" [ref=e372] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+          - generic [ref=e374]: 
+          - text: WhatsApp
+        - link " Google Maps" [ref=e375] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+          - generic [ref=e377]: 
+          - text: Google Maps
+        - button "Print atau simpan PDF" [ref=e378] [cursor=pointer]:
+          - generic [ref=e380]: 
+          - text: Print / Save PDF
+    - contentinfo [ref=e381]:
+      - generic [ref=e382]:
+        - generic [ref=e383]:
+          - heading "Zihan Medical Center" [level=3] [ref=e384]
+          - paragraph [ref=e385]:
+            - strong [ref=e386]: "#ZMCGakNyuekinKamu"
+            - text: "- layanan 24 jam."
+          - paragraph [ref=e387]: Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183
+          - paragraph [ref=e388]:
+            - strong [ref=e389]: "Telepon:"
+            - text: +62 822-1718-0432
+          - paragraph [ref=e390]:
+            - strong [ref=e391]: "Jam:"
+            - text: "Senin - Minggu: 24 Jam"
+        - generic [ref=e392]:
+          - heading "Kontak & Lokasi" [level=3] [ref=e393]
+          - generic [ref=e394]:
+            - link " WhatsApp" [ref=e395] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+              - generic [ref=e397]: 
+              - text: WhatsApp
+            - link " Maps" [ref=e398] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+              - generic [ref=e400]: 
+              - text: Maps
+            - link " Instagram" [ref=e401] [cursor=pointer]:
+              - /url: https://www.instagram.com/zihanmedicalcenter/?hl=en
+              - generic [ref=e403]: 
+              - text: Instagram
+          - paragraph [ref=e404]:
+            - text: "Tip offline: letakkan file"
+            - code [ref=e405]: zmc-logo.jpeg
+            - text: satu folder dengan halaman ini.
+      - generic [ref=e406]:
+        - generic [ref=e407]: © 2026 Zihan Medical Center - Wanaraja, Garut
+        - generic [ref=e408]: Konten edukasi pasien.

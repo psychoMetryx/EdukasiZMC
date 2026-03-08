@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Sehat Anak - Zihan Medical Center</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zmc: {
+                            red: '#dc2626',      
+                            light: '#fee2e2',
+                            teal: '#0d9488',     
+                            dark: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fff; }
+        ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 4px; }
+
+        /* Card Effects */
+        .content-card { 
+            background: white; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+            border: 1px solid #e2e8f0;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Typography Styles for Long Content */
+        .prose-text p { margin-bottom: 1rem; text-align: justify; color: #475569; }
+        .prose-text strong { color: #dc2626; font-weight: 700; }
+        .prose-text ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #475569; }
+        .prose-text li { margin-bottom: 0.5rem; }
+
+        /* Plate Chart Visualization */
+        .plate-chart {
+            width: 140px; height: 140px; border-radius: 50%;
+            border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Sidebar Navigation */
+        .nav-link {
+            display: flex; align-items: center; padding: 12px 16px;
+            margin-bottom: 4px; border-radius: 10px; font-weight: 600; font-size: 0.9rem;
+            transition: all 0.2s; color: #64748b;
+        }
+        .nav-link:hover { background-color: #fee2e2; color: #dc2626; }
+        .nav-link.active { background-color: #dc2626; color: white; box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3); }
+
+        /* Animation */
+        .tab-content { display: none; animation: fadeIn 0.5s ease-in-out; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .tab-btn.active-tab { background-color: #dc2626; color: white; border-color: #dc2626; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 antialiased">
+
+<!-- MOBILE HEADER (Sticky) -->
+<div class="lg:hidden fixed top-0 left-0 right-0 bg-white z-50 shadow-md h-16 flex items-center justify-between px-4">
+    <div class="flex items-center gap-2">
+        <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-10 w-auto object-contain">
+        <div class="leading-tight">
+            <span class="block font-heading font-bold text-zmc-red text-sm">Zihan Medical Center</span>
+            <span class="block text-[10px] text-gray-500">Wanaraja, Garut</span>
+        </div>
+    </div>
+    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" class="bg-green-600 text-white w-9 h-9 rounded-full flex items-center justify-center shadow hover:bg-green-700 transition">
+        <i class="fab fa-whatsapp text-lg"></i>
+    </a>
+</div>
+
+<div class="flex min-h-screen pt-16 lg:pt-0">
+
+    <!-- SIDEBAR (Desktop) -->
+    <aside class="w-72 bg-white border-r border-slate-200 hidden lg:flex flex-col fixed h-full z-40 shadow-lg">
+        <div class="p-6 border-b border-slate-100 flex flex-col items-center text-center bg-gradient-to-b from-white to-red-50">
+            <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC" class="h-20 w-auto mb-3 object-contain drop-shadow-sm">
+            <h1 class="font-heading text-lg font-bold text-slate-800">Edukasi Pasien</h1>
+            <p class="text-xs text-zmc-red font-bold uppercase tracking-wider mt-1">Gizi & Tumbuh Kembang</p>
+        </div>
+        
+        <nav class="flex-1 py-4 px-3 overflow-y-auto space-y-1">
+            <a href="#intro" class="nav-link active" id="nav-intro"><i class="fas fa-heartbeat w-6 text-center"></i> Pendahuluan</a>
+            <a href="#red-flags" class="nav-link" id="nav-red-flags"><i class="fas fa-exclamation-triangle w-6 text-center"></i> Tanda Bahaya</a>
+            <a href="#aturan" class="nav-link" id="nav-aturan"><i class="fas fa-gavel w-6 text-center"></i> Aturan Makan</a>
+            <a href="#mpasi" class="nav-link" id="nav-mpasi"><i class="fas fa-utensils w-6 text-center"></i> Tahapan & Menu</a>
+            <a href="#resep" class="nav-link" id="nav-resep"><i class="fas fa-carrot w-6 text-center"></i> Resep Hemat</a>
+            <a href="#kesehatan" class="nav-link" id="nav-kesehatan"><i class="fas fa-briefcase-medical w-6 text-center"></i> Anemia & Sanitasi</a>
+            <a href="#gtm" class="nav-link" id="nav-gtm"><i class="fas fa-sad-tear w-6 text-center"></i> Solusi GTM</a>
+            <a href="#mitos" class="nav-link" id="nav-mitos"><i class="fas fa-comments w-6 text-center"></i> Mitos vs Fakta</a>
+            <a href="#faq" class="nav-link" id="nav-faq"><i class="fas fa-question-circle w-6 text-center"></i> Tanya Jawab</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 lg:ml-72 p-4 lg:p-10 max-w-5xl mx-auto w-full">
+        
+        <!-- HEADER / INTRO -->
+        <section id="intro" class="mb-12 pt-4 lg:pt-0 scroll-mt-24">
+            <div class="bg-gradient-to-br from-zmc-red to-red-800 rounded-3xl p-6 lg:p-10 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                    <i class="fas fa-baby-carriage text-9xl"></i>
+                </div>
+                <span class="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-bold mb-4 backdrop-blur-sm border border-white/30">
+                    <i class="fas fa-shield-alt mr-1"></i> Klinik Pratama Zihan Medical Center
+                </span>
+                <h2 class="font-heading text-2xl lg:text-4xl font-extrabold mb-4 leading-tight">
+                    Ayah Bunda, Mari Cegah <span class="text-yellow-300 border-b-4 border-yellow-300/30">Stunting</span> Sejak Dini
+                </h2>
+                <div class="text-red-50 text-sm lg:text-base leading-relaxed text-justify max-w-3xl">
+                    <p class="mb-2">
+                        Stunting (gagal tumbuh) bukan hanya soal anak pendek, tapi soal <strong>perkembangan otak yang terhambat</strong>. Kerusakan ini bersifat permanen jika tidak diperbaiki sebelum anak usia 2 tahun (Periode Emas).
+                    </p>
+                    <p>
+                        Panduan ini disusun oleh Tim Medis <strong>Zihan Medical Center</strong> khusus untuk warga Garut, agar si Kecil tumbuh sehat, cerdas, dan membanggakan keluarga.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. RED FLAGS (TANDA BAHAYA) -->
+        <section id="red-flags" class="content-card scroll-mt-24 border-l-8 border-l-orange-500">
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                Kapan Harus Waspada? (Red Flags)
+            </h3>
+            
+            <div class="prose-text">
+                <p>
+                    Seringkali orang tua baru sadar stunting saat melihat anaknya jauh lebih pendek dibanding teman sebayanya. Padahal, tanda-tandanya sudah muncul jauh sebelumnya di <strong>Berat Badan</strong>.
+                </p>
+                <div class="bg-orange-50 p-5 rounded-xl border border-orange-200 mt-4">
+                    <strong class="block text-orange-800 text-lg mb-3"><i class="fas fa-exclamation-circle mr-2"></i>Waspada Berat Badan Seret (Weight Faltering)</strong>
+                    <ul class="text-sm text-slate-700 space-y-2">
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Berat badan <strong>tidak naik</strong> bulan ini dibanding bulan lalu.</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Berat badan naik, tapi <strong>tidak sesuai target</strong> garis kenaikan di KMS (Buku Pink/KIA).</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Grafik pertumbuhan mendatar atau menurun 2 bulan berturut-turut.</li>
+                    </ul>
+                    <div class="mt-4 bg-white p-3 rounded-lg border border-orange-100 text-sm text-orange-800 font-semibold italic text-center">
+                        "Jangan tunggu anak kurus kering. Jika grafik mendatar, segera konsultasi ke Dokter di Zihan Medical Center untuk evaluasi."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ATURAN MAKAN -->
+        <section id="aturan" class="mb-12 scroll-mt-24">
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                <i class="fas fa-gavel text-zmc-red"></i> Pondasi: Aturan Makan (Feeding Rules)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card Jadwal -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-zmc-red transition group">
+                    <div class="text-zmc-teal text-4xl mb-4 group-hover:scale-110 transition"><i class="fas fa-calendar-alt"></i></div>
+                    <h4 class="font-heading font-bold text-lg text-brand-dark mb-2">Jadwal Teratur</h4>
+                      <ul class="text-sm space-y-2 text-gray-600 list-disc pl-4">
+                            <li><strong>3x Makan Utama</strong> (Pagi, Siang, Sore).</li>
+                            <li><strong>2x Selingan/Snack</strong> (Di antara jam makan).</li>
+                            <li>Susu diberikan <strong>setelah makan</strong> atau di jam terpisah.</li>
+                            <li>Batasi waktu makan <strong>maksimal 30 menit</strong>. Habis tidak habis, angkat piring.</li>
+                        </ul>
+                </div>
+
+                <!-- Card Lingkungan -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-zmc-red transition group">
+                    <div class="text-zmc-red text-4xl mb-4 group-hover:scale-110 transition"><i class="fas fa-tv"></i></div>
+                    <h4 class="font-heading font-bold text-lg text-brand-dark mb-2">Lingkungan Menyenangkan</h4>
+                    <ul class="text-sm space-y-2 text-gray-600 list-disc pl-4">
+                        <li><strong>Tidak ada paksaan</strong>. Jangan memarahi anak saat makan.</li>
+                        <li><strong>Singkirkan Distraksi:</strong> Matikan TV, simpan HP/Gadget, jangan beri mainan saat makan.</li>
+                        <li>Biasakan makan bersama keluarga di meja makan.</li>
+                    </ul>
+                </div>
+
+                <!-- Card Prosedur -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-zmc-red transition group">
+                    <div class="text-yellow-500 text-4xl mb-4 group-hover:scale-110 transition"><i class="fas fa-hands-wash"></i></div>
+                    <h4 class="font-heading font-bold text-lg text-brand-dark mb-2">Prosedur Makan</h4>
+                    <ul class="text-sm space-y-2 text-gray-600 list-disc pl-4">
+                        <li>Berikan porsi kecil. Kalau kurang, boleh tambah.</li>
+                        <li>Dorong anak untuk <strong>makan sendiri</strong> (walaupun berantakan, ini proses belajar).</li>
+                        <li>Bersihkan mulut anak hanya <strong>setelah selesai</strong> makan, jangan diusap setiap suapan (mengganggu kenyamanan).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MPASI TABS (ISI PIRINGKU) -->
+        <section id="mpasi" class="content-card scroll-mt-24 p-0 overflow-hidden">
+            <div class="p-6 bg-slate-50 border-b border-slate-200">
+                <h3 class="font-heading text-2xl font-bold text-slate-800 flex items-center gap-3">
+                    <i class="fas fa-utensils text-zmc-teal"></i> Isi Piringku & Tekstur
+                </h3>
+                <p class="text-sm text-slate-500 mt-2">Pilih usia anak untuk melihat detail panduan gizi dan tekstur yang tepat.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex overflow-x-auto bg-white p-2 border-b border-slate-100">
+                <button onclick="switchTab('tab-6-8')" id="btn-6-8" class="tab-btn active-tab flex-shrink-0 px-6 py-3 rounded-lg font-bold text-sm transition mr-2 border border-transparent text-slate-500 hover:bg-slate-50">6-8 Bulan</button>
+                <button onclick="switchTab('tab-9-11')" id="btn-9-11" class="tab-btn flex-shrink-0 px-6 py-3 rounded-lg font-bold text-sm transition mr-2 border border-transparent text-slate-500 hover:bg-slate-50">9-11 Bulan</button>
+                <button onclick="switchTab('tab-12-23')" id="btn-12-23" class="tab-btn flex-shrink-0 px-6 py-3 rounded-lg font-bold text-sm transition mr-2 border border-transparent text-slate-500 hover:bg-slate-50">12-23 Bulan</button>
+                <button onclick="switchTab('tab-2-5')" id="btn-2-5" class="tab-btn flex-shrink-0 px-6 py-3 rounded-lg font-bold text-sm transition border border-transparent text-slate-500 hover:bg-slate-50">2-5 Tahun</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="p-6 lg:p-8">
+                <!-- 6-8 Bulan -->
+                <div id="tab-6-8" class="tab-content active">
+                    <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
+                        <div class="w-full lg:w-1/3 flex flex-col items-center bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                            <div class="plate-chart mb-4 relative bg-white" style="background: conic-gradient(#3b82f6 0% 70%, #f97316 70% 100%);"></div>
+                            <div class="text-center text-xs font-bold space-y-1">
+                                <span class="text-blue-600 block">🟦 70% ASI</span>
+                                <span class="text-orange-600 block">🟧 30% MPASI (Makanan)</span>
+                            </div>
+                            <div class="mt-6 w-full bg-white p-3 rounded-lg text-center border border-slate-100 shadow-sm">
+                                <strong class="block text-slate-800 text-sm mb-1">Tekstur: Bubur Lumat</strong>
+                                <p class="text-xs text-slate-500">Disaring kawat (saringan teh). Kental, tidak tumpah jika sendok dimiringkan.</p>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3 prose-text">
+                            <h4 class="font-heading text-xl font-bold text-zmc-red border-b pb-2 mb-4">Awal MPASI (Periode Kritis)</h4>
+                            <ul>
+                                <li><strong>Porsi:</strong> 2-3 sendok makan, bertahap naik sampai ½ mangkuk (125ml).</li>
+                                <li><strong>Frekuensi:</strong> 2-3x makan utama, 1-2x selingan.</li>
+                                <li><strong>Menu Wajib:</strong> Karbohidrat + <strong>Protein Hewani (Prohe)</strong> + Lemak. Sayur hanya sedikit untuk pengenalan rasa.</li>
+                                <li><strong>Contoh Lemak:</strong> Tambahkan 1 sdt minyak goreng/santan/margarin ke dalam bubur sesaat sebelum makan untuk booster kalori.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9-11 Bulan -->
+                <div id="tab-9-11" class="tab-content">
+                    <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
+                        <div class="w-full lg:w-1/3 flex flex-col items-center bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                            <div class="plate-chart mb-4 relative bg-white" style="background: conic-gradient(#3b82f6 0% 50%, #f97316 50% 100%);"></div>
+                            <div class="text-center text-xs font-bold space-y-1">
+                                <span class="text-blue-600 block">🟦 50% ASI</span>
+                                <span class="text-orange-600 block">🟧 50% MPASI (Makanan)</span>
+                            </div>
+                            <div class="mt-6 w-full bg-white p-3 rounded-lg text-center border border-slate-100 shadow-sm">
+                                <strong class="block text-slate-800 text-sm mb-1">Tekstur: Cincang / Kasar</strong>
+                                <p class="text-xs text-slate-500">Nasi tim, lauk dicincang kasar. Belajar mengunyah. Boleh diberi <em>Finger Food</em>.</p>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3 prose-text">
+                            <h4 class="font-heading text-xl font-bold text-zmc-red border-b pb-2 mb-4">Belajar Mengunyah</h4>
+                            <ul>
+                                <li><strong>Porsi:</strong> ½ sampai ¾ mangkuk ukuran 250ml.</li>
+                                <li><strong>Frekuensi:</strong> 3-4x makan utama, 1-2x selingan.</li>
+                                <li><strong>Naik Tekstur:</strong> Jangan terlambat menaikkan tekstur agar anak tidak malas mengunyah. Jika anak melepeh, jangan langsung diblender lagi, tapi dicoba perlahan.</li>
+                                <li><strong>Finger Food:</strong> Berikan potongan wortel rebus empuk atau telur rebus agar anak belajar memegang sendiri.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12-23 Bulan -->
+                <div id="tab-12-23" class="tab-content">
+                    <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
+                        <div class="w-full lg:w-1/3 flex flex-col items-center bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                            <div class="plate-chart mb-4 relative bg-white" style="background: conic-gradient(#3b82f6 0% 30%, #f97316 30% 100%);"></div>
+                            <div class="text-center text-xs font-bold space-y-1">
+                                <span class="text-blue-600 block">🟦 30% ASI</span>
+                                <span class="text-orange-600 block">🟧 70% MPASI (Makanan)</span>
+                            </div>
+                            <div class="mt-6 w-full bg-white p-3 rounded-lg text-center border border-slate-100 shadow-sm">
+                                <strong class="block text-slate-800 text-sm mb-1">Tekstur: Makanan Keluarga</strong>
+                                <p class="text-xs text-slate-500">Nasi biasa, lauk diiris. Sama dengan menu orang dewasa namun rasa disesuaikan.</p>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3 prose-text">
+                            <h4 class="font-heading text-xl font-bold text-zmc-red border-b pb-2 mb-4">Menu Keluarga Seutuhnya</h4>
+                            <ul>
+                                <li><strong>Porsi:</strong> ¾ sampai 1 mangkuk penuh ukuran 250ml.</li>
+                                <li><strong>Susu:</strong> Susu UHT/Formula hanyalah tambahan, maksimal 500ml sehari. Jangan biarkan anak kenyang susu tapi menolak nasi.</li>
+                                <li><strong>Variasi:</strong> Kenalkan berbagai rasa dan jenis protein (Ikan, Ayam, Daging, Telur) agar tidak <em>picky eater</em>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-5 Tahun -->
+                <div id="tab-2-5" class="tab-content">
+                    <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
+                        <div class="w-full lg:w-1/3 flex flex-col items-center bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                            <div class="plate-chart mb-4 relative bg-white" style="background: conic-gradient(#fbbf24 0% 35%, #22c55e 35% 70%, #ef4444 70% 85%, #f97316 85% 100%);"></div>
+                            <div class="grid grid-cols-2 gap-2 text-[10px] font-bold w-full px-2 text-center">
+                                <span class="block text-yellow-600">🟡 35% Nasi</span>
+                                <span class="block text-green-600">🟢 35% Sayur</span>
+                                <span class="block text-red-600">🔴 15% Lauk</span>
+                                <span class="block text-orange-600">🟠 15% Buah</span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3 prose-text">
+                            <h4 class="font-heading text-xl font-bold text-zmc-red border-b pb-2 mb-4">Gizi Seimbang Anak Sekolah</h4>
+                            <ul>
+                                <li><strong>Pola Makan:</strong> Anak mulai aktif bermain. Pastikan asupan energi cukup dari karbohidrat.</li>
+                                <li><strong>Cairan:</strong> Minum air putih 5-7 gelas sehari. Batasi minuman manis kemasan (teh kotak/soda).</li>
+                                <li><strong>Cegah Obesitas:</strong> Batasi gula, garam, dan gorengan berlebih. Utamakan protein dan serat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Takaran Penukar -->
+                <div class="mt-8 pt-6 border-t border-slate-200">
+                    <h5 class="text-sm font-bold text-slate-800 mb-3 text-center">Setara dengan 1 Porsi Protein Hewani:</h5>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-yellow-50 p-3 rounded-lg text-center border border-yellow-200">
+                            <div class="text-2xl">🥚</div>
+                            <div class="text-xs font-bold text-slate-700 mt-1">1 Butir Telur Ayam</div>
+                        </div>
+                        <div class="bg-red-50 p-3 rounded-lg text-center border border-red-200">
+                            <div class="text-2xl">🥩</div>
+                            <div class="text-xs font-bold text-slate-700 mt-1">35-50g Daging Sapi</div>
+                        </div>
+                        <div class="bg-orange-50 p-3 rounded-lg text-center border border-orange-200">
+                            <div class="text-2xl">🍗</div>
+                            <div class="text-xs font-bold text-slate-700 mt-1">40-50g Ayam</div>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg text-center border border-blue-200">
+                            <div class="text-2xl">🐟</div>
+                            <div class="text-xs font-bold text-slate-700 mt-1">40-50g Ikan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. RESEP LOKAL GARUT (NEW) -->
+        <section id="resep" class="mb-12 scroll-mt-24">
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                <i class="fas fa-carrot text-green-600"></i> Resep Kearifan Lokal (Murah & Bergizi)
+            </h3>
+            <p class="mb-6 text-slate-600 text-justify">
+                Mencegah stunting tidak harus mahal. Bahan pangan di pasar Wanaraja sangat bergizi. Berikut ide menu "4 Bintang" sederhana:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Resep 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-yellow-100 p-4 flex justify-between items-center">
+                        <h4 class="font-bold text-slate-800">Tim Ikan Mas Kuah Kuning</h4>
+                        <span class="bg-white text-yellow-700 text-xs px-2 py-1 rounded font-bold">± Rp 5.000/porsi</span>
+                    </div>
+                    <div class="p-4 text-sm text-slate-600">
+                        <p class="mb-2"><strong>Bahan:</strong> Ikan mas (ambil dagingnya saja), Tahu kuning dihancurkan, Wortel parut, Santan segar, Bumbu kuning (kunyit, salam, sereh).</p>
+                        <p><strong>Cara:</strong> Masak nasi hingga lembek. Tumis bumbu kuning, masukkan santan, ikan, dan tahu. Masak hingga matang dan kuah menyusut. Sajikan dengan nasi tim.</p>
+                        <p class="mt-2 text-xs text-green-600 font-semibold"><i class="fas fa-check"></i> Tinggi Protein & Lemak Baik.</p>
+                    </div>
+                </div>
+                <!-- Resep 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-red-100 p-4 flex justify-between items-center">
+                        <h4 class="font-bold text-slate-800">Bubur Hati Ayam Bayam</h4>
+                        <span class="bg-white text-red-700 text-xs px-2 py-1 rounded font-bold">Zat Besi Tinggi</span>
+                    </div>
+                    <div class="p-4 text-sm text-slate-600">
+                        <p class="mb-2"><strong>Bahan:</strong> Hati ayam (rebus, buang airnya, cincang), Tempe, Bayam merah/hijau, Minyak ayam/margarin.</p>
+                        <p><strong>Cara:</strong> Masak bubur. Tumis hati ayam dan tempe dengan minyak/margarin. Masukkan bayam sesaat sebelum matang. Campurkan ke bubur.</p>
+                        <p class="mt-2 text-xs text-green-600 font-semibold"><i class="fas fa-check"></i> Superfood Mencegah Anemia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. KESEHATAN (ANEMIA & SANITASI) (NEW) -->
+        <section id="kesehatan" class="mb-12 scroll-mt-24">
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6">Musuh Terselubung: Anemia & Kebersihan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Anemia -->
+                <div class="content-card mb-0 bg-red-50 border-red-100">
+                    <h4 class="font-bold text-zmc-red text-lg mb-3"><i class="fas fa-tint mr-2"></i>Cegah Anemia (Kurang Darah)</h4>
+                    <p class="text-sm text-slate-700 mb-3 text-justify">
+                        Anak yang kurang Zat Besi akan terlihat pucat, lemas, tidak nafsu makan, dan otaknya lambat berkembang.
+                    </p>
+                    <ul class="text-sm text-slate-700 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Wajib makan <strong>Hati Ayam / Daging Merah</strong> minimal 2-3x seminggu.</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i><strong>JANGAN minum Teh/Kopi</strong> setelah makan, karena menghambat penyerapan gizi.</li>
+                    </ul>
+                </div>
+                <!-- Sanitasi -->
+                <div class="content-card mb-0 bg-blue-50 border-blue-100">
+                    <h4 class="font-bold text-blue-800 text-lg mb-3"><i class="fas fa-soap mr-2"></i>Kebersihan (Sanitasi)</h4>
+                    <p class="text-sm text-slate-700 mb-3 text-justify">
+                        Percuma makanan bergizi jika anak sering diare atau cacingan. Nutrisi akan terbuang percuma.
+                    </p>
+                    <ul class="text-sm text-slate-700 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Cuci tangan pakai sabun sebelum menyuapi.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Pastikan air minum dimasak matang.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Minum obat cacing rutin 6 bulan sekali (untuk anak >1 tahun).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SOLUSI GTM -->
+        <section id="gtm" class="mb-12 scroll-mt-24">
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                <i class="fas fa-sad-tear text-orange-500"></i> Anak GTM? Jangan Panik
+            </h3>
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 p-4 shadow-sm open:bg-slate-50 transition">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-slate-800">
+                        <span>Anak Melepeh Makanan</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-sm text-slate-600 mt-3 pl-4 border-l-2 border-zmc-red text-justify">
+                        Cek teksturnya, mungkin terlalu kasar atau keras. Coba haluskan sedikit. Jangan dipaksa masuk lagi, tawarkan air putih dulu, coba lagi 5 menit kemudian. Jika tetap menolak setelah 15 menit, hentikan proses makan.
+                    </div>
+                </details>
+                
+                <details class="group bg-white rounded-xl border border-slate-200 p-4 shadow-sm open:bg-slate-50 transition">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-slate-800">
+                        <span>Anak Hanya Mau Makan Kalau Nonton HP</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-sm text-slate-600 mt-3 pl-4 border-l-2 border-zmc-red text-justify">
+                        Ini kebiasaan yang harus dikurangi pelan-pelan (<em>Weaning screen time</em>). Nonton HP membuat anak tidak sadar rasa lapar/kenyang. Ganti dengan interaksi verbal: "Adek, lihat ikannya berenang ke mulut, hap!"
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 p-4 shadow-sm open:bg-slate-50 transition">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer text-slate-800">
+                        <span>Anak Mingkem Rapat / Menutup Mulut</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-sm text-slate-600 mt-3 pl-4 border-l-2 border-zmc-red text-justify">
+                        Evaluasi jam makan. Apakah anak masih kenyang karena susu atau cemilan di luar jadwal? Coba ganti suasana makan (misal: di teras) atau ganti alat makan yang menarik.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 7. MITOS VS FAKTA (NEW) -->
+        <section id="mitos" class="mb-12 scroll-mt-24">
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6">Mitos vs Fakta di Masyarakat</h3>
+            <div class="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+                <table class="min-w-full bg-white text-left text-sm">
+                    <thead class="bg-slate-100 text-slate-700 font-heading">
+                        <tr>
+                            <th class="px-6 py-4 w-1/2">Mitos (Salah) ❌</th>
+                            <th class="px-6 py-4 w-1/2">Fakta (Benar) ✅</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-6 py-4">"Jangan kasih ikan, nanti cacingan/gatal."</td>
+                            <td class="px-6 py-4 font-semibold text-green-700">Ikan matang aman & sumber protein terbaik kecerdasan.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-6 py-4">"Kasih pisang kerok biar bayi < 6 bulan anteng."</td>
+                            <td class="px-6 py-4 font-semibold text-green-700">Bahaya usus terlipat (Invaginasi). Usus bayi belum siap.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-6 py-4">"Anak gemuk pasti sehat."</td>
+                            <td class="px-6 py-4 font-semibold text-green-700">Belum tentu. Gemuk bisa jadi obesitas gula, bukan otot/tulang.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-6 py-4">"Makan kuah sayur saja cukup."</td>
+                            <td class="px-6 py-4 font-semibold text-green-700">Salah. Anak butuh "isinya" (daging/ayam) untuk tumbuh.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 8. FAQ (TANYA JAWAB) (NEW) -->
+        <section id="faq" class="mb-16 scroll-mt-24">
+            <h3 class="font-heading text-2xl font-bold text-slate-800 mb-6">Pertanyaan Sering Ditanyakan (FAQ)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <strong class="text-zmc-red block mb-2"><i class="fas fa-question-circle mr-1"></i> Dok, anak saya alergi telur, gantinya apa?</strong>
+                    <p class="text-sm text-slate-600">Bisa diganti dengan protein hewani lain seperti Ikan, Daging Ayam, atau Daging Sapi dengan takaran yang setara.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <strong class="text-zmc-red block mb-2"><i class="fas fa-question-circle mr-1"></i> Apakah perlu vitamin penambah nafsu makan?</strong>
+                    <p class="text-sm text-slate-600">Vitamin hanya suplemen. Yang utama adalah perbaiki aturan makan (feeding rules). Konsultasikan ke dokter ZMC jika berat badan tak kunjung naik.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <strong class="text-zmc-red block mb-2"><i class="fas fa-question-circle mr-1"></i> Bolehkah MPASI pakai garam/gula?</strong>
+                    <p class="text-sm text-slate-600">Boleh sedikit saja untuk perasa (seujung sendok teh), agar anak mau makan. Yang dilarang adalah penyedap berlebihan dan makanan instan tinggi natrium.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOCTOR CTA -->
+        <div class="bg-gradient-to-r from-zmc-dark to-slate-800 rounded-2xl p-8 text-center text-white mb-12 shadow-xl">
+            <h3 class="font-heading text-2xl font-bold mb-2">Masih Bingung atau Khawatir Grafik Anak Merah?</h3>
+            <p class="mb-6 text-slate-300">Tim Dokter Umum & Anak di Zihan Medical Center siap membantu evaluasi tumbuh kembang si Kecil.</p>
+            <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" class="inline-block bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full transition shadow-lg transform hover:scale-105">
+                <i class="fab fa-whatsapp mr-2"></i> Chat Dokter Sekarang
+            </a>
+        </div>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-slate-200 pt-12 pb-8 lg:pl-72 relative z-30">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Brand Info -->
+            <div>
+                <img src="https://i.imgur.com/jzuguQE.jpeg" alt="Logo ZMC Footer" class="h-12 w-auto mb-4 object-contain">
+                <h3 class="font-heading font-bold text-lg text-slate-800">Zihan Medical Center</h3>
+                <p class="text-zmc-red font-semibold italic text-sm mb-4">#ZMCGakNyuekinKamu</p>
+                <p class="text-sm text-slate-500 leading-relaxed mb-4">
+                    Fasilitas Lengkap: Poli Umum, Rawat Inap, Laboratorium, dan Farmasi. Melayani dengan hati untuk keluarga Garut.
+                </p>
+                <div class="flex gap-3">
+                    <a href="https://www.instagram.com/zihanmedicalcenter/?hl=en" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-pink-600 hover:bg-pink-50 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-green-600 hover:bg-green-50 transition"><i class="fab fa-whatsapp text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-heading font-bold text-lg text-slate-800 mb-4 border-l-4 border-zmc-red pl-3">Kontak & Lokasi</h4>
+                <ul class="space-y-4 text-sm text-slate-600">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt text-zmc-red mt-1 text-lg"></i>
+                        <span>Jl. Kudang, Wanajaya, Wanaraja,<br>Kabupaten Garut, Jawa Barat 44183</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-zmc-teal text-lg"></i>
+                        <span>+62 822-1718-0432</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="far fa-clock text-orange-500 text-lg"></i>
+                        <span>Senin - Minggu: <strong>24 Jam</strong></span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Maps CTA -->
+            <div>
+                <h4 class="font-heading font-bold text-lg text-slate-800 mb-4 border-l-4 border-zmc-red pl-3">Temukan Kami</h4>
+                <div class="bg-slate-100 p-4 rounded-xl text-center">
+                    <p class="text-xs text-slate-500 mb-3">Klik tombol di bawah untuk panduan arah via Google Maps</p>
+                    <a href="https://maps.app.goo.gl/CYpDhM1bGBnSf7D77" target="_blank" class="block w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2">
+                        <i class="fas fa-location-arrow"></i> Buka Peta
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-slate-100 mt-10 pt-6 text-center">
+            <p class="text-xs text-slate-400">
+                &copy; 2024 Zihan Medical Center. Informasi ini bertujuan edukasi, bukan pengganti konsultasi medis profesional.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- JS Logic Tabs & Scroll Spy -->
+<script>
+    // Tab Logic
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => {
+            b.classList.remove('active-tab');
+            b.classList.add('text-slate-500', 'hover:bg-slate-50');
+        });
+
+        document.getElementById(tabId).classList.add('active');
+        const btnId = tabId.replace('tab', 'btn');
+        const activeBtn = document.getElementById(btnId);
+        activeBtn.classList.add('active-tab');
+        activeBtn.classList.remove('text-slate-500', 'hover:bg-slate-50');
+    }
+
+    // Simple Scroll Spy for Sidebar Active State
+    window.addEventListener('scroll', () => {
+        const sections = ['intro', 'red-flags', 'aturan', 'mpasi', 'resep', 'kesehatan', 'gtm', 'mitos', 'faq'];
+        let current = '';
+
+        sections.forEach(section => {
+            const element = document.getElementById(section);
+            if (element && window.scrollY >= (element.offsetTop - 150)) {
+                current = section;
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

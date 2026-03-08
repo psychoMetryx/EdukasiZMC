@@ -1,0 +1,31 @@
+Starting up http-server, serving .
+
+http-server version: 14.1.1
+
+http-server settings: 
+CORS: disabled
+Cache: 3600 seconds
+Connection Timeout: 120 seconds
+Directory Listings: visible
+AutoIndex: visible
+Serve GZIP Files: false
+Serve Brotli Files: false
+Default File Extension: none
+
+Available on:
+  http://192.168.100.8:4173
+  http://127.0.0.1:4173
+Hit CTRL-C to stop the server
+
+[2026-03-05T06:56:33.693Z]  "GET /topics/batuk-pilek-anak.html?theme=light" "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.6456"
+[2026-03-05T06:56:54.882Z]  "GET /topics/batuk-pilek-anak.html?theme=light&v=20260305b" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T06:57:07.643Z]  "GET /topics/batuk-pilek-anak.html?theme=light&v=20260305c" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T06:57:28.234Z]  "GET /topics/batuk-pilek-anak.html?theme=light&v=20260305d" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T06:57:35.029Z]  "GET /topics/batuk-pilek-anak.html?icons=fallback&theme=light&v=20260305e" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T06:57:52.244Z]  "GET /topics/batuk-pilek-anak.html?theme=light&v=20260305f" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T07:01:00.863Z]  "GET /topics/batuk-pilek-anak.html?v=1772694025" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T07:01:10.606Z]  "GET /topics/batuk-pilek-anak.html?v=1772694025&theme=light" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T07:02:31.135Z]  "GET /topics/batuk-pilek-anak.html?v=1772694125&theme=light" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T07:02:36.650Z]  "GET /topics/batuk-pilek-anak.html?v=1772694125&theme=light&icons=fallback" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T07:07:33.179Z]  "GET /topics/batuk-pilek-anak.html?v=1772694431&theme=light" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+[2026-03-05T07:08:03.504Z]  "GET /topics/batuk-pilek-anak.html?v=1772694431&theme=light&icons=fallback" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
