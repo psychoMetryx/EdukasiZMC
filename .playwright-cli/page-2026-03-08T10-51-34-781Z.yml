@@ -1,0 +1,243 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "Logo Zihan Medical Center" [ref=e5]
+        - generic [ref=e6]:
+          - paragraph [ref=e7]: Edukasi Klinis ZMC Wanaraja
+          - heading "Panduan Keluhan Lambung untuk Warga Garut" [level=1] [ref=e8]
+      - button "Tema Malam" [ref=e10] [cursor=pointer]
+  - generic [ref=e11]:
+    - region "Nyeri ulu hati sering membaik bila pemicu dikenali, pola makan dirapikan, dan tanda bahaya tidak diabaikan." [ref=e12]:
+      - generic [ref=e14]:
+        - heading "Nyeri ulu hati sering membaik bila pemicu dikenali, pola makan dirapikan, dan tanda bahaya tidak diabaikan." [level=2] [ref=e15]
+        - text:   
+    - generic [ref=e16]:
+      - paragraph [ref=e17]: "Ringkasan satu kalimat: keluhan lambung sering bisa dikendalikan di rumah, tetapi perlu dievaluasi cepat jika gejalanya berat, menetap, atau tidak sesuai pola biasanya."
+      - navigation "Navigasi cepat section" [ref=e18]:
+        - link "Pahami Keluhan" [ref=e19] [cursor=pointer]:
+          - /url: "#pahami"
+        - link "Langkah Aman" [ref=e20] [cursor=pointer]:
+          - /url: "#langkah"
+        - link "Makan Lokal" [ref=e21] [cursor=pointer]:
+          - /url: "#makan"
+        - link "Dokter / IGD" [ref=e22] [cursor=pointer]:
+          - /url: "#redflags"
+        - link "FAQ" [ref=e23] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Rujukan" [ref=e24] [cursor=pointer]:
+          - /url: "#rujukan"
+    - main [ref=e25]:
+      - generic [ref=e26]:
+        - 'heading "1) Pahami dulu: maag, asam lambung, dan tukak itu tidak selalu sama" [level=2] [ref=e27]'
+        - paragraph [ref=e28]: Pasien sering menyebut semua nyeri ulu hati sebagai "maag". Padahal keluhan lambung bisa berasal dari dispepsia, refluks asam lambung, sampai tukak lambung. Bedanya penting karena arah evaluasi dan tanda bahayanya tidak sama.
+        - generic [ref=e29]:
+          - article [ref=e30]:
+            - heading "Maag / dispepsia" [level=3] [ref=e31]
+            - paragraph [ref=e32]: Biasanya terasa sebagai nyeri ulu hati, begah, mual, cepat kenyang, atau perut bagian atas terasa tidak nyaman setelah makan. Keluhan ini bisa dipicu pola makan, stres, rokok, kopi, atau obat tertentu.
+            - generic [ref=e33]:
+              - strong [ref=e34]: "Kapan evaluasi:"
+              - text: periksa bila keluhan berulang, mengganggu makan, atau tidak membaik dalam 1-2 minggu.
+          - article [ref=e35]:
+            - heading "Asam lambung naik (GERD)" [level=3] [ref=e36]
+            - paragraph [ref=e37]: Keluhan khasnya rasa panas dari ulu hati ke dada, mulut terasa asam atau pahit, dan sering kambuh setelah makan besar atau saat berbaring. Pada sebagian orang juga muncul batuk malam atau suara serak.
+            - generic [ref=e38]:
+              - strong [ref=e39]: "Kapan evaluasi:"
+              - text: periksa bila keluhan sering kambuh malam, butuh obat terus-menerus, atau sampai mengganggu tidur.
+          - article [ref=e40]:
+            - heading "Tukak lambung / usus dua belas jari" [level=3] [ref=e41]
+            - paragraph [ref=e42]:
+              - text: Ini adalah luka pada dinding lambung atau usus dua belas jari. Penyebab yang sering dibahas dalam panduan resmi adalah infeksi
+              - emphasis [ref=e43]: H. pylori
+              - text: dan penggunaan obat anti-nyeri golongan NSAID terlalu sering.
+            - generic [ref=e44]:
+              - strong [ref=e45]: "Kapan evaluasi:"
+              - text: curiga bila ada muntah darah, BAB hitam, lemas berat, atau nyeri menetap yang makin berat.
+        - generic [ref=e46]:
+          - strong [ref=e47]: "Catatan penting:"
+          - text: nyeri lambung kadang mirip nyeri jantung. Kalau nyeri dada terasa menekan, menjalar ke rahang/lengan/punggung, disertai sesak, keringat dingin, atau hampir pingsan, anggap darurat sampai terbukti bukan.
+      - generic [ref=e48]:
+        - heading "2) Langkah aman di rumah selama 24-48 jam" [level=2] [ref=e49]
+        - paragraph [ref=e50]: Langkah ini cocok untuk keluhan ringan sampai sedang yang polanya mirip kambuhan biasa dan tidak disertai tanda bahaya. Tujuannya bukan menunda pemeriksaan, tetapi mengurangi iritasi sambil memantau apakah gejala membaik atau justru memburuk.
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - heading "Yang sebaiknya dilakukan" [level=3] [ref=e53]
+            - list [ref=e54]:
+              - listitem [ref=e55]: Makan porsi kecil tetapi lebih sering. Hindari makan sangat banyak sekaligus.
+              - listitem [ref=e56]: Berikan jeda sekitar 2-3 jam antara makan malam dan waktu tidur.
+              - listitem [ref=e57]: Kalau keluhan sering muncul saat malam, tinggikan kepala saat tidur dan hindari rebahan setelah makan.
+              - listitem [ref=e58]: Minum cukup air putih dan pilih makanan yang lebih ringan, tidak terlalu berminyak, tidak terlalu pedas, dan tidak terlalu asam.
+              - listitem [ref=e59]: Catat pemicu pribadi seperti kopi pekat, sambal, gorengan, rokok, stres, atau makan terlalu larut.
+            - generic [ref=e60]:
+              - strong [ref=e61]: "Tanda membaik:"
+              - text: nyeri berkurang, mual turun, bisa makan lebih nyaman, dan tidak ada keluhan baru.
+          - generic [ref=e62]:
+            - heading "Yang perlu dibatasi atau dihindari" [level=3] [ref=e63]
+            - list [ref=e64]:
+              - listitem [ref=e65]: Merokok, alkohol, soda, minuman energi, dan kopi atau teh pekat saat perut kosong.
+              - listitem [ref=e66]: Gorengan, makanan sangat pedas, dan makan besar menjelang tidur.
+              - listitem [ref=e67]: Obat anti-nyeri golongan NSAID seperti ibuprofen, aspirin dosis nyeri, atau asam mefenamat tanpa arahan dokter.
+              - listitem [ref=e68]:
+                - text: Mengobati sendiri dugaan
+                - emphasis [ref=e69]: H. pylori
+                - text: dengan antibiotik tanpa pemeriksaan dan resep yang benar.
+              - listitem [ref=e70]: Membiarkan keluhan lama tanpa evaluasi jika gejalanya berubah atau makin sering kambuh.
+            - generic [ref=e71]:
+              - strong [ref=e72]: "Segera naik level evaluasi:"
+              - text: bila dalam 24-48 jam keluhan tidak membaik, justru makin berat, atau muncul muntah berulang, sulit makan, dan lemas.
+        - generic [ref=e73]:
+          - strong [ref=e74]: "Kondisi khusus yang perlu lebih cepat konsultasi:"
+          - text: hamil, usia lanjut, penyakit ginjal/hati/jantung, riwayat tukak atau perdarahan lambung, penggunaan pengencer darah, atau riwayat alergi obat berat.
+      - generic [ref=e75]:
+        - 'heading "3) Panduan makan lokal Sunda: mana yang lebih aman, mana yang sering memicu" [level=2] [ref=e76]'
+        - paragraph [ref=e77]: Tidak semua makanan memicu pada semua orang. Daftar ini dipakai sebagai titik awal. Setelah gejala mereda, makanan bisa diuji satu per satu dengan porsi kecil untuk melihat respon tubuh.
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - heading "Lebih aman saat lambung sedang sensitif" [level=3] [ref=e81]
+              - list [ref=e82]:
+                - listitem [ref=e83]: Nasi hangat dengan lauk rebus, kukus, pepes, atau panggang ringan bumbu.
+                - listitem [ref=e84]: Pepes ikan atau tahu tanpa cabai berlebihan.
+                - listitem [ref=e85]: Sayur bening, sop bening, tumis ringan dengan minyak sedikit.
+                - listitem [ref=e86]: Buah yang cenderung tidak asam seperti pisang dan pepaya.
+                - listitem [ref=e87]: Camilan sederhana seperti biskuit tawar bila jeda makan terlalu panjang.
+            - generic [ref=e88]:
+              - heading "Sering perlu dibatasi saat kambuh" [level=3] [ref=e89]
+              - list [ref=e90]:
+                - listitem [ref=e91]: Seblak, sambal sangat pedas, kuah sangat asam, dan makanan berempah sangat kuat.
+                - listitem [ref=e92]: Bala-bala, gehu, cireng goreng, dan gorengan lain yang berminyak.
+                - listitem [ref=e93]: Kopi tubruk pekat, soda, minuman energi, dan makan mi atau gorengan larut malam.
+                - listitem [ref=e94]: Porsi besar sekaligus walaupun jenis makanannya terasa "aman".
+          - complementary "Ringkasan praktis makanan dan pemicu" [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e99]: 
+              - generic [ref=e100]:
+                - strong [ref=e101]: Pilih cara masak ringan
+                - text: Rebus, kukus, pepes, dan kuah bening biasanya lebih mudah diterima lambung dibanding goreng atau tumis berat.
+            - generic [ref=e102]:
+              - generic [ref=e105]: 
+              - generic [ref=e106]:
+                - strong [ref=e107]: Pedas bukan satu-satunya pemicu
+                - text: Makan terlalu larut, kopi pekat, porsi besar, rokok, dan stres juga sering ikut berperan.
+            - generic [ref=e108]:
+              - generic [ref=e111]: 
+              - generic [ref=e112]:
+                - strong [ref=e113]: Catat pola tubuh sendiri
+                - text: Jika makanan tertentu selalu memicu 2-3 kali, kemungkinan besar memang perlu dibatasi lebih lama.
+            - generic [ref=e114]:
+              - generic [ref=e117]: 
+              - generic [ref=e118]:
+                - strong [ref=e119]: Kapan periksa
+                - text: Bila makan makin sulit, turun berat badan, atau nyeri tetap berat walau sudah mengurangi pemicu.
+      - generic [ref=e120]:
+        - heading "4) Kapan cukup periksa ke dokter, dan kapan harus langsung ke IGD" [level=2] [ref=e121]
+        - paragraph [ref=e122]: Bagian ini penting karena banyak pasien menunggu terlalu lama. Keluhan lambung yang ringan memang bisa dipantau singkat, tetapi ada gejala yang harus dianggap darurat.
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - heading "Periksa ke dokter dalam waktu dekat bila:" [level=3] [ref=e125]
+            - list [ref=e126]:
+              - listitem [ref=e127]: Keluhan tidak membaik dalam 1-2 minggu atau makin sering kambuh.
+              - listitem [ref=e128]: Sering perlu obat lambung terus-menerus untuk bisa nyaman.
+              - listitem [ref=e129]: Nyeri atau rasa panas sering muncul malam hari dan mengganggu tidur.
+              - listitem [ref=e130]: Sering mual, cepat kenyang, nafsu makan turun, atau berat badan mulai turun.
+              - listitem [ref=e131]: Ada riwayat tukak lambung, perdarahan lambung, atau sering minum NSAID.
+            - generic [ref=e132]:
+              - strong [ref=e133]: "Tujuan periksa:"
+              - text: memastikan ini memang keluhan lambung biasa, bukan tukak, efek obat, atau penyakit lain yang butuh tata laksana berbeda.
+          - generic [ref=e134]:
+            - heading "Segera ke IGD bila ada tanda bahaya ini:" [level=3] [ref=e135]
+            - list [ref=e136]:
+              - listitem [ref=e137]: Nyeri dada berat atau menekan, terutama jika menjalar ke rahang, lengan, punggung, atau disertai sesak.
+              - listitem [ref=e138]: Muntah darah, muntah seperti kopi, atau BAB hitam seperti aspal.
+              - listitem [ref=e139]: Muntah terus-menerus sampai tidak bisa masuk minum atau tampak dehidrasi.
+              - listitem [ref=e140]: Sulit menelan, nyeri menelan yang makin berat, atau makanan seperti tersangkut.
+              - listitem [ref=e141]: Lemas berat, pusing, keringat dingin, hampir pingsan, atau pingsan.
+            - generic [ref=e142]:
+              - strong [ref=e143]: "Jangan ditunda sampai besok:"
+              - text: red flag ini bisa menandakan perdarahan, dehidrasi berat, sumbatan, atau masalah jantung yang kebetulan terasa seperti maag.
+      - generic [ref=e144]:
+        - heading "5) FAQ singkat yang sering ditanyakan pasien" [level=2] [ref=e145]
+        - list [ref=e146]:
+          - listitem [ref=e147]:
+            - button "Apakah semua nyeri ulu hati pasti cuma maag?" [ref=e148] [cursor=pointer]
+          - listitem [ref=e149]:
+            - button "Kalau sedang kambuh, apakah semua makanan pedas harus dihentikan selamanya?" [ref=e150] [cursor=pointer]
+          - listitem [ref=e151]:
+            - button "Boleh minum kopi tubruk kalau punya riwayat asam lambung?" [ref=e152] [cursor=pointer]
+          - listitem [ref=e153]:
+            - button "Kapan perlu cek lanjut, misalnya untuk dugaan H. pylori atau tukak?" [ref=e154] [cursor=pointer]
+      - generic [ref=e155]:
+        - heading "6) Rujukan edukasi resmi" [level=2] [ref=e156]
+        - paragraph [ref=e157]:
+          - text: Konten diperbarui pada
+          - strong [ref=e158]: 8 Maret 2026
+          - text: "dengan penyederhanaan bahasa pasien berdasarkan sumber resmi berikut:"
+        - list [ref=e159]:
+          - listitem [ref=e160]:
+            - text: "Kemenkes RI Keslan - gejala sakit maag dapat mirip serangan jantung:"
+            - link "https://keslan.kemkes.go.id/view_artikel/3200/jangan-anggap-remeh-bergejala-sakit-maag-ternyata-serangan-jantung" [ref=e161] [cursor=pointer]:
+              - /url: https://keslan.kemkes.go.id/view_artikel/3200/jangan-anggap-remeh-bergejala-sakit-maag-ternyata-serangan-jantung
+          - listitem [ref=e162]:
+            - text: "WHO - Healthy diet fact sheet:"
+            - link "https://www.who.int/news-room/fact-sheets/detail/healthy-diet" [ref=e163] [cursor=pointer]:
+              - /url: https://www.who.int/news-room/fact-sheets/detail/healthy-diet
+          - listitem [ref=e164]:
+            - text: "CDC - Heart attack symptoms and warning signs:"
+            - link "https://www.cdc.gov/heart-disease/about/heart-attack.html" [ref=e165] [cursor=pointer]:
+              - /url: https://www.cdc.gov/heart-disease/about/heart-attack.html
+          - listitem [ref=e166]:
+            - text: "MedlinePlus - Indigestion:"
+            - link "https://medlineplus.gov/indigestion.html" [ref=e167] [cursor=pointer]:
+              - /url: https://medlineplus.gov/indigestion.html
+          - listitem [ref=e168]:
+            - text: "MedlinePlus - GERD:"
+            - link "https://medlineplus.gov/gerd.html" [ref=e169] [cursor=pointer]:
+              - /url: https://medlineplus.gov/gerd.html
+          - listitem [ref=e170]:
+            - text: "MedlinePlus - Peptic ulcer:"
+            - link "https://medlineplus.gov/pepticulcer.html" [ref=e171] [cursor=pointer]:
+              - /url: https://medlineplus.gov/pepticulcer.html
+          - listitem [ref=e172]:
+            - text: "NICE CG184 - Gastro-oesophageal reflux disease and dyspepsia in adults:"
+            - link "https://www.nice.org.uk/guidance/cg184/chapter/Recommendations" [ref=e173] [cursor=pointer]:
+              - /url: https://www.nice.org.uk/guidance/cg184/chapter/Recommendations
+        - generic [ref=e174]:
+          - link " Chat WhatsApp Klinik" [ref=e175] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+            - generic [ref=e177]: 
+            - text: Chat WhatsApp Klinik
+          - link " Rute ke Klinik" [ref=e178] [cursor=pointer]:
+            - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+            - generic [ref=e180]: 
+            - text: Rute ke Klinik
+          - link " Telepon Klinik" [ref=e181] [cursor=pointer]:
+            - /url: tel:+6282217180432
+            - generic [ref=e183]: 
+            - text: Telepon Klinik
+          - button "Print / Save PDF" [ref=e184] [cursor=pointer]
+    - contentinfo [ref=e185]:
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - heading "Zihan Medical Center" [level=2] [ref=e188]
+          - paragraph [ref=e189]: "#ZMCGakNyuekinKamu"
+          - paragraph [ref=e190]: Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183
+        - generic [ref=e191]:
+          - heading "Kontak Cepat" [level=3] [ref=e192]
+          - generic [ref=e193]:
+            - link " WhatsApp" [ref=e194] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+              - generic [ref=e196]: 
+              - text: WhatsApp
+            - link " Google Maps" [ref=e197] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+              - generic [ref=e199]: 
+              - text: Google Maps
+            - link " Instagram" [ref=e200] [cursor=pointer]:
+              - /url: https://www.instagram.com/zihanmedicalcenter/?hl=en
+              - generic [ref=e202]: 
+              - text: Instagram
+        - generic [ref=e203]:
+          - heading "Jam Layanan" [level=3] [ref=e204]
+          - paragraph [ref=e205]: "Senin - Minggu: 24 Jam"
+          - paragraph [ref=e206]: "Telepon: +62 822-1718-0432"
+          - paragraph [ref=e207]: © 2026 Zihan Medical Center

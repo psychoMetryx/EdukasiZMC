@@ -1,0 +1,3 @@
+[     291ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8123/assets/zmc-logo.jpeg:0
+[     316ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8123/topics/assets/zmc-logo.jpeg:0
+[     581ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8123/favicon.ico:0
