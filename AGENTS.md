@@ -147,17 +147,30 @@ const ZMC = {
 3. Tidak ada overflow horizontal.
 4. Tinggi kartu tidak fixed jika tidak perlu.
 5. Tab/accordion punya ARIA + keyboard support.
-6. Print tidak memotong bagian penting.
-7. Link footer berfungsi: WA, Maps, Instagram.
-8. Dark/light theme parity valid dan kontras aman.
-9. Tombol print berada di area bawah halaman.
-10. Visual lokal tetap tampil saat offline.
-11. Tidak ada ketergantungan external image API.
-12. Ilustrasi tetap tampil saat file lokal dibuka langsung.
-13. Ikon tampil normal saat online, dan fallback ikon aktif saat CDN gagal.
-14. Hero height sesuai rentang compact.
-15. Artefak QA tersimpan: screenshot viewport + PDF print check.
-16. Jika memakai chunked write, semua section tetap utuh.
+6. Hero tidak menyisakan dead space besar atau panel yang terasa kosong.
+7. SVG/visual tidak clipping, termasuk teks kecil di dalam ilustrasi.
+8. Print tidak memotong bagian penting, termasuk hero atau callout utama.
+9. Link footer berfungsi: WA, Maps, Instagram.
+10. Dark/light theme parity valid dan kontras aman.
+11. Tombol print berada di area bawah halaman.
+12. Visual lokal tetap tampil saat offline.
+13. Tidak ada ketergantungan external image API.
+14. Ilustrasi tetap tampil saat file lokal dibuka langsung.
+15. Ikon tampil normal saat online, dan fallback ikon aktif saat CDN gagal.
+16. Hero height sesuai rentang compact.
+17. Copy medis, red flags, dan rujukan masih selaras dengan sumber resmi terbaru.
+18. Artefak QA tersimpan: screenshot viewport + PDF print check.
+19. Jika memakai chunked write, semua section tetap utuh.
+
+## Common QA Failures
+- `Layout rhythm`: hero kiri terlalu tinggi, panel kanan kosong, visual terlalu kecil, atau section setelah hero terasa seperti deretan box identik. Cek ulang proporsi hero, panjang headline, dan hierarchy antarsection sebelum menyatakan desain selesai.
+- `Responsive/mobile`: chips, tabel, atau grid memaksa lebar layar; 3 kolom dipertahankan di viewport sempit; tombol terlalu kecil untuk disentuh. Uji di `360x800` dan turunkan kompleksitas layout bila scanability turun.
+- `Illustration/SVG`: SVG terlihat aman di code, tetapi di browser jadi terlalu kecil, kepotong, atau teks internal tidak terbaca. Validasi ukuran aktual, clipping, dan apakah ilustrasi benar-benar membantu isi.
+- `Accessibility`: komponen interaktif bisa diklik mouse tetapi focus ring tidak terlihat, state `aria-expanded` tidak sinkron, atau keyboard navigation berhenti di tengah. Uji `Tab`, `Shift+Tab`, `Enter`, `Space`, `ArrowUp/Down`, `Home`, `End`.
+- `Print/PDF`: hero, callout, atau tabel pecah jelek antar halaman; kontrol non-esensial masih tercetak; kontras turun saat print. Jika perlu, sederhanakan versi print, bukan memaksa layout layar ikut tercetak utuh.
+- `Offline/fallback`: halaman lolos di HTTP lokal tetapi gagal saat asset lokal hilang atau CDN ikon mati. Jangan hanya cek online; verifikasi fallback logo, ikon, dan ilustrasi lokal.
+- `file:// caveat`: jika tooling browser memblokir `file://`, jangan anggap cek offline selesai. Lakukan verifikasi lewat asset lokal dan forced fallback query, lalu catat keterbatasannya di hasil QA.
+- `Medical/content drift`: layout sudah rapi tetapi isi melenceng tipis dari sumber resmi, misalnya batas evaluasi gejala, red flags pneumonia, batas obat OTC anak, atau rujukan yang tidak benar-benar mendukung copy. QA akhir harus membaca ulang isi kritis, bukan hanya melihat tampilan.
 
 ## Tool-Specific QA
 ### Playwright
@@ -172,6 +185,7 @@ const ZMC = {
 - Validasi heading, body text, callout, dan tabel tetap kontras.
 - Validasi bagian penting tidak terpotong antar halaman.
 - Simpan PDF bukti uji ke `assets/qa/`.
+- Jika print pecah jelek, sederhanakan layout versi print, terutama pada hero dan visual besar.
 
 ### Screenshot
 - Simpan minimal:

@@ -1,0 +1,413 @@
+- generic [active] [ref=e1]:
+  - link "Lewati ke isi utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Logo Zihan Medical Center" [ref=e7]
+        - generic [ref=e8]:
+          - paragraph [ref=e9]: Panduan keluarga ZMC
+          - 'heading "Batuk pilek anak: kapan cukup rawat rumah, kapan harus cepat periksa" [level=1] [ref=e10]'
+      - button "Tema malam" [ref=e12] [cursor=pointer]:
+        - generic [ref=e14]: 
+        - generic [ref=e15]: Tema malam
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "Mayoritas batuk pilek anak membaik sendiri. Yang tidak boleh ditunggu adalah napas cepat, tarikan dinding dada, atau anak tidak mau minum." [level=2] [ref=e20]
+        - paragraph [ref=e21]: Pakai halaman ini untuk memantau gejala, menentukan langkah rawat rumah, dan mengenali kapan harus ke dokter atau IGD. Kalau anak punya riwayat prematur, penyakit kronis, atau alergi berat, evaluasi sebaiknya lebih cepat.
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - strong [ref=e24]: Lihat napas
+            - generic [ref=e25]: cek cepat, sesak, atau tarikan dinding dada
+          - listitem [ref=e26]:
+            - strong [ref=e27]: Lihat minum
+            - generic [ref=e28]: masih mau menyusu atau minum seperti biasa
+          - listitem [ref=e29]:
+            - strong [ref=e30]: Lihat tenaga
+            - generic [ref=e31]: masih aktif atau justru sangat lemas
+          - listitem [ref=e32]:
+            - strong [ref=e33]: Lihat durasi
+            - generic [ref=e34]: sudah berapa hari dan apakah gejala makin berat
+        - generic [ref=e35]:
+          - strong [ref=e36]: "Pegangan 1 menit:"
+          - text: kalau napas tampak berat atau anak sangat lemas, jangan antosan.
+      - generic [ref=e37]:
+        - img [ref=e39]
+        - generic [ref=e63]:
+          - heading "Cek 4 hal utama" [level=3] [ref=e64]
+          - list [ref=e65]:
+            - listitem [ref=e66]: Napas cepat atau sesak?
+            - listitem [ref=e67]: Masih mau minum atau menyusu?
+            - listitem [ref=e68]: Masih aktif atau sangat lemas?
+            - listitem [ref=e69]: Sudah berapa hari dan membaik atau tidak?
+          - paragraph [ref=e70]: Bila ada tanda bahaya, periksa hari itu juga.
+    - generic [ref=e71]:
+      - strong [ref=e72]: "Ringkas 1 kalimat:"
+      - text: lihat napas, minum, tenaga, dan lama gejala; kalau muncul sesak, napas cepat, tarikan dinding dada, bibir kebiruan, atau anak sangat lemas, langsung ke IGD.
+    - navigation "Navigasi cepat" [ref=e73]:
+      - link "Bedakan Gejala" [ref=e74] [cursor=pointer]:
+        - /url: "#gejala"
+      - link "Perawatan Rumah" [ref=e75] [cursor=pointer]:
+        - /url: "#rawat"
+      - link "Pencegahan" [ref=e76] [cursor=pointer]:
+        - /url: "#cegah"
+      - link "Durasi & Evaluasi" [ref=e77] [cursor=pointer]:
+        - /url: "#durasi"
+      - link "Obat Aman" [ref=e78] [cursor=pointer]:
+        - /url: "#obat"
+      - link "Tanda Bahaya" [ref=e79] [cursor=pointer]:
+        - /url: "#redflags"
+      - link "FAQ" [ref=e80] [cursor=pointer]:
+        - /url: "#faq"
+      - link "Rujukan" [ref=e81] [cursor=pointer]:
+        - /url: "#rujukan"
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - heading "1) Bedakan gejala inti" [level=2] [ref=e84]
+        - paragraph [ref=e85]: "Konteks: tidak semua batuk pilek sama. Langkah praktis: gunakan tabel ini sebagai triase awal. Kapan evaluasi medis: kalau pola gejala tidak cocok dengan selesma biasa atau napas tampak berat."
+      - generic [ref=e86]:
+        - table "Perbedaan gejala pada batuk pilek anak" [ref=e88]:
+          - rowgroup [ref=e89]:
+            - row "Kondisi Ciri umum Langkah awal di rumah Kapan evaluasi medis" [ref=e90]:
+              - columnheader "Kondisi" [ref=e91]
+              - columnheader "Ciri umum" [ref=e92]
+              - columnheader "Langkah awal di rumah" [ref=e93]
+              - columnheader "Kapan evaluasi medis" [ref=e94]
+          - rowgroup [ref=e95]:
+            - row "Selesma biasa Pilek, hidung tersumbat, batuk ringan sampai sedang, demam ringan, anak masih mau minum dan masih responsif. Istirahat, cairan cukup, bersihkan hidung, dan pantau gejala harian. Jika setelah 10 hari belum membaik, demam lebih dari 4 hari, atau anak makin lemah." [ref=e96]:
+              - cell "Selesma biasa" [ref=e97]:
+                - strong [ref=e98]: Selesma biasa
+              - cell "Pilek, hidung tersumbat, batuk ringan sampai sedang, demam ringan, anak masih mau minum dan masih responsif." [ref=e99]
+              - cell "Istirahat, cairan cukup, bersihkan hidung, dan pantau gejala harian." [ref=e100]
+              - cell "Jika setelah 10 hari belum membaik, demam lebih dari 4 hari, atau anak makin lemah." [ref=e101]
+            - row "Pneumonia Batuk dengan napas cepat, sesak, atau tarikan dinding dada saat menarik napas. Bisa disertai demam, anak tampak berat bernapas, atau sulit minum. Jangan tunggu. Anak perlu diperiksa hari itu juga untuk menilai napas, oksigen, dan kebutuhan terapi. Segera, terutama bila ada napas cepat, tarikan dinding dada, bibir kebiruan, kejang, atau anak tidak mampu minum." [ref=e102]:
+              - cell "Pneumonia" [ref=e103]:
+                - strong [ref=e104]: Pneumonia
+              - cell "Batuk dengan napas cepat, sesak, atau tarikan dinding dada saat menarik napas. Bisa disertai demam, anak tampak berat bernapas, atau sulit minum." [ref=e105]
+              - cell "Jangan tunggu. Anak perlu diperiksa hari itu juga untuk menilai napas, oksigen, dan kebutuhan terapi." [ref=e106]
+              - cell "Segera, terutama bila ada napas cepat, tarikan dinding dada, bibir kebiruan, kejang, atau anak tidak mampu minum." [ref=e107]
+            - row "TB anak Batuk lebih dari 2 minggu, demam lama atau berulang, berat badan sulit naik, nafsu makan turun, atau ada kontak erat serumah dengan pasien TB. Catat durasi batuk, perubahan berat badan, dan riwayat kontak; lanjut periksa ke dokter atau layanan TB. Bila batuk sudah melewati 2 minggu atau ada gejala sistemik yang menetap." [ref=e108]:
+              - cell "TB anak" [ref=e109]:
+                - strong [ref=e110]: TB anak
+              - cell "Batuk lebih dari 2 minggu, demam lama atau berulang, berat badan sulit naik, nafsu makan turun, atau ada kontak erat serumah dengan pasien TB." [ref=e111]
+              - cell "Catat durasi batuk, perubahan berat badan, dan riwayat kontak; lanjut periksa ke dokter atau layanan TB." [ref=e112]
+              - cell "Bila batuk sudah melewati 2 minggu atau ada gejala sistemik yang menetap." [ref=e113]
+            - row "Asma Batuk berulang, mengi, sesak, dada terasa berat, sering memburuk malam atau pagi, kadang dipicu infeksi, debu, asap, atau udara dingin. Ikuti rencana obat dari dokter bila sudah punya, dan jauhkan pencetus. Jika napas cepat, bicara atau menangis terganggu, atau obat pelega biasa tidak membantu." [ref=e114]:
+              - cell "Asma" [ref=e115]:
+                - strong [ref=e116]: Asma
+              - cell "Batuk berulang, mengi, sesak, dada terasa berat, sering memburuk malam atau pagi, kadang dipicu infeksi, debu, asap, atau udara dingin." [ref=e117]
+              - cell "Ikuti rencana obat dari dokter bila sudah punya, dan jauhkan pencetus." [ref=e118]
+              - cell "Jika napas cepat, bicara atau menangis terganggu, atau obat pelega biasa tidak membantu." [ref=e119]
+            - row "Alergi saluran napas Bersin berulang, pilek bening, hidung gatal atau tersumbat, mata gatal berair, biasanya tanpa demam tinggi. Kurangi debu, tungau, asap rokok, dan pencetus lingkungan lainnya. Bila keluhan mengganggu tidur, aktivitas, atau mulai muncul mengi dan sesak." [ref=e120]:
+              - cell "Alergi saluran napas" [ref=e121]:
+                - strong [ref=e122]: Alergi saluran napas
+              - cell "Bersin berulang, pilek bening, hidung gatal atau tersumbat, mata gatal berair, biasanya tanpa demam tinggi." [ref=e123]
+              - cell "Kurangi debu, tungau, asap rokok, dan pencetus lingkungan lainnya." [ref=e124]
+              - cell "Bila keluhan mengganggu tidur, aktivitas, atau mulai muncul mengi dan sesak." [ref=e125]
+        - img "Ilustrasi langkah triase cepat gejala batuk pilek anak" [ref=e127]:
+          - generic [ref=e129]: Triase cepat gejala batuk pilek
+          - generic [ref=e131]: Lihat napas dulu
+          - generic [ref=e132]: Napas cepat?
+          - generic [ref=e133]: Ada tarikan dinding dada?
+          - generic [ref=e134]: Bibir tampak kebiruan?
+          - generic [ref=e135]: Anak terlihat sangat berat bernapas?
+          - generic [ref=e137]: Nilai kondisi umum
+          - generic [ref=e138]: Masih mau minum?
+          - generic [ref=e139]: Masih responsif dan aktif?
+          - generic [ref=e140]: Pipis masih cukup?
+          - generic [ref=e141]: Demam atau batuk makin berat?
+          - generic [ref=e143]: Perlu cepat periksa bila
+          - generic [ref=e144]: napas cepat atau sesak
+          - generic [ref=e145]: tarikan dinding dada
+          - generic [ref=e146]: tidak mau minum
+          - generic [ref=e147]: sangat lemas atau sulit dibangunkan
+        - generic [ref=e148]: "Nuansa lokal: kalau napas anak sudah \"katingali beurat\", jangan tunggu sampai besok. Evaluasi hari itu juga lebih aman."
+    - generic [ref=e149]:
+      - generic [ref=e150]:
+        - heading "2) Tips perawatan di rumah" [level=2] [ref=e151]
+        - paragraph [ref=e152]: "Konteks: sebagian besar batuk pilek bisa dibantu dengan terapi suportif. Langkah praktis: longgarkan hidung, cukupkan cairan, dan pantau 24-48 jam. Kapan evaluasi medis: bila napas memburuk, minum turun, atau muncul tanda bahaya."
+      - generic [ref=e153]:
+        - generic [ref=e154]:
+          - article [ref=e155]:
+            - heading "Cairan dan ASI" [level=3] [ref=e156]
+            - list [ref=e157]:
+              - listitem [ref=e158]: "Bayi kecil: susui lebih sering agar tidak dehidrasi dan lendir lebih mudah dikeluarkan."
+              - listitem [ref=e159]: "Anak lebih besar: minum sedikit tapi sering; air putih, sup hangat, atau oralit bila ada risiko kurang cairan."
+              - listitem [ref=e160]: Pantau pipis. Bila pipis jauh berkurang, anak perlu dinilai lebih cepat.
+          - article [ref=e161]:
+            - heading "Saline dan bersihkan hidung" [level=3] [ref=e162]
+            - list [ref=e163]:
+              - listitem [ref=e164]: Pakai tetes atau semprot saline steril untuk melonggarkan hidung tersumbat.
+              - listitem [ref=e165]: Pada bayi atau balita kecil, boleh lanjut suction lembut terutama sebelum menyusu dan sebelum tidur.
+              - listitem [ref=e166]: Bersihkan alat setelah dipakai agar tidak jadi sumber kuman.
+          - article [ref=e167]:
+            - heading "Udara lembap yang aman" [level=3] [ref=e168]
+            - list [ref=e169]:
+              - listitem [ref=e170]: Kalau memakai humidifier, pilih cool mist dan ganti air serta bersihkan alat rutin.
+              - listitem [ref=e171]: Jangan pakai uap panas dekat anak karena ada risiko luka bakar.
+              - listitem [ref=e172]: Kamar jangan pengap, tetapi juga tidak terlalu dingin.
+          - article [ref=e173]:
+            - heading "Posisi tidur" [level=3] [ref=e174]
+            - list [ref=e175]:
+              - listitem [ref=e176]: Bayi di bawah 1 tahun tetap tidur telentang di alas datar tanpa bantal atau ganjal longgar.
+              - listitem [ref=e177]: Anak yang lebih besar boleh dibuat senyaman mungkin asalkan jalan napas terasa lebih lega.
+              - listitem [ref=e178]: Hindari asap rokok di kamar dan kendaraan.
+          - article [ref=e179]:
+            - heading "Madu bila usia sudah 1 tahun" [level=3] [ref=e180]
+            - list [ref=e181]:
+              - listitem [ref=e182]: Madu bisa membantu meredakan batuk, terutama menjelang tidur.
+              - listitem [ref=e183]: Dosis praktis di rumah sekitar setengah sampai satu sendok teh.
+              - listitem [ref=e184]: Jangan berikan madu pada bayi di bawah 12 bulan.
+          - article [ref=e185]:
+            - heading "Pantau 24-48 jam" [level=3] [ref=e186]
+            - list [ref=e187]:
+              - listitem [ref=e188]: Cek suhu, napas, asupan minum, aktivitas, dan pipis.
+              - listitem [ref=e189]: Catat kalau batuk makin berat, napas makin cepat, atau anak mulai sulit makan dan minum.
+              - listitem [ref=e190]: Catatan sederhana ini membantu saat kontrol ke dokter.
+        - generic [ref=e191]:
+          - strong [ref=e192]: Rawat rumah tidak cukup
+          - text: bila anak sesak, napas cepat, ada tarikan dinding dada, bibir kebiruan, tidak mau minum, pipis sangat sedikit, muntah terus, kejang, atau sangat lemas.
+        - generic [ref=e193]:
+          - strong [ref=e194]: "Catatan penting:"
+          - text: tepuk punggung atau
+          - emphasis [ref=e195]: back blow
+          - text: adalah pertolongan saat tersedak dan jalan napas tersumbat, bukan terapi rutin untuk mengeluarkan dahak pada batuk pilek biasa.
+    - generic [ref=e196]:
+      - generic [ref=e197]:
+        - heading "3) Tips pencegahan di rumah" [level=2] [ref=e198]
+        - paragraph [ref=e199]: "Konteks: kambuh berulang sering berhubungan dengan paparan harian. Langkah praktis: perbaiki lingkungan rumah dan kebiasaan keluarga. Kapan evaluasi medis: jika keluhan tetap sering berulang walau lingkungan sudah dibenahi."
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - article [ref=e202]:
+            - heading "Rumah bebas asap rokok" [level=3] [ref=e203]
+            - paragraph [ref=e204]: Asap rokok membuat saluran napas anak lebih mudah iritasi dan meningkatkan risiko infeksi napas serta asma kambuh.
+          - article [ref=e205]:
+            - heading "Cuci tangan rutin" [level=3] [ref=e206]
+            - paragraph [ref=e207]: Cuci tangan sebelum memegang anak, sebelum makan, sesudah batuk atau bersin, dan setelah dari luar rumah.
+          - article [ref=e208]:
+            - heading "Etika batuk bersin" [level=3] [ref=e209]
+            - paragraph [ref=e210]: Tutup mulut dan hidung dengan tisu atau siku bagian dalam. Buang tisu segera dan cuci tangan.
+          - article [ref=e211]:
+            - heading "Ventilasi baik" [level=3] [ref=e212]
+            - paragraph [ref=e213]: Usahakan sirkulasi udara tetap jalan agar kamar tidak lembap dan pengap, terutama pagi sampai siang.
+          - article [ref=e214]:
+            - heading "Kontrol debu dan tungau" [level=3] [ref=e215]
+            - paragraph [ref=e216]: Ganti sprei rutin, bersihkan kasur, dan batasi boneka kain berlebih bila anak mudah pilek atau mengi.
+          - article [ref=e217]:
+            - heading "Imunisasi tetap jalan" [level=3] [ref=e218]
+            - paragraph [ref=e219]: Ikuti jadwal imunisasi sesuai usia. Selesma ringan biasanya bukan alasan untuk menunda imunisasi rutin.
+        - img "Ilustrasi checklist rumah sehat napas anak" [ref=e221]:
+          - generic [ref=e223]: Checklist rumah sehat napas anak
+          - generic [ref=e224]:
+            - generic [ref=e227]: Tidak merokok di rumah dan mobil
+            - generic [ref=e230]: Cuci tangan dan etika batuk
+            - generic [ref=e233]: Ventilasi kamar tetap baik
+            - generic [ref=e236]: Debu, tungau, dan jamur dikontrol
+            - generic [ref=e239]: Imunisasi sesuai usia
+          - generic [ref=e241]: Kalau masih sering kambuh
+          - generic [ref=e242]: "cek apakah ada pencetus lain:"
+          - generic [ref=e243]: asma, alergi, kontak TB,
+          - generic [ref=e244]: atau paparan asap yang belum beres.
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - 'heading "4) Durasi gejala: batas waktu evaluasi" [level=2] [ref=e247]'
+        - paragraph [ref=e248]: "Konteks: orang tua sering bingung kapan masih aman observasi. Langkah praktis: pakai batas waktu ini. Kapan evaluasi medis: bila melewati batas atau gejala malah memburuk."
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - article [ref=e251]:
+            - heading "Hari 0-3" [level=3] [ref=e252]
+            - list [ref=e253]:
+              - listitem [ref=e254]: Selesma ringan biasanya mulai terlihat pada fase ini.
+              - listitem [ref=e255]: Pantau napas, suhu, minum, dan pipis.
+              - listitem [ref=e256]: Jika napas sudah cepat atau sesak sejak awal, jangan tunggu.
+          - article [ref=e257]:
+            - heading "Hari 4-7" [level=3] [ref=e258]
+            - list [ref=e259]:
+              - listitem [ref=e260]: Umumnya anak mulai membaik perlahan.
+              - listitem [ref=e261]: Bila demam menetap lebih dari 4 hari atau batuk makin berat, anak perlu diperiksa.
+              - listitem [ref=e262]: Anak yang tetap lemas atau tidak mau minum juga tidak boleh hanya diobservasi.
+          - article [ref=e263]:
+            - heading "Lebih dari 2 minggu" [level=3] [ref=e264]
+            - list [ref=e265]:
+              - listitem [ref=e266]: Batuk berkepanjangan perlu dicari penyebabnya, bukan hanya dianggap pilek biasa.
+              - listitem [ref=e267]: Perlu pikirkan TB, asma, alergi, atau infeksi lain yang belum tuntas.
+              - listitem [ref=e268]: Bawa catatan durasi batuk, demam, berat badan, dan kontak TB saat kontrol.
+        - generic [ref=e269]: "Batas praktis: bila gejala pilek-batuk tidak membaik setelah sekitar 10 hari, anak perlu evaluasi medis. Bila batuk sudah lebih dari 2 minggu, apalagi disertai berat badan susah naik atau demam lama, pikirkan TB dan penyebab lain."
+    - generic [ref=e270]:
+      - generic [ref=e271]:
+        - heading "5) Obat aman vs yang dihindari" [level=2] [ref=e272]
+        - paragraph [ref=e273]: "Konteks: obat yang salah bisa berisiko pada balita. Langkah praktis: utamakan terapi suportif dan obat sesuai usia. Kapan evaluasi medis: bila orang tua ragu soal dosis atau jenis obat, konsultasikan dulu."
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - article [ref=e276]:
+            - heading "Yang umumnya aman bila tepat pakai" [level=3] [ref=e277]
+            - list [ref=e278]:
+              - listitem [ref=e279]: Saline hidung dan suction lembut pada anak kecil.
+              - listitem [ref=e280]: Obat penurun panas atau pereda nyeri sesuai usia dan berat badan.
+              - listitem [ref=e281]: Madu untuk meredakan batuk pada anak usia 1 tahun ke atas.
+          - article [ref=e282]:
+            - heading "Yang perlu dihindari tanpa arahan" [level=3] [ref=e283]
+            - list [ref=e284]:
+              - listitem [ref=e285]: Obat batuk pilek kombinasi OTC umumnya tidak direkomendasikan untuk anak di bawah 6 tahun.
+              - listitem [ref=e286]: Jangan menggabungkan beberapa obat bebas tanpa mengecek kandungan yang sama, terutama obat demam dan flu.
+              - listitem [ref=e287]: Antibiotik tanpa pemeriksaan, karena selesma biasa paling sering disebabkan virus.
+          - article [ref=e288]:
+            - heading "Prinsip aman minum obat" [level=3] [ref=e289]
+            - list [ref=e290]:
+              - listitem [ref=e291]: Pakai alat ukur obat, bukan sendok makan biasa.
+              - listitem [ref=e292]: Catat jam pemberian agar tidak dobel dosis.
+              - listitem [ref=e293]: Kalau muntah berulang, muncul ruam, atau anak makin lemas setelah minum obat, hubungi tenaga kesehatan.
+        - generic [ref=e294]:
+          - strong [ref=e295]: "Catatan:"
+          - text: kalau anak sedang rutin obat asma, alergi, atau TB, jangan menghentikan atau mengubah obat kontrol tanpa evaluasi dokter.
+    - generic [ref=e296]:
+      - generic [ref=e297]:
+        - heading "6) Kapan harus ke dokter atau IGD" [level=2] [ref=e298]
+        - paragraph [ref=e299]: "Konteks: ini bagian terpenting untuk keselamatan anak. Langkah praktis: cek cepat saat anak sakit. Kapan evaluasi medis: segera bila salah satu tanda di bawah muncul."
+      - generic [ref=e300]:
+        - generic [ref=e301]:
+          - strong [ref=e302]: Ke IGD segera
+          - text: bila anak sesak berat, napas sangat cepat, ada tarikan dinding dada, bibir atau kuku kebiruan, kejang, tidak bisa minum, muntah terus, sangat lemas atau sulit dibangunkan, atau tampak bingung dan tidak responsif.
+        - generic [ref=e303]:
+          - article [ref=e304]:
+            - heading "Tanda napas bahaya" [level=3] [ref=e305]
+            - list [ref=e306]:
+              - listitem [ref=e307]: Napas terlihat cepat terus atau berat.
+              - listitem [ref=e308]: Lubang hidung kembang-kempis dan dinding dada tertarik saat bernapas.
+              - listitem [ref=e309]: Anak tidak sanggup bicara, menangis, atau menyusu dengan nyaman karena sesak.
+          - article [ref=e310]:
+            - heading "Tanda umum bahaya" [level=3] [ref=e311]
+            - list [ref=e312]:
+              - listitem [ref=e313]: Tidak mau minum atau menyusu.
+              - listitem [ref=e314]: Pipis sangat sedikit atau tanda dehidrasi lain.
+              - listitem [ref=e315]: Mengantuk berat, sulit dibangunkan, atau kejang.
+          - article [ref=e316]:
+            - heading "Tanda curiga masalah lain" [level=3] [ref=e317]
+            - list [ref=e318]:
+              - listitem [ref=e319]: Batuk lebih dari 2 minggu.
+              - listitem [ref=e320]: Berat badan turun atau sulit naik, nafsu makan turun, demam lama.
+              - listitem [ref=e321]: Ada kontak erat serumah dengan pasien TB atau serangan mengi berulang.
+        - generic [ref=e322]: Kalau ragu, lebih aman periksa. Pada anak kecil, perubahan kondisi bisa cepat, jadi "cek dini" sering lebih aman daripada menunggu.
+    - generic [ref=e323]:
+      - generic [ref=e324]:
+        - heading "7) Catatan kondisi khusus" [level=2] [ref=e325]
+        - paragraph [ref=e326]: "Konteks: tidak semua anak punya risiko yang sama. Langkah praktis: sesuaikan kecepatan evaluasi dengan kondisi dasar anak. Kapan evaluasi medis: lebih cepat dari standar jika ada risiko khusus."
+      - generic [ref=e327]:
+        - generic [ref=e328]: Untuk anak prematur, penyakit kronis jantung, paru, ginjal, saraf, gangguan imun, atau alergi berat, jangan terlalu lama observasi sendiri di rumah. Ambang untuk konsultasi harus lebih rendah.
+        - generic [ref=e329]:
+          - article [ref=e330]:
+            - heading "Yang dibawa saat kontrol" [level=3] [ref=e331]
+            - list [ref=e332]:
+              - listitem [ref=e333]: Catatan suhu, pola batuk, pola napas, asupan minum, dan pipis.
+              - listitem [ref=e334]: Daftar obat yang sudah diberikan di rumah beserta jam pemberiannya.
+              - listitem [ref=e335]: Riwayat kontak TB, alergi, atau asma di keluarga bila ada.
+          - article [ref=e336]:
+            - heading "Target konsultasi" [level=3] [ref=e337]
+            - list [ref=e338]:
+              - listitem [ref=e339]: Menentukan apakah aman lanjut rawat rumah atau perlu tindakan lain.
+              - listitem [ref=e340]: Menentukan kapan harus kontrol ulang dan tanda apa yang tidak boleh ditunggu.
+              - listitem [ref=e341]: Menyusun rencana jelas bila anak memang punya asma atau keluhan kambuhan.
+    - generic [ref=e342]:
+      - generic [ref=e343]:
+        - heading "8) FAQ singkat" [level=2] [ref=e344]
+        - paragraph [ref=e345]: "Konteks: pertanyaan yang paling sering muncul di rumah. Langkah praktis: gunakan jawaban ini sebagai panduan awal. Kapan evaluasi medis: bila kondisi anak berada di luar pola umum ini."
+      - generic [ref=e347]:
+        - button "Batuk pilek anak harus langsung antibiotik?" [ref=e349] [cursor=pointer]:
+          - text: Batuk pilek anak harus langsung antibiotik?
+          - generic [ref=e350]: +
+        - button "Kalau batuk sudah 2 minggu tetapi anak masih aktif, tetap perlu periksa?" [ref=e352] [cursor=pointer]:
+          - text: Kalau batuk sudah 2 minggu tetapi anak masih aktif, tetap perlu periksa?
+          - generic [ref=e353]: +
+        - button "Boleh pakai obat batuk pilek bebas untuk balita?" [ref=e355] [cursor=pointer]:
+          - text: Boleh pakai obat batuk pilek bebas untuk balita?
+          - generic [ref=e356]: +
+        - button "Bagaimana membedakan alergi dan infeksi?" [ref=e358] [cursor=pointer]:
+          - text: Bagaimana membedakan alergi dan infeksi?
+          - generic [ref=e359]: +
+    - generic [ref=e360]:
+      - generic [ref=e361]:
+        - heading "9) Rujukan" [level=2] [ref=e362]
+        - paragraph [ref=e363]: "Konteks: sumber resmi yang mendasari halaman ini. Langkah praktis: buka saat online bila ingin membaca lebih detail. Kapan evaluasi medis: bila ada tanda bahaya, tetap utamakan pemeriksaan langsung."
+      - generic [ref=e364]:
+        - list [ref=e365]:
+          - listitem [ref=e366]:
+            - text: WHO.
+            - link "Pneumonia in children" [ref=e367] [cursor=pointer]:
+              - /url: https://www.who.int/news-room/fact-sheets/detail/pneumonia
+            - text: . Dasar napas cepat, tarikan dinding dada, dan tanda bahaya seperti sulit minum pada pneumonia anak.
+          - listitem [ref=e368]:
+            - text: Kemenkes RI, Ayo Sehat.
+            - link "Mengenal Gejala TBC pada Anak" [ref=e369] [cursor=pointer]:
+              - /url: https://ayosehat.kemkes.go.id/mengenal-gejala-tbc-pada-anak
+            - text: . Menegaskan batuk lama lebih dari 2 minggu, demam lama, dan berat badan tidak naik sebagai tanda evaluasi.
+          - listitem [ref=e370]:
+            - text: CDC.
+            - link "Manage Common Cold" [ref=e371] [cursor=pointer]:
+              - /url: https://www.cdc.gov/common-cold/treatment/index.html
+            - text: . Dasar terapi suportif, humidifier cool mist, saline, madu di atas 1 tahun, batas obat OTC, dan kapan perlu periksa.
+          - listitem [ref=e372]:
+            - text: IDAI.
+            - link "Salah Kaprah \"Vlek\" pada Anak" [ref=e373] [cursor=pointer]:
+              - /url: https://www.idai.or.id/artikel/seputar-kesehatan-anak/salah-kaprah-vlek-pada-anak
+            - text: . Dasar evaluasi batuk lama dan perbedaan pola TB anak dengan keluhan alergi.
+          - listitem [ref=e374]:
+            - text: IDAI.
+            - link "Yang Harus Dilakukan jika Anak Tersedak" [ref=e375] [cursor=pointer]:
+              - /url: https://www.idai.or.id/artikel/klinik/keluhan-anak/yang-harus-dilakukan-jika-anak-tersedak
+            - text: . Dasar bahwa
+            - emphasis [ref=e376]: back blow
+            - text: adalah pertolongan saat tersedak, bukan terapi dahak rutin.
+        - generic [ref=e377]: Konten edukasi ini membantu keputusan awal di rumah, tetapi tidak menggantikan pemeriksaan dokter.
+    - region "Aksi cepat keluarga" [ref=e378]:
+      - heading "Aksi cepat keluarga" [level=2] [ref=e379]
+      - paragraph [ref=e380]: Simpan halaman ini bila ingin dipakai saat offline. Kalau ada tanda bahaya atau orang tua merasa anak "beda dari biasanya", langsung hubungi fasilitas kesehatan.
+      - paragraph [ref=e381]: "Status koneksi: online. Tautan rujukan dan kontak bisa dibuka."
+      - generic [ref=e382]:
+        - link "WhatsApp" [ref=e383] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+          - generic [ref=e385]: 
+          - text: WhatsApp
+        - link "Google Maps" [ref=e386] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+          - generic [ref=e388]: 
+          - text: Google Maps
+        - button "Print atau simpan PDF" [ref=e389] [cursor=pointer]:
+          - generic [ref=e391]: 
+          - text: Print / Save PDF
+    - generic [ref=e392]:
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - heading "Zihan Medical Center" [level=2] [ref=e395]
+          - paragraph [ref=e396]:
+            - strong [ref=e397]: "#ZMCGakNyuekinKamu"
+            - text: "- layanan 24 jam."
+          - paragraph [ref=e398]: Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183
+          - paragraph [ref=e399]:
+            - strong [ref=e400]: "Telepon:"
+            - text: +62 822-1718-0432
+          - paragraph [ref=e401]:
+            - strong [ref=e402]: "Jam:"
+            - text: "Senin - Minggu: 24 Jam"
+        - generic [ref=e403]:
+          - heading "Kontak dan lokasi" [level=3] [ref=e404]
+          - generic [ref=e405]:
+            - link "WhatsApp" [ref=e406] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+              - generic [ref=e408]: 
+              - text: WhatsApp
+            - link "Maps" [ref=e409] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+              - generic [ref=e411]: 
+              - text: Maps
+            - link "Instagram" [ref=e412] [cursor=pointer]:
+              - /url: https://www.instagram.com/zihanmedicalcenter/?hl=en
+              - generic [ref=e414]: 
+              - text: Instagram
+          - paragraph [ref=e415]:
+            - text: "Tip offline: simpan file ini bersama"
+            - code [ref=e416]: zmc-logo.jpeg
+            - text: di folder yang sama.
+      - generic [ref=e417]:
+        - generic [ref=e418]: © 2026 Zihan Medical Center - Wanaraja Garut
+        - generic [ref=e419]: Konten edukasi pasien. Bukan pengganti pemeriksaan langsung.
