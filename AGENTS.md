@@ -72,6 +72,7 @@ Untuk implementasi UI, gunakan guardrail `uncodixify` sebagai standar praktis:
 - Jangan pakai wallpaper yang tile atau repeating.
 - Jangan memaksa 3 kolom di layar sempit.
 - Jangan biarkan CTA kecil; target sentuh minimal sekitar `44px`.
+- Hero wajib memuat CTA klinik utama `WhatsApp Klinik` dan `Instagram Klinik` dengan ukuran sentuh aman, tanpa membuat hero terasa penuh.
 - Gunakan satu mode warna terang saja; kontras wajib lolos.
 - Jangan buat varian tema kedua atau kontrol pergantian tema.
 - Tombol `Print / Save PDF` harus berada di bawah sebagai secondary CTA.
@@ -95,6 +96,8 @@ Untuk implementasi UI, gunakan guardrail `uncodixify` sebagai standar praktis:
 ## Hero Guardrail
 - Hero hanya untuk orientasi cepat.
 - Isi hero dibatasi ke headline singkat, ringkasan pendek, dan maksimal 2-3 poin inti.
+- Hero boleh memuat CTA klinik, tetapi dibatasi ke 2 tombol utama: `WhatsApp Klinik` dan `Instagram Klinik`.
+- Jangan naikkan `Maps` atau `Print / Save PDF` ke hero.
 - Jangan isi hero dengan paragraf panjang, checklist kedua, note tambahan, ilustrasi besar, atau rangkuman ulang dari section-section bawah.
 - Jika hero sudah membuat user terasa "buka file lalu langsung disuruh baca banyak", berarti komposisinya gagal.
 
@@ -143,6 +146,9 @@ const ZMC = {
 };
 ```
 
+- `ZMC.whatsapp` dan `ZMC.instagram` wajib dipakai untuk CTA hero dan footer.
+- Footer tetap menyertakan WA, Maps, dan Instagram sebagai link pendukung, bukan CTA utama hero.
+
 ## Localization Rule
 - Gunakan bahasa Indonesia sederhana.
 - Hindari jargon medis tanpa penjelasan singkat.
@@ -150,13 +156,14 @@ const ZMC = {
 
 ## Page Structure Standard
 1. Sticky header
-2. Ringkasan 1 kalimat
-3. Quick chips anchor
-4. Isi edukasi utama
-5. Red flags
-6. FAQ singkat bila perlu
-7. CTA bawah termasuk `Print / Save PDF`
-8. Footer klinik
+2. Hero / ringkasan singkat
+3. CTA hero: `WhatsApp Klinik` + `Instagram Klinik`
+4. Quick chips anchor
+5. Isi edukasi utama
+6. Red flags
+7. FAQ singkat bila perlu
+8. CTA bawah termasuk `Print / Save PDF`
+9. Footer klinik
 
 ## Mandatory Structure for MPASI/Tumbuh Kembang
 1. Ringkasan singkat
@@ -191,21 +198,22 @@ const ZMC = {
 5. Tab/accordion punya ARIA + keyboard support.
 6. Hero tidak menyisakan dead space besar, panel kosong, atau beban baca berlebihan.
 7. Hero tetap dalam rentang compact dan tidak memonopoli layar pertama.
-8. Materi inti tidak hilang atau tergeser dari isi edukasi utama saat UI direvisi.
-9. Section tidak terasa seperti deretan box identik dengan ritme visual datar.
-10. Ikon masuk ke area konten inti bila memang membantu scanability.
-11. SVG/visual tidak clipping, termasuk teks kecil di dalam ilustrasi.
-12. Visual benar-benar memecah beban baca, bukan hanya teks dalam kotak.
-13. Print tidak memotong bagian penting, termasuk hero atau callout utama.
-14. Link footer berfungsi: WA, Maps, Instagram.
-15. Tombol print berada di area bawah halaman.
-16. Visual lokal tetap tampil saat offline.
-17. Tidak ada ketergantungan external image API.
-18. Ilustrasi tetap tampil saat file lokal dibuka langsung.
-19. Ikon tampil normal saat online, dan fallback ikon aktif saat CDN gagal.
-20. Copy medis, red flags, dan rujukan masih selaras dengan sumber resmi terbaru.
-21. Artefak QA tersimpan: screenshot viewport + PDF print check.
-22. Jika memakai chunked write, semua section tetap utuh.
+8. CTA hero `WhatsApp Klinik` dan `Instagram Klinik` tampil jelas, target sentuh aman, dan tidak membuat hero terlalu padat.
+9. Materi inti tidak hilang atau tergeser dari isi edukasi utama saat UI direvisi.
+10. Section tidak terasa seperti deretan box identik dengan ritme visual datar.
+11. Ikon masuk ke area konten inti bila memang membantu scanability.
+12. SVG/visual tidak clipping, termasuk teks kecil di dalam ilustrasi.
+13. Visual benar-benar memecah beban baca, bukan hanya teks dalam kotak.
+14. Print tidak memotong bagian penting, termasuk hero atau callout utama.
+15. Link CTA dan footer berfungsi: WA, Instagram, Maps.
+16. Tombol print berada di area bawah halaman, bukan di hero.
+17. Visual lokal tetap tampil saat offline.
+18. Tidak ada ketergantungan external image API.
+19. Ilustrasi tetap tampil saat file lokal dibuka langsung.
+20. Ikon tampil normal saat online, dan fallback ikon aktif saat CDN gagal.
+21. Copy medis, red flags, dan rujukan masih selaras dengan sumber resmi terbaru.
+22. Artefak QA tersimpan: screenshot viewport + PDF print check.
+23. Jika memakai chunked write, semua section tetap utuh.
 
 ## Common QA Failures
 - `Layout rhythm`: hero kiri terlalu tinggi, panel kanan kosong, visual terlalu kecil, atau section setelah hero terasa seperti deretan box identik. Cek ulang proporsi hero, panjang headline, dan hierarchy antarsection sebelum menyatakan desain selesai.

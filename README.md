@@ -54,7 +54,8 @@ Prioritas visual:
 - Heading tegas lewat hirarki dan bobot teks, bukan font display campur-campur.
 - Surface flat dengan border jelas, radius kecil, dan shadow tipis.
 - Gunakan satu mode warna terang saja; kontras wajib lolos.
-- CTA bawah tetap sekunder; fokus utama tetap pada isi edukasi.
+- CTA klinik utama ada di hero: `WhatsApp Klinik` dan `Instagram Klinik`.
+- CTA bawah tetap sekunder untuk `Print / Save PDF`; fokus utama tetap pada isi edukasi.
 
 Guardrail anti-generik:
 - Jangan pakai hero SaaS atau panel "premium".
@@ -66,6 +67,8 @@ Guardrail anti-generik:
 ## Hero dan Ritme Section
 - Hero hanya untuk orientasi cepat, bukan untuk memuat ulang seluruh isi halaman.
 - Isi hero dibatasi ke headline singkat, ringkasan pendek, dan maksimal 2-3 poin inti.
+- Hero wajib memuat maksimal 2 CTA klinik utama: `WhatsApp Klinik` dan `Instagram Klinik`.
+- Jangan naikkan `Maps` atau `Print / Save PDF` ke hero.
 - Hero tidak boleh berisi checklist kedua, note tambahan yang panjang, ilustrasi besar, atau rangkuman ulang section-section di bawahnya.
 - Target hero tetap compact: mobile `150-180px`, desktop `220-260px`. Jika jauh melampaui ini, anggap sebagai kegagalan desain.
 - Jangan ulang pola section yang sama terus-menerus. Variasikan hirarki dengan density, layout, accent bar, list emphasis, atau penempatan callout.
@@ -91,18 +94,20 @@ Guardrail anti-generik:
 
 ## Struktur Halaman
 1. Sticky header
-2. Ringkasan 1 kalimat
-3. Quick chips anchor
-4. Isi edukasi utama
-5. Red flags
-6. FAQ singkat bila perlu
-7. CTA bawah termasuk `Print / Save PDF`
-8. Footer klinik
+2. Hero / ringkasan singkat
+3. CTA hero: `WhatsApp Klinik` + `Instagram Klinik`
+4. Quick chips anchor
+5. Isi edukasi utama
+6. Red flags
+7. FAQ singkat bila perlu
+8. CTA bawah termasuk `Print / Save PDF`
+9. Footer klinik
 
 ## Teknis Wajib
 - Vanilla HTML/CSS/JS.
 - Single file di `topics/`.
 - Konfigurasi klinik wajib memakai `const ZMC`.
+- `ZMC.whatsapp` dan `ZMC.instagram` dipakai untuk CTA hero dan footer.
 - Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG.
 - Ilustrasi harus reproducible tanpa API key.
 - `@media print` wajib menghindari card terpotong dan menjaga kontras.
@@ -129,6 +134,8 @@ EdukasiZMC/
 - Tidak ada horizontal scroll
 - Fokus keyboard terlihat
 - Accordion/tab bisa dioperasikan keyboard
+- CTA hero `WhatsApp Klinik` dan `Instagram Klinik` tampil jelas di mobile dan desktop
+- Tombol `Print / Save PDF` tetap hanya ada di area bawah sebagai CTA sekunder
 - Footer link WA, Maps, Instagram berfungsi
 - Ikon CDN dan fallback lokal sama-sama aman
 - Offline/fallback diverifikasi, termasuk caveat bila tooling memblokir `file://`
