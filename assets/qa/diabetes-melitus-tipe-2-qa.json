@@ -1,0 +1,82 @@
+{
+  "viewports": [
+    {
+      "viewport": "360x800",
+      "scrollW": 360,
+      "clientW": 360,
+      "heroHeight": 173,
+      "footerLinks": [
+        {
+          "text": "WhatsApp",
+          "href": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1"
+        },
+        {
+          "text": "Maps",
+          "href": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77"
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/zihanmedicalcenter/?hl=en"
+        }
+      ]
+    },
+    {
+      "viewport": "768x1024",
+      "scrollW": 768,
+      "clientW": 768,
+      "heroHeight": 170,
+      "footerLinks": [
+        {
+          "text": "WhatsApp",
+          "href": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1"
+        },
+        {
+          "text": "Maps",
+          "href": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77"
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/zihanmedicalcenter/?hl=en"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x768",
+      "scrollW": 1366,
+      "clientW": 1366,
+      "heroHeight": 234,
+      "footerLinks": [
+        {
+          "text": "WhatsApp",
+          "href": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1"
+        },
+        {
+          "text": "Maps",
+          "href": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77"
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/zihanmedicalcenter/?hl=en"
+        }
+      ]
+    }
+  ],
+  "faqKeyboard": {
+    "faq1": "true",
+    "activeAfterArrow": "faq-btn-2",
+    "faq2": "true"
+  },
+  "fallback": {
+    "classActive": true
+  },
+  "fileMode": {
+    "ok": true,
+    "status": "File lokal sedang dibuka. Konten utama tetap bisa dipakai offline.",
+    "logoCurrentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/topics/zmc-logo.jpeg",
+    "iconFallback": true
+  },
+  "pdf": {
+    "ok": true,
+    "path": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-print.pdf"
+  }
+}
