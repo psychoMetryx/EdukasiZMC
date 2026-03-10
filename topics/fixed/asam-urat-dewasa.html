@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Asam Urat Dewasa | Zihan Medical Center</title>
+<meta name="description" content="Edukasi dewasa tentang asam urat: gejala khas, pemicu, langkah aman saat kambuh, pola makan, komorbid, dan kapan harus ke dokter atau IGD.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23a3191e'/%3E%3Cpath d='M20 16h24v32H20z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M32 22v20M24 32h16' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link id="bi-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+:root{
+  --bg:#f4eee9;
+  --surface:#fffdfa;
+  --surface-soft:#f8f2ed;
+  --surface-tint:#f1e2da;
+  --line:#d6c4ba;
+  --line-strong:#bf9f90;
+  --ink:#1f1a18;
+  --muted:#5f5650;
+  --brand:#a3191e;
+  --brand-dark:#7d1216;
+  --brand-soft:#f8e9e7;
+  --accent:#334d63;
+  --focus:#0a67d7;
+  --good:#205e3a;
+  --good-bg:#edf6ef;
+  --warn:#8c5b14;
+  --warn-bg:#fbf0de;
+  --danger:#8f1d22;
+  --danger-bg:#fcebec;
+  --radius-lg:14px;
+  --radius-md:10px;
+  --radius-sm:8px;
+  --shadow:0 3px 12px rgba(55,34,28,.06);
+  --wrap:min(1080px, calc(100% - 1.2rem));
+  --font:"Tahoma","Geneva",sans-serif;
+  --sticky-offset:8.7rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input{font:inherit}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:100;padding:.75rem .9rem;border:2px solid var(--focus);border-radius:10px;background:var(--surface)}
+a:focus-visible,button:focus-visible,.chip:focus-visible,.btn:focus-visible,.faq-btn:focus-visible,.foot-link:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.topbar{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--line)}
+.topbar::before{content:"";display:block;height:5px;background:var(--brand)}
+.topbar-inner,.wrap{width:var(--wrap);margin-inline:auto}
+.topbar-inner{padding:.8rem 0;display:grid;gap:.75rem;align-items:center}
+.brand{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:center;min-width:0}
+.logo{width:54px;height:54px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid var(--line);flex-shrink:0}
+.logo img{width:100%;height:100%;object-fit:cover}
+.brand-copy{min-width:0}
+.brand-copy p{margin:0 0 .18rem;font-size:.8rem;font-weight:700;color:var(--brand)}
+.brand-copy h1{margin:0;font-size:clamp(1.05rem,.98rem + .88vw,1.55rem);line-height:1.2;font-weight:700;max-width:24ch}
+.topbar-actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.btn{min-height:44px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:10px;padding:.55rem .9rem;display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;cursor:pointer;font-size:.92rem;font-weight:700;box-shadow:var(--shadow)}
+.btn:hover,.chip:hover,.faq-btn:hover,.foot-link:hover{background:var(--surface-soft)}
+.btn-brand{background:var(--brand);color:#fff;border-color:var(--brand-dark)}
+.btn-secondary{background:var(--surface-soft)}
+.btn-ghost{background:var(--brand-soft);color:var(--brand-dark);border-color:#d7adae}
+.icon-pair{display:inline-flex;width:1.1em;height:1.1em;align-items:center;justify-content:center;flex-shrink:0}
+.icon-cdn,.icon-local{width:1em;height:1em;font-size:1em;line-height:1}
+.icon-local{display:none}
+html.icons-fallback .icon-cdn{display:none!important}
+html.icons-fallback .icon-local{display:inline-block!important}
+.wrap{padding-bottom:1.5rem}
+.hero,.summary,.section,.bottom-cta,footer{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);break-inside:avoid;scroll-margin-top:var(--sticky-offset)}
+.hero{overflow:hidden}
+.hero-grid{display:grid;min-height:154px}
+.hero-copy{padding:.85rem .95rem;display:grid;gap:.58rem;align-content:center;border-bottom:1px solid var(--line)}
+.hero-copy h2{margin:0;font-size:clamp(1.02rem,.96rem + .6vw,1.34rem);line-height:1.12;font-weight:700;max-width:none}
+.hero-copy p{margin:0;color:var(--muted);max-width:38ch;font-size:.91rem}
+.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;max-width:390px}
+.hero-actions .btn{justify-content:center}
+.hero-scan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+.scan-pill{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.5rem .56rem;display:grid;gap:.08rem}
+.scan-pill strong{display:flex;align-items:center;gap:.34rem;font-size:.8rem;line-height:1.08}
+.scan-pill .icon-pair{color:var(--brand)}
+.scan-pill span{display:block;font-size:.73rem;line-height:1.18;color:var(--muted)}
+.hero-panel{padding:.78rem;background:var(--surface-soft);display:grid;align-content:center}
+.check-card,.hero-figure,.micro-figure,.danger-band,.compare-card{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.check-card,.compare-card{padding:.72rem;display:grid;gap:.52rem}
+.check-card h3,.compare-card h3{margin:0;font-size:.95rem;line-height:1.22}
+.check-grid{display:grid;gap:.42rem}
+.check-row{display:grid;grid-template-columns:auto 1fr;gap:.5rem;align-items:start;padding:.48rem .52rem;border-radius:10px;background:var(--surface-soft);border:1px solid var(--line)}
+.check-badge{width:1.6rem;height:1.6rem;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-size:.76rem;font-weight:700;flex-shrink:0}
+.check-row p,.compare-card p,.compare-card li,.danger-band p{margin:0;color:var(--muted);font-size:.91rem}
+.hero-figure,.micro-figure{padding:.65rem}
+.hero-figure svg,.micro-figure svg{width:100%;display:block}
+.summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
+.summary strong{color:var(--brand)}
+.quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
+.chip{min-height:44px;flex-shrink:0;display:inline-flex;align-items:center;padding:.44rem .8rem;border:1px solid var(--line-strong);border-radius:10px;background:var(--surface-soft);text-decoration:none;font-size:.88rem;font-weight:700}
+.section{overflow:hidden}
+.section-head{padding:1rem 1rem .9rem;border-bottom:1px solid var(--line);background:var(--surface)}
+.section-head::after{content:"";display:block;width:68px;height:3px;margin-top:.7rem;border-radius:999px;background:var(--brand)}
+.heading-row{display:flex;align-items:flex-start;gap:.68rem}
+.heading-icon{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);color:var(--brand);flex-shrink:0}
+.heading-icon .icon-cdn,.heading-icon .icon-local{font-size:1.05rem}
+.heading-copy{min-width:0}
+.section-head h2{margin:0;font-size:clamp(1.08rem,1rem + .72vw,1.46rem);line-height:1.28;font-weight:700}
+.section-head p{margin:.45rem 0 0;color:var(--muted);font-size:.93rem;max-width:74ch}
+.section-body{padding:1rem;display:grid;gap:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem}
+.split{display:grid;gap:1rem}
+.card,.strip,.faq-item,.table-wrap,.rail{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.card{padding:.9rem;display:grid;gap:.46rem;align-content:start;border-top:3px solid var(--line-strong)}
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.85rem}
+.compare-card.primary{border-top:3px solid var(--brand)}
+.compare-card.accent{border-top:3px solid var(--accent)}
+.compare-card ul{margin:0;padding-left:1rem;display:grid;gap:.35rem}
+.card h3,.strip h3,.rail h3{margin:0;font-size:1rem;line-height:1.28;font-weight:700}
+.card p,.card li,.strip p,.strip li,.rail p,.rail li,.table-wrap td,.table-wrap th{font-size:.92rem}
+.card p,.card li,.strip p,.strip li,.rail p,.rail li{margin:0;color:var(--muted)}
+.card ul,.strip ul,.rail ul{margin:0;padding-left:1rem;display:grid;gap:.38rem}
+.strip{padding:.9rem;background:var(--surface-soft)}
+.text-flow{display:grid;gap:.8rem}
+.text-flow p,.text-flow li{margin:0;color:var(--muted)}
+.text-flow ul{margin:0;padding-left:1.05rem;display:grid;gap:.4rem}
+.callout{border-left:4px solid var(--line-strong);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:10px;padding:.82rem .9rem;background:var(--surface-soft);color:var(--muted);font-size:.92rem}
+.callout strong{color:var(--ink)}
+.callout.good{border-left-color:var(--good);background:var(--good-bg);color:var(--good)}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-bg);color:var(--warn)}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg);color:var(--danger)}
+.table-wrap{overflow:auto}
+table{width:100%;min-width:760px;border-collapse:collapse}
+th,td{text-align:left;vertical-align:top;padding:.78rem .72rem;border-bottom:1px solid var(--line)}
+th{background:var(--surface-soft);font-weight:700}
+td{color:var(--muted)}
+.badge{display:inline-flex;align-items:center;min-height:28px;padding:.2rem .55rem;border-radius:999px;font-size:.8rem;font-weight:700}
+.badge-danger{background:var(--danger-bg);color:var(--danger)}
+.badge-warn{background:var(--warn-bg);color:var(--warn)}
+.badge-good{background:var(--good-bg);color:var(--good)}
+.rail{padding:.9rem;display:grid;gap:.75rem}
+.rail-row{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start}
+.rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
+.micro-grid{display:grid;gap:.85rem}
+.micro-figure{background:var(--surface-soft)}
+.danger-band{padding:.9rem;background:var(--danger-bg);border-color:#dfb9bc;display:grid;gap:.38rem}
+.danger-band h3{margin:0;color:var(--danger);font-size:1.04rem;line-height:1.24}
+.danger-band p{color:#6f1f24}
+.faq{display:grid;gap:.65rem}
+.faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
+.faq-btn[aria-expanded="true"]{background:var(--surface-soft)}
+.faq-mark{color:var(--brand);font-size:1rem;flex-shrink:0}
+.faq-panel{padding:.1rem .9rem .9rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.faq-panel[hidden]{display:none}
+.bottom-cta{padding:1rem;display:grid;gap:.75rem;background:var(--surface-soft)}
+.bottom-cta h2{margin:0;font-size:1.14rem}
+.bottom-cta p{margin:0;color:var(--muted)}
+.actions,.print-row{display:flex;flex-wrap:wrap;gap:.55rem}
+.status-note{margin:0;font-size:.88rem;color:var(--muted)}
+footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.foot-grid{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.foot-grid h2,.foot-grid h3{margin:0;font-size:1.02rem;line-height:1.28}
+.foot-grid p{margin:.34rem 0 0;color:#f4d8d4;font-size:.9rem}
+.foot-links{margin-top:.72rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.foot-link{min-height:44px;border:1px solid rgba(255,255,255,.34);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;padding:.48rem .8rem;display:inline-flex;align-items:center;gap:.42rem;font-size:.9rem;font-weight:700}
+.subfoot{margin-top:.85rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.22);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.55rem;font-size:.83rem;color:#f3d5d1}
+.refs{margin:0;padding-left:1.1rem;display:grid;gap:.52rem}
+.refs li{color:var(--muted)}
+.refs a{color:var(--accent)}
+#kenali .section-head{background:#f7f0eb}
+#kambuh .section-head{background:#f8f3ee}
+#makan .section-head{background:#f7f3ef}
+#gayahidup .section-head{background:#f4f4ee}
+#obat .section-head{background:#f5f1ee}
+#khusus .section-head{background:#f8f2ee}
+#redflags{border-color:#dfb8bb}
+#redflags .section-head{background:#fbefef}
+#redflags .section-head::after{background:var(--danger)}
+#faq .section-head{background:#f7f3ee}
+#rujukan .section-head{background:#f6f2ed}
+@media(max-width:919px){.hero-panel{display:none}}
+@media(max-width:640px){
+  .hero-copy{padding:.66rem .72rem;gap:.42rem}
+  .hero-copy h2{font-size:.95rem;line-height:1.08}
+  .hero-copy p{display:none}
+  .hero-actions{max-width:none}
+  .hero-scan{grid-template-columns:repeat(3,minmax(0,1fr));gap:.34rem}
+  .scan-pill{padding:.38rem .3rem}
+  .scan-pill strong{justify-content:center;font-size:.72rem}
+  .scan-pill span{display:none}
+  .brand-copy h1{max-width:none}
+}
+@media(max-width:820px){.quick{flex-wrap:nowrap;overflow:auto}}
+@media(min-width:920px){
+  .topbar-inner{grid-template-columns:minmax(0,1fr) auto}
+  .hero-grid{grid-template-columns:minmax(0,1.18fr) minmax(290px,.82fr);min-height:236px}
+  .hero-copy{border-bottom:0;border-right:1px solid var(--line);padding:.9rem .95rem}
+  .split{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);align-items:start}
+  .micro-grid{grid-template-columns:minmax(0,1fr) minmax(260px,.88fr);align-items:start}
+}
+@media print{
+  :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
+  body{background:#fff!important;color:#111!important;font-size:11pt}
+  .topbar,.quick,.hero-actions,.hero-panel,#dangerBtn,#statusNote{display:none!important}
+  .wrap{width:100%}
+  .hero-grid{display:block;min-height:auto}
+  .hero-copy{border-right:0!important;border-bottom:0!important}
+  .hero,.summary,.section,.bottom-cta,footer,.card,.strip,.callout,.table-wrap,.rail,.micro-figure,.faq-item,.compare-card,.danger-band{box-shadow:none!important;break-inside:avoid}
+  a{color:#111!important;text-decoration:underline}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute;left:-9999px;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 21s7-4.6 7-10a7 7 0 1 0-14 0c0 5.4 7 10 7 10z" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="2"></circle></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"></circle></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M12 9v5" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="17.2" r="1.2" fill="currentColor"></circle></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-joint" viewBox="0 0 24 24"><path d="M7 7c1.3-1.3 3.5-1.3 4.8 0l1.2 1.2c1.3 1.3 1.3 3.5 0 4.8l-2 2c-1.3 1.3-3.5 1.3-4.8 0L5 13.8c-1.3-1.3-1.3-3.5 0-4.8L7 7z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M13.3 8.7 15 7c1.3-1.3 3.5-1.3 4.8 0l.2.2c1.3 1.3 1.3 3.5 0 4.8L18 14c-1.3 1.3-3.5 1.3-4.8 0l-1.7-1.7" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 9.5V21h14V9.5" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 6h11v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V6z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M15 8h2a3 3 0 0 1 0 6h-2" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M6 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-4 4 8 2-4h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="M10.5 20.5 3.5 13.5a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M8 8l8 8" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 0 4 23z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M4 5.5V21" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+</svg>
+<a class="skip" href="#main">Lewati ke isi utama</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="logo"><img id="logo" alt="Logo Zihan Medical Center"></div>
+      <div class="brand-copy">
+        <p>Panduan dewasa ZMC</p>
+        <h1>Asam urat: kenali flare, atur makan, dan tahu kapan tidak boleh menunggu</h1>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-secondary" id="dangerBtn" href="#redflags">
+        <span class="icon-pair"><i class="bi bi-exclamation-triangle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>
+        Tanda bahaya
+      </a>
+    </div>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h2>Sendi merah-panas yang datang mendadak? Cek gout, cek pemicu, cek tanda bahaya.</h2>
+        <p>Kalau ada demam atau tidak bisa menapak, periksa hari itu juga.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brand" id="heroWa" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            WhatsApp Klinik
+          </a>
+          <a class="btn btn-ghost" id="heroIg" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+            Instagram Klinik
+          </a>
+        </div>
+        <div class="hero-scan" aria-label="Pegangan cepat">
+          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-activity icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span>Sendi</strong><span>satu sendi nyeri, merah, panas</span></div>
+          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-cup-hot-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span>Pemicu</strong><span>dehidrasi, alkohol, daging tinggi purin</span></div>
+          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-exclamation-octagon-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>Bahaya</strong><span>demam, luka, atau tak bisa jalan</span></div>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="check-card">
+          <div class="check-grid">
+            <div class="check-row"><div class="check-badge">1</div><p><strong>Flare khas:</strong> satu sendi mendadak sangat nyeri, sering di ibu jari kaki, pergelangan kaki, atau lutut.</p></div>
+            <div class="check-row"><div class="check-badge">2</div><p><strong>Pemicu sering:</strong> kurang minum, hajatan tinggi daging, alkohol, dan minuman manis.</p></div>
+            <div class="check-row"><div class="check-badge">3</div><p><strong>Bukan flare biasa:</strong> ada demam, luka, muntah berat, atau tidak sanggup menapak.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="summary" id="ringkasan">
+    <strong>Ringkas 1 kalimat:</strong> kadar asam urat tinggi belum tentu gout; yang lebih penting dicatat adalah pola serangan, pemicu, obat rutin, fungsi ginjal, dan apakah ada tanda yang mengarah ke infeksi.
+  </section>
+
+  <nav class="quick" aria-label="Navigasi cepat">
+    <a class="chip" href="#kenali">Kenali Polanya</a>
+    <a class="chip" href="#kambuh">Saat Kambuh</a>
+    <a class="chip" href="#makan">Makan dan Minum</a>
+    <a class="chip" href="#gayahidup">Gaya Hidup</a>
+    <a class="chip" href="#obat">Obat dan Cek</a>
+    <a class="chip" href="#khusus">Kondisi Khusus</a>
+    <a class="chip" href="#redflags">Ke Dokter atau IGD</a>
+    <a class="chip" href="#faq">FAQ</a>
+    <a class="chip" href="#rujukan">Rujukan</a>
+  </nav>
+
+  <section id="kenali" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-search-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>1) Kenali polanya dulu: kadar asam urat tinggi tidak selalu sama dengan gout</h2>
+          <p>Jangan berhenti di angka laboratorium saja. Bedakan dulu hiperurisemia, flare gout, dan gout kronis; bila nyeri sendi datang mendadak, berulang, atau diagnosis belum jelas, periksa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="split">
+        <div class="text-flow">
+          <p>CDC dan NIAMS menjelaskan bahwa gout adalah radang sendi akibat kristal urat. Biasanya menyerang satu sendi, paling sering ibu jari kaki, pergelangan kaki, atau lutut, lalu datang mendadak dan sangat nyeri.</p>
+          <p>Yang sering bikin bingung: kadar asam urat tinggi di darah bisa ada tanpa gejala. Jadi, <strong>hiperurisemia belum tentu gout</strong>. Sebaliknya, kalau serangan berulang dibiarkan, gout bisa masuk fase kronis dan membentuk benjolan kristal yang disebut tofi.</p>
+          <ul>
+            <li><strong>Hiperurisemia:</strong> angka urat tinggi, tetapi belum tentu ada nyeri atau bengkak.</li>
+            <li><strong>Flare gout:</strong> nyeri hebat, bengkak, merah, panas, sering muncul mendadak pada satu sendi.</li>
+            <li><strong>Interval tenang:</strong> di antara serangan, sendi bisa terasa normal lagi.</li>
+            <li><strong>Gout kronis / tofi:</strong> serangan makin sering, sendi bisa berubah bentuk, dan risiko ginjal meningkat.</li>
+          </ul>
+          <div class="callout">Pegangan pasien: jangan hanya mengejar angka lab. Dokter tetap perlu mencocokkan gejala, riwayat serangan, obat, dan kadang pemeriksaan sendi atau pencitraan.</div>
+        </div>
+        <div class="rail">
+          <h3>Siapa yang lebih sering terkena</h3>
+          <div class="rail-row"><div class="rail-num">1</div><div><p>Lebih sering pada pria dewasa dan usia makin lanjut. Pada perempuan, risiko meningkat setelah menopause.</p></div></div>
+          <div class="rail-row"><div class="rail-num">2</div><div><p>Risiko naik pada orang dengan obesitas, hipertensi, gangguan ginjal kronis, sindrom metabolik, atau riwayat keluarga gout.</p></div></div>
+          <div class="rail-row"><div class="rail-num">3</div><div><p>Beberapa obat juga bisa memicu, terutama diuretik atau obat tertentu yang mengganggu pembuangan urat.</p></div></div>
+          <div class="callout warn"><strong>Kapan diagnosisnya belum aman?</strong> Bila serangan pertama sangat berat, lokasinya tidak khas, ada demam, atau ada luka di sekitar sendi.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kambuh" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-house-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-home"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>2) Saat kambuh: apa yang aman dilakukan di rumah</h2>
+          <p>Saat flare, fokuskan ke nyeri, bengkak, dan tanda bahaya. Istirahatkan sendi, kompres dingin, cukup minum, lalu evaluasi cepat bila ini serangan pertama, nyerinya sangat berat, atau ada demam.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="micro-grid">
+        <div class="rail">
+          <h3>Langkah 4 langkah pertama</h3>
+          <div class="rail-row"><div class="rail-num">1</div><div><p><strong>Istirahatkan sendi yang sakit.</strong> Kurangi jalan jauh, jongkok lama, atau aktivitas yang memberi beban pada sendi bengkak.</p></div></div>
+          <div class="rail-row"><div class="rail-num">2</div><div><p><strong>Kompres dingin.</strong> NIAMS menyebut es membantu mengurangi nyeri dan bengkak. Tempel 15-20 menit, beri lapis kain, ulang bila perlu.</p></div></div>
+          <div class="rail-row"><div class="rail-num">3</div><div><p><strong>Tinggikan bagian yang bengkak bila bisa.</strong> Ini membantu mengurangi bengkak, terutama bila yang sakit pergelangan kaki atau kaki.</p></div></div>
+          <div class="rail-row"><div class="rail-num">4</div><div><p><strong>Cukup minum air.</strong> Dehidrasi bisa memicu flare. Bila Anda juga punya batu ginjal atau cuaca panas, kebutuhan cairan bisa lebih terasa.</p></div></div>
+        </div>
+        <div class="micro-figure" aria-hidden="true">
+          <svg viewBox="0 0 360 230" role="img" aria-label="Ilustrasi langkah aman saat flare">
+            <rect x="14" y="14" width="332" height="202" rx="16" fill="#fff" stroke="#d7c7bd"></rect>
+            <text x="34" y="44" font-size="18" font-family="Tahoma" fill="#1f1a18" font-weight="700">Saat flare: fokus aman dulu</text>
+            <circle cx="76" cy="86" r="22" fill="#f8e9e7" stroke="#cfa79f"></circle>
+            <path d="M67 86h18M76 77v18" stroke="#a3191e" stroke-width="3" stroke-linecap="round"></path>
+            <text x="110" y="91" font-size="14" font-family="Tahoma" fill="#5f5650">istirahatkan sendi</text>
+            <circle cx="76" cy="132" r="22" fill="#edf6ef" stroke="#bad0bf"></circle>
+            <path d="M67 132l7 7 11-15" stroke="#205e3a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+            <text x="110" y="137" font-size="14" font-family="Tahoma" fill="#5f5650">kompres dingin</text>
+            <circle cx="76" cy="178" r="22" fill="#fbf0de" stroke="#dcc796"></circle>
+            <path d="M76 167v22M66 178h20" stroke="#8c5b14" stroke-width="3" stroke-linecap="round"></path>
+            <text x="110" y="183" font-size="14" font-family="Tahoma" fill="#5f5650">cukup minum dan cek pemicu</text>
+            <rect x="208" y="72" width="110" height="92" rx="12" fill="#f8f2ed" stroke="#d7c7bd"></rect>
+            <text x="225" y="98" font-size="14" font-family="Tahoma" fill="#a3191e" font-weight="700">Jangan paksakan</text>
+            <text x="225" y="120" font-size="13" font-family="Tahoma" fill="#5f5650">lari, hiking,</text>
+            <text x="225" y="140" font-size="13" font-family="Tahoma" fill="#5f5650">atau olahraga</text>
+            <text x="225" y="160" font-size="13" font-family="Tahoma" fill="#5f5650">yang trauma sendi.</text>
+          </svg>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Yang sering memicu kambuh</h3>
+          <ul>
+            <li>Alkohol, terutama bir dan minuman berpemanis.</li>
+            <li>Makan tinggi purin hewani dalam porsi besar.</li>
+            <li>Kurang minum, demam, atau diare yang bikin dehidrasi.</li>
+            <li>Obat tertentu, terutama diuretik, bila memang sedang digunakan.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Yang jangan dilakukan</h3>
+          <ul>
+            <li>Jangan memijat keras sendi yang sedang merah-panas.</li>
+            <li>Jangan memaksakan olahraga berat saat bengkak masih aktif.</li>
+            <li>Jangan mengubah obat rutin sendiri tanpa arahan dokter.</li>
+            <li>Jangan menganggap semua nyeri sendi mendadak pasti asam urat.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="callout good"><strong>Kalau sudah punya obat flare dari dokter:</strong> gunakan sesuai instruksi. Pilihan obat dan dosis tetap harus menyesuaikan ginjal, lambung, tekanan darah, diabetes, dan obat rutin lain.</div>
+    </div>
+  </section>
+  <section id="makan" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>3) Makan dan minum: bukan sekadar "pantang sayur hijau"</h2>
+          <p>Bagian ini penting karena diet gout sering terlalu hitam-putih. Pangkas dulu pemicu utama dari hewani, alkohol, dan fruktosa; bila flare tetap sering, jangan puas hanya dengan diet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="callout warn"><strong>Nuansa penting:</strong> Kemenkes 2024 menekankan bahwa purin hewani lebih terkait flare berulang. Jadi bayam, kacang, tahu, dan tempe tidak otomatis harus diharamkan total.</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:18%">Kategori cepat</th>
+              <th style="width:32%">Contoh yang paling relevan</th>
+              <th style="width:28%">Cara pakai di rumah</th>
+              <th style="width:22%">Kapan perlu evaluasi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge-danger">Hindari / tinggalkan kebiasaan</span></td>
+              <td>Alkohol, soda dan minuman manis, sirup tinggi fruktosa, jeroan, ekstrak ragi, kuah kaldu sangat pekat.</td>
+              <td>Ini kelompok yang paling layak dipangkas dulu. Kalau ada kebiasaan harian, ubah bertahap tapi tegas.</td>
+              <td>Bila flare tetap sering walau pemicu ini sudah dikurangi, jangan puas hanya dengan diet; perlu evaluasi obat dan komorbid.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-warn">Batasi ketat</span></td>
+              <td>Daging merah, kambing, seafood tertentu seperti kerang, lobster, udang, sarden, anchovy, dan porsi daging besar saat hajatan.</td>
+              <td>Boleh jadi bukan nol total untuk semua orang, tetapi jangan dijadikan menu sering. Porsi kecil dan tidak berulang dalam hari yang sama lebih aman.</td>
+              <td>Kalau setiap habis makan kelompok ini sendi langsung gampang flare, catat pemicunya dan bawa saat kontrol.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-good">Umumnya aman</span></td>
+              <td>Sayur dan buah, telur, susu rendah lemak, yogurt rendah lemak, tahu, tempe, kacang dan biji dalam porsi wajar, nasi, jagung, ubi, oatmeal.</td>
+              <td>Jadikan dasar menu harian. Untuk pasien dengan hipertensi, pola makan mirip DASH cocok karena membantu tekanan darah sekaligus bisa membantu urat.</td>
+              <td>Bila ada alergi, penyakit ginjal, atau pemicu pribadi tertentu, menu tetap harus disesuaikan secara individual.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid">
+        <article class="strip">
+          <h3>Yang bisa diprioritaskan</h3>
+          <ul>
+            <li>Air putih cukup setiap hari.</li>
+            <li>Buah dan sayur sebagai isi utama piring.</li>
+            <li>Susu atau yogurt rendah lemak bila cocok di lambung dan tidak ada larangan dokter.</li>
+            <li>Protein hewani lebih ringan seperti ayam tanpa banyak kulit dalam porsi wajar, bukan pesta protein.</li>
+          </ul>
+        </article>
+        <article class="strip">
+          <h3>Contoh lokal yang lebih aman</h3>
+          <ul>
+            <li>Nasi + telur + tumis buncis + pepaya.</li>
+            <li>Nasi + ayam rebus atau panggang porsi kecil + sayur bening + timun.</li>
+            <li>Oat atau roti gandum + yogurt rendah lemak + buah.</li>
+            <li>Tempe atau tahu tetap boleh dipakai sebagai lauk, bukan langsung dicoret.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="callout">Kopi dan ceri kadang dikaitkan dengan risiko flare yang lebih rendah, tetapi <strong>bukan obat utama</strong>. Jangan dipaksakan bila lambung atau jantung Anda sensitif.</div>
+    </div>
+  </section>
+
+  <section id="gayahidup" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-heart-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>4) Gaya hidup harian yang paling berpengaruh</h2>
+          <p>Flare berulang biasanya bukan cuma soal satu makanan. Yang paling berpengaruh justru berat badan, aktivitas fisik, cairan, dan kebiasaan harian; evaluasi lebih cepat bila ada komorbid atau penurunan berat badan terlalu agresif.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="grid">
+        <article class="card">
+          <h3>Berat badan</h3>
+          <p>Menurut NIAMS dan IRA, menurunkan berat badan bila overweight membantu menurunkan kadar urat dan mengurangi flare. Tetapi diet yang terlalu ketat atau tinggi protein justru bukan arah yang baik.</p>
+        </article>
+        <article class="card">
+          <h3>Aktivitas fisik</h3>
+          <p>Kemenkes dan IRA menyarankan latihan sedang secara rutin. Saat sendi sedang flare, fokus istirahat dulu; saat sudah reda, kembali ke jalan kaki, senam ringan, atau latihan sesuai kemampuan.</p>
+        </article>
+        <article class="card">
+          <h3>Cairan</h3>
+          <p>Cukup minum membantu mengurangi risiko pengendapan kristal, terutama bila Anda gampang kurang minum, bekerja di luar ruangan, atau punya riwayat batu ginjal.</p>
+        </article>
+        <article class="card">
+          <h3>Rokok dan pola harian</h3>
+          <p>IRA juga menyarankan menghentikan kebiasaan merokok. Ini bukan obat gout langsung, tetapi membantu kesehatan pembuluh darah dan komorbid yang sering jalan bareng dengan gout.</p>
+        </article>
+      </div>
+      <div class="callout good"><strong>Target realistis:</strong> bukan hidup serba pantang, tetapi perubahan yang tahan lama.</div>
+    </div>
+  </section>
+
+  <section id="obat" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-capsule-pill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pill"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>5) Obat dan pemeriksaan: singkat, jelas, dan jangan tebak sendiri</h2>
+          <p>Obat gout dibagi dua: untuk meredakan flare dan untuk menurunkan urat jangka panjang. Bila serangan pertama, flare makin sering, ada benjolan keras, atau hasil lab membingungkan, kontrol.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="compare-grid">
+        <article class="compare-card primary">
+          <h3>Obat untuk serangan aktif</h3>
+          <p>Obat flare dipakai untuk menurunkan nyeri dan bengkak saat serangan aktif.</p>
+          <ul>
+            <li>Yang sering dipakai adalah antiinflamasi, kolkisin, atau kortikosteroid sesuai penilaian dokter.</li>
+            <li>Pilihannya harus disesuaikan dengan fungsi ginjal, lambung, tekanan darah, diabetes, dan obat lain yang sedang diminum.</li>
+            <li>Kalau Anda sudah punya resep flare dari dokter, pakai sesuai instruksi yang pernah diberikan.</li>
+          </ul>
+        </article>
+        <article class="compare-card accent">
+          <h3>Obat penurun urat jangka panjang</h3>
+          <p>Obat ini bukan untuk mematikan nyeri saat itu juga, tetapi untuk menurunkan risiko flare berulang dan komplikasi.</p>
+          <ul>
+            <li>Biasanya dibahas pada pasien dengan flare berulang, tofi, batu ginjal, atau masalah ginjal terkait urat.</li>
+            <li>Diet tetap penting, tetapi pada sebagian pasien tidak cukup kalau dipakai sendirian.</li>
+            <li>Jangan mulai, hentikan, atau ganti obat jangka panjang tanpa arahan dokter yang memantau.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="split">
+        <div class="text-flow">
+          <p>Diagnosis gout dilihat dari gejala, pemeriksaan sendi, riwayat obat, dan pemeriksaan penunjang bila perlu. Ini penting karena beberapa penyakit lain bisa mirip gout.</p>
+          <ul>
+            <li><strong>Pemeriksaan yang sering dibahas:</strong> kadar urat darah, fungsi ginjal, riwayat batu ginjal, serta obat yang sedang diminum seperti diuretik atau aspirin dosis rendah.</li>
+            <li><strong>Yang perlu dibawa:</strong> daftar obat rutin, hasil lab terakhir, dan foto sendi saat sedang bengkak bila saat kontrol nyeri sudah reda.</li>
+          </ul>
+          <div class="callout">Pesan aman: jangan mengulang obat nyeri terus-menerus tanpa cek ginjal, lambung, tekanan darah, dan interaksi obat.</div>
+        </div>
+        <div class="rail">
+          <h3>Tiga alasan perlu kontrol terjadwal</h3>
+          <div class="rail-row"><div class="rail-num">1</div><div><p>Flare berulang bisa tetap merusak sendi walau tiap kali tampak "membaik sendiri".</p></div></div>
+          <div class="rail-row"><div class="rail-num">2</div><div><p>Gout sering jalan bareng hipertensi, diabetes, dislipidemia, penyakit jantung, dan gangguan ginjal.</p></div></div>
+          <div class="rail-row"><div class="rail-num">3</div><div><p>Bila sudah ada tofi atau batu ginjal, target terapi biasanya tidak cukup hanya dengan diet.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="khusus" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-person-vcard-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-user"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>6) Catatan kondisi khusus yang perlu dibahas saat kontrol</h2>
+          <p>Tidak semua pasien gout punya risiko yang sama. Cek komorbid dan obat rutin sebelum mengubah diet atau minum obat sendiri, terutama bila ada CKD, diuretik, diabetes, batu ginjal, atau usia lanjut.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="grid">
+        <article class="card">
+          <h3>Gangguan ginjal kronis</h3>
+          <p>Pasien CKD lebih mudah mengalami masalah pembuangan urat. Pemilihan obat dan dosis sering perlu penyesuaian, jadi jangan minum sembarang obat nyeri berulang.</p>
+        </article>
+        <article class="card">
+          <h3>Hipertensi dan diuretik</h3>
+          <p>CDC, Kemenkes, dan IRA sama-sama menyinggung diuretik sebagai faktor risiko. Jangan menghentikan obat tekanan darah sendiri; yang benar adalah review obat bersama dokter.</p>
+        </article>
+        <article class="card">
+          <h3>Diabetes, obesitas, penyakit jantung</h3>
+          <p>Komorbid ini sering berjalan bersama gout. Pendekatan makan lebih cocok bila sekaligus menurunkan gula, garam berlebih, dan berat badan secara bertahap.</p>
+        </article>
+        <article class="card">
+          <h3>Batu ginjal dan lansia</h3>
+          <p>Riwayat batu ginjal membuat cairan menjadi perhatian khusus. Pada lansia, rasa haus sering tidak terlalu terasa, jadi target minum perlu lebih sengaja dijaga.</p>
+        </article>
+      </div>
+      <div class="callout warn"><strong>Bawa saat kontrol:</strong> daftar obat rutin, hasil lab terakhir, catatan pemicu, dan foto sendi saat bengkak.</div>
+    </div>
+  </section>
+
+  <section id="redflags" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-exclamation-triangle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>7) Kapan harus ke dokter atau IGD</h2>
+          <p>Ini bagian terpenting untuk keselamatan pasien. Pakai daftar ini saat flare pertama atau saat keluhan terasa berbeda dari biasanya; bila salah satu tanda di bawah muncul, segera periksa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="danger-band">
+        <h3>Periksa hari itu juga atau ke IGD</h3>
+        <p>Bila sendi sangat merah-panas disertai demam, nyeri begitu berat sampai tidak bisa menapak, ada luka atau infeksi kulit di sekitar sendi, serangan baru pertama kali, atau muncul muntah hebat, lemas berat, dan tanda dehidrasi.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Tanda yang tidak aman ditunggu</h3>
+          <ul>
+            <li>Demam lebih dari 38 derajat C bersama satu sendi yang sangat panas dan bengkak.</li>
+            <li>Nyeri yang tidak membaik sama sekali walau sudah istirahat dan kompres dingin.</li>
+            <li>Sendi sulit digerakkan atau nyeri sampai tidak bisa jalan.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Tanda perlu kontrol lebih cepat</h3>
+          <ul>
+            <li>Serangan makin sering atau jeda makin pendek.</li>
+            <li>Muncul benjolan keras di sekitar jari, siku, atau telinga.</li>
+            <li>Ada nyeri pinggang yang mengarah ke batu ginjal.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Bila diagnosis belum jelas</h3>
+          <ul>
+            <li>Serangan pertama kali.</li>
+            <li>Lokasi nyeri tidak khas atau melibatkan banyak sendi sejak awal.</li>
+            <li>Ada riwayat trauma, luka, atau penyakit radang sendi lain.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="callout good">Kalau ragu antara "ini gout biasa" atau "ini beda", lebih aman periksa. Gout bisa mirip penyakit lain.</div>
+    </div>
+  </section>
+  <section id="faq" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-patch-question-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>8) FAQ singkat yang sering ditanyakan pasien</h2>
+          <p>Ini pertanyaan yang paling sering muncul di ruang praktik dan di rumah. Pakai sebagai pegangan awal, lalu periksa bila kondisi Anda tidak cocok dengan pola umum di bawah.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-btn" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">Kalau hasil lab asam urat tinggi tapi tidak sakit, apakah pasti harus minum obat?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>Belum tentu. Hiperurisemia tanpa gejala tidak otomatis sama dengan gout. Keputusan terapi tergantung gejala, komorbid, riwayat batu ginjal, dan penilaian dokter.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">Apakah semua sayuran hijau harus dibatasi ketat?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>Tidak. Kemenkes 2024 menekankan bahwa sayuran kaya purin secara umum tidak menunjukkan efek yang sama seperti purin hewani terhadap flare gout. Fokus utama tetap pada alkohol, minuman manis, jeroan, ekstrak ragi, dan purin hewani tinggi.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">Kalau nyerinya sedang reda, boleh olahraga?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>Boleh, bahkan dianjurkan latihan sedang secara rutin untuk berat badan dan komorbid. Yang dihindari adalah memaksa olahraga saat flare aktif atau olahraga yang berisiko trauma sendi.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">Bila sudah pernah didiagnosis gout, apakah diet saja cukup?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>Tidak selalu. Diet dan gaya hidup penting, tetapi pada pasien dengan flare berulang, tofi, atau komplikasi ginjal, NIAMS menegaskan bahwa terapi obat penurun urat sering menjadi bagian utama pengendalian jangka panjang.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rujukan" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-journal-medical icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>9) Rujukan</h2>
+          <p>Halaman ini disusun dari sumber resmi terbaru yang bisa dibuka saat online. Jadikan sebagai bacaan lanjutan, bukan pengganti pemeriksaan langsung.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <ol class="refs">
+        <li>CDC. <a href="https://www.cdc.gov/arthritis/gout/index.html" target="_blank" rel="noopener">Gout</a>. Dicek ulang pada 10 Maret 2026. Dasar gejala umum, faktor risiko, dan pesan bahwa tidak semua orang dengan kadar urat tinggi akan mengalami gout.</li>
+        <li>NIAMS. <a href="https://www.niams.nih.gov/health-topics/gout" target="_blank" rel="noopener">Gout: Overview, Symptoms, &amp; Causes</a>. Last reviewed 2023. Dasar perbedaan hiperurisemia, flare, interval tenang, tofi, dan komplikasi ginjal.</li>
+        <li>NIAMS. <a href="https://www.niams.nih.gov/health-topics/gout/diagnosis-treatment-and-steps-to-take" target="_blank" rel="noopener">Gout: Diagnosis, Treatment, and Steps to Take</a>. Last reviewed December 2023. Dasar pemeriksaan, prinsip terapi flare, pengobatan penurun urat, kompres es, elevasi, istirahat, dan pola DASH.</li>
+        <li>Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan. <a href="https://keslan.kemkes.go.id/view_artikel/4103/diet-sehat-untuk-penderita-asam-urat-gout-arthritis" target="_blank" rel="noopener">Diet Sehat untuk Penderita Asam Urat (Gout Arthritis)</a>. Publikasi 2024. Dasar nuansa purin hewani vs purin tumbuhan.</li>
+        <li>Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan. <a href="https://keslan.kemkes.go.id/view_artikel/3989/tanda-dan-gejala-asam-urat-tinggi-perlu-diwaspadai" target="_blank" rel="noopener">Tanda dan Gejala Asam Urat Tinggi, Perlu Diwaspadai!</a>. Publikasi 2025. Dasar gejala lokal, hidrasi, aktivitas fisik, dan daftar pemicu.</li>
+        <li>Ikatan Reumatologi Indonesia. <a href="https://reumatologi.or.id/wp-content/uploads/2020/10/Rekomendasi_GOUT_final.pdf" target="_blank" rel="noopener">Rekomendasi Diagnosis dan Pengelolaan Gout</a>. Dasar komorbid, diet, cairan, aktivitas fisik, dan faktor risiko obat seperti diuretik.</li>
+        <li>MedlinePlus. <a href="https://medlineplus.gov/ency/article/000422.htm" target="_blank" rel="noopener">Gout: Medical Encyclopedia</a>. Digunakan sebagai pelengkap untuk pola gejala akut dan anjuran kapan menghubungi tenaga kesehatan.</li>
+      </ol>
+      <div class="callout">Konten ini untuk edukasi pasien. Keputusan obat, target asam urat, dan penyesuaian komorbid tetap perlu konsultasi langsung.</div>
+    </div>
+  </section>
+
+  <section class="bottom-cta" aria-label="Aksi cepat pasien">
+    <h2>Print / Save PDF</h2>
+    <p>Gunakan tombol ini bila ingin menyimpan versi offline atau membawa ringkasan saat kontrol. Untuk hubungi klinik, pakai WhatsApp dan Instagram di hero atau link footer.</p>
+    <p id="statusNote" class="status-note" aria-live="polite">Status koneksi: memeriksa jaringan...</p>
+    <div class="print-row">
+      <button class="btn btn-secondary" id="printPage" type="button" aria-label="Print atau simpan PDF">
+        <span class="icon-pair"><i class="bi bi-printer-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-print"></use></svg></span>
+        Print / Save PDF
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <h2>Zihan Medical Center</h2>
+        <p><strong>#ZMCGakNyuekinKamu</strong> - layanan 24 jam untuk keluarga Wanaraja dan sekitarnya.</p>
+        <p id="clinicAddress"></p>
+        <p><strong>Telepon:</strong> <span id="clinicPhone"></span></p>
+        <p><strong>Jam:</strong> <span id="clinicHours"></span></p>
+      </div>
+      <div>
+        <h3>Kontak dan lokasi</h3>
+        <div class="foot-links">
+          <a class="foot-link" id="footerWa" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            WhatsApp
+          </a>
+          <a class="foot-link" id="footerMap" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>
+            Maps
+          </a>
+          <a class="foot-link" id="footerIg" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+            Instagram
+          </a>
+        </div>
+        <p style="margin-top:.58rem">Tip offline: simpan file ini satu folder dengan <code>zmc-logo.jpeg</code> agar logo tetap tampil saat dibuka langsung dari perangkat.</p>
+      </div>
+    </div>
+    <div class="subfoot">
+      <span>&copy; <span id="year"></span> Zihan Medical Center - Wanaraja Garut</span>
+      <span>Materi edukasi pasien. Bukan pengganti pemeriksaan langsung.</span>
+    </div>
+  </footer>
+</main>
+<script>
+const ZMC = {
+  name: "Zihan Medical Center",
+  tagline: "#ZMCGakNyuekinKamu",
+  logoLocal: "zmc-logo.jpeg",
+  logoFallback: "https://i.imgur.com/jzuguQE.jpeg",
+  maps: "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+  whatsapp: "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+  instagram: "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+  address: "Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183",
+  phone: "+62 822-1718-0432",
+  hours: "Senin - Minggu: 24 Jam"
+};
+
+(function initPage(){
+  const root = document.documentElement;
+  const qs = new URLSearchParams(location.search);
+  const forceIcons = qs.get("icons") === "fallback";
+  const logo = document.getElementById("logo");
+  const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
+  const logoCandidates = ["../zmc-logo.jpeg", ZMC.logoLocal, "../../topics/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
+  let logoIndex = 0;
+
+  function loadLogo() {
+    if (logoIndex >= logoCandidates.length) return;
+    logo.src = logoCandidates[logoIndex];
+    logoIndex += 1;
+  }
+
+  logo.addEventListener("error", loadLogo);
+  loadLogo();
+
+  document.getElementById("clinicAddress").textContent = ZMC.address;
+  document.getElementById("clinicPhone").textContent = ZMC.phone;
+  document.getElementById("clinicHours").textContent = ZMC.hours;
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+
+  ["heroWa", "footerWa"].forEach(function(id){
+    const el = document.getElementById(id);
+    if (el) el.href = ZMC.whatsapp;
+  });
+  ["footerMap"].forEach(function(id){
+    const el = document.getElementById(id);
+    if (el) el.href = ZMC.maps;
+  });
+  ["heroIg", "footerIg"].forEach(function(id){
+    const el = document.getElementById(id);
+    if (el) el.href = ZMC.instagram;
+  });
+
+  function checkIconCDN() {
+    if (forceIcons) {
+      root.classList.add("icons-fallback");
+      return;
+    }
+    const probe = document.createElement("i");
+    probe.className = "bi bi-check2";
+    probe.style.position = "absolute";
+    probe.style.left = "-9999px";
+    document.body.appendChild(probe);
+    const pseudo = getComputedStyle(probe, "::before");
+    const loaded = pseudo && pseudo.content && pseudo.content !== "none" && String(pseudo.fontFamily || "").toLowerCase().includes("bootstrap-icons");
+    if (!loaded) root.classList.add("icons-fallback");
+    probe.remove();
+  }
+
+  checkIconCDN();
+
+  const printBtn = document.getElementById("printPage");
+  if (printBtn) {
+    printBtn.addEventListener("click", function(){
+      window.print();
+    });
+  }
+
+  const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
+  function closeFaq() {
+    faqButtons.forEach(function(btn){
+      const panel = document.getElementById(btn.getAttribute("aria-controls"));
+      const mark = btn.querySelector(".faq-mark");
+      btn.setAttribute("aria-expanded", "false");
+      if (panel) panel.hidden = true;
+      if (mark) mark.textContent = "+";
+    });
+  }
+  function toggleFaq(btn) {
+    const panel = document.getElementById(btn.getAttribute("aria-controls"));
+    const mark = btn.querySelector(".faq-mark");
+    const open = btn.getAttribute("aria-expanded") === "true";
+    closeFaq();
+    if (!open && panel) {
+      btn.setAttribute("aria-expanded", "true");
+      panel.hidden = false;
+      if (mark) mark.textContent = "-";
+    }
+  }
+  faqButtons.forEach(function(btn, index){
+    btn.addEventListener("click", function(){
+      toggleFaq(btn);
+    });
+    btn.addEventListener("keydown", function(event){
+      const last = faqButtons.length - 1;
+      let target = index;
+      if (event.key === "ArrowDown") target = index === last ? 0 : index + 1;
+      if (event.key === "ArrowUp") target = index === 0 ? last : index - 1;
+      if (event.key === "Home") target = 0;
+      if (event.key === "End") target = last;
+      if (["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+        event.preventDefault();
+        faqButtons[target].focus();
+      }
+      if (event.key === " " || event.key === "Enter") {
+        event.preventDefault();
+        toggleFaq(btn);
+      }
+    });
+  });
+
+  const statusNote = document.getElementById("statusNote");
+  function syncStatus(){
+    if (!statusNote) return;
+    statusNote.textContent = navigator.onLine
+      ? "Status koneksi: online. Tautan rujukan dan kontak bisa dibuka."
+      : "Status koneksi: offline. Konten utama tetap bisa dibaca di perangkat ini.";
+  }
+  window.addEventListener("online", syncStatus);
+  window.addEventListener("offline", syncStatus);
+  syncStatus();
+})();
+</script>
+</body>
+</html>
