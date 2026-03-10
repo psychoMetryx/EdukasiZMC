@@ -1,0 +1,423 @@
+- generic [active] [ref=e1]:
+  - link "Lewati ke isi utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Logo Zihan Medical Center" [ref=e7]
+        - generic [ref=e8]:
+          - paragraph [ref=e9]: Panduan dewasa ZMC
+          - 'heading "Asam urat: kenali flare, atur makan, dan tahu kapan tidak boleh menunggu" [level=1] [ref=e10]'
+      - link "Tanda bahaya" [ref=e12] [cursor=pointer]:
+        - /url: "#redflags"
+        - generic [ref=e14]: 
+        - text: Tanda bahaya
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - 'heading "Nyeri sendi yang datang mendadak, merah, panas, dan sangat nyut-nyutan sering cocok dengan flare asam urat. Yang tidak boleh dianggap sepele: demam, tidak bisa menopang badan, atau curiga infeksi." [level=2] [ref=e19]'
+        - paragraph [ref=e20]: Halaman ini dibuat untuk pasien dewasa dan lansia. Fokusnya bukan cuma daftar makanan, tetapi juga membedakan kadar asam urat tinggi dengan gout, mengenali pemicu, langkah aman saat kambuh, dan waktu periksa yang tepat.
+        - generic "Pegangan cepat" [ref=e21]:
+          - generic [ref=e22]:
+            - strong [ref=e23]: Cek sendi
+            - generic [ref=e24]: apakah satu sendi sangat nyeri, panas, bengkak, dan mendadak
+          - generic [ref=e25]:
+            - strong [ref=e26]: Cek pemicu
+            - generic [ref=e27]: alkohol, minuman manis, jeroan, dehidrasi, atau obat tertentu
+          - generic [ref=e28]:
+            - strong [ref=e29]: Cek risiko
+            - generic [ref=e30]: obesitas, hipertensi, diuretik, gangguan ginjal, batu ginjal
+          - generic [ref=e31]:
+            - strong [ref=e32]: Cek bahaya
+            - generic [ref=e33]: demam, luka, nyeri sangat berat, atau sulit berjalan
+        - generic [ref=e34]:
+          - strong [ref=e35]: "Catatan cepat:"
+          - text: kadar asam urat tinggi belum tentu langsung gout, tetapi serangan gout yang berulang bisa merusak sendi dan ginjal kalau terus dibiarkan. Ulah dianggap cuma pegal biasa bila sendi merah-panas muncul mendadak.
+      - generic [ref=e36]:
+        - img [ref=e38]:
+          - generic [ref=e43]: kristal urat memicu radang sendi
+          - generic [ref=e45]: Pemicu yang sering muncul
+          - generic [ref=e47]: alkohol
+          - generic [ref=e49]: minuman manis
+          - generic [ref=e51]: jeroan
+          - generic [ref=e53]: dehidrasi
+        - paragraph [ref=e54]: Kuncinya bukan nol purin total, tetapi mengurangi pemicu utama, menjaga cairan, berat badan, dan mengobati flare dengan tepat.
+    - generic [ref=e55]:
+      - strong [ref=e56]: "Ringkas 1 kalimat:"
+      - text: asam urat dewasa perlu dilihat sebagai gabungan antara flare sendi, kadar urat, pola makan, berat badan, fungsi ginjal, dan obat rutin; kalau nyeri mendadak disertai demam atau sendi sangat merah-panas, periksa hari itu juga.
+    - navigation "Navigasi cepat" [ref=e57]:
+      - link "Kenali Polanya" [ref=e58] [cursor=pointer]:
+        - /url: "#kenali"
+      - link "Saat Kambuh" [ref=e59] [cursor=pointer]:
+        - /url: "#kambuh"
+      - link "Makan dan Minum" [ref=e60] [cursor=pointer]:
+        - /url: "#makan"
+      - link "Gaya Hidup" [ref=e61] [cursor=pointer]:
+        - /url: "#gayahidup"
+      - link "Obat dan Cek" [ref=e62] [cursor=pointer]:
+        - /url: "#obat"
+      - link "Kondisi Khusus" [ref=e63] [cursor=pointer]:
+        - /url: "#khusus"
+      - link "Ke Dokter atau IGD" [ref=e64] [cursor=pointer]:
+        - /url: "#redflags"
+      - link "FAQ" [ref=e65] [cursor=pointer]:
+        - /url: "#faq"
+      - link "Rujukan" [ref=e66] [cursor=pointer]:
+        - /url: "#rujukan"
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - 'heading "1) Kenali polanya dulu: kadar asam urat tinggi tidak selalu sama dengan gout" [level=2] [ref=e69]'
+        - paragraph [ref=e70]: "Konteks: banyak pasien baru tahu angka laboratorium, lalu mengira setiap nyeri sendi pasti asam urat. Langkah praktis: pahami bedanya kadar urat tinggi, flare gout, dan kerusakan kronis. Kapan evaluasi medis: bila nyeri sendi muncul mendadak, berulang, atau diagnosisnya belum pasti."
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - paragraph [ref=e74]: Menurut CDC dan NIAMS, gout adalah radang sendi akibat endapan kristal urat yang biasanya menyerang satu sendi pada satu waktu, paling sering di pangkal ibu jari kaki, pergelangan kaki, atau lutut. Flare biasanya datang mendadak, sangat nyeri, lalu mereda beberapa hari sampai sekitar 1-2 minggu.
+          - paragraph [ref=e75]:
+            - text: "Yang sering bikin bingung: kadar asam urat tinggi di darah bisa ada tanpa gejala. Jadi,"
+            - strong [ref=e76]: hiperurisemia belum tentu gout
+            - text: . Sebaliknya, kalau serangan berulang dibiarkan, gout bisa masuk fase kronis dan membentuk benjolan kristal yang disebut tofi.
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - strong [ref=e79]: "Hiperurisemia:"
+              - text: angka urat tinggi, tetapi belum tentu ada nyeri atau bengkak.
+            - listitem [ref=e80]:
+              - strong [ref=e81]: "Flare gout:"
+              - text: nyeri hebat, bengkak, merah, panas, sering muncul mendadak pada satu sendi.
+            - listitem [ref=e82]:
+              - strong [ref=e83]: "Interval tenang:"
+              - text: di antara serangan, sendi bisa terasa normal lagi.
+            - listitem [ref=e84]:
+              - strong [ref=e85]: "Gout kronis / tofi:"
+              - text: serangan makin sering, sendi bisa berubah bentuk, dan risiko ginjal meningkat.
+          - generic [ref=e86]: "Pegangan pasien: jangan hanya mengejar angka laboratorium. Dokter tetap perlu mencocokkan gejala, riwayat serangan, obat yang dipakai, dan kadang pemeriksaan cairan sendi atau pencitraan."
+        - generic [ref=e87]:
+          - heading "Siapa yang lebih sering terkena" [level=3] [ref=e88]
+          - generic [ref=e89]:
+            - generic [ref=e90]: "1"
+            - paragraph [ref=e92]: Lebih sering pada pria dewasa dan usia makin lanjut. Pada perempuan, risiko meningkat setelah menopause.
+          - generic [ref=e93]:
+            - generic [ref=e94]: "2"
+            - paragraph [ref=e96]: Risiko naik pada orang dengan obesitas, hipertensi, gangguan ginjal kronis, sindrom metabolik, atau riwayat keluarga gout.
+          - generic [ref=e97]:
+            - generic [ref=e98]: "3"
+            - paragraph [ref=e100]: Beberapa obat juga bisa memicu, terutama diuretik atau obat tertentu yang mengganggu pembuangan urat.
+          - generic [ref=e101]:
+            - strong [ref=e102]: Kapan curiga diagnosisnya belum aman?
+            - text: Bila nyeri sendi pertama kali sangat berat, lokasi tidak khas, ada demam, atau ada luka di sekitar sendi. Jangan langsung menebak sendiri.
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - 'heading "2) Saat kambuh: apa yang aman dilakukan di rumah" [level=2] [ref=e105]'
+        - paragraph [ref=e106]: "Konteks: saat flare, fokus utama adalah menurunkan nyeri dan bengkak dengan aman sambil memastikan bukan kondisi berbahaya. Langkah praktis: istirahatkan sendi, kompres dingin, cukup minum, dan evaluasi pemicu. Kapan evaluasi medis: bila nyeri sangat berat, flare pertama, atau ada demam."
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - heading "Langkah 4 langkah pertama" [level=3] [ref=e110]
+            - generic [ref=e111]:
+              - generic [ref=e112]: "1"
+              - paragraph [ref=e114]:
+                - strong [ref=e115]: Istirahatkan sendi yang sakit.
+                - text: Kurangi jalan jauh, jongkok lama, atau aktivitas yang memberi beban pada sendi bengkak.
+            - generic [ref=e116]:
+              - generic [ref=e117]: "2"
+              - paragraph [ref=e119]:
+                - strong [ref=e120]: Kompres dingin.
+                - text: NIAMS menyebut es membantu mengurangi nyeri dan bengkak. Tempel 15-20 menit, beri lapis kain, ulang bila perlu.
+            - generic [ref=e121]:
+              - generic [ref=e122]: "3"
+              - paragraph [ref=e124]:
+                - strong [ref=e125]: Tinggikan bagian yang bengkak bila bisa.
+                - text: Ini membantu mengurangi bengkak, terutama bila yang sakit pergelangan kaki atau kaki.
+            - generic [ref=e126]:
+              - generic [ref=e127]: "4"
+              - paragraph [ref=e129]:
+                - strong [ref=e130]: Cukup minum air.
+                - text: Dehidrasi bisa memicu flare. Bila Anda juga punya batu ginjal atau cuaca panas, kebutuhan cairan bisa lebih terasa.
+          - img [ref=e132]:
+            - generic [ref=e134]: "Saat flare: fokus aman dulu"
+            - generic [ref=e137]: istirahatkan sendi
+            - generic [ref=e140]: kompres dingin
+            - generic [ref=e143]: cukup minum dan cek pemicu
+            - generic [ref=e145]: Jangan paksakan
+            - generic [ref=e146]: lari, hiking,
+            - generic [ref=e147]: atau olahraga
+            - generic [ref=e148]: yang trauma sendi.
+        - generic [ref=e149]:
+          - article [ref=e150]:
+            - heading "Yang sering memicu kambuh" [level=3] [ref=e151]
+            - list [ref=e152]:
+              - listitem [ref=e153]: Alkohol, terutama bir dan minuman berpemanis.
+              - listitem [ref=e154]: Makan tinggi purin hewani dalam porsi besar.
+              - listitem [ref=e155]: Kurang minum, demam, atau diare yang bikin dehidrasi.
+              - listitem [ref=e156]: Obat tertentu, terutama diuretik, bila memang sedang digunakan.
+          - article [ref=e157]:
+            - heading "Yang jangan dilakukan" [level=3] [ref=e158]
+            - list [ref=e159]:
+              - listitem [ref=e160]: Jangan memijat keras sendi yang sedang merah-panas.
+              - listitem [ref=e161]: Jangan memaksakan olahraga berat saat bengkak masih aktif.
+              - listitem [ref=e162]: Jangan mengubah obat rutin sendiri tanpa arahan dokter.
+              - listitem [ref=e163]: Jangan menganggap semua nyeri sendi mendadak pasti asam urat.
+        - generic [ref=e164]:
+          - strong [ref=e165]: "Kalau Anda sudah punya obat dari dokter untuk flare:"
+          - text: gunakan sesuai instruksi yang pernah diberikan. Menurut NIAMS, obat antiinflamasi, kolkisin, atau kortikosteroid sering dipakai saat flare, tetapi pilihan dan dosisnya harus disesuaikan kondisi ginjal, lambung, tekanan darah, dan obat lain yang sedang Anda minum.
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - 'heading "3) Makan dan minum: bukan sekadar \"pantang sayur hijau\"" [level=2] [ref=e168]'
+        - paragraph [ref=e169]: "Konteks: materi lama sering terlalu hitam-putih. Langkah praktis: kurangi pemicu utama dari hewani, alkohol, dan fruktosa; jangan memukul rata semua purin tumbuhan. Kapan evaluasi medis: bila diet sudah lebih rapi tetapi flare tetap sering atau angka urat tetap tinggi."
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - strong [ref=e172]: "Nuansa penting:"
+          - text: artikel Kemenkes 2024 menekankan bahwa purin dari hewani lebih terkait flare berulang, sedangkan sayuran kaya purin secara umum tidak menunjukkan efek yang sama. Jadi, bayam, kacang, tahu, dan tempe tidak otomatis harus diharamkan total untuk semua pasien.
+        - table [ref=e174]:
+          - rowgroup [ref=e175]:
+            - row "Kategori cepat Contoh yang paling relevan Cara pakai di rumah Kapan perlu evaluasi" [ref=e176]:
+              - columnheader "Kategori cepat" [ref=e177]
+              - columnheader "Contoh yang paling relevan" [ref=e178]
+              - columnheader "Cara pakai di rumah" [ref=e179]
+              - columnheader "Kapan perlu evaluasi" [ref=e180]
+          - rowgroup [ref=e181]:
+            - row "Hindari / tinggalkan kebiasaan Alkohol, soda dan minuman manis, sirup tinggi fruktosa, jeroan, ekstrak ragi, kuah kaldu sangat pekat. Ini kelompok yang paling layak dipangkas dulu. Kalau ada kebiasaan harian, ubah bertahap tapi tegas. Bila flare tetap sering walau pemicu ini sudah dikurangi, jangan puas hanya dengan diet; perlu evaluasi obat dan komorbid." [ref=e182]:
+              - cell "Hindari / tinggalkan kebiasaan" [ref=e183]:
+                - generic [ref=e184]: Hindari / tinggalkan kebiasaan
+              - cell "Alkohol, soda dan minuman manis, sirup tinggi fruktosa, jeroan, ekstrak ragi, kuah kaldu sangat pekat." [ref=e185]
+              - cell "Ini kelompok yang paling layak dipangkas dulu. Kalau ada kebiasaan harian, ubah bertahap tapi tegas." [ref=e186]
+              - cell "Bila flare tetap sering walau pemicu ini sudah dikurangi, jangan puas hanya dengan diet; perlu evaluasi obat dan komorbid." [ref=e187]
+            - row "Batasi ketat Daging merah, kambing, seafood tertentu seperti kerang, lobster, udang, sarden, anchovy, dan porsi daging besar saat hajatan. Boleh jadi bukan nol total untuk semua orang, tetapi jangan dijadikan menu sering. Porsi kecil dan tidak berulang dalam hari yang sama lebih aman. Kalau setiap habis makan kelompok ini sendi langsung gampang flare, catat pemicunya dan bawa saat kontrol." [ref=e188]:
+              - cell "Batasi ketat" [ref=e189]:
+                - generic [ref=e190]: Batasi ketat
+              - cell "Daging merah, kambing, seafood tertentu seperti kerang, lobster, udang, sarden, anchovy, dan porsi daging besar saat hajatan." [ref=e191]
+              - cell "Boleh jadi bukan nol total untuk semua orang, tetapi jangan dijadikan menu sering. Porsi kecil dan tidak berulang dalam hari yang sama lebih aman." [ref=e192]
+              - cell "Kalau setiap habis makan kelompok ini sendi langsung gampang flare, catat pemicunya dan bawa saat kontrol." [ref=e193]
+            - row "Umumnya aman Sayur dan buah, telur, susu rendah lemak, yogurt rendah lemak, tahu, tempe, kacang dan biji dalam porsi wajar, nasi, jagung, ubi, oatmeal. Jadikan dasar menu harian. Untuk pasien dengan hipertensi, pola makan mirip DASH cocok karena membantu tekanan darah sekaligus bisa membantu urat. Bila ada alergi, penyakit ginjal, atau pemicu pribadi tertentu, menu tetap harus disesuaikan secara individual." [ref=e194]:
+              - cell "Umumnya aman" [ref=e195]:
+                - generic [ref=e196]: Umumnya aman
+              - cell "Sayur dan buah, telur, susu rendah lemak, yogurt rendah lemak, tahu, tempe, kacang dan biji dalam porsi wajar, nasi, jagung, ubi, oatmeal." [ref=e197]
+              - cell "Jadikan dasar menu harian. Untuk pasien dengan hipertensi, pola makan mirip DASH cocok karena membantu tekanan darah sekaligus bisa membantu urat." [ref=e198]
+              - cell "Bila ada alergi, penyakit ginjal, atau pemicu pribadi tertentu, menu tetap harus disesuaikan secara individual." [ref=e199]
+        - generic [ref=e200]:
+          - article [ref=e201]:
+            - heading "Yang bisa diprioritaskan" [level=3] [ref=e202]
+            - list [ref=e203]:
+              - listitem [ref=e204]: Air putih cukup setiap hari.
+              - listitem [ref=e205]: Buah dan sayur sebagai isi utama piring.
+              - listitem [ref=e206]: Susu atau yogurt rendah lemak bila cocok di lambung dan tidak ada larangan dokter.
+              - listitem [ref=e207]: Protein hewani lebih ringan seperti ayam tanpa banyak kulit dalam porsi wajar, bukan pesta protein.
+          - article [ref=e208]:
+            - heading "Contoh lokal yang lebih aman" [level=3] [ref=e209]
+            - list [ref=e210]:
+              - listitem [ref=e211]: Nasi + telur + tumis buncis + pepaya.
+              - listitem [ref=e212]: Nasi + ayam rebus atau panggang porsi kecil + sayur bening + timun.
+              - listitem [ref=e213]: Oat atau roti gandum + yogurt rendah lemak + buah.
+              - listitem [ref=e214]: Tempe atau tahu tetap boleh dipakai sebagai lauk, bukan langsung dicoret.
+        - generic [ref=e215]:
+          - text: Kopi dan ceri sering disebut berkaitan dengan risiko flare yang lebih rendah dalam sebagian referensi, tetapi
+          - strong [ref=e216]: bukan obat utama
+          - text: . Jangan memaksa diri minum kopi kalau lambung atau jantung Anda sensitif.
+    - generic [ref=e217]:
+      - generic [ref=e218]:
+        - heading "4) Gaya hidup harian yang paling berpengaruh" [level=2] [ref=e219]
+        - paragraph [ref=e220]: "Konteks: flare sering berulang bukan hanya karena satu makanan. Langkah praktis: fokus ke berat badan, aktivitas fisik sedang, cairan, dan kebiasaan merokok. Kapan evaluasi medis: bila penurunan berat badan terlalu cepat, olahraga malah memicu cedera, atau ada komorbid yang membuat modifikasi perlu lebih hati-hati."
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - article [ref=e223]:
+            - heading "Berat badan" [level=3] [ref=e224]
+            - paragraph [ref=e225]: Menurut NIAMS dan IRA, menurunkan berat badan bila overweight membantu menurunkan kadar urat dan mengurangi flare. Tetapi diet yang terlalu ketat atau tinggi protein justru bukan arah yang baik.
+          - article [ref=e226]:
+            - heading "Aktivitas fisik" [level=3] [ref=e227]
+            - paragraph [ref=e228]: Kemenkes dan IRA menyarankan latihan sedang secara rutin. Saat sendi sedang flare, fokus istirahat dulu; saat sudah reda, kembali ke jalan kaki, senam ringan, atau latihan sesuai kemampuan.
+          - article [ref=e229]:
+            - heading "Cairan" [level=3] [ref=e230]
+            - paragraph [ref=e231]: Cukup minum membantu mengurangi risiko pengendapan kristal, terutama bila Anda gampang kurang minum, bekerja di luar ruangan, atau punya riwayat batu ginjal.
+          - article [ref=e232]:
+            - heading "Rokok dan pola harian" [level=3] [ref=e233]
+            - paragraph [ref=e234]: IRA juga menyarankan menghentikan kebiasaan merokok. Ini bukan obat gout langsung, tetapi membantu kesehatan pembuluh darah dan komorbid yang sering jalan bareng dengan gout.
+        - generic [ref=e235]:
+          - strong [ref=e236]: "Target yang realistis:"
+          - text: "bukan hidup serba pantang. Yang lebih berguna adalah perubahan yang tahan lama: minuman manis turun, berat badan turun perlahan, air cukup, dan olahraga sedang yang konsisten."
+    - generic [ref=e237]:
+      - generic [ref=e238]:
+        - 'heading "5) Obat dan pemeriksaan: singkat, jelas, dan jangan tebak sendiri" [level=2] [ref=e239]'
+        - paragraph [ref=e240]: "Konteks: ada obat untuk meredakan flare, ada juga obat untuk menurunkan kadar urat jangka panjang. Langkah praktis: pahami tujuan masing-masing dan bawa daftar obat rutin saat kontrol. Kapan evaluasi medis: bila serangan pertama, flare makin sering, ada benjolan keras, atau hasil laboratorium membingungkan."
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - paragraph [ref=e244]: NIAMS menjelaskan bahwa dokter bisa menilai gout melalui gejala, pemeriksaan sendi, riwayat obat, pemeriksaan laboratorium, dan pada sebagian kasus cairan sendi atau USG/CT khusus. Ini penting karena beberapa kondisi lain bisa mirip gout.
+          - list [ref=e245]:
+            - listitem [ref=e246]:
+              - strong [ref=e247]: "Obat flare:"
+              - text: dipakai untuk menurunkan nyeri dan bengkak saat serangan aktif.
+            - listitem [ref=e248]:
+              - strong [ref=e249]: "Obat penurun urat:"
+              - text: dipakai untuk mengatasi penyebab dasar, terutama pada pasien dengan flare berulang, tofi, atau komplikasi.
+            - listitem [ref=e250]:
+              - strong [ref=e251]: "Pemeriksaan yang sering dibahas:"
+              - text: kadar urat darah, fungsi ginjal, riwayat batu ginjal, serta obat yang sedang diminum seperti diuretik atau aspirin dosis rendah.
+          - generic [ref=e252]: "Pesan aman: jangan membeli atau mengulang obat nyeri terus-menerus tanpa memastikan kondisi ginjal, lambung, tekanan darah, dan interaksi dengan obat lain. Bawa foto sendi saat bengkak jika saat kontrol nyerinya sudah reda."
+        - generic [ref=e253]:
+          - heading "Tiga alasan perlu kontrol terjadwal" [level=3] [ref=e254]
+          - generic [ref=e255]:
+            - generic [ref=e256]: "1"
+            - paragraph [ref=e258]: Flare berulang bisa tetap merusak sendi walau tiap kali tampak "membaik sendiri".
+          - generic [ref=e259]:
+            - generic [ref=e260]: "2"
+            - paragraph [ref=e262]: Gout sering jalan bareng hipertensi, diabetes, dislipidemia, penyakit jantung, dan gangguan ginjal.
+          - generic [ref=e263]:
+            - generic [ref=e264]: "3"
+            - paragraph [ref=e266]: Bila sudah ada tofi atau batu ginjal, target terapi biasanya tidak cukup hanya dengan diet.
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - heading "6) Catatan kondisi khusus yang perlu dibahas saat kontrol" [level=2] [ref=e269]
+        - paragraph [ref=e270]: "Konteks: tidak semua pasien gout punya risiko yang sama. Langkah praktis: cek komorbid dan obat rutin sebelum mengubah diet atau minum obat sendiri. Kapan evaluasi medis: lebih cepat bila ada CKD, diuretik, diabetes, batu ginjal, atau lansia dengan asupan minum yang sering kurang."
+      - generic [ref=e271]:
+        - generic [ref=e272]:
+          - article [ref=e273]:
+            - heading "Gangguan ginjal kronis" [level=3] [ref=e274]
+            - paragraph [ref=e275]: Pasien CKD lebih mudah mengalami masalah pembuangan urat. Pemilihan obat dan dosis sering perlu penyesuaian, jadi jangan minum sembarang obat nyeri berulang.
+          - article [ref=e276]:
+            - heading "Hipertensi dan diuretik" [level=3] [ref=e277]
+            - paragraph [ref=e278]: CDC, Kemenkes, dan IRA sama-sama menyinggung diuretik sebagai faktor risiko. Jangan menghentikan obat tekanan darah sendiri; yang benar adalah review obat bersama dokter.
+          - article [ref=e279]:
+            - heading "Diabetes, obesitas, penyakit jantung" [level=3] [ref=e280]
+            - paragraph [ref=e281]: Komorbid ini sering berjalan bersama gout. Pendekatan makan lebih cocok bila sekaligus menurunkan gula, garam berlebih, dan berat badan secara bertahap.
+          - article [ref=e282]:
+            - heading "Batu ginjal dan lansia" [level=3] [ref=e283]
+            - paragraph [ref=e284]: Riwayat batu ginjal membuat cairan menjadi perhatian khusus. Pada lansia, rasa haus sering tidak terlalu terasa, jadi target minum perlu lebih sengaja dijaga.
+        - generic [ref=e285]:
+          - strong [ref=e286]: "Bawa saat kontrol:"
+          - text: daftar obat rutin, hasil lab terakhir bila ada, catatan makanan atau minuman yang terasa memicu, dan foto sendi saat bengkak. Ini jauh lebih membantu daripada hanya bilang "sering kambuh".
+    - generic [ref=e287]:
+      - generic [ref=e288]:
+        - heading "7) Kapan harus ke dokter atau IGD" [level=2] [ref=e289]
+        - paragraph [ref=e290]: "Konteks: ini bagian terpenting untuk keselamatan pasien. Langkah praktis: pakai daftar ini saat flare pertama atau saat keluhan terasa berbeda dari biasanya. Kapan evaluasi medis: segera bila salah satu tanda di bawah muncul."
+      - generic [ref=e291]:
+        - generic [ref=e292]:
+          - strong [ref=e293]: Periksa hari itu juga atau ke IGD
+          - text: bila sendi sangat merah-panas disertai demam, nyeri begitu berat sampai tidak bisa menapak, ada luka atau infeksi kulit di sekitar sendi, Anda baru pertama kali mengalami serangan seperti ini, atau muncul muntah hebat, lemas berat, dan tanda dehidrasi.
+        - generic [ref=e294]:
+          - article [ref=e295]:
+            - heading "Tanda yang tidak aman ditunggu" [level=3] [ref=e296]
+            - list [ref=e297]:
+              - listitem [ref=e298]: Demam lebih dari 38 derajat C bersama satu sendi yang sangat panas dan bengkak.
+              - listitem [ref=e299]: Nyeri yang tidak membaik sama sekali walau sudah istirahat dan kompres dingin.
+              - listitem [ref=e300]: Sendi sulit digerakkan atau nyeri sampai tidak bisa jalan.
+          - article [ref=e301]:
+            - heading "Tanda perlu kontrol lebih cepat" [level=3] [ref=e302]
+            - list [ref=e303]:
+              - listitem [ref=e304]: Serangan makin sering atau jeda makin pendek.
+              - listitem [ref=e305]: Muncul benjolan keras di sekitar jari, siku, atau telinga.
+              - listitem [ref=e306]: Ada nyeri pinggang yang mengarah ke batu ginjal.
+          - article [ref=e307]:
+            - heading "Bila diagnosis belum jelas" [level=3] [ref=e308]
+            - list [ref=e309]:
+              - listitem [ref=e310]: Serangan pertama kali.
+              - listitem [ref=e311]: Lokasi nyeri tidak khas atau melibatkan banyak sendi sejak awal.
+              - listitem [ref=e312]: Ada riwayat trauma, luka, atau penyakit radang sendi lain.
+        - generic [ref=e313]: Kalau Anda ragu antara "ini gout biasa" atau "ini beda", lebih aman periksa. Menurut CDC, gout bisa tampak mirip penyakit lain dan dokter perlu menegakkan diagnosisnya dengan benar.
+    - generic [ref=e314]:
+      - generic [ref=e315]:
+        - heading "8) FAQ singkat yang sering ditanyakan pasien" [level=2] [ref=e316]
+        - paragraph [ref=e317]: "Konteks: pertanyaan ini paling sering muncul di ruang praktik dan di rumah. Langkah praktis: gunakan jawaban ini sebagai pegangan awal. Kapan evaluasi medis: bila kondisi Anda tidak sesuai pola umum di bawah."
+      - generic [ref=e319]:
+        - button "Kalau hasil lab asam urat tinggi tapi tidak sakit, apakah pasti harus minum obat?" [ref=e321] [cursor=pointer]:
+          - text: Kalau hasil lab asam urat tinggi tapi tidak sakit, apakah pasti harus minum obat?
+          - generic [ref=e322]: +
+        - button "Apakah semua sayuran hijau harus dibatasi ketat?" [ref=e324] [cursor=pointer]:
+          - text: Apakah semua sayuran hijau harus dibatasi ketat?
+          - generic [ref=e325]: +
+        - button "Kalau nyerinya sedang reda, boleh olahraga?" [ref=e327] [cursor=pointer]:
+          - text: Kalau nyerinya sedang reda, boleh olahraga?
+          - generic [ref=e328]: +
+        - button "Bila sudah pernah didiagnosis gout, apakah diet saja cukup?" [ref=e330] [cursor=pointer]:
+          - text: Bila sudah pernah didiagnosis gout, apakah diet saja cukup?
+          - generic [ref=e331]: +
+    - generic [ref=e332]:
+      - generic [ref=e333]:
+        - heading "9) Rujukan" [level=2] [ref=e334]
+        - paragraph [ref=e335]: "Konteks: halaman ini disusun dari sumber resmi terbaru yang bisa dibuka saat online. Langkah praktis: jadikan sebagai bacaan lanjutan, bukan pengganti pemeriksaan langsung. Kapan evaluasi medis: tetap utamakan datang periksa bila ada tanda bahaya."
+      - generic [ref=e336]:
+        - list [ref=e337]:
+          - listitem [ref=e338]:
+            - text: CDC.
+            - link "Gout" [ref=e339] [cursor=pointer]:
+              - /url: https://www.cdc.gov/arthritis/gout/index.html
+            - text: . Dicek ulang pada 10 Maret 2026. Dasar gejala umum, faktor risiko, dan pesan bahwa tidak semua orang dengan kadar urat tinggi akan mengalami gout.
+          - listitem [ref=e340]:
+            - text: NIAMS.
+            - 'link "Gout: Overview, Symptoms, & Causes" [ref=e341] [cursor=pointer]':
+              - /url: https://www.niams.nih.gov/health-topics/gout
+            - text: . Last reviewed 2023. Dasar perbedaan hiperurisemia, flare, interval tenang, tofi, dan komplikasi ginjal.
+          - listitem [ref=e342]:
+            - text: NIAMS.
+            - 'link "Gout: Diagnosis, Treatment, and Steps to Take" [ref=e343] [cursor=pointer]':
+              - /url: https://www.niams.nih.gov/health-topics/gout/diagnosis-treatment-and-steps-to-take
+            - text: . Last reviewed December 2023. Dasar pemeriksaan, prinsip terapi flare, pengobatan penurun urat, kompres es, elevasi, istirahat, dan pola DASH.
+          - listitem [ref=e344]:
+            - text: Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan.
+            - link "Diet Sehat untuk Penderita Asam Urat (Gout Arthritis)" [ref=e345] [cursor=pointer]:
+              - /url: https://keslan.kemkes.go.id/view_artikel/4103/diet-sehat-untuk-penderita-asam-urat-gout-arthritis
+            - text: . Publikasi 2024. Dasar nuansa purin hewani vs purin tumbuhan.
+          - listitem [ref=e346]:
+            - text: Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan.
+            - link "Tanda dan Gejala Asam Urat Tinggi, Perlu Diwaspadai!" [ref=e347] [cursor=pointer]:
+              - /url: https://keslan.kemkes.go.id/view_artikel/3989/tanda-dan-gejala-asam-urat-tinggi-perlu-diwaspadai
+            - text: . Publikasi 2025. Dasar gejala lokal, hidrasi, aktivitas fisik, dan daftar pemicu.
+          - listitem [ref=e348]:
+            - text: Ikatan Reumatologi Indonesia.
+            - link "Rekomendasi Diagnosis dan Pengelolaan Gout" [ref=e349] [cursor=pointer]:
+              - /url: https://reumatologi.or.id/wp-content/uploads/2020/10/Rekomendasi_GOUT_final.pdf
+            - text: . Dasar komorbid, diet, cairan, aktivitas fisik, dan faktor risiko obat seperti diuretik.
+          - listitem [ref=e350]:
+            - text: MedlinePlus.
+            - 'link "Gout: Medical Encyclopedia" [ref=e351] [cursor=pointer]':
+              - /url: https://medlineplus.gov/ency/article/000422.htm
+            - text: . Digunakan sebagai pelengkap untuk pola gejala akut dan anjuran kapan menghubungi tenaga kesehatan.
+        - generic [ref=e352]: Konten ini bersifat edukasi pasien. Untuk keputusan obat, target asam urat, dan penyesuaian dengan penyakit ginjal, hipertensi, diabetes, atau penyakit jantung, tetap perlu konsultasi langsung.
+    - region "Aksi cepat pasien" [ref=e353]:
+      - heading "Aksi cepat pasien dan keluarga" [level=2] [ref=e354]
+      - paragraph [ref=e355]: Simpan halaman ini bila ingin dibuka offline. Bila flare terasa berbeda dari biasanya, muncul demam, atau Anda tidak yakin obat mana yang aman, hubungi fasilitas kesehatan.
+      - paragraph [ref=e356]: "Status koneksi: online. Tautan rujukan dan kontak bisa dibuka."
+      - generic [ref=e357]:
+        - link "WhatsApp Klinik" [ref=e358] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+          - generic [ref=e360]: 
+          - text: WhatsApp Klinik
+        - link "Buka Maps" [ref=e361] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+          - generic [ref=e363]: 
+          - text: Buka Maps
+        - button "Print atau simpan PDF" [ref=e364] [cursor=pointer]:
+          - generic [ref=e366]: 
+          - text: Print / Save PDF
+    - generic [ref=e367]:
+      - generic [ref=e368]:
+        - generic [ref=e369]:
+          - heading "Zihan Medical Center" [level=2] [ref=e370]
+          - paragraph [ref=e371]:
+            - strong [ref=e372]: "#ZMCGakNyuekinKamu"
+            - text: "- layanan 24 jam untuk keluarga Wanaraja dan sekitarnya."
+          - paragraph [ref=e373]: Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183
+          - paragraph [ref=e374]:
+            - strong [ref=e375]: "Telepon:"
+            - text: +62 822-1718-0432
+          - paragraph [ref=e376]:
+            - strong [ref=e377]: "Jam:"
+            - text: "Senin - Minggu: 24 Jam"
+        - generic [ref=e378]:
+          - heading "Kontak dan lokasi" [level=3] [ref=e379]
+          - generic [ref=e380]:
+            - link "WhatsApp" [ref=e381] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+              - generic [ref=e383]: 
+              - text: WhatsApp
+            - link "Maps" [ref=e384] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+              - generic [ref=e386]: 
+              - text: Maps
+            - link "Instagram" [ref=e387] [cursor=pointer]:
+              - /url: https://www.instagram.com/zihanmedicalcenter/?hl=en
+              - generic [ref=e389]: 
+              - text: Instagram
+          - paragraph [ref=e390]:
+            - text: "Tip offline: simpan file ini satu folder dengan"
+            - code [ref=e391]: zmc-logo.jpeg
+            - text: agar logo tetap tampil saat dibuka langsung dari perangkat.
+      - generic [ref=e392]:
+        - generic [ref=e393]: © 2026 Zihan Medical Center - Wanaraja Garut
+        - generic [ref=e394]: Materi edukasi pasien. Bukan pengganti pemeriksaan langsung.
