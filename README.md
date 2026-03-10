@@ -13,20 +13,20 @@ Repo ini dipakai untuk membangun halaman edukasi klinis HTML untuk **Zihan Medic
 - Area baca terberat tetap hampir murni teks agar mudah discan pasien dan keluarga.
 - Visual, ikon, dan callout dipakai untuk membantu baca, bukan menggantikan isi utama.
 - Halaman harus tetap berguna saat offline dan saat dibuka langsung dari `file://`.
+- Repo ini memakai satu mode warna terang saja; jangan menambah parity tema atau toggle tema sebagai default.
 
 ## Audiens
 - Pasien dan keluarga di Garut dengan target literasi setara SMA.
 - Bahasa Indonesia sederhana, kalimat pendek, tidak menggurui.
 - Konteks Sunda ringan boleh dipakai jika membantu pemahaman.
 
-## Workflow Standar
-1. Riset internet dulu dari sumber resmi terbaru.
-2. Susun konten medis lengkap tanpa memangkas materi penting.
+## Default Workflow
+1. Riset internet dulu dari sumber resmi terbaru dan simpan tautan rujukan di akhir konten.
+2. Susun konten medis lengkap tanpa memangkas materi penting, dengan section yang tidak repetitif secara isi maupun ritme baca.
 3. Bangun HTML single-file yang mobile-first, aksesibel, dan offline-ready.
-4. Tambahkan visual lokal atau inline yang tetap tampil saat `file://`.
-5. Lakukan QA sebagai tahap terpisah setelah HTML stabil.
+4. Lakukan QA sebagai tahap terpisah setelah HTML stabil, lalu perbaiki bug berdasarkan hasil verifikasi.
 
-QA bukan bagian dari flow penulisan HTML. Selesaikan konten dan layout dulu, lalu uji viewport, keyboard, print PDF, dan fallback offline/icon sebagai tahap verifikasi tersendiri.
+QA bukan bagian dari flow drafting HTML. Selesaikan konten dan layout dulu, lalu uji viewport, keyboard, print PDF, dan fallback offline/icon sebagai tahap verifikasi tersendiri.
 
 ## Sumber Prioritas
 - Kemenkes RI / Ayo Sehat
@@ -72,18 +72,20 @@ Guardrail anti-generik:
 - Hindari semua section terasa seperti pola tetap "judul + paragraf + grid card + callout" dengan border, radius, shadow, dan surface yang sama terus.
 
 ## Ikon dan Visual Edukasi
+- Minimal 1 visual edukasi per halaman; 2-4 lebih ideal bila memang membantu.
 - Ikon CDN/fallback harus membantu isi edukasi utama, bukan hanya tombol/footer.
 - Masukkan ikon pada area seperti cek napas, cek minum, rawat rumah, tanda bahaya, dan kapan ke dokter/IGD bila itu membantu scanability.
 - Visual harus memecah beban baca, bukan memindahkan paragraf panjang ke dalam box atau SVG.
 - Hindari SVG dengan terlalu banyak label kecil yang sulit dibaca di mobile.
 - Utamakan diagram sederhana, pointer, langkah cek cepat, atau highlight risiko yang bisa dipahami sekilas.
 - Ilustrasi harus reproducible tanpa API key dan tetap tampil offline.
+- Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG dan runtime check untuk mode fallback.
 
 ## Struktur Halaman
-1. Sticky header: logo dan judul topik
-2. Ringkasan singkat
+1. Sticky header
+2. Ringkasan 1 kalimat
 3. Quick chips anchor
-4. Konten utama
+4. Isi edukasi utama
 5. Red flags
 6. FAQ singkat bila perlu
 7. CTA bawah termasuk `Print / Save PDF`
@@ -96,6 +98,7 @@ Guardrail anti-generik:
 - Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG.
 - Ilustrasi harus reproducible tanpa API key.
 - `@media print` wajib menghindari card terpotong dan menjaga kontras.
+- Logo, ikon, dan visual penting harus tetap berguna saat file dibuka lokal.
 
 ## Struktur Repo
 ```text
@@ -118,12 +121,14 @@ EdukasiZMC/
 - Accordion/tab bisa dioperasikan keyboard
 - Footer link WA, Maps, Instagram berfungsi
 - Ikon CDN dan fallback lokal sama-sama aman
+- Offline/fallback diverifikasi, termasuk caveat bila tooling memblokir `file://`
 - Hero tetap compact dan tidak memonopoli tinggi layar
 - Materi inti tetap utuh setelah revisi UI
 - Section tidak terasa monoton secara ritme visual
 - Visual edukasi membantu scanability, bukan sekadar teks dalam kotak
 - Print A4 tidak memotong bagian penting
 - Artefak QA disimpan di `assets/qa/`
+- Skill `playwright`, `pdf`, dan `screenshot` dipakai saat QA memang butuh browser automation, print check, dan artefak visual
 
 ## Artefak Akhir
 Untuk halaman yang selesai dikerjakan, minimal hasil akhirnya mencakup:

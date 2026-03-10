@@ -253,6 +253,36 @@
       line-height: 1.35;
     }
 
+    .section-heading,
+    .subheading {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .section-heading .icon-pair,
+    .subheading .icon-pair {
+      margin-top: 0.08rem;
+      color: currentColor;
+      flex-shrink: 0;
+    }
+
+    .section-heading .icon-pair {
+      font-size: 1.02em;
+    }
+
+    .subheading {
+      margin: 0 0 0.42rem;
+      color: #7f171d;
+      font-size: 1rem;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .subheading .icon-pair {
+      font-size: 0.98em;
+    }
+
     p {
       margin: 0.18rem 0 0.7rem;
       color: var(--ink-soft);
@@ -467,6 +497,8 @@
     <symbol id="ico-clock" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.8"/><path d="M8 4.3v4.1l2.8 1.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
     <symbol id="ico-droplet" viewBox="0 0 16 16"><path d="M8 1.5c2.1 2.7 4.5 5.1 4.5 8a4.5 4.5 0 0 1-9 0c0-2.9 2.4-5.3 4.5-8z"/></symbol>
     <symbol id="ico-shield-check" viewBox="0 0 16 16"><path d="M8 1l5 2v4c0 4-2.6 6.4-5 8-2.4-1.6-5-4-5-8V3l5-2z"/><path d="M5.2 8.2L7 10l3.8-3.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="ico-stomach" viewBox="0 0 16 16"><path d="M8 1.7v3.6c0 .8.6 1.4 1.4 1.4h1.1c1.7 0 3 1.4 3 3.1 0 2.4-1.9 4.2-4.8 4.2-2.8 0-5.2-1.8-5.2-4.7 0-1.7.8-3.2 2.2-4 .7-.5 1.1-1.3 1.1-2.2V1.7H8z"/></symbol>
+    <symbol id="ico-hospital" viewBox="0 0 16 16"><path d="M2 15V4h4V1h4v3h4v11H2z"/><path d="M8 5.2v4.2M5.9 7.3h4.2" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
   </svg>
 
   <header class="topbar">
@@ -539,21 +571,21 @@
     </section>
     <main>
       <section id="pahami" class="card">
-        <h2>1) Pahami dulu: "maag", asam lambung, dan rasa panas di dada tidak selalu sama</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-info-circle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-stomach"></use></svg></span><span>1) Pahami dulu: "maag", asam lambung, dan rasa panas di dada tidak selalu sama</span></h2>
         <p class="section-lead">Pasien sering menyebut semua nyeri ulu hati sebagai maag. Padahal saat puasa keluhan bisa berupa dispepsia atau lambung terasa begah, bisa juga refluks yaitu rasa asam atau panas yang naik ke dada dan tenggorokan. Penyebutannya beda, tetapi langkah awal amannya mirip: makan lebih tertata, kurangi pemicu, dan kenali tanda bahaya.</p>
         <div class="grid-3">
           <article class="info-box">
-            <h3>Keluhan lambung / dispepsia</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-heart-pulse icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-stomach"></use></svg></span><span>Keluhan lambung / dispepsia</span></h3>
             <p>Biasanya berupa nyeri ulu hati, perut atas terasa penuh, cepat kenyang, mual, atau begah setelah buka. Saat puasa, pola ini sering muncul kalau buka terlalu berat atau sahur terlalu mepet.</p>
             <div class="callout warn"><strong>Kapan evaluasi:</strong> periksa bila keluhan berulang hampir tiap hari, mengganggu makan, atau tidak membaik setelah pola makan dirapikan.</div>
           </article>
           <article class="info-box">
-            <h3>Refluks / asam lambung naik</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-arrow-up-circle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span><span>Refluks / asam lambung naik</span></h3>
             <p>Keluhan khasnya rasa panas dari ulu hati ke dada, mulut terasa asam atau pahit, sendawa asam, batuk malam, atau suara serak. Keluhan sering terasa lebih jelas saat habis makan banyak lalu berbaring.</p>
             <div class="callout warn"><strong>Kapan evaluasi:</strong> periksa bila sering kambuh malam, butuh obat terus untuk nyaman, atau terasa sampai mengganggu tidur.</div>
           </article>
           <article class="info-box">
-            <h3>Bukan semua nyeri dada itu lambung</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-exclamation-diamond icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span><span>Bukan semua nyeri dada itu lambung</span></h3>
             <p>Nyeri yang terasa menekan, menjalar ke rahang, lengan, atau punggung, apalagi disertai sesak, keringat dingin, atau hampir pingsan, tidak aman disebut maag dulu.</p>
             <div class="callout danger"><strong>Kapan darurat:</strong> anggap gawat bila ada nyeri dada berat, muntah darah, BAB hitam, sulit menelan, atau lemas berat.</div>
           </article>
@@ -562,7 +594,7 @@
       </section>
 
       <section id="alur" class="card">
-        <h2>2) Alur aman: buka -> makan utama -> tetap tegak sebelum tidur</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-signpost-split icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-list"></use></svg></span><span>2) Alur aman: buka -> makan utama -> tetap tegak sebelum tidur</span></h2>
         <p class="section-lead">Bagian ini mengambil inti terbaik dari versi lama, tetapi dibersihkan supaya lebih mudah dipakai pasien. Fokusnya ada tiga: lambung jangan langsung dihajar porsi besar, beri jeda sebelum makan utama, lalu jangan rebahan setelah makan.</p>
         <div class="flow-layout">
           <figure class="flow-figure" aria-labelledby="flow-caption">
@@ -589,17 +621,17 @@
           <div class="step-grid" aria-label="Langkah praktis">
             <article class="step-card">
               <div class="step-no">1</div>
-              <h3>Buka ringan dulu</h3>
+              <h3 class="subheading"><span class="icon-pair"><i class="bi bi-cup-hot icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-cup"></use></svg></span><span>Buka ringan dulu</span></h3>
               <p>Mulai dengan air putih suhu ruang atau hangat. Bila cocok, boleh tambah 1-2 kurma atau buah yang ringan. Hindari langsung "balas dendam" makan berat.</p>
             </article>
             <article class="step-card">
               <div class="step-no">2</div>
-              <h3>Jeda sebelum makan utama</h3>
+              <h3 class="subheading"><span class="icon-pair"><i class="bi bi-hourglass-split icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-clock"></use></svg></span><span>Jeda sebelum makan utama</span></h3>
               <p>Kasih jeda sekitar 15-30 menit sebelum nasi dan lauk utama. Tujuannya supaya lambung tidak langsung penuh setelah kosong seharian.</p>
             </article>
             <article class="step-card">
               <div class="step-no">3</div>
-              <h3>Jangan langsung rebahan</h3>
+              <h3 class="subheading"><span class="icon-pair"><i class="bi bi-moon-stars icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-bed"></use></svg></span><span>Jangan langsung rebahan</span></h3>
               <p>Setelah makan malam, tetap duduk tegak atau jalan santai ringan. Jika sering kambuh malam, usahakan ada jeda sekitar 3 jam sebelum tiduran.</p>
             </article>
           </div>
@@ -608,11 +640,11 @@
       </section>
 
       <section id="buka" class="card">
-        <h2>3) Saat berbuka: yang membantu lambung, yang sering bikin langsung tidak nyaman</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-sunrise icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-cup"></use></svg></span><span>3) Saat berbuka: yang membantu lambung, yang sering bikin langsung tidak nyaman</span></h2>
         <p class="section-lead">Kemenkes menganjurkan berbuka diawali dengan yang ringan dan mudah dicerna, lalu makan utama setelah jeda. Pada pasien dengan lambung sensitif, saran ini justru makin penting karena beban terbesar biasanya datang dari buka yang terlalu cepat, terlalu banyak, dan terlalu berminyak.</p>
         <div class="grid-2">
           <div class="list-panel">
-            <h3>Lebih aman saat menit awal berbuka</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-check2-circle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-check-circle"></use></svg></span><span>Lebih aman saat menit awal berbuka</span></h3>
             <ul>
               <li>Air putih, lalu makanan ringan seperti 1-2 kurma bila cocok, pisang, pepaya, atau sup bening kecil.</li>
               <li>Makan pelan dan berhenti sebentar sebelum lanjut ke makanan utama.</li>
@@ -622,7 +654,7 @@
             <p class="meal-note"><strong>Contoh lokal yang cenderung lebih aman:</strong> nasi hangat dengan telur rebus, pepes tahu, sayur bening, sup ayam bening, atau oatmeal kecil setelah buka ringan.</p>
           </div>
           <div class="list-panel">
-            <h3>Yang sering bikin kambuh cepat</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-fire icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span><span>Yang sering bikin kambuh cepat</span></h3>
             <ul>
               <li>Langsung makan besar saat adzan, terutama jika penuh gorengan atau santan kental.</li>
               <li>Sambal banyak, kuah sangat pedas, soda, kopi pekat, atau teh sangat kental pada awal berbuka.</li>
@@ -635,7 +667,7 @@
       </section>
 
       <section id="makan" class="card">
-        <h2>4) Makan malam dan snack ringan: fokus pada porsi sedang, bukan sering lapar lalu kalap</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-moon icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-clock"></use></svg></span><span>4) Makan malam dan snack ringan: fokus pada porsi sedang, bukan sering lapar lalu kalap</span></h2>
         <p class="section-lead">Setelah makan utama, sebagian pasien masih lapar lagi pada malam hari. Itu boleh diatur, tetapi pilih snack yang ringan dan jangan menjadikan jam malam sebagai sesi makan berat kedua.</p>
         <div class="grid-2">
           <div class="topic-points" aria-label="Aturan makan malam">
@@ -670,11 +702,11 @@
       </section>
 
       <section id="sahur" class="card">
-        <h2>5) Sahur dan cairan: jangan mepet, jangan sekaligus banjir minum</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-droplet-half icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-droplet"></use></svg></span><span>5) Sahur dan cairan: jangan mepet, jangan sekaligus banjir minum</span></h2>
         <p class="section-lead">Kemenkes menekankan kebutuhan cairan tetap harus dipenuhi selama puasa, umumnya sekitar 8 gelas per hari yang dibagi dari berbuka sampai sahur. Untuk lambung sensitif, pembagiannya lebih nyaman bila dicicil, bukan ditumpuk sekaligus menjelang imsak.</p>
         <div class="grid-2">
           <div class="list-panel">
-            <h3>Yang disarankan saat sahur</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-check2-circle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-check-circle"></use></svg></span><span>Yang disarankan saat sahur</span></h3>
             <ul>
               <li>Usahakan sahur tidak terlalu mepet, jadi masih ada waktu duduk tegak setelah makan.</li>
               <li>Pilih menu yang hangat, tidak terlalu pedas, tidak terlalu berminyak, dan ada sumber protein seperti telur, ikan, tempe, atau tahu.</li>
@@ -684,7 +716,7 @@
             <div class="callout ok"><strong>Contoh sederhana:</strong> nasi dengan telur rebus dan sayur bening, atau roti dengan telur dan buah yang tidak terlalu asam.</div>
           </div>
           <div class="list-panel">
-            <h3>Yang sering memicu saat sahur</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-exclamation-circle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span><span>Yang sering memicu saat sahur</span></h3>
             <ul>
               <li>Kopi pekat saat perut masih kosong atau saat lambung sedang aktif kambuh.</li>
               <li>Makan sangat pedas dan sangat berminyak lalu langsung tiduran lagi.</li>
@@ -697,11 +729,11 @@
       </section>
 
       <section id="pemicu" class="card">
-        <h2>6) Pemicu yang sering bikin kambuh saat puasa</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-lightning-charge icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span><span>6) Pemicu yang sering bikin kambuh saat puasa</span></h2>
         <p class="section-lead">NIDDK menyebut beberapa makanan dan minuman yang umum memicu refluks: kopi atau kafein, makanan tinggi lemak, makanan pedas, cokelat, dan makanan asam pada sebagian orang. Di kehidupan sehari-hari, pola makan juga sama pentingnya dengan jenis makanannya.</p>
         <div class="grid-2">
           <div class="list-panel">
-            <h3>Makanan dan minuman yang sering perlu dibatasi</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-ban icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-ban"></use></svg></span><span>Makanan dan minuman yang sering perlu dibatasi</span></h3>
             <ul>
               <li>Gorengan, makanan tinggi lemak, santan kental, dan porsi besar sekaligus.</li>
               <li>Sambal banyak, seblak sangat pedas, kuah yang terlalu merangsang.</li>
@@ -710,7 +742,7 @@
             </ul>
           </div>
           <div class="list-panel">
-            <h3>Kebiasaan yang sama seringnya jadi pemicu</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-arrow-repeat icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-list"></use></svg></span><span>Kebiasaan yang sama seringnya jadi pemicu</span></h3>
             <ul>
               <li>Makan sangat cepat lalu langsung rebahan.</li>
               <li>Sahur mepet imsak lalu tidur lagi tanpa jeda.</li>
@@ -723,11 +755,11 @@
       </section>
 
       <section id="obat" class="card">
-        <h2>7) Obat dan kebiasaan yang perlu hati-hati</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-capsule-pill icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-shield-check"></use></svg></span><span>7) Obat dan kebiasaan yang perlu hati-hati</span></h2>
         <p class="section-lead">Bagian ini sengaja dibuat konservatif. Tujuannya membantu pasien aman, bukan memberi jadwal obat yang bisa keliru. Kalau Anda sudah punya obat lambung dari dokter, aturan minumnya tetap mengikuti resep yang diberikan untuk kondisi Anda sendiri.</p>
         <div class="grid-2">
           <div class="info-box">
-            <h3>Kalau sudah punya obat resep</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-clipboard2-pulse icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-shield-check"></use></svg></span><span>Kalau sudah punya obat resep</span></h3>
             <ul>
               <li>Minum sesuai instruksi dokter atau farmasis. Waktu minum tiap obat bisa berbeda.</li>
               <li>Jangan menaikkan dosis sendiri hanya karena takut kambuh saat puasa.</li>
@@ -736,7 +768,7 @@
             <div class="callout warn"><strong>Catatan:</strong> halaman ini tidak menggantikan aturan obat individual.</div>
           </div>
           <div class="info-box">
-            <h3>Obat dan kebiasaan yang bisa memperberat</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-shield-exclamation icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span><span>Obat dan kebiasaan yang bisa memperberat</span></h3>
             <ul>
               <li>NSAID tanpa pengawasan, rokok, dan alkohol.</li>
               <li>Sering mengandalkan obat bebas tanpa mengecek penyebab kalau keluhan berulang terus.</li>
@@ -748,19 +780,19 @@
       </section>
 
       <section id="khusus" class="card">
-        <h2>8) Siapa yang sebaiknya konsultasi dulu sebelum lanjut puasa</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-person-check icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-shield-check"></use></svg></span><span>8) Siapa yang sebaiknya konsultasi dulu sebelum lanjut puasa</span></h2>
         <p class="section-lead">Tidak semua pasien dengan keluhan lambung punya risiko yang sama. Ada kelompok yang sebaiknya diskusi dulu dengan dokter agar keputusan puasanya lebih aman dan jadwal obatnya tidak asal.</p>
         <div class="grid-3">
           <article class="info-box">
-            <h3>Riwayat lambung berat</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-exclamation-triangle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span><span>Riwayat lambung berat</span></h3>
             <p>Pernah perdarahan lambung, tukak, muntah darah, BAB hitam, atau sering kambuh berat saat Ramadan sebelumnya.</p>
           </article>
           <article class="info-box">
-            <h3>Penyakit kronis atau obat khusus</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-clipboard2-heart icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-shield-check"></use></svg></span><span>Penyakit kronis atau obat khusus</span></h3>
             <p>Penyakit ginjal, hati, jantung, diabetes, penggunaan pengencer darah, steroid, atau NSAID rutin.</p>
           </article>
           <article class="info-box">
-            <h3>Kondisi khusus lain</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-person-lines-fill icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-list"></use></svg></span><span>Kondisi khusus lain</span></h3>
             <p>Kehamilan, usia lanjut, berat badan turun tanpa sebab, anemia, sulit menelan, atau alergi obat berat.</p>
           </article>
         </div>
@@ -768,11 +800,11 @@
       </section>
 
       <section id="redflags" class="card">
-        <h2>9) Kapan harus ke dokter, dan kapan harus langsung ke IGD</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-hospital icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-hospital"></use></svg></span><span>9) Kapan harus ke dokter, dan kapan harus langsung ke IGD</span></h2>
         <p class="section-lead">Bagian ini wajib dibaca sampai selesai. Banyak pasien menunda terlalu lama karena mengira semua keluhan lambung bisa ditahan sampai buka berikutnya. Padahal sebagian gejala perlu evaluasi cepat.</p>
         <div class="red-flag-grid">
           <div class="list-panel">
-            <h3>Periksa ke dokter dalam waktu dekat bila:</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-stethoscope icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-shield-check"></use></svg></span><span>Periksa ke dokter dalam waktu dekat bila:</span></h3>
             <ul>
               <li>Keluhan tidak membaik walau pola buka, makan, dan sahur sudah dirapikan.</li>
               <li>Gejala sering kambuh malam, sering perlu obat bebas, atau sampai mengganggu tidur.</li>
@@ -783,7 +815,7 @@
             <div class="callout warn"><strong>Makna evaluasi:</strong> dokter menilai apakah ini keluhan lambung biasa, refluks yang lebih aktif, efek obat, tukak, atau masalah lain yang meniru maag.</div>
           </div>
           <div class="list-panel">
-            <h3>Segera ke IGD bila ada tanda bahaya:</h3>
+            <h3 class="subheading"><span class="icon-pair"><i class="bi bi-hospital-fill icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-hospital"></use></svg></span><span>Segera ke IGD bila ada tanda bahaya:</span></h3>
             <ul>
               <li>Nyeri dada berat atau menekan, terutama kalau menjalar ke rahang, lengan, punggung, atau disertai sesak.</li>
               <li>Muntah darah, muntah seperti kopi, atau BAB hitam seperti aspal.</li>
@@ -797,7 +829,7 @@
       </section>
 
       <section id="faq" class="card">
-        <h2>10) FAQ singkat yang sering ditanyakan pasien</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-patch-question icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-chat"></use></svg></span><span>10) FAQ singkat yang sering ditanyakan pasien</span></h2>
         <div class="faq-list" role="list">
           <div class="faq-item" role="listitem">
             <button class="faq-btn" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1" type="button">Kalau keluhannya ringan, boleh tetap puasa?</button>
@@ -827,7 +859,7 @@
       </section>
 
       <section id="rujukan" class="card">
-        <h2>11) Rujukan edukasi resmi</h2>
+        <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-journal-medical icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-list"></use></svg></span><span>11) Rujukan edukasi resmi</span></h2>
         <p>Konten diperbarui pada <strong>10 Maret 2026</strong>. Copy pasien disederhanakan dari sumber resmi berikut:</p>
         <ol class="sources">
           <li>Kemenkes RI, <em>Puasa Lancar, Badan Tetap Sehat dan Bugar</em>, 18 Maret 2025: <a href="https://ayosehat.kemkes.go.id/puasa-lancar-badan-tetap-sehat-dan-bugar" target="_blank" rel="noopener noreferrer">https://ayosehat.kemkes.go.id/puasa-lancar-badan-tetap-sehat-dan-bugar</a></li>
@@ -840,7 +872,7 @@
       </section>
     </main>
     <section class="cta-band">
-      <h2>Butuh evaluasi atau ingin simpan halaman ini?</h2>
+      <h2 class="section-heading"><span class="icon-pair"><i class="bi bi-headset icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-phone"></use></svg></span><span>Butuh evaluasi atau ingin simpan halaman ini?</span></h2>
       <p>Jika keluhan tidak membaik, sering kambuh, atau Anda ingin tanya soal aturan obat saat puasa, hubungi klinik. Tombol print disediakan di bawah sebagai secondary CTA untuk simpan PDF.</p>
       <div class="contact-grid no-print">
         <a id="ctaWa" class="cta-link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-chat-dots icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-chat"></use></svg></span>Chat WhatsApp Klinik</a>

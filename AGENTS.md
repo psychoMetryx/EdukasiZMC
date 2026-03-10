@@ -23,6 +23,7 @@ Bangun halaman edukasi klinis HTML untuk **Zihan Medical Center Wanaraja** yang:
 ### 2. Susun konten medis
 - Bahasa Indonesia awam, target SMA, tidak menggurui.
 - Nuansa lokal Sunda ringan boleh dipakai bila membantu.
+- Susun section dengan ritme yang tidak repetitif; jangan jatuh ke pola visual dan struktur isi yang terasa copy-paste antarbagian.
 - Tiap section minimal memuat konteks singkat, langkah praktis, dan kapan evaluasi medis.
 - Wajib ada bagian `Kapan harus ke dokter/IGD`.
 - Tambahkan catatan untuk kondisi khusus seperti prematur, penyakit kronis, atau alergi berat.
@@ -37,8 +38,11 @@ Bangun halaman edukasi klinis HTML untuk **Zihan Medical Center Wanaraja** yang:
 ## QA terpisah dari flow bikin HTML
 - QA dilakukan setelah HTML stabil, bukan disatukan dengan proses menyusun konten dan layout.
 - Jangan anggap halaman selesai hanya karena file HTML sudah jadi.
+- Flow kerja yang diharapkan tetap: research -> susun konten medis -> bangun HTML -> QA dan bugfix berbasis temuan.
+- Bugfix dilakukan setelah hasil verifikasi terlihat jelas, bukan sambil mengubah konten dan layout secara acak di tengah drafting.
 - Tahap QA wajib mencakup viewport, keyboard, print preview / Save PDF, mode offline, dan fallback ikon.
-- Gunakan skill `playwright`, `pdf`, dan `screenshot` saat tahap QA memang membutuhkan itu.
+- Gunakan skill `playwright`, `pdf`, dan `screenshot` sebagai requirement praktis saat tahap QA membutuhkan uji browser, print, atau artefak visual.
+- Minimal verifikasi viewport `360x800`, `768x1024`, dan `1366x768`, lalu simpan artefak QA yang relevan.
 
 ## Large File Write Strategy
 - Jika patch gagal karena ukuran input, tulis file secara chunked.
