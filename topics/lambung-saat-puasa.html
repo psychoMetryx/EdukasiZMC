@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lambung Saat Puasa - Edukasi Zihan Medical Center</title>
+  <meta name="description" content="Panduan pasien dewasa tentang keluhan lambung saat puasa: langkah aman saat buka dan sahur, pemicu yang sering bikin kambuh, red flags, dan kapan harus ke dokter atau IGD.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23a1141c'/%3E%3Cpath d='M10 8h12v16H10z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M16 11v10M12 16h8' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link id="bi-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    :root {
+      --font-sans: "Tahoma", "Verdana", "Arial", sans-serif;
+      --bg: #f5f1ef;
+      --surface: #ffffff;
+      --surface-soft: #fbf7f5;
+      --surface-tint: #f7ebe8;
+      --line: #dcc8c2;
+      --line-strong: #c5aaa2;
+      --ink: #182026;
+      --ink-soft: #48535d;
+      --brand: #a1141c;
+      --brand-strong: #7f0f15;
+      --brand-soft: #f9e3df;
+      --ok-bg: #edf6ee;
+      --ok-ink: #24663e;
+      --warn-bg: #fff2e5;
+      --warn-ink: #91510d;
+      --danger-bg: #fde7e8;
+      --danger-ink: #8f151d;
+      --focus: #0d67ff;
+      --shadow: 0 4px 16px rgba(67, 36, 37, 0.08);
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --radius-sm: 8px;
+      --container: min(1080px, calc(100% - 1.25rem));
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.62;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    a, button { font: inherit; }
+    section { scroll-margin-top: 5.6rem; }
+
+    .site-shell {
+      width: var(--container);
+      margin: 0 auto;
+      padding-bottom: 2rem;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(245, 241, 239, 0.96);
+      backdrop-filter: blur(8px);
+    }
+
+    .topbar-inner {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 0.7rem 0;
+    }
+
+    .brand {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.8rem;
+      align-items: center;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-md);
+      padding: 0.72rem 0.86rem;
+      background: linear-gradient(180deg, #ba1b24, #97131b);
+      color: #fff8f7;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.78);
+      background: #fff;
+    }
+
+    .brand-copy { min-width: 0; }
+    .brand-copy .meta {
+      margin: 0 0 0.18rem;
+      color: #ffd5d0;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy h1 {
+      margin: 0;
+      font-size: clamp(1.14rem, 1rem + 0.85vw, 1.8rem);
+      line-height: 1.22;
+      font-weight: 800;
+      text-wrap: balance;
+    }
+
+    .hero {
+      margin-top: 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      min-height: 166px;
+    }
+
+    .hero-side { display: none; }
+
+    .hero-main {
+      padding: 1rem;
+      background: linear-gradient(180deg, #a1141c, #8b1018);
+      color: #fff9f8;
+    }
+
+    .hero-main h2 {
+      margin: 0 0 0.48rem;
+      font-size: clamp(1.08rem, 0.98rem + 0.72vw, 1.46rem);
+      line-height: 1.24;
+      color: #fff9f8;
+    }
+
+    .hero-main p {
+      margin: 0 0 0.68rem;
+      max-width: 39rem;
+      color: #ffe1dd;
+      font-size: 0.92rem;
+      display: none;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-points li {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+      padding: 0.46rem;
+      border: 1px solid rgba(255, 236, 233, 0.24);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 248, 246, 0.08);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      align-items: start;
+    }
+
+    .hero-points strong {
+      display: block;
+      margin-bottom: 0.08rem;
+    }
+
+    .hero-note { display: none; }
+
+    .summary-strip,
+    .card,
+    .cta-band,
+    footer {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-strip {
+      margin-top: 0.8rem;
+      padding: 0.95rem 1rem;
+    }
+
+    .summary {
+      margin: 0;
+      font-size: clamp(1rem, 0.96rem + 0.26vw, 1.1rem);
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .quick {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.75rem;
+    }
+
+    .chip,
+    .btn,
+    .cta-link,
+    .foot-links a,
+    .faq-btn {
+      min-height: 44px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.56rem 0.82rem;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    main {
+      margin-top: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1rem;
+      break-inside: avoid;
+    }
+
+    h2 {
+      margin: 0 0 0.68rem;
+      color: var(--brand-strong);
+      font-size: clamp(1.2rem, 1.06rem + 0.54vw, 1.58rem);
+      line-height: 1.28;
+    }
+
+    h3 {
+      margin: 0 0 0.42rem;
+      color: #7f171d;
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0.18rem 0 0.7rem;
+      color: var(--ink-soft);
+    }
+
+    ul, ol {
+      margin: 0.45rem 0 0.4rem 1.1rem;
+      padding: 0;
+      color: var(--ink-soft);
+    }
+
+    li + li { margin-top: 0.36rem; }
+    .section-lead { margin-top: -0.08rem; max-width: 69ch; }
+    .grid-3, .grid-2, .red-flag-grid, .contact-grid, .footer-grid { display: grid; gap: 0.88rem; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .red-flag-grid { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+    .contact-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .footer-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .info-box, .list-panel, .faq-item, .step-card, .stat-row { border-radius: var(--radius-md); }
+    .info-box, .list-panel { border: 1px solid var(--line); background: var(--surface-soft); padding: 0.88rem 0.92rem; }
+    .callout { margin-top: 0.82rem; padding: 0.82rem 0.92rem; border-radius: var(--radius-md); border: 1px solid transparent; break-inside: avoid; }
+    .callout strong { color: inherit; }
+    .ok { background: var(--ok-bg); color: var(--ok-ink); border-color: #c8e0cf; }
+    .warn { background: var(--warn-bg); color: var(--warn-ink); border-color: #eed0b2; }
+    .danger { background: var(--danger-bg); color: var(--danger-ink); border-color: #efc0c4; }
+    .icon-pair { width: 1.1em; height: 1.1em; display: inline-flex; align-items: center; justify-content: center; line-height: 1; color: currentColor; flex-shrink: 0; }
+    .icon-cdn, .icon-local { width: 1em; height: 1em; font-size: 1.04em; }
+    .icon-local { display: none; fill: currentColor; }
+    html.icons-fallback .icon-cdn { display: none !important; }
+    html.icons-fallback .icon-local { display: inline-block !important; }
+    .topic-points, .stat-list, .faq-list { display: grid; gap: 0.6rem; }
+    .topic-row, .stat-row {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.62rem;
+      align-items: start;
+      padding: 0.72rem 0.76rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+    }
+    .badge-icon {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      background: var(--surface-tint);
+      color: var(--brand-strong);
+      flex-shrink: 0;
+    }
+    .topic-row strong, .stat-row strong { display: block; margin-bottom: 0.12rem; color: var(--ink); font-size: 0.94rem; }
+    .topic-row span, .stat-row span { display: block; color: var(--ink-soft); font-size: 0.91rem; }
+    .flow-layout { display: grid; gap: 0.95rem; align-items: start; }
+    .flow-figure { border: 1px solid var(--line); border-radius: var(--radius-md); background: linear-gradient(180deg, #fffaf9, #fbf4f2); padding: 0.8rem; }
+    .step-grid { display: grid; gap: 0.72rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .step-card { border: 1px solid var(--line); background: var(--surface-soft); padding: 0.88rem; }
+    .step-card .step-no {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-bottom: 0.45rem;
+      font-weight: 800;
+      background: var(--brand-soft);
+      color: var(--brand-strong);
+      border: 1px solid #e2beb8;
+    }
+    .meal-note { border-left: 4px solid var(--brand); padding-left: 0.85rem; margin-top: 0.7rem; color: var(--ink); }
+    .faq-item { overflow: hidden; border: 1px solid var(--line); background: var(--surface-soft); }
+    .faq-btn {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      padding: 0.74rem 0.92rem;
+      text-align: left;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .faq-panel { padding: 0 0.92rem 0.92rem; color: var(--ink-soft); }
+    .faq-panel[hidden] { display: none; }
+    .sources { margin-top: 0.46rem; font-size: 0.95rem; }
+    .cta-band { margin-top: 1rem; padding: 1rem; background: linear-gradient(180deg, #fffefe, #f8efec); }
+    .cta-band h2 { margin-bottom: 0.38rem; }
+    .cta-link, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 0.9rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-brand { background: var(--brand); border-color: var(--brand); color: #fff; }
+    footer {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: linear-gradient(180deg, #9e151d, #831119);
+      color: #fff8f7;
+      border-color: #8f1820;
+    }
+    .footer-title { margin: 0; color: #fff; font-size: 1.12rem; }
+    .footer-sub, .footer-note { margin: 0.3rem 0 0; color: #ffd8d3; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.55rem; }
+    .foot-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+      padding: 0.55rem 0.78rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 232, 229, 0.26);
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255, 249, 248, 0.07);
+    }
+    .btn:focus-visible, .chip:focus-visible, .cta-link:focus-visible, .faq-btn:focus-visible, .foot-links a:focus-visible, a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .no-print { }
+
+    @media (min-width: 720px) {
+      .flow-layout { grid-template-columns: 1.04fr 0.96fr; }
+    }
+
+    @media (min-width: 900px) {
+      .hero-main { padding: 1.06rem; }
+      .hero-main p { display: block; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-grid { min-height: auto; }
+      .hero-main { padding: 0.78rem; }
+      .hero-main h2 { font-size: 0.98rem; margin-bottom: 0.48rem; }
+      .hero-main p { display: none; }
+      .hero-points { gap: 0.36rem; }
+      .hero-points li {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+        padding: 0.36rem;
+        font-size: 0.72rem;
+        line-height: 1.35;
+      }
+      .hero-points strong { margin-bottom: 0; }
+    }
+
+    @media print {
+      :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface-soft: #ffffff;
+        --surface-tint: #ffffff;
+        --line: #bcbcbc;
+        --line-strong: #9a9a9a;
+        --ink: #111111;
+        --ink-soft: #222222;
+        --brand: #8f1018;
+        --brand-strong: #7b0f16;
+        --shadow: none;
+      }
+      body { background: #fff; color: #111; font-size: 11pt; }
+      .no-print, .quick, .cta-band, .hero-side { display: none !important; }
+      .site-shell, .topbar-inner { width: 100%; }
+      .topbar { position: static; border-bottom: 0; background: #fff; }
+      .brand { background: #fff; color: #111; border-color: #a0a0a0; }
+      .brand-copy .meta { color: #333; }
+      .hero-main { background: #fff; color: #111; }
+      .hero-main h2, .summary, h2, h3, .footer-title { color: #111 !important; }
+      .hero-main p, p, li, .footer-sub, .footer-note, .faq-panel { color: #222 !important; }
+      .summary-strip, footer, .info-box, .list-panel, .step-card, .stat-row, .faq-item, .flow-figure, .callout {
+        box-shadow: none !important;
+        background: #fff !important;
+        break-inside: avoid;
+      }
+      .card {
+        box-shadow: none !important;
+        background: #fff !important;
+        break-inside: auto;
+      }
+      h2, h3 { break-after: avoid-page; }
+      .foot-links a, .cta-link {
+        color: #111 !important;
+        border-color: #bcbcbc !important;
+        background: #fff !important;
+      }
+      footer { border-color: #bcbcbc; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;left:-9999px;overflow:hidden" aria-hidden="true" focusable="false">
+    <symbol id="ico-list" viewBox="0 0 16 16"><path d="M3 4h10M3 8h10M3 12h10" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="1.9" cy="4" r="0.9"/><circle cx="1.9" cy="8" r="0.9"/><circle cx="1.9" cy="12" r="0.9"/></symbol>
+    <symbol id="ico-cup" viewBox="0 0 16 16"><path d="M3 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M11 5h2a2 2 0 0 1-2 2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M4 13h6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></symbol>
+    <symbol id="ico-alert" viewBox="0 0 16 16"><path d="M8 1.2l7 12.6H1L8 1.2z"/><path d="M8 5.1v4.7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="11.8" r="0.9"/></symbol>
+    <symbol id="ico-check-circle" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7"/><path d="M4.4 8.1l2.1 2.1 5-5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="ico-ban" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7"/><path d="M4 12L12 4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="ico-bed" viewBox="0 0 16 16"><path d="M2 11V5.5h1.5v3h9V6.4c0-1.1-.9-2-2-2H8.8c-.7 0-1.3.3-1.8.8l-.8.8H4.5v5H2zm0 1.2h11v2H12v-1H3v1H2v-2z"/><path d="M5.2 5.4h1.7v2H5.2z"/></symbol>
+    <symbol id="ico-phone" viewBox="0 0 16 16"><path d="M4.2 1.8l2.2 2.1-1.3 2.1a11 11 0 0 0 4.9 4.9l2.1-1.3 2.1 2.2-1.3 2a2 2 0 0 1-2.2.8C6.4 13.2 2.8 9.6 1.4 5.2a2 2 0 0 1 .8-2.2l2-1.2z"/></symbol>
+    <symbol id="ico-geo" viewBox="0 0 16 16"><path d="M8 15s5-4.6 5-8.6A5 5 0 1 0 3 6.4C3 10.4 8 15 8 15z"/><circle cx="8" cy="6.4" r="1.9" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="ico-chat" viewBox="0 0 16 16"><path d="M2 3h12v7H6l-3.5 3V10H2z"/></symbol>
+    <symbol id="ico-clock" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.8"/><path d="M8 4.3v4.1l2.8 1.7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
+    <symbol id="ico-droplet" viewBox="0 0 16 16"><path d="M8 1.5c2.1 2.7 4.5 5.1 4.5 8a4.5 4.5 0 0 1-9 0c0-2.9 2.4-5.3 4.5-8z"/></symbol>
+    <symbol id="ico-shield-check" viewBox="0 0 16 16"><path d="M8 1l5 2v4c0 4-2.6 6.4-5 8-2.4-1.6-5-4-5-8V3l5-2z"/><path d="M5.2 8.2L7 10l3.8-3.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img data-zmc-logo class="brand-logo" src="" alt="Logo Zihan Medical Center">
+        <div class="brand-copy">
+          <p class="meta">Edukasi Klinis ZMC Wanaraja</p>
+          <h1>Lambung Saat Puasa</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="site-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-main">
+          <h2 id="hero-title">Keluhan lambung saat puasa biasanya lebih tenang kalau buka pelan, porsi sedang, dan tubuh tidak langsung tiduran.</h2>
+          <p>Fokus halaman ini adalah langkah aman sehari-hari untuk pasien dewasa, sambil tetap memisahkan tanda bahaya yang tidak boleh dianggap maag biasa.</p>
+          <ul class="hero-points" aria-label="Ringkasan utama">
+            <li>
+              <span class="icon-pair"><i class="bi bi-list-check icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-list"></use></svg></span>
+              <span><strong>Buka ringan</strong><span class="hero-note">Air putih lalu porsi kecil.</span></span>
+            </li>
+            <li>
+              <span class="icon-pair"><i class="bi bi-cup-hot icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-cup"></use></svg></span>
+              <span><strong>Kasih jeda</strong><span class="hero-note">15-30 menit sebelum makan utama.</span></span>
+            </li>
+            <li>
+              <span class="icon-pair"><i class="bi bi-exclamation-triangle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-alert"></use></svg></span>
+              <span><strong>Waspada red flag</strong><span class="hero-note">Nyeri dada berat atau perdarahan.</span></span>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-side" aria-hidden="true">
+          <svg viewBox="0 0 320 180" role="img" aria-label="Ringkasan alur buka, makan, dan tidur yang aman untuk lambung saat puasa">
+            <rect x="12" y="14" width="296" height="152" rx="16" fill="#fff8f7" stroke="#dcc8c2"/>
+            <rect x="28" y="34" width="76" height="92" rx="12" fill="#fbe9e7" stroke="#d9b7b1"/>
+            <rect x="122" y="34" width="76" height="92" rx="12" fill="#fff3e6" stroke="#e5c7a2"/>
+            <rect x="216" y="34" width="76" height="92" rx="12" fill="#edf6ee" stroke="#c5ddcb"/>
+            <text x="66" y="58" text-anchor="middle" font-size="16" fill="#7f0f15" font-family="Tahoma, Verdana, Arial, sans-serif">1. Buka</text>
+            <text x="66" y="81" text-anchor="middle" font-size="13" fill="#7f0f15" font-family="Tahoma, Verdana, Arial, sans-serif">air putih</text>
+            <text x="66" y="99" text-anchor="middle" font-size="13" fill="#7f0f15" font-family="Tahoma, Verdana, Arial, sans-serif">porsi kecil</text>
+            <text x="160" y="58" text-anchor="middle" font-size="16" fill="#91510d" font-family="Tahoma, Verdana, Arial, sans-serif">2. Jeda</text>
+            <text x="160" y="81" text-anchor="middle" font-size="13" fill="#91510d" font-family="Tahoma, Verdana, Arial, sans-serif">15-30 menit</text>
+            <text x="160" y="99" text-anchor="middle" font-size="13" fill="#91510d" font-family="Tahoma, Verdana, Arial, sans-serif">baru makan utama</text>
+            <text x="254" y="58" text-anchor="middle" font-size="16" fill="#24663e" font-family="Tahoma, Verdana, Arial, sans-serif">3. Tegak</text>
+            <text x="254" y="81" text-anchor="middle" font-size="13" fill="#24663e" font-family="Tahoma, Verdana, Arial, sans-serif">jangan rebahan</text>
+            <text x="254" y="99" text-anchor="middle" font-size="13" fill="#24663e" font-family="Tahoma, Verdana, Arial, sans-serif">2-3 jam</text>
+            <path d="M104 80h18M198 80h18" stroke="#9d8f89" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M117 75l5 5-5 5M211 75l5 5-5 5" fill="none" stroke="#9d8f89" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="160" y="145" text-anchor="middle" font-size="13" fill="#48535d" font-family="Tahoma, Verdana, Arial, sans-serif">Tujuan: lambung tidak "kaget" dan refluks tidak mudah naik</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary-strip">
+      <p class="summary">Ringkasan satu kalimat: puasa tetap bisa lebih nyaman bila pola buka, makan malam, sahur, dan jeda menuju tidur dirapikan, tetapi gejala berat tidak boleh dipaksa dianggap keluhan lambung biasa.</p>
+      <nav class="quick no-print" aria-label="Navigasi cepat section">
+        <a class="chip" href="#pahami">Pahami Keluhan</a>
+        <a class="chip" href="#alur">Alur Aman</a>
+        <a class="chip" href="#sahur">Sahur dan Cairan</a>
+        <a class="chip" href="#pemicu">Pemicu</a>
+        <a class="chip" href="#redflags">Dokter / IGD</a>
+        <a class="chip" href="#faq">FAQ</a>
+        <a class="chip" href="#rujukan">Rujukan</a>
+      </nav>
+    </section>
+    <main>
+      <section id="pahami" class="card">
+        <h2>1) Pahami dulu: "maag", asam lambung, dan rasa panas di dada tidak selalu sama</h2>
+        <p class="section-lead">Pasien sering menyebut semua nyeri ulu hati sebagai maag. Padahal saat puasa keluhan bisa berupa dispepsia atau lambung terasa begah, bisa juga refluks yaitu rasa asam atau panas yang naik ke dada dan tenggorokan. Penyebutannya beda, tetapi langkah awal amannya mirip: makan lebih tertata, kurangi pemicu, dan kenali tanda bahaya.</p>
+        <div class="grid-3">
+          <article class="info-box">
+            <h3>Keluhan lambung / dispepsia</h3>
+            <p>Biasanya berupa nyeri ulu hati, perut atas terasa penuh, cepat kenyang, mual, atau begah setelah buka. Saat puasa, pola ini sering muncul kalau buka terlalu berat atau sahur terlalu mepet.</p>
+            <div class="callout warn"><strong>Kapan evaluasi:</strong> periksa bila keluhan berulang hampir tiap hari, mengganggu makan, atau tidak membaik setelah pola makan dirapikan.</div>
+          </article>
+          <article class="info-box">
+            <h3>Refluks / asam lambung naik</h3>
+            <p>Keluhan khasnya rasa panas dari ulu hati ke dada, mulut terasa asam atau pahit, sendawa asam, batuk malam, atau suara serak. Keluhan sering terasa lebih jelas saat habis makan banyak lalu berbaring.</p>
+            <div class="callout warn"><strong>Kapan evaluasi:</strong> periksa bila sering kambuh malam, butuh obat terus untuk nyaman, atau terasa sampai mengganggu tidur.</div>
+          </article>
+          <article class="info-box">
+            <h3>Bukan semua nyeri dada itu lambung</h3>
+            <p>Nyeri yang terasa menekan, menjalar ke rahang, lengan, atau punggung, apalagi disertai sesak, keringat dingin, atau hampir pingsan, tidak aman disebut maag dulu.</p>
+            <div class="callout danger"><strong>Kapan darurat:</strong> anggap gawat bila ada nyeri dada berat, muntah darah, BAB hitam, sulit menelan, atau lemas berat.</div>
+          </article>
+        </div>
+        <div class="callout ok"><strong>Konteks praktis:</strong> tujuan halaman ini adalah membantu pasien dewasa memilah mana keluhan yang masih bisa dibantu dengan perbaikan pola buka dan sahur, dan mana yang perlu dinaikkan cepat ke dokter atau IGD.</div>
+      </section>
+
+      <section id="alur" class="card">
+        <h2>2) Alur aman: buka -> makan utama -> tetap tegak sebelum tidur</h2>
+        <p class="section-lead">Bagian ini mengambil inti terbaik dari versi lama, tetapi dibersihkan supaya lebih mudah dipakai pasien. Fokusnya ada tiga: lambung jangan langsung dihajar porsi besar, beri jeda sebelum makan utama, lalu jangan rebahan setelah makan.</p>
+        <div class="flow-layout">
+          <figure class="flow-figure" aria-labelledby="flow-caption">
+            <svg viewBox="0 0 700 230" role="img" aria-labelledby="flow-caption">
+              <title id="flow-caption">Diagram alur buka puasa yang lebih aman untuk lambung sensitif</title>
+              <rect x="18" y="18" width="664" height="194" rx="18" fill="#fffdfc" stroke="#dcc8c2" stroke-width="2"/>
+              <rect x="42" y="46" width="180" height="118" rx="18" fill="#fbe9e7" stroke="#d9b7b1" stroke-width="2"/>
+              <rect x="260" y="46" width="180" height="118" rx="18" fill="#fff2e5" stroke="#e1c39b" stroke-width="2"/>
+              <rect x="478" y="46" width="180" height="118" rx="18" fill="#edf6ee" stroke="#c5ddcb" stroke-width="2"/>
+              <text x="132" y="76" text-anchor="middle" font-size="24" fill="#7f0f15" font-family="Tahoma, Verdana, Arial, sans-serif">1. Buka ringan</text>
+              <text x="132" y="104" text-anchor="middle" font-size="18" fill="#7f0f15" font-family="Tahoma, Verdana, Arial, sans-serif">air putih</text>
+              <text x="132" y="129" text-anchor="middle" font-size="18" fill="#7f0f15" font-family="Tahoma, Verdana, Arial, sans-serif">1-2 kurma bila cocok</text>
+              <text x="350" y="76" text-anchor="middle" font-size="24" fill="#91510d" font-family="Tahoma, Verdana, Arial, sans-serif">2. Kasih jeda</text>
+              <text x="350" y="104" text-anchor="middle" font-size="18" fill="#91510d" font-family="Tahoma, Verdana, Arial, sans-serif">15-30 menit</text>
+              <text x="350" y="129" text-anchor="middle" font-size="18" fill="#91510d" font-family="Tahoma, Verdana, Arial, sans-serif">baru makan utama</text>
+              <text x="568" y="76" text-anchor="middle" font-size="24" fill="#24663e" font-family="Tahoma, Verdana, Arial, sans-serif">3. Tetap tegak</text>
+              <text x="568" y="104" text-anchor="middle" font-size="18" fill="#24663e" font-family="Tahoma, Verdana, Arial, sans-serif">duduk atau jalan ringan</text>
+              <text x="568" y="129" text-anchor="middle" font-size="18" fill="#24663e" font-family="Tahoma, Verdana, Arial, sans-serif">jangan rebahan 2-3 jam</text>
+              <path d="M222 105h28M440 105h28" stroke="#9c8a83" stroke-width="4" stroke-linecap="round"/>
+              <path d="M242 96l12 9-12 9M460 96l12 9-12 9" fill="none" stroke="#9c8a83" stroke-width="4" stroke-linecap="round"/>
+              <text x="350" y="193" text-anchor="middle" font-size="17" fill="#48535d" font-family="Tahoma, Verdana, Arial, sans-serif">Jika tidur terlalu cepat setelah makan, refluks lebih mudah naik</text>
+            </svg>
+          </figure>
+          <div class="step-grid" aria-label="Langkah praktis">
+            <article class="step-card">
+              <div class="step-no">1</div>
+              <h3>Buka ringan dulu</h3>
+              <p>Mulai dengan air putih suhu ruang atau hangat. Bila cocok, boleh tambah 1-2 kurma atau buah yang ringan. Hindari langsung "balas dendam" makan berat.</p>
+            </article>
+            <article class="step-card">
+              <div class="step-no">2</div>
+              <h3>Jeda sebelum makan utama</h3>
+              <p>Kasih jeda sekitar 15-30 menit sebelum nasi dan lauk utama. Tujuannya supaya lambung tidak langsung penuh setelah kosong seharian.</p>
+            </article>
+            <article class="step-card">
+              <div class="step-no">3</div>
+              <h3>Jangan langsung rebahan</h3>
+              <p>Setelah makan malam, tetap duduk tegak atau jalan santai ringan. Jika sering kambuh malam, usahakan ada jeda sekitar 3 jam sebelum tiduran.</p>
+            </article>
+          </div>
+        </div>
+        <div class="callout warn"><strong>Kapan langkah ini tidak cukup:</strong> bila keluhan terasa tidak seperti pola biasanya, muntah berulang, sampai tidak bisa masuk minum, atau nyeri dada terasa berat.</div>
+      </section>
+
+      <section id="buka" class="card">
+        <h2>3) Saat berbuka: yang membantu lambung, yang sering bikin langsung tidak nyaman</h2>
+        <p class="section-lead">Kemenkes menganjurkan berbuka diawali dengan yang ringan dan mudah dicerna, lalu makan utama setelah jeda. Pada pasien dengan lambung sensitif, saran ini justru makin penting karena beban terbesar biasanya datang dari buka yang terlalu cepat, terlalu banyak, dan terlalu berminyak.</p>
+        <div class="grid-2">
+          <div class="list-panel">
+            <h3>Lebih aman saat menit awal berbuka</h3>
+            <ul>
+              <li>Air putih, lalu makanan ringan seperti 1-2 kurma bila cocok, pisang, pepaya, atau sup bening kecil.</li>
+              <li>Makan pelan dan berhenti sebentar sebelum lanjut ke makanan utama.</li>
+              <li>Porsi makan utama dibuat sedang, bukan porsi besar sekaligus.</li>
+              <li>Pilih lauk yang direbus, dikukus, dipanggang, pepes, atau ditumis ringan.</li>
+            </ul>
+            <p class="meal-note"><strong>Contoh lokal yang cenderung lebih aman:</strong> nasi hangat dengan telur rebus, pepes tahu, sayur bening, sup ayam bening, atau oatmeal kecil setelah buka ringan.</p>
+          </div>
+          <div class="list-panel">
+            <h3>Yang sering bikin kambuh cepat</h3>
+            <ul>
+              <li>Langsung makan besar saat adzan, terutama jika penuh gorengan atau santan kental.</li>
+              <li>Sambal banyak, kuah sangat pedas, soda, kopi pekat, atau teh sangat kental pada awal berbuka.</li>
+              <li>Makanan sangat asam jika Anda memang sensitif, misalnya cuka kuat, jeruk sangat asam, atau tomat dalam jumlah besar.</li>
+              <li>Minum banyak sekaligus sampai perut terasa penuh sekali.</li>
+            </ul>
+            <div class="callout ok"><strong>Langkah praktis:</strong> bila perut sedang sangat sensitif, mulai dari setengah porsi dulu, berhenti sejenak, baru lihat apakah lambung terasa lebih tenang.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="makan" class="card">
+        <h2>4) Makan malam dan snack ringan: fokus pada porsi sedang, bukan sering lapar lalu kalap</h2>
+        <p class="section-lead">Setelah makan utama, sebagian pasien masih lapar lagi pada malam hari. Itu boleh diatur, tetapi pilih snack yang ringan dan jangan menjadikan jam malam sebagai sesi makan berat kedua.</p>
+        <div class="grid-2">
+          <div class="topic-points" aria-label="Aturan makan malam">
+            <div class="topic-row">
+              <span class="badge-icon"><span class="icon-pair"><i class="bi bi-check2-circle icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-check-circle"></use></svg></span></span>
+              <div><strong>Porsi sedang lebih aman</strong><span>Bagi banyak pasien, makan sedang lebih nyaman daripada satu kali makan sangat banyak.</span></div>
+            </div>
+            <div class="topic-row">
+              <span class="badge-icon"><span class="icon-pair"><i class="bi bi-cup-hot icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-cup"></use></svg></span></span>
+              <div><strong>Snack ringan bila perlu</strong><span>Pisang matang, roti tawar, biskuit plain, oatmeal kecil, atau sup hangat sering lebih bersahabat untuk lambung sensitif.</span></div>
+            </div>
+            <div class="topic-row">
+              <span class="badge-icon"><span class="icon-pair"><i class="bi bi-x-octagon icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-ban"></use></svg></span></span>
+              <div><strong>Hindari makan berat kedua</strong><span>Mi pedas, gorengan banyak, atau makan larut malam sering menjadi pemicu lebih besar daripada jenis lauk itu sendiri.</span></div>
+            </div>
+          </div>
+          <aside class="stat-list" aria-label="Pemantauan malam hari">
+            <div class="stat-row">
+              <span class="badge-icon"><span class="icon-pair"><i class="bi bi-journal-check icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-list"></use></svg></span></span>
+              <div><strong>Catat pola pemicu pribadi</strong><span>Kalau kopi, cokelat, sambal, atau gorengan konsisten bikin kambuh 2-3 kali, anggap itu pemicu pribadi Anda.</span></div>
+            </div>
+            <div class="stat-row">
+              <span class="badge-icon"><span class="icon-pair"><i class="bi bi-clock-history icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-clock"></use></svg></span></span>
+              <div><strong>Jangan makan terlalu larut</strong><span>Makan makin mepet tidur biasanya makin memudahkan refluks pada pasien yang sensitif.</span></div>
+            </div>
+            <div class="stat-row">
+              <span class="badge-icon"><span class="icon-pair"><i class="bi bi-moon-stars icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-bed"></use></svg></span></span>
+              <div><strong>Tidur lebih nyaman</strong><span>Bila keluhan sering muncul malam, usahakan kepala lebih tinggi dan jangan pakai pakaian terlalu ketat setelah makan.</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="sahur" class="card">
+        <h2>5) Sahur dan cairan: jangan mepet, jangan sekaligus banjir minum</h2>
+        <p class="section-lead">Kemenkes menekankan kebutuhan cairan tetap harus dipenuhi selama puasa, umumnya sekitar 8 gelas per hari yang dibagi dari berbuka sampai sahur. Untuk lambung sensitif, pembagiannya lebih nyaman bila dicicil, bukan ditumpuk sekaligus menjelang imsak.</p>
+        <div class="grid-2">
+          <div class="list-panel">
+            <h3>Yang disarankan saat sahur</h3>
+            <ul>
+              <li>Usahakan sahur tidak terlalu mepet, jadi masih ada waktu duduk tegak setelah makan.</li>
+              <li>Pilih menu yang hangat, tidak terlalu pedas, tidak terlalu berminyak, dan ada sumber protein seperti telur, ikan, tempe, atau tahu.</li>
+              <li>Air putih dicicil: sebagian saat bangun, sebagian saat makan, lalu sebagian lagi setelah selesai makan.</li>
+              <li>Kalau mudah kembung, porsi sahur jangan dipaksakan terlalu besar.</li>
+            </ul>
+            <div class="callout ok"><strong>Contoh sederhana:</strong> nasi dengan telur rebus dan sayur bening, atau roti dengan telur dan buah yang tidak terlalu asam.</div>
+          </div>
+          <div class="list-panel">
+            <h3>Yang sering memicu saat sahur</h3>
+            <ul>
+              <li>Kopi pekat saat perut masih kosong atau saat lambung sedang aktif kambuh.</li>
+              <li>Makan sangat pedas dan sangat berminyak lalu langsung tiduran lagi.</li>
+              <li>Minum banyak sekaligus karena takut haus, lalu perut terasa penuh dan begah.</li>
+              <li>Sahur terlalu mepet sampai tidak ada jeda untuk tubuh tetap tegak.</li>
+            </ul>
+            <div class="callout warn"><strong>Catatan konservatif:</strong> tidak semua orang harus berhenti kopi selamanya, tetapi saat keluhan sedang aktif kopi pekat sering jadi pemicu yang layak dikurangi dulu.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pemicu" class="card">
+        <h2>6) Pemicu yang sering bikin kambuh saat puasa</h2>
+        <p class="section-lead">NIDDK menyebut beberapa makanan dan minuman yang umum memicu refluks: kopi atau kafein, makanan tinggi lemak, makanan pedas, cokelat, dan makanan asam pada sebagian orang. Di kehidupan sehari-hari, pola makan juga sama pentingnya dengan jenis makanannya.</p>
+        <div class="grid-2">
+          <div class="list-panel">
+            <h3>Makanan dan minuman yang sering perlu dibatasi</h3>
+            <ul>
+              <li>Gorengan, makanan tinggi lemak, santan kental, dan porsi besar sekaligus.</li>
+              <li>Sambal banyak, seblak sangat pedas, kuah yang terlalu merangsang.</li>
+              <li>Kopi, teh kental, soda, cokelat, dan minuman energi.</li>
+              <li>Buah atau minuman yang sangat asam pada pasien yang memang sensitif.</li>
+            </ul>
+          </div>
+          <div class="list-panel">
+            <h3>Kebiasaan yang sama seringnya jadi pemicu</h3>
+            <ul>
+              <li>Makan sangat cepat lalu langsung rebahan.</li>
+              <li>Sahur mepet imsak lalu tidur lagi tanpa jeda.</li>
+              <li>Merokok dan stres yang tidak terkelola.</li>
+              <li>Sering minum obat anti-nyeri seperti ibuprofen, aspirin dosis nyeri, atau asam mefenamat tanpa arahan.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout ok"><strong>Langkah praktis:</strong> pilih 2-3 pemicu yang paling terasa dulu untuk dikurangi. Pasien biasanya lebih berhasil kalau perubahan dibuat spesifik, bukan semua hal diubah sekaligus.</div>
+      </section>
+
+      <section id="obat" class="card">
+        <h2>7) Obat dan kebiasaan yang perlu hati-hati</h2>
+        <p class="section-lead">Bagian ini sengaja dibuat konservatif. Tujuannya membantu pasien aman, bukan memberi jadwal obat yang bisa keliru. Kalau Anda sudah punya obat lambung dari dokter, aturan minumnya tetap mengikuti resep yang diberikan untuk kondisi Anda sendiri.</p>
+        <div class="grid-2">
+          <div class="info-box">
+            <h3>Kalau sudah punya obat resep</h3>
+            <ul>
+              <li>Minum sesuai instruksi dokter atau farmasis. Waktu minum tiap obat bisa berbeda.</li>
+              <li>Jangan menaikkan dosis sendiri hanya karena takut kambuh saat puasa.</li>
+              <li>Kalau jadwal obat membingungkan saat Ramadan, konsultasikan ulang sebelum meneruskan.</li>
+            </ul>
+            <div class="callout warn"><strong>Catatan:</strong> halaman ini tidak menggantikan aturan obat individual.</div>
+          </div>
+          <div class="info-box">
+            <h3>Obat dan kebiasaan yang bisa memperberat</h3>
+            <ul>
+              <li>NSAID tanpa pengawasan, rokok, dan alkohol.</li>
+              <li>Sering mengandalkan obat bebas tanpa mengecek penyebab kalau keluhan berulang terus.</li>
+              <li>Menahan gejala berat berhari-hari karena merasa "nanti juga reda".</li>
+            </ul>
+            <div class="callout danger"><strong>Naikkan evaluasi:</strong> kalau obat bebas makin sering dibutuhkan, keluhan muncul hampir setiap puasa, atau gejala mulai beda dari pola biasa.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="khusus" class="card">
+        <h2>8) Siapa yang sebaiknya konsultasi dulu sebelum lanjut puasa</h2>
+        <p class="section-lead">Tidak semua pasien dengan keluhan lambung punya risiko yang sama. Ada kelompok yang sebaiknya diskusi dulu dengan dokter agar keputusan puasanya lebih aman dan jadwal obatnya tidak asal.</p>
+        <div class="grid-3">
+          <article class="info-box">
+            <h3>Riwayat lambung berat</h3>
+            <p>Pernah perdarahan lambung, tukak, muntah darah, BAB hitam, atau sering kambuh berat saat Ramadan sebelumnya.</p>
+          </article>
+          <article class="info-box">
+            <h3>Penyakit kronis atau obat khusus</h3>
+            <p>Penyakit ginjal, hati, jantung, diabetes, penggunaan pengencer darah, steroid, atau NSAID rutin.</p>
+          </article>
+          <article class="info-box">
+            <h3>Kondisi khusus lain</h3>
+            <p>Kehamilan, usia lanjut, berat badan turun tanpa sebab, anemia, sulit menelan, atau alergi obat berat.</p>
+          </article>
+        </div>
+        <div class="callout ok"><strong>Tujuan konsultasi:</strong> memastikan gejala memang stabil, jadwal obat aman, dan ada rencana jelas bila keluhan muncul saat sedang puasa.</div>
+      </section>
+
+      <section id="redflags" class="card">
+        <h2>9) Kapan harus ke dokter, dan kapan harus langsung ke IGD</h2>
+        <p class="section-lead">Bagian ini wajib dibaca sampai selesai. Banyak pasien menunda terlalu lama karena mengira semua keluhan lambung bisa ditahan sampai buka berikutnya. Padahal sebagian gejala perlu evaluasi cepat.</p>
+        <div class="red-flag-grid">
+          <div class="list-panel">
+            <h3>Periksa ke dokter dalam waktu dekat bila:</h3>
+            <ul>
+              <li>Keluhan tidak membaik walau pola buka, makan, dan sahur sudah dirapikan.</li>
+              <li>Gejala sering kambuh malam, sering perlu obat bebas, atau sampai mengganggu tidur.</li>
+              <li>Sering mual, cepat kenyang, berat badan turun, atau nafsu makan turun.</li>
+              <li>Anda merasa perlu menghindari semakin banyak makanan karena hampir semua terasa memicu.</li>
+              <li>Ada riwayat tukak, sering minum NSAID, atau gejala berulang hampir setiap Ramadan.</li>
+            </ul>
+            <div class="callout warn"><strong>Makna evaluasi:</strong> dokter menilai apakah ini keluhan lambung biasa, refluks yang lebih aktif, efek obat, tukak, atau masalah lain yang meniru maag.</div>
+          </div>
+          <div class="list-panel">
+            <h3>Segera ke IGD bila ada tanda bahaya:</h3>
+            <ul>
+              <li>Nyeri dada berat atau menekan, terutama kalau menjalar ke rahang, lengan, punggung, atau disertai sesak.</li>
+              <li>Muntah darah, muntah seperti kopi, atau BAB hitam seperti aspal.</li>
+              <li>Muntah terus sampai tidak bisa masuk minum, tampak sangat lemas, atau tanda dehidrasi.</li>
+              <li>Sulit menelan, nyeri menelan makin berat, atau makanan seperti tersangkut.</li>
+              <li>Pusing berat, keringat dingin, hampir pingsan, atau pingsan.</li>
+            </ul>
+            <div class="callout danger"><strong>Jangan tunggu besok:</strong> red flag ini bisa menandakan perdarahan, dehidrasi berat, sumbatan, atau masalah jantung yang kebetulan terasa seperti maag.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="card">
+        <h2>10) FAQ singkat yang sering ditanyakan pasien</h2>
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1" type="button">Kalau keluhannya ringan, boleh tetap puasa?</button>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>
+              Pada banyak pasien dewasa, keluhan ringan masih bisa dibantu dengan pola buka yang lebih pelan, porsi sedang, cairan cukup, dan tidak langsung rebahan. Tetapi bila gejalanya berat, berbeda dari pola biasanya, atau disertai red flag, jangan dipaksa.
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2" type="button">Apakah semua pasien harus berhenti kopi saat sahur?</button>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              Tidak selalu. Tetapi kopi pekat termasuk pemicu yang umum. Kalau setiap sahur atau malam sesudah kopi keluhan konsisten kambuh, lebih aman dikurangi dulu sampai gejala stabil.
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3" type="button">Kalau minum obat lambung, boleh atur jadwal sendiri saat Ramadan?</button>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              Tidak disarankan. Tiap obat punya aturan yang berbeda. Kalau Anda sudah punya resep, gunakan sesuai instruksi dokter atau farmasis, dan minta penyesuaian bila jadwalnya membingungkan saat puasa.
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-btn" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4" type="button">Kapan puasa sebaiknya dihentikan hari itu?</button>
+            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              Pertimbangkan berhenti dan cari pertolongan bila muncul muntah berulang, nyeri dada berat, muntah darah, BAB hitam, lemas berat, atau Anda tidak mampu mempertahankan cairan masuk. Keselamatan tetap lebih utama.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rujukan" class="card">
+        <h2>11) Rujukan edukasi resmi</h2>
+        <p>Konten diperbarui pada <strong>10 Maret 2026</strong>. Copy pasien disederhanakan dari sumber resmi berikut:</p>
+        <ol class="sources">
+          <li>Kemenkes RI, <em>Puasa Lancar, Badan Tetap Sehat dan Bugar</em>, 18 Maret 2025: <a href="https://ayosehat.kemkes.go.id/puasa-lancar-badan-tetap-sehat-dan-bugar" target="_blank" rel="noopener noreferrer">https://ayosehat.kemkes.go.id/puasa-lancar-badan-tetap-sehat-dan-bugar</a></li>
+          <li>Kemenkes RI, <em>Cegah Dehidrasi Saat Puasa dengan 8 Gelas Perhari</em>, 4 April 2023: <a href="https://ayosehat.kemkes.go.id/cegah-dehidrasi-saat-puasa-dengan-8-gelas-perhari" target="_blank" rel="noopener noreferrer">https://ayosehat.kemkes.go.id/cegah-dehidrasi-saat-puasa-dengan-8-gelas-perhari</a></li>
+          <li>NIDDK, <em>Symptoms &amp; Causes of GER &amp; GERD</em>, last reviewed July 2020: <a href="https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/symptoms-causes" target="_blank" rel="noopener noreferrer">https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/symptoms-causes</a></li>
+          <li>NIDDK, <em>Eating, Diet, &amp; Nutrition for GER &amp; GERD</em>, last reviewed July 2020: <a href="https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/eating-diet-nutrition" target="_blank" rel="noopener noreferrer">https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults/eating-diet-nutrition</a></li>
+          <li>NICE guideline CG184, <em>Gastro-oesophageal reflux disease and dyspepsia in adults</em>, last reviewed 18 October 2019: <a href="https://www.nice.org.uk/guidance/cg184" target="_blank" rel="noopener noreferrer">https://www.nice.org.uk/guidance/cg184</a></li>
+          <li>NHS, <em>Indigestion</em>, page last reviewed 5 May 2023: <a href="https://www.nhs.uk/conditions/indigestion/" target="_blank" rel="noopener noreferrer">https://www.nhs.uk/conditions/indigestion/</a></li>
+        </ol>
+      </section>
+    </main>
+    <section class="cta-band">
+      <h2>Butuh evaluasi atau ingin simpan halaman ini?</h2>
+      <p>Jika keluhan tidak membaik, sering kambuh, atau Anda ingin tanya soal aturan obat saat puasa, hubungi klinik. Tombol print disediakan di bawah sebagai secondary CTA untuk simpan PDF.</p>
+      <div class="contact-grid no-print">
+        <a id="ctaWa" class="cta-link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-chat-dots icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-chat"></use></svg></span>Chat WhatsApp Klinik</a>
+        <a id="ctaMaps" class="cta-link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-geo-alt icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-geo"></use></svg></span>Rute ke Klinik</a>
+        <a class="cta-link" href="tel:+6282217180432"><span class="icon-pair"><i class="bi bi-telephone icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-phone"></use></svg></span>Telepon Klinik</a>
+        <button id="printPage" class="btn btn-brand" type="button">Print / Save PDF</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-title">Zihan Medical Center</h2>
+          <p id="footerTagline" class="footer-sub">#ZMCGakNyuekinKamu</p>
+          <p id="footerAddress" class="footer-note"></p>
+        </div>
+        <div>
+          <h3 style="margin:0;color:#fff;">Kontak Cepat</h3>
+          <div class="foot-links">
+            <a id="footerWa" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-chat-dots icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-chat"></use></svg></span>WhatsApp</a>
+            <a id="footerMaps" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-geo-alt icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-geo"></use></svg></span>Google Maps</a>
+            <a id="footerIg" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-instagram icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-check-circle"></use></svg></span>Instagram</a>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin:0;color:#fff;">Jam Layanan</h3>
+          <p id="footerHours" class="footer-note"></p>
+          <p class="footer-note">Telepon: <span id="footerPhone"></span></p>
+          <p id="footerCopy" class="footer-note"></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const ZMC = {
+      name: "Zihan Medical Center",
+      tagline: "#ZMCGakNyuekinKamu",
+      logoLocal: "zmc-logo.jpeg",
+      logoFallback: "https://i.imgur.com/jzuguQE.jpeg",
+      maps: "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+      whatsapp: "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+      instagram: "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+      address: "Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183",
+      phone: "+62 822-1718-0432",
+      hours: "Senin - Minggu: 24 Jam"
+    };
+
+    (function initIconFallback() {
+      const root = document.documentElement;
+      const forceFallback = new URLSearchParams(window.location.search).get("icons") === "fallback";
+      if (forceFallback) {
+        root.classList.add("icons-fallback");
+        return;
+      }
+
+      const probe = document.createElement("i");
+      probe.className = "bi bi-heart-pulse icon-cdn";
+      probe.style.position = "absolute";
+      probe.style.left = "-9999px";
+      document.body.appendChild(probe);
+      const before = window.getComputedStyle(probe, "::before");
+      const content = before.content;
+      const family = (before.fontFamily || "").toLowerCase();
+      document.body.removeChild(probe);
+
+      const validContent = content && content !== "none" && content !== "normal" && content !== "\"\"";
+      const loaded = validContent && family.includes("bootstrap-icons");
+      if (!loaded) document.documentElement.classList.add("icons-fallback");
+    })();
+
+    (function initZMC() {
+      const year = new Date().getFullYear();
+      const logo = document.querySelector("[data-zmc-logo]");
+      const candidates = [
+        ZMC.logoLocal,
+        "./" + ZMC.logoLocal,
+        "../topics/" + ZMC.logoLocal,
+        "../assets/" + ZMC.logoLocal,
+        "assets/" + ZMC.logoLocal,
+        ZMC.logoFallback
+      ];
+      let index = 0;
+
+      function loadLogo() {
+        if (index >= candidates.length) return;
+        logo.src = candidates[index];
+        index += 1;
+      }
+
+      logo.addEventListener("error", loadLogo);
+      loadLogo();
+
+      document.getElementById("footerTagline").textContent = ZMC.tagline;
+      document.getElementById("footerAddress").textContent = ZMC.address;
+      document.getElementById("footerHours").textContent = ZMC.hours;
+      document.getElementById("footerPhone").textContent = ZMC.phone;
+      document.getElementById("footerCopy").textContent = "\u00A9 " + year + " " + ZMC.name;
+
+      document.getElementById("ctaWa").href = ZMC.whatsapp;
+      document.getElementById("ctaMaps").href = ZMC.maps;
+      document.getElementById("footerWa").href = ZMC.whatsapp;
+      document.getElementById("footerMaps").href = ZMC.maps;
+      document.getElementById("footerIg").href = ZMC.instagram;
+    })();
+
+    (function initPrintButton() {
+      document.getElementById("printPage").addEventListener("click", function () {
+        window.print();
+      });
+    })();
+
+    (function initFaq() {
+      const buttons = Array.from(document.querySelectorAll(".faq-btn"));
+
+      function closeAll() {
+        buttons.forEach(function (button) {
+          const panel = document.getElementById(button.getAttribute("aria-controls"));
+          button.setAttribute("aria-expanded", "false");
+          panel.hidden = true;
+        });
+      }
+
+      function toggle(button) {
+        const panel = document.getElementById(button.getAttribute("aria-controls"));
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+        closeAll();
+        if (!isOpen) {
+          button.setAttribute("aria-expanded", "true");
+          panel.hidden = false;
+        }
+      }
+
+      buttons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+          toggle(button);
+        });
+
+        button.addEventListener("keydown", function (event) {
+          const last = buttons.length - 1;
+          let target = index;
+
+          if (event.key === "ArrowDown") target = index === last ? 0 : index + 1;
+          if (event.key === "ArrowUp") target = index === 0 ? last : index - 1;
+          if (event.key === "Home") target = 0;
+          if (event.key === "End") target = last;
+
+          if (["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+            event.preventDefault();
+            buttons[target].focus();
+          }
+
+          if (event.key === " " || event.key === "Enter") {
+            event.preventDefault();
+            toggle(button);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

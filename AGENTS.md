@@ -8,27 +8,37 @@ Bangun halaman edukasi klinis HTML untuk **Zihan Medical Center Wanaraja** yang:
 - siap print ke PDF,
 - tetap berguna saat offline.
 
+## Non-Negotiables
+- UI boleh berubah, tetapi materi inti tidak boleh dipangkas, dipindah keluar dari isi edukasi utama, atau diringkas berlebihan hanya demi tampilan.
+- Area yang paling berat dibaca harus tetap hampir murni teks.
+- Ikon, visual, dan callout dipakai untuk membantu pembacaan isi utama, bukan sekadar dekorasi tombol atau footer.
+- Jangan menyelesaikan masalah "halaman terasa plain" dengan memindahkan materi menjadi teks panjang di dalam kartu, box, atau SVG.
+
 ## Default Workflow
-1. **Research internet dulu**
-   - Wajib pakai sumber kredibel dan terbaru.
-   - Prioritas sumber: Kemenkes RI, WHO, UNICEF, IDAI, CDC.
-   - Simpan tautan rujukan di akhir konten.
-2. **Susun konten medis**
-   - Bahasa Indonesia awam, target SMA, tidak menggurui.
-   - Nuansa lokal Sunda ringan boleh dipakai bila membantu.
-   - Tiap section minimal memuat konteks singkat, langkah praktis, dan kapan evaluasi medis.
-   - Wajib ada bagian `Kapan harus ke dokter/IGD`.
-   - Tambahkan catatan untuk kondisi khusus seperti prematur, penyakit kronis, atau alergi berat.
-3. **Bangun HTML single-file**
-   - Vanilla HTML/CSS/JS.
-   - Mobile-first, responsive, aksesibel keyboard.
-   - Offline-ready dengan fallback logo, ikon, dan visual.
-4. **QA + bugfix**
-   - Uji `360x800`, `768x1024`, `1366x768`.
-   - Uji keyboard pada elemen interaktif.
-   - Uji print preview / Save PDF.
-   - Uji mode offline dan fallback ikon.
-   - Gunakan skill `playwright`, `pdf`, dan `screenshot`.
+### 1. Research internet dulu
+- Wajib pakai sumber kredibel dan terbaru.
+- Prioritas sumber: Kemenkes RI, WHO, UNICEF, IDAI, CDC.
+- Simpan tautan rujukan di akhir konten.
+
+### 2. Susun konten medis
+- Bahasa Indonesia awam, target SMA, tidak menggurui.
+- Nuansa lokal Sunda ringan boleh dipakai bila membantu.
+- Tiap section minimal memuat konteks singkat, langkah praktis, dan kapan evaluasi medis.
+- Wajib ada bagian `Kapan harus ke dokter/IGD`.
+- Tambahkan catatan untuk kondisi khusus seperti prematur, penyakit kronis, atau alergi berat.
+- Saat revisi UI, pertahankan semua materi penting dan urutan logika edukasi.
+
+### 3. Bangun HTML single-file
+- Vanilla HTML/CSS/JS.
+- Mobile-first, responsive, aksesibel keyboard.
+- Offline-ready dengan fallback logo, ikon, dan visual.
+- Fokus utama tetap pada scanability isi edukasi, bukan pada dekorasi layout.
+
+## QA terpisah dari flow bikin HTML
+- QA dilakukan setelah HTML stabil, bukan disatukan dengan proses menyusun konten dan layout.
+- Jangan anggap halaman selesai hanya karena file HTML sudah jadi.
+- Tahap QA wajib mencakup viewport, keyboard, print preview / Save PDF, mode offline, dan fallback ikon.
+- Gunakan skill `playwright`, `pdf`, dan `screenshot` saat tahap QA memang membutuhkan itu.
 
 ## Large File Write Strategy
 - Jika patch gagal karena ukuran input, tulis file secara chunked.
@@ -58,12 +68,14 @@ Untuk implementasi UI, gunakan guardrail `uncodixify` sebagai standar praktis:
 - Jangan pakai wallpaper yang tile atau repeating.
 - Jangan memaksa 3 kolom di layar sempit.
 - Jangan biarkan CTA kecil; target sentuh minimal sekitar `44px`.
-- Light theme wajib lolos kontras.
+- Gunakan satu mode warna terang saja; kontras wajib lolos.
+- Jangan buat varian tema kedua atau kontrol pergantian tema.
 - Tombol `Print / Save PDF` harus berada di bawah sebagai secondary CTA.
 - Ilustrasi wajib reproducible tanpa API key dan tetap tampil saat offline.
 - Hero wajib compact:
   - mobile `150-180px`
   - desktop `220-260px`
+- Pelanggaran hero compact dianggap QA fail.
 - Jangan pakai hero art besar yang mendorong konten terlalu jauh ke bawah.
 
 ### Explicit UI Bans
@@ -73,8 +85,36 @@ Untuk implementasi UI, gunakan guardrail `uncodixify` sebagai standar praktis:
 - mixed heading fonts atau serif-premium shortcut,
 - eyebrow labels, `small` header dekoratif, atau status chip non-fungsional,
 - hover transform,
-- kartu “premium” dengan shadow dramatis,
+- kartu "premium" dengan shadow dramatis,
 - dashboard AI look seperti KPI grid, control room, atau right rail dekoratif.
+
+## Hero Guardrail
+- Hero hanya untuk orientasi cepat.
+- Isi hero dibatasi ke headline singkat, ringkasan pendek, dan maksimal 2-3 poin inti.
+- Jangan isi hero dengan paragraf panjang, checklist kedua, note tambahan, ilustrasi besar, atau rangkuman ulang dari section-section bawah.
+- Jika hero sudah membuat user terasa "buka file lalu langsung disuruh baca banyak", berarti komposisinya gagal.
+
+## Rhythm and Density Guardrail
+- Jangan ulang pola visual section yang sama terus-menerus.
+- Variasikan hierarchy antarsection dengan perbedaan density, layout, accent bar, list emphasis, atau callout placement.
+- Tidak semua section harus mengikuti pola "judul + paragraf pengantar + grid kartu + callout".
+- Jika semua border, radius, shadow, dan warna permukaan terasa sama terus, hierarchy visual dianggap datar.
+
+## Main Content Guardrail
+- Isi edukasi utama tetap didominasi teks yang rapi dan mudah dipindai.
+- Gunakan ikon CDN/fallback di konten inti seperti cek napas, cek minum, tanda bahaya, rawat rumah, dan kapan ke dokter/IGD bila itu membantu pembacaan cepat.
+- Jangan menaruh hampir semua ikon hanya di toolbar, CTA bawah, atau footer.
+- Jika perlu visual bantuan, letakkan sebagai pemecah beban baca di tengah alur teks, bukan sebagai blok besar yang mengulang isi.
+
+## Illustration + Icon Rules
+- Minimal 1 visual edukasi per halaman; 2-4 lebih ideal bila memang membantu.
+- Utamakan SVG/CSS handcrafted lokal atau foto lokal yang sudah ada.
+- Visual harus tetap tampil saat file dibuka langsung (`file://`).
+- Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG.
+- Wajib ada runtime check untuk mengaktifkan mode fallback ikon jika CDN gagal.
+- Visual harus memecah beban baca, bukan memindahkan teks panjang ke dalam kotak atau SVG.
+- Hindari ilustrasi dengan terlalu banyak label kecil yang sulit dibaca di mobile.
+- Dorong diagram sederhana, pointer, langkah cek cepat, atau highlight risiko yang bisa dipahami sekilas.
 
 ## Mandatory Clinic Config
 Setiap HTML wajib punya blok config ini:
@@ -98,13 +138,6 @@ const ZMC = {
 - Gunakan bahasa Indonesia sederhana.
 - Hindari jargon medis tanpa penjelasan singkat.
 - Masukkan konteks lokal Sunda jika relevan, terutama untuk pola makan dan kebiasaan harian.
-
-## Illustration + Icon Rules
-- Minimal 1 visual edukasi per halaman; 2-4 lebih ideal bila memang membantu.
-- Utamakan SVG/CSS handcrafted lokal atau foto lokal yang sudah ada.
-- Visual harus tetap tampil saat file dibuka langsung (`file://`).
-- Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG.
-- Wajib ada runtime check untuk mengaktifkan mode fallback ikon jika CDN gagal.
 
 ## Page Structure Standard
 1. Sticky header
@@ -147,20 +180,23 @@ const ZMC = {
 3. Tidak ada overflow horizontal.
 4. Tinggi kartu tidak fixed jika tidak perlu.
 5. Tab/accordion punya ARIA + keyboard support.
-6. Hero tidak menyisakan dead space besar atau panel yang terasa kosong.
-7. SVG/visual tidak clipping, termasuk teks kecil di dalam ilustrasi.
-8. Print tidak memotong bagian penting, termasuk hero atau callout utama.
-9. Link footer berfungsi: WA, Maps, Instagram.
-10. Dark/light theme parity valid dan kontras aman.
-11. Tombol print berada di area bawah halaman.
-12. Visual lokal tetap tampil saat offline.
-13. Tidak ada ketergantungan external image API.
-14. Ilustrasi tetap tampil saat file lokal dibuka langsung.
-15. Ikon tampil normal saat online, dan fallback ikon aktif saat CDN gagal.
-16. Hero height sesuai rentang compact.
-17. Copy medis, red flags, dan rujukan masih selaras dengan sumber resmi terbaru.
-18. Artefak QA tersimpan: screenshot viewport + PDF print check.
-19. Jika memakai chunked write, semua section tetap utuh.
+6. Hero tidak menyisakan dead space besar, panel kosong, atau beban baca berlebihan.
+7. Hero tetap dalam rentang compact dan tidak memonopoli layar pertama.
+8. Materi inti tidak hilang atau tergeser dari isi edukasi utama saat UI direvisi.
+9. Section tidak terasa seperti deretan box identik dengan ritme visual datar.
+10. Ikon masuk ke area konten inti bila memang membantu scanability.
+11. SVG/visual tidak clipping, termasuk teks kecil di dalam ilustrasi.
+12. Visual benar-benar memecah beban baca, bukan hanya teks dalam kotak.
+13. Print tidak memotong bagian penting, termasuk hero atau callout utama.
+14. Link footer berfungsi: WA, Maps, Instagram.
+15. Tombol print berada di area bawah halaman.
+16. Visual lokal tetap tampil saat offline.
+17. Tidak ada ketergantungan external image API.
+18. Ilustrasi tetap tampil saat file lokal dibuka langsung.
+19. Ikon tampil normal saat online, dan fallback ikon aktif saat CDN gagal.
+20. Copy medis, red flags, dan rujukan masih selaras dengan sumber resmi terbaru.
+21. Artefak QA tersimpan: screenshot viewport + PDF print check.
+22. Jika memakai chunked write, semua section tetap utuh.
 
 ## Common QA Failures
 - `Layout rhythm`: hero kiri terlalu tinggi, panel kanan kosong, visual terlalu kecil, atau section setelah hero terasa seperti deretan box identik. Cek ulang proporsi hero, panjang headline, dan hierarchy antarsection sebelum menyatakan desain selesai.
