@@ -1,0 +1,46 @@
+{
+  "viewports": {
+    "mobile": {
+      "heroHeight": 180,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "hasHorizontalOverflow": false,
+      "quickNeedsScroll": true,
+      "printButtonBottom": true
+    },
+    "tablet": {
+      "heroHeight": 170,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "hasHorizontalOverflow": false,
+      "quickNeedsScroll": true,
+      "printButtonBottom": true
+    },
+    "desktop": {
+      "heroHeight": 226,
+      "clientWidth": 1366,
+      "scrollWidth": 1366,
+      "hasHorizontalOverflow": false,
+      "quickNeedsScroll": false,
+      "printButtonBottom": true
+    }
+  },
+  "keyboard": {
+    "firstFocus": {
+      "id": "",
+      "tag": "A"
+    },
+    "faq1ExpandedAfterEnter": "true",
+    "focusAfterArrowDown": "faq-btn-2",
+    "faq2ExpandedAfterSpace": "true",
+    "focusAfterHome": "faq-btn-1",
+    "focusAfterEnd": "faq-btn-5"
+  },
+  "fallbackIcons": {
+    "classApplied": true
+  },
+  "pdf": {
+    "created": true,
+    "pageCount": 16
+  }
+}

@@ -1,0 +1,502 @@
+- generic [active] [ref=e1]:
+  - link "Lewati ke isi utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Logo Zihan Medical Center" [ref=e7]
+        - generic [ref=e8]:
+          - paragraph [ref=e9]: Panduan keluarga ZMC
+          - 'heading "Demam berdarah: pahami fase hari 1-7 dan jangan terkecoh saat demam mulai turun" [level=1] [ref=e10]'
+      - link "Tanda bahaya" [ref=e12] [cursor=pointer]:
+        - /url: "#redflags"
+        - generic [ref=e14]: 
+        - text: Tanda bahaya
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "DBD bisa memburuk justru saat demam sudah mulai turun. Yang perlu dilihat bukan angka panas saja, tetapi nyeri perut, muntah, perdarahan, lemas, dan kencing." [level=2] [ref=e19]
+        - paragraph [ref=e20]: Halaman ini membantu keluarga mengenali gejala awal, fase kritis, langkah rawat rumah yang masih aman, dan kapan harus cepat ke dokter atau IGD. Untuk bayi, ibu hamil, lansia, dan pasien komorbid, ambang periksanya harus lebih rendah.
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - strong [ref=e23]:
+              - generic [ref=e25]: 
+              - text: Catat hari sakit
+            - generic [ref=e26]: Hari keberapa sangat penting untuk membaca fase DBD.
+          - generic [ref=e27]:
+            - strong [ref=e28]:
+              - generic [ref=e30]: 
+              - text: Waspada saat panas turun
+            - generic [ref=e31]: Fase kritis sering muncul 24-48 jam setelah demam reda.
+          - generic [ref=e32]:
+            - strong [ref=e33]:
+              - generic [ref=e35]: 
+              - text: Lihat cairan dan kencing
+            - generic [ref=e36]: Tidak kuat minum dan kencing makin sedikit perlu dinilai cepat.
+        - generic [ref=e37]:
+          - strong [ref=e38]: "Pegangan cepat:"
+          - text: ulah ngantosan sampai pasien tampak kolaps. Kalau demam turun tetapi pasien makin rewel, nyeri perut, muntah, sesak, atau lemah sekali, anggap mendesak.
+      - generic [ref=e39]:
+        - img [ref=e41]:
+          - generic [ref=e43]: Fase DBD yang perlu diingat keluarga
+          - generic [ref=e47]: "1"
+          - generic [ref=e48]: "2"
+          - generic [ref=e49]: "3"
+          - generic [ref=e50]: Hari 1-3
+          - generic [ref=e51]: Demam tinggi, pegal, mual.
+          - generic [ref=e52]: Hari 3-5
+          - generic [ref=e53]: Saat demam turun, risiko bisa naik.
+          - generic [ref=e54]: Hari 5-7
+          - generic [ref=e55]: Bila stabil, nafsu makan membaik.
+          - generic [ref=e57]: Ini fase yang paling sering mengecoh.
+        - paragraph [ref=e58]: Gejala bisa tampak "lebih enak" saat panas turun, tetapi justru di sinilah keluarga harus lebih teliti memantau kondisi.
+    - generic [ref=e59]:
+      - strong [ref=e60]: "Ringkas 1 kalimat:"
+      - text: pada DBD, demam turun belum tentu aman; segera cari bantuan bila muncul nyeri perut, muntah terus, perdarahan, sesak, sangat lemas, atau kencing makin sedikit, terutama pada 24-48 jam setelah panas reda.
+    - navigation "Navigasi cepat" [ref=e61]:
+      - link "Kenali DBD" [ref=e62] [cursor=pointer]:
+        - /url: "#kenali"
+      - link "Fase hari 1-7" [ref=e63] [cursor=pointer]:
+        - /url: "#fase"
+      - link "Tanda bahaya" [ref=e64] [cursor=pointer]:
+        - /url: "#redflags"
+      - link "Alur keputusan" [ref=e65] [cursor=pointer]:
+        - /url: "#alur"
+      - link "Rawat rumah" [ref=e66] [cursor=pointer]:
+        - /url: "#rawat"
+      - link "Obat" [ref=e67] [cursor=pointer]:
+        - /url: "#obat"
+      - link "Kondisi khusus" [ref=e68] [cursor=pointer]:
+        - /url: "#khusus"
+      - link "Pencegahan" [ref=e69] [cursor=pointer]:
+        - /url: "#cegah"
+      - link "Mitos vs fakta" [ref=e70] [cursor=pointer]:
+        - /url: "#mitos"
+      - link "FAQ" [ref=e71] [cursor=pointer]:
+        - /url: "#faq"
+      - link "Rujukan" [ref=e72] [cursor=pointer]:
+        - /url: "#rujukan"
+    - generic [ref=e73]:
+      - generic [ref=e75]:
+        - generic [ref=e78]: 
+        - generic [ref=e79]:
+          - heading "1) Kenali DBD dulu" [level=2] [ref=e80]
+          - paragraph [ref=e81]: "Konteks: DBD adalah infeksi virus dengue yang ditularkan nyamuk Aedes. Langkah praktis: kenali gejala awal dan selalu catat hari sakit. Kapan evaluasi medis: periksa bila demam tinggi disertai nyeri badan hebat, muntah, ruam, atau pasien tinggal di area dengan risiko dengue."
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - paragraph [ref=e85]: WHO menjelaskan bahwa banyak infeksi dengue ringan atau tanpa gejala, tetapi pada orang yang sakit, keluhan yang paling sering adalah demam tinggi, sakit kepala, nyeri belakang mata, nyeri otot dan sendi, mual, muntah, dan ruam. CDC juga menekankan bahwa gejala umumnya berlangsung 2-7 hari, sehingga catatan hari sakit membantu keluarga melihat kapan masuk fase yang lebih berisiko.
+          - generic [ref=e86]:
+            - article [ref=e87]:
+              - heading "Gejala awal yang sering" [level=3] [ref=e88]
+              - list [ref=e89]:
+                - listitem [ref=e90]: Demam tinggi mendadak.
+                - listitem [ref=e91]: Sakit kepala atau nyeri belakang mata.
+                - listitem [ref=e92]: Ngilu badan, pegal, lemas.
+                - listitem [ref=e93]: Mual, muntah, atau ruam.
+            - article [ref=e94]:
+              - heading "Yang sering bikin telat sadar" [level=3] [ref=e95]
+              - list [ref=e96]:
+                - listitem [ref=e97]: Demam turun dianggap sudah sembuh.
+                - listitem [ref=e98]: Keluarga hanya menunggu angka trombosit.
+                - listitem [ref=e99]: Minum berkurang tetapi belum dianggap masalah.
+                - listitem [ref=e100]: Perdarahan kecil dianggap sepele.
+          - generic [ref=e101]: "Catatan penting: pemeriksaan darah memang membantu konfirmasi, tetapi keputusan untuk periksa atau dirujuk tidak harus menunggu hasil laboratorium bila kondisi klinis sudah mengkhawatirkan."
+        - complementary [ref=e102]:
+          - heading "Pegangan keluarga di rumah" [level=3] [ref=e103]
+          - list [ref=e104]:
+            - listitem [ref=e105]: Tulis hari ke-1 saat demam mulai jelas, bukan saat ruam muncul.
+            - listitem [ref=e106]: Catat apakah pasien masih bisa minum, masih pipis, dan apakah ada muntah atau perdarahan.
+            - listitem [ref=e107]: Kalau pasien pernah kena dengue sebelumnya, risiko dengue berat bisa lebih tinggi, jadi jangan terlalu santai.
+          - generic [ref=e108]:
+            - strong [ref=e109]: Jangan terkunci pada satu gejala.
+            - text: DBD bisa mirip infeksi virus lain pada awalnya. Karena itu, kombinasi gejala dan fase hari sakit lebih berguna daripada hanya melihat panas badan.
+    - generic [ref=e110]:
+      - generic [ref=e112]:
+        - generic [ref=e115]: 
+        - generic [ref=e116]:
+          - 'heading "2) Fase hari 1-7: bagian paling penting" [level=2] [ref=e117]'
+          - paragraph [ref=e118]: "Konteks: CDC Yellow Book membagi dengue menjadi fase demam, kritis, dan pemulihan. Langkah praktis: cocokkan kondisi pasien dengan fase hari sakit. Kapan evaluasi medis: jangan tunggu bila masuk fase kritis dan mulai muncul warning signs."
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - article [ref=e122]:
+            - strong [ref=e123]: Hari 1-3
+            - heading "Fase demam" [level=3] [ref=e124]
+            - paragraph [ref=e125]: Biasanya demam tinggi, pegal, sakit kepala, mual, atau ruam mulai tampak.
+            - list [ref=e126]:
+              - listitem [ref=e127]: Fokus pada cairan, istirahat, dan pemantauan.
+              - listitem [ref=e128]: Catat muntah, asupan minum, dan kencing.
+              - listitem [ref=e129]: Bila sudah ada sesak atau perdarahan, jangan tunggu.
+          - article [ref=e130]:
+            - strong [ref=e131]: Hari 3-5
+            - heading "Fase kritis" [level=3] [ref=e132]
+            - paragraph [ref=e133]: Ini fase yang paling sering mengecoh. Demam bisa turun, tetapi risiko kebocoran plasma, syok, dan perdarahan justru naik.
+            - list [ref=e134]:
+              - listitem [ref=e135]: Waspada kuat pada 24-48 jam setelah panas reda.
+              - listitem [ref=e136]: Nilai nyeri perut, muntah, perdarahan, rewel, lemas, dan kencing.
+              - listitem [ref=e137]: Bila ada tanda bahaya, periksa segera.
+          - article [ref=e138]:
+            - strong [ref=e139]: Hari 5-7
+            - heading "Fase pemulihan" [level=3] [ref=e140]
+            - paragraph [ref=e141]: Bila kondisi stabil, nafsu makan dan tenaga pelan-pelan kembali, dan kencing membaik.
+            - list [ref=e142]:
+              - listitem [ref=e143]: Tetap lanjut minum dan istirahat.
+              - listitem [ref=e144]: Ikuti kontrol bila dokter minta pemantauan ulang.
+              - listitem [ref=e145]: Kalau malah makin lemah, artinya belum benar-benar aman.
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - strong [ref=e148]: "Pesan inti:"
+            - text: menurut CDC, warning signs biasanya mulai pada 24-48 jam setelah demam hilang. Jadi kalimat "panasnya sudah turun" bukan alasan untuk berhenti memantau.
+          - img [ref=e150]:
+            - generic [ref=e152]: Apa yang dipantau per fase
+            - generic [ref=e154]: Hari 1-3
+            - generic [ref=e155]: Demam, pegal, mual, ruam.
+            - generic [ref=e157]: Hari 3-5
+            - generic [ref=e158]: "Saat panas turun:"
+            - generic [ref=e159]: cek perut, muntah, darah, kencing.
+            - generic [ref=e161]: Hari 5-7
+            - generic [ref=e162]: Bila stabil, makan dan tenaga membaik.
+            - generic [ref=e164]: Zona paling rawan terlewat
+    - generic [ref=e165]:
+      - generic [ref=e167]:
+        - generic [ref=e170]: 
+        - generic [ref=e171]:
+          - heading "3) Kapan harus ke dokter atau IGD" [level=2] [ref=e172]
+          - paragraph [ref=e173]: "Konteks: ini bagian terpenting untuk keselamatan pasien. Langkah praktis: bedakan mana yang perlu dinilai hari itu juga dan mana yang tidak boleh ditunda. Kapan evaluasi medis: segera bila salah satu tanda ini muncul, terutama saat demam mulai turun."
+      - generic [ref=e174]:
+        - generic [ref=e175]:
+          - strong [ref=e176]: Segera ke IGD atau layanan darurat
+          - text: bila pasien sangat lemas atau sulit dibangunkan, sesak atau napas cepat, perdarahan nyata, muntah darah, BAB hitam atau berdarah, tangan-kaki dingin pucat, bingung, atau tampak akan kolaps.
+        - generic [ref=e177]:
+          - article [ref=e178]:
+            - heading "Periksa hari ini juga" [level=3] [ref=e179]
+            - list [ref=e180]:
+              - listitem [ref=e181]: Nyeri perut yang nyata atau makin berat.
+              - listitem [ref=e182]: Muntah berulang, apalagi 3 kali atau lebih dalam 24 jam.
+              - listitem [ref=e183]: Mimisan, gusi berdarah, darah di urin atau tinja.
+              - listitem [ref=e184]: Pasien tampak sangat lelah, gelisah, atau rewel tidak seperti biasa.
+              - listitem [ref=e185]: Minum masuk sedikit, bibir kering, atau kencing mulai berkurang.
+            - generic [ref=e186]: "Kalau ragu masuk kategori mana, pilih jalur yang lebih aman: periksa lebih cepat."
+          - article [ref=e187]:
+            - heading "Tanda yang mengarah ke kondisi berat" [level=3] [ref=e188]
+            - generic [ref=e189]:
+              - generic [ref=e190]: "1"
+              - paragraph [ref=e192]:
+                - strong [ref=e193]: "Gangguan sirkulasi:"
+                - text: pucat, dingin, lemah sekali, tampak mau pingsan.
+            - generic [ref=e194]:
+              - generic [ref=e195]: "2"
+              - paragraph [ref=e197]:
+                - strong [ref=e198]: "Gangguan napas:"
+                - text: napas cepat, sesak, atau terasa berat.
+            - generic [ref=e199]:
+              - generic [ref=e200]: "3"
+              - paragraph [ref=e202]:
+                - strong [ref=e203]: "Perdarahan bermakna:"
+                - text: muntah darah, BAB hitam, mimisan tidak berhenti, atau darah banyak dari gusi.
+            - generic [ref=e204]:
+              - generic [ref=e205]: "4"
+              - paragraph [ref=e207]:
+                - strong [ref=e208]: "Kesadaran berubah:"
+                - text: mengantuk berat, bingung, gelisah, atau sulit dibangunkan.
+        - generic [ref=e209]: CDC mencatat warning signs biasanya muncul setelah demam pergi. Jadi bila suhu turun lalu pasien malah memburuk, jangan menunggu besok.
+    - generic [ref=e210]:
+      - generic [ref=e212]:
+        - generic [ref=e215]: 
+        - generic [ref=e216]:
+          - heading "4) Alur keputusan cepat untuk keluarga" [level=2] [ref=e217]
+          - paragraph [ref=e218]: "Konteks: bagian ini membantu keluarga memutuskan langkah awal. Langkah praktis: cocokkan kondisi pasien dengan tiga jalur di bawah. Kapan evaluasi medis: bila bergeser dari hijau ke kuning atau merah, jangan bertahan di rumah."
+      - generic [ref=e220]:
+        - article [ref=e221]:
+          - heading "Boleh observasi dan rawat rumah" [level=3] [ref=e222]
+          - list [ref=e223]:
+            - listitem [ref=e224]: Masih kuat minum sedikit demi sedikit.
+            - listitem [ref=e225]: Kencing masih ada dan tidak makin sedikit.
+            - listitem [ref=e226]: Tidak ada nyeri perut berat, muntah terus, atau perdarahan.
+            - listitem [ref=e227]: Kondisi umum masih relatif stabil.
+          - paragraph [ref=e228]:
+            - strong [ref=e229]: "Aksi:"
+            - text: istirahat, cairan, parasetamol bila perlu, pantau ketat hari sakit dan warning signs.
+        - article [ref=e230]:
+          - heading "Perlu kontak klinik hari ini" [level=3] [ref=e231]
+          - list [ref=e232]:
+            - listitem [ref=e233]: Masuk hari 3-5 atau panas baru saja turun.
+            - listitem [ref=e234]: Minum mulai berkurang, muntah mulai sering, atau perut mulai sakit.
+            - listitem [ref=e235]: Ada komorbid, hamil, lansia, bayi, atau akses ke fasilitas kesehatan sulit.
+          - paragraph [ref=e236]:
+            - strong [ref=e237]: "Aksi:"
+            - text: hubungi klinik untuk dinilai dan ditentukan apakah cukup rawat jalan atau perlu dirujuk.
+        - article [ref=e238]:
+          - heading "IGD atau segera periksa" [level=3] [ref=e239]
+          - list [ref=e240]:
+            - listitem [ref=e241]: Ada satu saja tanda bahaya.
+            - listitem [ref=e242]: Pasien tidak kuat minum atau muntah terus.
+            - listitem [ref=e243]: Tampak sangat lemah, sesak, pucat dingin, atau perdarahan.
+          - paragraph [ref=e244]:
+            - strong [ref=e245]: "Aksi:"
+            - text: jangan tunda hanya untuk menunggu trombosit atau menunggu obat tambahan.
+    - generic [ref=e246]:
+      - generic [ref=e248]:
+        - generic [ref=e251]: 
+        - generic [ref=e252]:
+          - 'heading "5) Rawat di rumah: apa yang aman dilakukan" [level=2] [ref=e253]'
+          - paragraph [ref=e254]: "Konteks: tidak semua pasien DBD harus langsung rawat inap, tetapi rawat rumah harus disiplin. Langkah praktis: utamakan cairan, istirahat, dan pemantauan. Kapan evaluasi medis: bila pasien tidak sanggup minum, muntah terus, atau kondisi umumnya turun."
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - paragraph [ref=e258]: WHO dan CDC sama-sama menekankan bahwa tidak ada obat khusus untuk membunuh virus dengue. Perawatan awal lebih banyak pada dukungan cairan, istirahat, pengendalian nyeri dan demam, serta deteksi dini tanda berat.
+          - generic [ref=e259]:
+            - article [ref=e260]:
+              - 'heading "Cairan: sedikit tapi sering" [level=3] [ref=e261]'
+              - list [ref=e262]:
+                - listitem [ref=e263]: Air putih, oralit, kuah bening, atau minuman lain yang mudah diterima.
+                - listitem [ref=e264]: Jangan tunggu haus sekali baru minum.
+                - listitem [ref=e265]: Bila mual, beri sedikit-sedikit tetapi lebih sering.
+            - article [ref=e266]:
+              - heading "Pantau yang sederhana" [level=3] [ref=e267]
+              - list [ref=e268]:
+                - listitem [ref=e269]: Masih bisa minum atau tidak.
+                - listitem [ref=e270]: Masih pipis atau makin sedikit.
+                - listitem [ref=e271]: Ada muntah, darah, nyeri perut, atau sesak.
+                - listitem [ref=e272]: Hari sakit sudah masuk fase rawan atau belum.
+            - article [ref=e273]:
+              - heading "Makan dan istirahat" [level=3] [ref=e274]
+              - list [ref=e275]:
+                - listitem [ref=e276]: Beri makan ringan bila sanggup.
+                - listitem [ref=e277]: Jangan memaksa makan banyak sekaligus.
+                - listitem [ref=e278]: Istirahat cukup, tidak perlu aktivitas berat.
+          - generic [ref=e279]:
+            - strong [ref=e280]: "Patokan praktis:"
+            - text: kalau pasien tetap bisa minum, masih pipis, dan tidak ada tanda bahaya, rawat rumah masih mungkin aman. Begitu salah satu patokan itu mulai goyah, jangan bertahan terlalu lama di rumah.
+        - complementary [ref=e281]:
+          - img [ref=e282]:
+            - generic [ref=e284]: Pantau 4 hal di rumah
+            - generic [ref=e286]: 1. Minum masih masuk?
+            - generic [ref=e288]: 2. Kencing masih ada?
+            - generic [ref=e290]: 3. Perut, muntah, darah, sesak?
+            - generic [ref=e292]: 4. Ini hari sakit keberapa?
+    - generic [ref=e301]:
+      - generic [ref=e303]:
+        - generic [ref=e306]: 
+        - generic [ref=e307]:
+          - 'heading "6) Obat saat DBD: mana yang relatif aman, mana yang dihindari" [level=2] [ref=e308]'
+          - paragraph [ref=e309]: "Konteks: obat yang salah bisa menambah risiko perdarahan atau membuat keluarga merasa aman palsu. Langkah praktis: pakai obat seperlunya dan jangan asal campur. Kapan evaluasi medis: bila ragu dosis, pasien muntah terus, atau sudah ada warning signs."
+      - generic [ref=e310]:
+        - table [ref=e312]:
+          - rowgroup [ref=e313]:
+            - row "Aman sebagai pegangan awal Yang perlu dihindari tanpa arahan dokter Catatan untuk keluarga" [ref=e314]:
+              - columnheader "Aman sebagai pegangan awal" [ref=e315]
+              - columnheader "Yang perlu dihindari tanpa arahan dokter" [ref=e316]
+              - columnheader "Catatan untuk keluarga" [ref=e317]
+          - rowgroup [ref=e318]:
+            - row "Parasetamol untuk demam atau nyeri, sesuai dosis. Aspirin, ibuprofen, dan NSAID lain karena bisa menaikkan risiko perdarahan. Cek kandungan obat flu kombinasi agar tidak dobel parasetamol." [ref=e319]:
+              - cell "Parasetamol untuk demam atau nyeri, sesuai dosis." [ref=e320]
+              - cell "Aspirin, ibuprofen, dan NSAID lain karena bisa menaikkan risiko perdarahan." [ref=e321]
+              - cell "Cek kandungan obat flu kombinasi agar tidak dobel parasetamol." [ref=e322]
+            - row "Kompres suam-suam kuku bila pasien tidak nyaman. Antibiotik tanpa indikasi karena dengue adalah infeksi virus. Antibiotik tidak dipakai hanya karena panas tinggi atau trombosit turun." [ref=e323]:
+              - cell "Kompres suam-suam kuku bila pasien tidak nyaman." [ref=e324]
+              - cell "Antibiotik tanpa indikasi karena dengue adalah infeksi virus." [ref=e325]
+              - cell "Antibiotik tidak dipakai hanya karena panas tinggi atau trombosit turun." [ref=e326]
+            - row "Oralit atau cairan lain bila asupan turun dan pasien masih bisa minum. Obat atau suplemen yang dijual sebagai \"penambah trombosit\" tanpa evaluasi klinis. Trombosit rendah bukan satu-satunya penentu berat-ringannya pasien." [ref=e327]:
+              - cell "Oralit atau cairan lain bila asupan turun dan pasien masih bisa minum." [ref=e328]
+              - cell "Obat atau suplemen yang dijual sebagai \"penambah trombosit\" tanpa evaluasi klinis." [ref=e329]
+              - cell "Trombosit rendah bukan satu-satunya penentu berat-ringannya pasien." [ref=e330]
+        - generic [ref=e331]:
+          - strong [ref=e332]: Jangan mengejar angka saja.
+          - text: Menurut CDC dan WHO, keputusan perawatan terutama berdasar kondisi pasien, warning signs, hidrasi, dan fase penyakit, bukan sekadar satu hasil trombosit.
+    - generic [ref=e333]:
+      - generic [ref=e335]:
+        - generic [ref=e338]: 
+        - generic [ref=e339]:
+          - 'heading "7) Kondisi khusus: siapa yang sebaiknya dievaluasi lebih cepat" [level=2] [ref=e340]'
+          - paragraph [ref=e341]: "Konteks: tidak semua pasien punya cadangan tubuh dan risiko yang sama. Langkah praktis: turunkan ambang untuk konsultasi pada kelompok rentan. Kapan evaluasi medis: lebih cepat dari standar bila pasien termasuk kelompok ini."
+      - generic [ref=e342]:
+        - generic [ref=e343]: CDC case management menempatkan kehamilan, usia sangat muda atau lanjut, dan beberapa komorbid sebagai alasan untuk menilai pasien lebih serius. Di praktik keluarga, artinya jangan terlalu lama observasi sendiri.
+        - generic [ref=e344]:
+          - article [ref=e345]:
+            - heading "Bayi dan anak kecil" [level=3] [ref=e346]
+            - paragraph [ref=e347]: Bayi kurang dari 1 tahun atau anak kecil lebih mudah jatuh ke dehidrasi karena cadangan cairannya terbatas dan sulit menjelaskan keluhan.
+          - article [ref=e348]:
+            - heading "Ibu hamil" [level=3] [ref=e349]
+            - paragraph [ref=e350]: Kehamilan perlu dinilai lebih cepat. Bila demam tinggi, muntah, lemas, atau masuk fase kritis, jangan menunda pemeriksaan.
+          - article [ref=e351]:
+            - heading "Lansia" [level=3] [ref=e352]
+            - paragraph [ref=e353]: Pada usia lanjut, tanda syok bisa lebih samar, sementara penyakit penyerta lebih sering ada.
+          - article [ref=e354]:
+            - heading "Pasien komorbid" [level=3] [ref=e355]
+            - paragraph [ref=e356]: Hipertensi, diabetes, asma, ginjal kronis, penyakit hati, obesitas, atau penggunaan antikoagulan membuat evaluasi medis perlu lebih dini.
+        - generic [ref=e357]:
+          - heading "Apa yang dibawa saat kontrol" [level=3] [ref=e358]
+          - list [ref=e359]:
+            - listitem [ref=e360]: Hari sakit dan kapan demam mulai turun.
+            - listitem [ref=e361]: Catatan muntah, kencing, perdarahan, dan asupan minum.
+            - listitem [ref=e362]: Daftar obat yang sudah diminum.
+            - listitem [ref=e363]: Riwayat kehamilan atau penyakit penyerta bila ada.
+    - generic [ref=e364]:
+      - generic [ref=e366]:
+        - generic [ref=e369]: 
+        - generic [ref=e370]:
+          - 'heading "8) Pencegahan: PSN 3M Plus yang relevan untuk rumah tangga" [level=2] [ref=e371]'
+          - paragraph [ref=e372]: "Konteks: nyamuk Aedes berkembang biak di tempat penampungan air bersih. Langkah praktis: lakukan 3M Plus rutin, bukan hanya saat ada warga yang sakit. Kapan evaluasi medis: bila ada demam yang cocok dengan dengue, tetap periksa walau rumah terasa sudah bersih."
+      - generic [ref=e374]:
+        - generic [ref=e375]:
+          - paragraph [ref=e376]: Ayo Sehat Kemenkes menekankan bahwa pencegahan DBD yang paling efektif tetap PSN 3M Plus. Untuk rumah tangga Garut, artinya bukan hanya bak mandi, tetapi juga ember cadangan, talang yang mampet, dispenser galon, vas, tatakan pot, dan tempat minum hewan.
+          - generic [ref=e377]:
+            - article [ref=e378]:
+              - heading "Menguras" [level=3] [ref=e379]
+              - paragraph [ref=e380]: Bersihkan bak mandi, toren kecil, ember, tempat air wudhu, atau wadah lain secara rutin. Gosok dinding wadahnya juga.
+            - article [ref=e381]:
+              - heading "Menutup" [level=3] [ref=e382]
+              - paragraph [ref=e383]: Tutup rapat penampungan air supaya nyamuk tidak punya tempat bertelur.
+            - article [ref=e384]:
+              - heading "Mendaur ulang" [level=3] [ref=e385]
+              - paragraph [ref=e386]: Singkirkan kaleng, botol, ban, gelas plastik, dan barang bekas yang bisa menampung air hujan.
+          - generic [ref=e387]: Bagian "Plus" meliputi memperbaiki talang mampet, memeriksa jentik, memakai repelan, memasang kasa, menaruh pakaian kotor di wadah tertutup, dan memakai larvasida pada tempat air yang sulit dibersihkan.
+        - complementary [ref=e388]:
+          - img [ref=e389]:
+            - generic [ref=e391]: Checklist 3M Plus rumah
+            - generic [ref=e392]:
+              - generic [ref=e395]: Bak mandi dan ember dikuras
+              - generic [ref=e398]: Toren, gentong, dispenser ditutup
+              - generic [ref=e401]: Talang, tatakan pot, vas dicek
+              - generic [ref=e404]: Baju bekas pakai tidak digantung lama
+              - generic [ref=e407]: Larvasida untuk wadah sulit dibersihkan
+              - generic [ref=e410]: Repelan dan kasa dipakai saat perlu
+    - generic [ref=e411]:
+      - generic [ref=e413]:
+        - generic [ref=e416]: 
+        - generic [ref=e417]:
+          - heading "9) Mitos vs fakta yang sering bikin salah langkah" [level=2] [ref=e418]
+          - paragraph [ref=e419]: "Konteks: pada DBD, miskonsepsi kecil bisa bikin keluarga datang terlambat. Langkah praktis: pakai fakta berikut sebagai rem pengingat. Kapan evaluasi medis: kalau fakta di bawah justru cocok dengan kondisi pasien, ambil tindakan lebih cepat."
+      - generic [ref=e421]:
+        - generic [ref=e422]:
+          - 'heading "Mitos: kalau demam sudah turun berarti sudah lewat." [level=3] [ref=e423]'
+          - paragraph [ref=e424]:
+            - strong [ref=e425]: "Fakta:"
+            - text: justru fase kritis sering muncul saat demam turun. Nilai kondisi umum, nyeri perut, muntah, perdarahan, dan kencing pada 24-48 jam setelahnya.
+        - generic [ref=e426]:
+          - 'heading "Mitos: rawat inap ditentukan hanya oleh trombosit." [level=3] [ref=e427]'
+          - paragraph [ref=e428]:
+            - strong [ref=e429]: "Fakta:"
+            - text: kondisi klinis, warning signs, hidrasi, tekanan darah, dan fase sakit lebih menentukan keputusan cepat daripada satu angka laboratorium.
+        - generic [ref=e430]:
+          - 'heading "Mitos: semua ruam atau bintik merah berarti pasti DBD." [level=3] [ref=e431]'
+          - paragraph [ref=e432]:
+            - strong [ref=e433]: "Fakta:"
+            - text: ruam bisa ada pada dengue, tetapi tidak wajib ada. Banyak pasien datang hanya dengan demam, pegal, mual, atau lemas.
+        - generic [ref=e434]:
+          - 'heading "Mitos: antibiotik atau obat penambah trombosit harus segera diminum." [level=3] [ref=e435]'
+          - paragraph [ref=e436]:
+            - strong [ref=e437]: "Fakta:"
+            - text: dengue disebabkan virus. Obat utama di rumah adalah cairan, istirahat, pemantauan, dan obat nyeri yang tepat, bukan mengejar obat tambahan tanpa evaluasi.
+    - generic [ref=e438]:
+      - generic [ref=e440]:
+        - generic [ref=e443]: 
+        - generic [ref=e444]:
+          - heading "10) FAQ singkat" [level=2] [ref=e445]
+          - paragraph [ref=e446]: "Konteks: ini jawaban untuk pertanyaan rumah tangga yang paling sering muncul. Langkah praktis: pakai sebagai panduan awal. Kapan evaluasi medis: kalau kondisi nyata pasien lebih berat dari pola umum ini, utamakan periksa langsung."
+      - generic [ref=e448]:
+        - button "DBD menular langsung dari orang ke orang?" [ref=e450] [cursor=pointer]:
+          - text: DBD menular langsung dari orang ke orang?
+          - generic [ref=e451]: +
+        - button "Kalau trombosit belum turun, apakah aman?" [ref=e453] [cursor=pointer]:
+          - text: Kalau trombosit belum turun, apakah aman?
+          - generic [ref=e454]: +
+        - button "Boleh ibuprofen untuk pegal atau sakit kepala?" [ref=e456] [cursor=pointer]:
+          - text: Boleh ibuprofen untuk pegal atau sakit kepala?
+          - generic [ref=e457]: +
+        - button "Kapan pasien tidak layak rawat rumah lagi?" [ref=e459] [cursor=pointer]:
+          - text: Kapan pasien tidak layak rawat rumah lagi?
+          - generic [ref=e460]: +
+        - button "Kalau rumah sudah rajin 3M Plus, masih mungkin kena DBD?" [ref=e462] [cursor=pointer]:
+          - text: Kalau rumah sudah rajin 3M Plus, masih mungkin kena DBD?
+          - generic [ref=e463]: +
+    - generic [ref=e464]:
+      - generic [ref=e466]:
+        - generic [ref=e469]: 
+        - generic [ref=e470]:
+          - heading "11) Rujukan" [level=2] [ref=e471]
+          - paragraph [ref=e472]: "Konteks: halaman ini disusun dari sumber resmi yang relevan untuk pasien. Langkah praktis: buka saat online bila ingin baca lebih detail. Kapan evaluasi medis: bila kondisi pasien mengkhawatirkan, jangan berhenti di bagian rujukan - langsung periksa."
+      - generic [ref=e473]:
+        - list [ref=e474]:
+          - listitem [ref=e475]:
+            - text: WHO.
+            - link "Dengue and severe dengue" [ref=e476] [cursor=pointer]:
+              - /url: https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue
+            - text: . Dicek ulang 10 Maret 2026. Dasar gejala umum, warning signs, larangan ibuprofen/aspirin, dan pesan bahwa tidak ada terapi antivirus spesifik.
+          - listitem [ref=e477]:
+            - text: CDC.
+            - link "Symptoms of Dengue and Testing" [ref=e478] [cursor=pointer]:
+              - /url: https://www.cdc.gov/dengue/signs-symptoms/index.html
+            - text: . Pembaruan 7 Agustus 2025. Dasar gejala yang paling umum, daftar warning signs pasien, dan pesan bahwa tanda bahaya sering mulai 24-48 jam setelah demam hilang.
+          - listitem [ref=e479]:
+            - text: CDC Yellow Book.
+            - link "Dengue" [ref=e480] [cursor=pointer]:
+              - /url: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/dengue.html
+            - text: . Pembaruan 23 April 2025. Dasar pembagian fase demam, kritis, dan pemulihan; serta catatan tentang kehamilan dan kelompok risiko.
+          - listitem [ref=e481]:
+            - text: CDC.
+            - link "Dengue Case Management" [ref=e482] [cursor=pointer]:
+              - /url: https://www.cdc.gov/dengue/media/pdfs/2024/05/20240521_342849-B_PRESS_READY_PocketGuideDCMC_UPDATE.pdf
+            - text: . Dasar warning signs yang lebih rinci, alasan rawat inap, dan kelompok yang perlu dinilai lebih cepat seperti hamil, bayi, lansia, dan komorbid.
+          - listitem [ref=e483]:
+            - text: Kemenkes RI - Ayo Sehat.
+            - link "Cara Mencegah DBD dengan Menjaga Lingkungan dan Diri Sendiri" [ref=e484] [cursor=pointer]:
+              - /url: https://ayosehat.kemkes.go.id/cara-mencegah-dbd
+            - text: . Publikasi 4 Juli 2024. Dasar 3M Plus dan contoh pencegahan yang dekat dengan rumah tangga Indonesia.
+          - listitem [ref=e485]:
+            - text: Kemenkes RI.
+            - link "Kendalikan DBD dengan PSN 3M Plus" [ref=e486] [cursor=pointer]:
+              - /url: https://kemkes.go.id/id/%20kendalikan-dbd-dengan-psn-3m-plus
+            - text: . Dasar penguatan pesan PSN 3M Plus dan komponen "Plus" di rumah.
+        - generic [ref=e487]: Konten ini adalah edukasi pasien. Untuk keputusan tes, rawat inap, infus, kehamilan, bayi, atau penyakit penyerta, tetap perlu pemeriksaan langsung oleh tenaga kesehatan.
+    - region "Aksi cepat keluarga" [ref=e488]:
+      - heading "Aksi cepat keluarga" [level=2] [ref=e489]
+      - paragraph [ref=e490]: Simpan halaman ini bila ingin dipakai saat offline. Bila ada tanda bahaya, masuk hari 3-5, atau keluarga merasa kondisi pasien "beda dari biasanya", hubungi fasilitas kesehatan tanpa menunggu lebih lama.
+      - paragraph [ref=e491]: "Status koneksi: online. Tautan rujukan dan kontak bisa dibuka."
+      - generic [ref=e492]:
+        - link "WhatsApp Klinik" [ref=e493] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+          - generic [ref=e495]: 
+          - text: WhatsApp Klinik
+        - link "Buka Maps" [ref=e496] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+          - generic [ref=e498]: 
+          - text: Buka Maps
+        - button "Print atau simpan PDF" [ref=e499] [cursor=pointer]:
+          - generic [ref=e501]: 
+          - text: Print / Save PDF
+    - generic [ref=e502]:
+      - generic [ref=e503]:
+        - generic [ref=e504]:
+          - heading "Zihan Medical Center" [level=2] [ref=e505]
+          - paragraph [ref=e506]:
+            - strong [ref=e507]: "#ZMCGakNyuekinKamu"
+            - text: "- layanan 24 jam untuk keluarga Wanaraja dan sekitarnya."
+          - paragraph [ref=e508]: Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183
+          - paragraph [ref=e509]:
+            - strong [ref=e510]: "Telepon:"
+            - text: +62 822-1718-0432
+          - paragraph [ref=e511]:
+            - strong [ref=e512]: "Jam:"
+            - text: "Senin - Minggu: 24 Jam"
+        - generic [ref=e513]:
+          - heading "Kontak dan lokasi" [level=3] [ref=e514]
+          - generic [ref=e515]:
+            - link "WhatsApp" [ref=e516] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1
+              - generic [ref=e518]: 
+              - text: WhatsApp
+            - link "Maps" [ref=e519] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/CYpDhM1bGBnSf7D77
+              - generic [ref=e521]: 
+              - text: Maps
+            - link "Instagram" [ref=e522] [cursor=pointer]:
+              - /url: https://www.instagram.com/zihanmedicalcenter/?hl=en
+              - generic [ref=e524]: 
+              - text: Instagram
+          - paragraph [ref=e525]:
+            - text: "Tip offline: simpan file ini satu folder dengan"
+            - code [ref=e526]: zmc-logo.jpeg
+            - text: agar logo tetap tampil saat dibuka langsung dari perangkat.
+      - generic [ref=e527]:
+        - generic [ref=e528]: © 2026 Zihan Medical Center - Wanaraja Garut
+        - generic [ref=e529]: Materi edukasi pasien. Bukan pengganti pemeriksaan langsung.
