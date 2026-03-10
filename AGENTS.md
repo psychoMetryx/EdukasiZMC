@@ -103,6 +103,11 @@ Untuk implementasi UI, gunakan guardrail `uncodixify` sebagai standar praktis:
 - Variasikan hierarchy antarsection dengan perbedaan density, layout, accent bar, list emphasis, atau callout placement.
 - Tidak semua section harus mengikuti pola "judul + paragraf pengantar + grid kartu + callout".
 - Jika semua border, radius, shadow, dan warna permukaan terasa sama terus, hierarchy visual dianggap datar.
+- Jangan buka section dengan paragraf meta panjang lalu diikuti 2-3 paragraf penjelas sebelum ada elemen scan-first.
+- Jika callout, card, strip, atau visual sudah menyampaikan poin inti, pangkas paragraf pengantar yang mengulang.
+- Jangan beri bobot visual yang sama ke semua kalimat penting; pembaca harus cepat tahu mana yang discan dulu.
+- Mobile hero wajib tetap punya scan aid yang terlihat tanpa breakpoint desktop.
+- Jangan biarkan semua section pembuka jatuh ke pola tetap "judul panjang + paragraf lead + grid + callout".
 
 ## Main Content Guardrail
 - Isi edukasi utama tetap didominasi teks yang rapi dan mudah dipindai.
@@ -243,6 +248,14 @@ Saat diminta membuat halaman baru, hasilkan:
 
 ## Repository Notes
 - Simpan halaman topik di `topics/`.
+- Simpan versi staging/fixed hasil revisi di `topics/fixed/` sampai disetujui menggantikan baseline.
 - Simpan aset lokal di `assets/`.
 - Visual topik di `assets/topics/<slug>/`.
 - Gunakan nama file slug, misalnya `diare-anak.html` atau `dbd-dewasa.html`.
+- Artefak QA untuk versi staging wajib memakai suffix `-fixed`.
+
+## Repo Evaluation 10 Maret 2026
+- Density beberapa halaman terbaru terlalu rata; terlalu banyak kalimat penting muncul dengan bobot visual yang serupa.
+- Pembuka section cenderung terlalu banyak copy sebelum ada elemen scan-first yang membantu orientasi cepat.
+- Visual dan diagram sudah ada, tetapi sering belum cukup memecah beban baca di awal alur.
+- Ikon masih terlalu terkonsentrasi di header, CTA, dan footer; konten inti perlu memakai ikon CDN/fallback lebih aktif dan lebih fungsional.

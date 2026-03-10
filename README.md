@@ -71,6 +71,14 @@ Guardrail anti-generik:
 - Jangan ulang pola section yang sama terus-menerus. Variasikan hirarki dengan density, layout, accent bar, list emphasis, atau penempatan callout.
 - Hindari semua section terasa seperti pola tetap "judul + paragraf + grid card + callout" dengan border, radius, shadow, dan surface yang sama terus.
 
+## Density / Anti-Bacot
+- Jangan buka section dengan paragraf meta panjang lalu diikuti 2-3 paragraf penjelas sebelum ada elemen scan-first.
+- Kalau callout, card, strip, atau visual sudah menyampaikan poin inti, pangkas paragraf pengantar yang mengulang.
+- Jangan beri bobot visual yang sama ke semua kalimat penting; pembaca harus cepat tahu mana yang perlu discan dulu.
+- Mobile hero wajib tetap punya scan aid yang terlihat tanpa menunggu breakpoint desktop.
+- Jangan biarkan semua pembuka section jatuh ke pola tetap "judul panjang + paragraf lead + grid + callout".
+- Ikon CDN/fallback harus dipakai di body content bila membantu ritme baca, bukan menumpuk di header, CTA, dan footer.
+
 ## Ikon dan Visual Edukasi
 - Minimal 1 visual edukasi per halaman; 2-4 lebih ideal bila memang membantu.
 - Ikon CDN/fallback harus membantu isi edukasi utama, bukan hanya tombol/footer.
@@ -107,6 +115,8 @@ EdukasiZMC/
   AGENTS.md
   topics/
     <slug>.html
+    fixed/
+      <slug>.html
     zmc-logo.jpeg
   assets/
     qa/
@@ -135,3 +145,14 @@ Untuk halaman yang selesai dikerjakan, minimal hasil akhirnya mencakup:
 - file HTML di `topics/`
 - screenshot mobile, tablet, desktop di `assets/qa/`
 - PDF hasil print check di `assets/qa/`
+
+Untuk revisi yang masih tahap review:
+- simpan versi baru di `topics/fixed/`
+- bedakan artefak QA dengan suffix `-fixed`
+- biarkan file baseline di `topics/` tetap ada sampai versi staging disetujui
+
+## Evaluasi 10 Maret 2026
+- Beberapa halaman terbaru terasa penat karena density terlalu rata; terlalu banyak kalimat penting muncul dengan bobot visual serupa.
+- Pembuka section masih sering terlalu panjang sebelum user mendapat elemen scan-first yang membantu orientasi cepat.
+- Visual sudah ada, tetapi belum cukup memecah beban baca di bagian awal section.
+- Ikon masih terlalu banyak terkonsentrasi di header, CTA, dan footer; body content perlu lebih aktif memakai ikon fungsional.
