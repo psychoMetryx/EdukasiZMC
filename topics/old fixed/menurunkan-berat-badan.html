@@ -73,6 +73,7 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-copy{padding:.76rem .78rem;display:grid;gap:.48rem;align-content:center}
 .hero-copy h2{margin:0;font-size:clamp(.98rem,.94rem + .48vw,1.22rem);line-height:1.12;font-weight:700;max-width:25ch}
 .hero-copy p{margin:0;color:var(--muted);font-size:.88rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.5rem;padding:.02rem 0 .06rem}
 .hero-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.34rem}
 .hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.38rem .38rem}
 .hero-point strong{display:grid;gap:.12rem;font-size:.69rem;line-height:1.08}
@@ -193,7 +194,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#8f8f8f;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
   body{background:#fff!important;color:#111!important;font-size:11pt}
-  .topbar,.hero,.quick,#statusNote,#printPage,#waBtn,#mapBtn,.hero-visual{display:none!important}
+  .topbar,.hero,.quick,#statusNote,#printPage,.hero-actions,.hero-visual{display:none!important}
   .wrap{width:100%}
   .section,.bottom-cta{break-inside:auto!important;page-break-inside:auto!important}
   .hero-grid{display:block;min-height:auto}
@@ -245,6 +246,16 @@ code{font-family:Consolas,monospace;font-size:.95em}
       <div class="hero-copy">
         <h2>Turun berat badan sehat itu pelan, terukur, dan masih enak dijalani.</h2>
         <p>Pegangan utamanya sederhana: target realistis, piring lebih seimbang, dan gerak rutin yang tidak putus di minggu pertama.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brand" id="heroWa" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            WhatsApp Klinik
+          </a>
+          <a class="btn btn-secondary" id="heroIg" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+            Instagram Klinik
+          </a>
+        </div>
         <div class="hero-points">
           <div class="hero-point">
             <strong><span class="icon-pair"><i class="bi bi-speedometer2 icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-scale"></use></svg></span>0,5-1 kg/minggu</strong>
@@ -769,17 +780,9 @@ code{font-family:Consolas,monospace;font-size:.95em}
   </section>
 
   <section class="bottom-cta" aria-label="Aksi cepat pasien">
-    <h2>Bawa halaman ini saat kontrol kalau Anda ingin membahas target yang lebih personal</h2>
-    <p>Kalau perlu, catat berat minggu ini, lingkar perut, minuman manis yang masih sering diminum, dan olahraga yang paling realistis dilakukan. Data sederhana seperti itu biasanya sudah cukup membantu saat konsultasi.</p>
+    <h2>Print / Save PDF</h2>
+    <p>Simpan halaman ini untuk dibaca offline atau dibawa saat kontrol. Untuk hubungi klinik, pakai tombol WhatsApp dan Instagram di hero atau link footer.</p>
     <div class="actions">
-      <a class="btn btn-brand" id="waBtn" href="#" target="_blank" rel="noopener">
-        <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-        WhatsApp Klinik
-      </a>
-      <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener">
-        <span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>
-        Buka Maps
-      </a>
       <button class="btn btn-secondary" id="printPage" type="button" aria-label="Print atau simpan PDF">
         <span class="icon-pair"><i class="bi bi-printer-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-print"></use></svg></span>
         Print / Save PDF
@@ -863,16 +866,16 @@ const ZMC = {
   document.getElementById("clinicHours").textContent = ZMC.hours;
   document.getElementById("year").textContent = String(new Date().getFullYear());
 
-  ["waBtn", "footerWa"].forEach(function(id){
+  ["heroWa", "footerWa"].forEach(function(id){
     const el = document.getElementById(id);
     if (el) el.href = ZMC.whatsapp;
   });
-  ["mapBtn", "footerMap"].forEach(function(id){
+  ["heroIg", "footerIg"].forEach(function(id){
     const el = document.getElementById(id);
-    if (el) el.href = ZMC.maps;
+    if (el) el.href = ZMC.instagram;
   });
-  const ig = document.getElementById("footerIg");
-  if (ig) ig.href = ZMC.instagram;
+  const footerMap = document.getElementById("footerMap");
+  if (footerMap) footerMap.href = ZMC.maps;
 
   function checkIconCDN() {
     if (forceIcons) {

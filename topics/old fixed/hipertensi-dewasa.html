@@ -73,6 +73,7 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-copy{padding:.64rem .68rem .68rem;display:grid;gap:.38rem;align-content:center}
 .hero-copy h2{margin:0;font-size:clamp(.96rem,.94rem + .4vw,1.2rem);line-height:1.1;font-weight:700;max-width:22ch}
 .hero-copy p{margin:0;color:var(--muted);font-size:.8rem;max-width:56ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.5rem;padding:.05rem 0 .08rem}
 .hero-points{display:grid;grid-template-columns:1fr;gap:.42rem}
 .hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.4rem .48rem}
 .hero-point strong{display:flex;align-items:center;gap:.35rem;font-size:.78rem;line-height:1.12}
@@ -228,7 +229,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
   body{background:#fff!important;color:#111!important;font-size:11pt}
-  .topbar-actions,.quick,#statusNote,#printPage,.hero-visual{display:none!important}
+  .topbar-actions,.quick,#statusNote,#printPage,.hero-visual,.hero-actions{display:none!important}
   .wrap{width:100%}
   .hero-grid{display:block;min-height:auto}
   .hero,.summary,.bottom-cta,footer,.card,.strip,.callout,.table-wrap,.rail,.metric-card,.measure-box,.decision-card,.myth-row,.hero-figure,.micro-figure,.visual-board,.faq-item,.icon-card,.signal-card,.mini-panel,.agenda-card,.lead-note,.scan-row{box-shadow:none!important;break-inside:avoid}
@@ -279,6 +280,16 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       <div class="hero-copy">
         <h2>Hipertensi sering tak terasa. Cek rutin, kurangi garam, lalu tindak lanjuti.</h2>
         <p>Fokusnya orientasi cepat: apa yang perlu dicek, dibatasi, dan kapan jangan menunda periksa.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brand" id="heroWa" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            WhatsApp Klinik
+          </a>
+          <a class="btn btn-secondary" id="heroIg" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+            Instagram Klinik
+          </a>
+        </div>
         <div class="hero-points">
           <div class="hero-point">
             <strong><span class="icon-pair"><i class="bi bi-speedometer2 icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span>Cek lebih dari sekali</strong>
@@ -850,18 +861,10 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
     </div>
   </section>
   <section class="bottom-cta" aria-label="Aksi cepat pasien">
-    <h2>Aksi cepat pasien dan keluarga</h2>
-    <p>Simpan halaman ini bila ingin dibuka offline. Kalau hasil tensi sering tinggi atau ada tanda bahaya, lebih aman datang periksa daripada menunggu sampai muncul komplikasi.</p>
+    <h2>Print / Save PDF</h2>
+    <p>Simpan halaman ini bila ingin dibuka offline atau dibawa saat kontrol. Untuk hubungi klinik, pakai tombol WhatsApp dan Instagram di hero atau link footer.</p>
     <p id="statusNote" class="status-note" aria-live="polite">Status koneksi: memeriksa jaringan...</p>
     <div class="actions">
-      <a class="btn btn-brand" id="waBtn" href="#" target="_blank" rel="noopener">
-        <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-        WhatsApp Klinik
-      </a>
-      <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener">
-        <span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>
-        Buka Maps
-      </a>
       <button class="btn btn-secondary" id="printPage" type="button" aria-label="Print atau simpan PDF">
         <span class="icon-pair"><i class="bi bi-printer-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-print"></use></svg></span>
         Print / Save PDF
@@ -942,16 +945,16 @@ const ZMC = {
   document.getElementById("clinicHours").textContent = ZMC.hours;
   document.getElementById("year").textContent = String(new Date().getFullYear());
 
-  ["waBtn", "footerWa"].forEach(function(id){
+  ["heroWa", "footerWa"].forEach(function(id){
     const el = document.getElementById(id);
     if (el) el.href = ZMC.whatsapp;
   });
-  ["mapBtn", "footerMap"].forEach(function(id){
+  ["heroIg", "footerIg"].forEach(function(id){
     const el = document.getElementById(id);
-    if (el) el.href = ZMC.maps;
+    if (el) el.href = ZMC.instagram;
   });
-  const ig = document.getElementById("footerIg");
-  if (ig) ig.href = ZMC.instagram;
+  const footerMap = document.getElementById("footerMap");
+  if (footerMap) footerMap.href = ZMC.maps;
 
   function checkIconCDN() {
     if (forceIcons) {

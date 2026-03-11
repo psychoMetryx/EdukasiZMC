@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="light">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,31 +42,6 @@
       --hero-ink: #fff7f6;
       --hero-sub: #f8d7d3;
       --hero-panel: #b0161f;
-    }
-
-    [data-theme="night"] {
-      --bg: #151215;
-      --surface: #221c20;
-      --surface-muted: #2a2227;
-      --surface-strong: #32272d;
-      --line: #5e4347;
-      --line-strong: #79575d;
-      --ink: #f4efee;
-      --ink-soft: #d8cbc8;
-      --brand: #ff756a;
-      --brand-strong: #ff9b92;
-      --brand-soft: #3d2327;
-      --ok-bg: #203427;
-      --ok-ink: #c0f0ca;
-      --warn-bg: #483321;
-      --warn-ink: #ffd7aa;
-      --danger-bg: #4c222a;
-      --danger-ink: #ffd8dc;
-      --focus: #b7d0ff;
-      --hero-ink: #fff3f1;
-      --hero-sub: #ffd3ce;
-      --hero-panel: #6f1218;
-      --shadow: none;
     }
 
     * { box-sizing: border-box; }
@@ -252,6 +227,19 @@
       color: var(--hero-sub);
       max-width: 38rem;
       font-size: 0.92rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-cta-primary {
+      background: var(--surface);
+      color: var(--brand-strong);
+      border-color: color-mix(in srgb, var(--brand-strong) 45%, white);
     }
 
     .hero-points {
@@ -554,6 +542,25 @@
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 
+    .bottom-cta {
+      margin-top: 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: 0.9rem 1rem;
+    }
+
+    .bottom-cta h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.08rem;
+    }
+
+    .bottom-cta p {
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
     .cta-link {
       display: inline-flex;
       align-items: center;
@@ -706,9 +713,7 @@
     }
 
     @media print {
-      :root,
-      [data-theme="light"],
-      [data-theme="night"] {
+      :root {
         --bg: #ffffff;
         --surface: #ffffff;
         --surface-muted: #ffffff;
@@ -739,7 +744,9 @@
       .no-print,
       .toolbar,
       .quick,
-      .hero-figure {
+      .hero-figure,
+      .hero-actions,
+      #printPage {
         display: none !important;
       }
 
@@ -827,6 +834,7 @@
     <symbol id="ico-geo" viewBox="0 0 16 16"><path d="M8 15s5-4.6 5-8.6A5 5 0 1 0 3 6.4C3 10.4 8 15 8 15z"/><circle cx="8" cy="6.4" r="1.9" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
     <symbol id="ico-hospital" viewBox="0 0 16 16"><path d="M2 15V4h4V1h4v3h4v11H2z"/><path d="M8 5.2v4.2M5.9 7.3h4.2" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
     <symbol id="ico-chat" viewBox="0 0 16 16"><path d="M2 3h12v7H6l-3.5 3V10H2z"/></symbol>
+    <symbol id="ico-instagram" viewBox="0 0 16 16"><rect x="2.2" y="2.2" width="11.6" height="11.6" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="11.7" cy="4.4" r="0.8"/></symbol>
     <symbol id="ico-list" viewBox="0 0 16 16"><path d="M3 4h10M3 8h10M3 12h10" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="1.9" cy="4" r="0.9"/><circle cx="1.9" cy="8" r="0.9"/><circle cx="1.9" cy="12" r="0.9"/></symbol>
   </svg>
 
@@ -839,9 +847,6 @@
           <h1>Panduan Keluhan Lambung untuk Warga Garut</h1>
         </div>
       </div>
-      <div class="toolbar">
-        <button id="themeToggle" class="btn" type="button" aria-pressed="false">Tema Malam</button>
-      </div>
     </div>
   </header>
 
@@ -851,6 +856,10 @@
         <div class="hero-main">
           <h2 id="hero-title">Keluhan lambung sering membaik kalau pemicu dikurangi dan tanda bahaya tidak diabaikan.</h2>
           <p>Untuk 24-48 jam pertama, rapikan jadwal makan, kurangi pemicu, dan naikkan evaluasi bila gejala berubah atau memberat.</p>
+          <div class="hero-actions no-print">
+            <a id="heroWa" class="cta-link hero-cta-primary" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-whatsapp icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-chat"></use></svg></span>WhatsApp Klinik</a>
+            <a id="heroIg" class="cta-link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-instagram icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-instagram"></use></svg></span>Instagram Klinik</a>
+          </div>
           <ul class="hero-points" aria-label="Ringkasan utama">
             <li>
               <span class="hero-icon icon-pair"><i class="bi bi-list-check icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-list"></use></svg></span>
@@ -1074,10 +1083,11 @@
           <li>NICE CG184 - Gastro-oesophageal reflux disease and dyspepsia in adults: <a href="https://www.nice.org.uk/guidance/cg184/chapter/Recommendations" target="_blank" rel="noopener noreferrer">https://www.nice.org.uk/guidance/cg184/chapter/Recommendations</a></li>
         </ol>
 
+      </section>
+      <section class="bottom-cta" aria-label="Aksi cetak atau simpan">
+        <h2>Print / Save PDF</h2>
+        <p>Simpan halaman ini untuk dibaca offline atau dibawa saat kontrol. Untuk hubungi klinik, pakai tombol WhatsApp dan Instagram di hero atau link footer.</p>
         <div class="contact-grid no-print">
-          <a id="ctaWa" class="cta-link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-chat-dots icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-chat"></use></svg></span>Chat WhatsApp Klinik</a>
-          <a id="ctaMaps" class="cta-link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-geo-alt icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-geo"></use></svg></span>Rute ke Klinik</a>
-          <a class="cta-link" href="tel:+6282217180432"><span class="icon-pair"><i class="bi bi-telephone icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-phone"></use></svg></span>Telepon Klinik</a>
           <button id="printPage" class="btn btn-brand" type="button">Print / Save PDF</button>
         </div>
       </section>
@@ -1094,8 +1104,8 @@
           <h3 style="color:#fff;">Kontak Cepat</h3>
           <div class="foot-links">
             <a id="footerWa" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-chat-dots icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-chat"></use></svg></span>WhatsApp</a>
-            <a id="footerMaps" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-geo-alt icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-geo"></use></svg></span>Google Maps</a>
-            <a id="footerIg" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-instagram icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-check-circle"></use></svg></span>Instagram</a>
+            <a id="footerMap" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-geo-alt icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-geo"></use></svg></span>Google Maps</a>
+            <a id="footerIg" href="#" target="_blank" rel="noopener noreferrer"><span class="icon-pair"><i class="bi bi-instagram icon-cdn"></i><svg class="icon-local" viewBox="0 0 16 16"><use href="#ico-instagram"></use></svg></span>Instagram</a>
           </div>
         </div>
         <div>
@@ -1173,36 +1183,11 @@
       document.getElementById("footerPhone").textContent = ZMC.phone;
       document.getElementById("footerCopy").textContent = "\u00A9 " + year + " " + ZMC.name;
 
-      document.getElementById("ctaWa").href = ZMC.whatsapp;
-      document.getElementById("ctaMaps").href = ZMC.maps;
+      document.getElementById("heroWa").href = ZMC.whatsapp;
+      document.getElementById("heroIg").href = ZMC.instagram;
       document.getElementById("footerWa").href = ZMC.whatsapp;
-      document.getElementById("footerMaps").href = ZMC.maps;
+      document.getElementById("footerMap").href = ZMC.maps;
       document.getElementById("footerIg").href = ZMC.instagram;
-    })();
-
-    (function initTheme() {
-      const root = document.documentElement;
-      const button = document.getElementById("themeToggle");
-      const stored = localStorage.getItem("zmc_theme");
-
-      if (stored === "light" || stored === "night") {
-        root.setAttribute("data-theme", stored);
-      }
-
-      function sync() {
-        const light = root.getAttribute("data-theme") === "light";
-        button.setAttribute("aria-pressed", String(!light));
-        button.textContent = light ? "Tema Malam" : "Tema Terang";
-      }
-
-      button.addEventListener("click", function () {
-        const next = root.getAttribute("data-theme") === "light" ? "night" : "light";
-        root.setAttribute("data-theme", next);
-        localStorage.setItem("zmc_theme", next);
-        sync();
-      });
-
-      sync();
     })();
 
     (function initPrintButton() {
