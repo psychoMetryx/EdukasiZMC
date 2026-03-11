@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-03-11T01:40:37.491Z",
+  "page": "topics/fixed/demam-berdarah-dbd.html",
+  "overflowChecks": [
+    {
+      "viewport": "360x800",
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "overflow": false
+    },
+    {
+      "viewport": "768x1024",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": false
+    },
+    {
+      "viewport": "1366x768",
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "overflow": false
+    }
+  ],
+  "keyboard": {
+    "faq1OpenAfterEnter": "true",
+    "focusedAfterArrowDown": "faq-btn-2",
+    "faq2OpenAfterSpace": "true",
+    "faq1StateAfterFaq2Open": "false",
+    "focusedAfterEnd": "faq-btn-5",
+    "focusedAfterHome": "faq-btn-1"
+  },
+  "hero": {
+    "hasHeroWa": true,
+    "hasHeroIg": true,
+    "heroHeight": 232,
+    "heroMinHeight": "232px"
+  },
+  "fallback": {
+    "iconsFallbackClass": true,
+    "offlineStatus": "Status koneksi: offline. Konten utama tetap bisa dibaca di perangkat ini."
+  }
+}

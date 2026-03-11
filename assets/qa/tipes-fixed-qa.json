@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-11T04:21:48.777Z",
+  "viewportChecks": [
+    {
+      "viewport": "360x800",
+      "heroHeight": 150,
+      "overflowX": false,
+      "minTapTarget": 44,
+      "hasHeroWA": true,
+      "hasHeroIG": true
+    },
+    {
+      "viewport": "768x1024",
+      "heroHeight": 202,
+      "overflowX": false,
+      "minTapTarget": 44,
+      "hasHeroWA": true,
+      "hasHeroIG": true
+    },
+    {
+      "viewport": "1366x768",
+      "heroHeight": 230,
+      "overflowX": false,
+      "minTapTarget": 44,
+      "hasHeroWA": true,
+      "hasHeroIG": true
+    }
+  ],
+  "keyboardChecks": {
+    "afterDown": "faq-btn-2",
+    "afterHome": "faq-btn-1",
+    "afterEnd": "faq-btn-5",
+    "expandedEnd": "true"
+  },
+  "fallbackCheck": {
+    "fallbackClass": true,
+    "cdnDisplay": "none",
+    "localDisplay": "block"
+  },
+  "printCheck": {
+    "topbarActions": "none",
+    "quick": "none",
+    "printBtn": "none"
+  }
+}

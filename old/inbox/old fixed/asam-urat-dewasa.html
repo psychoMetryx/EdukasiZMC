@@ -61,7 +61,6 @@ a:focus-visible,button:focus-visible,.chip:focus-visible,.btn:focus-visible,.faq
 .btn:hover,.chip:hover,.faq-btn:hover,.foot-link:hover{background:var(--surface-soft)}
 .btn-brand{background:var(--brand);color:#fff;border-color:var(--brand-dark)}
 .btn-secondary{background:var(--surface-soft)}
-.btn-ghost{background:var(--brand-soft);color:var(--brand-dark);border-color:#d7adae}
 .icon-pair{display:inline-flex;width:1.1em;height:1.1em;align-items:center;justify-content:center;flex-shrink:0}
 .icon-cdn,.icon-local{width:1em;height:1em;font-size:1em;line-height:1}
 .icon-local{display:none}
@@ -70,27 +69,24 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .wrap{padding-bottom:1.5rem}
 .hero,.summary,.section,.bottom-cta,footer{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);break-inside:avoid;scroll-margin-top:var(--sticky-offset)}
 .hero{overflow:hidden}
-.hero-grid{display:grid;min-height:154px}
-.hero-copy{padding:.85rem .95rem;display:grid;gap:.58rem;align-content:center;border-bottom:1px solid var(--line)}
-.hero-copy h2{margin:0;font-size:clamp(1.02rem,.96rem + .6vw,1.34rem);line-height:1.12;font-weight:700;max-width:none}
-.hero-copy p{margin:0;color:var(--muted);max-width:38ch;font-size:.91rem}
-.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;max-width:390px}
-.hero-actions .btn{justify-content:center}
-.hero-scan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
-.scan-pill{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.5rem .56rem;display:grid;gap:.08rem}
-.scan-pill strong{display:flex;align-items:center;gap:.34rem;font-size:.8rem;line-height:1.08}
-.scan-pill .icon-pair{color:var(--brand)}
-.scan-pill span{display:block;font-size:.73rem;line-height:1.18;color:var(--muted)}
-.hero-panel{padding:.78rem;background:var(--surface-soft);display:grid;align-content:center}
-.check-card,.hero-figure,.micro-figure,.danger-band,.compare-card{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
-.check-card,.compare-card{padding:.72rem;display:grid;gap:.52rem}
-.check-card h3,.compare-card h3{margin:0;font-size:.95rem;line-height:1.22}
-.check-grid{display:grid;gap:.42rem}
-.check-row{display:grid;grid-template-columns:auto 1fr;gap:.5rem;align-items:start;padding:.48rem .52rem;border-radius:10px;background:var(--surface-soft);border:1px solid var(--line)}
-.check-badge{width:1.6rem;height:1.6rem;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-size:.76rem;font-weight:700;flex-shrink:0}
-.check-row p,.compare-card p,.compare-card li,.danger-band p{margin:0;color:var(--muted);font-size:.91rem}
-.hero-figure,.micro-figure{padding:.65rem}
+.hero-grid{display:grid;min-height:170px}
+.hero-copy{padding:1rem;display:grid;gap:.75rem;align-content:center;border-bottom:1px solid var(--line)}
+.hero-copy h2{margin:0;font-size:clamp(1.16rem,1.04rem + .86vw,1.64rem);line-height:1.18;font-weight:700;max-width:24ch}
+.hero-copy p{margin:0;color:var(--muted)}
+.hero-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}
+.hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.7rem .75rem}
+.hero-point strong{display:block;font-size:.88rem;line-height:1.2}
+.hero-point strong{display:flex;align-items:center;gap:.42rem}
+.hero-point .icon-pair{color:var(--brand)}
+.hero-point .icon-cdn,.hero-point .icon-local{font-size:1rem}
+.hero-point span{display:block;margin-top:.16rem;font-size:.82rem;line-height:1.36;color:var(--muted)}
+.hero-note{border-left:4px solid var(--brand);background:var(--surface-soft);padding:.75rem .85rem;color:var(--muted);font-size:.9rem}
+.hero-note strong{color:var(--ink)}
+.hero-visual{padding:.95rem;background:var(--surface-soft);display:grid;gap:.7rem;align-content:start}
+.hero-figure,.micro-figure{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.65rem}
 .hero-figure svg,.micro-figure svg{width:100%;display:block}
+.hero-figure svg{min-height:150px}
+.hero-caption{margin:0;font-size:.86rem;color:var(--muted)}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
 .quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
@@ -109,10 +105,6 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .split{display:grid;gap:1rem}
 .card,.strip,.faq-item,.table-wrap,.rail{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
 .card{padding:.9rem;display:grid;gap:.46rem;align-content:start;border-top:3px solid var(--line-strong)}
-.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.85rem}
-.compare-card.primary{border-top:3px solid var(--brand)}
-.compare-card.accent{border-top:3px solid var(--accent)}
-.compare-card ul{margin:0;padding-left:1rem;display:grid;gap:.35rem}
 .card h3,.strip h3,.rail h3{margin:0;font-size:1rem;line-height:1.28;font-weight:700}
 .card p,.card li,.strip p,.strip li,.rail p,.rail li,.table-wrap td,.table-wrap th{font-size:.92rem}
 .card p,.card li,.strip p,.strip li,.rail p,.rail li{margin:0;color:var(--muted)}
@@ -140,9 +132,6 @@ td{color:var(--muted)}
 .rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
 .micro-grid{display:grid;gap:.85rem}
 .micro-figure{background:var(--surface-soft)}
-.danger-band{padding:.9rem;background:var(--danger-bg);border-color:#dfb9bc;display:grid;gap:.38rem}
-.danger-band h3{margin:0;color:var(--danger);font-size:1.04rem;line-height:1.24}
-.danger-band p{color:#6f1f24}
 .faq{display:grid;gap:.65rem}
 .faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
 .faq-btn[aria-expanded="true"]{background:var(--surface-soft)}
@@ -152,7 +141,7 @@ td{color:var(--muted)}
 .bottom-cta{padding:1rem;display:grid;gap:.75rem;background:var(--surface-soft)}
 .bottom-cta h2{margin:0;font-size:1.14rem}
 .bottom-cta p{margin:0;color:var(--muted)}
-.actions,.print-row{display:flex;flex-wrap:wrap;gap:.55rem}
+.actions{display:flex;flex-wrap:wrap;gap:.55rem}
 .status-note{margin:0;font-size:.88rem;color:var(--muted)}
 footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
 .foot-grid{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
@@ -175,34 +164,23 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
 #redflags .section-head::after{background:var(--danger)}
 #faq .section-head{background:#f7f3ee}
 #rujukan .section-head{background:#f6f2ed}
-@media(max-width:919px){.hero-panel{display:none}}
-@media(max-width:640px){
-  .hero-copy{padding:.66rem .72rem;gap:.42rem}
-  .hero-copy h2{font-size:.95rem;line-height:1.08}
-  .hero-copy p{display:none}
-  .hero-actions{max-width:none}
-  .hero-scan{grid-template-columns:repeat(3,minmax(0,1fr));gap:.34rem}
-  .scan-pill{padding:.38rem .3rem}
-  .scan-pill strong{justify-content:center;font-size:.72rem}
-  .scan-pill span{display:none}
-  .brand-copy h1{max-width:none}
-}
+@media(max-width:640px){.hero-points{grid-template-columns:1fr}.brand-copy h1{max-width:none}}
 @media(max-width:820px){.quick{flex-wrap:nowrap;overflow:auto}}
 @media(min-width:920px){
   .topbar-inner{grid-template-columns:minmax(0,1fr) auto}
-  .hero-grid{grid-template-columns:minmax(0,1.18fr) minmax(290px,.82fr);min-height:236px}
-  .hero-copy{border-bottom:0;border-right:1px solid var(--line);padding:.9rem .95rem}
+  .hero-grid{grid-template-columns:minmax(0,1.28fr) minmax(320px,.82fr);min-height:228px}
+  .hero-copy{border-bottom:0;border-right:1px solid var(--line);padding:1.05rem 1rem}
   .split{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);align-items:start}
   .micro-grid{grid-template-columns:minmax(0,1fr) minmax(260px,.88fr);align-items:start}
 }
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
   body{background:#fff!important;color:#111!important;font-size:11pt}
-  .topbar,.quick,.hero-actions,.hero-panel,#dangerBtn,#statusNote{display:none!important}
+  .topbar,.quick,.hero-visual,#dangerBtn,#statusNote,#printPage,#waBtn,#mapBtn{display:none!important}
   .wrap{width:100%}
   .hero-grid{display:block;min-height:auto}
   .hero-copy{border-right:0!important;border-bottom:0!important}
-  .hero,.summary,.section,.bottom-cta,footer,.card,.strip,.callout,.table-wrap,.rail,.micro-figure,.faq-item,.compare-card,.danger-band{box-shadow:none!important;break-inside:avoid}
+  .hero,.summary,.section,.bottom-cta,footer,.card,.strip,.callout,.table-wrap,.rail,.micro-figure,.faq-item{box-shadow:none!important;break-inside:avoid}
   a{color:#111!important;text-decoration:underline}
 }
 </style>
@@ -245,38 +223,43 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h2>Sendi merah-panas yang datang mendadak? Cek gout, cek pemicu, cek tanda bahaya.</h2>
-        <p>Kalau ada demam atau tidak bisa menapak, periksa hari itu juga.</p>
-        <div class="hero-actions">
-          <a class="btn btn-brand" id="heroWa" href="#" target="_blank" rel="noopener">
-            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-            WhatsApp Klinik
-          </a>
-          <a class="btn btn-ghost" id="heroIg" href="#" target="_blank" rel="noopener">
-            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
-            Instagram Klinik
-          </a>
+        <h2>Nyeri sendi yang datang mendadak, merah, panas, dan sangat nyut-nyutan sering cocok dengan flare asam urat. Yang tidak boleh dianggap sepele: demam, tidak bisa menopang badan, atau curiga infeksi.</h2>
+        <p>Halaman ini dibuat untuk pasien dewasa dan lansia. Fokusnya bukan cuma daftar makanan, tetapi juga membedakan kadar asam urat tinggi dengan gout, mengenali pemicu, langkah aman saat kambuh, dan waktu periksa yang tepat.</p>
+        <div class="hero-points" aria-label="Pegangan cepat">
+          <div class="hero-point"><strong><span class="icon-pair"><i class="bi bi-activity icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span>Cek sendi</strong><span>apakah satu sendi sangat nyeri, panas, bengkak, dan mendadak</span></div>
+          <div class="hero-point"><strong><span class="icon-pair"><i class="bi bi-cup-hot-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span>Cek pemicu</strong><span>alkohol, minuman manis, jeroan, dehidrasi, atau obat tertentu</span></div>
+          <div class="hero-point"><strong><span class="icon-pair"><i class="bi bi-heart-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span>Cek risiko</strong><span>obesitas, hipertensi, diuretik, gangguan ginjal, batu ginjal</span></div>
+          <div class="hero-point"><strong><span class="icon-pair"><i class="bi bi-exclamation-octagon-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>Cek bahaya</strong><span>demam, luka, nyeri sangat berat, atau sulit berjalan</span></div>
         </div>
-        <div class="hero-scan" aria-label="Pegangan cepat">
-          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-activity icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span>Sendi</strong><span>satu sendi nyeri, merah, panas</span></div>
-          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-cup-hot-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span>Pemicu</strong><span>dehidrasi, alkohol, daging tinggi purin</span></div>
-          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-exclamation-octagon-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>Bahaya</strong><span>demam, luka, atau tak bisa jalan</span></div>
-        </div>
+        <div class="hero-note"><strong>Catatan cepat:</strong> kadar asam urat tinggi belum tentu langsung gout, tetapi serangan gout yang berulang bisa merusak sendi dan ginjal kalau terus dibiarkan. Ulah dianggap cuma pegal biasa bila sendi merah-panas muncul mendadak.</div>
       </div>
-      <div class="hero-panel">
-        <div class="check-card">
-          <div class="check-grid">
-            <div class="check-row"><div class="check-badge">1</div><p><strong>Flare khas:</strong> satu sendi mendadak sangat nyeri, sering di ibu jari kaki, pergelangan kaki, atau lutut.</p></div>
-            <div class="check-row"><div class="check-badge">2</div><p><strong>Pemicu sering:</strong> kurang minum, hajatan tinggi daging, alkohol, dan minuman manis.</p></div>
-            <div class="check-row"><div class="check-badge">3</div><p><strong>Bukan flare biasa:</strong> ada demam, luka, muntah berat, atau tidak sanggup menapak.</p></div>
-          </div>
+      <div class="hero-visual">
+        <div class="hero-figure" aria-hidden="true">
+          <svg viewBox="0 0 420 220" role="img" aria-label="Ilustrasi kristal asam urat dan pemicu flare">
+            <rect x="16" y="16" width="388" height="188" rx="16" fill="#fffaf7" stroke="#d8c8be"></rect>
+            <circle cx="112" cy="112" r="58" fill="#f8ece7" stroke="#cfa89f" stroke-width="4"></circle>
+            <circle cx="112" cy="112" r="26" fill="#f1c5bf"></circle>
+            <path d="M89 88l9 22M104 82l8 22M122 88l8 20M134 99l8 18M95 126l10-16M116 130l11-17M129 118l10-14" stroke="#a3191e" stroke-width="3" stroke-linecap="round"></path>
+            <text x="58" y="181" font-size="14" font-family="Tahoma" fill="#6a5b55">kristal urat memicu radang sendi</text>
+            <rect x="206" y="42" width="168" height="40" rx="10" fill="#f8ece7" stroke="#d8c8be"></rect>
+            <text x="223" y="67" font-size="15" font-family="Tahoma" fill="#1f1a18" font-weight="700">Pemicu yang sering muncul</text>
+            <rect x="206" y="92" width="76" height="34" rx="10" fill="#fcebec" stroke="#dcb5b8"></rect>
+            <text x="221" y="114" font-size="13" font-family="Tahoma" fill="#8f1d22">alkohol</text>
+            <rect x="296" y="92" width="78" height="34" rx="10" fill="#fcebec" stroke="#dcb5b8"></rect>
+            <text x="311" y="114" font-size="13" font-family="Tahoma" fill="#8f1d22">minuman manis</text>
+            <rect x="206" y="136" width="76" height="34" rx="10" fill="#fbf0de" stroke="#e0c695"></rect>
+            <text x="227" y="158" font-size="13" font-family="Tahoma" fill="#8c5b14">jeroan</text>
+            <rect x="296" y="136" width="78" height="34" rx="10" fill="#fbf0de" stroke="#e0c695"></rect>
+            <text x="310" y="158" font-size="13" font-family="Tahoma" fill="#8c5b14">dehidrasi</text>
+          </svg>
         </div>
+        <p class="hero-caption">Kuncinya bukan nol purin total, tetapi mengurangi pemicu utama, menjaga cairan, berat badan, dan mengobati flare dengan tepat.</p>
       </div>
     </div>
   </section>
 
   <section class="summary" id="ringkasan">
-    <strong>Ringkas 1 kalimat:</strong> kadar asam urat tinggi belum tentu gout; yang lebih penting dicatat adalah pola serangan, pemicu, obat rutin, fungsi ginjal, dan apakah ada tanda yang mengarah ke infeksi.
+    <strong>Ringkas 1 kalimat:</strong> asam urat dewasa perlu dilihat sebagai gabungan antara flare sendi, kadar urat, pola makan, berat badan, fungsi ginjal, dan obat rutin; kalau nyeri mendadak disertai demam atau sendi sangat merah-panas, periksa hari itu juga.
   </section>
 
   <nav class="quick" aria-label="Navigasi cepat">
@@ -297,14 +280,14 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-search-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span></div>
         <div class="heading-copy">
           <h2>1) Kenali polanya dulu: kadar asam urat tinggi tidak selalu sama dengan gout</h2>
-          <p>Jangan berhenti di angka laboratorium saja. Bedakan dulu hiperurisemia, flare gout, dan gout kronis; bila nyeri sendi datang mendadak, berulang, atau diagnosis belum jelas, periksa.</p>
+          <p>Konteks: banyak pasien baru tahu angka laboratorium, lalu mengira setiap nyeri sendi pasti asam urat. Langkah praktis: pahami bedanya kadar urat tinggi, flare gout, dan kerusakan kronis. Kapan evaluasi medis: bila nyeri sendi muncul mendadak, berulang, atau diagnosisnya belum pasti.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
       <div class="split">
         <div class="text-flow">
-          <p>CDC dan NIAMS menjelaskan bahwa gout adalah radang sendi akibat kristal urat. Biasanya menyerang satu sendi, paling sering ibu jari kaki, pergelangan kaki, atau lutut, lalu datang mendadak dan sangat nyeri.</p>
+          <p>Menurut CDC dan NIAMS, gout adalah radang sendi akibat endapan kristal urat yang biasanya menyerang satu sendi pada satu waktu, paling sering di pangkal ibu jari kaki, pergelangan kaki, atau lutut. Flare biasanya datang mendadak, sangat nyeri, lalu mereda beberapa hari sampai sekitar 1-2 minggu.</p>
           <p>Yang sering bikin bingung: kadar asam urat tinggi di darah bisa ada tanpa gejala. Jadi, <strong>hiperurisemia belum tentu gout</strong>. Sebaliknya, kalau serangan berulang dibiarkan, gout bisa masuk fase kronis dan membentuk benjolan kristal yang disebut tofi.</p>
           <ul>
             <li><strong>Hiperurisemia:</strong> angka urat tinggi, tetapi belum tentu ada nyeri atau bengkak.</li>
@@ -312,14 +295,14 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
             <li><strong>Interval tenang:</strong> di antara serangan, sendi bisa terasa normal lagi.</li>
             <li><strong>Gout kronis / tofi:</strong> serangan makin sering, sendi bisa berubah bentuk, dan risiko ginjal meningkat.</li>
           </ul>
-          <div class="callout">Pegangan pasien: jangan hanya mengejar angka lab. Dokter tetap perlu mencocokkan gejala, riwayat serangan, obat, dan kadang pemeriksaan sendi atau pencitraan.</div>
+          <div class="callout">Pegangan pasien: jangan hanya mengejar angka laboratorium. Dokter tetap perlu mencocokkan gejala, riwayat serangan, obat yang dipakai, dan kadang pemeriksaan cairan sendi atau pencitraan.</div>
         </div>
         <div class="rail">
           <h3>Siapa yang lebih sering terkena</h3>
           <div class="rail-row"><div class="rail-num">1</div><div><p>Lebih sering pada pria dewasa dan usia makin lanjut. Pada perempuan, risiko meningkat setelah menopause.</p></div></div>
           <div class="rail-row"><div class="rail-num">2</div><div><p>Risiko naik pada orang dengan obesitas, hipertensi, gangguan ginjal kronis, sindrom metabolik, atau riwayat keluarga gout.</p></div></div>
           <div class="rail-row"><div class="rail-num">3</div><div><p>Beberapa obat juga bisa memicu, terutama diuretik atau obat tertentu yang mengganggu pembuangan urat.</p></div></div>
-          <div class="callout warn"><strong>Kapan diagnosisnya belum aman?</strong> Bila serangan pertama sangat berat, lokasinya tidak khas, ada demam, atau ada luka di sekitar sendi.</div>
+          <div class="callout warn"><strong>Kapan curiga diagnosisnya belum aman?</strong> Bila nyeri sendi pertama kali sangat berat, lokasi tidak khas, ada demam, atau ada luka di sekitar sendi. Jangan langsung menebak sendiri.</div>
         </div>
       </div>
     </div>
@@ -331,7 +314,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-house-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-home"></use></svg></span></div>
         <div class="heading-copy">
           <h2>2) Saat kambuh: apa yang aman dilakukan di rumah</h2>
-          <p>Saat flare, fokuskan ke nyeri, bengkak, dan tanda bahaya. Istirahatkan sendi, kompres dingin, cukup minum, lalu evaluasi cepat bila ini serangan pertama, nyerinya sangat berat, atau ada demam.</p>
+          <p>Konteks: saat flare, fokus utama adalah menurunkan nyeri dan bengkak dengan aman sambil memastikan bukan kondisi berbahaya. Langkah praktis: istirahatkan sendi, kompres dingin, cukup minum, dan evaluasi pemicu. Kapan evaluasi medis: bila nyeri sangat berat, flare pertama, atau ada demam.</p>
         </div>
       </div>
     </div>
@@ -385,7 +368,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           </ul>
         </article>
       </div>
-      <div class="callout good"><strong>Kalau sudah punya obat flare dari dokter:</strong> gunakan sesuai instruksi. Pilihan obat dan dosis tetap harus menyesuaikan ginjal, lambung, tekanan darah, diabetes, dan obat rutin lain.</div>
+      <div class="callout good"><strong>Kalau Anda sudah punya obat dari dokter untuk flare:</strong> gunakan sesuai instruksi yang pernah diberikan. Menurut NIAMS, obat antiinflamasi, kolkisin, atau kortikosteroid sering dipakai saat flare, tetapi pilihan dan dosisnya harus disesuaikan kondisi ginjal, lambung, tekanan darah, dan obat lain yang sedang Anda minum.</div>
     </div>
   </section>
   <section id="makan" class="section">
@@ -394,12 +377,12 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span></div>
         <div class="heading-copy">
           <h2>3) Makan dan minum: bukan sekadar "pantang sayur hijau"</h2>
-          <p>Bagian ini penting karena diet gout sering terlalu hitam-putih. Pangkas dulu pemicu utama dari hewani, alkohol, dan fruktosa; bila flare tetap sering, jangan puas hanya dengan diet.</p>
+          <p>Konteks: materi lama sering terlalu hitam-putih. Langkah praktis: kurangi pemicu utama dari hewani, alkohol, dan fruktosa; jangan memukul rata semua purin tumbuhan. Kapan evaluasi medis: bila diet sudah lebih rapi tetapi flare tetap sering atau angka urat tetap tinggi.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
-      <div class="callout warn"><strong>Nuansa penting:</strong> Kemenkes 2024 menekankan bahwa purin hewani lebih terkait flare berulang. Jadi bayam, kacang, tahu, dan tempe tidak otomatis harus diharamkan total.</div>
+      <div class="callout warn"><strong>Nuansa penting:</strong> artikel Kemenkes 2024 menekankan bahwa purin dari hewani lebih terkait flare berulang, sedangkan sayuran kaya purin secara umum tidak menunjukkan efek yang sama. Jadi, bayam, kacang, tahu, dan tempe tidak otomatis harus diharamkan total untuk semua pasien.</div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -452,7 +435,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           </ul>
         </article>
       </div>
-      <div class="callout">Kopi dan ceri kadang dikaitkan dengan risiko flare yang lebih rendah, tetapi <strong>bukan obat utama</strong>. Jangan dipaksakan bila lambung atau jantung Anda sensitif.</div>
+      <div class="callout">Kopi dan ceri sering disebut berkaitan dengan risiko flare yang lebih rendah dalam sebagian referensi, tetapi <strong>bukan obat utama</strong>. Jangan memaksa diri minum kopi kalau lambung atau jantung Anda sensitif.</div>
     </div>
   </section>
 
@@ -462,7 +445,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-heart-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span></div>
         <div class="heading-copy">
           <h2>4) Gaya hidup harian yang paling berpengaruh</h2>
-          <p>Flare berulang biasanya bukan cuma soal satu makanan. Yang paling berpengaruh justru berat badan, aktivitas fisik, cairan, dan kebiasaan harian; evaluasi lebih cepat bila ada komorbid atau penurunan berat badan terlalu agresif.</p>
+          <p>Konteks: flare sering berulang bukan hanya karena satu makanan. Langkah praktis: fokus ke berat badan, aktivitas fisik sedang, cairan, dan kebiasaan merokok. Kapan evaluasi medis: bila penurunan berat badan terlalu cepat, olahraga malah memicu cedera, atau ada komorbid yang membuat modifikasi perlu lebih hati-hati.</p>
         </div>
       </div>
     </div>
@@ -485,7 +468,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <p>IRA juga menyarankan menghentikan kebiasaan merokok. Ini bukan obat gout langsung, tetapi membantu kesehatan pembuluh darah dan komorbid yang sering jalan bareng dengan gout.</p>
         </article>
       </div>
-      <div class="callout good"><strong>Target realistis:</strong> bukan hidup serba pantang, tetapi perubahan yang tahan lama.</div>
+      <div class="callout good"><strong>Target yang realistis:</strong> bukan hidup serba pantang. Yang lebih berguna adalah perubahan yang tahan lama: minuman manis turun, berat badan turun perlahan, air cukup, dan olahraga sedang yang konsisten.</div>
     </div>
   </section>
 
@@ -495,39 +478,20 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-capsule-pill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pill"></use></svg></span></div>
         <div class="heading-copy">
           <h2>5) Obat dan pemeriksaan: singkat, jelas, dan jangan tebak sendiri</h2>
-          <p>Obat gout dibagi dua: untuk meredakan flare dan untuk menurunkan urat jangka panjang. Bila serangan pertama, flare makin sering, ada benjolan keras, atau hasil lab membingungkan, kontrol.</p>
+          <p>Konteks: ada obat untuk meredakan flare, ada juga obat untuk menurunkan kadar urat jangka panjang. Langkah praktis: pahami tujuan masing-masing dan bawa daftar obat rutin saat kontrol. Kapan evaluasi medis: bila serangan pertama, flare makin sering, ada benjolan keras, atau hasil laboratorium membingungkan.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
-      <div class="compare-grid">
-        <article class="compare-card primary">
-          <h3>Obat untuk serangan aktif</h3>
-          <p>Obat flare dipakai untuk menurunkan nyeri dan bengkak saat serangan aktif.</p>
-          <ul>
-            <li>Yang sering dipakai adalah antiinflamasi, kolkisin, atau kortikosteroid sesuai penilaian dokter.</li>
-            <li>Pilihannya harus disesuaikan dengan fungsi ginjal, lambung, tekanan darah, diabetes, dan obat lain yang sedang diminum.</li>
-            <li>Kalau Anda sudah punya resep flare dari dokter, pakai sesuai instruksi yang pernah diberikan.</li>
-          </ul>
-        </article>
-        <article class="compare-card accent">
-          <h3>Obat penurun urat jangka panjang</h3>
-          <p>Obat ini bukan untuk mematikan nyeri saat itu juga, tetapi untuk menurunkan risiko flare berulang dan komplikasi.</p>
-          <ul>
-            <li>Biasanya dibahas pada pasien dengan flare berulang, tofi, batu ginjal, atau masalah ginjal terkait urat.</li>
-            <li>Diet tetap penting, tetapi pada sebagian pasien tidak cukup kalau dipakai sendirian.</li>
-            <li>Jangan mulai, hentikan, atau ganti obat jangka panjang tanpa arahan dokter yang memantau.</li>
-          </ul>
-        </article>
-      </div>
       <div class="split">
         <div class="text-flow">
-          <p>Diagnosis gout dilihat dari gejala, pemeriksaan sendi, riwayat obat, dan pemeriksaan penunjang bila perlu. Ini penting karena beberapa penyakit lain bisa mirip gout.</p>
+          <p>NIAMS menjelaskan bahwa dokter bisa menilai gout melalui gejala, pemeriksaan sendi, riwayat obat, pemeriksaan laboratorium, dan pada sebagian kasus cairan sendi atau USG/CT khusus. Ini penting karena beberapa kondisi lain bisa mirip gout.</p>
           <ul>
+            <li><strong>Obat flare:</strong> dipakai untuk menurunkan nyeri dan bengkak saat serangan aktif.</li>
+            <li><strong>Obat penurun urat:</strong> dipakai untuk mengatasi penyebab dasar, terutama pada pasien dengan flare berulang, tofi, atau komplikasi.</li>
             <li><strong>Pemeriksaan yang sering dibahas:</strong> kadar urat darah, fungsi ginjal, riwayat batu ginjal, serta obat yang sedang diminum seperti diuretik atau aspirin dosis rendah.</li>
-            <li><strong>Yang perlu dibawa:</strong> daftar obat rutin, hasil lab terakhir, dan foto sendi saat sedang bengkak bila saat kontrol nyeri sudah reda.</li>
           </ul>
-          <div class="callout">Pesan aman: jangan mengulang obat nyeri terus-menerus tanpa cek ginjal, lambung, tekanan darah, dan interaksi obat.</div>
+          <div class="callout">Pesan aman: jangan membeli atau mengulang obat nyeri terus-menerus tanpa memastikan kondisi ginjal, lambung, tekanan darah, dan interaksi dengan obat lain. Bawa foto sendi saat bengkak jika saat kontrol nyerinya sudah reda.</div>
         </div>
         <div class="rail">
           <h3>Tiga alasan perlu kontrol terjadwal</h3>
@@ -545,7 +509,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-person-vcard-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-user"></use></svg></span></div>
         <div class="heading-copy">
           <h2>6) Catatan kondisi khusus yang perlu dibahas saat kontrol</h2>
-          <p>Tidak semua pasien gout punya risiko yang sama. Cek komorbid dan obat rutin sebelum mengubah diet atau minum obat sendiri, terutama bila ada CKD, diuretik, diabetes, batu ginjal, atau usia lanjut.</p>
+          <p>Konteks: tidak semua pasien gout punya risiko yang sama. Langkah praktis: cek komorbid dan obat rutin sebelum mengubah diet atau minum obat sendiri. Kapan evaluasi medis: lebih cepat bila ada CKD, diuretik, diabetes, batu ginjal, atau lansia dengan asupan minum yang sering kurang.</p>
         </div>
       </div>
     </div>
@@ -568,7 +532,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <p>Riwayat batu ginjal membuat cairan menjadi perhatian khusus. Pada lansia, rasa haus sering tidak terlalu terasa, jadi target minum perlu lebih sengaja dijaga.</p>
         </article>
       </div>
-      <div class="callout warn"><strong>Bawa saat kontrol:</strong> daftar obat rutin, hasil lab terakhir, catatan pemicu, dan foto sendi saat bengkak.</div>
+      <div class="callout warn"><strong>Bawa saat kontrol:</strong> daftar obat rutin, hasil lab terakhir bila ada, catatan makanan atau minuman yang terasa memicu, dan foto sendi saat bengkak. Ini jauh lebih membantu daripada hanya bilang "sering kambuh".</div>
     </div>
   </section>
 
@@ -578,15 +542,12 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-exclamation-triangle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
         <div class="heading-copy">
           <h2>7) Kapan harus ke dokter atau IGD</h2>
-          <p>Ini bagian terpenting untuk keselamatan pasien. Pakai daftar ini saat flare pertama atau saat keluhan terasa berbeda dari biasanya; bila salah satu tanda di bawah muncul, segera periksa.</p>
+          <p>Konteks: ini bagian terpenting untuk keselamatan pasien. Langkah praktis: pakai daftar ini saat flare pertama atau saat keluhan terasa berbeda dari biasanya. Kapan evaluasi medis: segera bila salah satu tanda di bawah muncul.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
-      <div class="danger-band">
-        <h3>Periksa hari itu juga atau ke IGD</h3>
-        <p>Bila sendi sangat merah-panas disertai demam, nyeri begitu berat sampai tidak bisa menapak, ada luka atau infeksi kulit di sekitar sendi, serangan baru pertama kali, atau muncul muntah hebat, lemas berat, dan tanda dehidrasi.</p>
-      </div>
+      <div class="callout danger"><strong>Periksa hari itu juga atau ke IGD</strong> bila sendi sangat merah-panas disertai demam, nyeri begitu berat sampai tidak bisa menapak, ada luka atau infeksi kulit di sekitar sendi, Anda baru pertama kali mengalami serangan seperti ini, atau muncul muntah hebat, lemas berat, dan tanda dehidrasi.</div>
       <div class="grid">
         <article class="card">
           <h3>Tanda yang tidak aman ditunggu</h3>
@@ -613,7 +574,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           </ul>
         </article>
       </div>
-      <div class="callout good">Kalau ragu antara "ini gout biasa" atau "ini beda", lebih aman periksa. Gout bisa mirip penyakit lain.</div>
+      <div class="callout good">Kalau Anda ragu antara "ini gout biasa" atau "ini beda", lebih aman periksa. Menurut CDC, gout bisa tampak mirip penyakit lain dan dokter perlu menegakkan diagnosisnya dengan benar.</div>
     </div>
   </section>
   <section id="faq" class="section">
@@ -622,7 +583,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-patch-question-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
         <div class="heading-copy">
           <h2>8) FAQ singkat yang sering ditanyakan pasien</h2>
-          <p>Ini pertanyaan yang paling sering muncul di ruang praktik dan di rumah. Pakai sebagai pegangan awal, lalu periksa bila kondisi Anda tidak cocok dengan pola umum di bawah.</p>
+          <p>Konteks: pertanyaan ini paling sering muncul di ruang praktik dan di rumah. Langkah praktis: gunakan jawaban ini sebagai pegangan awal. Kapan evaluasi medis: bila kondisi Anda tidak sesuai pola umum di bawah.</p>
         </div>
       </div>
     </div>
@@ -654,7 +615,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-journal-medical icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
         <div class="heading-copy">
           <h2>9) Rujukan</h2>
-          <p>Halaman ini disusun dari sumber resmi terbaru yang bisa dibuka saat online. Jadikan sebagai bacaan lanjutan, bukan pengganti pemeriksaan langsung.</p>
+          <p>Konteks: halaman ini disusun dari sumber resmi terbaru yang bisa dibuka saat online. Langkah praktis: jadikan sebagai bacaan lanjutan, bukan pengganti pemeriksaan langsung. Kapan evaluasi medis: tetap utamakan datang periksa bila ada tanda bahaya.</p>
         </div>
       </div>
     </div>
@@ -668,15 +629,23 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <li>Ikatan Reumatologi Indonesia. <a href="https://reumatologi.or.id/wp-content/uploads/2020/10/Rekomendasi_GOUT_final.pdf" target="_blank" rel="noopener">Rekomendasi Diagnosis dan Pengelolaan Gout</a>. Dasar komorbid, diet, cairan, aktivitas fisik, dan faktor risiko obat seperti diuretik.</li>
         <li>MedlinePlus. <a href="https://medlineplus.gov/ency/article/000422.htm" target="_blank" rel="noopener">Gout: Medical Encyclopedia</a>. Digunakan sebagai pelengkap untuk pola gejala akut dan anjuran kapan menghubungi tenaga kesehatan.</li>
       </ol>
-      <div class="callout">Konten ini untuk edukasi pasien. Keputusan obat, target asam urat, dan penyesuaian komorbid tetap perlu konsultasi langsung.</div>
+      <div class="callout">Konten ini bersifat edukasi pasien. Untuk keputusan obat, target asam urat, dan penyesuaian dengan penyakit ginjal, hipertensi, diabetes, atau penyakit jantung, tetap perlu konsultasi langsung.</div>
     </div>
   </section>
 
   <section class="bottom-cta" aria-label="Aksi cepat pasien">
-    <h2>Print / Save PDF</h2>
-    <p>Gunakan tombol ini bila ingin menyimpan versi offline atau membawa ringkasan saat kontrol. Untuk hubungi klinik, pakai WhatsApp dan Instagram di hero atau link footer.</p>
+    <h2>Aksi cepat pasien dan keluarga</h2>
+    <p>Simpan halaman ini bila ingin dibuka offline. Bila flare terasa berbeda dari biasanya, muncul demam, atau Anda tidak yakin obat mana yang aman, hubungi fasilitas kesehatan.</p>
     <p id="statusNote" class="status-note" aria-live="polite">Status koneksi: memeriksa jaringan...</p>
-    <div class="print-row">
+    <div class="actions">
+      <a class="btn btn-brand" id="waBtn" href="#" target="_blank" rel="noopener">
+        <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+        WhatsApp Klinik
+      </a>
+      <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener">
+        <span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>
+        Buka Maps
+      </a>
       <button class="btn btn-secondary" id="printPage" type="button" aria-label="Print atau simpan PDF">
         <span class="icon-pair"><i class="bi bi-printer-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-print"></use></svg></span>
         Print / Save PDF
@@ -738,7 +707,7 @@ const ZMC = {
   const forceIcons = qs.get("icons") === "fallback";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
-  const logoCandidates = ["../zmc-logo.jpeg", ZMC.logoLocal, "../../topics/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
+  const logoCandidates = [ZMC.logoLocal, "../assets/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
   let logoIndex = 0;
 
   function loadLogo() {
@@ -755,18 +724,16 @@ const ZMC = {
   document.getElementById("clinicHours").textContent = ZMC.hours;
   document.getElementById("year").textContent = String(new Date().getFullYear());
 
-  ["heroWa", "footerWa"].forEach(function(id){
+  ["waBtn", "footerWa"].forEach(function(id){
     const el = document.getElementById(id);
     if (el) el.href = ZMC.whatsapp;
   });
-  ["footerMap"].forEach(function(id){
+  ["mapBtn", "footerMap"].forEach(function(id){
     const el = document.getElementById(id);
     if (el) el.href = ZMC.maps;
   });
-  ["heroIg", "footerIg"].forEach(function(id){
-    const el = document.getElementById(id);
-    if (el) el.href = ZMC.instagram;
-  });
+  const ig = document.getElementById("footerIg");
+  if (ig) ig.href = ZMC.instagram;
 
   function checkIconCDN() {
     if (forceIcons) {

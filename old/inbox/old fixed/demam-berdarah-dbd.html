@@ -48,17 +48,15 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .wrap{padding-bottom:1.5rem}
 .hero,.summary,.section,.bottom-cta,footer{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);break-inside:avoid;scroll-margin-top:var(--sticky-offset)}
 .hero{overflow:hidden}
-.hero-grid{display:block;min-height:166px}
-.hero-copy{padding:.62rem .72rem;display:grid;gap:.36rem;align-content:center;border-bottom:0}
-.hero-copy h2{margin:0;font-size:clamp(.98rem,.95rem + .55vw,1.22rem);line-height:1.13;font-weight:700;max-width:22ch}
-.hero-copy p{margin:0;color:var(--muted);font-size:.82rem}
-.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;padding:.04rem 0 .08rem}
-.hero-actions .btn{width:100%;justify-content:center;padding:.48rem .4rem;font-size:.8rem}
-.hero-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.42rem}
-.hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.34rem .36rem}
-.hero-point strong{display:grid;gap:.14rem;justify-items:start;font-size:.7rem;line-height:1.1}
+.hero-grid{display:block}
+.hero-copy{padding:.66rem .78rem;display:grid;gap:.38rem;align-content:center;border-bottom:0}
+.hero-copy h2{margin:0;font-size:clamp(1.04rem,.98rem + .66vw,1.42rem);line-height:1.16;font-weight:700;max-width:22ch}
+.hero-copy p{margin:0;color:var(--muted);font-size:.87rem}
+.hero-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+.hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.58rem .68rem}
+.hero-point strong{display:flex;align-items:center;gap:.4rem;font-size:.88rem;line-height:1.2}
 .hero-point .icon-pair{color:var(--brand)}
-.hero-point span{display:none}
+.hero-point span{display:block;margin-top:.14rem;font-size:.8rem;line-height:1.32;color:var(--muted)}
 .hero-note{border-left:4px solid var(--brand);background:var(--surface-soft);padding:.62rem .72rem;color:var(--muted);font-size:.86rem}
 .hero-note strong{color:var(--ink)}
 .hero-visual{padding:.95rem;background:var(--surface-soft);display:grid;gap:.65rem;align-content:start}
@@ -158,10 +156,10 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
 #mitos .section-head{background:#f7f2ed}
 #faq .section-head{background:#f7f3ee}
 #rujukan .section-head{background:#f6f2ed}
-@media(max-width:640px){.brand-copy h1{max-width:none}.hero-grid{min-height:164px}.hero-copy{padding:.52rem .56rem;gap:.28rem}.hero-copy h2{font-size:.92rem;line-height:1.05}.hero-copy p{display:none}.hero-actions{gap:.35rem}.hero-actions .btn{font-size:.74rem;padding:.44rem .26rem}.hero-points{gap:.22rem}.hero-point{padding:.18rem .18rem;border-color:var(--line)}.hero-point strong{font-size:.62rem;line-height:1.04}}
+@media(max-width:640px){.brand-copy h1{max-width:none}}
 @media(max-width:820px){.quick{flex-wrap:nowrap;overflow:auto}table{min-width:620px}}
-@media(min-width:920px){.topbar-inner{grid-template-columns:minmax(0,1fr) auto}.hero-grid{min-height:232px}.hero-copy{min-height:232px;padding:.84rem .94rem}.hero-copy h2{font-size:clamp(1.04rem,1rem + .44vw,1.32rem)}.hero-points{grid-template-columns:repeat(3,minmax(0,1fr))}.split{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);align-items:start}.phase-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.decision-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media print{:root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}body{background:#fff!important;color:#111!important;font-size:11pt}.topbar-actions,.quick,#statusNote,#printPage,.hero-actions,.hero-visual,.bottom-cta .actions{display:none!important}.wrap{width:100%}.hero-grid{display:block;min-height:auto}.hero-copy{border-right:0!important;border-bottom:0!important}.split,.phase-grid,.decision-grid,.grid{grid-template-columns:1fr!important}.hero,.summary,.bottom-cta,.card,.strip,.callout,.table-wrap,.rail,.phase-board,.phase-card,.decision-card,.myth-row,.micro-figure,.faq-item{box-shadow:none!important;break-inside:avoid}.section,.phase-board,.table-wrap,.micro-figure{break-inside:auto!important}footer{background:#fff!important;color:#111!important;border-color:#b7b7b7!important}footer p,.subfoot,.foot-grid p{color:#111!important}.foot-link{background:#fff!important;color:#111!important;border-color:#777!important}a{color:#111!important;text-decoration:underline}}
+@media(min-width:920px){.topbar-inner{grid-template-columns:minmax(0,1fr) auto}.hero-grid{min-height:224px}.hero-copy{min-height:224px;padding:.95rem 1rem}.split{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);align-items:start}.phase-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.decision-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media print{:root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}body{background:#fff!important;color:#111!important;font-size:11pt}.topbar-actions,.quick,#statusNote,#printPage,.hero-visual{display:none!important}.wrap{width:100%}.hero-grid{display:block;min-height:auto}.hero-copy{border-right:0!important;border-bottom:0!important}.hero,.summary,.section,.bottom-cta,footer,.card,.strip,.callout,.table-wrap,.rail,.phase-board,.phase-card,.decision-card,.myth-row,.micro-figure,.faq-item{box-shadow:none!important;break-inside:avoid}a{color:#111!important;text-decoration:underline}}
 </style>
 </head>
 <body>
@@ -204,27 +202,6 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       <div class="hero-copy">
         <h2>Demam turun belum tentu aman. Pada DBD, justru saat itu keluarga harus lebih awas.</h2>
         <p>Lihat hari sakit, nyeri perut, muntah, perdarahan, tenaga, dan kencing. Jangan terpaku pada angka panas atau trombosit saja.</p>
-        <div class="hero-actions">
-          <a class="btn btn-brand" id="heroWa" href="#" target="_blank" rel="noopener">
-            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-            WhatsApp Klinik
-          </a>
-          <a class="btn btn-secondary" id="heroIg" href="#" target="_blank" rel="noopener">
-            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
-            Instagram Klinik
-          </a>
-        </div>
-        <div class="hero-points" aria-hidden="true">
-          <div class="hero-point">
-            <strong><span class="icon-pair"><i class="bi bi-calendar-week icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-clock"></use></svg></span>Hari 3-5 rawan</strong>
-          </div>
-          <div class="hero-point">
-            <strong><span class="icon-pair"><i class="bi bi-droplet-half icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span>Minum dan kencing</strong>
-          </div>
-          <div class="hero-point">
-            <strong><span class="icon-pair"><i class="bi bi-exclamation-triangle icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>Jangan tunda periksa</strong>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -577,15 +554,11 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       </div>
     </div>
     <div class="section-body">
-      <div class="callout good">CDC case management menempatkan kehamilan, usia sangat muda atau lanjut, serta komorbid sebagai alasan untuk menilai pasien lebih serius. Di praktik keluarga, artinya jangan terlalu lama observasi sendiri, terutama pada bayi prematur atau pasien dengan riwayat reaksi obat berat.</div>
+      <div class="callout good">CDC case management menempatkan kehamilan, usia sangat muda atau lanjut, dan beberapa komorbid sebagai alasan untuk menilai pasien lebih serius. Di praktik keluarga, artinya jangan terlalu lama observasi sendiri.</div>
       <div class="grid">
         <article class="card">
           <h3>Bayi dan anak kecil</h3>
           <p>Bayi kurang dari 1 tahun atau anak kecil lebih mudah jatuh ke dehidrasi karena cadangan cairannya terbatas dan sulit menjelaskan keluhan.</p>
-        </article>
-        <article class="card">
-          <h3>Bayi prematur atau gizi kurang</h3>
-          <p>Bayi dengan riwayat prematur atau status gizi kurang lebih mudah turun kondisi umumnya. Bila demam dan minum turun, evaluasi langsung jangan ditunda.</p>
         </article>
         <article class="card">
           <h3>Ibu hamil</h3>
@@ -599,10 +572,6 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <h3>Pasien komorbid</h3>
           <p>Hipertensi, diabetes, asma, ginjal kronis, penyakit hati, obesitas, atau penggunaan antikoagulan membuat evaluasi medis perlu lebih dini.</p>
         </article>
-        <article class="card">
-          <h3>Riwayat alergi obat berat</h3>
-          <p>Bila pernah sesak, bengkak, atau pingsan setelah obat tertentu, jangan coba obat baru tanpa arahan dokter. Bawa informasi alergi saat kontrol atau ke IGD.</p>
-        </article>
       </div>
       <div class="strip">
         <h3>Apa yang dibawa saat kontrol</h3>
@@ -610,7 +579,6 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <li>Hari sakit dan kapan demam mulai turun.</li>
           <li>Catatan muntah, kencing, perdarahan, dan asupan minum.</li>
           <li>Daftar obat yang sudah diminum.</li>
-          <li>Riwayat prematur, alergi obat berat, atau reaksi obat sebelumnya.</li>
           <li>Riwayat kehamilan atau penyakit penyerta bila ada.</li>
         </ul>
       </div>
@@ -757,12 +725,12 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
     </div>
     <div class="section-body">
       <ol class="refs">
-        <li>WHO. <a href="https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" rel="noopener">Dengue and severe dengue</a>. Pembaruan 21 Agustus 2025. Dasar gejala umum, warning signs, larangan ibuprofen/aspirin, dan pesan bahwa tidak ada terapi antivirus spesifik.</li>
-        <li>CDC. <a href="https://www.cdc.gov/dengue/signs-symptoms/index.html" target="_blank" rel="noopener">Symptoms of Dengue and Testing</a>. Pembaruan 7 Agustus 2025. Dasar gejala paling umum, warning signs, dan fase 24-48 jam setelah demam turun.</li>
-        <li>CDC Yellow Book. <a href="https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/dengue.html" target="_blank" rel="noopener">Dengue</a>. Konten diperbarui 23 April 2025 (halaman ditinjau 19 September 2025). Dasar pembagian fase demam, kritis, dan pemulihan.</li>
-        <li>CDC. <a href="https://www.cdc.gov/dengue/media/pdfs/2024/05/20240521_342849-B_PRESS_READY_PocketGuideDCMC_UPDATE.pdf" target="_blank" rel="noopener">Dengue Case Management Pocket Guide</a>. Dasar warning signs rinci, alasan rujukan/rawat inap, dan kelompok risiko termasuk hamil, bayi, lansia, dan komorbid.</li>
-        <li>Kemenkes RI - Ayo Sehat. <a href="https://ayosehat.kemkes.go.id/cara-mencegah-dbd" target="_blank" rel="noopener">Cara Mencegah DBD dengan Menjaga Lingkungan dan Diri Sendiri</a>. Publikasi 4 Juli 2024. Dasar praktik PSN 3M Plus untuk rumah tangga Indonesia.</li>
-        <li>Kemenkes RI - Pusat Krisis. <a href="https://pusatkrisis.kemkes.go.id/infografis-percepat-penurunan-kasus-dbd-dengan-gerakan-1-rumah-1-jumantik" target="_blank" rel="noopener">Percepat Penurunan Kasus DBD dengan Gerakan 1 Rumah 1 Jumantik</a>. Dasar penguatan PSN dan pemantauan jentik berbasis keluarga/lingkungan.</li>
+        <li>WHO. <a href="https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" rel="noopener">Dengue and severe dengue</a>. Dicek ulang 10 Maret 2026. Dasar gejala umum, warning signs, larangan ibuprofen/aspirin, dan pesan bahwa tidak ada terapi antivirus spesifik.</li>
+        <li>CDC. <a href="https://www.cdc.gov/dengue/signs-symptoms/index.html" target="_blank" rel="noopener">Symptoms of Dengue and Testing</a>. Pembaruan 7 Agustus 2025. Dasar gejala yang paling umum, daftar warning signs pasien, dan pesan bahwa tanda bahaya sering mulai 24-48 jam setelah demam hilang.</li>
+        <li>CDC Yellow Book. <a href="https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/dengue.html" target="_blank" rel="noopener">Dengue</a>. Pembaruan 23 April 2025. Dasar pembagian fase demam, kritis, dan pemulihan; serta catatan tentang kehamilan dan kelompok risiko.</li>
+        <li>CDC. <a href="https://www.cdc.gov/dengue/media/pdfs/2024/05/20240521_342849-B_PRESS_READY_PocketGuideDCMC_UPDATE.pdf" target="_blank" rel="noopener">Dengue Case Management</a>. Dasar warning signs yang lebih rinci, alasan rawat inap, dan kelompok yang perlu dinilai lebih cepat seperti hamil, bayi, lansia, dan komorbid.</li>
+        <li>Kemenkes RI - Ayo Sehat. <a href="https://ayosehat.kemkes.go.id/cara-mencegah-dbd" target="_blank" rel="noopener">Cara Mencegah DBD dengan Menjaga Lingkungan dan Diri Sendiri</a>. Publikasi 4 Juli 2024. Dasar 3M Plus dan contoh pencegahan yang dekat dengan rumah tangga Indonesia.</li>
+        <li>Kemenkes RI. <a href="https://kemkes.go.id/eng/rilis-kesehatan/kendalikan-dbd-dengan-psn-3m-plus" target="_blank" rel="noopener">Kendalikan DBD dengan PSN 3M Plus</a>. Dasar penguatan pesan PSN 3M Plus dan komponen "Plus" di rumah.</li>
       </ol>
       <div class="callout">Konten ini adalah edukasi pasien. Untuk keputusan tes, rawat inap, infus, kehamilan, bayi, atau penyakit penyerta, tetap perlu pemeriksaan langsung oleh tenaga kesehatan.</div>
     </div>
@@ -860,7 +828,7 @@ const ZMC = {
   document.getElementById("clinicHours").textContent = ZMC.hours;
   document.getElementById("year").textContent = String(new Date().getFullYear());
 
-  ["heroWa", "waBtn", "footerWa"].forEach(function(id){
+  ["waBtn", "footerWa"].forEach(function(id){
     const el = document.getElementById(id);
     if (el) el.href = ZMC.whatsapp;
   });
@@ -868,10 +836,8 @@ const ZMC = {
     const el = document.getElementById(id);
     if (el) el.href = ZMC.maps;
   });
-  ["heroIg", "footerIg"].forEach(function(id){
-    const ig = document.getElementById(id);
-    if (ig) ig.href = ZMC.instagram;
-  });
+  const ig = document.getElementById("footerIg");
+  if (ig) ig.href = ZMC.instagram;
 
   function checkIconCDN() {
     if (forceIcons) {

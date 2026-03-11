@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -69,17 +69,18 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .wrap{padding-bottom:1.5rem}
 .hero,.summary,.section,.bottom-cta,footer{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);break-inside:avoid;scroll-margin-top:var(--sticky-offset)}
 .hero{overflow:hidden}
-.hero-grid{display:grid;min-height:156px}
-.hero-copy{padding:.82rem .82rem;display:grid;gap:.52rem;align-content:center}
-.hero-copy h2{margin:0;font-size:clamp(.98rem,.94rem + .48vw,1.22rem);line-height:1.15;font-weight:700;max-width:25ch}
-.hero-copy p{margin:0;color:var(--muted);font-size:.9rem}
-.hero-points{display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}
-.hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.5rem .58rem}
-.hero-point strong{display:flex;align-items:center;gap:.36rem;font-size:.83rem;line-height:1.15}
-.hero-point span{display:block;margin-top:.12rem;font-size:.76rem;line-height:1.28;color:var(--muted)}
+.hero-grid{display:grid;min-height:164px}
+.hero-copy{padding:.76rem .78rem;display:grid;gap:.48rem;align-content:center}
+.hero-copy h2{margin:0;font-size:clamp(.98rem,.94rem + .48vw,1.22rem);line-height:1.12;font-weight:700;max-width:25ch}
+.hero-copy p{margin:0;color:var(--muted);font-size:.88rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.5rem;padding:.02rem 0 .06rem}
+.hero-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.34rem}
+.hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.38rem .38rem}
+.hero-point strong{display:grid;gap:.12rem;font-size:.69rem;line-height:1.08}
+.hero-point span{display:none}
 .hero-point .icon-pair{color:var(--brand)}
 .hero-point .icon-cdn,.hero-point .icon-local{font-size:1rem}
-.hero-visual{display:none;padding:.88rem;background:var(--surface-soft);gap:.6rem;align-content:start}
+.hero-visual{display:none;padding:.82rem;background:var(--surface-soft);gap:.6rem;align-content:start}
 .hero-figure,.micro-figure{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.65rem}
 .hero-figure svg,.micro-figure svg{width:100%;display:block}
 .hero-figure svg{min-height:108px}
@@ -98,17 +99,29 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .section-head h2{margin:0;font-size:clamp(1.08rem,1rem + .72vw,1.45rem);line-height:1.28;font-weight:700}
 .section-head p{margin:.45rem 0 0;color:var(--muted);font-size:.93rem;max-width:74ch}
 .section-body{padding:1rem;display:grid;gap:1rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem}
-.split{display:grid;gap:1rem}
-.card,.strip,.faq-item,.rail,.measure-board,.walk-plan,.visual-board{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
-.card{padding:.9rem;display:grid;gap:.48rem;align-content:start;border-top:3px solid var(--line-strong)}
+.grid,.priority-grid,.metric-grid,.agenda-grid,.scan-list{display:grid;gap:.85rem}
+.grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.split,.micro-grid{display:grid;gap:1rem}
+.card,.strip,.faq-item,.rail,.measure-board,.walk-plan,.visual-board,.priority-card,.metric-card,.agenda-card,.scan-row{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.card,.priority-card,.agenda-card,.metric-card{padding:.9rem;display:grid;gap:.46rem;align-content:start}
+.card{border-top:3px solid var(--line-strong)}
+.priority-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.priority-card{background:var(--surface-soft);border-top:4px solid var(--brand)}
+.priority-card strong,.metric-card strong,.agenda-card strong,.scan-row strong{display:flex;align-items:center;gap:.42rem;color:var(--ink);font-size:.94rem;line-height:1.25}
+.priority-card p,.metric-card p,.agenda-card p,.scan-row p{margin:0;color:var(--muted);font-size:.9rem}
+.metric-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.metric-card{background:#fff8f5;border-left:4px solid var(--line-strong)}
+.metric-value{font-size:1.22rem;font-weight:700;color:var(--brand);line-height:1.05}
+.agenda-grid{grid-template-columns:repeat(auto-fit,minmax(165px,1fr))}
+.agenda-card{background:var(--surface-soft);border-top:4px solid var(--line-strong)}
+.agenda-card strong{color:var(--brand)}
 .card h3,.strip h3,.rail h3,.measure-board h3,.walk-plan h3,.visual-board h3{margin:0;font-size:1rem;line-height:1.28;font-weight:700}
 .card p,.card li,.strip p,.strip li,.rail p,.rail li,.measure-board p,.measure-board li,.walk-plan p,.walk-plan li,.visual-board p,.visual-board li{margin:0;color:var(--muted);font-size:.92rem}
 .card ul,.strip ul,.rail ul,.measure-board ul,.walk-plan ul,.visual-board ul{margin:0;padding-left:1rem;display:grid;gap:.38rem}
 .strip{padding:.9rem;background:var(--surface-soft)}
-.text-flow{display:grid;gap:.8rem}
+.text-flow{display:grid;gap:.78rem}
 .text-flow p,.text-flow li{margin:0;color:var(--muted)}
-.text-flow ul,.text-flow ol{margin:0;padding-left:1.05rem;display:grid;gap:.4rem}
+.text-flow ul{margin:0;padding-left:1.05rem;display:grid;gap:.4rem}
 .callout{border-left:4px solid var(--line-strong);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:10px;padding:.82rem .9rem;background:var(--surface-soft);color:var(--muted);font-size:.92rem}
 .callout strong{color:var(--ink)}
 .callout.good{border-left-color:var(--good);background:var(--good-bg);color:var(--good)}
@@ -120,8 +133,11 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .measure-board,.walk-plan,.visual-board{padding:.9rem;display:grid;gap:.75rem}
 .measure-list{display:grid;gap:.68rem}
 .measure-row{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:start}
-.measure-dot{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--surface-soft);color:var(--brand);display:grid;place-items:center}
-.micro-grid{display:grid;gap:.85rem}
+.measure-dot,.icon-box{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--surface-soft);color:var(--brand);display:grid;place-items:center;flex-shrink:0}
+.icon-box .icon-cdn,.icon-box .icon-local{font-size:1rem}
+.scan-list{gap:.62rem}
+.scan-row{grid-template-columns:auto 1fr;gap:.62rem;align-items:start;padding:.72rem;background:var(--surface-soft)}
+.scan-row p{margin-top:.08rem}
 .faq{display:grid;gap:.65rem}
 .faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
 .faq-btn[aria-expanded="true"]{background:var(--surface-soft)}
@@ -162,26 +178,28 @@ code{font-family:Consolas,monospace;font-size:.95em}
 }
 @media(min-width:920px){
   .topbar-inner{grid-template-columns:minmax(0,1fr) auto}
-  .hero-grid{grid-template-columns:minmax(0,1.24fr) minmax(285px,.82fr);min-height:232px}
-  .hero-copy{border-bottom:0;border-right:1px solid var(--line);padding:.74rem .86rem;gap:.48rem}
+  .hero-grid{grid-template-columns:minmax(0,1.2fr) minmax(290px,.84fr);min-height:232px}
+  .hero-copy{border-right:1px solid var(--line);padding:.74rem .86rem}
   .hero-copy h2{font-size:clamp(1.02rem,.97rem + .52vw,1.28rem)}
   .hero-copy p{font-size:.88rem}
+  .hero-points{gap:.45rem}
   .hero-point{padding:.44rem .5rem}
-  .hero-point strong{font-size:.8rem}
-  .hero-point span{font-size:.73rem;line-height:1.24}
-  .hero-points{display:grid}
+  .hero-point strong{display:flex;align-items:center;gap:.36rem;font-size:.8rem}
+  .hero-point span{display:block;margin-top:.12rem;font-size:.73rem;line-height:1.24;color:var(--muted)}
   .hero-visual{display:grid;padding:.68rem}
+  .hero-caption{display:block}
   .split{grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);align-items:start}
   .micro-grid{grid-template-columns:minmax(0,1fr) minmax(270px,.88fr);align-items:start}
 }
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#8f8f8f;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
   body{background:#fff!important;color:#111!important;font-size:11pt}
-  .topbar,.quick,#statusNote,#printPage,#waBtn,#mapBtn,.hero-visual{display:none!important}
+  .topbar,.hero,.quick,#statusNote,#printPage,.hero-actions,.hero-visual{display:none!important}
   .wrap{width:100%}
+  .section,.bottom-cta{break-inside:auto!important;page-break-inside:auto!important}
   .hero-grid{display:block;min-height:auto}
   .hero-copy{border-right:0!important;border-bottom:0!important}
-  .hero,.summary,.section,.bottom-cta,footer,.card,.strip,.callout,.rail,.measure-board,.walk-plan,.visual-board,.faq-item,.micro-figure{box-shadow:none!important;break-inside:avoid}
+  .hero,.summary,footer,.card,.strip,.callout,.rail,.measure-board,.walk-plan,.visual-board,.faq-item,.micro-figure,.priority-card,.metric-card,.agenda-card,.scan-row{box-shadow:none!important;break-inside:avoid}
   a{color:#111!important;text-decoration:underline}
 }
 </style>
@@ -197,7 +215,6 @@ code{font-family:Consolas,monospace;font-size:.95em}
   <symbol id="i-scale" viewBox="0 0 24 24"><path d="M5 6h14a2 2 0 0 1 2 2v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M8 11a4 4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M12 11l2.2-1.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
   <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.2" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.8v14.4M4.8 12h14.4" stroke="currentColor" stroke-width="2"></path></symbol>
   <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="13" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M11 21l1.2-6-2.4-2.5 2.2-4 2.8 2h3.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.5 12.5 5.5 15M14.5 16l3 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
-  <symbol id="i-sleep" viewBox="0 0 24 24"><path d="M15.5 4h5l-4 4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 15a7 7 0 1 0 10.5-6.1A8.2 8.2 0 0 1 12 9a8 8 0 0 1-7.9-6.9A7 7 0 0 0 3 15z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></symbol>
   <symbol id="i-water" viewBox="0 0 24 24"><path d="M12 3s6 6.2 6 10.1A6 6 0 0 1 6 13.1C6 9.2 12 3 12 3z" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
   <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 17.2 17.2 3 21 6.8 6.8 21z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M12 8l4 4M8.5 11.5l2 2M5 15l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
@@ -227,16 +244,30 @@ code{font-family:Consolas,monospace;font-size:.95em}
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h2>Berat turun sehat biasanya datang dari perubahan kecil yang bisa dijalani terus.</h2>
-        <p>Fokus ke target bertahap, piring lebih seimbang, dan gerak rutin.</p>
+        <h2>Turun berat badan sehat itu pelan, terukur, dan masih enak dijalani.</h2>
+        <p>Pegangan utamanya sederhana: target realistis, piring lebih seimbang, dan gerak rutin yang tidak putus di minggu pertama.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brand" id="heroWa" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            WhatsApp Klinik
+          </a>
+          <a class="btn btn-secondary" id="heroIg" href="#" target="_blank" rel="noopener">
+            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+            Instagram Klinik
+          </a>
+        </div>
         <div class="hero-points">
           <div class="hero-point">
-            <strong><span class="icon-pair"><i class="bi bi-speedometer2 icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-scale"></use></svg></span>Target realistis</strong>
-            <span>Fokus ke penurunan bertahap, kira-kira 0,5-1 kg per minggu, bukan diet ekstrem.</span>
+            <strong><span class="icon-pair"><i class="bi bi-speedometer2 icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-scale"></use></svg></span>0,5-1 kg/minggu</strong>
+            <span>CDC mendorong turun bertahap, bukan diet ekstrem yang cepat mental.</span>
           </div>
           <div class="hero-point">
-            <strong><span class="icon-pair"><i class="bi bi-activity icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-walk"></use></svg></span>Makan + gerak</strong>
-            <span>Setengah piring sayur-buah, minuman manis lebih jarang, lalu tambah jalan kaki rutin.</span>
+            <strong><span class="icon-pair"><i class="bi bi-egg-fried icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-plate"></use></svg></span>Isi piringku</strong>
+            <span>Setengah piring sayur-buah, air putih lebih sering, dan protein tiap makan.</span>
+          </div>
+          <div class="hero-point">
+            <strong><span class="icon-pair"><i class="bi bi-activity icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-walk"></use></svg></span>Gerak + tidur</strong>
+            <span>Target 150 menit per minggu, plus tidur cukup supaya ngidam tidak makin liar.</span>
           </div>
         </div>
       </div>
@@ -258,13 +289,13 @@ code{font-family:Consolas,monospace;font-size:.95em}
             <path d="M251 67a21 21 0 1 0 31-18 24 24 0 0 1-4 .3 23 23 0 0 1-22-19A21 21 0 0 0 251 67z" fill="#f8f1eb" stroke="#8c5d13" stroke-width="3"></path>
           </svg>
         </figure>
-        <p class="hero-caption">Pegangan cepat: piring lebih seimbang, gerak lebih sering, tidur lebih rapi. Tiga hal ini biasanya lebih awet daripada diet kilat.</p>
+        <p class="hero-caption">Pegangan cepat: makan lebih rapi, gerak lebih sering, dan tidur lebih tertata biasanya lebih awet daripada diet kilat.</p>
       </div>
     </div>
   </section>
 
   <section class="summary" aria-label="Ringkasan satu kalimat">
-    <strong>Ringkasnya:</strong> menurunkan berat badan yang sehat berarti mengejar perubahan yang bisa dipertahankan, seperti porsi makan lebih terukur, minuman manis lebih jarang, aktivitas fisik rutin minimal 150 menit per minggu, tidur cukup, dan evaluasi medis bila ada penyakit penyerta atau berat turun terlalu cepat.
+    <strong>Ringkasnya:</strong> penurunan berat badan yang sehat biasanya datang dari defisit kalori ringan yang konsisten, bukan dari sengaja kelaparan, olahraga meledak, atau produk pelangsing yang dibeli tanpa evaluasi.
   </section>
 
   <nav class="quick" aria-label="Navigasi cepat">
@@ -286,19 +317,33 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </div>
         <div class="heading-copy">
           <h2>Mulai dari target yang masuk akal, bukan dari rasa panik</h2>
-          <p>WHO menempatkan kelebihan berat badan dan obesitas sebagai masalah kesehatan kronis yang dipengaruhi banyak faktor. Jadi titik awalnya bukan menyalahkan diri sendiri, tetapi mengenali kebiasaan yang paling realistis untuk diubah.</p>
+          <p>WHO menempatkan kelebihan berat badan sebagai masalah kesehatan jangka panjang. Jadi titik awalnya bukan menghukum diri, tetapi memilih perubahan yang paling mungkin bertahan.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
+      <div class="priority-grid" aria-label="Pegangan awal">
+        <article class="priority-card">
+          <strong><span class="icon-box"><i class="bi bi-speedometer2 icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-scale"></use></svg></span>Turun bertahap</strong>
+          <p>Arah aman yang sering dipakai adalah sekitar 0,5-1 kg per minggu.</p>
+        </article>
+        <article class="priority-card">
+          <strong><span class="icon-box"><i class="bi bi-bullseye icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-check"></use></svg></span>Target awal 5-10%</strong>
+          <p>Pada banyak orang, target awal ini sudah membantu tekanan darah, gula darah, dan stamina.</p>
+        </article>
+        <article class="priority-card">
+          <strong><span class="icon-box"><i class="bi bi-list-task icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-ruler"></use></svg></span>Pilih 1-2 kebiasaan bocor</strong>
+          <p>Mulai dari minuman manis, jajan malam, atau duduk terlalu lama. Jangan ganti semua hal sekaligus.</p>
+        </article>
+      </div>
       <div class="split">
         <div class="text-flow">
-          <p>Kalau tujuan awalnya terlalu ekstrem, misalnya ingin turun banyak dalam waktu sangat singkat, biasanya pola makan jadi terlalu ketat, badan cepat capek, dan berat badan mudah naik lagi. CDC menekankan bahwa penurunan bertahap sekitar 1-2 pon per minggu lebih mudah dipertahankan dibanding penurunan yang terlalu cepat.</p>
-          <p>Target awal yang sering terasa lebih aman adalah <strong>turun 5-10% dari berat badan sekarang</strong>. Contohnya, kalau berat 80 kg, target awal 4-8 kg sudah bisa berdampak baik untuk tekanan darah, gula darah, napas saat aktivitas, dan rasa pegal.</p>
+          <p>Kalau target awal terlalu galak, badan cepat capek, pola makan terasa menyiksa, lalu berat mudah naik lagi. CDC justru menekankan penurunan bertahap karena lebih realistis dipertahankan.</p>
+          <p>Contoh sederhana: bila berat 80 kg, target awal 4-8 kg sudah termasuk progres yang berguna. Jadi tidak perlu mengejar badan langsung berubah drastis sebelum merasa "berhasil".</p>
           <div class="callout good">
-            <strong>Mulai dari tiga pertanyaan ini:</strong> apa alasan utama ingin turun berat badan, kebiasaan apa yang paling sering bikin kalori berlebih, dan perubahan mana yang sanggup dijalani minimal 2-4 minggu dulu.
+            <strong>Mulai 7 hari pertama:</strong> catat berat awal, kurangi 1 sumber minuman manis, dan tambah 10-15 menit jalan kaki hampir tiap hari.
           </div>
-          <p>Lebih membantu kalau fokus awalnya sempit: misalnya berhenti minum teh manis tiap makan, jalan kaki 20 menit setelah magrib, atau berhenti ngemil larut malam. Perubahan kecil yang konsisten biasanya lebih berguna daripada aturan banyak tetapi cepat putus di tengah jalan.</p>
+          <p>Perubahan kecil yang konsisten biasanya lebih berguna daripada aturan banyak yang putus di hari ketiga. Fokus sempit dulu: misalnya teh manis dikurangi, jalan habis magrib, atau stop ngemil larut malam.</p>
         </div>
         <aside class="rail" aria-label="Langkah mulai">
           <h3>Siapa yang sebaiknya tidak diet sendiri dulu?</h3>
@@ -311,7 +356,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
           <div class="rail-row">
             <div class="rail-num">2</div>
             <div>
-              <p>Orang dengan diabetes yang memakai insulin atau obat tertentu, karena pola makan dan olahraga bisa memicu gula terlalu rendah bila tidak diatur.</p>
+              <p>Pasien diabetes yang memakai insulin atau obat tertentu, karena pola makan dan olahraga bisa memicu gula terlalu rendah bila tidak diatur.</p>
             </div>
           </div>
           <div class="rail-row">
@@ -339,14 +384,33 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </div>
         <div class="heading-copy">
           <h2>Atur makan dengan pola yang bisa hidup lama</h2>
-          <p>Kemenkes lewat <em>Isi Piringku</em> mendorong setengah piring diisi sayur dan buah, sedangkan setengah lainnya diisi makanan pokok dan lauk. WHO juga menekankan pola makan yang cukup, seimbang, tidak berlebihan, dan beragam.</p>
+          <p>Kemenkes lewat <em>Isi Piringku</em> mendorong setengah piring diisi sayur dan buah. WHO juga menekankan pola makan yang cukup, beragam, dan tidak berlebihan.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
-      <div class="text-flow">
-        <p>Untuk banyak orang, sumber kalori berlebih bukan hanya nasi, tetapi gabungan dari minuman manis, gorengan, saus manis, jajan malam, kopi susu kekinian, camilan sambil duduk, atau “makan sedikit tapi sering” yang ternyata porsinya terus bocor.</p>
-        <p>Kalau ingin lebih sederhana, bayangkan satu kali makan seperti ini: <strong>setengah piring sayur dan buah</strong>, seperempat piring lauk berprotein, dan seperempat piring makanan pokok. Air putih jadi minuman utama. Pola ini biasanya membuat kenyang lebih stabil dibanding mengandalkan karbohidrat halus atau minuman manis.</p>
+      <div class="scan-list" aria-label="Pegangan makan">
+        <div class="scan-row">
+          <span class="icon-box"><i class="bi bi-grid-1x2-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-plate"></use></svg></span>
+          <div>
+            <strong>Setengah piring sayur dan buah</strong>
+            <p>Ini memotong ruang untuk kalori berlebih tanpa perlu hitung yang rumit.</p>
+          </div>
+        </div>
+        <div class="scan-row">
+          <span class="icon-box"><i class="bi bi-egg-fried icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-food"></use></svg></span>
+          <div>
+            <strong>Protein tiap makan</strong>
+            <p>Telur, ikan, ayam, tahu, tempe, atau kacang membantu kenyang lebih stabil.</p>
+          </div>
+        </div>
+        <div class="scan-row">
+          <span class="icon-box"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span>
+          <div>
+            <strong>Minuman utama air putih</strong>
+            <p>Kalori sering bocor dari teh manis, kopi susu, boba, soda, dan jus bergula.</p>
+          </div>
+        </div>
       </div>
       <div class="micro-grid">
         <div class="grid">
@@ -355,14 +419,14 @@ code{font-family:Consolas,monospace;font-size:.95em}
             <ul>
               <li>Protein: telur, ikan, ayam tanpa banyak kulit, tempe, tahu, kacang-kacangan.</li>
               <li>Serat: sayur bening, tumis sedikit minyak, lalapan matang, buah potong utuh.</li>
-              <li>Air putih sebelum dan selama hari berjalan, bukan menunggu haus berat.</li>
+              <li>Air putih sepanjang hari, bukan menunggu haus berat.</li>
             </ul>
           </article>
           <article class="card">
-            <h3>Yang sering bikin “tidak terasa banyak”</h3>
+            <h3>Yang sering terasa "sedikit", padahal bocor</h3>
             <ul>
               <li>Teh manis, kopi susu, minuman boba, soda, jus dengan gula tambahan.</li>
-              <li>Gorengan, kerupuk, cemilan asin-manis sambil kerja atau nonton.</li>
+              <li>Gorengan, kerupuk, camilan asin-manis sambil kerja atau nonton.</li>
               <li>Mie instan plus nasi, porsi lauk kecil tetapi saus dan topping tinggi kalori.</li>
             </ul>
           </article>
@@ -371,7 +435,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
             <ul>
               <li>Nasi tetap boleh, tetapi porsinya diperkecil saat lauk dan sayur sudah cukup.</li>
               <li>Pilih pepes, sayur asem, sop, tumis sederhana, ikan bakar, atau tempe dibanding goreng tepung rutin.</li>
-              <li>Kalau biasa minum teh manis pagi-sore, mulai kurangi frekuensi dulu sebelum mengurangi hal lain.</li>
+              <li>Kalau biasa minum teh manis pagi-sore, kurangi frekuensi dulu sebelum mengubah banyak hal lain.</li>
             </ul>
           </article>
         </div>
@@ -392,7 +456,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </figure>
       </div>
       <div class="callout warn">
-        <strong>Kapan perlu evaluasi medis?</strong> Kalau Anda sering makan sangat sedikit tetapi berat tidak turun, ada rasa lapar berlebihan, haid kacau, pusing, atau curiga ada obat/penyakit yang memengaruhi berat badan, jangan terus menyiksa pola makan sendiri.
+        <strong>Kapan perlu evaluasi medis?</strong> Bila Anda sudah makan sangat sedikit tetapi berat tidak turun, atau muncul pusing, haid kacau, lapar berlebihan, dan badan lemas, jangan lanjutkan pola ketat tanpa diperiksa.
       </div>
     </div>
   </section>
@@ -405,33 +469,47 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </div>
         <div class="heading-copy">
           <h2>Gerak rutin lebih penting daripada olahraga meledak di awal</h2>
-          <p>WHO dan CDC sama-sama menganjurkan orang dewasa aktif minimal 150 menit per minggu untuk intensitas sedang, ditambah latihan penguatan otot minimal 2 hari per minggu. Kemenkes juga menekankan aktivitas fisik minimal 30 menit per hari.</p>
+          <p>WHO dan CDC menganjurkan orang dewasa aktif minimal 150 menit per minggu untuk intensitas sedang, plus latihan kekuatan minimal 2 hari per minggu. Kemenkes juga mendorong aktivitas fisik minimal 30 menit per hari.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
+      <div class="agenda-grid" aria-label="Pegangan gerak">
+        <article class="agenda-card">
+          <strong>Kalau baru mulai</strong>
+          <p>Kejar rutinitas dulu, bukan keringat ekstrem.</p>
+        </article>
+        <article class="agenda-card">
+          <strong>Kalau kerja banyak duduk</strong>
+          <p>Tambahkan jeda berdiri dan jalan kecil sepanjang hari.</p>
+        </article>
+        <article class="agenda-card">
+          <strong>Kalau lutut sering nyeri</strong>
+          <p>Pilih gerak yang lebih ramah sendi seperti jalan datar atau sepeda statis.</p>
+        </article>
+      </div>
       <div class="walk-plan">
         <h3>Kalau baru mulai, pakai tangga sederhana ini</h3>
         <div class="grid">
           <div class="strip">
             <h3>Minggu 1</h3>
-            <p>Jalan santai-cepat 10-15 menit, 5 hari per minggu. Fokus membangun kebiasaan keluar rumah atau bergerak setelah makan.</p>
+            <p>Jalan santai-cepat 10-15 menit, 5 hari per minggu. Fokus bangun kebiasaan dulu.</p>
           </div>
           <div class="strip">
             <h3>Minggu 2-3</h3>
-            <p>Naikkan jadi 20-30 menit per sesi. Kalau capek, pecah dua kali 10-15 menit juga tetap dihitung.</p>
+            <p>Naikkan jadi 20-30 menit per sesi. Bila capek, pecah dua kali 10-15 menit juga tetap dihitung.</p>
           </div>
           <div class="strip">
             <h3>Setelah mulai nyaman</h3>
-            <p>Tambahkan 2 hari latihan kekuatan sederhana: squat ke kursi, push-up dinding, angkat botol air, atau resistance band.</p>
+            <p>Tambahkan 2 hari latihan kekuatan sederhana: squat ke kursi, push-up dinding, atau angkat botol air.</p>
           </div>
         </div>
       </div>
       <div class="split">
         <div class="text-flow">
-          <p>Aktivitas fisik membantu membuat tubuh memakai lebih banyak energi, tetapi penurunan berat badan biasanya paling baik saat aktivitas digabung dengan perbaikan pola makan. Jalan kaki cepat, bersepeda santai, naik tangga, bersih-bersih rumah, atau jalan ke warung juga tetap bernilai kalau dilakukan rutin.</p>
-          <p>Latihan kekuatan penting karena membantu menjaga massa otot. Kalau hanya memangkas makan tanpa melatih otot, badan bisa terasa cepat lelah dan progres jangka panjang cenderung kurang mantap.</p>
-          <p>Kalau punya pekerjaan duduk lama, jangan menunggu jam olahraga saja. Tambahkan gerak kecil sepanjang hari: berdiri tiap 30-60 menit, jalan singkat saat telepon, parkir sedikit lebih jauh, atau keliling rumah 5 menit setelah makan.</p>
+          <p>Aktivitas fisik membantu tubuh memakai lebih banyak energi, tetapi hasil terbaik biasanya datang saat gerak digabung dengan pola makan yang lebih rapi. Jalan cepat, bersepeda santai, naik tangga, bersih-bersih rumah, dan jalan ke warung tetap bernilai bila rutin.</p>
+          <p>Latihan kekuatan penting untuk menjaga massa otot. Bila hanya memangkas makan tanpa melatih otot, badan sering terasa lebih letoy dan progres jangka panjang kurang mantap.</p>
+          <p>Kalau pekerjaannya duduk terus, jangan menunggu jam olahraga saja. Berdiri tiap 30-60 menit, jalan singkat saat telepon, atau keliling rumah 5 menit habis makan sudah membantu.</p>
         </div>
         <aside class="visual-board" aria-label="Tanda intensitas aman">
           <h3>Cara tahu intensitasnya pas</h3>
@@ -461,6 +539,20 @@ code{font-family:Consolas,monospace;font-size:.95em}
       </div>
     </div>
     <div class="section-body">
+      <div class="metric-grid" aria-label="Patokan pantau">
+        <article class="metric-card">
+          <div class="metric-value">1x/minggu</div>
+          <p>Timbang di hari dan jam yang mirip, misalnya pagi sebelum sarapan.</p>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">3 hal</div>
+          <p>Catat minuman manis, gerak harian, dan jam tidur sebelum menyalahkan "metabolisme".</p>
+        </article>
+        <article class="metric-card">
+          <div class="metric-value">2-4 minggu</div>
+          <p>Kalau angka macet, baru cek ulang kebiasaan, bukan langsung panik.</p>
+        </article>
+      </div>
       <div class="micro-grid">
         <div class="measure-board">
           <h3>Apa yang sebaiknya dipantau</h3>
@@ -474,13 +566,13 @@ code{font-family:Consolas,monospace;font-size:.95em}
             <div class="measure-row">
               <div class="measure-dot"><span class="icon-pair"><i class="bi bi-rulers icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-ruler"></use></svg></span></div>
               <div>
-                <p><strong>Lingkar perut</strong> diukur sejajar sekitar pinggang, karena lemak perut berhubungan dengan risiko penyakit jantung, stroke, dan diabetes.</p>
+                <p><strong>Lingkar perut</strong> tetap penting karena lemak perut berkaitan dengan risiko jantung, stroke, dan diabetes.</p>
               </div>
             </div>
             <div class="measure-row">
               <div class="measure-dot"><span class="icon-pair"><i class="bi bi-list-check icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-check"></use></svg></span></div>
               <div>
-                <p><strong>Kebiasaan harian</strong> seperti langkah kaki, minuman manis, jajan malam, dan jam tidur. Ini sering lebih jujur daripada hitung kalori yang bikin capek.</p>
+                <p><strong>Kebiasaan harian</strong> seperti langkah kaki, minuman manis, jajan malam, dan jam tidur. Ini sering lebih jujur daripada hitung kalori terus-menerus.</p>
               </div>
             </div>
           </div>
@@ -503,11 +595,11 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </figure>
       </div>
       <div class="callout">
-        <strong>Kalau timbangan macet 2-4 minggu:</strong> cek lagi apakah minuman manis masih sering masuk, porsi akhir pekan lebih lepas, tidur makin pendek, atau langkah harian turun. Biasanya jawabannya ada di kebiasaan, bukan di “metabolisme rusak”.
+        <strong>Kalau timbangan macet 2-4 minggu:</strong> cek lagi apakah minuman manis masih sering masuk, porsi akhir pekan lebih lepas, tidur makin pendek, atau langkah harian turun. Biasanya jawabannya ada di kebiasaan, bukan di "metabolisme rusak".
       </div>
       <div class="text-flow">
-        <p>Bila ingin menghitung indeks massa tubuh, itu boleh sebagai patokan kasar, tetapi jangan jadi satu-satunya ukuran. Bentuk lemak perut, stamina, kualitas tidur, dan hasil lab pada orang tertentu bisa lebih penting. Untuk orang Asia, sebagian klinisi juga lebih berhati-hati pada lemak perut meski IMT belum terlalu tinggi.</p>
-        <p><strong>Kapan perlu evaluasi medis?</strong> Bila berat justru turun cepat tanpa usaha berarti, atau Anda sudah sangat ketat tetapi hasil tidak bergerak sama sekali dan ada gejala lain seperti rambut rontok berat, sembelit parah, ngantuk terus, atau haid tidak teratur.</p>
+        <p>IMT boleh dipakai sebagai patokan kasar, tetapi jangan jadi satu-satunya ukuran. Lemak perut, stamina, kualitas tidur, tekanan darah, dan hasil lab sering memberi gambaran yang lebih berguna.</p>
+        <p><strong>Kapan perlu evaluasi medis?</strong> Bila berat justru turun cepat tanpa usaha berarti, atau Anda sudah sangat ketat tetapi hasil tidak bergerak dan muncul gejala lain seperti rambut rontok berat, sembelit parah, ngantuk terus, atau haid tidak teratur.</p>
       </div>
     </div>
   </section>
@@ -519,7 +611,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
           <span class="icon-pair"><i class="bi bi-heart-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-heart"></use></svg></span>
         </div>
         <div class="heading-copy">
-          <h2>Kondisi khusus yang sebaiknya tidak ditangani dengan “diet coba-coba”</h2>
+          <h2>Kondisi khusus yang sebaiknya tidak ditangani dengan "diet coba-coba"</h2>
           <p>Ada situasi di mana berat badan memang terkait pola hidup, tetapi strategi aman tetap perlu disesuaikan dengan penyakit, obat, atau kondisi tubuh yang sedang berjalan.</p>
         </div>
       </div>
@@ -552,7 +644,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </article>
       </div>
       <div class="callout warn">
-        <strong>Tentang obat atau suplemen penurun berat badan:</strong> ada kondisi tertentu yang memang membutuhkan terapi medis, tetapi itu bukan area untuk beli sendiri lewat iklan, jamu kurus, atau obat tanpa evaluasi. Apalagi kalau ada jantung berdebar, insomnia, diare, atau cemas berat setelah minum produk pelangsing.
+        <strong>Tentang obat atau suplemen penurun berat badan:</strong> ada kondisi tertentu yang memang membutuhkan terapi medis, tetapi ini bukan area untuk beli sendiri lewat iklan, jamu kurus, atau obat tanpa evaluasi. Apalagi kalau ada jantung berdebar, insomnia, diare, atau cemas berat setelah minum produk pelangsing.
       </div>
     </div>
   </section>
@@ -565,7 +657,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </div>
         <div class="heading-copy">
           <h2>Kapan harus ke dokter atau IGD</h2>
-          <p>Turun berat badan sehat tidak boleh dibayar dengan pingsan, sesak, atau gejala yang mengarah ke penyakit lain. Jangan anggap semua keluhan sebagai “efek diet biasa”.</p>
+          <p>Turun berat badan sehat tidak boleh dibayar dengan pingsan, sesak, atau gejala yang mengarah ke penyakit lain. Jangan anggap semua keluhan sebagai "efek diet biasa".</p>
         </div>
       </div>
     </div>
@@ -591,7 +683,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </article>
       </div>
       <div class="callout danger">
-        <strong>Catatan penting:</strong> kalau berat badan turun tetapi disertai batuk lama, demam berkepanjangan, diare lama, benjolan, atau nafsu makan hilang berat, arah pikirnya bukan lagi “program diet berhasil”, tetapi harus mencari penyebab medisnya.
+        <strong>Catatan penting:</strong> kalau berat badan turun tetapi disertai batuk lama, demam berkepanjangan, diare lama, benjolan, atau nafsu makan hilang berat, arah pikirnya bukan lagi "program diet berhasil", tetapi harus mencari penyebab medisnya.
       </div>
     </div>
   </section>
@@ -604,7 +696,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
         </div>
         <div class="heading-copy">
           <h2>FAQ singkat yang paling sering muncul</h2>
-          <p>Jawaban ini sengaja dibuat singkat agar mudah dipakai pasien sehari-hari. Kalau kondisinya lebih rumit, konsultasi tetap lebih aman daripada coba-coba sendiri.</p>
+          <p>Jawaban ini dibuat singkat supaya mudah dipakai pasien sehari-hari. Kalau kondisinya lebih rumit, konsultasi tetap lebih aman daripada coba-coba sendiri.</p>
         </div>
       </div>
     </div>
@@ -679,7 +771,6 @@ code{font-family:Consolas,monospace;font-size:.95em}
         <li><a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">CDC. Steps for Losing Weight. Diperbarui 17 Januari 2025.</a></li>
         <li><a href="https://www.cdc.gov/healthy-weight-growth/physical-activity/index.html" target="_blank" rel="noopener">CDC. Physical Activity and Your Weight and Health. Diperbarui 27 Desember 2023.</a></li>
         <li><a href="https://www.cdc.gov/diabetes/living-with/healthy-weight.html" target="_blank" rel="noopener">CDC. Healthy Weight. Diperbarui 15 Mei 2024.</a></li>
-        <li><a href="https://www.cdc.gov/healthyweight/index.html/" target="_blank" rel="noopener">CDC. Healthy Weight, Nutrition, and Physical Activity. Diakses untuk konteks pembaruan 2025.</a></li>
         <li><a href="https://ayosehat.kemkes.go.id/isi-piringku-pedoman-makan-kekinian-orang-indonesia" target="_blank" rel="noopener">Kemenkes RI Ayo Sehat. Isi Piringku: Pedoman Makan Kekinian Orang Indonesia. 13 Desember 2022.</a></li>
         <li><a href="https://ayosehat.kemkes.go.id/isi-piringku-kebutuhan-gizi-harian-seimbang" target="_blank" rel="noopener">Kemenkes RI Ayo Sehat. Isi Piringku, Panduan Kebutuhan Gizi Seimbang Harian. 2024.</a></li>
         <li><a href="https://ayosehat.kemkes.go.id/aktivitas-fisik-dan-manfaatnya" target="_blank" rel="noopener">Kemenkes RI Ayo Sehat. Aktivitas Fisik dan Manfaatnya. 2018.</a></li>
@@ -689,17 +780,9 @@ code{font-family:Consolas,monospace;font-size:.95em}
   </section>
 
   <section class="bottom-cta" aria-label="Aksi cepat pasien">
-    <h2>Bawa halaman ini saat kontrol kalau Anda ingin membahas target yang lebih personal</h2>
-    <p>Kalau perlu, catat berat minggu ini, lingkar perut, minuman manis yang masih sering diminum, dan olahraga yang paling realistis dilakukan. Data sederhana seperti itu biasanya sudah cukup membantu saat konsultasi.</p>
+    <h2>Print / Save PDF</h2>
+    <p>Simpan halaman ini untuk dibaca offline atau dibawa saat kontrol. Untuk hubungi klinik, pakai tombol WhatsApp dan Instagram di hero atau link footer.</p>
     <div class="actions">
-      <a class="btn btn-brand" id="waBtn" href="#" target="_blank" rel="noopener">
-        <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-        WhatsApp Klinik
-      </a>
-      <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener">
-        <span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>
-        Buka Maps
-      </a>
       <button class="btn btn-secondary" id="printPage" type="button" aria-label="Print atau simpan PDF">
         <span class="icon-pair"><i class="bi bi-printer-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-print"></use></svg></span>
         Print / Save PDF
@@ -714,8 +797,11 @@ code{font-family:Consolas,monospace;font-size:.95em}
         <h2>Zihan Medical Center</h2>
         <p><strong>#ZMCGakNyuekinKamu</strong> - layanan 24 jam untuk keluarga Wanaraja dan sekitarnya.</p>
         <p id="clinicAddress"></p>
+      </div>
+      <div>
         <p><strong>Telepon:</strong> <span id="clinicPhone"></span></p>
-        <p><strong>Jam:</strong> <span id="clinicHours"></span></p>
+        <p><strong>Jam layanan:</strong> <span id="clinicHours"></span></p>
+        <p>Materi ini dibuat untuk edukasi pasien dewasa. Bila ada penyakit penyerta, target dan kecepatannya perlu dipersonalisasi.</p>
       </div>
       <div>
         <h3>Kontak dan lokasi</h3>
@@ -763,7 +849,7 @@ const ZMC = {
   const forceIcons = qs.get("icons") === "fallback";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
-  const logoCandidates = [ZMC.logoLocal, "../assets/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
+  const logoCandidates = ["../zmc-logo.jpeg", ZMC.logoLocal, "../assets/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
   let logoIndex = 0;
 
   function loadLogo() {
@@ -780,16 +866,16 @@ const ZMC = {
   document.getElementById("clinicHours").textContent = ZMC.hours;
   document.getElementById("year").textContent = String(new Date().getFullYear());
 
-  ["waBtn", "footerWa"].forEach(function(id){
+  ["heroWa", "footerWa"].forEach(function(id){
     const el = document.getElementById(id);
     if (el) el.href = ZMC.whatsapp;
   });
-  ["mapBtn", "footerMap"].forEach(function(id){
+  ["heroIg", "footerIg"].forEach(function(id){
     const el = document.getElementById(id);
-    if (el) el.href = ZMC.maps;
+    if (el) el.href = ZMC.instagram;
   });
-  const ig = document.getElementById("footerIg");
-  if (ig) ig.href = ZMC.instagram;
+  const footerMap = document.getElementById("footerMap");
+  if (footerMap) footerMap.href = ZMC.maps;
 
   function checkIconCDN() {
     if (forceIcons) {

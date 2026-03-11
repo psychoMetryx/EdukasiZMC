@@ -1,0 +1,102 @@
+{
+  "page": "C:/Users/POLI UMUM/Desktop/CODEX/EdukasiZMC/topics/fixed/diabetes-melitus-tipe-2-fixed.html",
+  "generatedAt": "2026-03-11T03:31:55.996Z",
+  "checks": {
+    "keyboard": {
+      "focusAfterTab": "heroIg",
+      "focusAfterShiftTab": "heroWa",
+      "faqExpandedAfterEnter": "true",
+      "focusAfterArrowDown": "faq-btn-2",
+      "focusAfterArrowUp": "faq-btn-1",
+      "focusAfterEnd": "faq-btn-4",
+      "focusAfterHome": "faq-btn-1",
+      "faqExpandedAfterSpace": "false"
+    },
+    "iconFallback": {
+      "rootHas": true,
+      "localDisplay": "block",
+      "cdnDisplay": "none",
+      "screenshot": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-fixed-icons-fallback-mobile.png"
+    },
+    "offline": {
+      "protocol": "file:",
+      "online": false,
+      "statusText": "Mode offline aktif. Konten utama, visual SVG, dan checklist tetap bisa dipakai di perangkat ini."
+    },
+    "printPdf": {
+      "path": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-fixed-print.pdf",
+      "printPreview": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-fixed-print-preview.png"
+    }
+  },
+  "viewports": [
+    {
+      "name": "mobile",
+      "width": 360,
+      "height": 800,
+      "screenshot": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-fixed-mobile.png",
+      "heroHeight": 171,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "bodyScrollWidth": 360,
+      "hasHeroWA": true,
+      "hasHeroIG": true,
+      "hasBottomPrint": true,
+      "topAreaHasPrint": false,
+      "links": {
+        "heroWa": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "heroIg": "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+        "waBtn": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "mapBtn": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+        "footerWa": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "footerMap": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+        "footerIg": "https://www.instagram.com/zihanmedicalcenter/?hl=en"
+      }
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "screenshot": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-fixed-tablet.png",
+      "heroHeight": 160,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "bodyScrollWidth": 768,
+      "hasHeroWA": true,
+      "hasHeroIG": true,
+      "hasBottomPrint": true,
+      "topAreaHasPrint": false,
+      "links": {
+        "heroWa": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "heroIg": "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+        "waBtn": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "mapBtn": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+        "footerWa": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "footerMap": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+        "footerIg": "https://www.instagram.com/zihanmedicalcenter/?hl=en"
+      }
+    },
+    {
+      "name": "desktop",
+      "width": 1366,
+      "height": 768,
+      "screenshot": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-fixed-desktop.png",
+      "heroHeight": 230,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "hasHeroWA": true,
+      "hasHeroIG": true,
+      "hasBottomPrint": true,
+      "topAreaHasPrint": false,
+      "links": {
+        "heroWa": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "heroIg": "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+        "waBtn": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "mapBtn": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+        "footerWa": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+        "footerMap": "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+        "footerIg": "https://www.instagram.com/zihanmedicalcenter/?hl=en"
+      }
+    }
+  ]
+}
