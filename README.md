@@ -89,8 +89,61 @@ Guardrail anti-generik:
 - Visual harus memecah beban baca, bukan memindahkan paragraf panjang ke dalam box atau SVG.
 - Hindari SVG dengan terlalu banyak label kecil yang sulit dibaca di mobile.
 - Utamakan diagram sederhana, pointer, langkah cek cepat, atau highlight risiko yang bisa dipahami sekilas.
-- Ilustrasi harus reproducible tanpa API key dan tetap tampil offline.
+- Ilustrasi runtime harus tetap tampil tanpa API key dan tetap aman saat offline. API key boleh dipakai pada tahap authoring bila mengikuti workflow AI image resmi repo.
 - Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG dan runtime check untuk mode fallback.
+
+## AI Image Workflow
+- Skill `imagegen` adalah workflow resmi repo untuk membuat **hero/orientation visual**, bukan untuk checklist, flowchart, proporsi piring, atau diagram keputusan medis.
+- Host permanen untuk gambar AI adalah **Cloudinary**.
+- URL publik boleh dipakai di HTML, tetapi hanya dengan **dual source**:
+  - `remote` untuk mode online
+  - `local` untuk fallback offline atau `file://`
+- Temporary host seperti `0x0.st` hanya untuk test cepat, bukan workflow final repo.
+
+### Kapan dipakai
+- Pakai `imagegen` untuk mengganti SVG hero yang sifatnya orientasi visual.
+- Jangan pakai `imagegen` untuk visual yang membawa teks instruksional, langkah rawat rumah, decision tree, atau checklist medis.
+
+### Prerequisite
+- `OPENAI_API_KEY`
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
+
+### Cek prerequisite
+```powershell
+python scripts/cloudinary_upload.py check
+```
+
+### Generate -> upload -> hyperlink -> HTML
+1. Generate image lokal dengan skill `imagegen`.
+2. Simpan file final ke `assets/topics/<slug>/<slug>-hero.webp`.
+3. Upload ke Cloudinary:
+
+```powershell
+python scripts/cloudinary_upload.py upload --file "assets/topics/<slug>/<slug>-hero.webp" --slug "<slug>" --role hero
+```
+
+4. Ambil `secure_url` dari output JSON.
+5. Taruh URL itu ke config HTML sebagai `remote`.
+6. Pertahankan file lokal sebagai `local`.
+
+### Kontrak HTML
+```js
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/...",
+    local: "../assets/topics/<slug>/<slug>-hero.webp",
+    alt: "Deskripsi singkat visual hero",
+    width: 1536,
+    height: 1024
+  }
+};
+```
+
+- Saat online, HTML boleh memuat `remote`.
+- Jika `remote` gagal atau user offline, HTML wajib fallback ke `local`.
+- Jangan pindahkan teks medis penting ke dalam gambar.
 
 ## Struktur Halaman
 1. Sticky header
@@ -118,6 +171,8 @@ Guardrail anti-generik:
 EdukasiZMC/
   README.md
   AGENTS.md
+  scripts/
+    cloudinary_upload.py
   topics/
     <slug>.html
     fixed/
@@ -146,6 +201,7 @@ EdukasiZMC/
 - Print A4 tidak memotong bagian penting
 - Artefak QA disimpan di `assets/qa/`
 - Skill `playwright`, `pdf`, dan `screenshot` dipakai saat QA memang butuh browser automation, print check, dan artefak visual
+- Untuk halaman dengan AI image, verifikasi mode online dan fallback offline sama-sama lolos
 
 ## Artefak Akhir
 Untuk halaman yang selesai dikerjakan, minimal hasil akhirnya mencakup:

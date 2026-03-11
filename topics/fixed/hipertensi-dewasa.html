@@ -81,8 +81,9 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-point span{display:block;margin-top:.14rem;font-size:.7rem;line-height:1.2;color:var(--muted)}
 .hero-visual{display:none}
 .hero-figure,.micro-figure,.visual-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.68rem}
-.hero-figure svg,.micro-figure svg,.visual-board svg{width:100%;display:block}
-.hero-figure svg{height:156px}
+.hero-figure svg,.micro-figure svg,.visual-board svg,.hero-figure img{width:100%;display:block}
+.hero-figure svg,.hero-figure img{height:156px}
+.hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
 .hero-caption{margin:0;font-size:.8rem;line-height:1.15;color:var(--muted)}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
@@ -306,29 +307,16 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-figure" aria-hidden="true">
-          <svg viewBox="0 0 420 250" role="img" aria-label="Ilustrasi tekanan darah perlu dicek rutin">
-            <rect x="14" y="14" width="392" height="222" rx="18" fill="#fffaf7" stroke="#d8c7bf"></rect>
-            <text x="32" y="40" font-size="20" font-family="Tahoma" fill="#211a17" font-weight="700">Jangan menunggu pusing untuk mulai cek tensi</text>
-            <rect x="32" y="60" width="108" height="70" rx="12" fill="#f7e5e4" stroke="#cfaaa2"></rect>
-            <text x="47" y="86" font-size="13" font-family="Tahoma" fill="#8f1d22" font-weight="700">Cek rutin</text>
-            <text x="47" y="106" font-size="12" font-family="Tahoma" fill="#625853">di rumah, apotek,</text>
-            <text x="47" y="122" font-size="12" font-family="Tahoma" fill="#625853">atau klinik</text>
-            <rect x="156" y="60" width="108" height="70" rx="12" fill="#f8f1eb" stroke="#d8c7bf"></rect>
-            <text x="171" y="86" font-size="13" font-family="Tahoma" fill="#a3191e" font-weight="700">Tulis hasil</text>
-            <text x="171" y="106" font-size="12" font-family="Tahoma" fill="#625853">lihat pola, bukan</text>
-            <text x="171" y="122" font-size="12" font-family="Tahoma" fill="#625853">satu angka saja</text>
-            <rect x="280" y="60" width="108" height="70" rx="12" fill="#edf6ef" stroke="#9ec0ab"></rect>
-            <text x="295" y="86" font-size="13" font-family="Tahoma" fill="#225f3d" font-weight="700">Tindak lanjut</text>
-            <text x="295" y="106" font-size="12" font-family="Tahoma" fill="#4e6458">ubah kebiasaan,</text>
-            <text x="295" y="122" font-size="12" font-family="Tahoma" fill="#4e6458">kontrol, dan obat</text>
-            <path d="M140 95h16" stroke="#b28e82" stroke-width="2"></path>
-            <path d="M264 95h16" stroke="#b28e82" stroke-width="2"></path>
-            <rect x="32" y="154" width="356" height="55" rx="14" fill="#f8f1eb" stroke="#d8c7bf"></rect>
-            <text x="49" y="179" font-size="13" font-family="Tahoma" fill="#211a17" font-weight="700">Pegangan cepat:</text>
-            <text x="49" y="198" font-size="12" font-family="Tahoma" fill="#625853">kalau hasil sering tinggi, jangan puas dengan kalimat "badan masih kuat". Tindak lanjut tetap perlu.</text>
-          </svg>
-        </div>
+        <figure class="hero-figure">
+          <img
+            id="heroImage"
+            alt="Pasien dewasa memeriksa tekanan darah di rumah lalu mencatat hasilnya."
+            loading="eager"
+            decoding="async"
+            width="1536"
+            height="1024"
+          >
+        </figure>
         <p class="hero-caption">Tiga langkah yang paling berguna: cek dengan teknik benar, catat polanya, lalu benahi kebiasaan rumah.</p>
       </div>
     </div>
@@ -919,6 +907,16 @@ const ZMC = {
   hours: "Senin - Minggu: 24 Jam"
 };
 
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773237049/zmc/hipertensi-dewasa/hipertensi-dewasa-hero.png",
+    local: "../assets/topics/hipertensi-dewasa/hipertensi-dewasa-hero.png",
+    alt: "Pasien dewasa memeriksa tekanan darah di rumah lalu mencatat hasilnya.",
+    width: 1536,
+    height: 1024
+  }
+};
+
 (function initPage(){
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
@@ -978,6 +976,42 @@ const ZMC = {
   if (printBtn) {
     printBtn.addEventListener("click", function(){
       window.print();
+    });
+  }
+
+  const heroImage = document.getElementById("heroImage");
+  if (heroImage && TOPIC_MEDIA.hero) {
+    const heroMedia = TOPIC_MEDIA.hero;
+    let localAttempted = false;
+    heroImage.alt = heroMedia.alt;
+    heroImage.width = heroMedia.width;
+    heroImage.height = heroMedia.height;
+
+    function useLocalImage() {
+      if (!heroMedia.local || localAttempted) return;
+      localAttempted = true;
+      heroImage.src = heroMedia.local;
+    }
+
+    heroImage.addEventListener("error", function(){
+      if (!localAttempted && heroMedia.local) {
+        useLocalImage();
+      } else {
+        const figure = heroImage.closest(".hero-figure");
+        if (figure) figure.hidden = true;
+      }
+    });
+
+    if (!navigator.onLine && heroMedia.local) {
+      useLocalImage();
+    } else if (heroMedia.remote) {
+      heroImage.src = heroMedia.remote;
+    } else if (heroMedia.local) {
+      useLocalImage();
+    }
+
+    window.addEventListener("offline", function(){
+      if (heroImage.src !== heroMedia.local) useLocalImage();
     });
   }
 

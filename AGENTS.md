@@ -76,7 +76,7 @@ Untuk implementasi UI, gunakan guardrail `uncodixify` sebagai standar praktis:
 - Gunakan satu mode warna terang saja; kontras wajib lolos.
 - Jangan buat varian tema kedua atau kontrol pergantian tema.
 - Tombol `Print / Save PDF` harus berada di bawah sebagai secondary CTA.
-- Ilustrasi wajib reproducible tanpa API key dan tetap tampil saat offline.
+- Ilustrasi runtime wajib tetap tampil tanpa API key dan tetap tampil saat offline. API key boleh dipakai saat authoring bila mengikuti workflow AI image resmi repo.
 - Hero wajib compact:
   - mobile `150-180px`
   - desktop `220-260px`
@@ -121,12 +121,41 @@ Untuk implementasi UI, gunakan guardrail `uncodixify` sebagai standar praktis:
 ## Illustration + Icon Rules
 - Minimal 1 visual edukasi per halaman; 2-4 lebih ideal bila memang membantu.
 - Utamakan SVG/CSS handcrafted lokal atau foto lokal yang sudah ada.
+- AI-generated image boleh dipakai untuk hero/orientation visual yang sudah lolos audit, selama mengikuti workflow resmi repo.
 - Visual harus tetap tampil saat file dibuka langsung (`file://`).
 - Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG.
 - Wajib ada runtime check untuk mengaktifkan mode fallback ikon jika CDN gagal.
 - Visual harus memecah beban baca, bukan memindahkan teks panjang ke dalam kotak atau SVG.
 - Hindari ilustrasi dengan terlalu banyak label kecil yang sulit dibaca di mobile.
 - Dorong diagram sederhana, pointer, langkah cek cepat, atau highlight risiko yang bisa dipahami sekilas.
+
+## AI Image Workflow
+- Skill `imagegen` adalah capability resmi repo untuk authoring **hero/orientation visual**, bukan untuk flowchart, checklist, proporsi piring, atau diagram keputusan.
+- Host permanen untuk gambar AI adalah **Cloudinary**.
+- Workflow resmi:
+  1. generate image lokal dengan `imagegen`
+  2. simpan file final di `assets/topics/<slug>/`
+  3. upload ke Cloudinary dengan `scripts/cloudinary_upload.py`
+  4. ambil `secure_url`
+  5. pasang `secure_url` ke HTML sebagai `remote`
+  6. pertahankan file lokal sebagai `local` fallback
+- Temporary host seperti `0x0.st` hanya untuk test drive, bukan workflow final repo.
+- Remote URL di HTML hanya boleh dipakai jika local fallback tetap ada.
+- Jangan pindahkan instruksi medis atau poin inti hero ke dalam gambar.
+
+### Required env vars
+- `OPENAI_API_KEY`
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
+
+### Required helper
+- Gunakan `scripts/cloudinary_upload.py check` untuk cek prerequisite workflow.
+- Gunakan `scripts/cloudinary_upload.py upload --file ... --slug ... --role hero` untuk upload final asset dan ambil hyperlink.
+
+### Approved scope
+- Prioritaskan visual dari audit `Replace with AI image`.
+- Jangan mengganti visual yang masuk kategori `Keep as SVG or HTML Infographic` tanpa audit ulang.
 
 ## Mandatory Clinic Config
 Setiap HTML wajib punya blok config ini:
@@ -214,6 +243,7 @@ const ZMC = {
 21. Copy medis, red flags, dan rujukan masih selaras dengan sumber resmi terbaru.
 22. Artefak QA tersimpan: screenshot viewport + PDF print check.
 23. Jika memakai chunked write, semua section tetap utuh.
+24. Jika memakai AI image remote, fallback lokal tetap jalan saat offline atau saat remote gagal.
 
 ## Common QA Failures
 - `Layout rhythm`: hero kiri terlalu tinggi, panel kanan kosong, visual terlalu kecil, atau section setelah hero terasa seperti deretan box identik. Cek ulang proporsi hero, panjang headline, dan hierarchy antarsection sebelum menyatakan desain selesai.
@@ -259,6 +289,7 @@ Saat diminta membuat halaman baru, hasilkan:
 - Simpan versi staging/fixed hasil revisi di `topics/fixed/` sampai disetujui menggantikan baseline.
 - Simpan aset lokal di `assets/`.
 - Visual topik di `assets/topics/<slug>/`.
+- Helper workflow AI image ada di `scripts/cloudinary_upload.py`.
 - Gunakan nama file slug, misalnya `diare-anak.html` atau `dbd-dewasa.html`.
 - Artefak QA untuk versi staging wajib memakai suffix `-fixed`.
 
