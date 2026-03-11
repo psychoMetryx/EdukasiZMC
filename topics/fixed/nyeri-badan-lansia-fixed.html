@@ -81,7 +81,9 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .scan-pill span{display:block;font-size:.71rem;line-height:1.18;color:var(--muted)}
 .hero-visual{display:none}
 .hero-figure,.micro-figure,.house-figure,.body-figure{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.68rem}
-.hero-figure svg,.micro-figure svg,.house-figure svg,.body-figure svg{width:100%;display:block}
+.hero-figure svg,.micro-figure svg,.house-figure svg,.body-figure svg,.hero-figure img,.micro-figure img,.house-figure img,.body-figure img{width:100%;display:block}
+.hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
+.micro-figure img,.house-figure img,.body-figure img{border-radius:10px;background:var(--surface-soft)}
 .quick{display:flex;flex-wrap:wrap;gap:.72rem;padding:.12rem 0;margin-top:.86rem;overflow:auto;scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
 .chip{min-height:auto;flex-shrink:0;display:inline-flex;align-items:center;padding:.18rem 0;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;text-decoration:none;font-size:.86rem;font-weight:700;color:var(--muted)}
 .chip:hover{background:transparent;color:var(--brand);border-bottom-color:var(--brand)}
@@ -151,6 +153,8 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .motion-note strong{color:var(--ink)}
 .house-figure{background:var(--surface-soft)}
 .house-figure svg{max-height:300px}
+.media-figure{display:grid;gap:.72rem}
+.figure-caption{margin:0;font-size:.88rem;color:var(--muted)}
 .faq{display:grid;gap:.65rem}
 .faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
 .faq-btn[aria-expanded="true"]{background:var(--surface-soft)}
@@ -210,7 +214,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   .scan-pill span{display:none}
   .hero-visual{display:grid;align-content:start;padding:.42rem;background:var(--surface-soft)}
   .hero-figure{padding:.3rem}
-  .hero-figure svg{height:126px}
+  .hero-figure svg,.hero-figure img{height:126px}
   .split{grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);align-items:start}
   .text-visual{grid-template-columns:minmax(0,1.08fr) minmax(240px,.82fr);align-items:start}
   .body-figure{padding:.52rem}
@@ -321,30 +325,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       </div>
       <div class="hero-visual">
         <figure class="hero-figure">
-          <svg viewBox="0 0 280 200" role="img" aria-labelledby="heroFigTitle heroFigDesc">
-            <title id="heroFigTitle">Visual area nyeri umum pada lansia</title>
-            <desc id="heroFigDesc">Siluet tubuh dengan sorotan pada bahu, punggung bawah, dan lutut.</desc>
-            <rect x="0" y="0" width="280" height="200" rx="14" fill="#fffdfa"></rect>
-            <circle cx="91" cy="42" r="16" fill="#f3d9d2" stroke="#a3191e" stroke-width="2"></circle>
-            <path d="M91 60c-12 0-20 11-20 25v24c0 9 6 16 15 18l-8 40h12l6-34h8l6 34h12l-8-40c9-2 15-9 15-18V85c0-14-8-25-20-25z" fill="#f8ebe5" stroke="#6e5b55" stroke-width="2"></path>
-            <circle cx="77" cy="76" r="9" fill="#f8e7e6" stroke="#a3191e" stroke-width="2"></circle>
-            <circle cx="105" cy="76" r="9" fill="#f8e7e6" stroke="#a3191e" stroke-width="2"></circle>
-            <circle cx="91" cy="114" r="11" fill="#fcebed" stroke="#a3191e" stroke-width="2"></circle>
-            <circle cx="84" cy="149" r="10" fill="#fcebed" stroke="#a3191e" stroke-width="2"></circle>
-            <circle cx="98" cy="149" r="10" fill="#fcebed" stroke="#a3191e" stroke-width="2"></circle>
-            <path d="M155 44h95" stroke="#c49f93" stroke-width="2"></path>
-            <path d="M145 76h105" stroke="#c49f93" stroke-width="2"></path>
-            <path d="M155 114h95" stroke="#c49f93" stroke-width="2"></path>
-            <path d="M155 149h95" stroke="#c49f93" stroke-width="2"></path>
-            <circle cx="155" cy="44" r="4" fill="#a3191e"></circle>
-            <circle cx="145" cy="76" r="4" fill="#a3191e"></circle>
-            <circle cx="155" cy="114" r="4" fill="#a3191e"></circle>
-            <circle cx="155" cy="149" r="4" fill="#a3191e"></circle>
-            <text x="164" y="48" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Leher dan bahu kaku</text>
-            <text x="154" y="80" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Sendi bahu atau lutut</text>
-            <text x="164" y="118" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Pinggang bawah</text>
-            <text x="164" y="153" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Lutut saat berdiri/jalan</text>
-          </svg>
+          <img id="heroImage" alt="" loading="lazy" decoding="async">
         </figure>
       </div>
     </div>
@@ -398,35 +379,9 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           </div>
           <p class="plain-note"><strong>Kapan evaluasi medis:</strong> bila nyeri menetap lebih dari 2 sampai 4 minggu, mengganggu tidur, mengubah cara berjalan, atau membuat aktivitas harian seperti salat berdiri, mandi, dan naik turun tempat tidur jadi jauh lebih sulit.</p>
         </div>
-        <div class="body-figure">
-          <svg viewBox="0 0 260 280" role="img" aria-labelledby="bodyFigTitle bodyFigDesc">
-            <title id="bodyFigTitle">Area nyeri umum pada lansia</title>
-            <desc id="bodyFigDesc">Siluet tubuh dengan sorotan nyeri pada leher-bahu, punggung bawah, panggul, dan lutut.</desc>
-            <rect x="0" y="0" width="260" height="280" rx="14" fill="#fffdfa"></rect>
-            <circle cx="89" cy="42" r="17" fill="#f5ddd8" stroke="#a3191e" stroke-width="2"></circle>
-            <path d="M89 59c-14 0-24 12-24 27v30c0 10 7 18 16 21l-10 52h15l7-44h8l7 44h15l-10-52c9-3 16-11 16-21V86c0-15-10-27-24-27z" fill="#f8ebe5" stroke="#6e5b55" stroke-width="2"></path>
-            <ellipse cx="71" cy="78" rx="11" ry="10" fill="#fcebed" stroke="#a3191e" stroke-width="2"></ellipse>
-            <ellipse cx="107" cy="78" rx="11" ry="10" fill="#fcebed" stroke="#a3191e" stroke-width="2"></ellipse>
-            <rect x="78" y="112" width="22" height="18" rx="8" fill="#fcebed" stroke="#a3191e" stroke-width="2"></rect>
-            <rect x="72" y="145" width="34" height="16" rx="8" fill="#fcebed" stroke="#a3191e" stroke-width="2"></rect>
-            <circle cx="78" cy="202" r="10" fill="#fcebed" stroke="#a3191e" stroke-width="2"></circle>
-            <circle cx="100" cy="202" r="10" fill="#fcebed" stroke="#a3191e" stroke-width="2"></circle>
-            <path d="M134 52h97" stroke="#c49f93" stroke-width="2"></path>
-            <path d="M128 80h103" stroke="#c49f93" stroke-width="2"></path>
-            <path d="M135 122h96" stroke="#c49f93" stroke-width="2"></path>
-            <path d="M128 153h103" stroke="#c49f93" stroke-width="2"></path>
-            <path d="M135 202h96" stroke="#c49f93" stroke-width="2"></path>
-            <circle cx="134" cy="52" r="4" fill="#a3191e"></circle>
-            <circle cx="128" cy="80" r="4" fill="#a3191e"></circle>
-            <circle cx="135" cy="122" r="4" fill="#a3191e"></circle>
-            <circle cx="128" cy="153" r="4" fill="#a3191e"></circle>
-            <circle cx="135" cy="202" r="4" fill="#a3191e"></circle>
-            <text x="143" y="56" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Leher</text>
-            <text x="137" y="84" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Bahu</text>
-            <text x="144" y="126" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Punggung bawah</text>
-            <text x="137" y="157" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Panggul</text>
-            <text x="144" y="206" font-size="12" font-family="Tahoma" fill="#231b18" font-weight="700">Lutut</text>
-          </svg>
+        <div class="body-figure media-figure">
+          <img data-media-key="body-pain" alt="" loading="lazy" decoding="async">
+          <p class="figure-caption">Orientasi cepat area nyeri yang sering mengganggu gerak pada lansia. Nama area utama tetap dibaca di label dan poin teks di sekitar gambar.</p>
         </div>
       </div>
       <div class="body-labels">
@@ -648,33 +603,9 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           </div>
         </div>
         <div class="exercise-side">
-          <div class="micro-figure">
-            <svg viewBox="0 0 280 250" role="img" aria-labelledby="exerciseFigTitle exerciseFigDesc">
-              <title id="exerciseFigTitle">Diagram latihan ringan aman</title>
-              <desc id="exerciseFigDesc">Tiga ilustrasi sederhana: bangun dari kursi, luruskan lutut saat duduk, dan latihan keseimbangan sambil berpegangan.</desc>
-              <rect x="0" y="0" width="280" height="250" rx="14" fill="#fffdfa"></rect>
-              <text x="18" y="26" font-size="14" font-family="Tahoma" font-weight="700" fill="#231b18">Latihan aman, mulai pelan</text>
-              <rect x="16" y="40" width="76" height="82" rx="12" fill="#f8ebe5" stroke="#c49f93"></rect>
-              <rect x="103" y="40" width="76" height="82" rx="12" fill="#f8ebe5" stroke="#c49f93"></rect>
-              <rect x="190" y="40" width="76" height="82" rx="12" fill="#f8ebe5" stroke="#c49f93"></rect>
-              <rect x="34" y="82" width="28" height="18" rx="3" fill="#c49f93"></rect>
-              <path d="M52 66a8 8 0 1 0-16 0 8 8 0 0 0 16 0z" fill="#f3d9d2" stroke="#6e5b55"></path>
-              <path d="M44 74v25m0 0 14 12m-14-12-12 10" stroke="#6e5b55" stroke-width="3" stroke-linecap="round"></path>
-              <text x="25" y="115" font-size="11" font-family="Tahoma" fill="#231b18">Bangun-duduk</text>
-              <circle cx="141" cy="66" r="8" fill="#f3d9d2" stroke="#6e5b55"></circle>
-              <path d="M141 74v23m0 0 16 0m-16 0-11 10" stroke="#6e5b55" stroke-width="3" stroke-linecap="round"></path>
-              <path d="M157 97l8-4" stroke="#a3191e" stroke-width="3" stroke-linecap="round"></path>
-              <text x="110" y="115" font-size="11" font-family="Tahoma" fill="#231b18">Luruskan lutut</text>
-              <circle cx="228" cy="66" r="8" fill="#f3d9d2" stroke="#6e5b55"></circle>
-              <path d="M228 74v22m0 0 13 12m-13-12-10 11" stroke="#6e5b55" stroke-width="3" stroke-linecap="round"></path>
-              <path d="M244 52v60" stroke="#c49f93" stroke-width="4" stroke-linecap="round"></path>
-              <text x="203" y="115" font-size="11" font-family="Tahoma" fill="#231b18">Pegang kursi</text>
-              <rect x="18" y="140" width="244" height="88" rx="12" fill="#f8f2ed" stroke="#dbc9be"></rect>
-              <text x="30" y="162" font-size="12" font-family="Tahoma" font-weight="700" fill="#231b18">Aturan singkat</text>
-              <text x="30" y="184" font-size="11" font-family="Tahoma" fill="#665b55">1. Mulai 5-10 menit.</text>
-              <text x="30" y="201" font-size="11" font-family="Tahoma" fill="#665b55">2. Stop bila nyeri tajam, sesak, pusing, atau lemas.</text>
-              <text x="30" y="218" font-size="11" font-family="Tahoma" fill="#665b55">3. Pegang sandaran bila keseimbangan belum mantap.</text>
-            </svg>
+          <div class="micro-figure media-figure">
+            <img data-media-key="exercise-safe" alt="" loading="lazy" decoding="async">
+            <p class="figure-caption">Gambar ini hanya orientasi visual. Urutan gerak, jumlah ulangan, dan tanda berhenti tetap dibaca di accordion latihan.</p>
           </div>
           <div class="motion-note"><strong>Kapan evaluasi medis:</strong> bila latihan ringan selalu memicu nyeri yang makin menjalar, lutut terasa mau copot, atau setelah latihan justru muncul bengkak besar dan jalan makin berat.</div>
         </div>
@@ -768,29 +699,9 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
             <p>Obat yang bikin mengantuk, penglihatan yang buram, dan pendengaran yang menurun bisa ikut meningkatkan risiko jatuh.</p>
           </article>
         </div>
-        <div class="house-figure">
-          <svg viewBox="0 0 280 260" role="img" aria-labelledby="houseFigTitle houseFigDesc">
-            <title id="houseFigTitle">Checklist rumah aman untuk lansia</title>
-            <desc id="houseFigDesc">Diagram rumah sederhana dengan penanda area penting untuk mencegah jatuh.</desc>
-            <rect x="0" y="0" width="280" height="260" rx="14" fill="#fffdfa"></rect>
-            <path d="M26 116 140 30l114 86" fill="#f8ebe5" stroke="#6e5b55" stroke-width="3" stroke-linejoin="round"></path>
-            <rect x="46" y="110" width="188" height="118" rx="10" fill="#fff" stroke="#6e5b55" stroke-width="3"></rect>
-            <rect x="118" y="156" width="42" height="72" rx="6" fill="#f4e6df" stroke="#6e5b55" stroke-width="2"></rect>
-            <rect x="68" y="132" width="34" height="30" rx="4" fill="#f8f2ed" stroke="#6e5b55" stroke-width="2"></rect>
-            <rect x="178" y="132" width="34" height="30" rx="4" fill="#f8f2ed" stroke="#6e5b55" stroke-width="2"></rect>
-            <line x1="78" y1="132" x2="78" y2="162" stroke="#c49f93" stroke-width="2"></line>
-            <line x1="92" y1="132" x2="92" y2="162" stroke="#c49f93" stroke-width="2"></line>
-            <circle cx="204" cy="176" r="10" fill="#fcebed" stroke="#a3191e" stroke-width="2"></circle>
-            <rect x="186" y="188" width="36" height="10" rx="5" fill="#fcebed" stroke="#a3191e" stroke-width="2"></rect>
-            <path d="M202 176v-26" stroke="#a3191e" stroke-width="2.5"></path>
-            <circle cx="70" cy="180" r="9" fill="#edf6ef" stroke="#245d3b" stroke-width="2"></circle>
-            <path d="M65 180l4 4 7-9" fill="none" stroke="#245d3b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M70 171v-24" stroke="#245d3b" stroke-width="2.5"></path>
-            <circle cx="140" cy="87" r="10" fill="#edf6ef" stroke="#245d3b" stroke-width="2"></circle>
-            <path d="M135 87l4 4 7-9" fill="none" stroke="#245d3b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M140 77v-18" stroke="#245d3b" stroke-width="2.5"></path>
-            <text x="30" y="244" font-size="11" font-family="Tahoma" fill="#665b55">Hijau: lampu cukup, jalur rapi. Merah: kamar mandi licin.</text>
-          </svg>
+        <div class="house-figure media-figure">
+          <img data-media-key="house-safe" alt="" loading="lazy" decoding="async">
+          <p class="figure-caption">Orientasi ruang rumah yang lebih aman: lampu cukup, jalur jalan lega, dan area kamar mandi perlu perhatian khusus.</p>
           <div class="callout good"><strong>Checklist cepat:</strong> lampu malam menyala, kamar mandi ada pegangan, sandal tidak licin, barang di lantai disingkirkan, dan ada keluarga yang tahu bila pasien mulai sering hampir jatuh.</div>
         </div>
       </div>
@@ -1002,10 +913,44 @@ const ZMC = {
   hours: "Senin - Minggu: 24 Jam"
 };
 
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773239265/zmc/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-hero.webp",
+    local: "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-hero.webp",
+    alt: "Perempuan lansia Indonesia di rumah menopang tubuh sambil memegang area pinggang sebagai orientasi nyeri badan pada lansia.",
+    width: 1536,
+    height: 1024
+  },
+  figures: {
+    "body-pain": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244939/zmc/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-body-pain.webp",
+      local: "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-body-pain.webp",
+      alt: "Visual orientasi lansia dengan area nyeri yang sering muncul pada leher, bahu, pinggang bawah, panggul, dan lutut.",
+      width: 1024,
+      height: 1536
+    },
+    "exercise-safe": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244943/zmc/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-exercise-safe.webp",
+      local: "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-exercise-safe.webp",
+      alt: "Visual orientasi latihan ringan lansia di rumah dengan kursi sebagai pegangan.",
+      width: 1024,
+      height: 1536
+    },
+    "house-safe": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244947/zmc/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-house-safe.webp",
+      local: "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-house-safe.webp",
+      alt: "Visual orientasi rumah yang lebih aman untuk lansia dengan pencahayaan baik dan kamar mandi lebih aman.",
+      width: 1024,
+      height: 1536
+    }
+  }
+};
+
 (function initPage(){
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
   const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
   const logoCandidates = [ZMC.logoLocal, "../zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
@@ -1060,6 +1005,51 @@ const ZMC = {
       window.print();
     });
   }
+
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
+    let localAttempted = false;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
+
+    function useLocalImage() {
+      if (!media.local || localAttempted) return;
+      localAttempted = true;
+      img.src = media.local;
+    }
+
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) {
+        useLocalImage();
+      } else {
+        const wrapper = img.closest("[data-media-wrap]");
+        if (wrapper) {
+          wrapper.hidden = true;
+        } else {
+          img.hidden = true;
+        }
+      }
+    });
+
+    if ((forceMediaLocal || !navigator.onLine) && media.local) {
+      useLocalImage();
+    } else if (media.remote) {
+      img.src = media.remote;
+    } else if (media.local) {
+      useLocalImage();
+    }
+
+    window.addEventListener("offline", function(){
+      if (media.local && img.getAttribute("src") !== media.local) useLocalImage();
+    });
+  }
+
+  bindMediaImage(document.getElementById("heroImage"), TOPIC_MEDIA.hero);
+  Array.from(document.querySelectorAll("[data-media-key]")).forEach(function(img){
+    const key = img.getAttribute("data-media-key");
+    bindMediaImage(img, TOPIC_MEDIA.figures && TOPIC_MEDIA.figures[key]);
+  });
 
   function setupDisclosure(buttonSelector, markSelector) {
     const buttons = Array.from(document.querySelectorAll(buttonSelector));

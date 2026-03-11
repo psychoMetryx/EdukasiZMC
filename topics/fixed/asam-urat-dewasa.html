@@ -90,7 +90,8 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .check-badge{width:1.6rem;height:1.6rem;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-size:.76rem;font-weight:700;flex-shrink:0}
 .check-row p,.compare-card p,.compare-card li,.danger-band p{margin:0;color:var(--muted);font-size:.91rem}
 .hero-figure,.micro-figure{padding:.65rem}
-.hero-figure svg,.micro-figure svg{width:100%;display:block}
+.hero-figure svg,.micro-figure svg,.hero-figure img,.micro-figure img{width:100%;display:block}
+.micro-figure img{border-radius:10px;background:var(--surface-soft);object-fit:cover}
 .quick{display:flex;flex-wrap:wrap;gap:.8rem;padding:.1rem 0;margin-top:.8rem;overflow:auto;scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
 .chip{min-height:auto;flex-shrink:0;display:inline-flex;align-items:center;padding:.18rem 0;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;text-decoration:none;font-size:.86rem;font-weight:700;color:var(--muted)}
 .chip:hover{background:transparent;color:var(--brand);border-bottom-color:var(--brand)}
@@ -127,6 +128,7 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .plain-list{margin:0;padding-left:1.05rem;display:grid;gap:.38rem}
 .plain-note{margin:0;color:var(--muted);font-size:.92rem;padding-left:.85rem;border-left:3px solid var(--line-strong)}
 .plain-note strong{color:var(--ink)}
+.figure-caption{margin:0;font-size:.88rem;color:var(--muted)}
 .danger-columns h3{margin:0 0 .4rem;font-size:1rem;line-height:1.26}
 .danger-columns ul{margin:0;padding-left:1.05rem;display:grid;gap:.34rem}
 .danger-columns li{color:var(--muted);font-size:.92rem}
@@ -343,25 +345,11 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
             <li><strong>Cukup minum air.</strong> Dehidrasi bisa memicu flare, terutama bila ada batu ginjal atau cuaca panas.</li>
           </ol>
         </div>
-        <div class="micro-figure" aria-hidden="true">
-          <svg viewBox="0 0 360 230" role="img" aria-label="Ilustrasi langkah aman saat flare">
-            <rect x="14" y="14" width="332" height="202" rx="16" fill="#fff" stroke="#d7c7bd"></rect>
-            <text x="34" y="44" font-size="18" font-family="Tahoma" fill="#1f1a18" font-weight="700">Saat flare: fokus aman dulu</text>
-            <circle cx="76" cy="86" r="22" fill="#f8e9e7" stroke="#cfa79f"></circle>
-            <path d="M67 86h18M76 77v18" stroke="#a3191e" stroke-width="3" stroke-linecap="round"></path>
-            <text x="110" y="91" font-size="14" font-family="Tahoma" fill="#5f5650">istirahatkan sendi</text>
-            <circle cx="76" cy="132" r="22" fill="#edf6ef" stroke="#bad0bf"></circle>
-            <path d="M67 132l7 7 11-15" stroke="#205e3a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-            <text x="110" y="137" font-size="14" font-family="Tahoma" fill="#5f5650">kompres dingin</text>
-            <circle cx="76" cy="178" r="22" fill="#fbf0de" stroke="#dcc796"></circle>
-            <path d="M76 167v22M66 178h20" stroke="#8c5b14" stroke-width="3" stroke-linecap="round"></path>
-            <text x="110" y="183" font-size="14" font-family="Tahoma" fill="#5f5650">cukup minum dan cek pemicu</text>
-            <rect x="208" y="72" width="110" height="92" rx="12" fill="#f8f2ed" stroke="#d7c7bd"></rect>
-            <text x="225" y="98" font-size="14" font-family="Tahoma" fill="#a3191e" font-weight="700">Jangan paksakan</text>
-            <text x="225" y="120" font-size="13" font-family="Tahoma" fill="#5f5650">lari, hiking,</text>
-            <text x="225" y="140" font-size="13" font-family="Tahoma" fill="#5f5650">atau olahraga</text>
-            <text x="225" y="160" font-size="13" font-family="Tahoma" fill="#5f5650">yang trauma sendi.</text>
-          </svg>
+        <div class="micro-figure">
+          <div class="media-figure" data-media-wrap>
+            <img data-media-key="flare-safe" alt="" loading="lazy" decoding="async">
+          </div>
+          <p class="figure-caption">Gambar ini hanya orientasi saat kambuh. Langkah aman tetap mengikuti empat poin praktis di sisi kiri.</p>
         </div>
       </div>
       <div class="plain-columns">
@@ -724,11 +712,24 @@ const ZMC = {
   phone: "+62 822-1718-0432",
   hours: "Senin - Minggu: 24 Jam"
 };
+const TOPIC_MEDIA = {
+  hero: null,
+  figures: {
+    "flare-safe": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244980/zmc/asam-urat-dewasa/asam-urat-dewasa-flare-safe.webp",
+      local: "../../assets/topics/asam-urat-dewasa/asam-urat-dewasa-flare-safe.webp",
+      alt: "Pasien dewasa Indonesia mengistirahatkan sendi bengkak dan kompres dingin saat serangan asam urat.",
+      width: 1536,
+      height: 1024
+    }
+  }
+};
 
 (function initPage(){
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
   const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
   const logoCandidates = ["../zmc-logo.jpeg", ZMC.logoLocal, "../../topics/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
@@ -785,6 +786,42 @@ const ZMC = {
       window.print();
     });
   }
+
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
+    let localAttempted = false;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
+    function useLocalImage() {
+      if (!media.local || localAttempted) return;
+      localAttempted = true;
+      img.src = media.local;
+    }
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) {
+        useLocalImage();
+      } else {
+        const wrap = img.closest("[data-media-wrap]") || img.closest(".micro-figure") || img.closest(".hero-figure");
+        if (wrap) wrap.hidden = true;
+        else img.hidden = true;
+      }
+    });
+    if ((forceMediaLocal || !navigator.onLine) && media.local) {
+      useLocalImage();
+    } else if (media.remote) {
+      img.src = media.remote;
+    } else if (media.local) {
+      useLocalImage();
+    }
+    window.addEventListener("offline", function(){
+      if (media.local && img.getAttribute("src") !== media.local) useLocalImage();
+    });
+  }
+  Array.from(document.querySelectorAll("[data-media-key]")).forEach(function(img){
+    const key = img.getAttribute("data-media-key");
+    bindMediaImage(img, TOPIC_MEDIA.figures && TOPIC_MEDIA.figures[key]);
+  });
 
   const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
   function closeFaq() {

@@ -64,8 +64,9 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-note strong{color:var(--ink)}
 .hero-visual{display:none}
 .hero-figure,.micro-figure,.visual-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.66rem}
-.hero-figure svg,.micro-figure svg,.visual-board svg{width:100%;display:block}
-.hero-figure svg{min-height:154px}
+.hero-figure svg,.micro-figure svg,.visual-board svg,.hero-figure img{width:100%;display:block}
+.hero-figure svg,.hero-figure img{min-height:154px}
+.hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
 .hero-caption{margin:0;font-size:.86rem;color:var(--muted)}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
@@ -117,10 +118,17 @@ td{color:var(--muted)}
 .guide-block strong{color:var(--brand)}
 .status-grid{display:grid;gap:.85rem}
 .status-block{padding:.9rem;display:grid;gap:.45rem}
+.status-block strong{color:var(--ink)}
+.status-block.danger{border-left:4px solid var(--danger)}
+.status-block.good{border-left:4px solid var(--good)}
 .status-tag{display:inline-flex;align-items:center;padding:.2rem .58rem;border-radius:999px;font-size:.79rem;font-weight:700;width:max-content}
 .status-tag.red{background:var(--brand-soft);color:var(--brand)}
 .status-tag.warn{background:var(--warn-bg);color:var(--warn)}
 .status-tag.good{background:var(--good-bg);color:var(--good)}
+.flow-stack{display:grid;gap:.75rem}
+.flow-step{border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);padding:.82rem .86rem}
+.flow-step strong{display:block;margin-bottom:.18rem;color:var(--ink)}
+.flow-split{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.7rem}
 .myth-list{display:grid;gap:.8rem}
 .myth-row{padding:.9rem;display:grid;gap:.46rem;border-left:4px solid var(--line-strong)}
 .myth-row strong{color:var(--brand)}
@@ -172,9 +180,12 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
 @media(max-width:820px){.quick{flex-wrap:nowrap;overflow:auto}table{min-width:620px}}
 @media(min-width:920px){
   .topbar-inner{grid-template-columns:minmax(0,1fr) auto}
-  .hero-grid{min-height:228px}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);min-height:228px}
   .hero-copy{padding:.86rem .96rem;gap:.3rem}
   .hero-actions .btn{flex:0 0 auto}
+  .hero-visual{display:grid;align-content:start;padding:.72rem;background:var(--surface-soft);border-left:1px solid var(--line)}
+  .hero-figure{padding:.48rem}
+  .hero-figure svg,.hero-figure img{height:156px}
   .split{grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);align-items:start}
   .decision-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -241,30 +252,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       </div>
       <div class="hero-visual">
         <div class="hero-figure" aria-hidden="true">
-          <svg viewBox="0 0 420 250" role="img" aria-label="Ilustrasi alur sederhana kapan curiga tipes">
-            <rect x="14" y="14" width="392" height="222" rx="18" fill="#fffaf7" stroke="#d8c7bf"></rect>
-            <text x="34" y="42" font-size="21" font-family="Tahoma" fill="#211a17" font-weight="700">Curiga tifoid: lihat polanya, bukan satu gejala saja</text>
-            <rect x="34" y="63" width="108" height="128" rx="12" fill="#f6ebe6" stroke="#d7c4b9"></rect>
-            <text x="48" y="88" font-size="14" font-family="Tahoma" fill="#a1191e" font-weight="700">Demam</text>
-            <text x="48" y="110" font-size="12" font-family="Tahoma" fill="#5f5852">lebih dari</text>
-            <text x="48" y="129" font-size="12" font-family="Tahoma" fill="#5f5852">beberapa hari</text>
-            <text x="48" y="156" font-size="12" font-family="Tahoma" fill="#5f5852">sering disertai</text>
-            <text x="48" y="175" font-size="12" font-family="Tahoma" fill="#5f5852">badan lemah</text>
-            <rect x="156" y="63" width="108" height="128" rx="12" fill="#f6ebe6" stroke="#d7c4b9"></rect>
-            <text x="172" y="88" font-size="14" font-family="Tahoma" fill="#a1191e" font-weight="700">Perut</text>
-            <text x="172" y="110" font-size="12" font-family="Tahoma" fill="#5f5852">mual, nyeri,</text>
-            <text x="172" y="129" font-size="12" font-family="Tahoma" fill="#5f5852">diare atau</text>
-            <text x="172" y="148" font-size="12" font-family="Tahoma" fill="#5f5852">malah sembelit</text>
-            <rect x="278" y="63" width="108" height="128" rx="12" fill="#faecec" stroke="#d9b2b4"></rect>
-            <text x="295" y="88" font-size="14" font-family="Tahoma" fill="#8f1d22" font-weight="700">Bahaya</text>
-            <text x="295" y="110" font-size="12" font-family="Tahoma" fill="#5f5852">tidak kuat minum</text>
-            <text x="295" y="129" font-size="12" font-family="Tahoma" fill="#5f5852">muntah terus</text>
-            <text x="295" y="148" font-size="12" font-family="Tahoma" fill="#5f5852">bingung atau</text>
-            <text x="295" y="167" font-size="12" font-family="Tahoma" fill="#5f5852">BAB hitam</text>
-            <path d="M144 127h12" stroke="#b8897e" stroke-width="3" stroke-linecap="round"></path>
-            <path d="M264 127h12" stroke="#b8897e" stroke-width="3" stroke-linecap="round"></path>
-            <text x="34" y="215" font-size="12" font-family="Tahoma" fill="#5f5852">Dokter menilai gejala, pemeriksaan fisik, dan bila perlu tes darah. Satu hasil tes tidak boleh dibaca sendiri.</text>
-          </svg>
+          <img id="heroImage" alt="" loading="lazy" decoding="async">
         </div>
         <p class="hero-caption">Tifoid adalah infeksi bakteri <em>Salmonella Typhi</em> yang biasanya menular lewat makanan, minuman, atau tangan yang terkontaminasi tinja.</p>
       </div>
@@ -331,20 +319,21 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <div class="rail-row"><div class="rail-num">2</div><div><p><strong>Air, makanan, atau tangan lalu terkontaminasi.</strong> Ini bisa terjadi lewat air tidak bersih, alat makan yang kotor, atau makanan yang dipegang setelah dari toilet tanpa cuci tangan.</p></div></div>
           <div class="rail-row"><div class="rail-num">3</div><div><p><strong>Bakteri tertelan.</strong> Risiko lebih tinggi pada jajanan terbuka, es atau air yang tidak jelas, makanan yang tidak matang sempurna, dan dapur dengan kontaminasi silang.</p></div></div>
         </div>
-        <aside class="micro-figure" aria-hidden="true">
-          <svg viewBox="0 0 360 300" role="img" aria-label="Diagram penularan tifoid lewat makanan dan tangan">
-            <rect x="14" y="16" width="332" height="268" rx="16" fill="#fff" stroke="#d4c0b6"></rect>
-            <text x="46" y="42" font-size="18" font-family="Tahoma" fill="#211a17" font-weight="700">Jalur penularan umum</text>
-            <circle cx="82" cy="100" r="34" fill="#f6ebe6" stroke="#d4c0b6"></circle><text x="58" y="97" font-size="12" font-family="Tahoma" fill="#a1191e" font-weight="700">Tinja</text><text x="45" y="115" font-size="11" font-family="Tahoma" fill="#5f5852">bawa bakteri</text>
-            <circle cx="182" cy="100" r="34" fill="#f6ebe6" stroke="#d4c0b6"></circle><text x="161" y="97" font-size="12" font-family="Tahoma" fill="#a1191e" font-weight="700">Tangan</text><text x="155" y="115" font-size="11" font-family="Tahoma" fill="#5f5852">tidak bersih</text>
-            <circle cx="282" cy="100" r="34" fill="#f6ebe6" stroke="#d4c0b6"></circle><text x="255" y="97" font-size="12" font-family="Tahoma" fill="#a1191e" font-weight="700">Makanan</text><text x="261" y="115" font-size="11" font-family="Tahoma" fill="#5f5852">atau air</text>
-            <path d="M116 100h32M216 100h32" stroke="#b8897e" stroke-width="3" stroke-linecap="round"></path>
-            <rect x="40" y="194" width="280" height="66" rx="12" fill="#faecec" stroke="#d9b2b4"></rect>
-            <text x="58" y="219" font-size="13" font-family="Tahoma" fill="#8f1d22" font-weight="700">Risiko harian:</text>
-            <text x="58" y="238" font-size="12" font-family="Tahoma" fill="#8f1d22" font-weight="700">jajanan terbuka, es tidak jelas,</text>
-            <text x="58" y="254" font-size="12" font-family="Tahoma" fill="#8f1d22" font-weight="700">serta dapur campur bahan</text>
-            <text x="58" y="268" font-size="12" font-family="Tahoma" fill="#8f1d22" font-weight="700">mentah dan matang</text>
-          </svg>
+        <aside class="micro-figure" aria-label="Jalur penularan umum">
+          <div class="status-grid">
+            <article class="status-block">
+              <strong>1. Tinja membawa bakteri</strong>
+              <p>Sumber penularan tetap berasal dari manusia yang sedang sakit atau masih membawa bakteri.</p>
+            </article>
+            <article class="status-block">
+              <strong>2. Tangan, alat, air, atau makanan terkontaminasi</strong>
+              <p>Perpindahan paling sering terjadi saat kebersihan tangan dan dapur tidak terjaga.</p>
+            </article>
+            <article class="status-block danger">
+              <strong>3. Bakteri lalu tertelan</strong>
+              <p>Risiko harian naik pada jajanan terbuka, es tidak jelas, dan dapur yang campur bahan mentah dengan matang.</p>
+            </article>
+          </div>
         </aside>
       </div>
       <div class="callout warn"><strong>Nuansa lokal:</strong> kebiasaan jajan sembarang tempat, minum es dari sumber air yang tidak jelas, atau makan makanan matang yang dibiarkan terlalu lama di suhu ruang bisa ikut menaikkan risiko.</div>
@@ -412,23 +401,27 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <p>Untuk pasien awam, pesan terpentingnya bukan menghafal nama tes, tetapi memahami bahwa <strong>tes membantu dokter</strong> dan tidak boleh dijadikan alat menegakkan diagnosis sendiri dari rumah.</p>
           <div class="callout warn"><strong>Kalau sudah demam beberapa hari dan terasa berat, jangan menunggu "biar lengkap dulu gejalanya".</strong> Pemeriksaan lebih dini biasanya justru lebih aman.</div>
         </div>
-        <aside class="visual-board" aria-hidden="true">
-          <svg viewBox="0 0 360 280" role="img" aria-label="Alur kapan memeriksakan dugaan tipes">
-            <rect x="16" y="16" width="328" height="248" rx="16" fill="#fff" stroke="#d4c0b6"></rect>
-            <text x="34" y="42" font-size="20" font-family="Tahoma" fill="#211a17" font-weight="700">Alur keputusan</text>
-            <rect x="38" y="58" width="284" height="48" rx="10" fill="#f6ebe6" stroke="#d4c0b6"></rect>
-            <text x="58" y="80" font-size="12" font-family="Tahoma" fill="#a1191e" font-weight="700">Demam beberapa hari</text>
-            <text x="58" y="98" font-size="12" font-family="Tahoma" fill="#a1191e" font-weight="700">+ perut tidak enak + lemah</text>
-            <path d="M180 106v24" stroke="#b8897e" stroke-width="3" stroke-linecap="round"></path>
-            <rect x="38" y="130" width="284" height="48" rx="10" fill="#f8f1eb" stroke="#d4c0b6"></rect>
-            <text x="58" y="151" font-size="12" font-family="Tahoma" fill="#5f5852">Lihat minum, pipis, dan</text>
-            <text x="58" y="168" font-size="12" font-family="Tahoma" fill="#5f5852">apakah pasien tetap responsif</text>
-            <path d="M180 178v22" stroke="#b8897e" stroke-width="3" stroke-linecap="round"></path>
-            <rect x="38" y="202" width="136" height="42" rx="10" fill="#edf6ef" stroke="#c7d7c6"></rect>
-            <text x="55" y="228" font-size="12" font-family="Tahoma" fill="#225f3d" font-weight="700">Masih stabil</text>
-            <rect x="186" y="202" width="136" height="42" rx="10" fill="#faecec" stroke="#d9b2b4"></rect>
-            <text x="202" y="228" font-size="12" font-family="Tahoma" fill="#8f1d22" font-weight="700">Tidak stabil</text>
-          </svg>
+        <aside class="visual-board" aria-label="Alur kapan memeriksakan dugaan tipes">
+          <div class="flow-stack">
+            <div class="flow-step">
+              <strong>Mulai curiga</strong>
+              <p>Demam beberapa hari, perut tidak enak, dan badan lemah sudah cukup untuk membuat keluarga tidak menunda evaluasi.</p>
+            </div>
+            <div class="flow-step">
+              <strong>Cek tiga patokan rumah</strong>
+              <p>Lihat minum masih masuk, pipis masih ada, dan pasien tetap responsif atau justru makin layu.</p>
+            </div>
+            <div class="flow-split">
+              <div class="status-block good">
+                <strong>Masih stabil</strong>
+                <p>Tetap periksa terencana, terutama bila demam terus berjalan.</p>
+              </div>
+              <div class="status-block danger">
+                <strong>Tidak stabil</strong>
+                <p>Periksa lebih cepat hari itu juga, apalagi bila muntah, sulit minum, atau kesadaran berubah.</p>
+              </div>
+            </div>
+          </div>
         </aside>
       </div>
     </div>
@@ -453,21 +446,25 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <div class="rail-row"><div class="rail-num">4</div><div><p><strong>Cuci tangan setelah dari toilet dan sebelum menyiapkan makanan.</strong> Ini penting supaya bakteri tidak menyebar ke anggota keluarga lain.</p></div></div>
           <div class="rail-row"><div class="rail-num">5</div><div><p><strong>Jangan siapkan makanan untuk orang lain bila sedang sakit dan belum dinyatakan aman.</strong> CDC menekankan ini terutama untuk mencegah penularan lewat makanan.</p></div></div>
         </div>
-        <aside class="micro-figure" aria-hidden="true">
-          <svg viewBox="0 0 360 320" role="img" aria-label="Checklist pemantauan rawat rumah pada dugaan tipes">
-            <rect x="14" y="14" width="332" height="292" rx="16" fill="#fff" stroke="#d4c0b6"></rect>
-            <text x="32" y="40" font-size="20" font-family="Tahoma" fill="#211a17" font-weight="700">Pantau di rumah</text>
-            <g font-family="Tahoma" font-size="13" fill="#5f5852">
-              <circle cx="42" cy="84" r="9" fill="#edf6ef"></circle><path d="M38 84l3 3 5-6" stroke="#225f3d" stroke-width="2" fill="none"></path><text x="60" y="89">Masih mau minum</text>
-              <circle cx="42" cy="114" r="9" fill="#edf6ef"></circle><path d="M38 114l3 3 5-6" stroke="#225f3d" stroke-width="2" fill="none"></path><text x="60" y="119">Pipis masih ada</text>
-              <circle cx="42" cy="144" r="9" fill="#edf6ef"></circle><path d="M38 144l3 3 5-6" stroke="#225f3d" stroke-width="2" fill="none"></path><text x="60" y="149">Muntah tidak makin sering</text>
-              <circle cx="42" cy="174" r="9" fill="#edf6ef"></circle><path d="M38 174l3 3 5-6" stroke="#225f3d" stroke-width="2" fill="none"></path><text x="60" y="179">Masih sadar baik</text>
-              <circle cx="42" cy="204" r="9" fill="#edf6ef"></circle><path d="M38 204l3 3 5-6" stroke="#225f3d" stroke-width="2" fill="none"></path><text x="60" y="209">Nyeri perut tidak memberat</text>
-            </g>
-            <rect x="40" y="234" width="280" height="50" rx="12" fill="#faecec" stroke="#d9b2b4"></rect>
-            <text x="58" y="255" font-size="13" font-family="Tahoma" fill="#8f1d22" font-weight="700">Kalau salah satu gagal dijaga,</text>
-            <text x="58" y="272" font-size="13" font-family="Tahoma" fill="#8f1d22" font-weight="700">langsung periksa</text>
-          </svg>
+        <aside class="micro-figure" aria-label="Checklist pemantauan rawat rumah pada dugaan tipes">
+          <div class="status-grid">
+            <article class="status-block good">
+              <strong>Masih mau minum</strong>
+              <p>Kalau cairan mulai sulit masuk, rawat rumah jadi jauh lebih berisiko.</p>
+            </article>
+            <article class="status-block good">
+              <strong>Pipis masih ada</strong>
+              <p>Pipis yang makin jarang mengarah ke kekurangan cairan.</p>
+            </article>
+            <article class="status-block">
+              <strong>Muntah dan nyeri perut tidak memberat</strong>
+              <p>Perubahan ke arah lebih berat harus dianggap sebagai alasan evaluasi lebih cepat.</p>
+            </article>
+            <article class="status-block danger">
+              <strong>Kesadaran tetap baik</strong>
+              <p>Kalau makin lemah, mengantuk, bingung, atau tampak tidak responsif, jangan bertahan di rumah.</p>
+            </article>
+          </div>
         </aside>
       </div>
       <div class="callout warn"><strong>Rawat rumah bukan berarti menunggu pasif.</strong> Kalau pasien makin lemah, tidak bisa minum, muntah terus, atau pipis jauh berkurang, pola rawat rumah sudah tidak cukup.</div>
@@ -661,10 +658,21 @@ const ZMC = {
   phone: "+62 822-1718-0432",
   hours: "Senin - Minggu: 24 Jam"
 };
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773239263/zmc/tipes-fixed/tipes-fixed-hero.webp",
+    local: "../../assets/topics/tipes-fixed/tipes-fixed-hero.webp",
+    alt: "Pasien dewasa Indonesia beristirahat di rumah dengan keluhan demam sementara anggota keluarga memeriksa kondisinya, sebagai orientasi dugaan tipes.",
+    width: 1536,
+    height: 1024
+  },
+  figures: {}
+};
 (function initPage(){
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
   const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a1191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
   const logoCandidates = [ZMC.logoLocal, "../zmc-logo.jpeg", "../../assets/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
@@ -681,6 +689,42 @@ const ZMC = {
   function checkIconCDN(){ if (forceIcons) { root.classList.add("icons-fallback"); return; } const probe = document.createElement("i"); probe.className = "bi bi-check2"; probe.style.position = "absolute"; probe.style.left = "-9999px"; document.body.appendChild(probe); const pseudo = getComputedStyle(probe, "::before"); const loaded = pseudo && pseudo.content && pseudo.content !== "none" && String(pseudo.fontFamily || "").toLowerCase().includes("bootstrap-icons"); if (!loaded) root.classList.add("icons-fallback"); probe.remove(); }
   checkIconCDN();
   const printBtn = document.getElementById("printPage"); if (printBtn) printBtn.addEventListener("click", function(){ window.print(); });
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
+    let localAttempted = false;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
+    function useLocalImage() {
+      if (!media.local || localAttempted) return;
+      localAttempted = true;
+      img.src = media.local;
+    }
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) {
+        useLocalImage();
+      } else {
+        const wrap = img.closest("[data-media-wrap]") || img.closest(".hero-figure");
+        if (wrap) wrap.hidden = true;
+        else img.hidden = true;
+      }
+    });
+    if ((forceMediaLocal || !navigator.onLine) && media.local) {
+      useLocalImage();
+    } else if (media.remote) {
+      img.src = media.remote;
+    } else if (media.local) {
+      useLocalImage();
+    }
+    window.addEventListener("offline", function(){
+      if (media.local && img.getAttribute("src") !== media.local) useLocalImage();
+    });
+  }
+  bindMediaImage(document.getElementById("heroImage"), TOPIC_MEDIA.hero);
+  Array.from(document.querySelectorAll("[data-media-key]")).forEach(function(img){
+    const key = img.getAttribute("data-media-key");
+    bindMediaImage(img, TOPIC_MEDIA.figures && TOPIC_MEDIA.figures[key]);
+  });
   const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
   function closeFaq(){ faqButtons.forEach(function(btn){ const panel = document.getElementById(btn.getAttribute("aria-controls")); const mark = btn.querySelector(".faq-mark"); btn.setAttribute("aria-expanded", "false"); if (panel) panel.hidden = true; if (mark) mark.textContent = "+"; }); }
   function toggleFaq(btn){ const panel = document.getElementById(btn.getAttribute("aria-controls")); const mark = btn.querySelector(".faq-mark"); const open = btn.getAttribute("aria-expanded") === "true"; closeFaq(); if (!open && panel) { btn.setAttribute("aria-expanded", "true"); panel.hidden = false; if (mark) mark.textContent = "-"; } }

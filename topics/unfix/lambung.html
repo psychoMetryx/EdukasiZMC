@@ -327,10 +327,17 @@
       padding: 0.7rem;
     }
 
-    .hero-figure svg {
+    .hero-figure svg,
+    .hero-figure img {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .hero-figure img {
+      object-fit: cover;
+      border-radius: 10px;
+      background: var(--surface-muted);
     }
 
     main {
@@ -877,23 +884,7 @@
         </div>
         <div class="hero-side">
           <figure class="hero-figure" aria-labelledby="hero-figure-caption">
-            <svg viewBox="0 0 320 190" role="img" aria-labelledby="hero-figure-caption">
-              <title id="hero-figure-caption">Visual ringkas pemicu keluhan lambung dan posisi lambung</title>
-              <rect x="10" y="10" width="300" height="170" rx="14" fill="#fff8f6" stroke="#dec8c4"/>
-              <path d="M147 38c-9 1-17 8-19 17-2 8 0 17 6 23 5 5 8 10 7 17-1 7-8 14-16 19-10 7-17 17-18 31-1 22 16 39 39 39 24 0 45-18 52-38 4-11 5-22 3-32-3-14-12-26-25-34-10-6-16-10-18-18-2-8 0-15 5-24 3-5 2-8-2-7-6 1-10 4-14 7z" fill="#f4bbb6" stroke="#a1141c" stroke-width="3"/>
-              <path d="M163 58c7 10 17 16 29 20 14 5 22 15 25 29 3 14 1 27-4 39" fill="none" stroke="#7f0f15" stroke-width="3" stroke-linecap="round"/>
-              <path d="M135 45c-7 -10 -10 -20 -9 -28" fill="none" stroke="#7f0f15" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="72" cy="48" r="18" fill="#fbe9e7" stroke="#cdb3ae"/>
-              <text x="72" y="52" text-anchor="middle" font-size="12" fill="#7f0f15" font-family="Tahoma, Verdana, sans-serif">kopi</text>
-              <circle cx="254" cy="44" r="18" fill="#fbe9e7" stroke="#cdb3ae"/>
-              <text x="254" y="52" text-anchor="middle" font-size="12" fill="#7f0f15" font-family="Tahoma, Verdana, sans-serif">pedas</text>
-              <circle cx="70" cy="138" r="24" fill="#fbe9e7" stroke="#cdb3ae"/>
-              <text x="70" y="136" text-anchor="middle" font-size="11" fill="#7f0f15" font-family="Tahoma, Verdana, sans-serif">larut</text>
-              <text x="70" y="149" text-anchor="middle" font-size="11" fill="#7f0f15" font-family="Tahoma, Verdana, sans-serif">malam</text>
-              <rect x="214" y="122" width="78" height="34" rx="9" fill="#fde8e8" stroke="#d89da2"/>
-              <text x="253" y="143" text-anchor="middle" font-size="12" fill="#8f131b" font-family="Tahoma, Verdana, sans-serif">cek red flag</text>
-              <path d="M90 60h34M238 62h-28M94 138h30M214 139h-26" fill="none" stroke="#8f8f8f" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
+            <img id="heroImage" alt="" loading="lazy" decoding="async">
           </figure>
         </div>
       </div>
@@ -1132,6 +1123,16 @@
       hours: "Senin - Minggu: 24 Jam"
     };
 
+    const TOPIC_MEDIA = {
+      hero: {
+        remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773239263/zmc/lambung/lambung-hero.webp",
+        local: "../../assets/topics/lambung/lambung-hero-ai.webp",
+        alt: "Pasien dewasa Indonesia duduk tegak di rumah setelah makan sambil memegang area ulu hati dengan keluhan lambung ringan.",
+        width: 1536,
+        height: 1024
+      }
+    };
+
     (function initIconFallback() {
       const root = document.documentElement;
       const forceFallback = new URLSearchParams(window.location.search).get("icons") === "fallback";
@@ -1188,6 +1189,43 @@
       document.getElementById("footerWa").href = ZMC.whatsapp;
       document.getElementById("footerMap").href = ZMC.maps;
       document.getElementById("footerIg").href = ZMC.instagram;
+    })();
+
+    (function initHeroMedia() {
+      const heroImage = document.getElementById("heroImage");
+      if (!heroImage || !TOPIC_MEDIA.hero) return;
+      const heroMedia = TOPIC_MEDIA.hero;
+      let localAttempted = false;
+      heroImage.alt = heroMedia.alt;
+      heroImage.width = heroMedia.width;
+      heroImage.height = heroMedia.height;
+
+      function useLocalImage() {
+        if (!heroMedia.local || localAttempted) return;
+        localAttempted = true;
+        heroImage.src = heroMedia.local;
+      }
+
+      heroImage.addEventListener("error", function () {
+        if (!localAttempted && heroMedia.local) {
+          useLocalImage();
+        } else {
+          const figure = heroImage.closest(".hero-figure");
+          if (figure) figure.hidden = true;
+        }
+      });
+
+      if (!navigator.onLine && heroMedia.local) {
+        useLocalImage();
+      } else if (heroMedia.remote) {
+        heroImage.src = heroMedia.remote;
+      } else if (heroMedia.local) {
+        useLocalImage();
+      }
+
+      window.addEventListener("offline", function () {
+        if (heroImage.src !== heroMedia.local) useLocalImage();
+      });
     })();
 
     (function initPrintButton() {

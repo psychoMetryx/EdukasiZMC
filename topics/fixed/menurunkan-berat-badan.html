@@ -82,8 +82,10 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-point .icon-cdn,.hero-point .icon-local{font-size:1rem}
 .hero-visual{display:none;padding:.82rem;background:var(--surface-soft);gap:.6rem;align-content:start}
 .hero-figure,.micro-figure{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.65rem}
-.hero-figure svg,.micro-figure svg{width:100%;display:block}
-.hero-figure svg{min-height:108px}
+.hero-figure svg,.micro-figure svg,.hero-figure img,.micro-figure img{width:100%;display:block}
+.hero-figure svg,.hero-figure img{min-height:108px}
+.hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
+.micro-figure img{border-radius:10px;background:var(--surface-soft)}
 .hero-caption{display:none;margin:0;font-size:.85rem;color:var(--muted)}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
@@ -131,6 +133,18 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .rail-row{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start}
 .rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
 .measure-board,.walk-plan,.visual-board{padding:.9rem;display:grid;gap:.75rem}
+.media-figure{display:grid;gap:.7rem}
+.figure-caption{margin:0;font-size:.88rem;color:var(--muted)}
+.figure-points{margin:0;padding-left:1rem;display:grid;gap:.34rem;color:var(--muted);font-size:.9rem}
+.figure-split{display:grid;gap:.55rem}
+.figure-ratio{display:grid;gap:.5rem}
+.ratio-chip{border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);padding:.58rem .68rem}
+.ratio-chip strong{display:block;color:var(--ink);font-size:.92rem}
+.ratio-chip span{display:block;margin-top:.12rem;color:var(--muted);font-size:.85rem}
+.habit-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.85rem;display:grid;gap:.72rem}
+.habit-board h3{margin:0;font-size:1rem;line-height:1.28}
+.habit-board ul{margin:0;padding-left:1rem;display:grid;gap:.38rem;color:var(--muted);font-size:.9rem}
+.habit-board .callout{margin:0}
 .measure-list{display:grid;gap:.68rem}
 .measure-row{display:grid;grid-template-columns:auto 1fr;gap:.72rem;align-items:start}
 .measure-dot,.icon-box{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--surface-soft);color:var(--brand);display:grid;place-items:center;flex-shrink:0}
@@ -273,21 +287,7 @@ code{font-family:Consolas,monospace;font-size:.95em}
       </div>
       <div class="hero-visual" aria-hidden="true">
         <figure class="hero-figure">
-          <svg viewBox="0 0 320 180" role="img">
-            <rect x="10" y="10" width="300" height="160" rx="18" fill="#fffdfa" stroke="#d9c8bc" stroke-width="2"></rect>
-            <circle cx="86" cy="89" r="45" fill="#f8e8e7" stroke="#a3191e" stroke-width="3"></circle>
-            <path d="M86 44v90M41 89h90" stroke="#a3191e" stroke-width="3"></path>
-            <path d="M86 44a45 45 0 0 1 45 45H86z" fill="#f4c95d"></path>
-            <path d="M41 89a45 45 0 0 1 45-45v45z" fill="#9fc98a"></path>
-            <path d="M86 134a45 45 0 0 1-45-45h45z" fill="#7fc3d6"></path>
-            <path d="M131 89a45 45 0 0 1-45 45V89z" fill="#f39a7a"></path>
-            <circle cx="214" cy="54" r="16" fill="#f3e1d7" stroke="#24465d" stroke-width="3"></circle>
-            <path d="M208 114l7-31-12-13 12-22 15 11h21" fill="none" stroke="#24465d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M190 85l-18 16M225 122l16 25" fill="none" stroke="#24465d" stroke-width="5" stroke-linecap="round"></path>
-            <path d="M223 150c-11 0-19-6-25-13" fill="none" stroke="#8c5d13" stroke-width="3" stroke-linecap="round"></path>
-            <path d="M248 24h34l-24 24h24" fill="none" stroke="#8c5d13" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M251 67a21 21 0 1 0 31-18 24 24 0 0 1-4 .3 23 23 0 0 1-22-19A21 21 0 0 0 251 67z" fill="#f8f1eb" stroke="#8c5d13" stroke-width="3"></path>
-          </svg>
+          <img id="heroImage" alt="" loading="lazy" decoding="async">
         </figure>
         <p class="hero-caption">Pegangan cepat: makan lebih rapi, gerak lebih sering, dan tidur lebih tertata biasanya lebih awet daripada diet kilat.</p>
       </div>
@@ -439,20 +439,18 @@ code{font-family:Consolas,monospace;font-size:.95em}
             </ul>
           </article>
         </div>
-        <figure class="micro-figure" aria-label="Visual isi piring">
-          <svg viewBox="0 0 320 220" role="img">
-            <rect x="14" y="16" width="292" height="188" rx="18" fill="#fffdfa" stroke="#d9c8bc" stroke-width="2"></rect>
-            <circle cx="110" cy="110" r="70" fill="#fff" stroke="#a3191e" stroke-width="4"></circle>
-            <path d="M110 40v140M40 110h140" stroke="#a3191e" stroke-width="4"></path>
-            <path d="M110 40A70 70 0 0 1 180 110H110z" fill="#f4c95d"></path>
-            <path d="M40 110A70 70 0 0 1 110 40v70z" fill="#8fc882"></path>
-            <path d="M110 180A70 70 0 0 1 40 110h70z" fill="#6dc1d1"></path>
-            <path d="M180 110A70 70 0 0 1 110 180v-70z" fill="#f39a7a"></path>
-            <text x="214" y="74" font-size="15" font-family="Tahoma" fill="#211b18" font-weight="700">Setengah piring</text>
-            <text x="214" y="96" font-size="14" font-family="Tahoma" fill="#5f5550">sayur + buah</text>
-            <text x="214" y="132" font-size="15" font-family="Tahoma" fill="#211b18" font-weight="700">Sisa setengah</text>
-            <text x="214" y="154" font-size="14" font-family="Tahoma" fill="#5f5550">lauk + makanan pokok</text>
-          </svg>
+        <figure class="micro-figure media-figure" aria-label="Visual orientasi isi piring">
+          <img data-media-key="plate-balance" alt="" loading="lazy" decoding="async">
+          <div class="figure-ratio">
+            <div class="ratio-chip">
+              <strong>1/2 piring</strong>
+              <span>Sayur dan buah. Sayur dibuat lebih dominan supaya ruang kalori bocor makin sempit.</span>
+            </div>
+            <div class="ratio-chip">
+              <strong>1/2 sisanya</strong>
+              <span>Bagi antara lauk berprotein dan makanan pokok secukupnya. Jangan biarkan karbohidrat memenuhi hampir seluruh piring.</span>
+            </div>
+          </div>
         </figure>
       </div>
       <div class="callout warn">
@@ -577,22 +575,15 @@ code{font-family:Consolas,monospace;font-size:.95em}
             </div>
           </div>
         </div>
-        <figure class="micro-figure" aria-label="Visual cek kebiasaan harian">
-          <svg viewBox="0 0 320 220" role="img">
-            <rect x="20" y="18" width="280" height="184" rx="16" fill="#fffdfa" stroke="#d9c8bc" stroke-width="2"></rect>
-            <rect x="48" y="42" width="140" height="24" rx="6" fill="#f3e1d7"></rect>
-            <rect x="48" y="84" width="220" height="18" rx="6" fill="#f8f1eb"></rect>
-            <rect x="48" y="118" width="220" height="18" rx="6" fill="#f8f1eb"></rect>
-            <rect x="48" y="152" width="220" height="18" rx="6" fill="#f8f1eb"></rect>
-            <path d="M62 91l8 8 14-16" fill="none" stroke="#1f5c3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M62 125l8 8 14-16" fill="none" stroke="#1f5c3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M62 159l8 8 14-16" fill="none" stroke="#a3191e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-            <text x="56" y="58" font-size="14" font-family="Tahoma" fill="#211b18" font-weight="700">Cek mingguan</text>
-            <text x="92" y="96" font-size="13" font-family="Tahoma" fill="#5f5550">Minuman manis berkurang</text>
-            <text x="92" y="130" font-size="13" font-family="Tahoma" fill="#5f5550">Jalan kaki tercapai</text>
-            <text x="92" y="164" font-size="13" font-family="Tahoma" fill="#5f5550">Tidur masih berantakan</text>
-          </svg>
-        </figure>
+        <div class="habit-board" aria-label="Checklist kebiasaan mingguan">
+          <h3>Cek mingguan yang lebih berguna daripada lihat angka tiap hari</h3>
+          <ul>
+            <li><strong>Minuman manis:</strong> apakah frekuensinya betul-betul turun minggu ini?</li>
+            <li><strong>Langkah atau jalan kaki:</strong> apakah target gerak tercapai di hari kerja dan akhir pekan?</li>
+            <li><strong>Tidur:</strong> apakah jam tidur tetap berantakan dan bikin lapar malam naik lagi?</li>
+          </ul>
+          <div class="callout good"><strong>Pakai pola warna sederhana:</strong> hijau kalau membaik, kuning kalau stagnan, merah kalau kebiasaan lama kembali sering.</div>
+        </div>
       </div>
       <div class="callout">
         <strong>Kalau timbangan macet 2-4 minggu:</strong> cek lagi apakah minuman manis masih sering masuk, porsi akhir pekan lebih lepas, tidur makin pendek, atau langkah harian turun. Biasanya jawabannya ada di kebiasaan, bukan di "metabolisme rusak".
@@ -843,10 +834,30 @@ const ZMC = {
   hours: "Senin - Minggu: 24 Jam"
 };
 
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773239263/zmc/menurunkan-berat-badan/menurunkan-berat-badan-hero.webp",
+    local: "../../assets/topics/menurunkan-berat-badan/menurunkan-berat-badan-hero.webp",
+    alt: "Pasien dewasa Indonesia makan porsi seimbang di rumah dengan air putih dan sepatu jalan di dekat meja sebagai isyarat perubahan gaya hidup yang realistis.",
+    width: 1536,
+    height: 1024
+  },
+  figures: {
+    "plate-balance": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244952/zmc/menurunkan-berat-badan/menurunkan-berat-badan-plate-balance.webp",
+      local: "../../assets/topics/menurunkan-berat-badan/menurunkan-berat-badan-plate-balance.webp",
+      alt: "Foto orientasi piring makan Indonesia dengan sayur, buah, lauk berprotein, dan makanan pokok dalam komposisi seimbang.",
+      width: 1024,
+      height: 1024
+    }
+  }
+};
+
 (function initPage(){
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
   const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
   const logoCandidates = ["../zmc-logo.jpeg", ZMC.logoLocal, "../assets/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
@@ -902,6 +913,51 @@ const ZMC = {
     });
   }
 
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
+    let localAttempted = false;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
+
+    function useLocalImage() {
+      if (!media.local || localAttempted) return;
+      localAttempted = true;
+      img.src = media.local;
+    }
+
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) {
+        useLocalImage();
+      } else {
+        const wrapper = img.closest("[data-media-wrap]");
+        if (wrapper) {
+          wrapper.hidden = true;
+        } else {
+          img.hidden = true;
+        }
+      }
+    });
+
+    if ((forceMediaLocal || !navigator.onLine) && media.local) {
+      useLocalImage();
+    } else if (media.remote) {
+      img.src = media.remote;
+    } else if (media.local) {
+      useLocalImage();
+    }
+
+    window.addEventListener("offline", function(){
+      if (media.local && img.getAttribute("src") !== media.local) useLocalImage();
+    });
+  }
+
+  bindMediaImage(document.getElementById("heroImage"), TOPIC_MEDIA.hero);
+  Array.from(document.querySelectorAll("[data-media-key]")).forEach(function(img){
+    const key = img.getAttribute("data-media-key");
+    bindMediaImage(img, TOPIC_MEDIA.figures && TOPIC_MEDIA.figures[key]);
+  });
+
   const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
   function closeFaq() {
     faqButtons.forEach(function(btn){
@@ -953,7 +1009,7 @@ const ZMC = {
     if (location.protocol === "file:") {
       statusNote.textContent = navigator.onLine
         ? "File lokal sedang dibuka. Konten utama tetap bisa dipakai offline."
-        : "Mode offline aktif. Konten utama, visual SVG, dan checklist tetap bisa dipakai di perangkat ini.";
+        : "Mode offline aktif. Konten utama, visual lokal, dan checklist tetap bisa dipakai di perangkat ini.";
       return;
     }
     statusNote.textContent = navigator.onLine

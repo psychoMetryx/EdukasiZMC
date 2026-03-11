@@ -81,10 +81,11 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-point span{display:block;margin-top:.14rem;font-size:.7rem;line-height:1.2;color:var(--muted)}
 .hero-visual{display:none}
 .hero-figure,.micro-figure,.visual-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.68rem}
-.hero-figure svg,.micro-figure svg,.visual-board svg,.hero-figure img{width:100%;display:block}
+.hero-figure svg,.micro-figure svg,.visual-board svg,.hero-figure img,.micro-figure img,.visual-board img{width:100%;display:block}
 .hero-figure svg,.hero-figure img{height:156px}
 .hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
 .hero-caption{margin:0;font-size:.8rem;line-height:1.15;color:var(--muted)}
+.micro-figure img,.visual-board img{border-radius:10px;background:var(--surface-soft);object-fit:cover}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
 .quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
@@ -119,6 +120,10 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .callout.good{border-left-color:var(--good);background:var(--good-bg);color:var(--good)}
 .callout.warn{border-left-color:var(--warn);background:var(--warn-bg);color:var(--warn)}
 .callout.danger{border-left-color:var(--danger);background:var(--danger-bg);color:var(--danger)}
+.figure-caption{margin:0;font-size:.88rem;color:var(--muted)}
+.figure-points{display:grid;gap:.7rem}
+.figure-point{border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);padding:.78rem .82rem}
+.figure-point strong{display:block;margin-bottom:.18rem;color:var(--ink)}
 .rail,.mini-panel{padding:.9rem;display:grid;gap:.75rem}
 .rail-row{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start}
 .rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
@@ -532,26 +537,25 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           </table>
         </div>
         <div class="visual-stack">
-          <div class="visual-board" aria-hidden="true">
-            <svg viewBox="0 0 340 320" role="img" aria-label="Visual garam tersembunyi di dapur">
-              <rect x="14" y="14" width="312" height="292" rx="18" fill="#fffaf7" stroke="#d9c8be"></rect>
-              <text x="30" y="40" font-size="18" font-family="Tahoma" fill="#211a17" font-weight="700">Garam tersembunyi di dapur</text>
-              <rect x="30" y="58" width="124" height="88" rx="12" fill="#fcebed" stroke="#dfb8bb"></rect>
-              <text x="48" y="82" font-size="13" font-family="Tahoma" fill="#8f1d22" font-weight="700">Sering kecolongan</text>
-              <text x="48" y="102" font-size="12" font-family="Tahoma" fill="#625853">mi instan</text>
-              <text x="48" y="118" font-size="12" font-family="Tahoma" fill="#625853">saus botolan</text>
-              <text x="48" y="134" font-size="12" font-family="Tahoma" fill="#625853">kaldu bubuk</text>
-              <rect x="186" y="58" width="124" height="88" rx="12" fill="#f7e5e4" stroke="#cfaaa2"></rect>
-              <text x="205" y="80" font-size="12.5" font-family="Tahoma" fill="#a3191e" font-weight="700">Khas, tapi perlu</text>
-              <text x="205" y="96" font-size="12.5" font-family="Tahoma" fill="#a3191e" font-weight="700">hati-hati</text>
-              <text x="205" y="115" font-size="12" font-family="Tahoma" fill="#625853">ikan asin</text>
-              <text x="205" y="131" font-size="12" font-family="Tahoma" fill="#625853">terasi, kerupuk asin</text>
-              <rect x="30" y="170" width="280" height="102" rx="14" fill="#edf6ef" stroke="#9ec0ab"></rect>
-              <text x="48" y="195" font-size="13" font-family="Tahoma" fill="#225f3d" font-weight="700">Pengganti rasa yang lebih aman</text>
-              <text x="48" y="216" font-size="12" font-family="Tahoma" fill="#4e6458">bawang, jahe, kunyit, kencur, serai, daun salam,</text>
-              <text x="48" y="232" font-size="12" font-family="Tahoma" fill="#4e6458">merica, jeruk limau, tomat, cabai secukupnya,</text>
-              <text x="48" y="248" font-size="12" font-family="Tahoma" fill="#4e6458">serta lebih banyak sayur dan buah segar.</text>
-            </svg>
+          <div class="visual-board">
+            <div class="media-figure" data-media-wrap>
+              <img data-media-key="sodium-kitchen" alt="" loading="lazy" decoding="async">
+            </div>
+            <p class="figure-caption">Gambar ini hanya orientasi dapur harian. Yang menentukan tetap daftar makanan dan pengganti rasa di bawah.</p>
+            <div class="figure-points">
+              <div class="figure-point">
+                <strong>Sering kecolongan</strong>
+                <p>Mi instan, saus botolan, kaldu bubuk, dan makanan kemasan sering terlihat “sedikit”, padahal sodium-nya sudah tinggi.</p>
+              </div>
+              <div class="figure-point">
+                <strong>Khas, tapi perlu hati-hati</strong>
+                <p>Ikan asin, terasi, dan kerupuk asin tetap boleh dipahami sebagai pemicu sodium tersembunyi, bukan konsumsi harian bebas.</p>
+              </div>
+              <div class="figure-point">
+                <strong>Pengganti rasa yang lebih aman</strong>
+                <p>Bawang, jahe, kunyit, kencur, serai, jeruk limau, tomat, dan rempah lain membantu rasa tanpa mengandalkan garam ekstra.</p>
+              </div>
+            </div>
           </div>
           <div class="strip">
             <h3>Contoh modifikasi ala rumah Sunda ringan</h3>
@@ -587,28 +591,25 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       </div>
       <div class="detail-grid">
         <div class="visual-stack">
-          <div class="visual-board" aria-hidden="true">
-            <svg viewBox="0 0 340 320" role="img" aria-label="Diagram satu hari yang lebih ramah tensi">
-              <rect x="14" y="14" width="312" height="292" rx="18" fill="#fffaf7" stroke="#d9c8be"></rect>
-              <text x="30" y="40" font-size="18" font-family="Tahoma" fill="#211a17" font-weight="700">1 hari yang lebih ramah tensi</text>
-              <path d="M58 72v186" stroke="#cfaaa2" stroke-width="3" stroke-dasharray="4 4"></path>
-              <circle cx="58" cy="86" r="10" fill="#a3191e"></circle>
-              <text x="80" y="91" font-size="12" font-family="Tahoma" fill="#211a17" font-weight="700">Pagi</text>
-              <text x="80" y="108" font-size="11.5" font-family="Tahoma" fill="#625853">cek tensi bila jadwalnya,</text>
-              <text x="80" y="123" font-size="11.5" font-family="Tahoma" fill="#625853">sarapan tidak terlalu asin</text>
-              <circle cx="58" cy="136" r="10" fill="#a3191e"></circle>
-              <text x="80" y="141" font-size="12" font-family="Tahoma" fill="#211a17" font-weight="700">Siang</text>
-              <text x="80" y="158" font-size="11.5" font-family="Tahoma" fill="#625853">bangun dari duduk, jalan singkat,</text>
-              <text x="80" y="173" font-size="11.5" font-family="Tahoma" fill="#625853">minum air putih</text>
-              <circle cx="58" cy="186" r="10" fill="#a3191e"></circle>
-              <text x="80" y="191" font-size="12" font-family="Tahoma" fill="#211a17" font-weight="700">Sore</text>
-              <text x="80" y="208" font-size="11.5" font-family="Tahoma" fill="#625853">jalan 20-30 menit, kerja rumah aktif,</text>
-              <text x="80" y="223" font-size="11.5" font-family="Tahoma" fill="#625853">kurangi rokok</text>
-              <circle cx="58" cy="236" r="10" fill="#a3191e"></circle>
-              <text x="80" y="241" font-size="12" font-family="Tahoma" fill="#211a17" font-weight="700">Malam</text>
-              <text x="80" y="258" font-size="11.5" font-family="Tahoma" fill="#625853">makan lebih ringan, tenangkan pikiran,</text>
-              <text x="80" y="273" font-size="11.5" font-family="Tahoma" fill="#625853">tidur cukup</text>
-            </svg>
+          <div class="visual-board">
+            <div class="media-figure" data-media-wrap>
+              <img data-media-key="daily-rhythm" alt="" loading="lazy" decoding="async">
+            </div>
+            <p class="figure-caption">Visual ini hanya orientasi ritme hidup. Urutan kebiasaan yang perlu dijaga tetap ditulis di poin-poin berikut.</p>
+            <div class="figure-points">
+              <div class="figure-point">
+                <strong>Pagi</strong>
+                <p>Cek tensi sesuai jadwal dan mulai hari dengan sarapan yang tidak terlalu asin.</p>
+              </div>
+              <div class="figure-point">
+                <strong>Siang</strong>
+                <p>Putus duduk lama, jalan singkat, lalu cukupkan air putih.</p>
+              </div>
+              <div class="figure-point">
+                <strong>Sore sampai malam</strong>
+                <p>Tambah gerak 20-30 menit, kurangi rokok, makan lebih ringan, dan rapikan jam tidur.</p>
+              </div>
+            </div>
           </div>
           <div class="callout good"><strong>Mulai paling sederhana:</strong> selama 2-4 minggu, pegang tiga hal dulu: kurangi garam tersembunyi, tambah jalan kaki teratur, dan rapikan jam tidur.</div>
         </div>
@@ -910,10 +911,26 @@ const ZMC = {
 const TOPIC_MEDIA = {
   hero: {
     remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773237049/zmc/hipertensi-dewasa/hipertensi-dewasa-hero.png",
-    local: "../assets/topics/hipertensi-dewasa/hipertensi-dewasa-hero.png",
+    local: "../../assets/topics/hipertensi-dewasa/hipertensi-dewasa-hero.png",
     alt: "Pasien dewasa memeriksa tekanan darah di rumah lalu mencatat hasilnya.",
     width: 1536,
     height: 1024
+  },
+  figures: {
+    "sodium-kitchen": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244972/zmc/hipertensi-dewasa/hipertensi-dewasa-sodium-kitchen.webp",
+      local: "../../assets/topics/hipertensi-dewasa/hipertensi-dewasa-sodium-kitchen.webp",
+      alt: "Dapur rumah Indonesia dengan bahan makanan harian dan rempah sebagai orientasi sodium tersembunyi.",
+      width: 1536,
+      height: 1024
+    },
+    "daily-rhythm": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244976/zmc/hipertensi-dewasa/hipertensi-dewasa-daily-rhythm.webp",
+      local: "../../assets/topics/hipertensi-dewasa/hipertensi-dewasa-daily-rhythm.webp",
+      alt: "Rutinitas harian dewasa Indonesia dengan makan lebih teratur, bergerak, dan tidur cukup untuk orientasi hipertensi.",
+      width: 1536,
+      height: 1024
+    }
   }
 };
 
@@ -921,6 +938,7 @@ const TOPIC_MEDIA = {
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
   const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
   const inFixedFolder = location.pathname.includes("/topics/fixed/");
@@ -979,41 +997,47 @@ const TOPIC_MEDIA = {
     });
   }
 
-  const heroImage = document.getElementById("heroImage");
-  if (heroImage && TOPIC_MEDIA.hero) {
-    const heroMedia = TOPIC_MEDIA.hero;
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
     let localAttempted = false;
-    heroImage.alt = heroMedia.alt;
-    heroImage.width = heroMedia.width;
-    heroImage.height = heroMedia.height;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
 
     function useLocalImage() {
-      if (!heroMedia.local || localAttempted) return;
+      if (!media.local || localAttempted) return;
       localAttempted = true;
-      heroImage.src = heroMedia.local;
+      img.src = media.local;
     }
 
-    heroImage.addEventListener("error", function(){
-      if (!localAttempted && heroMedia.local) {
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) {
         useLocalImage();
       } else {
-        const figure = heroImage.closest(".hero-figure");
+        const figure = img.closest("[data-media-wrap]") || img.closest(".hero-figure");
         if (figure) figure.hidden = true;
+        else img.hidden = true;
       }
     });
 
-    if (!navigator.onLine && heroMedia.local) {
+    if ((forceMediaLocal || !navigator.onLine) && media.local) {
       useLocalImage();
-    } else if (heroMedia.remote) {
-      heroImage.src = heroMedia.remote;
-    } else if (heroMedia.local) {
+    } else if (media.remote) {
+      img.src = media.remote;
+    } else if (media.local) {
       useLocalImage();
     }
 
     window.addEventListener("offline", function(){
-      if (heroImage.src !== heroMedia.local) useLocalImage();
+      if (media.local && img.getAttribute("src") !== media.local) useLocalImage();
     });
   }
+
+  bindMediaImage(document.getElementById("heroImage"), TOPIC_MEDIA.hero);
+  Array.from(document.querySelectorAll("[data-media-key]")).forEach(function(img){
+    const key = img.getAttribute("data-media-key");
+    bindMediaImage(img, TOPIC_MEDIA.figures && TOPIC_MEDIA.figures[key]);
+  });
 
   const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
   function closeFaq() {

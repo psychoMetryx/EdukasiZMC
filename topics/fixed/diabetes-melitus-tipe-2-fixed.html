@@ -79,7 +79,8 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-actions .btn-ig{background:var(--surface-soft)}
 .hero-visual{display:none}
 .hero-figure,.micro-figure,.visual-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.66rem}
-.hero-figure svg,.micro-figure svg,.visual-board svg{width:100%;display:block}
+.hero-figure svg,.micro-figure svg,.visual-board svg,.hero-figure img,.visual-board img{width:100%;display:block}
+.visual-board img{border-radius:10px;background:var(--surface-soft)}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
 .quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
@@ -138,6 +139,12 @@ td{color:var(--muted)}
 .decision-card.good{border-top:4px solid var(--good)}
 .decision-card.warn{border-top:4px solid var(--warn)}
 .decision-card.danger{border-top:4px solid var(--danger)}
+.media-figure{display:grid;gap:.72rem}
+.figure-points{margin:0;padding-left:1rem;display:grid;gap:.34rem;color:var(--muted);font-size:.9rem}
+.ratio-grid{display:grid;gap:.5rem}
+.ratio-card{border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);padding:.62rem .72rem}
+.ratio-card strong{display:block;color:var(--ink);font-size:.92rem}
+.ratio-card span{display:block;margin-top:.12rem;color:var(--muted);font-size:.85rem}
 .faq{display:grid;gap:.65rem}
 .faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
 .faq-btn[aria-expanded="true"]{background:var(--surface-soft)}
@@ -187,7 +194,8 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   .hero-actions .btn{flex:0 1 auto;min-width:168px}
   .hero-visual{display:grid;align-content:start;padding:.78rem;background:var(--surface-soft)}
   .hero-figure{padding:.45rem}
-  .hero-figure svg{height:176px}
+  .hero-figure svg,.hero-figure img{height:176px}
+  .hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
   .scan-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
   .split{grid-template-columns:minmax(0,1.02fr) minmax(290px,.98fr);align-items:start}
   .micro-grid{grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);align-items:start}
@@ -266,27 +274,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       </div>
       <div class="hero-visual">
         <div class="hero-figure" aria-hidden="true">
-          <svg viewBox="0 0 420 250" role="img" aria-label="Ilustrasi ringkas empat fokus edukasi diabetes">
-            <rect x="8" y="10" width="404" height="230" rx="18" fill="#fffaf7" stroke="#d9c8be"></rect>
-            <text x="28" y="34" font-size="20" font-family="Tahoma" fill="#221b18" font-weight="700">4 fokus harian</text>
-            <text x="28" y="54" font-size="20" font-family="Tahoma" fill="#221b18" font-weight="700">yang paling berguna</text>
-            <rect x="22" y="72" width="184" height="66" rx="14" fill="#f8ecec" stroke="#d7b7b9"></rect>
-            <text x="40" y="96" font-size="15" font-family="Tahoma" fill="#a3191e" font-weight="700">Gejala awal</text>
-            <text x="40" y="114" font-size="12" font-family="Tahoma" fill="#605853">haus, kencing lebih sering,</text>
-            <text x="40" y="129" font-size="12" font-family="Tahoma" fill="#605853">cepat lelah</text>
-            <rect x="214" y="72" width="184" height="66" rx="14" fill="#f7f0ea" stroke="#d8c7bf"></rect>
-            <text x="232" y="96" font-size="15" font-family="Tahoma" fill="#a3191e" font-weight="700">Makan 3J</text>
-            <text x="232" y="114" font-size="12" font-family="Tahoma" fill="#605853">jadwal, jumlah,</text>
-            <text x="232" y="129" font-size="12" font-family="Tahoma" fill="#605853">jenis lebih tertib</text>
-            <rect x="22" y="150" width="184" height="66" rx="14" fill="#edf6ef" stroke="#a3c3ad"></rect>
-            <text x="40" y="174" font-size="15" font-family="Tahoma" fill="#225f3d" font-weight="700">Cek kaki tiap hari</text>
-            <text x="40" y="192" font-size="12" font-family="Tahoma" fill="#516558">lihat lecet, merah,</text>
-            <text x="40" y="207" font-size="12" font-family="Tahoma" fill="#516558">bengkak, atau luka</text>
-            <rect x="214" y="150" width="184" height="66" rx="14" fill="#fdf2df" stroke="#d8c08b"></rect>
-            <text x="232" y="174" font-size="15" font-family="Tahoma" fill="#8b5d13" font-weight="700">Kontrol berkala</text>
-            <text x="232" y="192" font-size="12" font-family="Tahoma" fill="#605853">3 bulan bila belum stabil,</text>
-            <text x="232" y="207" font-size="12" font-family="Tahoma" fill="#605853">6 bulan bila stabil</text>
-          </svg>
+          <img id="heroImage" alt="" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -331,23 +319,13 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
             <li>Kalau ada riwayat keluarga diabetes, tekanan darah tinggi, kolesterol tinggi, obesitas, atau lingkar perut besar, ambang untuk periksa harus lebih rendah.</li>
           </ul>
         </div>
-        <div class="visual-board" aria-hidden="true">
-          <svg viewBox="0 0 340 320" role="img" aria-label="Diagram tiga sinyal awal diabetes tipe 2">
-            <rect x="14" y="14" width="312" height="292" rx="18" fill="#fffaf7" stroke="#d9c8be"></rect>
-            <text x="30" y="40" font-size="17" font-family="Tahoma" fill="#221b18" font-weight="700">3 sinyal awal yang patut dicurigai</text>
-            <rect x="28" y="58" width="284" height="64" rx="12" fill="#f8ecec" stroke="#d8b9bb"></rect>
-            <text x="46" y="82" font-size="13" font-family="Tahoma" fill="#a3191e" font-weight="700">1. Haus dan kencing</text>
-            <text x="46" y="99" font-size="13" font-family="Tahoma" fill="#a3191e" font-weight="700">lebih sering</text>
-            <text x="46" y="117" font-size="12" font-family="Tahoma" fill="#605853">terutama malam hari atau terasa tidak seperti biasa</text>
-            <rect x="28" y="134" width="284" height="64" rx="12" fill="#f7f0ea" stroke="#d8c7bf"></rect>
-            <text x="46" y="158" font-size="13" font-family="Tahoma" fill="#a3191e" font-weight="700">2. Cepat lelah dan</text>
-            <text x="46" y="175" font-size="13" font-family="Tahoma" fill="#a3191e" font-weight="700">pandangan kabur</text>
-            <text x="46" y="193" font-size="12" font-family="Tahoma" fill="#605853">jangan tunggu sampai aktivitas harian terganggu</text>
-            <rect x="28" y="210" width="284" height="78" rx="12" fill="#fdf2df" stroke="#d8c08b"></rect>
-            <text x="46" y="234" font-size="13" font-family="Tahoma" fill="#8b5d13" font-weight="700">3. Luka lambat sembuh</text>
-            <text x="46" y="251" font-size="13" font-family="Tahoma" fill="#8b5d13" font-weight="700">atau infeksi berulang</text>
-            <text x="46" y="269" font-size="12" font-family="Tahoma" fill="#605853">misalnya bisul, jamur, gatal lipatan, atau lecet kaki</text>
-          </svg>
+        <div class="visual-board media-figure" aria-label="Orientasi tiga sinyal awal diabetes tipe 2">
+          <img data-media-key="signals-early" alt="" loading="lazy" decoding="async">
+          <ul class="figure-points">
+            <li><strong>Haus dan kencing lebih sering:</strong> terutama malam hari atau terasa jelas berbeda dari kebiasaan.</li>
+            <li><strong>Cepat lelah dan pandangan kabur:</strong> jangan tunggu sampai aktivitas harian sudah terganggu.</li>
+            <li><strong>Luka atau infeksi berulang:</strong> termasuk bisul, jamur lipatan, atau lecet kaki yang lambat sembuh.</li>
+          </ul>
         </div>
       </div>
       <div class="grid">
@@ -385,27 +363,22 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           <p>Kalau masih sering makan besar sekaligus lalu lama tidak makan, gula darah bisa lebih sulit stabil. Karena itu, banyak pasien lebih cocok dengan pola <strong>3 kali makan utama + 2 sampai 3 selingan kecil bila perlu</strong>, terutama bila memakai obat tertentu atau insulin.</p>
           <p>Kemenkes lewat <strong>Isi Piringku</strong> mengingatkan bahwa setiap kali makan, <strong>setengah piring diisi sayur dan buah</strong>, sedangkan sisanya diisi makanan pokok dan lauk. Untuk pasien diabetes, prinsip ini membantu menahan porsi karbohidrat agar tidak mendominasi satu piring.</p>
         </div>
-        <div class="visual-board" aria-hidden="true">
-          <svg viewBox="0 0 340 320" role="img" aria-label="Visual isi piring untuk diabetes tipe 2">
-            <rect x="14" y="14" width="312" height="292" rx="18" fill="#fffaf7" stroke="#d9c8be"></rect>
-            <text x="30" y="40" font-size="17" font-family="Tahoma" fill="#221b18" font-weight="700">Piring yang lebih aman</text>
-            <text x="30" y="59" font-size="17" font-family="Tahoma" fill="#221b18" font-weight="700">tiap kali makan</text>
-            <circle cx="102" cy="178" r="82" fill="#fff" stroke="#cfb3a8" stroke-width="4"></circle>
-            <path d="M102 96 A82 82 0 0 1 102 260 L102 178 Z" fill="#edf6ef" stroke="#cfb3a8" stroke-width="1.5"></path>
-            <path d="M102 96 A82 82 0 0 0 173 138 L102 178 Z" fill="#fdf2df" stroke="#cfb3a8" stroke-width="1.5"></path>
-            <path d="M173 138 A82 82 0 0 1 102 260 L102 178 Z" fill="#f8ecec" stroke="#cfb3a8" stroke-width="1.5"></path>
-            <rect x="208" y="98" width="96" height="54" rx="12" fill="#edf6ef" stroke="#a3c3ad"></rect>
-            <text x="224" y="120" font-size="13" font-family="Tahoma" fill="#225f3d" font-weight="700">1/2 piring</text>
-            <text x="224" y="140" font-size="12" font-family="Tahoma" fill="#516558">sayur + buah</text>
-            <rect x="208" y="166" width="96" height="54" rx="12" fill="#fdf2df" stroke="#d8c08b"></rect>
-            <text x="224" y="188" font-size="13" font-family="Tahoma" fill="#8b5d13" font-weight="700">1/4 piring</text>
-            <text x="224" y="208" font-size="12" font-family="Tahoma" fill="#605853">karbohidrat</text>
-            <rect x="208" y="234" width="96" height="54" rx="12" fill="#f8ecec" stroke="#d7b7b9"></rect>
-            <text x="224" y="256" font-size="13" font-family="Tahoma" fill="#a3191e" font-weight="700">1/4 piring</text>
-            <text x="224" y="276" font-size="12" font-family="Tahoma" fill="#605853">protein</text>
-            <path d="M160 128h30" stroke="#8b5d13" stroke-width="2.5" stroke-linecap="round"></path>
-            <path d="M160 236h30" stroke="#a3191e" stroke-width="2.5" stroke-linecap="round"></path>
-          </svg>
+        <div class="visual-board media-figure" aria-label="Orientasi isi piring diabetes tipe 2">
+          <img data-media-key="diet-plate" alt="" loading="lazy" decoding="async">
+          <div class="ratio-grid">
+            <div class="ratio-card">
+              <strong>1/2 piring sayur + buah</strong>
+              <span>Bagian ini membantu menahan porsi karbohidrat agar tidak mendominasi satu kali makan.</span>
+            </div>
+            <div class="ratio-card">
+              <strong>1/4 piring karbohidrat</strong>
+              <span>Nasi tetap boleh, tetapi porsinya lebih terukur dan tidak berdiri sendiri tanpa pasangan lauk dan sayur.</span>
+            </div>
+            <div class="ratio-card">
+              <strong>1/4 piring protein</strong>
+              <span>Pilih lauk yang realistis untuk rumah seperti telur, ikan, tahu, tempe, atau ayam tanpa kulit berlebihan.</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -536,32 +509,14 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       </div>
 
       <div class="micro-grid">
-        <div class="visual-board" aria-hidden="true">
-          <svg viewBox="0 0 340 300" role="img" aria-label="Visual tanda yang harus dilihat saat memeriksa kaki">
-            <rect x="14" y="14" width="312" height="272" rx="18" fill="#fffaf7" stroke="#d9c8be"></rect>
-            <text x="30" y="40" font-size="18" font-family="Tahoma" fill="#221b18" font-weight="700">Saat cek kaki, lihat 4 hal ini</text>
-            <rect x="28" y="72" width="96" height="52" rx="12" fill="#f8ecec" stroke="#d7b7b9"></rect>
-            <text x="42" y="93" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">1. Lecet / lepuh</text>
-            <text x="42" y="111" font-size="11.5" font-family="Tahoma" fill="#605853">sekecil apa pun</text>
-            <rect x="28" y="182" width="96" height="52" rx="12" fill="#f7f0ea" stroke="#d8c7bf"></rect>
-            <text x="42" y="203" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">2. Kulit pecah</text>
-            <text x="42" y="221" font-size="11.5" font-family="Tahoma" fill="#605853">sela jari lembap</text>
-            <rect x="222" y="110" width="90" height="52" rx="12" fill="#fdf2df" stroke="#d8c08b"></rect>
-            <text x="236" y="131" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">3. Merah</text>
-            <text x="236" y="147" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">atau bengkak</text>
-            <rect x="222" y="198" width="90" height="52" rx="12" fill="#f8ecec" stroke="#d7b7b9"></rect>
-            <text x="236" y="219" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">4. Kuku berubah</text>
-            <text x="236" y="237" font-size="11.5" font-family="Tahoma" fill="#605853">kuning / nyeri</text>
-            <path d="M167 94c12 0 18 11 16 21l-20 89c-2 9-10 15-18 15-10 0-18-8-18-19v-44c0-16 3-32 10-45 7-11 18-17 30-17z" fill="#f7e6df" stroke="#caa398" stroke-width="3"></path>
-            <circle cx="186" cy="83" r="9" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
-            <circle cx="203" cy="90" r="8.5" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
-            <circle cx="214" cy="103" r="7.5" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
-            <circle cx="216" cy="118" r="6.8" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
-            <path d="M124 99h20" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
-            <path d="M124 208h22" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
-            <path d="M216 134h18" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
-            <path d="M193 216h41" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
-          </svg>
+        <div class="visual-board media-figure" aria-label="Orientasi cek kaki harian">
+          <img data-media-key="foot-check" alt="" loading="lazy" decoding="async">
+          <ul class="figure-points">
+            <li><strong>Lecet atau lepuh:</strong> sekecil apa pun perlu dianggap serius pada kaki pasien diabetes.</li>
+            <li><strong>Kulit pecah dan sela jari lembap:</strong> area ini mudah terlewat kalau tidak dicek rutin.</li>
+            <li><strong>Merah, bengkak, atau hangat:</strong> jangan tunggu jadwal kontrol biasa bila muncul perubahan baru.</li>
+            <li><strong>Kuku berubah atau nyeri:</strong> kuku tumbuh ke dalam dan infeksi jamur perlu dinilai lebih cepat.</li>
+          </ul>
         </div>
         <div class="text-flow">
           <p>CDC menganjurkan <strong>cek kaki setiap hari</strong>, cuci dengan air hangat <strong>bukan panas</strong>, pakai pelembap di permukaan kaki tetapi <strong>jangan di sela jari</strong>, dan <strong>jangan berjalan tanpa alas kaki</strong> bahkan di dalam rumah.</p>
@@ -892,10 +847,44 @@ const ZMC = {
   hours: "Senin - Minggu: 24 Jam"
 };
 
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773239263/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-hero.webp",
+    local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-hero.webp",
+    alt: "Pasien dewasa Indonesia mencatat pola makan dan gula darah di rumah dengan air putih serta piring makan seimbang di meja.",
+    width: 1536,
+    height: 1024
+  },
+  figures: {
+    "signals-early": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244956/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-signals-early.webp",
+      local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-signals-early.webp",
+      alt: "Visual orientasi pasien dewasa dengan tanda awal diabetes yang samar di rumah.",
+      width: 1024,
+      height: 1024
+    },
+    "diet-plate": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244960/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-diet-plate.webp",
+      local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-diet-plate.webp",
+      alt: "Foto orientasi piring makan Indonesia untuk pasien diabetes dengan komposisi sayur, buah, karbohidrat, dan lauk berprotein.",
+      width: 1024,
+      height: 1024
+    },
+    "foot-check": {
+      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244964/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-foot-check.webp",
+      local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-foot-check.webp",
+      alt: "Visual orientasi pemeriksaan kaki pasien diabetes dengan fokus pada lecet, kemerahan, kulit pecah, dan kuku.",
+      width: 1024,
+      height: 1024
+    }
+  }
+};
+
 (function initPage(){
   const root = document.documentElement;
   const qs = new URLSearchParams(location.search);
   const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
   const logo = document.getElementById("logo");
   const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
   const logoCandidates = ["../zmc-logo.jpeg", ZMC.logoLocal, "../../assets/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
@@ -952,6 +941,51 @@ const ZMC = {
       window.print();
     });
   }
+
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
+    let localAttempted = false;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
+
+    function useLocalImage() {
+      if (!media.local || localAttempted) return;
+      localAttempted = true;
+      img.src = media.local;
+    }
+
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) {
+        useLocalImage();
+      } else {
+        const wrapper = img.closest("[data-media-wrap]");
+        if (wrapper) {
+          wrapper.hidden = true;
+        } else {
+          img.hidden = true;
+        }
+      }
+    });
+
+    if ((forceMediaLocal || !navigator.onLine) && media.local) {
+      useLocalImage();
+    } else if (media.remote) {
+      img.src = media.remote;
+    } else if (media.local) {
+      useLocalImage();
+    }
+
+    window.addEventListener("offline", function(){
+      if (media.local && img.getAttribute("src") !== media.local) useLocalImage();
+    });
+  }
+
+  bindMediaImage(document.getElementById("heroImage"), TOPIC_MEDIA.hero);
+  Array.from(document.querySelectorAll("[data-media-key]")).forEach(function(img){
+    const key = img.getAttribute("data-media-key");
+    bindMediaImage(img, TOPIC_MEDIA.figures && TOPIC_MEDIA.figures[key]);
+  });
 
   const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
   function closeFaq() {
