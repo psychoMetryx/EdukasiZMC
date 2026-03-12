@@ -1,0 +1,208 @@
+{
+  "asam-urat-dewasa": {
+    "screenshots": {
+      "mobile": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\asam-urat-dewasa-fixed-mobile.png",
+      "tablet": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\asam-urat-dewasa-fixed-tablet.png",
+      "desktop": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\asam-urat-dewasa-fixed-desktop.png"
+    },
+    "metrics": {
+      "mobile": {
+        "heroHeight": 158,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false,
+        "quickChipCount": 8,
+        "faqCount": 4
+      },
+      "tablet": {
+        "heroHeight": 251,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false,
+        "quickChipCount": 8,
+        "faqCount": 4
+      },
+      "desktop": {
+        "heroHeight": 254,
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "hasHorizontalOverflow": false,
+        "quickChipCount": 8,
+        "faqCount": 4
+      }
+    },
+    "keyboard": {
+      "skip": {
+        "found": true,
+        "steps": 1,
+        "state": {
+          "id": null,
+          "tag": "A",
+          "href": "#main",
+          "text": "Lewati ke isi utama",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "heroWa": {
+        "found": true,
+        "steps": 3,
+        "state": {
+          "id": "heroWa",
+          "tag": "A",
+          "href": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+          "text": "WhatsApp Klinik",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "quickChip": {
+        "found": true,
+        "steps": 5,
+        "state": {
+          "id": null,
+          "tag": "A",
+          "href": "#kenali",
+          "text": "Mitos lokal",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "faq": {
+        "found": true,
+        "steps": 14,
+        "state": {
+          "id": "faq-btn-1",
+          "tag": "BUTTON",
+          "href": null,
+          "text": "Kalau hasil lab asam urat tinggi tapi tidak sakit, apakah pasti harus minum obat",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "faqExpanded": "true",
+      "print": {
+        "found": true,
+        "steps": 24,
+        "state": {
+          "id": "printPage",
+          "tag": "BUTTON",
+          "href": null,
+          "text": "Print / Save PDF",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      }
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "logoSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/topics/zmc-logo.jpeg",
+      "mediaSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/asam-urat-dewasa/asam-urat-dewasa-flare-safe.webp",
+      "mediaLocalOkay": true
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\asam-urat-dewasa-fixed.pdf"
+  },
+  "gorengan-harian": {
+    "screenshots": {
+      "mobile": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\gorengan-harian-fixed-mobile.png",
+      "tablet": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\gorengan-harian-fixed-tablet.png",
+      "desktop": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\gorengan-harian-fixed-desktop.png"
+    },
+    "metrics": {
+      "mobile": {
+        "heroHeight": 158,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "hasHorizontalOverflow": false,
+        "quickChipCount": 8,
+        "faqCount": 4
+      },
+      "tablet": {
+        "heroHeight": 251,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "hasHorizontalOverflow": false,
+        "quickChipCount": 8,
+        "faqCount": 4
+      },
+      "desktop": {
+        "heroHeight": 254,
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "hasHorizontalOverflow": false,
+        "quickChipCount": 8,
+        "faqCount": 4
+      }
+    },
+    "keyboard": {
+      "skip": {
+        "found": true,
+        "steps": 1,
+        "state": {
+          "id": null,
+          "tag": "A",
+          "href": "#main",
+          "text": "Lewati ke isi utama",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "heroWa": {
+        "found": true,
+        "steps": 3,
+        "state": {
+          "id": "heroWa",
+          "tag": "A",
+          "href": "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+          "text": "WhatsApp Klinik",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "quickChip": {
+        "found": true,
+        "steps": 5,
+        "state": {
+          "id": null,
+          "tag": "A",
+          "href": "#ringkas",
+          "text": "Ringkasan cepat",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "faq": {
+        "found": true,
+        "steps": 14,
+        "state": {
+          "id": "faq-btn-1",
+          "tag": "BUTTON",
+          "href": null,
+          "text": "Kalau cuma satu atau dua gorengan sesekali, apakah langsung berbahaya?+",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      },
+      "faqExpanded": "true",
+      "print": {
+        "found": true,
+        "steps": 24,
+        "state": {
+          "id": "printPage",
+          "tag": "BUTTON",
+          "href": null,
+          "text": "Print / Save PDF",
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        }
+      }
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "logoSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/topics/zmc-logo.jpeg",
+      "mediaSrc": null,
+      "mediaLocalOkay": true
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\gorengan-harian-fixed.pdf"
+  }
+}

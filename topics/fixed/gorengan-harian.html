@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
-<title>Asam Urat Dewasa | Zihan Medical Center</title>
-<meta name="description" content="Edukasi dewasa tentang asam urat: gejala khas, pemicu, langkah aman saat kambuh, pola makan, komorbid, dan kapan harus ke dokter atau IGD.">
+<title>Gorengan Harian | Zihan Medical Center</title>
+<meta name="description" content="Edukasi dewasa tentang gorengan harian dan paket jajan lokal: minyak berulang, minuman manis, kuah asin, snack ultra-proses, pilihan yang lebih realistis, dan kapan perlu evaluasi medis.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23a3191e'/%3E%3Cpath d='M20 16h24v32H20z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M32 22v20M24 32h16' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link id="bi-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <style>
@@ -177,10 +177,10 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
 .refs{margin:0;padding-left:1.1rem;display:grid;gap:.52rem}
 .refs li{color:var(--muted)}
 .refs a{color:var(--accent)}
-#kenali .section-head{background:#f7f0eb}
-#kambuh .section-head{background:#f8f3ee}
-#makan .section-head{background:#f7f3ef}
-#gayahidup .section-head{background:#f4f4ee}
+#ringkas .section-head{background:#f7f0eb}
+#paket .section-head{background:#f8f3ee}
+#kenapa .section-head{background:#f7f3ef}
+#swap .section-head{background:#f4f4ee}
 #obat .section-head{background:#f5f1ee}
 #khusus .section-head{background:#f8f2ee}
 #redflags{border-color:#dfb8bb}
@@ -248,7 +248,7 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       <div class="logo"><img id="logo" alt="Logo Zihan Medical Center"></div>
       <div class="brand-copy">
         <p>Panduan dewasa ZMC</p>
-        <h1>Asam urat dewasa: jangan salah fokus ke sayur hijau</h1>
+        <h1>Gorengan harian: bukan cuma urusan minyak</h1>
       </div>
     </div>
     <div class="topbar-actions">
@@ -263,8 +263,8 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h2>Asam urat bukan sekadar urusan sayur hijau.</h2>
-        <p>Flare berulang lebih sering terkait minuman manis, alkohol, jeroan, lauk hewani tinggi purin, kurang minum, dan pola makan tinggi lemak.</p>
+        <h2>Gorengan harian: yang sering bikin masalah bukan cuma minyaknya.</h2>
+        <p>Yang lebih sering bermasalah justru paketnya: gorengan sering, minyak berulang, minuman manis, kuah asin, dan jajan yang mengganti makan utama.</p>
         <div class="hero-actions">
           <a class="btn btn-brand" id="heroWa" href="#" target="_blank" rel="noopener">
             <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
@@ -276,245 +276,202 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
           </a>
         </div>
         <div class="hero-scan" aria-label="Pegangan cepat">
-          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-clipboard2-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span>Lab tinggi</strong><span>Belum tentu gout.</span></div>
-          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-fire icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span>Sendi panas</strong><span>Curiga flare akut.</span></div>
-          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-hospital-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>Demam</strong><span>Jangan tunggu lama.</span></div>
+          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-arrow-repeat icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span>Bukan sekali</strong><span>Masalahnya frekuensi.</span></div>
+          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span>Paket jajan</strong><span>Gula, garam, lemak.</span></div>
+          <div class="scan-pill"><strong><span class="icon-pair"><i class="bi bi-heart-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>Komorbid</strong><span>Diabetes, tensi, gout.</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <nav class="quick" aria-label="Navigasi cepat">
-    <a class="chip" href="#kenali">Mitos lokal</a>
-    <a class="chip" href="#kambuh">Saat kambuh</a>
-    <a class="chip" href="#makan">Makan &amp; minum</a>
-    <a class="chip" href="#gayahidup">Biar tidak berulang</a>
+    <a class="chip" href="#ringkas">Ringkasan cepat</a>
+    <a class="chip" href="#paket">Paket jajan</a>
+    <a class="chip" href="#kenapa">Kenapa terasa aman</a>
+    <a class="chip" href="#swap">Swap realistis</a>
     <a class="chip" href="#khusus">Kondisi khusus</a>
     <a class="chip" href="#redflags">Ke Dokter / IGD</a>
     <a class="chip" href="#faq">FAQ</a>
     <a class="chip" href="#rujukan">Rujukan</a>
   </nav>
 
-  <section id="kenali" class="section">
+  <section id="ringkas" class="section">
     <div class="section-head">
       <div class="heading-row">
-        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-search-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span></div>
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-search-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-heart"></use></svg></span></div>
         <div class="heading-copy">
-          <h2>1) Mitos lokal dulu: jangan salah fokus ke sayur hijau</h2>
-          <p>Mitos paling sering justru membuat pasien mengejar musuh yang salah. Koreksi fokusnya dulu, baru bicara diet dan obat.</p>
+          <h2>1) Ringkasan cepat: yang dinilai bukan satu gorengan sesekali</h2>
+          <p>Masalah utama biasanya frekuensi, minyak berulang, pasangan minuman manis, kuah asin, dan kebiasaan mengganti makan utama dengan jajanan.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
       <div class="strip">
-        <h3>Yang paling sering keliru</h3>
-        <p>Pasien sibuk menghindari bayam atau kangkung, tetapi sirop, kopi sachet manis, jeroan, kuah daging pekat, alkohol, dan pola makan tinggi lemak masih jalan terus.</p>
+        <h3>Kalimat ringkasnya</h3>
+        <p>Kalau sesekali makan bala-bala atau gehu, itu beda cerita dengan pola hampir tiap hari yang disambung sirop, kopi sachet manis, bakso kuah asin, dan camilan ultra-proses.</p>
       </div>
       <div class="compare-grid">
         <article class="compare-card primary">
-          <h3><span class="icon-pair"><i class="bi bi-megaphone-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span> Kalimat yang perlu dikoreksi</h3>
+          <h3><span class="icon-pair"><i class="bi bi-stack icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Yang paling sering bikin menumpuk</h3>
           <ul>
-            <li>"Sayur hijau bikin asam urat, jadi stop semua."</li>
-            <li>"Kalau belum merah sekali, paling cuma pegal biasa."</li>
-            <li>"Yang penting obat nyeri saat kambuh. Pola harian nanti saja."</li>
+            <li>Gorengan berulang dalam seminggu, bukan cuma satu kejadian sesekali.</li>
+            <li>Minyak yang dipakai berulang dan pasangan minuman manis.</li>
+            <li>Bakso kuah pekat, saus, sambal, dan snack ultra-proses yang ikut menambah garam dan lemak.</li>
           </ul>
         </article>
         <article class="compare-card accent">
-          <h3><span class="icon-pair"><i class="bi bi-check-circle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Fokus yang lebih relevan</h3>
+          <h3><span class="icon-pair"><i class="bi bi-eye-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span> Yang sering diremehkan</h3>
           <ul>
-            <li>Minuman manis atau fruktosa, alkohol, jeroan, dan lauk hewani tinggi purin dalam porsi besar.</li>
-            <li>Dehidrasi, berat badan berlebih, dan pola makan tinggi lemak yang berulang.</li>
-            <li>Diagnosis yang belum jelas, terutama bila sendi merah-panas datang pertama kali.</li>
+            <li>Minuman sarapan sachet manis, kopi dengan krimer dan gula, serta sirop yang terasa "bukan makan".</li>
+            <li>Jajanan yang mengganti makan utama sehingga protein, serat, dan sayur jadi kalah.</li>
+            <li>Pola ini cepat memukul gula, garam, dan lemak harian sekaligus.</li>
           </ul>
         </article>
       </div>
       <div class="strip">
-        <h3>Bedakan cepat</h3>
-        <p>Gunakan blok ini sebagai orientasi scan-first. Angka lab membantu, tetapi tidak otomatis menjelaskan semua nyeri sendi.</p>
+        <h3>Cek singkat sebelum merasa "aman"</h3>
+        <p>Kalau jajan seperti ini hampir tiap hari, jangan nilai dari rasa kenyang sesaat. Nilai dari total seminggu dan kondisi penyerta yang Anda punya.</p>
       </div>
       <div class="compare-grid">
         <article class="compare-card">
-          <h3><span class="icon-pair"><i class="bi bi-clipboard2-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Hiperurisemia</h3>
+          <h3><span class="icon-pair"><i class="bi bi-check-circle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Masih tergolong ringan bila</h3>
           <ul>
-            <li>Hasil lab asam urat tinggi, tetapi belum tentu ada nyeri atau bengkak.</li>
-            <li>Bisa ditemukan saat cek kesehatan rutin.</li>
-            <li>Keputusan terapi melihat gejala, batu ginjal, komorbid, dan penilaian dokter.</li>
+            <li>Hanya sesekali, tidak menggantikan makan utama, dan tidak selalu ditemani minuman manis.</li>
+            <li>Anda masih tetap makan utama yang jelas dan air putih tetap lebih sering.</li>
+            <li>Tidak ada komorbid yang mudah terganggu seperti diabetes, hipertensi, atau gout berulang.</li>
           </ul>
         </article>
         <article class="compare-card primary">
-          <h3><span class="icon-pair"><i class="bi bi-fire icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span> Flare gout</h3>
+          <h3><span class="icon-pair"><i class="bi bi-pencil-square icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span> Sudah patut dikoreksi cepat bila</h3>
           <ul>
-            <li>Biasanya mendadak, satu sendi sangat sakit, merah, panas, dan susah digerakkan.</li>
-            <li>Sering mengenai pangkal ibu jari kaki, pergelangan kaki, atau lutut.</li>
-            <li>Bisa datang malam atau dini hari dan membuat menapak sangat sakit.</li>
+            <li>Gorengan hampir tiap hari terasa normal karena porsinya kecil-kecil tapi sering.</li>
+            <li>Sering disambung minuman sachet manis, kopi dengan krimer, atau sirop.</li>
+            <li>Bakso kuah asin, saus botolan, dan snack kemasan ikut menumpuk pada hari yang sama.</li>
           </ul>
         </article>
         <article class="compare-card accent">
-          <h3><span class="icon-pair"><i class="bi bi-signpost-2-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-joint"></use></svg></span> Nyeri sendi bukan gout</h3>
+          <h3><span class="icon-pair"><i class="bi bi-clipboard2-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-heart"></use></svg></span> Perlu evaluasi medis bila</h3>
           <ul>
-            <li>Bisa terkait cedera, osteoartritis, infeksi, rematik lain, atau nyeri otot di sekitar sendi.</li>
-            <li>Kalau ada demam, luka, riwayat jatuh, atau banyak sendi ikut bengkak, pikirkan penyebab lain.</li>
-            <li>Jangan memaksa pijat atau menebak obat bila polanya meragukan.</li>
+            <li>Berat badan, gula darah, tekanan darah, atau asam urat makin sulit dikendalikan.</li>
+            <li>Anda makin sering kembung, nyeri ulu hati, bengkak, atau merasa gampang haus dan cepat lapar.</li>
+            <li>Makan utama makin sering tergeser oleh jajanan karena terasa lebih praktis.</li>
           </ul>
         </article>
       </div>
-      <p class="plain-note"><strong>Kapan diagnosisnya belum aman?</strong> Bila serangan pertama sangat berat, lokasinya tidak khas, ada demam, atau ada luka di sekitar sendi.</p>
+      <p class="plain-note"><strong>Pesan praktis:</strong> target utamanya bukan mengharamkan satu makanan, tetapi membereskan paket kebiasaan yang berulang.</p>
     </div>
   </section>
 
-  <section id="kambuh" class="section">
+  <section id="paket" class="section">
     <div class="section-head">
       <div class="heading-row">
-        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-house-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-home"></use></svg></span></div>
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-basket-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-food"></use></svg></span></div>
         <div class="heading-copy">
-          <h2>2) Saat kambuh: langkah aman 24 jam pertama</h2>
-          <p>Tujuannya meredakan nyeri, menjaga cairan, dan tidak membuat sendi makin iritasi sambil tetap waspada pada tanda bahaya.</p>
+          <h2>2) Paket kebiasaan lokal yang sering jalan bareng</h2>
+          <p>Masalahnya sering bukan satu item, melainkan kombinasi yang terasa kecil-kecil tetapi berulang.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
-      <div class="split">
-        <div class="plain-block">
-          <h3>4 langkah pertama</h3>
-          <ol class="plain-list">
-            <li><strong>Istirahatkan sendi yang sakit.</strong> Kurangi menapak atau gerakan yang membuat nyeri melonjak.</li>
-            <li><strong>Kompres dingin 15-20 menit.</strong> Bungkus es atau kompres dingin dengan kain, lalu ulang seperlunya.</li>
-            <li><strong>Cukup minum bila tidak dibatasi dokter.</strong> Air putih lebih diprioritaskan daripada minuman manis, soda, atau alkohol.</li>
-            <li><strong>Gunakan obat sesuai arahan yang sudah Anda punya.</strong> Jangan memulai, menggandakan, atau menghentikan obat rutin tanpa diskusi medis.</li>
-          </ol>
-        </div>
-        <div class="micro-figure">
-          <div class="media-figure" data-media-wrap>
-            <img data-media-key="flare-safe" alt="" loading="lazy" decoding="async">
-          </div>
-          <p class="figure-caption">Visual ini hanya orientasi. Logika utamanya tetap empat langkah praktis di samping: istirahat, kompres dingin, cairan cukup, dan obat tidak diubah sembarangan.</p>
-        </div>
+      <div class="compare-grid">
+        <article class="compare-card primary">
+          <h3><span class="icon-pair"><i class="bi bi-egg-fried icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-food"></use></svg></span> Bala-bala, gehu, cireng + minuman manis</h3>
+          <p>Yang menumpuk bukan hanya minyak, tetapi juga gula cair yang mudah lolos karena tidak terasa seperti "makan besar".</p>
+        </article>
+        <article class="compare-card accent">
+          <h3><span class="icon-pair"><i class="bi bi-cup-hot-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span> Bakso kuah pekat + gorengan</h3>
+          <p>Kuah, saus, sambal, dan gorengan membuat sodium dan lemak cepat naik walau porsinya terlihat sederhana.</p>
+        </article>
+        <article class="compare-card">
+          <h3><span class="icon-pair"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span> Minuman sachet sarapan + jajanan</h3>
+          <p>Energen, Good Day, dan produk sejenis disebut di sini sebagai contoh kategori minuman sachet manis, bukan serangan ke merek tertentu.</p>
+        </article>
+        <article class="compare-card primary">
+          <h3><span class="icon-pair"><i class="bi bi-bag-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-food"></use></svg></span> Snack ultra-proses di sela kerja</h3>
+          <p>Keripik, crackers asin, wafer, atau camilan manis kemasan membuat garam, lemak, dan kalori kecil-kecil tetapi sering.</p>
+        </article>
       </div>
-      <div class="plain-columns">
-        <div class="plain-block">
-          <h3>Pemicu yang sering muncul 1-3 hari sebelumnya</h3>
-          <ul class="plain-list">
-            <li>Pesta lauk hewani tinggi purin, jeroan, atau kuah daging sangat pekat.</li>
-            <li>Minuman manis berulang, alkohol, atau pola makan berat lalu begadang.</li>
-            <li>Kurang minum, perjalanan jauh, panas, atau sakit yang membuat tubuh kekurangan cairan.</li>
-          </ul>
-        </div>
-        <div class="plain-block">
-          <h3>Yang sebaiknya jangan dilakukan</h3>
-          <ul class="plain-list">
-            <li>Jangan memijat sendi yang sedang merah, panas, dan bengkak.</li>
-            <li>Jangan memaksakan olahraga berat saat nyeri masih aktif.</li>
-            <li>Jangan mengandalkan jamu, obat teman, atau tumpukan obat nyeri tanpa tahu risikonya pada lambung dan ginjal.</li>
-          </ul>
-        </div>
+      <div class="strip">
+        <h3>Pertanyaan yang perlu diajukan ke diri sendiri</h3>
+        <p>Apakah jajan ini hanya sekali-sekali, atau sudah menjadi pola yang hampir selalu datang bersama minuman manis dan kuah asin?</p>
       </div>
-      <p class="plain-note"><strong>Kapan evaluasi medis?</strong> Bila nyeri tidak membaik dalam 24-48 jam, serangan makin sering, atau sendi yang kena bukan pola Anda biasanya, jangan tunda kontrol.</p>
     </div>
   </section>
-  <section id="makan" class="section">
+  <section id="kenapa" class="section">
     <div class="section-head">
       <div class="heading-row">
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span></div>
         <div class="heading-copy">
-          <h2>3) Makan dan minum: ritmenya cepat, tidak perlu tabel lebar</h2>
-          <p>Fokuskan energi ke tiga kelompok ini: apa yang perlu ditinggalkan dulu, apa yang dibatasi, dan apa yang umumnya masih aman.</p>
+          <h2>3) Kenapa gorengan terasa aman padahal sering jalan bareng GGL</h2>
+          <p>Karena porsinya sering terlihat kecil, murah, dan cepat habis. Padahal total hariannya mudah melonjak ketika datang berulang.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
-      <div class="strip">
-        <h3>Yang lebih sering keliru</h3>
-        <p>Gorengan atau santan tidak selalu tinggi purin, tetapi sering jalan bareng minuman manis, kuah pekat, dan kalori berlebih. Jadi yang dinilai bukan satu bahan saja, melainkan seluruh paket makannya.</p>
-      </div>
       <div class="compare-grid">
         <article class="compare-card primary">
-          <h3><span class="icon-pair"><i class="bi bi-x-circle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span> Tinggalkan dulu</h3>
-          <ul>
-            <li>Sirop, soda, teh manis besar, kopi atau minuman sarapan sachet yang manis.</li>
-            <li>Alkohol.</li>
-            <li>Jeroan, ekstrak ragi, kuah daging sangat pekat, dan pesta seafood atau lauk hewani tinggi purin dalam porsi besar.</li>
-          </ul>
+          <h3><span class="icon-pair"><i class="bi bi-box-seam-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-food"></use></svg></span> Porsi kecil terasa aman</h3>
+          <p>Satu dua potong mungkin terasa ringan, tetapi kalau berulang di pagi, sore, dan malam, total lemak dan kalorinya cepat tinggi.</p>
         </article>
         <article class="compare-card accent">
-          <h3><span class="icon-pair"><i class="bi bi-dash-circle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span> Batasi</h3>
-          <ul>
-            <li>Daging merah, ayam, ikan, atau seafood dalam porsi terlalu besar dan terlalu sering.</li>
-            <li>Gorengan, santan berat, dan camilan ultra-proses yang bikin total lemak harian cepat naik.</li>
-            <li>Mie instan atau bakso kuah asin yang sering disertai gorengan dan minuman manis.</li>
-          </ul>
+          <h3><span class="icon-pair"><i class="bi bi-droplet-half icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span> Minuman manis terasa "tidak dihitung"</h3>
+          <p>Padahal sirop, kopi sachet manis, dan minuman sarapan sachet menambah gula cair yang mudah lolos dari perhatian.</p>
         </article>
         <article class="compare-card">
-          <h3><span class="icon-pair"><i class="bi bi-check-circle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Umumnya aman</h3>
-          <ul>
-            <li>Sayur, termasuk sayur hijau, dalam porsi makan rumahan yang wajar.</li>
-            <li>Buah utuh, air putih, tahu, tempe, telur, susu rendah lemak, nasi, umbi, dan lauk sederhana.</li>
-            <li>Lalap, sayur bening, atau sayur asem tanpa harus otomatis dicap musuh utama.</li>
-          </ul>
+          <h3><span class="icon-pair"><i class="bi bi-droplet-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-drop"></use></svg></span> Kuah dan saus ikut main</h3>
+          <p>Bakso kuah pekat, sambal botolan, dan saus bukan sekadar pelengkap. Bagian ini ikut mendorong sodium harian.</p>
+        </article>
+        <article class="compare-card primary">
+          <h3><span class="icon-pair"><i class="bi bi-basket-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-food"></use></svg></span> Makan utama jadi tergeser</h3>
+          <p>Kalau jajanan menggantikan nasi, lauk, dan sayur, tubuh mendapat kenyang cepat tetapi kualitas makan hariannya turun.</p>
         </article>
       </div>
-      <div class="plain-columns">
-        <div class="plain-block">
-          <h3>Contoh menu lokal yang lebih realistis</h3>
-          <ul class="plain-list">
-            <li><strong>Pagi:</strong> nasi atau oat + telur rebus atau tahu + sayur bening + air putih.</li>
-            <li><strong>Siang:</strong> nasi + tahu, tempe, atau ayam porsi sedang + sayur matang atau lalap + buah.</li>
-            <li><strong>Sore atau malam:</strong> buah potong, yogurt tawar, jagung atau singkong rebus lebih aman dibanding gehu atau bala-bala tiap hari.</li>
-          </ul>
-        </div>
-        <div class="plain-block">
-          <h3>Yang perlu diingat</h3>
-          <ul class="plain-list">
-            <li>Kemenkes menekankan purin tumbuhan umumnya tidak menunjukkan efek yang sama seperti purin hewani terhadap flare gout.</li>
-            <li>Kalau pola hariannya sering gehu + minuman sachet manis + bakso kuah asin, yang dinilai adalah paket gula, garam, dan lemaknya juga.</li>
-            <li>Baca juga <a href="gorengan-harian.html">halaman Gorengan Harian</a> bila pemicu Anda terasa datang dari pola jajan.</li>
-          </ul>
-        </div>
-      </div>
+      <div class="callout warn"><strong>Cross-check logika:</strong> kalau Anda rajin menyalahkan bayam atau kangkung tetapi sirop, minuman sachet manis, dan gorengan masih hampir tiap hari, logikanya kebalik. Baca juga <a href="asam-urat-dewasa.html#kenali">halaman asam urat</a>.</div>
     </div>
   </section>
 
-  <section id="gayahidup" class="section">
+  <section id="swap" class="section">
     <div class="section-head">
       <div class="heading-row">
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-heart-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span></div>
         <div class="heading-copy">
-          <h2>4) Supaya flare tidak bolak-balik</h2>
-          <p>Yang dicari bukan diet ekstrem seminggu, tetapi kebiasaan yang memang bisa bertahan dalam hidup sehari-hari.</p>
+          <h2>4) Pilihan yang lebih realistis di warung dan rumah</h2>
+          <p>Targetnya bukan hidup steril tanpa jajan, tetapi membuat pilihan yang lebih ringan dan lebih jarang memukul tubuh sekaligus.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
       <div class="compare-grid">
         <article class="compare-card primary">
-          <h3><span class="icon-pair"><i class="bi bi-droplet-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span> Jadikan air putih default</h3>
-          <p>Pada banyak pasien, justru minuman manis harian yang paling berat dipotong tetapi paling terasa dampaknya.</p>
+          <h3><span class="icon-pair"><i class="bi bi-arrow-left-right icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Bala-bala atau gehu + teh manis</h3>
+          <p>Lebih realistis: batasi satu potong, lalu tambah air putih dan pastikan makan utama tetap jelas.</p>
         </article>
         <article class="compare-card accent">
-          <h3><span class="icon-pair"><i class="bi bi-person-walking icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-user"></use></svg></span> Gerak rutin setelah nyeri reda</h3>
-          <p>Olahraga sedang membantu berat badan, gula darah, dan tekanan darah. Yang dihindari adalah memaksa sendi saat flare aktif.</p>
+          <h3><span class="icon-pair"><i class="bi bi-arrow-left-right icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Cireng + sirop</h3>
+          <p>Lebih ringan bila diganti jagung rebus, singkong rebus, buah potong, atau teh tanpa gula.</p>
         </article>
         <article class="compare-card">
-          <h3><span class="icon-pair"><i class="bi bi-capsule-pill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pill"></use></svg></span> Diet saja tidak selalu cukup</h3>
-          <p>Pada pasien dengan flare berulang, benjolan tofi, atau masalah ginjal, dokter bisa menilai perlunya obat penurun asam urat jangka panjang.</p>
+          <h3><span class="icon-pair"><i class="bi bi-arrow-left-right icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pulse"></use></svg></span> Bakso kuah pekat + gorengan</h3>
+          <p>Lebih aman bila gorengan dilepas, kuah tidak dihabiskan, sayur ditambah, dan minumnya air putih.</p>
         </article>
       </div>
       <div class="plain-columns">
         <div class="plain-block">
-          <h3>Langkah paling realistis minggu ini</h3>
+          <h3>Swap yang bisa langsung dicoba</h3>
           <ul class="plain-list">
-            <li>Pilih satu minuman manis yang paling sering Anda minum, lalu potong frekuensinya dulu.</li>
-            <li>Kurangi satu paket jajan berminyak dalam sehari dan ganti dengan air putih plus makanan nyata.</li>
-            <li>Catat kapan flare muncul dan apa saja yang dimakan atau diminum 1-2 hari sebelumnya.</li>
+            <li><strong>Kopi sachet manis:</strong> geser ke kopi atau teh tawar, atau minimal kurangi frekuensinya.</li>
+            <li><strong>Minuman sarapan sachet:</strong> ganti dengan sarapan nyata seperti nasi, telur, tahu, tempe, atau buah.</li>
+            <li><strong>Snack ultra-proses:</strong> ganti dengan buah, kacang panggang secukupnya, atau lauk rumahan yang tidak digoreng ulang.</li>
           </ul>
         </div>
         <div class="plain-block">
-          <h3>Yang dibahas saat kontrol</h3>
+          <h3>Aturan sederhana di rumah</h3>
           <ul class="plain-list">
-            <li>Seberapa sering flare terjadi dan sendi mana saja yang terkena.</li>
-            <li>Riwayat batu ginjal, fungsi ginjal, gula darah, tekanan darah, dan berat badan.</li>
-            <li>Obat harian seperti diuretik, aspirin dosis rendah, atau suplemen yang mungkin ikut berpengaruh.</li>
+            <li>Kalau tetap mau gorengan, jadikan lauk samping sesekali, bukan pengganti makan utama.</li>
+            <li>Air putih dijadikan default. Minuman manis bukan teman wajib setiap jajanan.</li>
+            <li>Periksa isi dapur dan meja kerja: yang sering terlihat biasanya yang paling sering dimakan.</li>
           </ul>
-          <p class="plain-note"><strong>Pesan aman:</strong> jangan mulai, hentikan, atau ganti obat sendiri hanya karena nyeri sedang reda atau baru kambuh.</p>
+          <p class="plain-note"><strong>Pesan aman:</strong> yang dicari adalah pola yang bisa bertahan, bukan perubahan ekstrem dua hari lalu balik lagi.</p>
         </div>
       </div>
     </div>
@@ -525,29 +482,29 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       <div class="heading-row">
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-person-vcard-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-user"></use></svg></span></div>
         <div class="heading-copy">
-          <h2>5) Kondisi khusus yang perlu dibahas saat kontrol</h2>
-          <p>Aturan umum di internet tidak selalu aman bila Anda punya penyakit penyerta, hamil, atau pernah alergi obat berat.</p>
+          <h2>5) Kondisi khusus yang perlu lebih hati-hati</h2>
+          <p>Di beberapa kondisi, paket jajan seperti ini lebih cepat memukul hasil kontrol atau gejala harian.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
       <div class="plain-columns">
         <div class="plain-block">
-          <h3>Penyakit penyerta</h3>
+          <h3>Penyakit metabolik dan organ</h3>
           <ul class="plain-list">
-            <li><strong>Penyakit ginjal atau batu ginjal:</strong> pilihan obat nyeri dan target terapi perlu dinilai lebih hati-hati.</li>
-            <li><strong>Diabetes, hipertensi, obesitas:</strong> masalahnya sering bukan satu sendi saja, tetapi paket metabolik.</li>
+            <li><strong>Diabetes atau prediabetes:</strong> minuman manis dan jajan berulang cepat mengganggu gula darah.</li>
+            <li><strong>Hipertensi, penyakit jantung, atau penyakit ginjal:</strong> kuah asin, saus, dan snack kemasan ikut menaikkan beban sodium.</li>
           </ul>
         </div>
         <div class="plain-block">
-          <h3>Obat dan kondisi harian</h3>
+          <h3>Kondisi lain</h3>
           <ul class="plain-list">
-            <li><strong>Diuretik atau obat rutin lain:</strong> jangan menghentikan sendiri; minta review obat bersama dokter.</li>
-            <li><strong>Hamil, menyusui, atau alergi obat berat:</strong> pilihan obat gout tidak selalu sama, jadi sampaikan jelas riwayat Anda.</li>
+            <li><strong>Asam urat berulang atau batu ginjal:</strong> jangan sibuk menyalahkan sayur hijau sambil membiarkan minuman manis dan jajanan berminyak tetap harian.</li>
+            <li><strong>Hamil, menyusui, atau alergi makanan berat:</strong> pilihan swap tetap perlu disesuaikan, jangan menyalin mentah pola orang lain.</li>
           </ul>
         </div>
       </div>
-      <p class="plain-note"><strong>Bawa saat kontrol:</strong> daftar obat rutin, hasil lab terakhir, catatan pemicu, dan foto sendi saat bengkak.</p>
+      <p class="plain-note"><strong>Bawa saat kontrol:</strong> catatan minum harian, frekuensi jajan per minggu, hasil tensi atau gula bila ada, dan keluhan yang terasa makin sering.</p>
     </div>
   </section>
 
@@ -557,44 +514,44 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
         <div class="heading-icon"><span class="icon-pair"><i class="bi bi-exclamation-triangle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
         <div class="heading-copy">
           <h2>6) Kapan harus ke dokter atau IGD</h2>
-          <p>Bagian ini sengaja dibuat tegas. Sendi panas-merah bukan area untuk coba-coba terlalu lama di rumah.</p>
+          <p>Halaman ini membahas pola makan, tetapi beberapa gejala tidak aman ditunggu karena bisa menandakan masalah yang lebih serius.</p>
         </div>
       </div>
     </div>
     <div class="section-body">
       <div class="danger-band">
-        <h3>Sendi merah-panas + demam = jangan dianggap urusan diet saja</h3>
-        <p>Infeksi sendi bisa mirip gout dan perlu penanganan cepat. Bila ragu, lebih aman diperiksa.</p>
+        <h3>Nyeri dada, sesak, stroke, atau alergi berat bukan urusan "jajan kebanyakan" biasa</h3>
+        <p>Kalau ada gejala akut yang mengarah ke kondisi gawat, jangan menunggu efek diet membaik sendiri.</p>
       </div>
       <div class="danger-columns">
         <div>
           <h3>Periksa hari ini</h3>
           <ul>
-            <li>Serangan pertama dan Anda belum pernah didiagnosis gout.</li>
-            <li>Nyeri tidak membaik dalam 24-48 jam atau malah makin berat.</li>
-            <li>Flare datang berulang, makin sering, atau mulai kena banyak sendi.</li>
-            <li>Ada nyeri pinggang, anyang-anyangan, atau curiga batu ginjal.</li>
+            <li>Berat badan, gula darah, atau tekanan darah makin sulit dikendalikan.</li>
+            <li>Anda makin sering kembung, nyeri ulu hati, atau bengkak setelah pola jajan yang sama.</li>
+            <li>Asam urat atau nyeri sendi sering kambuh setelah jajan manis-berminyak.</li>
+            <li>Makan utama makin sering tergeser oleh gorengan dan minuman manis.</li>
           </ul>
         </div>
         <div>
           <h3>Ke IGD sekarang</h3>
           <ul>
-            <li>Sendi merah-panas disertai demam, menggigil, atau badan sangat lemas.</li>
-            <li>Tidak bisa menapak sama sekali, terutama setelah jatuh atau benturan.</li>
-            <li>Muntah terus, tanda dehidrasi berat, atau kencing sangat sedikit.</li>
-            <li>Sesak, bengkak hebat, atau reaksi alergi setelah minum obat.</li>
+            <li>Nyeri dada, sesak, lemah satu sisi, bicara pelo, atau gejala stroke lainnya.</li>
+            <li>Reaksi alergi berat setelah makan atau minum: bibir atau lidah bengkak, sesak, atau pingsan.</li>
+            <li>Muntah terus, tidak bisa minum, atau tanda dehidrasi berat.</li>
+            <li>Gula darah sangat tinggi atau sangat rendah dengan gejala lemas berat, bingung, atau penurunan kesadaran.</li>
           </ul>
         </div>
         <div>
-          <h3>Jangan dipijat atau ditunggu</h3>
+          <h3>Jangan tunggu terlalu lama</h3>
           <ul>
-            <li>Sendi sangat bengkak dengan luka atau infeksi kulit di sekitarnya.</li>
-            <li>Anda punya diabetes yang sedang tidak terkontrol atau penyakit ginjal berat.</li>
-            <li>Diagnosis belum jelas tetapi nyeri sudah mengganggu jalan, tidur, dan aktivitas dasar.</li>
+            <li>Kalau sudah tahu punya diabetes, hipertensi, penyakit ginjal, atau gout berulang.</li>
+            <li>Kalau pola jajan terasa "normal" tetapi hasil kontrol terus memburuk.</li>
+            <li>Kalau Anda tidak yakin makanan mana yang paling berpengaruh dan butuh strategi yang realistis.</li>
           </ul>
         </div>
       </div>
-      <p class="plain-note"><strong>Kalau ragu:</strong> lebih aman periksa. Gout bisa mirip penyakit lain, dan penyakit lain itu bisa lebih berbahaya.</p>
+      <p class="plain-note"><strong>Kalau ragu:</strong> lebih aman periksa. Pola jajan memang perlu dibenahi, tetapi gejala akut tetap harus diperlakukan sebagai masalah medis dulu.</p>
     </div>
   </section>
   <section id="faq" class="section">
@@ -610,20 +567,20 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
     <div class="section-body">
       <div class="faq">
         <div class="faq-item">
-          <button class="faq-btn" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">Kalau hasil lab asam urat tinggi tapi tidak sakit, apakah pasti harus minum obat?<span class="faq-mark" aria-hidden="true">+</span></button>
-          <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>Belum tentu. Hiperurisemia tanpa gejala tidak otomatis sama dengan gout. Keputusan terapi tergantung gejala, komorbid, riwayat batu ginjal, dan penilaian dokter.</div>
+          <button class="faq-btn" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">Kalau cuma satu atau dua gorengan sesekali, apakah langsung berbahaya?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>Tidak harus begitu. Masalah utamanya biasanya frekuensi dan paketnya: apakah gorengan itu hadir hampir tiap hari, ditemani minuman manis, kuah asin, dan menggantikan makan utama.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-btn" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">Apakah semua sayuran hijau harus dibatasi ketat?<span class="faq-mark" aria-hidden="true">+</span></button>
-          <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>Tidak. Kemenkes menekankan bahwa sayuran kaya purin secara umum tidak menunjukkan efek yang sama seperti purin hewani terhadap flare gout. Fokus utama tetap pada alkohol, minuman manis, jeroan, ekstrak ragi, dan purin hewani tinggi.</div>
+          <button class="faq-btn" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">Bakso kuah termasuk masalah juga atau yang disalahkan cuma gorengan?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>Bakso kuah bisa ikut bermasalah karena kuah, saus, sambal, dan gorengan pendamping membuat sodium serta lemak naik. Jadi jangan menilai gorengan terpisah dari pasangannya.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-btn" type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">Kalau nyerinya sedang reda, boleh olahraga?<span class="faq-mark" aria-hidden="true">+</span></button>
-          <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>Boleh, bahkan dianjurkan latihan sedang secara rutin untuk berat badan dan komorbid. Yang dihindari adalah memaksa olahraga saat flare aktif atau olahraga yang berisiko trauma sendi.</div>
+          <button class="faq-btn" type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">Apakah minuman sachet manis lebih aman daripada soda?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>Tidak otomatis. Bentuknya berbeda, tetapi gula cairnya tetap perlu dihitung. Kalau diminum rutin, minuman sachet manis bisa sama-sama membuat total gula harian berlebih.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-btn" type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">Bila sudah pernah didiagnosis gout, apakah diet saja cukup?<span class="faq-mark" aria-hidden="true">+</span></button>
-          <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>Tidak selalu. Diet dan gaya hidup sangat penting, tetapi pada flare berulang atau masalah ginjal, dokter bisa menilai perlunya obat penurun asam urat jangka panjang. Obat tidak boleh diatur sendiri.</div>
+          <button class="faq-btn" type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">Apakah harus stop total semua gorengan?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>Tidak harus langsung nol total untuk semua orang. Yang lebih realistis adalah menurunkan frekuensi, memutus pasangan minuman manis, dan memastikan jajan tidak menggantikan makan utama.</div>
         </div>
       </div>
     </div>
@@ -641,14 +598,14 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
     </div>
     <div class="section-body">
       <ol class="refs">
-        <li>Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan. <a href="https://keslan.kemkes.go.id/view_artikel/3989/tanda-dan-gejala-asam-urat-tinggi-perlu-diwaspadai" target="_blank" rel="noopener">Tanda dan Gejala Asam Urat Tinggi, Perlu Diwaspadai!</a>. Publikasi 17 Februari 2025.</li>
-        <li>Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan. <a href="https://keslan.kemkes.go.id/view_artikel/4103/diet-sehat-untuk-penderita-asam-urat-gout-arthritis" target="_blank" rel="noopener">Diet Sehat untuk Penderita Asam Urat (Gout Arthritis)</a>. Dicek ulang 12 Maret 2026.</li>
-        <li>CDC. <a href="https://www.cdc.gov/arthritis/gout/index.html" target="_blank" rel="noopener">Gout</a>. Diperbarui 26 Januari 2024.</li>
         <li>WHO. <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">Healthy diet</a>. Halaman aktif dan diperbarui 26 Januari 2026.</li>
         <li>Kemenkes RI. <a href="https://sehatnegeriku.kemkes.go.id/baca/rilis-media/20240131/2544885/cegah-meningkatnya-diabetes-jangan-berlebihan-konsumsi-gula-garam-lemak/" target="_blank" rel="noopener">Cegah Meningkatnya Diabetes, Jangan Berlebihan Konsumsi Gula, Garam, Lemak</a>. Publikasi 31 Januari 2024.</li>
         <li>Kemenkes RI Ayo Sehat. <a href="https://ayosehat.kemkes.go.id/penting-ini-yang-perlu-anda-ketahui-mengenai-konsumsi-gula-garam-dan-lemak" target="_blank" rel="noopener">Penting, Ini yang Perlu Anda Ketahui Mengenai Konsumsi Gula, Garam dan Lemak</a>. Materi aktif dari 2019.</li>
+        <li>CDC. <a href="https://www.cdc.gov/arthritis/gout/index.html" target="_blank" rel="noopener">Gout</a>. Diperbarui 26 Januari 2024.</li>
+        <li>Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan. <a href="https://keslan.kemkes.go.id/view_artikel/4103/diet-sehat-untuk-penderita-asam-urat-gout-arthritis" target="_blank" rel="noopener">Diet Sehat untuk Penderita Asam Urat (Gout Arthritis)</a>. Dicek ulang 12 Maret 2026.</li>
+        <li>Kemenkes RI Direktorat Jenderal Kesehatan Lanjutan. <a href="https://keslan.kemkes.go.id/view_artikel/3989/tanda-dan-gejala-asam-urat-tinggi-perlu-diwaspadai" target="_blank" rel="noopener">Tanda dan Gejala Asam Urat Tinggi, Perlu Diwaspadai!</a>. Publikasi 17 Februari 2025.</li>
       </ol>
-      <div class="callout">Konten ini untuk edukasi pasien. Diagnosis, target asam urat, dan penyesuaian obat tetap perlu konsultasi langsung.</div>
+      <div class="callout">Konten ini untuk edukasi pasien. Untuk penilaian diabetes, hipertensi, gout, atau alergi, tetap perlu konsultasi langsung.</div>
     </div>
   </section>
 
@@ -713,15 +670,7 @@ const ZMC = {
 };
 const TOPIC_MEDIA = {
   hero: null,
-  figures: {
-    "flare-safe": {
-      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244980/zmc/asam-urat-dewasa/asam-urat-dewasa-flare-safe.webp",
-      local: "../../assets/topics/asam-urat-dewasa/asam-urat-dewasa-flare-safe.webp",
-      alt: "Pasien dewasa Indonesia mengistirahatkan sendi bengkak dan kompres dingin saat serangan asam urat.",
-      width: 1536,
-      height: 1024
-    }
-  }
+  figures: {}
 };
 
 (function initPage(){
