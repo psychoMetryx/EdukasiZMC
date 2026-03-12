@@ -1,0 +1,37 @@
+{
+  "viewports": [
+    {
+      "viewport": "360x800",
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "heroHeight": 176,
+      "quickScrollWidth": 606,
+      "quickClientWidth": 339
+    },
+    {
+      "viewport": "768x1024",
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "heroHeight": 217,
+      "quickScrollWidth": 747,
+      "quickClientWidth": 747
+    },
+    {
+      "viewport": "1366x768",
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "heroHeight": 232,
+      "quickScrollWidth": 1078,
+      "quickClientWidth": 1078
+    }
+  ],
+  "keyboard": {
+    "faq1Open": "true",
+    "activeAfterDown": "faq-btn-2",
+    "faq2Open": "true"
+  },
+  "fallback": {
+    "iconsFallback": true,
+    "heroSrc": "../../assets/topics/pusing-dewasa/pusing-dewasa-hero.webp"
+  }
+}
