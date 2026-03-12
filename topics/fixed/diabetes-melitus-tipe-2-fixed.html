@@ -511,14 +511,32 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
       </div>
 
       <div class="micro-grid">
-        <div class="visual-board media-figure" aria-label="Orientasi cek kaki harian">
-          <img data-media-key="foot-check" alt="" loading="lazy" decoding="async">
-          <ul class="figure-points">
-            <li><strong>Lecet atau lepuh:</strong> sekecil apa pun perlu dianggap serius pada kaki pasien diabetes.</li>
-            <li><strong>Kulit pecah dan sela jari lembap:</strong> area ini mudah terlewat kalau tidak dicek rutin.</li>
-            <li><strong>Merah, bengkak, atau hangat:</strong> jangan tunggu jadwal kontrol biasa bila muncul perubahan baru.</li>
-            <li><strong>Kuku berubah atau nyeri:</strong> kuku tumbuh ke dalam dan infeksi jamur perlu dinilai lebih cepat.</li>
-          </ul>
+        <div class="visual-board" aria-hidden="true">
+          <svg viewBox="0 0 340 300" role="img" aria-label="Visual tanda yang harus dilihat saat memeriksa kaki">
+            <rect x="14" y="14" width="312" height="272" rx="18" fill="#fffaf7" stroke="#d9c8be"></rect>
+            <text x="30" y="40" font-size="18" font-family="Tahoma" fill="#221b18" font-weight="700">Saat cek kaki, lihat 4 hal ini</text>
+            <rect x="28" y="72" width="96" height="52" rx="12" fill="#f8ecec" stroke="#d7b7b9"></rect>
+            <text x="42" y="93" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">1. Lecet / lepuh</text>
+            <text x="42" y="111" font-size="11.5" font-family="Tahoma" fill="#605853">sekecil apa pun</text>
+            <rect x="28" y="182" width="96" height="52" rx="12" fill="#f7f0ea" stroke="#d8c7bf"></rect>
+            <text x="42" y="203" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">2. Kulit pecah</text>
+            <text x="42" y="221" font-size="11.5" font-family="Tahoma" fill="#605853">sela jari lembap</text>
+            <rect x="222" y="110" width="90" height="52" rx="12" fill="#fdf2df" stroke="#d8c08b"></rect>
+            <text x="236" y="131" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">3. Merah</text>
+            <text x="236" y="147" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">atau bengkak</text>
+            <rect x="222" y="198" width="90" height="52" rx="12" fill="#f8ecec" stroke="#d7b7b9"></rect>
+            <text x="236" y="219" font-size="12" font-family="Tahoma" fill="#8d1d23" font-weight="700">4. Kuku berubah</text>
+            <text x="236" y="237" font-size="11.5" font-family="Tahoma" fill="#605853">kuning / nyeri</text>
+            <path d="M167 94c12 0 18 11 16 21l-20 89c-2 9-10 15-18 15-10 0-18-8-18-19v-44c0-16 3-32 10-45 7-11 18-17 30-17z" fill="#f7e6df" stroke="#caa398" stroke-width="3"></path>
+            <circle cx="186" cy="83" r="9" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
+            <circle cx="203" cy="90" r="8.5" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
+            <circle cx="214" cy="103" r="7.5" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
+            <circle cx="216" cy="118" r="6.8" fill="#f7e6df" stroke="#caa398" stroke-width="3"></circle>
+            <path d="M124 99h20" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M124 208h22" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M216 134h18" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M193 216h41" stroke="#8d1d23" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
         </div>
         <div class="text-flow">
           <p>CDC menganjurkan <strong>cek kaki setiap hari</strong>, cuci dengan air hangat <strong>bukan panas</strong>, pakai pelembap di permukaan kaki tetapi <strong>jangan di sela jari</strong>, dan <strong>jangan berjalan tanpa alas kaki</strong> bahkan di dalam rumah.</p>
@@ -872,13 +890,6 @@ const TOPIC_MEDIA = {
       width: 1536,
       height: 1024
     },
-    "foot-check": {
-      remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244964/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-foot-check.webp",
-      local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-foot-check.webp",
-      alt: "Visual orientasi pemeriksaan kaki pasien diabetes dengan fokus pada lecet, kemerahan, kulit pecah, dan kuku.",
-      width: 1536,
-      height: 1024
-    }
   }
 };
 
