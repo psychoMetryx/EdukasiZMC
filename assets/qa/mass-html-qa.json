@@ -1,0 +1,431 @@
+[
+  {
+    "slug": "lambung",
+    "file": "topics/fixed/lambung.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 171,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 2
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\lambung-fixed.pdf"
+  },
+  {
+    "slug": "pusing-dewasa",
+    "file": "topics/fixed/pusing-dewasa.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 160,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 1
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\pusing-dewasa-fixed.pdf"
+  },
+  {
+    "slug": "tipes",
+    "file": "topics/fixed/tipes.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 156,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 1
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\tipes-fixed.pdf"
+  },
+  {
+    "slug": "diabetes-melitus-tipe-2",
+    "file": "topics/fixed/diabetes-melitus-tipe-2.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 160,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 3
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\diabetes-melitus-tipe-2-fixed.pdf"
+  },
+  {
+    "slug": "hipertensi-dewasa",
+    "file": "topics/fixed/hipertensi-dewasa.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 171,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 3
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\hipertensi-dewasa-fixed.pdf"
+  },
+  {
+    "slug": "nyeri-badan-lansia",
+    "file": "topics/fixed/nyeri-badan-lansia.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 160,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 3
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\nyeri-badan-lansia-fixed.pdf"
+  },
+  {
+    "slug": "demam-berdarah-dbd",
+    "file": "topics/fixed/demam-berdarah-dbd.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 171,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 2
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\demam-berdarah-dbd-fixed.pdf"
+  },
+  {
+    "slug": "menurunkan-berat-badan",
+    "file": "topics/fixed/menurunkan-berat-badan.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 156,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 242,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 242,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 2
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\menurunkan-berat-badan-fixed.pdf"
+  },
+  {
+    "slug": "gizi-anak-6bulan-5tahun",
+    "file": "topics/fixed/gizi-anak-6bulan-5tahun.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 152,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 257,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 2
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\gizi-anak-6bulan-5tahun-fixed.pdf"
+  },
+  {
+    "slug": "batuk-pilek-anak",
+    "file": "topics/fixed/batuk-pilek-anak.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 160,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 231,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 1
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\batuk-pilek-anak-fixed.pdf"
+  },
+  {
+    "slug": "lambung-saat-puasa",
+    "file": "topics/unfix/lambung-saat-puasa.html",
+    "viewports": {
+      "mobile": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "heroHeight": 171,
+        "horizontalOverflow": false
+      },
+      "tablet": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "heroHeight": 262,
+        "horizontalOverflow": false
+      },
+      "desktop": {
+        "scrollWidth": 1366,
+        "clientWidth": 1366,
+        "heroHeight": 252,
+        "horizontalOverflow": false
+      }
+    },
+    "keyboard": {
+      "focusStyle": {
+        "outline": "none",
+        "outlineWidth": "0px"
+      },
+      "heroActive": "heroWa",
+      "chipActive": "chip",
+      "faqExpanded": "true",
+      "printActive": "printPage"
+    },
+    "fallback": {
+      "iconsFallback": true,
+      "visibleImages": 1
+    },
+    "pdf": "C:\\Users\\POLI UMUM\\Desktop\\CODEX\\EdukasiZMC\\assets\\qa\\lambung-saat-puasa-fixed.pdf"
+  }
+]
