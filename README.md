@@ -93,7 +93,7 @@ Guardrail anti-generik:
 - Bootstrap Icons CDN boleh dipakai, tetapi ikon kritikal wajib punya fallback inline SVG dan runtime check untuk mode fallback.
 
 ## AI Image Workflow
-- Skill `imagegen` adalah workflow resmi repo untuk membuat **hero/orientation visual**, bukan untuk checklist, flowchart, proporsi piring, atau diagram keputusan medis.
+- Skill `imagegen` adalah workflow resmi repo untuk membuat **hero/orientation visual** dan figure edukasi yang sudah lolos audit sebagai `AI-first/hybrid`.
 - Host permanen untuk gambar AI adalah **Cloudinary**.
 - URL publik boleh dipakai di HTML, tetapi hanya dengan **dual source**:
   - `remote` untuk mode online
@@ -101,8 +101,11 @@ Guardrail anti-generik:
 - Temporary host seperti `0x0.st` hanya untuk test cepat, bukan workflow final repo.
 
 ### Kapan dipakai
-- Pakai `imagegen` untuk mengganti SVG hero yang sifatnya orientasi visual.
-- Jangan pakai `imagegen` untuk visual yang membawa teks instruksional, langkah rawat rumah, decision tree, atau checklist medis.
+- Pakai `imagegen` untuk hero dan visual besar yang terasa seperti ilustrasi sketsa/manual, selama fungsi utamanya adalah orientasi cepat.
+- Visual seperti area nyeri tubuh, orientasi latihan ringan, orientasi cek kaki, suasana dapur, atau foto piring realistis boleh masuk jalur `AI-first/hybrid`.
+- Jangan pakai `imagegen` untuk visual yang nilai utamanya adalah logika, urutan keputusan, checklist, timeline fase, atau teks instruksional kecil.
+- Untuk visual `AI-first/hybrid`, gambar hanya memegang orientasi visual; rasio porsi, label, warning, checklist, dan keputusan tetap ditulis di HTML.
+- Jika hasil AI tidak cukup akurat untuk pose, area tubuh, atau konteks rumah lokal, fallback ke foto lokal atau ilustrasi non-AI terkontrol lebih disukai daripada memaksa output AI yang lemah.
 
 ### Prerequisite
 - `OPENAI_API_KEY`
@@ -117,11 +120,11 @@ python scripts/cloudinary_upload.py check
 
 ### Generate -> upload -> hyperlink -> HTML
 1. Generate image lokal dengan skill `imagegen`.
-2. Simpan file final ke `assets/topics/<slug>/<slug>-hero.webp`.
+2. Simpan file final ke `assets/topics/<slug>/<slug>-<role>.webp`.
 3. Upload ke Cloudinary:
 
 ```powershell
-python scripts/cloudinary_upload.py upload --file "assets/topics/<slug>/<slug>-hero.webp" --slug "<slug>" --role hero
+python scripts/cloudinary_upload.py upload --file "assets/topics/<slug>/<slug>-<role>.webp" --slug "<slug>" --role <role>
 ```
 
 4. Ambil `secure_url` dari output JSON.
@@ -137,13 +140,47 @@ const TOPIC_MEDIA = {
     alt: "Deskripsi singkat visual hero",
     width: 1536,
     height: 1024
+  },
+  figures: {
+    "figure-key": {
+      remote: "https://res.cloudinary.com/...",
+      local: "../assets/topics/<slug>/<slug>-figure-key.webp",
+      alt: "Deskripsi singkat figure",
+      width: 1536,
+      height: 1024
+    }
   }
 };
 ```
 
 - Saat online, HTML boleh memuat `remote`.
 - Jika `remote` gagal atau user offline, HTML wajib fallback ke `local`.
+- Loader media figure sebaiknya generik, bukan hero-only.
+- Query forced fallback seperti `?media=fallback` harus tetap didukung untuk QA.
 - Jangan pindahkan teks medis penting ke dalam gambar.
+
+### Guardrail Prompt
+- Larang teks di dalam gambar.
+- Minta nuansa lokal Indonesia yang realistis, bukan rumah sakit mewah atau stok internasional generik.
+- Untuk piring, tampilkan makanan nyata Indonesia; rasio `1/2` atau `1/4` tetap dijelaskan di HTML.
+- Untuk nyeri tubuh atau latihan, minta orientasi area/pose, bukan anatomi berlabel atau diagram.
+
+### Decision Matrix Visual
+Gunakan matrix ini sebelum membuat atau mengganti visual:
+
+| Jenis kebutuhan | Format default | Kapan dipakai | Jangan dipakai bila |
+| --- | --- | --- | --- |
+| Hero orientasi topik | AI image atau foto lokal | Perlu memberi suasana cepat tanpa memindahkan isi medis ke hero | Hero mulai membawa teks instruksi atau jadi terlalu dominan |
+| Figure orientasi section | AI-first/hybrid | Visual besar terasa sketsa/manual dan fungsi utamanya hanya orientasi cepat | Visual itu sebenarnya berisi logika, label kecil, atau langkah keputusan |
+| Proporsi piring dengan makanan nyata | AI-first/hybrid | Ingin menunjukkan makanan lokal secara realistis | Rasio porsi justru dibakar ke gambar, bukan dijelaskan di HTML |
+| Checklist, timeline, alur keputusan | HTML-first | Nilai utama ada pada urutan, logika, atau teks singkat yang harus discan | Dipaksa jadi AI image atau SVG label kecil |
+| Diagram sederhana tanpa banyak teks | SVG/HTML lokal | Perlu pointer ringan dan bentuknya stabil di semua viewport | SVG mulai penuh label kecil dan rawan clipping |
+| Pose/area tubuh yang harus akurat | AI-first/hybrid dengan audit ketat | AI bisa cukup akurat sebagai orientasi visual | Pose, area keluhan, atau konteks rumah hasilnya meragukan; fallback ke foto lokal/non-AI |
+
+Rule praktis:
+- Jika visual dibaca seperti “gambar untuk orientasi”, pertimbangkan `AI-first/hybrid`.
+- Jika visual dibaca seperti “instruksi, keputusan, atau checklist”, pertahankan `HTML-first`.
+- Jika SVG mulai terasa seperti kotak teks bergambar, itu tanda formatnya salah.
 
 ## Struktur Halaman
 1. Sticky header
@@ -202,6 +239,7 @@ EdukasiZMC/
 - Artefak QA disimpan di `assets/qa/`
 - Skill `playwright`, `pdf`, dan `screenshot` dipakai saat QA memang butuh browser automation, print check, dan artefak visual
 - Untuk halaman dengan AI image, verifikasi mode online dan fallback offline sama-sama lolos
+- Untuk halaman dengan figure AI, pastikan tidak ada teks medis penting yang “terbakar” ke image
 
 ## Artefak Akhir
 Untuk halaman yang selesai dikerjakan, minimal hasil akhirnya mencakup:
@@ -219,3 +257,10 @@ Untuk revisi yang masih tahap review:
 - Pembuka section masih sering terlalu panjang sebelum user mendapat elemen scan-first yang membantu orientasi cepat.
 - Visual sudah ada, tetapi belum cukup memecah beban baca di bagian awal section.
 - Ikon masih terlalu banyak terkonsentrasi di header, CTA, dan footer; body content perlu lebih aktif memakai ikon fungsional.
+
+## Evaluasi 11 Maret 2026
+- SVG besar yang terasa seperti sketsa/manual tidak boleh otomatis dipertahankan. Default revisi berikutnya: audit dulu apakah visual itu lebih tepat jadi `AI-first/hybrid` atau `HTML-first`.
+- Rule baru bukan “semua SVG jadi AI”. Visual orientasi boleh jadi AI image, tetapi diagram logika, timeline, checklist, dan decision flow tetap lebih aman di HTML.
+- Jika sebuah visual sebelumnya berisi teks kecil di dalam SVG, solusi utamanya bukan memindahkan teks itu ke image. Pecah: gambar untuk orientasi, teks inti tetap di HTML.
+- Repo sekarang menganggap kontrak media section setara dengan hero. Jadi `TOPIC_MEDIA` harus siap menampung `figures`, bukan hanya `hero`.
+- QA visual tidak cukup cek “gambar muncul”. Harus cek juga fallback lokal, scanability setelah SVG dihapus, dan apakah section tetap lebih rapi daripada versi boxy sebelumnya.

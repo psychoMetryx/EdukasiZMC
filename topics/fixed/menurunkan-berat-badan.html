@@ -84,8 +84,9 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-figure,.micro-figure{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.65rem}
 .hero-figure svg,.micro-figure svg,.hero-figure img,.micro-figure img{width:100%;display:block}
 .hero-figure svg,.hero-figure img{min-height:108px}
-.hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
-.micro-figure img{border-radius:10px;background:var(--surface-soft)}
+.hero-figure{display:grid;align-content:start}
+.hero-figure img{height:auto;object-fit:cover;border-radius:10px;background:var(--surface-soft)}
+.micro-figure img{height:auto;max-width:100%;border-radius:10px;background:var(--surface-soft);object-fit:contain}
 .hero-caption{display:none;margin:0;font-size:.85rem;color:var(--muted)}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
@@ -133,7 +134,8 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .rail-row{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start}
 .rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
 .measure-board,.walk-plan,.visual-board{padding:.9rem;display:grid;gap:.75rem}
-.media-figure{display:grid;gap:.7rem}
+.media-figure{display:grid;gap:.7rem;align-self:start}
+.media-figure img[data-media-key]{width:100%;height:auto!important;max-width:100%;max-height:min(48vw,340px);display:block;object-fit:contain}
 .figure-caption{margin:0;font-size:.88rem;color:var(--muted)}
 .figure-points{margin:0;padding-left:1rem;display:grid;gap:.34rem;color:var(--muted);font-size:.9rem}
 .figure-split{display:grid;gap:.55rem}
@@ -192,18 +194,19 @@ code{font-family:Consolas,monospace;font-size:.95em}
 }
 @media(min-width:920px){
   .topbar-inner{grid-template-columns:minmax(0,1fr) auto}
-  .hero-grid{grid-template-columns:minmax(0,1.2fr) minmax(290px,.84fr);min-height:232px}
-  .hero-copy{border-right:1px solid var(--line);padding:.74rem .86rem}
-  .hero-copy h2{font-size:clamp(1.02rem,.97rem + .52vw,1.28rem)}
+  .hero-grid{grid-template-columns:minmax(0,1.24fr) minmax(280px,340px);min-height:232px;align-items:stretch}
+  .hero-copy{border-right:1px solid var(--line);padding:.62rem .74rem;min-height:232px;align-content:start}
+  .hero-copy h2{font-size:clamp(.98rem,.95rem + .4vw,1.16rem);line-height:1.08;max-width:31ch}
   .hero-copy p{font-size:.88rem}
-  .hero-points{gap:.45rem}
-  .hero-point{padding:.44rem .5rem}
+  .hero-points{gap:.36rem}
+  .hero-point{padding:.36rem .44rem}
   .hero-point strong{display:flex;align-items:center;gap:.36rem;font-size:.8rem}
-  .hero-point span{display:block;margin-top:.12rem;font-size:.73rem;line-height:1.24;color:var(--muted)}
-  .hero-visual{display:grid;padding:.68rem}
-  .hero-caption{display:block}
-  .split{grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);align-items:start}
-  .micro-grid{grid-template-columns:minmax(0,1fr) minmax(270px,.88fr);align-items:start}
+  .hero-point span{display:none}
+  .hero-visual{display:grid;padding:.56rem;align-content:start;justify-self:end;width:min(100%,332px)}
+  .hero-figure img{height:140px;min-height:0}
+  .hero-caption{display:none}
+  .split{grid-template-columns:minmax(0,1.16fr) minmax(260px,330px);align-items:start}
+  .micro-grid{grid-template-columns:minmax(0,1.14fr) minmax(260px,330px);align-items:start}
 }
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#8f8f8f;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
@@ -847,7 +850,7 @@ const TOPIC_MEDIA = {
       remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244952/zmc/menurunkan-berat-badan/menurunkan-berat-badan-plate-balance.webp",
       local: "../../assets/topics/menurunkan-berat-badan/menurunkan-berat-badan-plate-balance.webp",
       alt: "Foto orientasi piring makan Indonesia dengan sayur, buah, lauk berprotein, dan makanan pokok dalam komposisi seimbang.",
-      width: 1024,
+      width: 1536,
       height: 1024
     }
   }

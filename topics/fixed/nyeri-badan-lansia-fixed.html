@@ -83,7 +83,7 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-figure,.micro-figure,.house-figure,.body-figure{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.68rem}
 .hero-figure svg,.micro-figure svg,.house-figure svg,.body-figure svg,.hero-figure img,.micro-figure img,.house-figure img,.body-figure img{width:100%;display:block}
 .hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
-.micro-figure img,.house-figure img,.body-figure img{border-radius:10px;background:var(--surface-soft)}
+.micro-figure img,.house-figure img,.body-figure img{height:auto;max-width:100%;border-radius:10px;background:var(--surface-soft);object-fit:contain}
 .quick{display:flex;flex-wrap:wrap;gap:.72rem;padding:.12rem 0;margin-top:.86rem;overflow:auto;scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
 .chip{min-height:auto;flex-shrink:0;display:inline-flex;align-items:center;padding:.18rem 0;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;text-decoration:none;font-size:.86rem;font-weight:700;color:var(--muted)}
 .chip:hover{background:transparent;color:var(--brand);border-bottom-color:var(--brand)}
@@ -153,7 +153,8 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .motion-note strong{color:var(--ink)}
 .house-figure{background:var(--surface-soft)}
 .house-figure svg{max-height:300px}
-.media-figure{display:grid;gap:.72rem}
+.media-figure{display:grid;gap:.72rem;align-self:start}
+.media-figure img[data-media-key]{width:100%;height:auto!important;max-width:100%;max-height:min(50vw,340px);display:block;object-fit:contain}
 .figure-caption{margin:0;font-size:.88rem;color:var(--muted)}
 .faq{display:grid;gap:.65rem}
 .faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
@@ -215,8 +216,8 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   .hero-visual{display:grid;align-content:start;padding:.42rem;background:var(--surface-soft)}
   .hero-figure{padding:.3rem}
   .hero-figure svg,.hero-figure img{height:126px}
-  .split{grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);align-items:start}
-  .text-visual{grid-template-columns:minmax(0,1.08fr) minmax(240px,.82fr);align-items:start}
+  .split{grid-template-columns:minmax(0,1.14fr) minmax(260px,320px);align-items:start}
+  .text-visual{grid-template-columns:minmax(0,1.14fr) minmax(260px,320px);align-items:start}
   .body-figure{padding:.52rem}
   .section-body > .body-labels{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
   .body-tag{padding:.4rem .46rem;gap:.44rem}
@@ -229,13 +230,13 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   .scan-row strong{font-size:.88rem}
   .scan-row p{font-size:.88rem;line-height:1.45}
   .column-text{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
-  .exercise-layout{grid-template-columns:minmax(0,1.18fr) minmax(238px,.82fr);align-items:start}
+  .exercise-layout{grid-template-columns:minmax(0,1.16fr) minmax(260px,310px);align-items:start}
   .exercise-side{gap:.72rem}
   .micro-figure{padding:.58rem;gap:.62rem}
   .micro-figure svg{max-height:212px}
   .motion-note{padding:.62rem .7rem;font-size:.88rem}
   .risk-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.72rem}
-  #jatuh .text-visual{grid-template-columns:minmax(0,1.14fr) minmax(224px,.78fr)}
+  #jatuh .text-visual{grid-template-columns:minmax(0,1.16fr) minmax(260px,300px)}
   .house-figure{padding:.54rem}
   .house-figure svg{max-height:228px}
   .house-figure .callout{padding:.66rem .74rem;font-size:.88rem}
@@ -926,22 +927,22 @@ const TOPIC_MEDIA = {
       remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244939/zmc/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-body-pain.webp",
       local: "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-body-pain.webp",
       alt: "Visual orientasi lansia dengan area nyeri yang sering muncul pada leher, bahu, pinggang bawah, panggul, dan lutut.",
-      width: 1024,
-      height: 1536
+      width: 1536,
+      height: 1024
     },
     "exercise-safe": {
       remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244943/zmc/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-exercise-safe.webp",
       local: "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-exercise-safe.webp",
       alt: "Visual orientasi latihan ringan lansia di rumah dengan kursi sebagai pegangan.",
-      width: 1024,
-      height: 1536
+      width: 1536,
+      height: 1024
     },
     "house-safe": {
       remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244947/zmc/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-house-safe.webp",
       local: "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-house-safe.webp",
       alt: "Visual orientasi rumah yang lebih aman untuk lansia dengan pencahayaan baik dan kamar mandi lebih aman.",
-      width: 1024,
-      height: 1536
+      width: 1536,
+      height: 1024
     }
   }
 };

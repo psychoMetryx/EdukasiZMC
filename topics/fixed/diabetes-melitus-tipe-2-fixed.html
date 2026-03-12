@@ -80,7 +80,9 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-visual{display:none}
 .hero-figure,.micro-figure,.visual-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.66rem}
 .hero-figure svg,.micro-figure svg,.visual-board svg,.hero-figure img,.visual-board img{width:100%;display:block}
-.visual-board img{border-radius:10px;background:var(--surface-soft)}
+.visual-board img{height:auto;max-width:100%;border-radius:10px;background:var(--surface-soft);object-fit:contain}
+.media-figure{align-self:start}
+.media-figure img[data-media-key]{width:100%;height:auto!important;max-width:100%;max-height:min(48vw,340px);display:block;object-fit:contain}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
 .quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
@@ -197,9 +199,9 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   .hero-figure svg,.hero-figure img{height:176px}
   .hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
   .scan-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .split{grid-template-columns:minmax(0,1.02fr) minmax(290px,.98fr);align-items:start}
+  .split{grid-template-columns:minmax(0,1.12fr) minmax(260px,330px);align-items:start}
   .micro-grid{grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);align-items:start}
-  .check-grid{grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);align-items:start}
+  .check-grid{grid-template-columns:minmax(0,1.12fr) minmax(260px,330px);align-items:start}
   .schedule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .guide-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .decision-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -860,21 +862,21 @@ const TOPIC_MEDIA = {
       remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244956/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-signals-early.webp",
       local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-signals-early.webp",
       alt: "Visual orientasi pasien dewasa dengan tanda awal diabetes yang samar di rumah.",
-      width: 1024,
+      width: 1536,
       height: 1024
     },
     "diet-plate": {
       remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244960/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-diet-plate.webp",
       local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-diet-plate.webp",
       alt: "Foto orientasi piring makan Indonesia untuk pasien diabetes dengan komposisi sayur, buah, karbohidrat, dan lauk berprotein.",
-      width: 1024,
+      width: 1536,
       height: 1024
     },
     "foot-check": {
       remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773244964/zmc/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-foot-check.webp",
       local: "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-foot-check.webp",
       alt: "Visual orientasi pemeriksaan kaki pasien diabetes dengan fokus pada lecet, kemerahan, kulit pecah, dan kuku.",
-      width: 1024,
+      width: 1536,
       height: 1024
     }
   }

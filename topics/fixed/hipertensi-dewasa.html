@@ -85,7 +85,9 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .hero-figure svg,.hero-figure img{height:156px}
 .hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
 .hero-caption{margin:0;font-size:.8rem;line-height:1.15;color:var(--muted)}
-.micro-figure img,.visual-board img{border-radius:10px;background:var(--surface-soft);object-fit:cover}
+.micro-figure img,.visual-board img{height:auto;max-width:100%;border-radius:10px;background:var(--surface-soft);object-fit:contain}
+.media-figure{align-self:start}
+.media-figure img[data-media-key]{width:100%;height:auto!important;max-width:100%;max-height:min(48vw,340px);display:block;object-fit:contain}
 .summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
 .summary strong{color:var(--brand)}
 .quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
@@ -124,6 +126,7 @@ html.icons-fallback .icon-local{display:inline-block!important}
 .figure-points{display:grid;gap:.7rem}
 .figure-point{border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);padding:.78rem .82rem}
 .figure-point strong{display:block;margin-bottom:.18rem;color:var(--ink)}
+.detail-grid > *{align-self:start}
 .rail,.mini-panel{padding:.9rem;display:grid;gap:.75rem}
 .rail-row{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start}
 .rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
@@ -225,12 +228,12 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
   .hero-copy{padding:.64rem .78rem;border-right:1px solid var(--line)}
   .hero-points{grid-template-columns:repeat(3,minmax(0,1fr))}
   .hero-visual{display:grid;align-content:start;padding:.72rem;background:var(--surface-soft)}
-  .split{grid-template-columns:minmax(0,1.06fr) minmax(290px,.94fr);align-items:start}
-  .micro-grid{grid-template-columns:minmax(0,1fr) minmax(280px,.88fr);align-items:start}
+  .split{grid-template-columns:minmax(0,1.16fr) minmax(260px,330px);align-items:start}
+  .micro-grid{grid-template-columns:minmax(0,1.12fr) minmax(260px,320px);align-items:start}
   .metric-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .measure-grid{grid-template-columns:minmax(0,1.03fr) minmax(280px,.97fr)}
+  .measure-grid{grid-template-columns:minmax(0,1.12fr) minmax(260px,330px)}
   .decision-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .detail-grid{grid-template-columns:minmax(0,1.02fr) minmax(290px,.98fr)}
+  .detail-grid{grid-template-columns:minmax(0,1.16fr) minmax(260px,330px);align-items:start}
 }
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
@@ -557,16 +560,16 @@ footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);
               </div>
             </div>
           </div>
-          <div class="strip">
-            <h3>Contoh modifikasi ala rumah Sunda ringan</h3>
-            <ul>
-              <li>Nasi + pepes ikan + sayur asem tanpa kaldu instan + timun.</li>
-              <li>Nasi + tahu kukus/bacem ringan + tumis buncis tipis minyak + pepaya.</li>
-              <li>Sambal tomat segar secukupnya lebih baik daripada sambal botolan asin.</li>
-              <li>Kurangi kebiasaan "harus ada kerupuk asin tiap makan".</li>
-            </ul>
-          </div>
         </div>
+      </div>
+      <div class="strip">
+        <h3>Contoh modifikasi ala rumah Sunda ringan</h3>
+        <ul>
+          <li>Nasi + pepes ikan + sayur asem tanpa kaldu instan + timun.</li>
+          <li>Nasi + tahu kukus/bacem ringan + tumis buncis tipis minyak + pepaya.</li>
+          <li>Sambal tomat segar secukupnya lebih baik daripada sambal botolan asin.</li>
+          <li>Kurangi kebiasaan "harus ada kerupuk asin tiap makan".</li>
+        </ul>
       </div>
       <div class="callout">WHO juga menganjurkan lebih banyak makanan segar dan minim olahan, mengurangi saus atau produk instan, dan menggunakan rempah untuk rasa. Jadi targetnya bukan cuma "jangan tambah garam", tetapi <strong>kurangi makanan yang memang sudah tinggi sodium dari sananya</strong>.</div>
     </div>
