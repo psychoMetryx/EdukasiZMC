@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-03-13T00:50:43.257Z",
+  "pages": [
+    {
+      "file": "hipertensi-dewasa.html",
+      "rootFallback": true,
+      "logoOk": true,
+      "mediaCount": 3,
+      "mediaOk": true,
+      "media": [
+        {
+          "src": "../../assets/topics/hipertensi-dewasa/hipertensi-dewasa-hero.png",
+          "currentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/hipertensi-dewasa/hipertensi-dewasa-hero.png",
+          "loading": "eager",
+          "complete": true,
+          "naturalWidth": 1536,
+          "ok": true
+        },
+        {
+          "src": "../../assets/topics/hipertensi-dewasa/hipertensi-dewasa-sodium-kitchen.webp",
+          "currentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/hipertensi-dewasa/hipertensi-dewasa-sodium-kitchen.webp",
+          "loading": "eager",
+          "complete": true,
+          "naturalWidth": 1536,
+          "ok": true
+        },
+        {
+          "src": "../../assets/topics/hipertensi-dewasa/hipertensi-dewasa-daily-rhythm.webp",
+          "currentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/hipertensi-dewasa/hipertensi-dewasa-daily-rhythm.webp",
+          "loading": "eager",
+          "complete": true,
+          "naturalWidth": 1536,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "nyeri-badan-lansia.html",
+      "rootFallback": true,
+      "logoOk": true,
+      "mediaCount": 4,
+      "mediaOk": true,
+      "media": [
+        {
+          "src": "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-hero.webp",
+          "currentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-hero.webp",
+          "loading": "eager",
+          "complete": true,
+          "naturalWidth": 1536,
+          "ok": true
+        },
+        {
+          "src": "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-body-pain.webp",
+          "currentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-body-pain.webp",
+          "loading": "eager",
+          "complete": true,
+          "naturalWidth": 1536,
+          "ok": true
+        },
+        {
+          "src": "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-exercise-safe.webp",
+          "currentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-exercise-safe.webp",
+          "loading": "eager",
+          "complete": true,
+          "naturalWidth": 1536,
+          "ok": true
+        },
+        {
+          "src": "../../assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-house-safe.webp",
+          "currentSrc": "file:///C:/Users/POLI%20UMUM/Desktop/CODEX/EdukasiZMC/assets/topics/nyeri-badan-lansia-fixed/nyeri-badan-lansia-fixed-house-safe.webp",
+          "loading": "eager",
+          "complete": true,
+          "naturalWidth": 1536,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

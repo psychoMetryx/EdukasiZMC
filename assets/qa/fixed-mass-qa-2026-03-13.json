@@ -1,0 +1,924 @@
+{
+  "generatedAt": "2026-03-13T00:45:31.319Z",
+  "pdfRenderCheck": "Poppler pdftoppm not available; print QA validated via generated PDFs and browser print CSS only.",
+  "pages": [
+    {
+      "file": "asam-urat-dewasa.html",
+      "headingParity": {
+        "originalH2": 11,
+        "fixedH2": 11
+      },
+      "mobile": {
+        "heroH": 158,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Asam urat bukan sekadar urusan sayur hijau.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia mengistirahatkan sendi bengkak dan kompres dingin saat serangan asam urat.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 228,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Asam urat bukan sekadar urusan sayur hijau.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia mengistirahatkan sendi bengkak dan kompres dingin saat serangan asam urat.",
+            "ok": true
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 231,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Asam urat bukan sekadar urusan sayur hijau.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia mengistirahatkan sendi bengkak dan kompres dingin saat serangan asam urat.",
+            "ok": true
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 1,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "batuk-pilek-anak.html",
+      "headingParity": {
+        "originalH2": 13,
+        "fixedH2": 13
+      },
+      "mobile": {
+        "heroH": 170,
+        "overflow": 0,
+        "focusables": 29,
+        "headings": 13,
+        "firstHeading": "Cek napas, minum, dan tenaga dulu.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 228,
+        "overflow": 0,
+        "focusables": 29,
+        "headings": 13,
+        "firstHeading": "Cek napas, minum, dan tenaga dulu.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 234,
+        "overflow": 0,
+        "focusables": 29,
+        "headings": 13,
+        "firstHeading": "Cek napas, minum, dan tenaga dulu.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 0,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "demam-berdarah-dbd.html",
+      "headingParity": {
+        "originalH2": 14,
+        "fixedH2": 14
+      },
+      "mobile": {
+        "heroH": 166,
+        "overflow": 0,
+        "focusables": 32,
+        "headings": 14,
+        "firstHeading": "Demam turun belum tentu aman. Pada DBD, justru saat itu keluarga harus lebih awas.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": false
+          },
+          {
+            "alt": "Keluarga Indonesia memantau pasien demam berdarah di rumah dengan fokus pada minum, kencing, dan tanda bahaya.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 240,
+        "overflow": 0,
+        "focusables": 32,
+        "headings": 14,
+        "firstHeading": "Demam turun belum tentu aman. Pada DBD, justru saat itu keluarga harus lebih awas.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": false
+          },
+          {
+            "alt": "Keluarga Indonesia memantau pasien demam berdarah di rumah dengan fokus pada minum, kencing, dan tanda bahaya.",
+            "ok": false
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 234,
+        "overflow": 0,
+        "focusables": 32,
+        "headings": 14,
+        "firstHeading": "Demam turun belum tentu aman. Pada DBD, justru saat itu keluarga harus lebih awas.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": false
+          },
+          {
+            "alt": "Keluarga Indonesia memantau pasien demam berdarah di rumah dengan fokus pada minum, kencing, dan tanda bahaya.",
+            "ok": false
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 1,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "diabetes-melitus-tipe-2.html",
+      "headingParity": {
+        "originalH2": 11,
+        "fixedH2": 11
+      },
+      "mobile": {
+        "heroH": 171,
+        "overflow": 0,
+        "focusables": 39,
+        "headings": 11,
+        "firstHeading": "Diabetes tipe 2 sering samar. Kenali gejala, atur makan, cek kaki, dan kontrol rutin.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi pasien dewasa dengan tanda awal diabetes yang samar di rumah.",
+            "ok": false
+          },
+          {
+            "alt": "Foto orientasi piring makan Indonesia untuk pasien diabetes dengan komposisi sayur, buah, karbohidrat, dan lauk berprotein.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 160,
+        "overflow": 0,
+        "focusables": 39,
+        "headings": 11,
+        "firstHeading": "Diabetes tipe 2 sering samar. Kenali gejala, atur makan, cek kaki, dan kontrol rutin.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi pasien dewasa dengan tanda awal diabetes yang samar di rumah.",
+            "ok": false
+          },
+          {
+            "alt": "Foto orientasi piring makan Indonesia untuk pasien diabetes dengan komposisi sayur, buah, karbohidrat, dan lauk berprotein.",
+            "ok": false
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 230,
+        "overflow": 0,
+        "focusables": 39,
+        "headings": 11,
+        "firstHeading": "Diabetes tipe 2 sering samar. Kenali gejala, atur makan, cek kaki, dan kontrol rutin.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia mencatat pola makan dan gula darah di rumah dengan air putih serta piring makan seimbang di meja.",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi pasien dewasa dengan tanda awal diabetes yang samar di rumah.",
+            "ok": false
+          },
+          {
+            "alt": "Foto orientasi piring makan Indonesia untuk pasien diabetes dengan komposisi sayur, buah, karbohidrat, dan lauk berprotein.",
+            "ok": false
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 3,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "gizi-anak-6bulan-5tahun.html",
+      "headingParity": {
+        "originalH2": 18,
+        "fixedH2": 18
+      },
+      "mobile": {
+        "heroH": 176,
+        "overflow": 0,
+        "focusables": 42,
+        "headings": 18,
+        "firstHeading": "MPASI mulai 6 bulan, tekstur naik bertahap, protein hewani tiap makan utama.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Piring makan anak dengan lauk, nasi, sayur, dan buah bergaya lokal Indonesia sebagai orientasi proporsi makan.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": true,
+        "tabArrows": true
+      },
+      "tablet": {
+        "heroH": 220,
+        "overflow": 0,
+        "focusables": 42,
+        "headings": 18,
+        "firstHeading": "MPASI mulai 6 bulan, tekstur naik bertahap, protein hewani tiap makan utama.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Piring makan anak dengan lauk, nasi, sayur, dan buah bergaya lokal Indonesia sebagai orientasi proporsi makan.",
+            "ok": false
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 226,
+        "overflow": 0,
+        "focusables": 42,
+        "headings": 18,
+        "firstHeading": "MPASI mulai 6 bulan, tekstur naik bertahap, protein hewani tiap makan utama.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Piring makan anak dengan lauk, nasi, sayur, dan buah bergaya lokal Indonesia sebagai orientasi proporsi makan.",
+            "ok": false
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 1,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "gorengan-harian.html",
+      "headingParity": {
+        "originalH2": 11,
+        "fixedH2": 11
+      },
+      "mobile": {
+        "heroH": 158,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Gorengan harian: yang sering bikin masalah bukan cuma minyaknya.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 251,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Gorengan harian: yang sering bikin masalah bukan cuma minyaknya.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 254,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Gorengan harian: yang sering bikin masalah bukan cuma minyaknya.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 0,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "hipertensi-dewasa.html",
+      "headingParity": {
+        "originalH2": 13,
+        "fixedH2": 13
+      },
+      "mobile": {
+        "heroH": 162,
+        "overflow": 0,
+        "focusables": 37,
+        "headings": 13,
+        "firstHeading": "Hipertensi sering tak terasa. Cek tensi, rapikan kebiasaan, lalu kontrol.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Dapur rumah Indonesia dengan bahan makanan harian dan rempah sebagai orientasi sodium tersembunyi.",
+            "ok": false
+          },
+          {
+            "alt": "Rutinitas harian dewasa Indonesia dengan makan lebih teratur, bergerak, dan tidur cukup untuk orientasi hipertensi.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 200,
+        "overflow": 0,
+        "focusables": 37,
+        "headings": 13,
+        "firstHeading": "Hipertensi sering tak terasa. Cek tensi, rapikan kebiasaan, lalu kontrol.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Dapur rumah Indonesia dengan bahan makanan harian dan rempah sebagai orientasi sodium tersembunyi.",
+            "ok": false
+          },
+          {
+            "alt": "Rutinitas harian dewasa Indonesia dengan makan lebih teratur, bergerak, dan tidur cukup untuk orientasi hipertensi.",
+            "ok": false
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 253,
+        "overflow": 0,
+        "focusables": 37,
+        "headings": 13,
+        "firstHeading": "Hipertensi sering tak terasa. Cek tensi, rapikan kebiasaan, lalu kontrol.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa memeriksa tekanan darah di rumah lalu mencatat hasilnya.",
+            "ok": true
+          },
+          {
+            "alt": "Dapur rumah Indonesia dengan bahan makanan harian dan rempah sebagai orientasi sodium tersembunyi.",
+            "ok": false
+          },
+          {
+            "alt": "Rutinitas harian dewasa Indonesia dengan makan lebih teratur, bergerak, dan tidur cukup untuk orientasi hipertensi.",
+            "ok": false
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 3,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "lambung.html",
+      "headingParity": {
+        "originalH2": 9,
+        "fixedH2": 9
+      },
+      "mobile": {
+        "heroH": 163,
+        "overflow": 0,
+        "focusables": 24,
+        "headings": 9,
+        "firstHeading": "Bedakan dulu: maag, refluks, atau tanda bahaya.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pilihan makan lokal Sunda yang lebih ringan untuk orientasi pasien dengan lambung sensitif.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 191,
+        "overflow": 0,
+        "focusables": 24,
+        "headings": 9,
+        "firstHeading": "Bedakan dulu: maag, refluks, atau tanda bahaya.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pilihan makan lokal Sunda yang lebih ringan untuk orientasi pasien dengan lambung sensitif.",
+            "ok": false
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 241,
+        "overflow": 0,
+        "focusables": 24,
+        "headings": 9,
+        "firstHeading": "Bedakan dulu: maag, refluks, atau tanda bahaya.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia duduk tegak di rumah setelah makan sambil memegang area ulu hati dengan keluhan lambung ringan.",
+            "ok": true
+          },
+          {
+            "alt": "Pilihan makan lokal Sunda yang lebih ringan untuk orientasi pasien dengan lambung sensitif.",
+            "ok": true
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 2,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "menurunkan-berat-badan.html",
+      "headingParity": {
+        "originalH2": 11,
+        "fixedH2": 11
+      },
+      "mobile": {
+        "heroH": 176,
+        "overflow": 0,
+        "focusables": 31,
+        "headings": 11,
+        "firstHeading": "Berat turun sehat datang dari target realistis, makan rapi, dan gerak rutin.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Foto orientasi piring makan Indonesia dengan sayur, buah, lauk berprotein, dan makanan pokok dalam komposisi seimbang.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 212,
+        "overflow": 0,
+        "focusables": 31,
+        "headings": 11,
+        "firstHeading": "Berat turun sehat datang dari target realistis, makan rapi, dan gerak rutin.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Foto orientasi piring makan Indonesia dengan sayur, buah, lauk berprotein, dan makanan pokok dalam komposisi seimbang.",
+            "ok": false
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 234,
+        "overflow": 0,
+        "focusables": 31,
+        "headings": 11,
+        "firstHeading": "Berat turun sehat datang dari target realistis, makan rapi, dan gerak rutin.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia makan porsi seimbang di rumah dengan air putih dan sepatu jalan di dekat meja sebagai isyarat perubahan gaya hidup yang realistis.",
+            "ok": true
+          },
+          {
+            "alt": "Foto orientasi piring makan Indonesia dengan sayur, buah, lauk berprotein, dan makanan pokok dalam komposisi seimbang.",
+            "ok": true
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 2,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "nyeri-badan-lansia.html",
+      "headingParity": {
+        "originalH2": 13,
+        "fixedH2": 13
+      },
+      "mobile": {
+        "heroH": 177,
+        "overflow": 0,
+        "focusables": 35,
+        "headings": 13,
+        "firstHeading": "Nyeri saat berdiri, berjalan, atau bangun dari duduk? Cek polanya dulu, lalu rawat dengan aman.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi lansia dengan area nyeri yang sering muncul pada leher, bahu, pinggang bawah, panggul, dan lutut.",
+            "ok": false
+          },
+          {
+            "alt": "Visual orientasi latihan ringan lansia di rumah dengan kursi sebagai pegangan.",
+            "ok": false
+          },
+          {
+            "alt": "Visual orientasi rumah yang lebih aman untuk lansia dengan pencahayaan baik dan kamar mandi lebih aman.",
+            "ok": false
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 329,
+        "overflow": 0,
+        "focusables": 35,
+        "headings": 13,
+        "firstHeading": "Nyeri saat berdiri, berjalan, atau bangun dari duduk? Cek polanya dulu, lalu rawat dengan aman.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi lansia dengan area nyeri yang sering muncul pada leher, bahu, pinggang bawah, panggul, dan lutut.",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi latihan ringan lansia di rumah dengan kursi sebagai pegangan.",
+            "ok": false
+          },
+          {
+            "alt": "Visual orientasi rumah yang lebih aman untuk lansia dengan pencahayaan baik dan kamar mandi lebih aman.",
+            "ok": false
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 230,
+        "overflow": 0,
+        "focusables": 35,
+        "headings": 13,
+        "firstHeading": "Nyeri saat berdiri, berjalan, atau bangun dari duduk? Cek polanya dulu, lalu rawat dengan aman.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Perempuan lansia Indonesia di rumah menopang tubuh sambil memegang area pinggang sebagai orientasi nyeri badan pada lansia.",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi lansia dengan area nyeri yang sering muncul pada leher, bahu, pinggang bawah, panggul, dan lutut.",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi latihan ringan lansia di rumah dengan kursi sebagai pegangan.",
+            "ok": true
+          },
+          {
+            "alt": "Visual orientasi rumah yang lebih aman untuk lansia dengan pencahayaan baik dan kamar mandi lebih aman.",
+            "ok": false
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 4,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "pusing-dewasa.html",
+      "headingParity": {
+        "originalH2": 11,
+        "fixedH2": 11
+      },
+      "mobile": {
+        "heroH": 176,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Pusing bisa berat, melayang, atau muter. Bedakan dulu.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 177,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Pusing bisa berat, melayang, atau muter. Bedakan dulu.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 232,
+        "overflow": 0,
+        "focusables": 27,
+        "headings": 11,
+        "firstHeading": "Pusing bisa berat, melayang, atau muter. Bedakan dulu.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia duduk di rumah sambil memegang pelipis karena pusing dengan gelas air di meja.",
+            "ok": true
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 1,
+        "mediaOk": true
+      }
+    },
+    {
+      "file": "tipes.html",
+      "headingParity": {
+        "originalH2": 15,
+        "fixedH2": 15
+      },
+      "mobile": {
+        "heroH": 150,
+        "overflow": 0,
+        "focusables": 35,
+        "headings": 15,
+        "firstHeading": "Curigai tipes bila demam lebih dari 3 hari dan badan makin lemah.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ],
+        "tabFocus": true,
+        "faqEnter": true,
+        "accEnter": null,
+        "tabArrows": null
+      },
+      "tablet": {
+        "heroH": 202,
+        "overflow": 0,
+        "focusables": 35,
+        "headings": 15,
+        "firstHeading": "Curigai tipes bila demam lebih dari 3 hari dan badan makin lemah.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          }
+        ]
+      },
+      "desktop": {
+        "heroH": 242,
+        "overflow": 0,
+        "focusables": 35,
+        "headings": 15,
+        "firstHeading": "Curigai tipes bila demam lebih dari 3 hari dan badan makin lemah.",
+        "imagesVisible": [
+          {
+            "alt": "Logo Zihan Medical Center",
+            "ok": true
+          },
+          {
+            "alt": "Pasien dewasa Indonesia beristirahat di rumah dengan keluhan demam sementara anggota keluarga memeriksa kondisinya, sebagai orientasi dugaan tipes.",
+            "ok": true
+          }
+        ]
+      },
+      "heroRange": {
+        "mobile": true,
+        "desktop": true
+      },
+      "overflowPass": true,
+      "keyboardPass": true,
+      "offline": {
+        "rootFallback": true,
+        "logoOk": true,
+        "mediaCount": 1,
+        "mediaOk": true
+      }
+    }
+  ],
+  "updatedAt": "2026-03-13T00:51:09.638Z",
+  "notes": "Offline media fallback for hipertensi-dewasa.html and nyeri-badan-lansia.html revalidated after loader patch; see fixed-targeted-rerun-2026-03-13.json."
+}

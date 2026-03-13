@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Pusing Dewasa: Bedakan Sakit Kepala, Keleyengan, dan Vertigo | Zihan Medical Center</title>
+<meta name="description" content="Edukasi dewasa tentang pusing: bedakan sakit kepala tegang, migrain, keleyengan, dan vertigo; pahami kaitan kurang minum, lambung, dan kurang tidur; serta kenali kapan harus ke dokter atau IGD.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23a1191e'/%3E%3Cpath d='M20 16h24v32H20z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M32 22v20M24 32h16' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link id="bi-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+:root{
+  --bg:#f4efe9;
+  --surface:#fffdfa;
+  --surface-soft:#f8f1ec;
+  --surface-tint:#f7e9e2;
+  --surface-danger:#fbefef;
+  --surface-good:#edf6ef;
+  --surface-warn:#fcf0dc;
+  --line:#dccabf;
+  --line-strong:#c9a898;
+  --ink:#241d1a;
+  --muted:#655a54;
+  --brand:#a3191e;
+  --brand-dark:#7d1116;
+  --brand-soft:#f7e4e4;
+  --accent:#27485b;
+  --focus:#0a67d7;
+  --good:#235f3d;
+  --warn:#8a5c16;
+  --danger:#8f1d22;
+  --shadow:0 3px 12px rgba(52,35,29,.06);
+  --radius-lg:14px;
+  --radius-md:10px;
+  --radius-sm:8px;
+  --wrap:min(1080px, calc(100% - 1.2rem));
+  --font:"Tahoma","Geneva",sans-serif;
+  --sticky-offset:8.45rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input{font:inherit}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:100;padding:.75rem .9rem;border:2px solid var(--focus);border-radius:10px;background:var(--surface)}
+a:focus-visible,button:focus-visible,.chip:focus-visible,.btn:focus-visible,.faq-btn:focus-visible,.foot-link:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.topbar{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--line)}
+.topbar::before{content:"";display:block;height:5px;background:var(--brand)}
+.topbar-inner,.wrap{width:var(--wrap);margin-inline:auto}
+.topbar-inner{padding:.78rem 0;display:grid;gap:.72rem;align-items:center}
+.brand{display:grid;grid-template-columns:auto 1fr;gap:.78rem;align-items:center;min-width:0}
+.logo{width:54px;height:54px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid var(--line);flex-shrink:0}
+.logo img{width:100%;height:100%;object-fit:cover}
+.brand-copy{min-width:0}
+.brand-copy p{margin:0 0 .18rem;font-size:.8rem;font-weight:700;color:var(--brand)}
+.brand-copy h1{margin:0;font-size:clamp(1.04rem,.98rem + .84vw,1.54rem);line-height:1.2;font-weight:700;max-width:24ch}
+.topbar-actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.btn{min-height:44px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:10px;padding:.55rem .9rem;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;cursor:pointer;font-size:.92rem;font-weight:700;box-shadow:var(--shadow)}
+.btn:hover,.chip:hover,.faq-btn:hover,.foot-link:hover{background:var(--surface-soft)}
+.btn-brand{background:var(--brand);color:#fff;border-color:var(--brand-dark)}
+.btn-secondary{background:var(--surface-soft)}
+.icon-pair{display:inline-flex;width:1.1em;height:1.1em;align-items:center;justify-content:center;flex-shrink:0}
+.icon-cdn,.icon-local{width:1em;height:1em;font-size:1em;line-height:1}
+.icon-local{display:none}
+html.icons-fallback .icon-cdn{display:none!important}
+html.icons-fallback .icon-local{display:inline-block!important}
+.wrap{padding-bottom:1.5rem}
+.hero,.summary,.section,.bottom-cta,footer{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);break-inside:avoid;scroll-margin-top:var(--sticky-offset)}
+.hero{overflow:hidden}
+.hero-grid{display:block}
+.hero-copy{padding:.48rem .54rem .5rem;display:grid;gap:.28rem;align-content:center}
+.hero-copy h2{margin:0;font-size:clamp(.9rem,.88rem + .5vw,1.12rem);line-height:1.12;font-weight:700;max-width:24ch}
+.hero-copy p{margin:0;color:var(--muted);font-size:.77rem;max-width:54ch}
+.hero-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.34rem}
+.hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:10px;padding:.3rem}
+.hero-point strong{display:grid;gap:.12rem;font-size:.66rem;line-height:1.06}
+.hero-point span{display:none}
+.hero-point .icon-pair{color:var(--brand)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.45rem}
+.hero-actions .btn{flex:1 1 148px;min-height:44px;padding:.48rem .76rem;font-size:.87rem;box-shadow:none}
+.hero-visual{display:none}
+.hero-figure,.micro-figure,.visual-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.66rem}
+.hero-figure img,.micro-figure img,.visual-board img{width:100%;display:block}
+.hero-figure img{height:144px;object-fit:cover;border-radius:10px;background:var(--surface-soft)}
+.hero-caption{display:none}
+.summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
+.summary strong{color:var(--brand)}
+.quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
+.chip{min-height:44px;flex-shrink:0;display:inline-flex;align-items:center;padding:.44rem .8rem;border:1px solid var(--line-strong);border-radius:10px;background:var(--surface-soft);text-decoration:none;font-size:.88rem;font-weight:700}
+.section{overflow:hidden}
+.section-head{padding:1rem 1rem .9rem;border-bottom:1px solid var(--line);background:var(--surface)}
+.section-head::after{content:"";display:block;width:68px;height:3px;margin-top:.72rem;border-radius:999px;background:var(--brand)}
+.heading-row{display:flex;align-items:flex-start;gap:.68rem}
+.heading-icon{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);color:var(--brand);flex-shrink:0}
+.heading-copy{min-width:0}
+.section-head h2{margin:0;font-size:clamp(1.08rem,1rem + .72vw,1.45rem);line-height:1.24;font-weight:700;max-width:36ch}
+.section-head p{margin:.42rem 0 0;color:var(--muted);font-size:.92rem;max-width:70ch}
+.section-body{padding:1rem;display:grid;gap:1rem}
+.track-grid,.signal-grid,.special-grid,.danger-grid,.myth-grid{display:grid;gap:.85rem}
+.split,.step-grid,.scan-grid,.decision-grid{display:grid;gap:1rem}
+.table-wrap,.faq-item,.rail,.decision-card,.signal-card,.mini-panel,.track-card,.check-panel,.special-card,.danger-card,.myth-card,.scan-row{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.signal-card,.mini-panel,.track-card,.check-panel,.special-card,.danger-card,.myth-card{padding:.9rem;display:grid;gap:.46rem;align-content:start}
+.track-card,.signal-card,.special-card,.danger-card,.myth-card{border-top:3px solid var(--line-strong)}
+.rail,.check-panel{padding:.9rem;display:grid;gap:.75rem}
+.track-card h3,.signal-card h3,.mini-panel h3,.check-panel h3,.special-card h3,.danger-card h3,.myth-card h3,.decision-card h3,.rail h3{margin:0;font-size:1rem;line-height:1.28;font-weight:700}
+.signal-card p,.signal-card li,.mini-panel p,.mini-panel li,.track-card p,.track-card li,.check-panel p,.check-panel li,.special-card p,.special-card li,.danger-card p,.danger-card li,.myth-card p,.myth-card li,.decision-card p,.decision-card li,.rail p,.rail li,.faq-panel p,.faq-panel li,.table-wrap td,.table-wrap th,.scan-row p{font-size:.92rem;margin:0;color:var(--muted)}
+.signal-card ul,.mini-panel ul,.track-card ul,.check-panel ul,.special-card ul,.danger-card ul,.myth-card ul,.decision-card ul,.rail ul,.faq-panel ul{margin:0;padding-left:1rem;display:grid;gap:.38rem}
+.lead-note{padding:.78rem .86rem;border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);font-size:.92rem;color:var(--muted)}
+.lead-note strong{color:var(--ink)}
+.callout{border-left:4px solid var(--line-strong);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:10px;padding:.82rem .9rem;background:var(--surface-soft);color:var(--muted);font-size:.92rem}
+.callout strong{color:var(--ink)}
+.callout.good{border-left-color:var(--good);background:var(--surface-good);color:var(--good)}
+.callout.warn{border-left-color:var(--warn);background:var(--surface-warn);color:var(--warn)}
+.callout.danger{border-left-color:var(--danger);background:var(--surface-danger);color:var(--danger)}
+.track-grid,.danger-grid,.special-grid,.myth-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.signal-grid,.decision-grid,.scan-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.track-card.tth{border-top-color:#93624b}
+.track-card.migraine{border-top-color:#7b4e92}
+.track-card.light{border-top-color:#2d6c74}
+.track-card.vertigo{border-top-color:#8f1d22}
+.track-head{display:flex;align-items:flex-start;justify-content:space-between;gap:.6rem}
+.track-tag{display:inline-flex;align-items:center;min-height:28px;padding:.2rem .55rem;border-radius:999px;font-size:.77rem;font-weight:700;background:var(--surface-soft);color:var(--muted)}
+.track-facts{display:grid;gap:.5rem}
+.fact-item{display:grid;grid-template-columns:auto 1fr;gap:.55rem;align-items:flex-start;padding:.56rem .6rem;border:1px solid var(--line);border-radius:10px;background:var(--surface-soft)}
+.fact-item .icon-box,.scan-row .icon-box{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--brand);flex-shrink:0}
+.fact-item strong,.scan-row strong{display:block;color:var(--ink);font-size:.9rem;margin-bottom:.1rem}
+.scan-row{display:grid;grid-template-columns:auto 1fr;gap:.62rem;align-items:start;padding:.72rem;background:var(--surface-soft)}
+.signal-card.good{border-top-color:var(--good);background:#f7fcf8}
+.signal-card.warn{border-top-color:var(--warn);background:#fffaf0}
+.signal-card.danger{border-top-color:var(--danger);background:#fff8f8}
+.rail-row{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start}
+.rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
+.decision-card{padding:.95rem;display:grid;gap:.55rem}
+.decision-card.good{border-top:4px solid var(--good)}
+.decision-card.warn{border-top:4px solid var(--warn)}
+.decision-card.danger{border-top:4px solid var(--danger)}
+.table-wrap{overflow:auto}
+table{width:100%;min-width:700px;border-collapse:collapse}
+th,td{text-align:left;vertical-align:top;padding:.78rem .72rem;border-bottom:1px solid var(--line)}
+th{background:var(--surface-soft);font-weight:700}
+td{color:var(--muted)}
+.badge{display:inline-flex;align-items:center;min-height:28px;padding:.2rem .55rem;border-radius:999px;font-size:.8rem;font-weight:700}
+.badge-good{background:var(--surface-good);color:var(--good)}
+.badge-warn{background:var(--surface-warn);color:var(--warn)}
+.badge-danger{background:var(--surface-danger);color:var(--danger)}
+.danger-card{background:#fff8f8;border-top-color:var(--danger)}
+.myth-card{background:var(--surface-soft)}
+.myth-card strong{color:var(--brand)}
+.faq{display:grid;gap:.65rem}
+.faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
+.faq-btn[aria-expanded="true"]{background:var(--surface-soft)}
+.faq-mark{color:var(--brand);font-size:1rem;flex-shrink:0}
+.faq-panel{padding:.1rem .9rem .9rem;border-top:1px solid var(--line);color:var(--muted)}
+.faq-panel[hidden]{display:none}
+.refs{margin:0;padding-left:1.1rem;display:grid;gap:.52rem}
+.refs li{color:var(--muted)}
+.refs a{color:var(--accent)}
+.bottom-cta{padding:1rem;display:grid;gap:.75rem;background:var(--surface-soft)}
+.bottom-cta h2{margin:0;font-size:1.14rem}
+.bottom-cta p{margin:0;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.status-note{margin:0;font-size:.88rem;color:var(--muted)}
+footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.foot-grid{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.foot-grid h2,.foot-grid h3{margin:0;font-size:1.02rem;line-height:1.28}
+.foot-grid p{margin:.34rem 0 0;color:#f5ddd8;font-size:.9rem}
+.foot-links{margin-top:.72rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.foot-link{min-height:44px;border:1px solid rgba(255,255,255,.34);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;padding:.48rem .8rem;display:inline-flex;align-items:center;gap:.42rem;font-size:.9rem;font-weight:700}
+.subfoot{margin-top:.85rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.22);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.55rem;font-size:.83rem;color:#f3d6d2}
+#bedakan .section-head{background:#f8f1ec}
+#pemicu .section-head{background:#f7f1ec}
+#langkah .section-head{background:#f8f3ef}
+#dokter .section-head{background:#f7f2ee}
+#redflags{border-color:#dfb8bb}
+#redflags .section-head{background:var(--surface-danger)}
+#redflags .section-head::after{background:var(--danger)}
+#khusus .section-head{background:#f6f1ec}
+#faq .section-head{background:#f7f3ee}
+#rujukan .section-head{background:#f6f2ed}
+@media(max-width:640px){
+  .brand-copy h1{max-width:none}
+  .hero-copy p{display:none}
+  .section-head h2{max-width:none}
+}
+@media(max-width:820px){
+  .quick{flex-wrap:nowrap;overflow:auto}
+  table{min-width:620px}
+}
+@media(min-width:920px){
+  .topbar-inner{grid-template-columns:minmax(0,1fr) auto}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);min-height:230px}
+  .hero-copy{padding:.56rem .7rem;border-right:1px solid var(--line)}
+  .hero-point{padding:.34rem .38rem}
+  .hero-point strong{display:flex;align-items:center;gap:.35rem;font-size:.72rem;line-height:1.1}
+  .hero-actions .btn{flex:0 1 auto;min-width:168px}
+  .hero-visual{display:grid;align-content:start;padding:.6rem;background:var(--surface-soft)}
+  .hero-figure img{height:156px}
+  .split,.step-grid{grid-template-columns:minmax(0,1.15fr) minmax(260px,330px);align-items:start}
+}
+@media print{
+  :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--surface-danger:#fff;--surface-good:#fff;--surface-warn:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
+  body{background:#fff!important;color:#111!important;font-size:11pt}
+  .topbar-actions,.quick,#statusNote,#printPage,.hero-visual,.hero-actions,.actions{display:none!important}
+  .wrap{width:100%}
+  .hero-grid{display:block;min-height:auto}
+  .track-grid,.signal-grid,.special-grid,.danger-grid,.myth-grid,.scan-grid,.decision-grid{display:block!important}
+  .track-grid > * + *,.signal-grid > * + *,.special-grid > * + *,.danger-grid > * + *,.myth-grid > * + *,.scan-grid > * + *,.decision-grid > * + *{margin-top:.75rem}
+  .hero,.summary,.bottom-cta,footer,.table-wrap,.faq-item,.rail,.decision-card,.signal-card,.mini-panel,.track-card,.check-panel,.special-card,.danger-card,.myth-card,.scan-row,.hero-figure{box-shadow:none!important;break-inside:avoid}
+  .section{box-shadow:none!important;break-inside:auto}
+  a{color:#111!important;text-decoration:underline}
+}
+
+/* fixed hero tighten */
+@media(max-width:640px){.hero-copy p{display:none}.hero-copy h2{max-width:18ch}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute;left:-9999px;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 21s7-4.6 7-10a7 7 0 1 0-14 0c0 5.4 7 10 7 10z" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="2"></circle></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"></circle></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M12 9v5" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="17.2" r="1.2" fill="currentColor"></circle></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 0 4 23z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M4 5.5V21" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-water" viewBox="0 0 24 24"><path d="M12 3s6 6.2 6 10.1A6 6 0 1 1 6 13.1C6 9.2 12 3 12 3z" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-stomach" viewBox="0 0 24 24"><path d="M12 3v5c0 1 .8 1.8 1.8 1.8H15c2.5 0 4.5 2 4.5 4.6 0 3.4-2.6 5.9-6.5 5.9-3.8 0-7-2.4-7-6.5 0-2.3 1.1-4.4 3-5.6 1-.7 1.5-1.9 1.5-3.1V3h1.5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-spin" viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 1 7.7 10.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path><path d="M20 17v-3h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 20a8 8 0 0 1-7.7-10.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path><path d="M4 7v3h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-head" viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-7 7c0 2.2 1 3.8 2.4 5.1.8.7 1.3 1.7 1.3 2.8V20h6.6v-2.1c0-1.1.5-2.1 1.3-2.8C18 13.8 19 12.2 19 10a7 7 0 0 0-7-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M9 22h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
+  <symbol id="i-sleep" viewBox="0 0 24 24"><path d="M4 7h4L5 11h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 4h5l-4 5h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 18a6 6 0 0 0 12 0 6 6 0 0 0-12 0z" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-hospital" viewBox="0 0 24 24"><path d="M4 21V6h6V3h4v3h6v15H4z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M12 9v6M9 12h6" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="2"></circle></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5.1 3.3 8.2 7 10 3.7-1.8 7-4.9 7-10V6l-7-3z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="m9.4 11.8 1.8 1.8 3.8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
+</svg>
+<a class="skip" href="#main">Lewati ke isi utama</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="logo"><img id="logo" alt="Logo Zihan Medical Center"></div>
+      <div class="brand-copy">
+        <p>Panduan dewasa ZMC</p>
+        <h1>Pusing sering kambuh: jangan samakan kepala berat, mau pingsan, dan dunia muter</h1>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-secondary" href="#redflags">
+        <span class="icon-pair"><i class="bi bi-exclamation-triangle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>
+        Tanda bahaya
+      </a>
+    </div>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h2>Pusing bisa berat, melayang, atau muter. Bedakan dulu.</h2>
+        <p>Kurang minum, telat makan, kurang tidur, dan vertigo tidak terasa sama.</p>
+        <div class="hero-points" aria-label="Poin inti halaman">
+          <div class="hero-point">
+            <strong><span class="icon-pair"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span>Kurang minum</strong>
+            <span>Sering mengarah ke keleyengan, lemas, dan sakit kepala.</span>
+          </div>
+          <div class="hero-point">
+            <strong><span class="icon-pair"><i class="bi bi-moon-stars-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-moon"></use></svg></span>Kurang tidur</strong>
+            <span>Sering memperberat TTH dan migrain, terutama bila sudah telat makan.</span>
+          </div>
+          <div class="hero-point">
+            <strong><span class="icon-pair"><i class="bi bi-heart-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-stomach"></use></svg></span>Keluhan lambung</strong>
+            <span>Bisa berkaitan, tetapi jangan otomatis disebut vertigo.</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-brand" id="heroWa" href="#">
+            <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+            WhatsApp Klinik
+          </a>
+          <a class="btn btn-secondary" id="heroIg" href="#">
+            <span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>
+            Instagram Klinik
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <figure class="hero-figure" data-media-wrap="hero">
+          <img id="heroImage" alt="Pasien dewasa Indonesia duduk di rumah sambil memegang pelipis karena pusing dengan gelas air di meja.">
+          <figcaption class="hero-caption">Visual orientasi: pertanyaan paling penting bukan cuma "pusing atau tidak", tetapi "rasanya bagaimana, kapan muncul, dan ada tanda bahaya atau tidak".</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="summary">
+    <strong>Ringkasnya:</strong> kepala seperti diikat, nyut-nyutan sebelah, melayang mau pingsan, dan muter seperti komedi putar adalah pola yang berbeda. Memilah sensasinya membantu menentukan apakah cukup observasi singkat, perlu kontrol hari ini, atau justru harus segera ke IGD.
+  </div>
+
+  <nav class="quick" aria-label="Navigasi cepat topik pusing">
+    <a class="chip" href="#bedakan">Bedakan</a>
+    <a class="chip" href="#pemicu">Pemicu</a>
+    <a class="chip" href="#langkah">Langkah Aman</a>
+    <a class="chip" href="#dokter">Dokter/IGD</a>
+    <a class="chip" href="#faq">FAQ</a>
+    <a class="chip" href="#rujukan">Rujukan</a>
+  </nav>
+
+  <section id="bedakan" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-signpost-split-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>1) Bedakan dulu rasa pusingnya</h2>
+          <p>Tanyakan dulu: berat atau nyut-nyutan, melayang, atau muter. Jawaban ini paling cepat mengarahkan langkah aman berikutnya.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="lead-note"><strong>Cek cepat 30 detik:</strong> tanya dulu apa rasanya, kapan muncul, dan apa yang ikut menyertai. Mual, muntah, telat makan, kurang tidur, urine pekat, telinga berdenging, atau kelemahan satu sisi akan mengubah arah penilaian.</div>
+      <div class="track-grid" aria-label="Peta empat pola pusing utama">
+        <article class="track-card tth">
+          <div class="track-head">
+            <h3>TTH / sakit kepala tegang</h3>
+            <span class="track-tag">kepala berat</span>
+          </div>
+          <div class="track-facts">
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-headset icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-head"></use></svg></span></div>
+              <div><strong>Rasa khas</strong><p>Kepala terasa seperti diikat, penuh, atau berat. Sering disertai tegang di leher dan pundak. Umumnya bukan rasa muter.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-laptop-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-bolt"></use></svg></span></div>
+              <div><strong>Pemicu umum</strong><p>Stres, postur lama menunduk, layar terlalu lama, kerja tanpa jeda, dan kurang tidur.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-cup-hot-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span></div>
+              <div><strong>Langkah awal</strong><p>Istirahat, minum cukup, longgarkan bahu dan leher, kurangi layar, dan tidur lebih teratur.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-calendar2-week-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+              <div><strong>Kapan evaluasi</strong><p>Bila pola baru, makin sering, perlu obat berulang, atau tidak membaik walau pemicu jelas sudah dikurangi.</p></div>
+            </div>
+          </div>
+        </article>
+        <article class="track-card migraine">
+          <div class="track-head">
+            <h3>Migrain</h3>
+            <span class="track-tag">nyut-nyutan</span>
+          </div>
+          <div class="track-facts">
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-lightning-charge-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-bolt"></use></svg></span></div>
+              <div><strong>Rasa khas</strong><p>Berdenyut, sering di satu sisi, sering disertai mual, silau, tidak nyaman suara, dan kadang ada aura atau rasa berputar.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-moon-stars-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-sleep"></use></svg></span></div>
+              <div><strong>Pemicu umum</strong><p>Kurang tidur, telat makan, dehidrasi, cahaya menyilaukan, stres, dan pada sebagian orang makanan tertentu.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-house-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-shield"></use></svg></span></div>
+              <div><strong>Langkah awal</strong><p>Kurangi cahaya dan bising, minum cukup, makan ringan bila belum makan, lalu tidur atau berbaring di tempat tenang.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-clipboard2-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+              <div><strong>Kapan evaluasi</strong><p>Bila baru pertama sangat berat, sering kambuh, pola berubah, atau muncul gangguan saraf seperti bicara pelo dan lemah satu sisi.</p></div>
+            </div>
+          </div>
+        </article>
+        <article class="track-card light">
+          <div class="track-head">
+            <h3>Keleyengan / presinkop</h3>
+            <span class="track-tag">mau pingsan</span>
+          </div>
+          <div class="track-facts">
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-arrow-down-up icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span></div>
+              <div><strong>Rasa khas</strong><p>Melayang, limbung, gelap saat berdiri, badan lemas, dingin, atau seperti mau jatuh. Bukan sensasi muter.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-droplet-half icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span></div>
+              <div><strong>Pemicu umum</strong><p>Kurang minum, demam, muntah, diare, telat makan, tensi turun, anemia, perdarahan, atau bangun terlalu cepat.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-cup-straw icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span></div>
+              <div><strong>Langkah awal</strong><p>Duduk atau berbaring dulu, minum oral sedikit demi sedikit, dan makan ringan bila memang belum makan.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-heartbreak-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+              <div><strong>Kapan evaluasi</strong><p>Bila tidak membaik setelah minum dan makan, sering berulang, ada berdebar, pingsan, BAB hitam, atau muntah darah.</p></div>
+            </div>
+          </div>
+        </article>
+        <article class="track-card vertigo">
+          <div class="track-head">
+            <h3>Vertigo</h3>
+            <span class="track-tag">dunia muter</span>
+          </div>
+          <div class="track-facts">
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-arrow-repeat icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-spin"></use></svg></span></div>
+              <div><strong>Rasa khas</strong><p>Ruangan atau tubuh terasa berputar. Sering lebih parah saat menoleh, bangun, atau mengubah posisi kepala.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-ear-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-eye"></use></svg></span></div>
+              <div><strong>Pemicu umum</strong><p>Gangguan telinga dalam, perubahan posisi kepala, atau pada sebagian orang migrain vestibular.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-person-standing icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-shield"></use></svg></span></div>
+              <div><strong>Langkah awal</strong><p>Duduk atau rebahkan kepala secara aman, gerak perlahan, dan jangan mengemudi atau naik motor saat masih muter.</p></div>
+            </div>
+            <div class="fact-item">
+              <div class="icon-box"><span class="icon-pair"><i class="bi bi-hospital-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-hospital"></use></svg></span></div>
+              <div><strong>Kapan evaluasi</strong><p>Bila baru pertama kali berat, muntah terus, sulit berjalan, ada gangguan dengar mendadak, atau muncul tanda stroke.</p></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="scan-grid" aria-label="Panduan scan cepat keluhan pusing">
+        <div class="scan-row">
+          <div class="icon-box"><span class="icon-pair"><i class="bi bi-question-lg icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+          <div><strong>Berat atau nyut-nyutan?</strong><p>Lebih sering mengarah ke TTH atau migrain, apalagi bila ada tegang leher, silau, atau kurang tidur.</p></div>
+        </div>
+        <div class="scan-row">
+          <div class="icon-box"><span class="icon-pair"><i class="bi bi-arrow-up-down icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span></div>
+          <div><strong>Melayang saat berdiri?</strong><p>Pikirkan keleyengan, dehidrasi, telat makan, tensi turun, atau anemia sebelum buru-buru menyebut vertigo.</p></div>
+        </div>
+        <div class="scan-row">
+          <div class="icon-box"><span class="icon-pair"><i class="bi bi-arrow-repeat icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-spin"></use></svg></span></div>
+          <div><strong>Muter saat ubah posisi?</strong><p>Ini lebih cocok ke vertigo. Tanyakan juga mual hebat, telinga berdenging, atau gangguan dengar.</p></div>
+        </div>
+        <div class="scan-row">
+          <div class="icon-box"><span class="icon-pair"><i class="bi bi-shield-exclamation icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+          <div><strong>Ada red flag?</strong><p>Lemah satu sisi, bicara pelo, muntah terus, pingsan, atau BAB hitam berarti arah tindakan berubah dan tidak boleh ditunda.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pemicu" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-sign-turn-right-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-bolt"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>2) Pemicu yang paling sering ketemu di klinik</h2>
+          <p>Kurang tidur, telat makan, dan kurang minum sering datang bersamaan lalu terasa seperti satu keluhan.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="signal-grid">
+        <article class="signal-card good">
+          <h3>Kurang minum</h3>
+          <p>Sering membuat badan lemas, mulut kering, urine lebih sedikit atau lebih pekat, lalu muncul keleyengan dan sakit kepala. Ini lebih sering ke arah <strong>lightheadedness</strong> daripada vertigo.</p>
+        </article>
+        <article class="signal-card warn">
+          <h3>Kurang tidur</h3>
+          <p>Sering memicu atau memperberat TTH dan migrain. Bila ditambah telat makan atau layar berlebihan, kepala bisa terasa lebih berat atau nyut-nyutan.</p>
+        </article>
+        <article class="signal-card warn">
+          <h3>Telat makan dan keluhan lambung</h3>
+          <p>Mual, asupan turun, muntah, atau perut perih karena telat makan bisa berujung ke lemas dan pusing. Hubungannya sering tidak langsung.</p>
+        </article>
+        <article class="signal-card danger">
+          <h3>Perdarahan atau dehidrasi berat</h3>
+          <p>BAB hitam, muntah darah, muntah terus, diare berat, dan lemas hebat bisa membuat kepala sangat ringan sampai hampir pingsan. Ini tidak boleh dianggap sekadar maag biasa.</p>
+        </article>
+      </div>
+      <div class="split">
+        <div class="text-flow">
+          <p><strong>Kurang minum</strong> sering muncul bersama keluhan lain seperti haus, bibir kering, dan urine pekat. Pada pasien yang juga demam, diare, atau muntah, arah penilaiannya makin kuat ke dehidrasi.</p>
+          <p><strong>Kurang tidur</strong> adalah trigger yang sangat sering untuk sakit kepala, terutama pada pasien yang sudah punya riwayat migrain atau kerja dengan tegang leher dan layar lama.</p>
+          <p><strong>Keluhan lambung</strong> memang sering datang bareng pusing, tetapi bukan berarti lambung adalah sumber utama semua vertigo. Yang sering terjadi justru pasien telat makan, mual, minum berkurang, atau muntah sehingga tubuh menjadi lemas dan keleyengan.</p>
+          <p>Bila pusing pada pasien lambung disertai <strong>BAB hitam, muntah darah, berat badan turun, atau lemas berat</strong>, jangan puas dengan label "asam lambung". Ada kemungkinan perdarahan atau anemia yang perlu dinilai segera.</p>
+        </div>
+        <aside class="mini-panel">
+          <h3>Yang sering salah kaprah</h3>
+          <p>"Maag bikin vertigo" terdengar sederhana, tetapi biasanya terlalu longgar. Yang lebih aman adalah menyebut: <strong>keluhan lambung bisa berkaitan dengan pusing lewat asupan turun, telat makan, muntah, dehidrasi, atau perdarahan</strong>.</p>
+          <div class="callout warn"><strong>Praktisnya:</strong> kalau pasien bilang "lambung dan pusing", tanya ulang sensasinya. Apakah berat, nyut-nyutan, melayang, atau muter.</div>
+        </aside>
+      </div>
+      <div class="table-wrap" aria-label="Tabel pemicu dan arah keluhan pusing">
+        <table>
+          <thead>
+            <tr>
+              <th>Pemicu</th>
+              <th>Sering mengarah ke</th>
+              <th>Petunjuk yang ikut muncul</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge-good">Kurang minum</span></td>
+              <td>Keleyengan atau sakit kepala ringan</td>
+              <td>Haus, mulut kering, urine pekat, badan lemas, lebih buruk saat berdiri.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-warn">Kurang tidur</span></td>
+              <td>TTH atau migrain</td>
+              <td>Kepala berat, nyut-nyutan, silau, bahu dan leher ikut tegang.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-warn">Telat makan atau gastritis</span></td>
+              <td>Keleyengan, sakit kepala, mual</td>
+              <td>Perut perih, mual, nafsu makan turun, minum kurang, keluhan membaik sebagian setelah asupan masuk.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-danger">Muntah terus atau BAB hitam</span></td>
+              <td>Dehidrasi, anemia, perdarahan</td>
+              <td>Lemas berat, pucat, hampir pingsan, denyut terasa cepat, perlu dinilai cepat.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="langkah" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-house-check-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-shield"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>3) Langkah aman 24 jam di rumah</h2>
+          <p>Bagian ini hanya untuk keluhan ringan tanpa tanda bahaya.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="step-grid">
+        <div class="rail">
+          <h3>Urutan yang paling aman</h3>
+          <div class="rail-row">
+            <div class="rail-num">1</div>
+            <div><p><strong>Hentikan aktivitas dulu.</strong> Duduk atau berbaring. Bila terasa melayang atau muter, jangan paksakan berdiri cepat.</p></div>
+          </div>
+          <div class="rail-row">
+            <div class="rail-num">2</div>
+            <div><p><strong>Masuk cairan.</strong> Minum sedikit demi sedikit tetapi sering. Ini penting bila ada kurang minum, cuaca panas, muntah, atau diare.</p></div>
+          </div>
+          <div class="rail-row">
+            <div class="rail-num">3</div>
+            <div><p><strong>Masuk asupan ringan.</strong> Bila belum makan, pilih makanan atau minuman ringan yang mudah diterima perut. Hindari langsung makanan berat bila masih mual.</p></div>
+          </div>
+          <div class="rail-row">
+            <div class="rail-num">4</div>
+            <div><p><strong>Istirahat dan kurangi layar.</strong> Sangat membantu pada TTH dan migrain, terutama bila ada silau atau kepala terasa penuh.</p></div>
+          </div>
+          <div class="rail-row">
+            <div class="rail-num">5</div>
+            <div><p><strong>Bangun pelan.</strong> Dari tidur atau duduk, ubah posisi bertahap. Bila vertigo, gerakan kepala mendadak bisa memperparah muter.</p></div>
+          </div>
+          <div class="rail-row">
+            <div class="rail-num">6</div>
+            <div><p><strong>Catat polanya.</strong> Kapan muncul, sensasinya apa, apa pemicunya, ada mual atau muntah tidak, dan apa yang membuatnya membaik.</p></div>
+          </div>
+        </div>
+        <aside class="check-panel">
+          <h3>Hal yang sebaiknya jangan dilakukan</h3>
+          <ul>
+            <li>Menganggap semua pusing pasti karena darah tinggi, maag, atau "masuk angin".</li>
+            <li>Menyetir, naik motor, atau kerja di ketinggian saat dunia masih terasa muter.</li>
+            <li>Menunda minum dan makan ringan padahal sudah jelas telat makan atau dehidrasi ringan.</li>
+            <li>Mengulang obat warung terus tanpa tahu pola keluhannya.</li>
+          </ul>
+          <div class="callout good"><strong>Yang paling membantu untuk konsultasi:</strong> bawa catatan kapan serangan muncul, berapa lama, dan apa pemicunya. Ini lebih berguna daripada sekadar bilang "sering pusing".</div>
+        </aside>
+      </div>
+      <div class="scan-grid">
+        <div class="scan-row">
+          <div class="icon-box"><span class="icon-pair"><i class="bi bi-droplet-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-water"></use></svg></span></div>
+          <div><strong>Rehidrasi</strong><p>Cocok bila ada kurang minum, panas, muntah, diare, atau urine pekat. Minum perlahan lebih mudah diterima daripada sekaligus banyak.</p></div>
+        </div>
+        <div class="scan-row">
+          <div class="icon-box"><span class="icon-pair"><i class="bi bi-moon-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-sleep"></use></svg></span></div>
+          <div><strong>Tidur cukup</strong><p>Sangat penting pada sakit kepala tegang dan migrain. Jika badan sudah lelah, stimulasi kecil bisa terasa jauh lebih berat.</p></div>
+        </div>
+        <div class="scan-row">
+          <div class="icon-box"><span class="icon-pair"><i class="bi bi-sign-stop-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+          <div><strong>Jangan memaksa aktivitas</strong><p>Jika pusing disertai limbung, gangguan fokus, atau muter, risiko jatuh dan salah langkah meningkat.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dokter" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-clipboard2-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-hospital"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>4) Kapan perlu kontrol ke dokter hari ini</h2>
+          <p>Periksa lebih cepat bila pola pusing mulai mengganggu aktivitas atau makin sering kambuh.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="decision-grid">
+        <article class="decision-card good">
+          <h3>Masih bisa observasi singkat</h3>
+          <p>Keluhan ringan, sudah ada pemicu yang jelas, dan membaik dengan istirahat, cairan, atau makan ringan.</p>
+          <ul>
+            <li>Tidak ada muntah terus.</li>
+            <li>Tidak ada pingsan atau kelemahan satu sisi.</li>
+            <li>Keluhan jelas membaik dalam beberapa jam.</li>
+          </ul>
+        </article>
+        <article class="decision-card warn">
+          <h3>Kontrol hari ini</h3>
+          <p>Bila keluhan sering kambuh, pola berubah, atau sudah mengganggu kerja dan aktivitas.</p>
+          <ul>
+            <li>Perlu obat berulang karena serangan terlalu sering.</li>
+            <li>Keluhan lambung membuat makan dan minum turun terus.</li>
+            <li>Ada riwayat anemia, hipertensi, diabetes, atau obat rutin.</li>
+          </ul>
+        </article>
+        <article class="decision-card danger">
+          <h3>Jangan menunda pemeriksaan</h3>
+          <p>Meski belum masuk red flag stroke, kelompok ini tetap perlu dinilai cepat.</p>
+          <ul>
+            <li>Vertigo pertama kali yang berat.</li>
+            <li>Muntah berulang sampai sulit masuk cairan.</li>
+            <li>Pusing dengan BAB hitam, muntah darah, atau nyeri kepala sangat berbeda dari biasanya.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="callout warn"><strong>Catat kondisi saat datang:</strong> apakah pusing muncul saat berdiri, setelah telat makan, setelah malam kurang tidur, atau saat mengubah posisi kepala. Detail ini sangat membantu membedakan TTH, migrain, keleyengan, dan vertigo.</div>
+    </div>
+  </section>
+
+  <section id="redflags" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-exclamation-octagon-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>5) Kapan harus ke dokter / IGD segera</h2>
+          <p>Jangan tunggu reda sendiri bila pusing datang bersama tanda yang mengarah ke stroke, dehidrasi berat, atau gangguan saraf akut.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="danger-grid">
+        <article class="danger-card">
+          <h3>Pikirkan stroke</h3>
+          <ul>
+            <li>Wajah mencong, bicara pelo, atau sulit memahami ucapan.</li>
+            <li>Lengan atau kaki lemah atau baal satu sisi.</li>
+            <li>Jalan mendadak sangat limbung atau tidak bisa tegak.</li>
+          </ul>
+        </article>
+        <article class="danger-card">
+          <h3>Gangguan penglihatan atau saraf</h3>
+          <ul>
+            <li>Pandangan dobel atau buta mendadak.</li>
+            <li>Sakit kepala baru yang paling berat sepanjang hidup.</li>
+            <li>Pingsan, kejang, atau bingung berat.</li>
+          </ul>
+        </article>
+        <article class="danger-card">
+          <h3>Dehidrasi atau muntah berat</h3>
+          <ul>
+            <li>Muntah terus sampai tidak bisa minum.</li>
+            <li>Urine sangat sedikit, sangat lemas, mulut sangat kering.</li>
+            <li>Badan terasa mau roboh setiap kali bangun.</li>
+          </ul>
+        </article>
+        <article class="danger-card">
+          <h3>Perdarahan saluran cerna</h3>
+          <ul>
+            <li>BAB hitam seperti aspal.</li>
+            <li>Muntah darah atau muntah seperti kopi.</li>
+            <li>Pucat, jantung berdebar, hampir pingsan.</li>
+          </ul>
+        </article>
+        <article class="danger-card">
+          <h3>Vertigo dengan telinga</h3>
+          <ul>
+            <li>Vertigo baru yang berat sekali.</li>
+            <li>Gangguan dengar mendadak atau telinga berdenging berat.</li>
+            <li>Vertigo disertai tidak bisa berjalan lurus.</li>
+          </ul>
+        </article>
+        <article class="danger-card">
+          <h3>Jangan paksa pulang sendiri</h3>
+          <ul>
+            <li>Bila masih muter kuat, jangan menyetir motor atau mobil sendiri.</li>
+            <li>Bila ada tanda bahaya di atas, langsung cari bantuan keluarga atau layanan gawat darurat.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="callout danger"><strong>Patokan aman:</strong> gejala saraf mendadak, pingsan, muntah terus, BAB hitam, atau vertigo baru yang berat bukan area untuk menunggu "nanti juga reda".</div>
+    </div>
+  </section>
+  <section id="khusus" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-people-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-shield"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>6) Catatan kondisi khusus</h2>
+          <p>Pada kelompok ini, ambang evaluasi memang sebaiknya lebih rendah.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="special-grid">
+        <article class="special-card">
+          <h3>Hamil</h3>
+          <p>Pusing bisa terkait mual muntah, asupan turun, anemia, atau tekanan darah. Bila disertai bengkak, nyeri kepala berat, pandangan kabur, atau muntah berat, perlu dinilai segera.</p>
+        </article>
+        <article class="special-card">
+          <h3>Lansia</h3>
+          <p>Risiko jatuh lebih tinggi. Pusing juga bisa berkaitan dengan obat tekanan darah, dehidrasi, gangguan jantung, atau stroke. Jangan tunggu sampai sempat jatuh dulu.</p>
+        </article>
+        <article class="special-card">
+          <h3>Hipertensi atau diabetes</h3>
+          <p>Jangan asal menyimpulkan semua pusing dari gula atau tensi. Angka perlu diperiksa, tetapi sensasi pusing dan red flag tetap harus dipilah seperti biasa.</p>
+        </article>
+        <article class="special-card">
+          <h3>Anemia, penyakit kronis, atau obat rutin</h3>
+          <p>Keleyengan lebih mudah muncul pada pasien anemia, penyakit ginjal, penyakit jantung, atau pengguna obat tertentu. Ceritakan semua obat rutin saat kontrol.</p>
+        </article>
+      </div>
+      <div class="myth-grid">
+        <article class="myth-card">
+          <h3>Pusing pasti karena darah tinggi?</h3>
+          <p><strong>Tidak selalu.</strong> Banyak sakit kepala ternyata lebih cocok ke tegang, kurang tidur, atau migrain. Tensi tetap perlu dicek, tetapi diagnosis tidak boleh ditebak hanya dari rasa pusing.</p>
+        </article>
+        <article class="myth-card">
+          <h3>Kalau ada maag, berarti pusingnya dari lambung?</h3>
+          <p><strong>Tidak otomatis.</strong> Keluhan lambung lebih sering berperan lewat telat makan, muntah, kurang minum, atau perdarahan. Rasa muter tetap perlu dibedakan dari keleyengan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-question-circle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>7) FAQ singkat</h2>
+          <p>Jawaban singkat untuk pertanyaan yang paling sering muncul saat kepala terasa berat, melayang, atau muter.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="faq" role="list">
+        <article class="faq-item" role="listitem">
+          <button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">Apakah pusing pasti karena darah tinggi?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-1" role="region" aria-labelledby="faq-btn-1" hidden>Tidak. Tekanan darah memang perlu diperiksa, tetapi sensasi pusing bisa lebih cocok ke sakit kepala tegang, migrain, keleyengan karena dehidrasi atau telat makan, atau vertigo. Jangan langsung minum obat tekanan darah tanpa penilaian.</div>
+        </article>
+        <article class="faq-item" role="listitem">
+          <button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">Maag bisa bikin kepala muter?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-2" role="region" aria-labelledby="faq-btn-2" hidden>Bisa berkaitan, tetapi sering tidak langsung. Telat makan, mual, muntah, kurang minum, atau perdarahan lambung bisa membuat kepala ringan dan lemas. Bila benar-benar muter, tetap pikirkan vertigo atau gangguan vestibular lain dan jangan otomatis menyalahkan lambung.</div>
+        </article>
+        <article class="faq-item" role="listitem">
+          <button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">Kurang tidur bisa bikin migrain?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-3" role="region" aria-labelledby="faq-btn-3" hidden>Ya, kurang tidur adalah pemicu yang sering untuk migrain dan juga bisa memperberat sakit kepala tegang. Pada sebagian orang, tidur yang berantakan, telat makan, dan dehidrasi datang bersamaan sehingga serangan terasa lebih berat.</div>
+        </article>
+        <article class="faq-item" role="listitem">
+          <button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">Kapan pusing perlu CT-scan atau rujukan lanjutan?<span class="faq-mark" aria-hidden="true">+</span></button>
+          <div class="faq-panel" id="faq-4" role="region" aria-labelledby="faq-btn-4" hidden>Keputusan pemeriksaan lanjutan ditentukan dokter setelah membaca pola gejala dan memeriksa tanda saraf. Yang jelas, red flag seperti lemah satu sisi, bicara pelo, pingsan, sakit kepala paling hebat yang baru muncul, atau vertigo berat dengan gangguan dengar mendadak perlu evaluasi cepat.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="rujukan" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-journal-medical icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>8) Rujukan</h2>
+          <p>Sumber resmi di bawah dipakai untuk menjaga isi tetap selaras dengan panduan pasien.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <ol class="refs">
+        <li><a href="https://ayosehat.kemkes.go.id/4-gejala-umum-tubuh-mengalami-dehidrasi">Kemenkes RI / Ayo Sehat - 4 Gejala Umum Tubuh Mengalami Dehidrasi</a></li>
+        <li><a href="https://www.nidcd.nih.gov/health/balance">NIDCD - Balance Disorders</a></li>
+        <li><a href="https://medlineplus.gov/dizzinessandvertigo.html">MedlinePlus - Dizziness and Vertigo</a></li>
+        <li><a href="https://www.ninds.nih.gov/health-information/disorders/migraine">NINDS - Migraine</a></li>
+        <li><a href="https://magazine.medlineplus.gov/article/10-common-migraine-triggers-and-how-to-cope-with-them">NIH MedlinePlus Magazine - 10 Common Migraine Triggers and How to Cope With Them</a></li>
+        <li><a href="https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes">NIDDK - Symptoms and Causes of Gastritis and Gastropathy</a></li>
+        <li><a href="https://www.nhs.uk/conditions/dehydration/">NHS - Dehydration</a></li>
+        <li><a href="https://www.nhs.uk/conditions/tension-headaches/">NHS - Tension Headaches</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="bottom-cta">
+    <h2>Masih bingung jenis pusingnya?</h2>
+    <p>Bila pola keluhan belum jelas, sering kambuh, atau ada tanda bahaya, lebih aman diperiksa langsung. Simpan halaman ini sebagai PDF bila ingin dipakai ulang saat offline.</p>
+    <div class="actions">
+      <a class="btn btn-brand" id="footerWaCta" href="#">
+        <span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+        WhatsApp Klinik
+      </a>
+      <button class="btn btn-secondary" id="printPage" type="button" aria-label="Print atau simpan PDF">
+        <span class="icon-pair"><i class="bi bi-printer-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-print"></use></svg></span>
+        Print / Save PDF
+      </button>
+    </div>
+    <p class="status-note" id="statusNote"></p>
+  </section>
+</main>
+<footer>
+  <div class="wrap" style="padding-bottom:0">
+    <div class="foot-grid">
+      <div>
+        <h2>Zihan Medical Center</h2>
+        <p id="clinicAddress"></p>
+        <p id="clinicPhone"></p>
+        <p id="clinicHours"></p>
+      </div>
+      <div>
+        <h3>Kontak cepat</h3>
+        <div class="foot-links">
+          <a class="foot-link" id="footerWa" href="#"><span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>WhatsApp</a>
+          <a class="foot-link" id="footerIg" href="#"><span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>Instagram</a>
+          <a class="foot-link" id="footerMap" href="#"><span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>Maps</a>
+        </div>
+      </div>
+    </div>
+    <div class="subfoot">
+      <span>&copy; <span id="year"></span> Zihan Medical Center</span>
+      <span>#ZMCGakNyuekinKamu</span>
+    </div>
+  </div>
+</footer>
+<script>
+const ZMC = {
+  name: "Zihan Medical Center",
+  tagline: "#ZMCGakNyuekinKamu",
+  logoLocal: "zmc-logo.jpeg",
+  logoFallback: "https://i.imgur.com/jzuguQE.jpeg",
+  maps: "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+  whatsapp: "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+  instagram: "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+  address: "Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183",
+  phone: "+62 822-1718-0432",
+  hours: "Senin - Minggu: 24 Jam"
+};
+
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773288425/zmc/pusing-dewasa/pusing-dewasa-hero.webp",
+    local: "../../assets/topics/pusing-dewasa/pusing-dewasa-hero.webp",
+    alt: "Pasien dewasa Indonesia duduk di rumah sambil memegang pelipis karena pusing dengan gelas air di meja.",
+    width: 1536,
+    height: 1024
+  },
+  figures: {}
+};
+
+(function initPage(){
+  const root = document.documentElement;
+  const qs = new URLSearchParams(location.search);
+  const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
+  const logo = document.getElementById("logo");
+  const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a3191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
+  const inFixedFolder = location.pathname.includes("/topics/fixed/");
+  const logoCandidates = inFixedFolder ? ["../zmc-logo.jpeg", ZMC.logoLocal, ZMC.logoFallback, inlineLogo] : [ZMC.logoLocal, "../zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
+  let logoIndex = 0;
+  function loadLogo() {
+    if (logoIndex >= logoCandidates.length) return;
+    logo.src = logoCandidates[logoIndex];
+    logoIndex += 1;
+  }
+  logo.addEventListener("error", loadLogo);
+  loadLogo();
+  document.getElementById("clinicAddress").textContent = ZMC.address;
+  document.getElementById("clinicPhone").textContent = ZMC.phone;
+  document.getElementById("clinicHours").textContent = ZMC.hours;
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+  ["heroWa", "footerWa", "footerWaCta"].forEach(function(id){
+    const el = document.getElementById(id);
+    if (el) el.href = ZMC.whatsapp;
+  });
+  ["heroIg", "footerIg"].forEach(function(id){
+    const el = document.getElementById(id);
+    if (el) el.href = ZMC.instagram;
+  });
+  const footerMap = document.getElementById("footerMap");
+  if (footerMap) footerMap.href = ZMC.maps;
+  function checkIconCDN() {
+    if (forceIcons) {
+      root.classList.add("icons-fallback");
+      return;
+    }
+    const probe = document.createElement("i");
+    probe.className = "bi bi-check2";
+    probe.style.position = "absolute";
+    probe.style.left = "-9999px";
+    document.body.appendChild(probe);
+    const pseudo = getComputedStyle(probe, "::before");
+    const loaded = pseudo && pseudo.content && pseudo.content !== "none" && String(pseudo.fontFamily || "").toLowerCase().includes("bootstrap-icons");
+    if (!loaded) root.classList.add("icons-fallback");
+    probe.remove();
+  }
+  checkIconCDN();
+  const printBtn = document.getElementById("printPage");
+  if (printBtn) printBtn.addEventListener("click", function(){ window.print(); });
+  function hideMediaWrap(img) {
+    const wrap = img.closest("[data-media-wrap]") || img.closest(".hero-figure");
+    if (wrap) wrap.style.display = "none";
+  }
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
+    let localAttempted = false;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
+    function useLocalImage() {
+      if (!media.local || localAttempted) return;
+      localAttempted = true;
+      img.src = media.local;
+    }
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) useLocalImage();
+      else hideMediaWrap(img);
+    });
+    if (forceMediaLocal) {
+      if (media.local) useLocalImage();
+      else hideMediaWrap(img);
+      return;
+    }
+    if (media.remote) img.src = media.remote;
+    else if (media.local) useLocalImage();
+    else hideMediaWrap(img);
+  }
+  bindMediaImage(document.getElementById("heroImage"), TOPIC_MEDIA.hero);
+  window.addEventListener("offline", function(){
+    const heroImage = document.getElementById("heroImage");
+    if (TOPIC_MEDIA.hero && TOPIC_MEDIA.hero.local && heroImage && heroImage.src !== TOPIC_MEDIA.hero.local) heroImage.src = TOPIC_MEDIA.hero.local;
+  });
+  const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
+  function closeFaq() {
+    faqButtons.forEach(function(btn){
+      btn.setAttribute("aria-expanded", "false");
+      const mark = btn.querySelector(".faq-mark");
+      if (mark) mark.textContent = "+";
+      const panel = document.getElementById(btn.getAttribute("aria-controls"));
+      if (panel) panel.hidden = true;
+    });
+  }
+  function toggleFaq(btn) {
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    const mark = btn.querySelector(".faq-mark");
+    closeFaq();
+    if (!expanded) {
+      btn.setAttribute("aria-expanded", "true");
+      if (mark) mark.textContent = "-";
+      const panel = document.getElementById(btn.getAttribute("aria-controls"));
+      if (panel) panel.hidden = false;
+    }
+  }
+  faqButtons.forEach(function(btn, index){
+    btn.addEventListener("click", function(){ toggleFaq(btn); });
+    btn.addEventListener("keydown", function(event){
+      const last = faqButtons.length - 1;
+      let target = index;
+      if (event.key === "ArrowDown") target = index === last ? 0 : index + 1;
+      else if (event.key === "ArrowUp") target = index === 0 ? last : index - 1;
+      else if (event.key === "Home") target = 0;
+      else if (event.key === "End") target = last;
+      else if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleFaq(btn);
+        return;
+      } else {
+        return;
+      }
+      event.preventDefault();
+      faqButtons[target].focus();
+    });
+  });
+  const statusNote = document.getElementById("statusNote");
+  function syncStatus() {
+    if (!statusNote) return;
+    if (location.protocol === "file:") {
+      statusNote.textContent = navigator.onLine ? "File lokal sedang dibuka. Konten utama tetap bisa dipakai offline bila aset lokal tersedia." : "Mode offline aktif. Halaman memakai aset lokal dan ikon fallback bila diperlukan.";
+      return;
+    }
+    statusNote.textContent = navigator.onLine ? "Status koneksi: online. Bila perlu, simpan PDF untuk cadangan offline." : "Status koneksi: offline. Halaman tetap memakai aset lokal bila tersedia.";
+  }
+  syncStatus();
+  window.addEventListener("online", syncStatus);
+  window.addEventListener("offline", syncStatus);
+})();
+</script>
+</body>
+</html>
