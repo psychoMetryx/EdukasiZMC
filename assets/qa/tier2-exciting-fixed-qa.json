@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-03-13T17:05:19.138Z",
+  "pages": [
+    {
+      "slug": "batuk-pilek-anak-exciting-fixed",
+      "viewports": {
+        "mobile": {
+          "heroHeight": 155,
+          "pageOverflow": false,
+          "quickOverflow": true,
+          "interactiveCount": 29
+        },
+        "tablet": {
+          "heroHeight": 255,
+          "pageOverflow": false,
+          "quickOverflow": true,
+          "interactiveCount": 29
+        },
+        "desktop": {
+          "heroHeight": 243,
+          "pageOverflow": false,
+          "quickOverflow": false,
+          "interactiveCount": 29
+        }
+      },
+      "keyboard": {
+        "tabSequence": [
+          "#main",
+          "#redflags",
+          "heroWa",
+          "heroIg",
+          "#gejala",
+          "#rawat",
+          "#durasi",
+          "#obat"
+        ],
+        "faqExpanded": "true",
+        "printButtonPresent": 1
+      },
+      "fallback": {
+        "iconsFallback": true,
+        "mediaSrc": null,
+        "mediaUsesLocal": null,
+        "logoSrc": "../zmc-logo.jpeg",
+        "logoFallbackAdvance": "zmc-logo.jpeg"
+      },
+      "pdf": "assets\\qa\\batuk-pilek-anak-exciting-fixed-print.pdf",
+      "consoleErrors": []
+    },
+    {
+      "slug": "menurunkan-berat-badan-exciting-fixed",
+      "viewports": {
+        "mobile": {
+          "heroHeight": 158,
+          "pageOverflow": false,
+          "quickOverflow": true,
+          "interactiveCount": 31
+        },
+        "tablet": {
+          "heroHeight": 193,
+          "pageOverflow": false,
+          "quickOverflow": true,
+          "interactiveCount": 31
+        },
+        "desktop": {
+          "heroHeight": 226,
+          "pageOverflow": false,
+          "quickOverflow": false,
+          "interactiveCount": 31
+        }
+      },
+      "keyboard": {
+        "tabSequence": [
+          "#main",
+          "dangerBtn",
+          "heroWa",
+          "heroIg",
+          "#mulai",
+          "#makan",
+          "#gerak",
+          "#pantau"
+        ],
+        "faqExpanded": "true",
+        "printButtonPresent": 1
+      },
+      "fallback": {
+        "iconsFallback": true,
+        "mediaSrc": "../../assets/topics/menurunkan-berat-badan/menurunkan-berat-badan-hero.webp",
+        "mediaUsesLocal": true,
+        "logoSrc": "../zmc-logo.jpeg",
+        "logoFallbackAdvance": "zmc-logo.jpeg"
+      },
+      "pdf": "assets\\qa\\menurunkan-berat-badan-exciting-fixed-print.pdf",
+      "consoleErrors": []
+    },
+    {
+      "slug": "diabetes-melitus-tipe-2-exciting-fixed",
+      "viewports": {
+        "mobile": {
+          "heroHeight": 152,
+          "pageOverflow": false,
+          "quickOverflow": true,
+          "interactiveCount": 37
+        },
+        "tablet": {
+          "heroHeight": 160,
+          "pageOverflow": false,
+          "quickOverflow": true,
+          "interactiveCount": 37
+        },
+        "desktop": {
+          "heroHeight": 230,
+          "pageOverflow": false,
+          "quickOverflow": false,
+          "interactiveCount": 37
+        }
+      },
+      "keyboard": {
+        "tabSequence": [
+          "#main",
+          "#redflags",
+          "heroWa",
+          "heroIg",
+          "#gejala",
+          "#diet",
+          "#kaki",
+          "#kontrol"
+        ],
+        "faqExpanded": "true",
+        "printButtonPresent": 1
+      },
+      "fallback": {
+        "iconsFallback": true,
+        "mediaSrc": "../../assets/topics/diabetes-melitus-tipe-2-fixed/diabetes-melitus-tipe-2-fixed-hero.webp",
+        "mediaUsesLocal": true,
+        "logoSrc": "../zmc-logo.jpeg",
+        "logoFallbackAdvance": "zmc-logo.jpeg"
+      },
+      "pdf": "assets\\qa\\diabetes-melitus-tipe-2-exciting-fixed-print.pdf",
+      "consoleErrors": []
+    }
+  ]
+}
