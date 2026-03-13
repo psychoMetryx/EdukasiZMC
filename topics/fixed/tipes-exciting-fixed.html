@@ -1,0 +1,751 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Tipes (Demam Tifoid) | Zihan Medical Center</title>
+<meta name="description" content="Edukasi keluarga tentang tipes atau demam tifoid: gejala yang perlu dicurigai, cara penularan, kapan perlu periksa, rawat rumah yang aman, kapan harus ke dokter atau IGD, serta pencegahan lewat makanan, air, dan kebersihan tangan.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23a1191e'/%3E%3Cpath d='M20 16h24v32H20z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='M32 22v20M24 32h16' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link id="bi-cdn" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+:root{
+  --bg:#f4efe8;--surface:#fffdfa;--surface-soft:#f8f1eb;--surface-tint:#f4e2da;--line:#d9c8bf;--line-strong:#c7a59a;
+  --ink:#231c19;--muted:#645955;--brand:#a1191e;--brand-dark:#7f1217;--brand-soft:#f7e5e4;--accent:#3e5566;
+  --focus:#0a67d7;--good:#225f3d;--good-bg:#edf6ef;--warn:#8a5c16;--warn-bg:#fcf0dc;--danger:#8f1d22;--danger-bg:#fcebed;
+  --radius-lg:14px;--radius-md:10px;--radius-sm:8px;--shadow:0 3px 12px rgba(52,35,29,.06);
+  --wrap:min(1080px, calc(100% - 1.2rem));--font:"Tahoma","Geneva",sans-serif;--sticky-offset:8.5rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input{font:inherit}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:100;padding:.75rem .9rem;border:2px solid var(--focus);border-radius:10px;background:var(--surface)}
+a:focus-visible,button:focus-visible,.chip:focus-visible,.btn:focus-visible,.faq-btn:focus-visible,.foot-link:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.topbar{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--line)}
+.topbar::before{content:"";display:block;height:5px;background:var(--brand)}
+.topbar-inner,.wrap{width:var(--wrap);margin-inline:auto}
+.topbar-inner{padding:.78rem 0;display:grid;gap:.72rem;align-items:center}
+.brand{display:grid;grid-template-columns:auto 1fr;gap:.78rem;align-items:center;min-width:0}
+.logo{width:54px;height:54px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid var(--line);flex-shrink:0}
+.logo img{width:100%;height:100%;object-fit:cover}
+.brand-copy{min-width:0}
+.brand-copy p{margin:0 0 .18rem;font-size:.8rem;font-weight:700;color:var(--brand)}
+.brand-copy h1{margin:0;font-size:clamp(1.04rem,.98rem + .84vw,1.54rem);line-height:1.2;font-weight:700;max-width:22ch}
+.topbar-actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.btn{min-height:44px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:10px;padding:.55rem .9rem;display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;cursor:pointer;font-size:.92rem;font-weight:700;box-shadow:var(--shadow)}
+.btn:hover,.chip:hover,.faq-btn:hover,.foot-link:hover{background:var(--surface-soft)}
+.btn-brand{background:var(--brand);color:#fff;border-color:var(--brand-dark)}
+.btn-secondary{background:var(--surface-soft)}
+.btn-ig{background:#243746;color:#fff;border-color:#1d2d39}
+.icon-pair{display:inline-flex;width:1.1em;height:1.1em;align-items:center;justify-content:center;flex-shrink:0}
+.icon-cdn,.icon-local{width:1em;height:1em;font-size:1em;line-height:1}
+.icon-local{display:none}
+html.icons-fallback .icon-cdn{display:none!important}
+html.icons-fallback .icon-local{display:inline-block!important}
+.wrap{padding-bottom:1.5rem}
+.hero,.summary,.section,.bottom-cta,footer{margin-top:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);break-inside:avoid;scroll-margin-top:var(--sticky-offset)}
+.hero{overflow:hidden}
+.hero-grid{display:block}
+.hero-copy{padding:.64rem .78rem .74rem;display:grid;gap:.36rem;align-content:center}
+.hero-copy h2{margin:0;font-size:clamp(1rem,.95rem + .52vw,1.36rem);line-height:1.15;font-weight:700;max-width:22ch}
+.hero-copy p{margin:0;color:var(--muted);font-size:.82rem}
+.hero-points{display:flex;flex-wrap:wrap;gap:.45rem}
+.hero-point{border:1px solid var(--line);background:var(--surface-soft);border-radius:8px;padding:.34rem .54rem}
+.hero-point strong{display:flex;align-items:center;gap:.3rem;font-size:.81rem;line-height:1.2}
+.hero-point .icon-pair{color:var(--brand)}
+.hero-point span{display:none}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.5rem;padding-top:.06rem}
+.hero-actions .btn{min-height:44px;flex:1 1 160px;justify-content:center;padding:.4rem .62rem;font-size:.84rem}
+.hero-note{border-left:4px solid var(--brand);background:var(--surface-soft);padding:.62rem .72rem;color:var(--muted);font-size:.86rem}
+.hero-note strong{color:var(--ink)}
+.hero-visual{display:none}
+.hero-figure,.micro-figure,.visual-board{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:.66rem}
+.hero-figure svg,.micro-figure svg,.visual-board svg,.hero-figure img{width:100%;display:block}
+.hero-figure svg,.hero-figure img{min-height:154px}
+.hero-figure img{object-fit:cover;border-radius:10px;background:var(--surface-soft)}
+.hero-caption{margin:0;font-size:.86rem;color:var(--muted)}
+.summary{padding:.95rem 1rem;background:var(--surface-soft);border-left:5px solid var(--brand);font-size:.95rem;color:var(--muted)}
+.summary strong{color:var(--brand)}
+.quick{display:flex;flex-wrap:wrap;gap:.55rem;overflow:visible;padding:.2rem;margin-top:.85rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);scroll-margin-top:calc(var(--sticky-offset) - .5rem)}
+.chip{min-height:44px;flex-shrink:0;display:inline-flex;align-items:center;padding:.44rem .8rem;border:1px solid var(--line-strong);border-radius:10px;background:var(--surface-soft);text-decoration:none;font-size:.88rem;font-weight:700}
+.section{overflow:hidden}
+.section-head{padding:1rem 1rem .9rem;border-bottom:1px solid var(--line);background:var(--surface)}
+.section-head::after{content:"";display:block;width:68px;height:3px;margin-top:.72rem;border-radius:999px;background:var(--brand)}
+.heading-row{display:flex;align-items:flex-start;gap:.68rem}
+.heading-icon{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);color:var(--brand);flex-shrink:0}
+.heading-icon .icon-cdn,.heading-icon .icon-local{font-size:1.05rem}
+.heading-copy{min-width:0}
+.section-head h2{margin:0;font-size:clamp(1.08rem,1rem + .72vw,1.45rem);line-height:1.28;font-weight:700}
+.section-head p{margin:.45rem 0 0;color:var(--muted);font-size:.93rem;max-width:74ch}
+.section-body{padding:1rem;display:grid;gap:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.85rem}
+.split{display:grid;gap:1rem}
+.card,.strip,.faq-item,.table-wrap,.rail,.decision-card,.myth-row,.guide-block,.status-block{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.card{padding:.9rem;display:grid;gap:.46rem;align-content:start;border-top:3px solid var(--line-strong)}
+.card h3,.strip h3,.rail h3,.decision-card h3,.myth-row h3,.guide-block h3,.status-block h3{margin:0;font-size:1rem;line-height:1.28;font-weight:700}
+.card p,.card li,.strip p,.strip li,.rail p,.rail li,.decision-card p,.decision-card li,.myth-row p,.guide-block p,.guide-block li,.status-block p,.status-block li,.table-wrap td,.table-wrap th{font-size:.92rem}
+.card p,.card li,.strip p,.strip li,.rail p,.rail li,.decision-card p,.decision-card li,.myth-row p,.guide-block p,.guide-block li,.status-block p,.status-block li{margin:0;color:var(--muted)}
+.hero-copy p,.summary,.section-head h2,.section-head p,.card p,.card li,.strip p,.strip li,.rail p,.rail li,.decision-card p,.decision-card li,.myth-row p,.guide-block p,.guide-block li,.status-block p,.status-block li,.callout,.faq-panel,.bottom-cta p,.refs li,.table-wrap td,.table-wrap th{overflow-wrap:anywhere;word-break:normal}
+.card ul,.strip ul,.rail ul,.decision-card ul,.guide-block ul,.status-block ul{margin:0;padding-left:1rem;display:grid;gap:.38rem}
+.strip{padding:.9rem;background:var(--surface-soft)}
+.text-flow{display:grid;gap:.8rem}
+.text-flow p,.text-flow li{margin:0;color:var(--muted)}
+.text-flow ul{margin:0;padding-left:1.05rem;display:grid;gap:.4rem}
+.callout{border-left:4px solid var(--line-strong);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:10px;padding:.82rem .9rem;background:var(--surface-soft);color:var(--muted);font-size:.92rem}
+.callout strong{color:var(--ink)}
+.callout.good{border-left-color:var(--good);background:var(--good-bg);color:var(--good)}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-bg);color:var(--warn)}
+.callout.danger{border-left-color:var(--danger);background:var(--danger-bg);color:var(--danger)}
+.rail{padding:.9rem;display:grid;gap:.75rem}
+.rail-row{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start}
+.rail-num{width:34px;height:34px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:.92rem;border:1px solid var(--line)}
+.decision-grid{display:grid;gap:.85rem}
+.decision-card{padding:.95rem;display:grid;gap:.55rem}
+.decision-card.good{border-top:4px solid var(--good)}
+.decision-card.warn{border-top:4px solid var(--warn)}
+.decision-card.danger{border-top:4px solid var(--danger)}
+.table-wrap{overflow:auto}
+table{width:100%;min-width:680px;border-collapse:collapse}
+th,td{text-align:left;vertical-align:top;padding:.78rem .72rem;border-bottom:1px solid var(--line)}
+th{background:var(--surface-soft);font-weight:700}
+td{color:var(--muted)}
+.guide-grid{display:grid;gap:.85rem}
+.guide-block{padding:.92rem;background:var(--surface-soft)}
+.guide-block strong{color:var(--brand)}
+.status-grid{display:grid;gap:.85rem}
+.status-block{padding:.9rem;display:grid;gap:.45rem}
+.status-block strong{color:var(--ink)}
+.status-block.danger{border-left:4px solid var(--danger)}
+.status-block.good{border-left:4px solid var(--good)}
+.status-tag{display:inline-flex;align-items:center;padding:.2rem .58rem;border-radius:999px;font-size:.79rem;font-weight:700;width:max-content}
+.status-tag.red{background:var(--brand-soft);color:var(--brand)}
+.status-tag.warn{background:var(--warn-bg);color:var(--warn)}
+.status-tag.good{background:var(--good-bg);color:var(--good)}
+.flow-stack{display:grid;gap:.75rem}
+.flow-step{border:1px solid var(--line);border-radius:10px;background:var(--surface-soft);padding:.82rem .86rem}
+.flow-step strong{display:block;margin-bottom:.18rem;color:var(--ink)}
+.flow-split{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.7rem}
+.myth-list{display:grid;gap:.8rem}
+.myth-row{padding:.9rem;display:grid;gap:.46rem;border-left:4px solid var(--line-strong)}
+.myth-row strong{color:var(--brand)}
+.faq{display:grid;gap:.65rem}
+.faq-btn{width:100%;min-height:44px;border:0;background:transparent;color:var(--ink);text-align:left;display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.84rem .9rem;font-size:.94rem;font-weight:700;cursor:pointer}
+.faq-btn[aria-expanded="true"]{background:var(--surface-soft)}
+.faq-mark{color:var(--brand);font-size:1rem;flex-shrink:0}
+.faq-panel{padding:.1rem .9rem .9rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.faq-panel[hidden]{display:none}
+.bottom-cta{padding:1rem;display:grid;gap:.75rem;background:var(--surface-soft)}
+.bottom-cta h2{margin:0;font-size:1.14rem}
+.bottom-cta p{margin:0;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.status-note{margin:0;font-size:.88rem;color:var(--muted)}
+footer{padding:1rem;background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.foot-grid{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.foot-grid h2,.foot-grid h3{margin:0;font-size:1.02rem;line-height:1.28}
+.foot-grid p{margin:.34rem 0 0;color:#f5ddd8;font-size:.9rem}
+.foot-links{margin-top:.72rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.foot-link{min-height:44px;border:1px solid rgba(255,255,255,.34);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;padding:.48rem .8rem;display:inline-flex;align-items:center;gap:.42rem;font-size:.9rem;font-weight:700}
+.subfoot{margin-top:.85rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.22);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.55rem;font-size:.83rem;color:#f3d6d2}
+.refs{margin:0;padding-left:1.1rem;display:grid;gap:.52rem}
+.refs li{color:var(--muted)}
+.refs a{color:var(--accent)}
+#kenali .section-head{background:#f8f1ec}
+#penularan .section-head{background:#f7f2ed}
+#gejala .section-head{background:#f8f3ef}
+#periksa .section-head{background:#f6f1ec}
+#rawat .section-head{background:#f5f3ef}
+#makan .section-head{background:#f7f1ec}
+#obat .section-head{background:#f8f3ef}
+#redflags{border-color:#dfb8bb}
+#redflags .section-head{background:#fbefef}
+#redflags .section-head::after{background:var(--danger)}
+#khusus .section-head{background:#f7f2ee}
+#mitos .section-head{background:#f6f2ed}
+#faq .section-head{background:#f7f3ee}
+#rujukan .section-head{background:#f6f2ed}
+@media(max-width:640px){
+  .brand-copy h1{max-width:none}
+  .hero-copy{padding:.3rem .36rem .32rem;gap:.14rem}
+  .hero-copy h2{font-size:.76rem;line-height:1}
+  .hero-copy p{display:none}
+  .hero-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.18rem}
+  .hero-point{padding:.18rem .18rem}
+  .hero-point strong{font-size:.62rem;line-height:1.04}
+  .hero-actions .btn{font-size:.78rem}
+}
+@media(max-width:820px){.quick{flex-wrap:nowrap;overflow:auto}table{min-width:620px}}
+@media(min-width:920px){
+  .topbar-inner{grid-template-columns:minmax(0,1fr) auto}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);min-height:228px}
+  .hero-copy{padding:.86rem .96rem;gap:.3rem}
+  .hero-actions .btn{flex:0 0 auto}
+  .hero-visual{display:grid;align-content:start;padding:.72rem;background:var(--surface-soft);border-left:1px solid var(--line)}
+  .hero-figure{padding:.48rem}
+  .hero-figure svg,.hero-figure img{height:156px}
+  .split{grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);align-items:start}
+  .decision-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .status-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media print{
+  :root{--bg:#fff;--surface:#fff;--surface-soft:#fff;--surface-tint:#fff;--line:#b7b7b7;--line-strong:#929292;--ink:#111;--muted:#202020;--brand:#111;--brand-dark:#111;--accent:#111;--shadow:none}
+  body{background:#fff!important;color:#111!important;font-size:11pt}
+  .topbar-actions,.quick,#statusNote,#printPage,.hero-visual,.hero-actions{display:none!important}
+  .wrap{width:100%}
+  .hero-grid{display:block;min-height:auto}
+  .hero,.summary,.section,.bottom-cta,footer,.card,.strip,.callout,.table-wrap,.rail,.decision-card,.guide-block,.status-block,.myth-row,.micro-figure,.visual-board,.faq-item{box-shadow:none!important;break-inside:avoid}
+  a{color:#111!important;text-decoration:underline}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute;left:-9999px;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 21s7-4.6 7-10a7 7 0 1 0-14 0c0 5.4 7 10 7 10z" fill="none" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="2"></circle></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"></circle></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M7 14h10v7H7z" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M12 9v5" stroke="currentColor" stroke-width="2"></path><circle cx="12" cy="17.2" r="1.2" fill="currentColor"></circle></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 9.5V21h14V9.5" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 6h11v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V6z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M15 8h2a3 3 0 0 1 0 6h-2" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M6 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="M10.5 20.5 3.5 13.5a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M8 8l8 8" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 0 4 23z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M4 5.5V21" fill="none" stroke="currentColor" stroke-width="2"></path></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 5 3.4 7.7 7 9 3.6-1.3 7-4 7-9V6l-7-3z" fill="none" stroke="currentColor" stroke-width="2"></path><path d="M9.5 12.2 11.2 14 14.8 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-utensil" viewBox="0 0 24 24"><path d="M6 3v8M9 3v8M6 7h3M15 3c2 2 3 4.2 3 6.7 0 1.8-.6 3.5-2 4.8V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path><path d="M7.5 11V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></symbol>
+</svg>
+<a class="skip" href="#main">Lewati ke isi utama</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="logo"><img id="logo" alt="Logo Zihan Medical Center"></div>
+      <div class="brand-copy">
+        <p>Panduan keluarga ZMC</p>
+        <h1>Tipes: kapan cukup waspada di rumah, kapan harus segera diperiksa</h1>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-secondary" href="#redflags">
+        <span class="icon-pair"><i class="bi bi-exclamation-triangle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>
+        Tanda bahaya
+      </a>
+    </div>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h2>Curigai tipes bila demam &gt;3 hari dan badan makin lemah.</h2>
+        <p>Istilah medisnya demam tifoid. Halaman ini bantu keluarga memilih: cukup pantau sebentar, periksa hari ini, atau jangan tunggu ke IGD.</p>
+        <div class="hero-points">
+          <div class="hero-point"><strong><span class="icon-pair"><i class="bi bi-thermometer-high icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span>Pantau durasi demam</strong><span>demam menetap perlu evaluasi medis</span></div>
+          <div class="hero-point"><strong><span class="icon-pair"><i class="bi bi-cup-hot-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-cup"></use></svg></span>Pantau minum dan tenaga</strong><span>kalau sulit minum atau makin lemas, periksa lebih cepat</span></div>
+          <div class="hero-point"><strong><span class="icon-pair"><i class="bi bi-signpost-split-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-home"></use></svg></span>Cek kapan periksa</strong><span>jangan tunggu sampai gejala “lengkap” semua</span></div>
+        </div>
+        <div class="hero-actions" aria-label="Kontak cepat klinik">
+          <a class="btn btn-brand" id="heroWaBtn" href="#" target="_blank" rel="noopener"><span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>WhatsApp Klinik</a>
+          <a class="btn btn-ig" id="heroIgBtn" href="#" target="_blank" rel="noopener"><span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>Instagram Klinik</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-figure" aria-hidden="true">
+          <img id="heroImage" alt="" loading="lazy" decoding="async">
+        </div>
+        <p class="hero-caption">Tifoid adalah infeksi bakteri <em>Salmonella Typhi</em> yang biasanya menular lewat makanan, minuman, atau tangan yang terkontaminasi tinja.</p>
+      </div>
+    </div>
+  </section>
+  <section id="ringkasan" class="summary"><strong>Pegangan keputusan cepat:</strong> curigai dulu saat demam beberapa hari disertai badan lemah atau keluhan perut, pantau minum dan kencing, lalu periksa hari itu juga bila tenaga turun, muntah bertambah, atau pasien mulai tampak tidak stabil.</section>
+  <nav class="quick" aria-label="Navigasi cepat">
+    <a class="chip" href="#kenali">Kenali Tipes</a><a class="chip" href="#penularan">Penularan</a><a class="chip" href="#gejala">Gejala Curiga</a><a class="chip" href="#periksa">Kapan Periksa</a><a class="chip" href="#rawat">Rawat Rumah</a><a class="chip" href="#makan">Makan dan Minum</a><a class="chip" href="#obat">Obat</a><a class="chip" href="#redflags">Ke Dokter / IGD</a><a class="chip" href="#khusus">Kondisi Khusus</a><a class="chip" href="#mitos">Mitos</a><a class="chip" href="#faq">FAQ</a><a class="chip" href="#rujukan">Rujukan</a>
+  </nav>
+  <section id="kenali" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-journal-medical icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>1) Tipes itu apa, dan kenapa sering tertukar dengan "demam biasa" atau "maag"</h2>
+          <p>Jangan samakan semua demam lama dengan maag, masuk angin, atau “badan capek”.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="decision-grid">
+        <article class="decision-card warn"><h3>Yang sering bikin salah fokus</h3><ul><li>Demam beberapa hari dibilang cuma “masuk angin”.</li><li>Keluhan perut langsung dianggap maag kambuh.</li><li>Turun panas sebentar dianggap berarti sudah aman.</li></ul></article>
+        <article class="decision-card good"><h3>Yang lebih tepat dicurigai</h3><ul><li>Demam berjalan beberapa hari dan tenaga turun.</li><li>Keluhan perut, mual, muntah, diare, atau sembelit ikut muncul.</li><li>Minum makin berat, pipis berkurang, atau pasien tampak lebih sakit dari biasanya.</li></ul></article>
+        <article class="decision-card danger"><h3>Jangan lakukan ini</h3><ul><li>Menegakkan diagnosis sendiri hanya dari satu gejala.</li><li>Mengandalkan satu hasil tes tanpa dibaca dokter.</li><li>Menunggu sampai gejalanya terasa “lengkap semua”.</li></ul></article>
+      </div>
+      <div class="split">
+        <div class="text-flow">
+          <p>Demam tifoid adalah infeksi yang disebabkan oleh bakteri <em>Salmonella Typhi</em>. Bakteri ini masuk lewat makanan atau minuman yang terkontaminasi, lalu menyebar di tubuh dan menimbulkan demam serta gejala saluran cerna.</p>
+          <p>Masalahnya, gejalanya sering tidak spesifik di awal. Pasien bisa tampak seperti demam virus, maag, atau gangguan perut biasa. Karena itu, keluarga tidak sebaiknya menegakkan diagnosis sendiri hanya dari satu gejala atau satu hasil laboratorium.</p>
+          <div class="callout">Pegangan sederhana: <strong>tidak semua demam adalah tipes</strong>, tetapi demam yang berjalan beberapa hari dan makin mengganggu kondisi umum juga tidak boleh dianggap sepele.</div>
+        </div>
+        <aside class="strip">
+          <h3>Yang sering membuat keluarga terkecoh</h3>
+          <ul>
+            <li>Demamnya tidak selalu tampak "khas" pada hari pertama.</li>
+            <li>Keluhan perut bisa berupa mual, nyeri, diare, atau malah sembelit.</li>
+            <li>Pada beberapa pasien, keluhan dominan justru lemas, nafsu makan turun, dan sakit kepala.</li>
+            <li>Obat penurun panas bisa membantu sementara, tetapi tidak mengobati penyebab bakteri.</li>
+          </ul>
+        </aside>
+      </div>
+      <div class="callout warn"><strong>Kalimat yang perlu diingat:</strong> kalau badan beuki leuleus, minum mulai seret, atau keluhan perut ikut menguat, jangan tunggu sampai “kelihatan jelas banget” baru periksa.</div>
+    </div>
+  </section>
+  <section id="penularan" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-arrow-repeat icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-shield"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>2) Cara penularan dan faktor risiko harian</h2>
+          <p>Tifoid menular lewat jalur tinja ke mulut, bukan lewat bersin biasa. Cek kebersihan tangan, air minum, jajanan, dan dapur rumah.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="split">
+        <div class="rail">
+          <h3>Rantai penularan yang paling sering terjadi</h3>
+          <div class="rail-row"><div class="rail-num">1</div><div><p><strong>Bakteri keluar bersama tinja manusia.</strong> Orang yang sedang sakit atau masih membawa bakteri dapat mencemari lingkungan bila kebersihan tangan buruk.</p></div></div>
+          <div class="rail-row"><div class="rail-num">2</div><div><p><strong>Air, makanan, atau tangan lalu terkontaminasi.</strong> Ini bisa terjadi lewat air tidak bersih, alat makan yang kotor, atau makanan yang dipegang setelah dari toilet tanpa cuci tangan.</p></div></div>
+          <div class="rail-row"><div class="rail-num">3</div><div><p><strong>Bakteri tertelan.</strong> Risiko lebih tinggi pada jajanan terbuka, es atau air yang tidak jelas, makanan yang tidak matang sempurna, dan dapur dengan kontaminasi silang.</p></div></div>
+        </div>
+        <aside class="micro-figure" aria-label="Jalur penularan umum">
+          <div class="status-grid">
+            <article class="status-block">
+              <strong>1. Tinja membawa bakteri</strong>
+              <p>Sumber penularan tetap berasal dari manusia yang sedang sakit atau masih membawa bakteri.</p>
+            </article>
+            <article class="status-block">
+              <strong>2. Tangan, alat, air, atau makanan terkontaminasi</strong>
+              <p>Perpindahan paling sering terjadi saat kebersihan tangan dan dapur tidak terjaga.</p>
+            </article>
+            <article class="status-block danger">
+              <strong>3. Bakteri lalu tertelan</strong>
+              <p>Risiko harian naik pada jajanan terbuka, es tidak jelas, dan dapur yang campur bahan mentah dengan matang.</p>
+            </article>
+          </div>
+        </aside>
+      </div>
+      <div class="callout warn"><strong>Nuansa lokal:</strong> kebiasaan jajan sembarang tempat, minum es dari sumber air yang tidak jelas, atau makan makanan matang yang dibiarkan terlalu lama di suhu ruang bisa ikut menaikkan risiko.</div>
+    </div>
+  </section>
+  <section id="gejala" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-clipboard2-pulse-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>3) Gejala yang membuat curiga tipes</h2>
+          <p>Lihat polanya, bukan satu gejala tunggal: demam, keluhan perut, tenaga, dan asupan minum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="flow-stack">
+        <div class="flow-step"><strong>Mulai curiga</strong><p>Demam beberapa hari, badan makin lemah, dan nafsu makan turun sudah cukup untuk membuat keluarga tidak santai.</p></div>
+        <div class="flow-step"><strong>Keluhan perut ikut menguatkan</strong><p>Nyeri perut, mual, muntah, konstipasi atau diare, dan rasa “perut tidak enak terus” sering ikut muncul.</p></div>
+        <div class="flow-step"><strong>Pantau dua patokan rumah</strong><p>Minum masih masuk? Pipis masih ada? Dua pertanyaan ini sering lebih membantu daripada menebak nama penyakit.</p></div>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-block">
+          <h3>Pantau 4 hal sederhana di rumah</h3>
+          <ul>
+            <li><strong>Demam:</strong> sudah hari ke berapa dan apakah turun naik terus.</li>
+            <li><strong>Perut:</strong> ada nyeri, mual, muntah, diare, atau sembelit.</li>
+            <li><strong>Minum:</strong> masih sanggup minum cukup atau mulai sulit.</li>
+            <li><strong>Kondisi umum:</strong> masih responsif atau makin lemas.</li>
+          </ul>
+        </div>
+        <div class="guide-block">
+          <h3>Yang tidak boleh menenangkan keluarga terlalu cepat</h3>
+          <ul>
+            <li>Demam sempat turun setelah minum obat penurun panas.</li>
+            <li>Keluhan perut belum terlalu dramatis pada hari pertama.</li>
+            <li>Pasien masih bisa bicara tetapi tampak lebih lemah dari biasanya.</li>
+            <li>Satu hasil tes cepat tanpa dibaca dokter.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">Demam tifoid tetap <strong>tidak bisa dipastikan hanya dari gejala</strong>. Namun kombinasi demam beberapa hari, keluhan perut, dan kondisi umum yang memburuk cukup untuk membuat keluarga tidak menunda pemeriksaan.</div>
+    </div>
+  </section>
+  <section id="periksa" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-signpost-split-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-home"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>4) Kapan perlu periksa dan pemeriksaan apa yang biasanya dipertimbangkan</h2>
+          <p>Pakai bagian ini sebagai triase awal: cukup pantau singkat, periksa hari ini, atau jangan tunggu.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="decision-grid">
+        <article class="decision-card warn"><h3>Periksa hari itu juga</h3><ul><li>Demam beberapa hari disertai keluhan perut dan badan sangat lemah.</li><li>Pasien sulit makan atau minum, atau muntah mulai berulang.</li><li>Keluarga ragu karena kondisi terasa tidak seperti demam biasa.</li></ul></article>
+        <article class="decision-card good"><h3>Apa yang biasanya dinilai dokter</h3><ul><li>Lama demam, pola keluhan perut, asupan minum, dan frekuensi pipis.</li><li>Pemeriksaan fisik untuk melihat tanda dehidrasi, nyeri perut, dan kondisi umum.</li><li>Bila perlu, tes darah atau tes lain untuk membantu memastikan diagnosis.</li></ul></article>
+        <article class="decision-card danger"><h3>Jangan tebak sendiri dari satu angka</h3><ul><li>Satu hasil laboratorium tidak cukup dibaca lepas dari gejala dan hari sakit.</li><li>Kultur darah adalah salah satu pemeriksaan acuan, tetapi dokter memilih tes sesuai kondisi dan fasilitas.</li><li>Hasil tes yang terlihat "mengarah" tetap perlu interpretasi tenaga kesehatan.</li></ul></article>
+      </div>
+      <div class="split">
+        <div class="text-flow">
+          <p>CDC menekankan bahwa pasien dengan demam dan gejala tifoid perlu mencari pertolongan medis. Pada praktiknya, dokter akan menilai keluhan, pemeriksaan fisik, dan mempertimbangkan tes darah bila memang dibutuhkan.</p>
+          <p>Untuk pasien awam, pesan terpentingnya bukan menghafal nama tes, tetapi memahami bahwa <strong>tes membantu dokter</strong> dan tidak boleh dijadikan alat menegakkan diagnosis sendiri dari rumah.</p>
+          <div class="callout warn"><strong>Kalau sudah demam beberapa hari dan terasa berat, jangan menunggu "biar lengkap dulu gejalanya".</strong> Pemeriksaan lebih dini biasanya justru lebih aman.</div>
+        </div>
+        <aside class="visual-board" aria-label="Alur kapan memeriksakan dugaan tipes">
+          <div class="flow-stack">
+            <div class="flow-step">
+              <strong>Mulai curiga</strong>
+              <p>Demam beberapa hari, perut tidak enak, dan badan lemah sudah cukup untuk membuat keluarga tidak menunda evaluasi.</p>
+            </div>
+            <div class="flow-step">
+              <strong>Cek tiga patokan rumah</strong>
+              <p>Lihat minum masih masuk, pipis masih ada, dan pasien tetap responsif atau justru makin layu.</p>
+            </div>
+            <div class="flow-split">
+              <div class="status-block good">
+                <strong>Masih stabil</strong>
+                <p>Tetap periksa terencana, terutama bila demam terus berjalan.</p>
+              </div>
+              <div class="status-block danger">
+                <strong>Tidak stabil</strong>
+                <p>Periksa lebih cepat hari itu juga, apalagi bila muntah, sulit minum, atau kesadaran berubah.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <section id="rawat" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-house-heart-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-home"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>5) Yang aman dilakukan di rumah sambil menunggu evaluasi atau saat sudah dinilai stabil</h2>
+          <p>Konteks: tidak semua pasien langsung perlu dirawat inap, tetapi rawat rumah harus tetap disiplin. Langkah praktis: fokus pada cairan, istirahat, pemantauan, dan kebersihan. Kapan evaluasi medis: bila perawatan suportif gagal menjaga pasien tetap minum, tetap pipis, dan tetap sadar baik.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="split">
+        <div class="rail">
+          <h3>Checklist rawat rumah yang realistis</h3>
+          <div class="rail-row"><div class="rail-num">1</div><div><p><strong>Cukupkan cairan.</strong> Beri air putih, oralit bila ada muntah atau diare, kuah hangat, atau minuman lain yang masih bisa diterima pasien. Minum sedikit tetapi sering lebih mudah masuk.</p></div></div>
+          <div class="rail-row"><div class="rail-num">2</div><div><p><strong>Istirahat dan kurangi aktivitas berat.</strong> Tirah baring membantu tubuh pulih dan memudahkan keluarga memantau perubahan gejala.</p></div></div>
+          <div class="rail-row"><div class="rail-num">3</div><div><p><strong>Catat hal sederhana.</strong> Suhu, muntah, buang air besar, jumlah minum, dan pipis sering lebih berguna daripada menebak-nebak.</p></div></div>
+          <div class="rail-row"><div class="rail-num">4</div><div><p><strong>Cuci tangan setelah dari toilet dan sebelum menyiapkan makanan.</strong> Ini penting supaya bakteri tidak menyebar ke anggota keluarga lain.</p></div></div>
+          <div class="rail-row"><div class="rail-num">5</div><div><p><strong>Jangan siapkan makanan untuk orang lain bila sedang sakit dan belum dinyatakan aman.</strong> CDC menekankan ini terutama untuk mencegah penularan lewat makanan.</p></div></div>
+        </div>
+        <aside class="micro-figure" aria-label="Checklist pemantauan rawat rumah pada dugaan tipes">
+          <div class="status-grid">
+            <article class="status-block good">
+              <strong>Masih mau minum</strong>
+              <p>Kalau cairan mulai sulit masuk, rawat rumah jadi jauh lebih berisiko.</p>
+            </article>
+            <article class="status-block good">
+              <strong>Pipis masih ada</strong>
+              <p>Pipis yang makin jarang mengarah ke kekurangan cairan.</p>
+            </article>
+            <article class="status-block">
+              <strong>Muntah dan nyeri perut tidak memberat</strong>
+              <p>Perubahan ke arah lebih berat harus dianggap sebagai alasan evaluasi lebih cepat.</p>
+            </article>
+            <article class="status-block danger">
+              <strong>Kesadaran tetap baik</strong>
+              <p>Kalau makin lemah, mengantuk, bingung, atau tampak tidak responsif, jangan bertahan di rumah.</p>
+            </article>
+          </div>
+        </aside>
+      </div>
+      <div class="callout warn"><strong>Rawat rumah bukan berarti menunggu pasif.</strong> Kalau pasien makin lemah, tidak bisa minum, muntah terus, atau pipis jauh berkurang, pola rawat rumah sudah tidak cukup.</div>
+    </div>
+  </section>
+  <section id="makan" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-fork-knife icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-utensil"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>6) Makan, minum, dan kebiasaan yang membantu pemulihan</h2>
+          <p>Jangan bikin pantangan terlalu panjang. Yang paling penting adalah makanan matang, aman, dan cairan cukup.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="status-grid">
+        <article class="status-block"><span class="status-tag good">Yang membantu</span><h3>Makanan sederhana dan matang</h3><ul><li>Bubur, nasi tim, sup, telur matang, tahu atau tempe matang, pisang, atau lauk yang lembut.</li><li>Porsi kecil tetapi lebih sering biasanya lebih mudah diterima.</li><li>Utamakan makanan yang masih hangat dan baru matang.</li></ul></article>
+        <article class="status-block"><span class="status-tag warn">Yang perlu dibatasi</span><h3>Makanan yang memperberat mual atau risiko kontaminasi</h3><ul><li>Makanan sangat pedas, sangat berlemak, atau terlalu berat saat pasien sedang mual.</li><li>Jajanan terbuka, lalapan mentah, dan es atau air yang tidak jelas sumbernya.</li><li>Makanan matang yang dibiarkan lama tanpa penyimpanan aman.</li></ul></article>
+        <article class="status-block"><span class="status-tag red">Yang harus diingat</span><h3>Fokus utamanya cairan</h3><ul><li>Kalau nafsu makan turun, jangan memaksa makan besar sekaligus.</li><li>Yang penting pertama adalah cukup minum dan tidak dehidrasi.</li><li>Mulut kering, pipis sedikit, atau sangat lemas berarti evaluasi harus lebih cepat.</li></ul></article>
+      </div>
+      <div class="callout"><strong>Bahasa sederhananya:</strong> pilih yang <em>matang, bersih, hangat, dan gampang masuk</em>. Tidak perlu membuat pantangan yang panjang tetapi tidak realistis.</div>
+    </div>
+  </section>
+  <section id="obat" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-capsule-pill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-pill"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>7) Obat dan antibiotik: yang perlu dipahami pasien</h2>
+          <p>Bagian ini sengaja dibuat seperti do and don't supaya keluarga tidak bermain tebak sendiri.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="guide-grid">
+        <div class="guide-block">
+          <h3>Lakukan</h3>
+          <ul>
+            <li>Gunakan antibiotik hanya berdasarkan penilaian dokter.</li>
+            <li>Kalau sudah diresepkan, minum sesuai aturan dan habiskan sesuai instruksi.</li>
+            <li>Parasetamol boleh dipakai sesuai dosis untuk demam atau nyeri bila perlu.</li>
+            <li>Bawa daftar obat yang sudah diminum saat kontrol.</li>
+          </ul>
+        </div>
+        <div class="guide-block">
+          <h3>Jangan lakukan</h3>
+          <ul>
+            <li>Jangan beli antibiotik sendiri karena pernah “cocok” dulu.</li>
+            <li>Jangan campur obat dari banyak saran tanpa tahu kandungannya.</li>
+            <li>Jangan berhenti antibiotik terlalu cepat hanya karena panas turun.</li>
+            <li>Jangan anggap paket “obat tipes” dari orang sekitar pasti aman.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout warn"><strong>Yang perlu ditekankan ke keluarga:</strong> antibiotik untuk tifoid bukan obat coba-coba. Bila pasien muncul ruam hebat, bengkak bibir atau kelopak mata, sesak napas, atau muntah terus setelah minum obat, segera cari pertolongan medis dan bawa daftar obat yang sudah diminum.</div>
+    </div>
+  </section>
+  <section id="redflags" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-exclamation-octagon-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-alert"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>8) Kapan harus ke dokter atau IGD</h2>
+          <p>Ini bagian keselamatan yang paling penting. Cek cepat tanda di bawah dan jangan menunggu semua gejala terkumpul.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="callout danger"><strong>Ke dokter segera atau ke IGD</strong> bila pasien tidak kuat minum, muntah terus, kencing makin sedikit, sangat lemas atau sulit dibangunkan, bingung, nyeri perut hebat, perut tampak makin kembung, BAB hitam atau berdarah, atau ada tanda perdarahan lain.</div>
+      <div class="status-grid">
+        <article class="status-block danger"><strong>Tanda dehidrasi dan tidak kuat minum</strong><ul><li>Mulut sangat kering.</li><li>Pipis jauh berkurang.</li><li>Minum sedikit saja muntah kembali.</li></ul></article>
+        <article class="status-block danger"><strong>Tanda perut yang tidak boleh ditunggu</strong><ul><li>Nyeri perut berat atau makin memberat.</li><li>Perut tampak kembung.</li><li>BAB hitam seperti aspal atau berdarah.</li></ul></article>
+        <article class="status-block danger"><strong>Tanda sistemik berat</strong><ul><li>Sangat lemas, bingung, mengigau, atau sulit dibangunkan.</li><li>Kejang.</li><li>Keluarga melihat kondisi memburuk cepat.</li></ul></article>
+      </div>
+      <div class="callout good">Kalau ragu memilih "nunggu dulu" atau "periksa sekarang", pada tifoid dan demam berat lain biasanya <strong>lebih aman memilih diperiksa</strong>, terutama pada anak, lansia, ibu hamil, atau pasien dengan penyakit kronis.</div>
+    </div>
+  </section>
+  <section id="khusus" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-people-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-user"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>9) Catatan kondisi khusus: anak, lansia, hamil, komorbid, atau daya tahan tubuh lemah</h2>
+          <p>Pada kelompok ini, ambang untuk konsultasi harus lebih rendah dari pasien dewasa sehat biasa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="callout good"><strong>Intinya:</strong> pada anak kecil, lansia, ibu hamil, pasien penyakit ginjal, hati, diabetes, kanker, penggunaan steroid jangka panjang, gangguan imun, atau riwayat alergi obat berat, jangan terlalu lama observasi sendiri di rumah.</div>
+      <div class="rail">
+        <div class="rail-row"><div class="rail-num">1</div><div><p><strong>Anak:</strong> lebih cepat dehidrasi bila muntah, diare, atau tidak mau minum. Demam yang berjalan lama dan keluhan perut perlu dinilai dokter lebih cepat.</p></div></div>
+        <div class="rail-row"><div class="rail-num">2</div><div><p><strong>Lansia dan komorbid:</strong> lemas, makan turun, atau kebingungan bisa muncul lebih awal, dan penyakit dasar dapat membuat pemulihan lebih lambat.</p></div></div>
+        <div class="rail-row"><div class="rail-num">3</div><div><p><strong>Ibu hamil dan imun lemah:</strong> evaluasi harus lebih hati-hati. Obat dan antibiotik pada kelompok ini tidak boleh asal mengikuti pengalaman orang lain.</p></div></div>
+        <div class="rail-row"><div class="rail-num">4</div><div><p><strong>Riwayat alergi obat berat:</strong> sampaikan sejak awal nama obat bila ingat. Bila muncul sesak, bengkak wajah, atau ruam menyeluruh setelah minum obat, ini kegawatan yang perlu segera ditangani.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="mitos" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-chat-left-quote-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>10) Mitos vs fakta</h2>
+          <p>Konteks: salah paham soal tipes masih sangat sering. Langkah praktis: luruskan yang paling memengaruhi keputusan keluarga. Kapan evaluasi medis: bila mitos membuat pasien menunda pemeriksaan atau minum obat asal.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="myth-list">
+        <article class="myth-row"><h3>Mitos: "Tipes itu karena kecapekan."</h3><p><strong>Fakta:</strong> tifoid disebabkan bakteri <em>Salmonella Typhi</em>. Kelelahan mungkin membuat badan terasa drop, tetapi bukan sumber penularannya.</p></article>
+        <article class="myth-row"><h3>Mitos: "Kalau demam turun setelah minum obat, berarti aman."</h3><p><strong>Fakta:</strong> penurun panas hanya membantu gejala sementara. Yang dinilai tetap kondisi umum pasien, lama demam, dan keluhan penyertanya.</p></article>
+        <article class="myth-row"><h3>Mitos: "Satu hasil tes darah langsung berarti pasti tipes."</h3><p><strong>Fakta:</strong> diagnosis tetap perlu dibaca bersama gejala, pemeriksaan dokter, dan konteks hari sakit. Hasil laboratorium tidak boleh ditafsirkan sendiri.</p></article>
+        <article class="myth-row"><h3>Mitos: "Kalau sudah pernah kena tipes berarti kebal."</h3><p><strong>Fakta:</strong> orang bisa sakit lagi bila kembali terpapar. Pencegahan lewat air bersih, makanan aman, cuci tangan, dan vaksin sesuai saran dokter tetap penting.</p></article>
+        <article class="myth-row"><h3>Mitos: "Semua pasien tipes harus pantang makan banyak sekali."</h3><p><strong>Fakta:</strong> yang lebih penting adalah makanan matang, bersih, mudah dicerna, dan cukup cairan. Pantang yang terlalu ketat justru bisa membuat asupan makin buruk.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-question-circle-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>11) FAQ singkat</h2>
+          <p>Konteks: ini pertanyaan yang paling sering muncul saat keluarga sedang panik. Langkah praktis: pakai jawaban ini sebagai pegangan awal. Kapan evaluasi medis: bila kondisi nyata pasien lebih berat daripada skenario FAQ ini.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="faq">
+        <div class="faq-item"><button class="faq-btn" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">Kalau demam baru 1-2 hari, apakah pasti bukan tipes?<span class="faq-mark" aria-hidden="true">+</span></button><div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>Tidak bisa dipastikan begitu. Tifoid biasanya tidak ditegakkan hanya dari demam yang sangat singkat, tetapi yang lebih penting adalah melihat keseluruhan gejala dan kondisi pasien. Bila tampak berat, jangan tunggu sendiri.</div></div>
+        <div class="faq-item"><button class="faq-btn" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">Apakah semua pasien tipes harus dirawat inap?<span class="faq-mark" aria-hidden="true">+</span></button><div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>Tidak selalu. Sebagian pasien bisa dirawat di rumah bila dokter menilai stabil. Namun rawat rumah hanya aman kalau pasien masih bisa minum, tidak muntah terus, pipis masih cukup, dan tidak ada tanda bahaya.</div></div>
+        <div class="faq-item"><button class="faq-btn" type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">Boleh beli antibiotik sendiri karena pernah cocok dulu?<span class="faq-mark" aria-hidden="true">+</span></button><div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>Tidak dianjurkan. Jenis antibiotik harus menyesuaikan kondisi sekarang dan pertimbangan resistensi bakteri. Obat yang dulu pernah dipakai belum tentu tepat untuk episode yang sekarang.</div></div>
+        <div class="faq-item"><button class="faq-btn" type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">Apakah ada vaksin tipes?<span class="faq-mark" aria-hidden="true">+</span></button><div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>Ada vaksin tifoid, tetapi jenis vaksin dan jadwalnya berbeda-beda. WHO dan CDC sama-sama menegaskan vaksin dapat membantu pencegahan, namun tetap perlu dibarengi kebersihan tangan, air minum aman, dan makanan matang. Tanyakan ke dokter vaksin mana yang sesuai usia dan kebutuhan.</div></div>
+        <div class="faq-item"><button class="faq-btn" type="button" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">Apakah tipes menular lewat batuk atau bersin?<span class="faq-mark" aria-hidden="true">+</span></button><div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" hidden>Bukan itu jalur utama. Penularan utama tifoid terjadi lewat makanan, minuman, atau tangan yang terkontaminasi bakteri dari tinja. Karena itu, kebersihan toilet, cuci tangan, dan keamanan makanan sangat penting.</div></div>
+      </div>
+    </div>
+  </section>
+  <section id="rujukan" class="section">
+    <div class="section-head">
+      <div class="heading-row">
+        <div class="heading-icon"><span class="icon-pair"><i class="bi bi-journal-medical icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+        <div class="heading-copy">
+          <h2>12) Rujukan</h2>
+          <p>Konteks: halaman ini disusun dari sumber resmi yang relevan untuk pasien. Langkah praktis: buka saat online bila ingin membaca lebih rinci. Kapan evaluasi medis: kalau pasien terlihat berat, jangan berhenti di rujukan - langsung periksa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <ol class="refs">
+        <li>WHO. <a href="https://www.who.int/news-room/fact-sheets/detail/typhoid" target="_blank" rel="noopener">Typhoid</a>. Last updated 2 May 2024. Dasar penyebab, gejala umum, komplikasi, resistensi antibiotik, dan pesan vaksin tifoid.</li>
+        <li>CDC. <a href="https://www.cdc.gov/typhoid-fever/about/index.html" target="_blank" rel="noopener">About Typhoid Fever and Paratyphoid Fever</a>. Last reviewed 25 April 2024. Dasar penularan lewat makanan, minuman, air, dan tangan yang terkontaminasi.</li>
+        <li>CDC. <a href="https://www.cdc.gov/typhoid-fever/signs-symptoms/index.html" target="_blank" rel="noopener">Symptoms of Typhoid Fever and Paratyphoid Fever</a>. Last reviewed 9 June 2025. Dasar gejala pasien, pesan untuk segera mencari pertolongan medis, dan pentingnya terapi.</li>
+        <li>CDC. <a href="https://www.cdc.gov/typhoid-fever/treatment/index.html" target="_blank" rel="noopener">Treating Typhoid Fever and Paratyphoid Fever</a>. Last reviewed 26 April 2024. Dasar antibiotik harus sesuai arahan, cuci tangan, dan larangan menyiapkan makanan untuk orang lain saat masih menular.</li>
+        <li>CDC. <a href="https://www.cdc.gov/typhoid-fever/hcp/clinical-guidance/index.html" target="_blank" rel="noopener">Clinical Guidance for Typhoid Fever and Paratyphoid Fever</a>. Last reviewed 13 May 2024. Dasar bahwa kultur darah adalah pemeriksaan utama dan hasil laboratorium perlu interpretasi klinis.</li>
+        <li>Kemenkes RI - Ayo Sehat. <a href="https://ayosehat.kemkes.go.id/menghindari-keracunan-makanan-tips-keamanan-pangan-untuk-keluarga-di-rumah" target="_blank" rel="noopener">Menghindari Keracunan Makanan: Tips Keamanan Pangan Untuk Keluarga di Rumah</a>. Publikasi 2024. Dasar keamanan makanan rumah tangga, cuci tangan, pemisahan bahan mentah dan makanan matang.</li>
+        <li>Kemenkes RI - Direktorat Jenderal Kesehatan Lanjutan. <a href="https://keslan.kemkes.go.id/view_artikel/656/kenali-tanda-dan-gejala-typus" target="_blank" rel="noopener">Kenali Tanda dan Gejala Typus</a>. Dasar konteks lokal mengenai gejala, komplikasi, dan anjuran memeriksakan demam yang berlanjut.</li>
+        <li>IDAI. <a href="https://www.idai.or.id/artikel/klinik/keluhan-anak/mengenal-demam-tifoid" target="_blank" rel="noopener">Mengenal Demam Tifoid</a>. Dasar konteks pasien anak, keluhan saluran cerna, risiko dehidrasi, dan pesan kehati-hatian keluarga.</li>
+      </ol>
+      <div class="callout">Konten ini membantu keputusan awal di rumah, tetapi tidak menggantikan pemeriksaan langsung. Diagnosis, pemilihan antibiotik, dan keputusan rawat inap tetap memerlukan penilaian tenaga kesehatan.</div>
+    </div>
+  </section>
+  <section class="bottom-cta" aria-label="Aksi cepat keluarga">
+    <h2>Aksi cepat keluarga</h2>
+    <p>Simpan halaman ini bila ingin dipakai saat offline. Gunakan tombol print sebagai salinan keluarga. Jika kondisi memburuk, langsung hubungi klinik atau datang periksa.</p>
+    <p id="statusNote" class="status-note" aria-live="polite">Status koneksi: memeriksa jaringan...</p>
+    <div class="actions">
+      <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener"><span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>Buka Maps</a>
+      <a class="btn" id="bottomIgBtn" href="#" target="_blank" rel="noopener"><span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>Instagram Klinik</a>
+      <button class="btn btn-secondary" id="printPage" type="button" aria-label="Print atau simpan PDF"><span class="icon-pair"><i class="bi bi-printer-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-print"></use></svg></span>Print / Save PDF</button>
+    </div>
+  </section>
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <h2>Zihan Medical Center</h2>
+        <p><strong>#ZMCGakNyuekinKamu</strong> - layanan 24 jam untuk keluarga Wanaraja dan sekitarnya.</p>
+        <p id="clinicAddress"></p>
+        <p><strong>Telepon:</strong> <span id="clinicPhone"></span></p>
+        <p><strong>Jam:</strong> <span id="clinicHours"></span></p>
+      </div>
+      <div>
+        <h3>Kontak dan lokasi</h3>
+        <div class="foot-links">
+          <a class="foot-link" id="footerWa" href="#" target="_blank" rel="noopener"><span class="icon-pair"><i class="bi bi-whatsapp icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-phone"></use></svg></span>WhatsApp</a>
+          <a class="foot-link" id="footerMap" href="#" target="_blank" rel="noopener"><span class="icon-pair"><i class="bi bi-geo-alt-fill icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-map"></use></svg></span>Maps</a>
+          <a class="foot-link" id="footerIg" href="#" target="_blank" rel="noopener"><span class="icon-pair"><i class="bi bi-instagram icon-cdn" aria-hidden="true"></i><svg class="icon-local" aria-hidden="true"><use href="#i-instagram"></use></svg></span>Instagram</a>
+        </div>
+        <p style="margin-top:.58rem">Tip offline: simpan file ini satu folder dengan <code>zmc-logo.jpeg</code> agar logo tetap tampil saat dibuka langsung dari perangkat.</p>
+      </div>
+    </div>
+    <div class="subfoot"><span>&copy; <span id="year"></span> Zihan Medical Center - Wanaraja Garut</span><span>Materi edukasi pasien. Bukan pengganti pemeriksaan langsung.</span></div>
+  </footer>
+</main>
+<script>
+const ZMC = {
+  name: "Zihan Medical Center",
+  tagline: "#ZMCGakNyuekinKamu",
+  logoLocal: "zmc-logo.jpeg",
+  logoFallback: "https://i.imgur.com/jzuguQE.jpeg",
+  maps: "https://maps.app.goo.gl/CYpDhM1bGBnSf7D77",
+  whatsapp: "https://api.whatsapp.com/send/?phone=%2B6282217180432&type=phone_number&app_absent=0&wame_ctl=1",
+  instagram: "https://www.instagram.com/zihanmedicalcenter/?hl=en",
+  address: "Jl. Kudang, Wanajaya, Wanaraja, Wanajaya, Garut, Kabupaten Garut, Jawa Barat 44183",
+  phone: "+62 822-1718-0432",
+  hours: "Senin - Minggu: 24 Jam"
+};
+const TOPIC_MEDIA = {
+  hero: {
+    remote: "https://res.cloudinary.com/dkhbkfa8r/image/upload/v1773239263/zmc/tipes-fixed/tipes-fixed-hero.webp",
+    local: "../../assets/topics/tipes-fixed/tipes-fixed-hero.webp",
+    alt: "Pasien dewasa Indonesia beristirahat di rumah dengan keluhan demam sementara anggota keluarga memeriksa kondisinya, sebagai orientasi dugaan tipes.",
+    width: 1536,
+    height: 1024
+  },
+  figures: {}
+};
+(function initPage(){
+  const root = document.documentElement;
+  const qs = new URLSearchParams(location.search);
+  const forceIcons = qs.get("icons") === "fallback";
+  const forceMediaLocal = qs.get("media") === "fallback" || qs.get("media") === "local";
+  const logo = document.getElementById("logo");
+  const inlineLogo = "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='40' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='40' r='31' fill='%23a1191e'/%3E%3Ctext x='40' y='47' text-anchor='middle' font-size='18' font-family='Tahoma' font-weight='700' fill='%23ffffff'%3EZMC%3C/text%3E%3C/svg%3E";
+  const logoCandidates = [ZMC.logoLocal, "../zmc-logo.jpeg", "../../assets/zmc-logo.jpeg", ZMC.logoFallback, inlineLogo];
+  let logoIndex = 0;
+  function loadLogo(){ if (logoIndex >= logoCandidates.length) return; logo.src = logoCandidates[logoIndex]; logoIndex += 1; }
+  logo.addEventListener("error", loadLogo); loadLogo();
+  document.getElementById("clinicAddress").textContent = ZMC.address;
+  document.getElementById("clinicPhone").textContent = ZMC.phone;
+  document.getElementById("clinicHours").textContent = ZMC.hours;
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+  ["heroWaBtn", "footerWa"].forEach(function(id){ const el = document.getElementById(id); if (el) el.href = ZMC.whatsapp; });
+  ["mapBtn", "footerMap"].forEach(function(id){ const el = document.getElementById(id); if (el) el.href = ZMC.maps; });
+  ["heroIgBtn", "bottomIgBtn", "footerIg"].forEach(function(id){ const el = document.getElementById(id); if (el) el.href = ZMC.instagram; });
+  function checkIconCDN(){ if (forceIcons) { root.classList.add("icons-fallback"); return; } const probe = document.createElement("i"); probe.className = "bi bi-check2"; probe.style.position = "absolute"; probe.style.left = "-9999px"; document.body.appendChild(probe); const pseudo = getComputedStyle(probe, "::before"); const loaded = pseudo && pseudo.content && pseudo.content !== "none" && String(pseudo.fontFamily || "").toLowerCase().includes("bootstrap-icons"); if (!loaded) root.classList.add("icons-fallback"); probe.remove(); }
+  checkIconCDN();
+  const printBtn = document.getElementById("printPage"); if (printBtn) printBtn.addEventListener("click", function(){ window.print(); });
+  function bindMediaImage(img, media) {
+    if (!img || !media) return;
+    let localAttempted = false;
+    if (media.alt) img.alt = media.alt;
+    if (media.width) img.width = media.width;
+    if (media.height) img.height = media.height;
+    function useLocalImage() {
+      if (!media.local || localAttempted) return;
+      localAttempted = true;
+      img.src = media.local;
+    }
+    img.addEventListener("error", function(){
+      if (!localAttempted && media.local) {
+        useLocalImage();
+      } else {
+        const wrap = img.closest("[data-media-wrap]") || img.closest(".hero-figure");
+        if (wrap) wrap.hidden = true;
+        else img.hidden = true;
+      }
+    });
+    if ((forceMediaLocal || !navigator.onLine) && media.local) {
+      useLocalImage();
+    } else if (media.remote) {
+      img.src = media.remote;
+    } else if (media.local) {
+      useLocalImage();
+    }
+    window.addEventListener("offline", function(){
+      if (media.local && img.getAttribute("src") !== media.local) useLocalImage();
+    });
+  }
+  bindMediaImage(document.getElementById("heroImage"), TOPIC_MEDIA.hero);
+  Array.from(document.querySelectorAll("[data-media-key]")).forEach(function(img){
+    const key = img.getAttribute("data-media-key");
+    bindMediaImage(img, TOPIC_MEDIA.figures && TOPIC_MEDIA.figures[key]);
+  });
+  const faqButtons = Array.from(document.querySelectorAll(".faq-btn"));
+  function closeFaq(){ faqButtons.forEach(function(btn){ const panel = document.getElementById(btn.getAttribute("aria-controls")); const mark = btn.querySelector(".faq-mark"); btn.setAttribute("aria-expanded", "false"); if (panel) panel.hidden = true; if (mark) mark.textContent = "+"; }); }
+  function toggleFaq(btn){ const panel = document.getElementById(btn.getAttribute("aria-controls")); const mark = btn.querySelector(".faq-mark"); const open = btn.getAttribute("aria-expanded") === "true"; closeFaq(); if (!open && panel) { btn.setAttribute("aria-expanded", "true"); panel.hidden = false; if (mark) mark.textContent = "-"; } }
+  faqButtons.forEach(function(btn, index){ btn.addEventListener("click", function(){ toggleFaq(btn); }); btn.addEventListener("keydown", function(event){ const last = faqButtons.length - 1; let target = index; if (event.key === "ArrowDown") target = index === last ? 0 : index + 1; if (event.key === "ArrowUp") target = index === 0 ? last : index - 1; if (event.key === "Home") target = 0; if (event.key === "End") target = last; if (["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) { event.preventDefault(); faqButtons[target].focus(); } if (event.key === " " || event.key === "Enter") { event.preventDefault(); toggleFaq(btn); } }); });
+  const statusNote = document.getElementById("statusNote");
+  function syncStatus(){ if (!statusNote) return; statusNote.textContent = navigator.onLine ? "Status koneksi: online. Tautan rujukan dan kontak bisa dibuka." : "Status koneksi: offline. Konten utama tetap bisa dibaca di perangkat ini."; }
+  window.addEventListener("online", syncStatus); window.addEventListener("offline", syncStatus); syncStatus();
+})();
+</script>
+</body>
+</html>
+
+
+
